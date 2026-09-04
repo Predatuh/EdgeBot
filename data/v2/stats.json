@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-04T13:32Z",
+ "generated_utc": "2026-09-04T13:39Z",
  "picks_logged": 50,
  "overall": {
   "EDGE": {
@@ -564,44 +564,44 @@
   ],
   "mlb": [
    {
-    "name": "Boston",
-    "elo": 1555.9
-   },
-   {
-    "name": "Milwaukee",
-    "elo": 1543.8
-   },
-   {
-    "name": "Atlanta",
-    "elo": 1535.1
-   },
-   {
-    "name": "Philadelphia",
-    "elo": 1535.0
-   },
-   {
-    "name": "Tampa Bay",
-    "elo": 1535.0
-   },
-   {
-    "name": "New York Y",
-    "elo": 1532.5
-   },
-   {
     "name": "Toronto",
-    "elo": 1529.9
-   },
-   {
-    "name": "Chicago C",
-    "elo": 1523.9
-   },
-   {
-    "name": "Arizona",
-    "elo": 1523.6
+    "elo": 1509.9
    },
    {
     "name": "Houston",
-    "elo": 1515.9
+    "elo": 1509.9
+   },
+   {
+    "name": "New York M",
+    "elo": 1505.0
+   },
+   {
+    "name": "Detroit",
+    "elo": 1505.0
+   },
+   {
+    "name": "New York Y",
+    "elo": 1505.0
+   },
+   {
+    "name": "Boston",
+    "elo": 1505.0
+   },
+   {
+    "name": "A's",
+    "elo": 1505.0
+   },
+   {
+    "name": "Texas",
+    "elo": 1504.9
+   },
+   {
+    "name": "Pittsburgh",
+    "elo": 1500.1
+   },
+   {
+    "name": "Kansas City",
+    "elo": 1500.1
    }
   ],
   "epl": [
@@ -858,44 +858,44 @@
   ],
   "ucl": [
    {
-    "name": "Reg Time: Sabah Masazir",
-    "elo": 1555.4
+    "name": "Fenerbahce",
+    "elo": 1544.9
    },
    {
-    "name": "Reg Time: Fenerbahce",
-    "elo": 1535.2
+    "name": "Sabah Masazir",
+    "elo": 1542.4
    },
    {
-    "name": "Ararat-Armenia",
-    "elo": 1523.6
+    "name": "Slovan Bratislava",
+    "elo": 1532.9
+   },
+   {
+    "name": "Levski Sofia",
+    "elo": 1531.9
    },
    {
     "name": "Be`er Sheva",
-    "elo": 1523.6
+    "elo": 1526.5
    },
    {
-    "name": "Reg Time: Slovan Bratislava",
-    "elo": 1522.8
+    "name": "Bodoe/Glimt",
+    "elo": 1523.2
    },
    {
-    "name": "Reg Time: Levski Sofia",
-    "elo": 1521.6
+    "name": "AEK Athens",
+    "elo": 1515.1
    },
    {
-    "name": "Reg Time: AEK Athens",
-    "elo": 1513.2
+    "name": "Viking",
+    "elo": 1513.7
    },
    {
-    "name": "Reg Time: NK Celje",
-    "elo": 1512.8
+    "name": "Uni Craiova",
+    "elo": 1511.3
    },
    {
-    "name": "Reg Time: Viking",
-    "elo": 1512.4
-   },
-   {
-    "name": "Aarhus",
-    "elo": 1512.4
+    "name": "Egnatia Rrogozhine",
+    "elo": 1511.2
    }
   ],
   "cricket_t20i": [],
