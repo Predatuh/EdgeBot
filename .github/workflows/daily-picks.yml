@@ -21,7 +21,7 @@ jobs:
       - name: Run EdgeBot
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python -m bot.main
+        run: python main.py
       - name: Commit updated ratings + pick log
         run: |
           git config user.name "edgebot"
