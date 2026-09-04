@@ -11,9 +11,9 @@ import os
 import sys
 import yaml
 
-from . import espn, elo, edge, weather, state, notify
+import espn, elo, edge, weather, state, notify
 
-HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def load_config():
