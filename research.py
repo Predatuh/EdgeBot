@@ -45,6 +45,9 @@ WATCH = re.compile(r"\b(injur\w+|ruled out|out for|out of the|sits? out|sideline
                    r"\bIL\b|injured list|day-to-day|benched|fatigue|fitness|return[s]? (from|to))", re.I)
 STRONG = re.compile(r"\b(ruled out|out for (the )?(season|year|match|game|week)|will miss|withdraws?|withdrawn|"
                     r"pulls? out|retires?\b|suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
+# betting previews / listings: shown only if they also carry an injury or lineup word
+NOISE = re.compile(r"\b(prediction|predictions|odds|betting|best bets?|picks?|h2h|head-to-head|preview|"
+                   r"how to watch|live stream\w*|tips|highlights|welcomes|things you didn'?t know)\b", re.I)
 STOP = {"city", "united", "town", "club", "state", "real", "athletic", "sporting", "saint", "north", "south", "east", "west"}
 
 _client = None
@@ -172,7 +175,17 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None)
             print(f"[research] rss {name}: {type(e).__name__}: {str(e)[:80]}")
             continue
         keys = _keys(name, aliases.get(name, ""))
-        items = [i for i in items if _mentions(keys, i["title"])]     # must actually be about them
+        seen_titles = set()
+        kept = []
+        for i in items:
+            t = i["title"].lower().strip()
+            if t in seen_titles or not _mentions(keys, i["title"]):   # dupes / not actually about them
+                continue
+            if NOISE.search(i["title"]) and not WATCH.search(i["title"]):   # preview spam
+                continue
+            seen_titles.add(t)
+            kept.append(i)
+        items = kept
         items.sort(key=lambda i: i["when"] or dt.datetime.min.replace(tzinfo=dt.timezone.utc), reverse=True)
         hits = [i for i in items if WATCH.search(i["title"])]
         for i in hits[:2]:
