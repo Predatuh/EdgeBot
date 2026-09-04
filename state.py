@@ -89,20 +89,17 @@ def history_since(hist, league, back_days=5):
     """Unix ts to start the next settled-results pull from: a few days before
     the newest rated game, and never after the oldest still-ungraded pick.
     None = no history yet, pull everything."""
-    starts = []
     dates = [g["d"] for g in hist if g.get("d")]
-    if dates:
-        try:
-            starts.append(dt.date.fromisoformat(max(dates)) - dt.timedelta(days=back_days))
-        except ValueError:
-            return None
-    pend = [r["date"] for r in read_log() if r["league"] == league and not r["result"] and r["date"]]
-    if pend:
-        try:
-            starts.append(dt.date.fromisoformat(min(pend)) - dt.timedelta(days=1))
-        except ValueError:
-            return None
-    return _ts(min(starts)) if starts else None
+    if not dates:
+        return None                     # no ratings yet: always pull the full history
+    try:
+        start = dt.date.fromisoformat(max(dates)) - dt.timedelta(days=back_days)
+        pend = [r["date"] for r in read_log() if r["league"] == league and not r["result"] and r["date"]]
+        if pend:
+            start = min(start, dt.date.fromisoformat(min(pend)) - dt.timedelta(days=1))
+    except ValueError:
+        return None
+    return _ts(start)
 
 
 def form(hist, name, n=5):
