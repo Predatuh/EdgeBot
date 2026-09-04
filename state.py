@@ -4,7 +4,7 @@ import csv
 import json
 import os
 
-DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 LOG = os.path.join(DATA, "picks_log.csv")
 LOG_FIELDS = ["date", "league", "event_id", "matchup", "pick", "side",
               "model_prob", "edge", "ml", "units", "result", "profit"]
@@ -26,6 +26,7 @@ def save_elo(key, ratings):
 
 def seen_event(key, event_id):
     """Track processed finals so Elo never double-updates."""
+    os.makedirs(DATA, exist_ok=True) 
     path = os.path.join(DATA, f"seen_{key}.json")
     seen = set()
     if os.path.exists(path):
