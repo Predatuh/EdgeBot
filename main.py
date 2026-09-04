@@ -113,11 +113,12 @@ def model_game(key, lg, cfg, ev, ratings, hist):
     g = None
     if lg.get("espn"):
         g = espn.find_game(lg["espn"][0], lg["espn"][1], home["name"], away["name"])
-    wx = None
+    wx, full_names = None, {}
     if g:
+        th = next((t for t in g["teams"] if espn.name_match(home["name"], t["name"])), None)
+        ta = next((t for t in g["teams"] if espn.name_match(away["name"], t["name"])), None)
+        full_names = {s["name"]: t["name"] for s, t in ((home, th), (away, ta)) if t}   # 'Philadelphia' -> 'Philadelphia Eagles'
         if lg.get("injuries"):
-            th = next((t for t in g["teams"] if espn.name_match(home["name"], t["name"])), None)
-            ta = next((t for t in g["teams"] if espn.name_match(away["name"], t["name"])), None)
             if th and ta:
                 oh = espn.team_out_count(lg["espn"][0], lg["espn"][1], th["id"])
                 oa = espn.team_out_count(lg["espn"][0], lg["espn"][1], ta["id"])
@@ -178,7 +179,7 @@ def model_game(key, lg, cfg, ev, ratings, hist):
         opp = away if c["side"] is home else home
         brief = research.lookup(state.DATA, dt.date.today().isoformat(), lg.get("label", key), matchup,
                                 c["side"]["name"], opp["name"], c["side"]["ask"], notes,
-                                sport_hint=" ".join(lg["espn"]) if lg.get("espn") else "")
+                                sport_hint=" ".join(lg["espn"]) if lg.get("espn") else "", aliases=full_names)
         if brief:
             researched = c["side"]
             r_adj = research.elo_adjust(brief)

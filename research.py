@@ -37,44 +37,15 @@ DEFAULTS = {
     "demote_on_red_flag": True,   # a red flag turns an EDGE into an unstaked LEAN
 }
 
-# words that make a headline worth showing / flagging
-WATCH = re.compile(r"\b(injur\w*|out\b|doubtful|questionable|ruled out|sidelined|will miss|misses|"
-                   r"lineup|starting|starter|scratch\w*|withdraw\w*|retire\w*|pulls out|suspend\w*|"
-                   r"ban\w*|illness|ill\b|sick|concussion|surgery|IL\b|injured list|day-to-day|"
-                   r"rest\w*|benched|fatigue|late fitness)", re.I)
-STRONG = re.compile(r"\b(ruled out|out for|will miss|withdraws?|withdrawn|pulls out|retires?|"
-                    r"suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
-
-SCHEMA = {
-    "type": "object",
-    "properties": {
-        "summary": {"type": "string", "description": "<= 2 sentences: what matters for this matchup that the price may not fully reflect."},
-        "pick_health": {"type": "string", "description": "Injuries / lineup / availability news for the PICK side, or 'no issues found'."},
-        "opp_health": {"type": "string", "description": "Same for the OPPONENT."},
-        "recent_form": {"type": "string", "description": "One line on each side's last few results and level of competition."},
-        "situational": {"type": "string", "description": "Schedule, travel, rest, motivation, weather, surface, starting pitcher/QB, or 'nothing notable'."},
-        "red_flags": {"type": "array", "items": {"type": "string"},
-                      "description": "Concrete reasons NOT to stake the pick (key player out, resting starters, lineup unknown, match in doubt). Empty if none."},
-        "lean": {"type": "integer", "minimum": -3, "maximum": 3,
-                 "description": "How the research moves you on the PICK: -3 strongly against ... 0 neutral ... +3 strongly for. Use 0 unless something concrete and recent was found."},
-        "confidence": {"type": "string", "enum": ["low", "medium", "high"], "description": "How much recent, specific information was actually found."},
-        "sources": {"type": "array", "items": {"type": "string"}, "description": "Up to 4 source URLs used."},
-    },
-    "required": ["summary", "pick_health", "opp_health", "recent_form", "situational", "red_flags", "lean", "confidence", "sources"],
-    "additionalProperties": False,
-}
-
-SYSTEM = (
-    "You are a sports betting research analyst. You are given one matchup that trades on Kalshi, the "
-    "side a quantitative model likes, and the model's own notes (Elo, form, H2H, injuries count, weather). "
-    "Use web search to find current, specific information from the last ~10 days: injuries, lineups, "
-    "starting pitcher / quarterback / key-player availability, suspensions, resting of starters, travel "
-    "and schedule congestion, motivation (relegation, playoffs, dead rubber, tournament round), and for "
-    "tennis: surface record, retirements, fatigue, recent withdrawals. Prefer official team/tour sites, "
-    "major sports outlets and injury reports. Be skeptical of generic preview articles. Report facts with "
-    "dates; if you could not confirm something, say so rather than guessing. The 'lean' must be 0 unless "
-    "you found something concrete the market is unlikely to have fully priced. Return only the JSON."
-)
+# words that make a headline worth showing / flagging (only counted when the
+# headline actually names the competitor, see _mentions)
+WATCH = re.compile(r"\b(injur\w+|ruled out|out for|out of the|sits? out|sidelined|doubtful|questionable|"
+                   r"will miss|misses|missing|lineup|starting lineup|starter|scratch\w*|withdraw\w*|"
+                   r"retire[sd]?\b|pulls? out|suspend\w*|banned|illness|concussion|surgery|"
+                   r"\bIL\b|injured list|day-to-day|benched|fatigue|fitness|return[s]? (from|to))", re.I)
+STRONG = re.compile(r"\b(ruled out|out for (the )?(season|year|match|game|week)|will miss|withdraws?|withdrawn|"
+                    r"pulls? out|retires?\b|suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
+STOP = {"city", "united", "town", "club", "state", "real", "athletic", "sporting", "saint", "north", "south", "east", "west"}
 
 _client = None
 _state = {"used": 0, "date": None, "cache": {}, "note": ""}
@@ -167,16 +138,41 @@ def _display_name(name):
         return name
 
 
-def _headlines(date, league_label, matchup, pick, opp, sport_hint):
+def _keys(name, alias=""):
+    """Tokens that identify a competitor in a headline: 'Carlos Alcaraz' -> {alcaraz};
+    'Philadelphia' + ESPN alias 'Philadelphia Eagles' -> {philadelphia, eagles}."""
+    toks = set()
+    for n in (name, alias, _display_name(name)):
+        if not n:
+            continue
+        words = re.findall(r"[a-z0-9]+", n.lower())
+        toks.update(w for w in words if len(w) >= 4 and w not in STOP)
+        if len(words) >= 2 and len(words[-1]) >= 3:
+            toks.add(words[-1])                      # surname / nickname
+    if not toks:
+        toks.add(name.lower())
+    return toks
+
+
+def _mentions(keys, title):
+    t = title.lower()
+    return any(k in t for k in keys)
+
+
+def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None):
     days, n = int(_cfg["headlines_days"]), int(_cfg["headlines_max"])
+    aliases = aliases or {}
     picked, flags, health = [], [], {"pick": [], "opp": []}
     for role, name in (("pick", pick), ("opp", opp)):
-        q = f'"{_display_name(name)}" {league_label}'
+        full = aliases.get(name) or _display_name(name)
+        q = f'"{full}"' if full != name else f'"{name}" {league_label}'
         try:
             items = _fetch_rss(q, days)
         except Exception as e:
             print(f"[research] rss {name}: {type(e).__name__}: {str(e)[:80]}")
             continue
+        keys = _keys(name, aliases.get(name, ""))
+        items = [i for i in items if _mentions(keys, i["title"])]     # must actually be about them
         items.sort(key=lambda i: i["when"] or dt.datetime.min.replace(tzinfo=dt.timezone.utc), reverse=True)
         hits = [i for i in items if WATCH.search(i["title"])]
         for i in hits[:2]:
@@ -185,7 +181,8 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint):
                 flags.append(i["title"])
         for i in (hits + [i for i in items if i not in hits])[:n]:
             picked.append({"side": name, "title": i["title"], "source": i["source"],
-                           "date": i["when"].strftime("%b %d") if i["when"] else "", "watch": bool(WATCH.search(i["title"]))})
+                           "date": i["when"].strftime("%b %d") if i["when"] else "",
+                           "watch": bool(WATCH.search(i["title"]))})
     if not picked:
         return None
     picked.sort(key=lambda h: (not h["watch"], h["date"]), reverse=False)
@@ -244,7 +241,7 @@ def _ask(prompt):
     raise RuntimeError("research did not finish (too many pause_turns)")
 
 
-def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, sport_hint=""):
+def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, sport_hint="", aliases=None):
     """Research one matchup. Returns the brief dict (from cache when already done today)
     or None when research is unavailable, over budget, or failed."""
     if available():
@@ -258,7 +255,7 @@ def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, 
         return None
     _state["used"] += 1
     if mode() == "headlines":
-        brief = _headlines(date, league_label, matchup, pick, opp, sport_hint)
+        brief = _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases)
         if brief:
             brief["_ts"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
             cache[key] = brief
@@ -267,8 +264,8 @@ def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, 
     prompt = (
         f"Date: {date}. League: {league_label}{(' (' + sport_hint + ')') if sport_hint else ''}.\n"
         f"Matchup: {matchup}\n"
-        f"PICK (side the model likes): {pick}  — Kalshi YES price {int(round((pick_price or 0) * 100))}¢\n"
-        f"OPPONENT: {opp}\n"
+        f"PICK (side the model likes): {pick}{(' (' + aliases[pick] + ')') if aliases and aliases.get(pick) else ''}  — Kalshi YES price {int(round((pick_price or 0) * 100))}¢\n"
+        f"OPPONENT: {opp}{(' (' + aliases[opp] + ')') if aliases and aliases.get(opp) else ''}\n"
         f"Model notes: {'; '.join(notes) if notes else 'none'}\n\n"
         "Research both sides and fill the JSON."
     )
