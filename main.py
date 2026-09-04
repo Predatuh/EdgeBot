@@ -1,18 +1,20 @@
 """EdgeBot v2 — Kalshi-first multi-sport value picker.
 
 Per league (a Kalshi series):
-  1. Pull ALL settled Kalshi results -> Elo ratings + game history (form, H2H, rest)
-     and auto-grade any logged picks that have now settled
+  1. Pull settled Kalshi results (incrementally after the first run) -> Elo ratings
+     + game history (form, H2H, rest), and auto-grade any logged picks that settled
   2. Pull today's open Kalshi events with live prices
   3. Model each game: Elo + home adv + form + rest + injuries (ESPN) + weather
   4. Post every game with a projected winner:
        🔥 EDGE  = model beats the Kalshi price by >= threshold  (staked, tracked in units)
        📌 LEAN  = model's favorite but no real edge             (paper pick, W-L only)
      A game is only PASSED when it has no usable price / liquidity.
+  5. Write data/v2/stats.json (record, ROI, CLV, Brier by tier/league) for analytics.
 """
 import datetime as dt
 import os
 import sys
+import traceback
 import yaml
 
 import kalshi, espn, elo, edge, weather, state, notify
@@ -27,22 +29,23 @@ def load_config():
 
 # ---------------------------------------------------------------- history
 def ingest_history(key, lg):
-    """Feed every settled Kalshi event into Elo + history. Idempotent."""
-    winners = {}
-    try:
-        evs = kalshi.settled_events(lg["ticker"])
-    except Exception as e:
-        print(f"[{key}] settled fetch failed: {e}")
-        return winners
-    ratings = state.load_elo(key)
+    """Feed every new settled Kalshi event into Elo + history. Idempotent.
+    Returns (winners, closes) for grading: {event: winner}, {event: {side: close_prob}}."""
     hist = state.load_history(key)
+    since = state.history_since(hist, key)
+    evs = kalshi.settled_events(lg["ticker"], since)
+    ratings = state.load_elo(key)
+    seen = state.load_seen(key)
+    winners, closes, new = {}, {}, 0
     for ev in evs:
         win = kalshi.winner(ev)
         if win is None:
             continue
         winners[ev["event"]] = win
-        if state.seen_event(key, ev["event"]):
+        closes[ev["event"]] = kalshi.closing_probs(ev)
+        if ev["event"] in seen:
             continue
+        seen.add(ev["event"])
         teams = [s for s in ev["sides"] if not s["is_tie"]]
         if len(teams) != 2:
             continue
@@ -54,9 +57,15 @@ def ingest_history(key, lg):
         elo.update(ratings, a, b, sa, 1 - sa, k=lg.get("k", 24), use_mov=False, draw=draw)
         ratings["_games"] = ratings.get("_games", 0) + 1
         hist.append({"d": ev["date"], "a": a, "b": b, "w": win})
+        new += 1
+    if new:
+        hist.sort(key=lambda g: g["d"])
     state.save_elo(key, ratings)
     state.save_history(key, hist)
-    return winners
+    state.save_seen(key, seen)
+    print(f"[{key}] settled: {len(evs)} fetched, {new} new, {ratings.get('_games', 0)} rated"
+          f"{' (incremental)' if since else ' (full history)'}")
+    return winners, closes
 
 
 # ---------------------------------------------------------------- modelling
@@ -70,6 +79,14 @@ def model_game(key, lg, cfg, ev, ratings, hist):
     away, home = sides[0], sides[1]
     neutral = lg.get("neutral", False)
     home_adv = 0 if neutral else lg.get("home_adv", 0)
+    matchup = f"{away['name']} vs {home['name']}" if neutral else f"{away['name']} @ {home['name']}"
+
+    # --- market (Kalshi) first: no usable price = nothing to beat ---
+    probs = [home["prob"], away["prob"]] + ([tie["prob"]] if tie else [])
+    if any(p is None for p in probs):
+        return {"pass": True, "why": "no live price / illiquid", "matchup": matchup}
+    devigged = edge.devig(probs)
+    mk_home, mk_away = devigged[0], devigged[1]
 
     notes, adj = [], 0.0
 
@@ -112,72 +129,64 @@ def model_game(key, lg, cfg, ev, ratings, hist):
     p_home = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj)
     games = ratings.get("_games", 0)
     low_data = games < lg.get("min_games", 50)
-
-    # --- market (Kalshi) ---
-    probs = devigged = [home["prob"], away["prob"]] + ([tie["prob"]] if tie else [])
-    if any(p is None for p in probs):
-        return {"pass": True, "why": "no live price", "matchup": f"{away['name']} vs {home['name']}"}
-    devigged = edge.devig(probs)
-    mk_home, mk_away = devigged[0], devigged[1]
     if tie:
         pd = devigged[2]
-        p_home_win = max(0.0, min(1.0, p_home - pd / 2))
-        p_away_win = max(0.0, min(1.0, (1 - p_home) - pd / 2))
+        raw_home = max(0.0, min(1.0, p_home - pd / 2))
+        raw_away = max(0.0, min(1.0, (1 - p_home) - pd / 2))
     else:
-        p_home_win, p_away_win = p_home, 1 - p_home
+        raw_home, raw_away = p_home, 1 - p_home
 
     # --- blend with the market, shrinking harder when data is thin ---
-    # The market knows things 2 months of results can't. The model only gets a
+    # The market knows things a few months of results can't. The model only gets a
     # voice proportional to how much it has actually seen of BOTH competitors.
-    full = lg.get("full_conf_games", 25)
+    full = lg.get("full_conf_games", cfg.get("full_conf_games", 25))
     conf = min(1.0, min(fh[5], fa[5]) / full) if full else 1.0
     mw = cfg.get("market_weight", 0.5)
     model_w = (1 - mw) * conf
-    p_home_win = model_w * p_home_win + (1 - model_w) * mk_home
-    p_away_win = model_w * p_away_win + (1 - model_w) * mk_away
-    notes.append(f"Elo {ratings.get(home['name'],1500):.0f} v {ratings.get(away['name'],1500):.0f}; model wt {model_w*100:.0f}%")
+    p_home_win = model_w * raw_home + (1 - model_w) * mk_home
+    p_away_win = model_w * raw_away + (1 - model_w) * mk_away
+    elo_h, elo_a = ratings.get(home["name"], elo.BASE_RATING), ratings.get(away["name"], elo.BASE_RATING)
+    notes.append(f"Elo {elo_h:.0f} v {elo_a:.0f}; model wt {model_w*100:.0f}%")
 
-    eh, ea = p_home_win - mk_home, p_away_win - mk_away
-    if eh >= ea:
-        pick, p, mk, eg = home, p_home_win, mk_home, eh
-    else:
-        pick, p, mk, eg = away, p_away_win, mk_away, ea
-
+    # --- pick: the side with the most edge; a lean is simply the model's favorite ---
+    cands = [
+        {"side": home, "p": p_home_win, "mk": mk_home, "raw": raw_home, "elo": elo_h, "opp": elo_a,
+         "where": "neutral" if neutral else "home"},
+        {"side": away, "p": p_away_win, "mk": mk_away, "raw": raw_away, "elo": elo_a, "opp": elo_h,
+         "where": "neutral" if neutral else "away"},
+    ]
+    for c in cands:
+        c["edge"] = c["p"] - c["mk"]
+    best = max(cands, key=lambda c: c["edge"])
     thr = cfg["edge_threshold"]
     max_price = cfg.get("max_price", 0.90)
-    tier = "EDGE" if (eg >= thr and pick["ask"] and pick["ask"] <= max_price
-                      and not (wx and weather.extreme(wx))) else "LEAN"
-    if tier == "LEAN" and eg < thr and (p < 0.5):
-        # model's own favorite is the other side; show that as the lean instead
-        pick, p, mk, eg = (home, p_home_win, mk_home, eh) if p_home_win >= p_away_win \
-            else (away, p_away_win, mk_away, ea)
-    units = edge.kelly_units(p, pick["ask"], cfg["kelly_fraction"], cfg["max_units"]) if tier == "EDGE" else 0.0
-    if tier == "EDGE" and units <= 0:
-        tier = "LEAN"
+    playable = (best["edge"] >= thr and best["side"]["ask"] and best["side"]["ask"] <= max_price
+                and not (wx and weather.extreme(wx)))
+    units = edge.kelly_units(best["p"], best["side"]["ask"], cfg["kelly_fraction"], cfg["max_units"]) \
+        if playable else 0.0
+    if playable and units > 0:
+        tier, c = "EDGE", best
+    else:
+        tier, c, units = "LEAN", max(cands, key=lambda k: k["p"]), 0.0
 
     return {
-        "pass": False, "tier": tier, "pick": pick, "p": p, "mk": mk, "edge": eg,
-        "price": pick["ask"], "units": units, "notes": notes, "low_data": low_data,
-        "matchup": f"{away['name']} vs {home['name']}" if neutral else f"{away['name']} @ {home['name']}",
-        "elo_pick": ratings.get(pick["name"], 1500), "games": games,
+        "pass": False, "tier": tier, "pick": c["side"], "p": c["p"], "mk": c["mk"], "edge": c["edge"],
+        "raw": c["raw"], "elo_pick": c["elo"], "elo_opp": c["opp"], "where": c["where"], "conf": conf,
+        "price": c["side"]["ask"], "units": units, "notes": notes, "low_data": low_data,
+        "matchup": matchup, "games": games,
     }
 
 
 # ---------------------------------------------------------------- main
 def run_league(key, lg, cfg, body):
-    winners = ingest_history(key, lg)
-    gw, gl = state.grade_pending(winners)
+    winners, closes = ingest_history(key, lg)
+    gw, gl = state.grade_pending(winners, closes)
     ratings = state.load_elo(key)
     hist = state.load_history(key)
-    try:
-        evs = kalshi.open_events(lg["ticker"])
-    except Exception as e:
-        print(f"[{key}] open fetch failed: {e}")
-        return gw, gl
+    evs = kalshi.open_events(lg["ticker"], cfg.get("max_spread"))
     today = dt.date.today().isoformat()
     evs = [e for e in evs if e["date"] == today]
-    if not evs:
-        return gw, gl
+    print(f"[{key}] open events today: {len(evs)}; graded {gw}W/{gl}L")
     lines = []
     for ev in evs:
         r = model_game(key, lg, cfg, ev, ratings, hist)
@@ -192,39 +201,69 @@ def run_league(key, lg, cfg, body):
         stake = f" | **{r['units']}u**" if r["tier"] == "EDGE" else ""
         line = (f"{icon} **{r['pick']['name']}** @ {int(round(r['price']*100))}¢ — {r['matchup']}"
                 f" | model {r['p']*100:.0f}% vs Kalshi {r['mk']*100:.0f}% ({r['edge']*100:+.1f}%){stake}{tag}")
+        now = dt.datetime.now(dt.timezone.utc)
+        logged = state.append_pick({
+            "date": today, "time_utc": now.strftime("%H:%M"), "league": key,
+            "event_id": ev["event"], "matchup": r["matchup"],
+            "pick": r["pick"]["name"], "side": r["where"], "tier": r["tier"],
+            "model_raw": round(r["raw"], 3), "model_prob": round(r["p"], 3),
+            "market_prob": round(r["mk"], 3), "edge": round(r["edge"], 3),
+            "price": r["price"], "units": r["units"],
+            "elo_pick": round(r["elo_pick"], 1), "elo_opp": round(r["elo_opp"], 1),
+            "conf": round(r["conf"], 2), "notes": " | ".join(r["notes"]),
+            "result": "", "close_prob": "", "clv": "", "profit": "",
+        })
+        if not logged:
+            prev = state.logged_pick(ev["event"])
+            if prev and (prev["pick"] != r["pick"]["name"] or prev["tier"] != r["tier"]):
+                line += f"\n   ↳ ℹ️ on record from earlier run: {prev['tier']} {prev['pick']} @ {int(round(float(prev['price'] or 0)*100))}¢ (that one is tracked)"
         if r["notes"]:
             line += "\n   ↳ " + "; ".join(r["notes"])
         lines.append(line)
-        state.append_pick({
-            "date": today, "league": key, "event_id": ev["event"], "matchup": r["matchup"],
-            "pick": r["pick"]["name"], "tier": r["tier"],
-            "model_prob": round(r["p"], 3), "market_prob": round(r["mk"], 3),
-            "edge": round(r["edge"], 3), "price": r["price"], "units": r["units"],
-            "result": "", "profit": "",
-        })
     if lines:
         body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated)")
         body.extend(lines)
-    return gw, gl
+    return gw, gl, state.top_ratings(ratings)
 
 
 def main():
     cfg = load_config()
+    kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     body = [f"🤖 **EdgeBot picks — {dt.date.today().isoformat()}** (market: Kalshi)"]
     gw = gl = 0
+    errors, tops = [], {}
     for key, lg in cfg["leagues"].items():
         if not lg.get("enabled", True):
             continue
         try:
-            w, l = run_league(key, lg, cfg, body)
+            w, l, top = run_league(key, lg, cfg, body)
             gw += w; gl += l
+            tops[key] = top
         except Exception as e:
-            print(f"[{key}] failed: {e}")
+            traceback.print_exc()
+            errors.append(f"{key}: {type(e).__name__}: {str(e)[:80]}")
     s = state.record_summary()
-    body.append(f"\n📊 **EDGE plays: {s['EDGE']['w']}-{s['EDGE']['l']} | {s['EDGE']['units']:+.2f}u | ROI {s['EDGE']['roi']}%**")
-    body.append(f"📌 Leans (paper): {s['LEAN']['w']}-{s['LEAN']['l']}  · graded {gw}W/{gl}L this run")
+    state.write_stats(s, tops)
+    E, L = s["overall"]["EDGE"], s["overall"]["LEAN"]
+    body.append(f"\n📊 **EDGE plays: {E['w']}-{E['l']} | {E['units']:+.2f}u | ROI {E['roi']}%**"
+                + (f" · {E['pending']} pending" if E["pending"] else ""))
+    body.append(f"📌 Leans (paper): {L['w']}-{L['l']}  · graded {gw}W/{gl}L this run")
+    if E["clv_n"] or E["brier_model"] is not None:
+        bits = []
+        if E["avg_clv"] is not None:
+            bits.append(f"avg CLV {E['avg_clv']*100:+.1f}¢ on {E['clv_n']} edges")
+        if E["brier_model"] is not None:
+            bits.append(f"Brier model {E['brier_model']:.3f} vs market {E['brier_market']:.3f}")
+        body.append("📈 " + " · ".join(bits))
+    if errors:
+        body.append("⚠️ leagues skipped this run: " + "; ".join(errors))
     body.append("_🔥 = real edge vs Kalshi price, staked. 📌 = model favorite, no edge, tracked only._")
-    notify.post("\n".join(body))
+    try:
+        notify.post("\n".join(body))
+    except Exception as e:
+        print(f"Discord post failed: {e}")
+        print("\n".join(body))
+    return 0
 
 
 if __name__ == "__main__":

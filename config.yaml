@@ -1,105 +1,34 @@
-edge_threshold: 0.04
+# EdgeBot v2 — Kalshi-first configuration
+edge_threshold: 0.04     # model must beat Kalshi price by 4%+ to be an EDGE play
+max_price: 0.90          # never buy YES above 90¢ (no value in heavy chalk)
+max_spread: 0.15         # YES bid/ask gap wider than 15¢ = no real market -> PASS (also catches empty books)
+market_weight: 0.5       # final prob = 50% market + 50% model (model share shrinks further on thin data)
+full_conf_games: 25      # model gets its full 50% voice only once BOTH sides have this many rated games
 kelly_fraction: 0.25
 max_units: 1.0
-show_passes: true
-skip_extreme_wx: true
+show_passes: false       # only events with no live price / liquidity get passed now
 
+# Each league = one Kalshi series. espn: [sport, league] adds injuries/venue/weather.
+# k = Elo K-factor, home_adv = Elo points for the home side, min_games = league-wide
+# rated games before the ⚠️low-data tag drops. Per-league full_conf_games overrides the global.
 leagues:
-  nfl:
-    enabled: true
-    label: NFL
-    sport: football
-    league: nfl
-    k: 20
-    home_adv: 48
-    injuries: true
-    injury_elo: 12
-    weather: true
-    min_games: 48
-    warmup_days: 260
-  cfb:
-    enabled: true
-    label: College Football
-    sport: football
-    league: college-football
-    k: 24
-    home_adv: 60
-    injuries: false
-    weather: true
-    min_games: 150
-    warmup_days: 300
-  mlb:
-    enabled: true
-    label: MLB
-    sport: baseball
-    league: mlb
-    k: 6
-    home_adv: 24
-    mov: false
-    injuries: true
-    injury_elo: 6
-    weather: true
-    min_games: 400
-    warmup_days: 60
-  epl:
-    enabled: true
-    label: Premier League
-    sport: soccer
-    league: eng.1
-    k: 22
-    home_adv: 55
-    draws: true
-    weather: false
-    min_games: 60
-    warmup_days: 120
-  laliga:
-    enabled: true
-    label: La Liga
-    sport: soccer
-    league: esp.1
-    k: 22
-    home_adv: 55
-    draws: true
-    min_games: 60
-    warmup_days: 120
-  ligue1:
-    enabled: true
-    label: Ligue 1
-    sport: soccer
-    league: fra.1
-    k: 22
-    home_adv: 55
-    draws: true
-    min_games: 60
-    warmup_days: 120
-  atp:
-    enabled: true
-    label: ATP Tennis
-    sport: tennis
-    league: atp
-    k: 32
-    home_matters: false
-    mov: false
-    weather: true
-    min_games: 600
-    warmup_days: 150
-  wta:
-    enabled: false
-    label: WTA Tennis
-    sport: tennis
-    league: wta
-    k: 32
-    home_matters: false
-    mov: false
-    min_games: 600
-    warmup_days: 150
-  cricket:
-    enabled: false
-    label: Cricket
-    sport: cricket
-    league: "8676"
-    k: 24
-    home_adv: 30
-    mov: false
-    min_games: 40
-    warmup_days: 120
+  atp:        {ticker: KXATPMATCH,         label: ATP Tennis,          k: 32, neutral: true,  min_games: 300}
+  wta:        {ticker: KXWTAMATCH,         label: WTA Tennis,          k: 32, neutral: true,  min_games: 300}
+  challenger: {ticker: KXATPCHALLENGERMATCH, label: ATP Challenger,    k: 32, neutral: true,  min_games: 300, enabled: false}
+  nfl:        {ticker: KXNFLGAME,          label: NFL,                 k: 20, home_adv: 48, min_games: 30,
+               espn: [football, nfl], injuries: true, injury_elo: 12, weather: true}
+  ncaaf:      {ticker: KXNCAAFGAME,        label: College Football,    k: 24, home_adv: 60, min_games: 80,
+               espn: [football, college-football], weather: true}
+  mlb:        {ticker: KXMLBGAME,          label: MLB,                 k: 10,  home_adv: 24, min_games: 300,
+               espn: [baseball, mlb], injuries: true, injury_elo: 6, weather: true}
+  epl:        {ticker: KXEPLGAME,          label: Premier League,      k: 22, home_adv: 55, min_games: 30, espn: [soccer, eng.1]}
+  laliga:     {ticker: KXLALIGAGAME,       label: La Liga,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, esp.1]}
+  ligue1:     {ticker: KXLIGUE1GAME,       label: Ligue 1,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, fra.1]}
+  seriea:     {ticker: KXSERIEAGAME,       label: Serie A,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, ita.1]}
+  bundesliga: {ticker: KXBUNDESLIGAGAME,   label: Bundesliga,          k: 22, home_adv: 55, min_games: 30, espn: [soccer, ger.1]}
+  mls:        {ticker: KXMLSGAME,          label: MLS,                 k: 22, home_adv: 50, min_games: 60, espn: [soccer, usa.1]}
+  ucl:        {ticker: KXUCLGAME,          label: Champions League,    k: 24, home_adv: 50, min_games: 20}
+  cricket_t20i: {ticker: KXCRICKETT20IMATCH, label: Cricket T20I,      k: 24, home_adv: 30, min_games: 20}
+  cricket_odi:  {ticker: KXCRICKETODIMATCH,  label: Cricket ODI,       k: 24, home_adv: 30, min_games: 20}
+  cricket_test: {ticker: KXCRICKETTESTMATCH, label: Cricket Test,      k: 24, home_adv: 30, min_games: 10}
+  cpl:          {ticker: KXCPLMATCH,         label: Caribbean Premier League, k: 28, home_adv: 25, min_games: 15}

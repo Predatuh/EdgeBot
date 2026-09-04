@@ -1,5 +1,6 @@
-"""Persistence: Elo tables, compact game history (for form / H2H / rest days)
-and the pick log. All live in data/ and get committed back by the Action."""
+"""Persistence: Elo tables, compact game history (for form / H2H / rest days),
+the pick log and a stats.json analytics summary. All live in data/v2/ and get
+committed back to the repo by the Action."""
 import csv
 import json
 import os
@@ -7,8 +8,20 @@ import datetime as dt
 
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "v2")
 LOG = os.path.join(DATA, "picks_log.csv")
-LOG_FIELDS = ["date", "league", "event_id", "matchup", "pick", "tier",
-              "model_prob", "market_prob", "edge", "price", "units", "result", "profit"]
+STATS = os.path.join(DATA, "stats.json")
+TIERS = ("EDGE", "LEAN")
+LOG_FIELDS = [
+    "date", "time_utc", "league", "event_id", "matchup", "pick", "side", "tier",
+    "model_raw",     # model probability before blending with the market
+    "model_prob",    # blended probability the pick was made on
+    "market_prob",   # de-vigged Kalshi probability at pick time
+    "edge", "price", "units",
+    "elo_pick", "elo_opp", "conf", "notes",
+    "result",        # W / L, filled when Kalshi settles
+    "close_prob",    # last traded Kalshi price for the pick (closing line)
+    "clv",           # close_prob - price paid: positive = beat the close
+    "profit",        # units won/lost
+]
 
 
 def _p(name):
@@ -29,6 +42,17 @@ def _save(name, obj):
         json.dump(obj, f)
 
 
+def _fl(x, default=0.0):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return default
+
+
+def _ts(day):
+    return int(dt.datetime.combine(day, dt.time.min, tzinfo=dt.timezone.utc).timestamp())
+
+
 # ---- Elo ----
 def load_elo(key):
     return _load(f"elo_{key}.json", {})
@@ -38,32 +62,55 @@ def save_elo(key, ratings):
     _save(f"elo_{key}.json", ratings)
 
 
-# ---- processed-event dedupe ----
-def seen_event(key, event_id):
-    seen = set(_load(f"seen_{key}.json", []))
-    hit = event_id in seen
-    if not hit:
-        seen.add(event_id)
-        _save(f"seen_{key}.json", list(seen)[-6000:])
-    return hit
+def top_ratings(ratings, n=10):
+    teams = [(k, v) for k, v in ratings.items() if not k.startswith("_")]
+    return [{"name": k, "elo": round(v, 1)} for k, v in sorted(teams, key=lambda kv: -kv[1])[:n]]
 
 
-# ---- game history: {"d":date,"a":name,"b":name,"w":winner|"Tie"} ----
+# ---- processed-event dedupe (load once per league, save once) ----
+def load_seen(key):
+    return set(_load(f"seen_{key}.json", []))
+
+
+def save_seen(key, seen):
+    _save(f"seen_{key}.json", sorted(seen)[-20000:])
+
+
+# ---- game history: {"d":date,"a":away,"b":home,"w":winner|"Tie"} ----
 def load_history(key):
     return _load(f"hist_{key}.json", [])
 
 
 def save_history(key, hist):
-    _save(f"hist_{key}.json", hist[-4000:])
+    _save(f"hist_{key}.json", hist[-6000:])
+
+
+def history_since(hist, league, back_days=5):
+    """Unix ts to start the next settled-results pull from: a few days before
+    the newest rated game, and never after the oldest still-ungraded pick.
+    None = no history yet, pull everything."""
+    starts = []
+    dates = [g["d"] for g in hist if g.get("d")]
+    if dates:
+        try:
+            starts.append(dt.date.fromisoformat(max(dates)) - dt.timedelta(days=back_days))
+        except ValueError:
+            return None
+    pend = [r["date"] for r in read_log() if r["league"] == league and not r["result"] and r["date"]]
+    if pend:
+        try:
+            starts.append(dt.date.fromisoformat(min(pend)) - dt.timedelta(days=1))
+        except ValueError:
+            return None
+    return _ts(min(starts)) if starts else None
 
 
 def form(hist, name, n=5):
-    """Last n results for a competitor -> (wins, losses, ties, streak_str, rest_days)."""
-    games = [g for g in hist if name in (g["a"], g["b"])]
-    games = games[-n:]
+    """Last n results for a competitor -> (wins, losses, ties, streak_str, rest_days, games_seen)."""
+    allg = [g for g in hist if name in (g["a"], g["b"])]
     w = l = t = 0
     streak = ""
-    for g in games:
+    for g in allg[-n:]:
         if g["w"] == "Tie":
             t += 1; streak += "D"
         elif g["w"] == name:
@@ -71,11 +118,9 @@ def form(hist, name, n=5):
         else:
             l += 1; streak += "L"
     rest = None
-    allg = [g for g in hist if name in (g["a"], g["b"])]
     if allg:
         try:
-            last = dt.date.fromisoformat(allg[-1]["d"])
-            rest = (dt.date.today() - last).days
+            rest = (dt.date.today() - dt.date.fromisoformat(allg[-1]["d"])).days
         except ValueError:
             pass
     return w, l, t, streak, rest, len(allg)
@@ -92,7 +137,7 @@ def h2h(hist, a, b):
 def read_log():
     if not os.path.exists(LOG):
         return []
-    with open(LOG) as f:
+    with open(LOG, newline="") as f:
         rows = list(csv.DictReader(f))
     for r in rows:
         for k in LOG_FIELDS:
@@ -109,16 +154,23 @@ def write_log(rows):
             w.writerow(r)
 
 
+def logged_pick(event_id):
+    """The pick already on record for this event (first run of the day wins), or None."""
+    return next((r for r in read_log() if r["event_id"] == event_id), None)
+
+
 def append_pick(row):
     rows = read_log()
-    if any(r["event_id"] == row["event_id"] and r["pick"] == row["pick"] for r in rows):
-        return  # already logged this pick (second run of the day)
+    if any(r["event_id"] == row["event_id"] for r in rows):
+        return False
     rows.append(row)
     write_log(rows)
+    return True
 
 
-def grade_pending(winners):
-    """winners: {event_id: winner_name|'Tie'}. Returns (w, l) graded now."""
+def grade_pending(winners, closes=None):
+    """winners: {event_id: winner_name|'Tie'}; closes: {event_id: {side: close_prob}}.
+    Returns (w, l) graded now."""
     rows = read_log()
     w = l = 0
     for r in rows:
@@ -127,29 +179,68 @@ def grade_pending(winners):
         win = winners.get(r["event_id"])
         if win is None:
             continue
-        units = float(r["units"] or 0)
-        price = float(r["price"] or 0)
+        units, price = _fl(r["units"]), _fl(r["price"])
+        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"])
+        if cp is not None:
+            r["close_prob"] = round(cp, 3)
+            if price:
+                r["clv"] = round(cp - price, 3)
         if win == r["pick"]:
             r["result"] = "W"
-            r["profit"] = round(units * ((1 - price) / price), 3) if price > 0 and units > 0 else 0
+            r["profit"] = round(units * (1 - price) / price, 3) if price > 0 and units > 0 else 0
             w += 1
         else:
             r["result"] = "L"
-            r["profit"] = -units
+            r["profit"] = -units if units else 0
             l += 1
-    write_log(rows)
+    if w or l:
+        write_log(rows)
     return w, l
+
+
+# ---- analytics ----
+def _stats(rows):
+    g = [r for r in rows if r["result"] in ("W", "L")]
+    w = sum(1 for r in g if r["result"] == "W")
+    units = sum(_fl(r["profit"]) for r in g)
+    risked = sum(_fl(r["units"]) for r in g)
+    clv = [_fl(r["clv"]) for r in g if r["clv"] != ""]
+    bm = [(_fl(r["model_prob"]) - (r["result"] == "W")) ** 2 for r in g if r["model_prob"] != ""]
+    bk = [(_fl(r["market_prob"]) - (r["result"] == "W")) ** 2 for r in g if r["market_prob"] != ""]
+    return {
+        "w": w, "l": len(g) - w, "n": len(g),
+        "pending": sum(1 for r in rows if not r["result"]),
+        "units": round(units, 2), "risked": round(risked, 2),
+        "roi": round(units / risked * 100, 1) if risked else 0.0,
+        "avg_edge": round(sum(_fl(r["edge"]) for r in g) / len(g), 4) if g else None,
+        "avg_clv": round(sum(clv) / len(clv), 4) if clv else None,
+        "clv_n": len(clv),
+        # Brier score of the pick's win probability (lower = better calibrated).
+        # If brier_model stays above brier_market, the model isn't adding information.
+        "brier_model": round(sum(bm) / len(bm), 4) if bm else None,
+        "brier_market": round(sum(bk) / len(bk), 4) if bk else None,
+    }
 
 
 def record_summary():
     rows = read_log()
-    out = {}
-    for tier in ("EDGE", "LEAN"):
-        rs = [r for r in rows if r["tier"] == tier and r["result"]]
-        w = sum(1 for r in rs if r["result"] == "W")
-        l = sum(1 for r in rs if r["result"] == "L")
-        units = sum(float(r["profit"] or 0) for r in rs)
-        risked = sum(float(r["units"] or 0) for r in rs)
-        out[tier] = {"w": w, "l": l, "units": round(units, 2),
-                     "roi": round(units / risked * 100, 1) if risked else 0.0}
+    week = (dt.date.today() - dt.timedelta(days=7)).isoformat()
+    out = {
+        "generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
+        "picks_logged": len(rows),
+        "overall": {t: _stats([r for r in rows if r["tier"] == t]) for t in TIERS},
+        "last_7_days": {t: _stats([r for r in rows if r["tier"] == t and r["date"] >= week]) for t in TIERS},
+        "by_league": {},
+    }
+    for lg in sorted({r["league"] for r in rows}):
+        out["by_league"][lg] = {t: _stats([r for r in rows if r["league"] == lg and r["tier"] == t])
+                                for t in TIERS}
     return out
+
+
+def write_stats(summary, ratings_top=None):
+    summary = dict(summary)
+    if ratings_top:
+        summary["top_ratings"] = ratings_top
+    with open(_p("stats.json"), "w") as f:
+        json.dump(summary, f, indent=1)
