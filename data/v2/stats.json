@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-04T13:39Z",
+ "generated_utc": "2026-09-04T13:43Z",
  "picks_logged": 50,
  "overall": {
   "EDGE": {
@@ -564,44 +564,44 @@
   ],
   "mlb": [
    {
-    "name": "Toronto",
-    "elo": 1509.9
+    "name": "Boston",
+    "elo": 1555.9
    },
    {
-    "name": "Houston",
-    "elo": 1509.9
+    "name": "Milwaukee",
+    "elo": 1543.8
    },
    {
-    "name": "New York M",
-    "elo": 1505.0
+    "name": "Atlanta",
+    "elo": 1535.1
    },
    {
-    "name": "Detroit",
-    "elo": 1505.0
+    "name": "Philadelphia",
+    "elo": 1535.0
+   },
+   {
+    "name": "Tampa Bay",
+    "elo": 1535.0
    },
    {
     "name": "New York Y",
-    "elo": 1505.0
+    "elo": 1532.5
    },
    {
-    "name": "Boston",
-    "elo": 1505.0
+    "name": "Toronto",
+    "elo": 1529.9
    },
    {
-    "name": "A's",
-    "elo": 1505.0
+    "name": "Chicago C",
+    "elo": 1523.9
    },
    {
-    "name": "Texas",
-    "elo": 1504.9
+    "name": "Arizona",
+    "elo": 1523.6
    },
    {
-    "name": "Pittsburgh",
-    "elo": 1500.1
-   },
-   {
-    "name": "Kansas City",
-    "elo": 1500.1
+    "name": "Houston",
+    "elo": 1515.9
    }
   ],
   "epl": [
