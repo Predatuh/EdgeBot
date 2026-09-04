@@ -17,6 +17,10 @@ LOG_FIELDS = [
     "market_prob",   # de-vigged Kalshi probability at pick time
     "edge", "price", "units",
     "elo_pick", "elo_opp", "conf", "notes",
+    "research",       # one-paragraph web research brief (research.py)
+    "research_lean",  # -3..+3: how the research moved us on the pick
+    "research_adj",   # Elo points applied to the pick from that lean
+    "research_flag",  # red flags found (an EDGE with a flag is demoted to LEAN)
     "result",        # W / L, filled when Kalshi settles
     "close_prob",    # last traded Kalshi price for the pick (closing line)
     "clv",           # close_prob - price paid: positive = beat the close
@@ -232,6 +236,15 @@ def record_summary():
     for lg in sorted({r["league"] for r in rows}):
         out["by_league"][lg] = {t: _stats([r for r in rows if r["league"] == lg and r["tier"] == t])
                                 for t in TIERS}
+    # Did research help? Compare graded picks by how the research leaned.
+    def lean_bucket(r):
+        if r["research"] == "" and r["research_lean"] == "":
+            return "not_researched"
+        v = _fl(r["research_lean"])
+        return "for_pick" if v > 0 else ("against_pick" if v < 0 else "neutral")
+    out["by_research"] = {b: _stats([r for r in rows if lean_bucket(r) == b])
+                          for b in ("for_pick", "neutral", "against_pick", "not_researched")}
+    out["by_research"]["flagged"] = _stats([r for r in rows if r["research_flag"]])
     return out
 
 

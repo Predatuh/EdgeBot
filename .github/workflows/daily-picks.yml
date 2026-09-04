@@ -18,7 +18,7 @@ concurrency:
 jobs:
   picks:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,6 +28,7 @@ jobs:
       - name: Run EdgeBot
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: enables web research on picks
         run: python main.py
       - name: Commit updated ratings + pick log
         run: |

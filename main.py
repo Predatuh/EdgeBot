@@ -9,7 +9,10 @@ Per league (a Kalshi series):
        🔥 EDGE  = model beats the Kalshi price by >= threshold  (staked, tracked in units)
        📌 LEAN  = model's favorite but no real edge             (paper pick, W-L only)
      A game is only PASSED when it has no usable price / liquidity.
-  5. Write data/v2/stats.json (record, ROI, CLV, Brier by tier/league) for analytics.
+  5. Web-research edges and near-edges with Claude + web search (research.py):
+     injuries, lineups, form, situational factors -> card notes, a capped Elo nudge,
+     and a red-flag demotion so a known problem never gets staked.
+  6. Write data/v2/stats.json (record, ROI, CLV, Brier by tier/league/research) for analytics.
 """
 import datetime as dt
 import os
@@ -17,7 +20,7 @@ import sys
 import traceback
 import yaml
 
-import kalshi, espn, elo, edge, weather, state, notify
+import kalshi, espn, elo, edge, weather, state, notify, research
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # All-Star style events: not real teams, keep them out of the ratings and the card.
@@ -128,55 +131,78 @@ def model_game(key, lg, cfg, ev, ratings, hist):
             if wx:
                 notes.append(f"wx {weather.describe(wx)}")
 
-    # --- model probability ---
-    p_home = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj)
+    # --- model probability (pure Elo + adjustments) ---
     games = ratings.get("_games", 0)
     low_data = games < lg.get("min_games", 50)
-    if tie:
-        pd = devigged[2]
-        raw_home = max(0.0, min(1.0, p_home - pd / 2))
-        raw_away = max(0.0, min(1.0, (1 - p_home) - pd / 2))
-    else:
-        raw_home, raw_away = p_home, 1 - p_home
-
-    # --- blend with the market, shrinking harder when data is thin ---
-    # The market knows things a few months of results can't. The model only gets a
-    # voice proportional to how much it has actually seen of BOTH competitors.
     full = lg.get("full_conf_games", cfg.get("full_conf_games", 25))
     conf = min(1.0, min(fh[5], fa[5]) / full) if full else 1.0
     mw = cfg.get("market_weight", 0.5)
     model_w = (1 - mw) * conf
-    p_home_win = model_w * raw_home + (1 - model_w) * mk_home
-    p_away_win = model_w * raw_away + (1 - model_w) * mk_away
     elo_h, elo_a = ratings.get(home["name"], elo.BASE_RATING), ratings.get(away["name"], elo.BASE_RATING)
-    notes.append(f"Elo {elo_h:.0f} v {elo_a:.0f}; model wt {model_w*100:.0f}%")
-
-    # --- pick: the side with the most edge; a lean is simply the model's favorite ---
-    cands = [
-        {"side": home, "p": p_home_win, "mk": mk_home, "raw": raw_home, "elo": elo_h, "opp": elo_a,
-         "where": "neutral" if neutral else "home"},
-        {"side": away, "p": p_away_win, "mk": mk_away, "raw": raw_away, "elo": elo_a, "opp": elo_h,
-         "where": "neutral" if neutral else "away"},
-    ]
-    for c in cands:
-        c["edge"] = c["p"] - c["mk"]
-    best = max(cands, key=lambda c: c["edge"])
     thr = cfg["edge_threshold"]
     max_price = cfg.get("max_price", 0.90)
-    playable = (best["edge"] >= thr and best["side"]["ask"] and best["side"]["ask"] <= max_price
-                and not (wx and weather.extreme(wx)))
-    units = edge.kelly_units(best["p"], best["side"]["ask"], cfg["kelly_fraction"], cfg["max_units"]) \
-        if playable else 0.0
-    if playable and units > 0:
-        tier, c = "EDGE", best
-    else:
-        tier, c, units = "LEAN", max(cands, key=lambda k: k["p"]), 0.0
+
+    def decide(extra_home_adj):
+        """Blend model + market for a given extra Elo adjustment on the home side,
+        pick the side with the most edge (a lean is simply the model favorite)."""
+        p_home = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj + extra_home_adj)
+        if tie:
+            pd = devigged[2]
+            raw_home = max(0.0, min(1.0, p_home - pd / 2))
+            raw_away = max(0.0, min(1.0, (1 - p_home) - pd / 2))
+        else:
+            raw_home, raw_away = p_home, 1 - p_home
+        cands = [
+            {"side": home, "raw": raw_home, "mk": mk_home, "elo": elo_h, "opp": elo_a,
+             "where": "neutral" if neutral else "home", "sign": 1},
+            {"side": away, "raw": raw_away, "mk": mk_away, "elo": elo_a, "opp": elo_h,
+             "where": "neutral" if neutral else "away", "sign": -1},
+        ]
+        for c in cands:
+            c["p"] = model_w * c["raw"] + (1 - model_w) * c["mk"]
+            c["edge"] = c["p"] - c["mk"]
+        best = max(cands, key=lambda c: c["edge"])
+        playable = (best["edge"] >= thr and best["side"]["ask"] and best["side"]["ask"] <= max_price
+                    and not (wx and weather.extreme(wx)))
+        units = edge.kelly_units(best["p"], best["side"]["ask"], cfg["kelly_fraction"], cfg["max_units"]) \
+            if playable else 0.0
+        if playable and units > 0:
+            return "EDGE", best, units
+        return "LEAN", max(cands, key=lambda k: k["p"]), 0.0
+
+    tier, c, units = decide(0.0)
+
+    # --- web research on the pick (edges and near-edges only; capped per run) ---
+    brief, r_adj = None, 0.0
+    near = float((cfg.get("research") or {}).get("near_edge", research.DEFAULTS["near_edge"]))
+    if tier == "EDGE" or c["edge"] >= thr - near:
+        opp = away if c["side"] is home else home
+        brief = research.lookup(state.DATA, dt.date.today().isoformat(), lg.get("label", key), matchup,
+                                c["side"]["name"], opp["name"], c["side"]["ask"], notes,
+                                sport_hint=" ".join(lg["espn"]) if lg.get("espn") else "")
+        if brief:
+            researched = c["side"]
+            r_adj = research.elo_adjust(brief)
+            if r_adj:
+                # the nudge is on the PICK; convert to a home-side adjustment
+                tier, c, units = decide(r_adj * c["sign"])
+            if c["side"] is not researched:
+                # research moved us onto the other side: the brief's lean/flags were
+                # about the side we now fade, so log the lean relative to the new pick
+                brief = dict(brief, lean=-brief["lean"], red_flags=[])
+                notes.append(f"research flipped pick off {researched['name']}")
+            elif tier == "EDGE" and research.red_flag(brief):
+                tier, units = "LEAN", 0.0
+                notes.append("research red flag: not staked")
+
+    notes.append(f"Elo {elo_h:.0f} v {elo_a:.0f}; model wt {model_w*100:.0f}%"
+                 + (f"; research {r_adj:+.0f} Elo" if r_adj else ""))
 
     return {
         "pass": False, "tier": tier, "pick": c["side"], "p": c["p"], "mk": c["mk"], "edge": c["edge"],
         "raw": c["raw"], "elo_pick": c["elo"], "elo_opp": c["opp"], "where": c["where"], "conf": conf,
         "price": c["side"]["ask"], "units": units, "notes": notes, "low_data": low_data,
-        "matchup": matchup, "games": games,
+        "matchup": matchup, "games": games, "brief": brief, "r_adj": r_adj,
     }
 
 
@@ -214,6 +240,10 @@ def run_league(key, lg, cfg, body):
             "price": r["price"], "units": r["units"],
             "elo_pick": round(r["elo_pick"], 1), "elo_opp": round(r["elo_opp"], 1),
             "conf": round(r["conf"], 2), "notes": " | ".join(r["notes"]),
+            "research": (r["brief"] or {}).get("summary", ""),
+            "research_lean": (r["brief"] or {}).get("lean", ""),
+            "research_adj": r["r_adj"] or "",
+            "research_flag": "; ".join((r["brief"] or {}).get("red_flags", [])),
             "result": "", "close_prob": "", "clv": "", "profit": "",
         })
         if not logged:
@@ -222,6 +252,8 @@ def run_league(key, lg, cfg, body):
                 line += f"\n   ↳ ℹ️ on record from earlier run: {prev['tier']} {prev['pick']} @ {int(round(float(prev['price'] or 0)*100))}¢ (that one is tracked)"
         if r["notes"]:
             line += "\n   ↳ " + "; ".join(r["notes"])
+        for rl in research.card_lines(r["brief"]):
+            line += "\n   ↳ " + rl
         lines.append(line)
     if lines:
         body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated)")
@@ -232,6 +264,9 @@ def run_league(key, lg, cfg, body):
 def main():
     cfg = load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
+    research.configure(cfg.get("research"))
+    off = research.available()
+    print(f"[research] {'off: ' + off if off else 'on (' + research._cfg['model'] + ')'}")
     body = [f"🤖 **EdgeBot picks — {dt.date.today().isoformat()}** (market: Kalshi)"]
     gw = gl = 0
     errors, tops = [], {}
@@ -260,6 +295,10 @@ def main():
         body.append("📈 " + " · ".join(bits))
     if errors:
         body.append("⚠️ leagues skipped this run: " + "; ".join(errors))
+    if off:
+        body.append(f"_🔎 research off ({off})_")
+    elif research.run_note():
+        body.append(f"_🔎 {research.run_note()}_")
     body.append("_🔥 = real edge vs Kalshi price, staked. 📌 = model favorite, no edge, tracked only._")
     try:
         notify.post("\n".join(body))
