@@ -17,14 +17,16 @@ ODI, Test, CPL). Turn a league on/off with `enabled:` in `config.yaml`.
    nudge + injuries (players OUT via ESPN) + venue/weather, then blends the
    model probability with the de-vigged Kalshi price. The model's share
    (`market_weight`) shrinks further when either side has few rated games.
-4. **Research the edges** — for every EDGE and near-edge pick, `research.py` asks
-   Claude (with web search) for what the price may be missing: injuries, lineups,
-   starting pitcher / QB, suspensions, rest and travel, motivation, surface and
-   fatigue for tennis. The brief is shown under the pick (🔎 summary, 🏥 health,
-   📋 situational, 🚩 red flags), logged, and turned into a capped Elo nudge on the
-   pick (`elo_per_point` × lean, at most ±24 Elo). An EDGE with a red flag is
-   posted as an unstaked LEAN. Needs the `ANTHROPIC_API_KEY` secret; without it the
-   card just says research is off.
+4. **Research the picks** (`research.py`, two modes set by `research.mode`):
+   - `headlines` (default, free, no key): Google News headlines from the last 7 days for
+     both sides, injury / lineup / availability news first, shown as 📰 lines under the
+     pick. A strong headline about the pick ("ruled out", "withdraws") shows as 🚩 and,
+     if `headlines_demote: true`, unstakes the edge.
+   - `claude` (paid, needs the `ANTHROPIC_API_KEY` secret): Claude with web search returns
+     a structured brief (🔎 summary, 🏥 health, 📋 situational, 🚩 red flags) for EDGE and
+     near-edge picks only. The lean becomes a capped Elo nudge on the pick (at most ±24 Elo)
+     and a red flag posts the EDGE as an unstaked LEAN. Defaults to Haiku 4.5, 3 searches,
+     `max_per_run: 8`, so a few dollars of credit lasts weeks.
 5. **Post the card** to Discord:
    - 🔥 **EDGE** — model beats the Kalshi ask by `edge_threshold`+, ask ≤ `max_price`,
      no extreme weather → staked (quarter-Kelly), tracked in units and ROI
@@ -68,13 +70,13 @@ conf, notes, research, research_lean, research_adj, research_flag, result, close
 - `max_spread` 0.15 — bid/ask gap that counts as "no market"
 - `market_weight` 0.5 / `full_conf_games` 25 — how much the model is trusted, and how many rated games each side needs for full trust
 - `kelly_fraction` 0.25, `max_units` 1.0 — stake sizing
-- `research:` block — model, effort, searches per matchup, per-run cap, `near_edge`, `elo_per_point`, `demote_on_red_flag`
+- `research:` block — `mode` (headlines / claude / off), per-run cap, headline days and count, and for claude mode the model, effort, searches, `near_edge`, `elo_per_point`, `demote_on_red_flag`
 - per league: `k` (Elo K), `home_adv`, `neutral` (tennis), `min_games` (drops the ⚠️low-data tag), `espn: [sport, league]` + `injuries` / `injury_elo` / `weather`
 
 ## Setup / ops
 
-1. Add the repo secret `DISCORD_WEBHOOK_URL`, and `ANTHROPIC_API_KEY` if you want web research
-   (roughly 15 researched matchups a day at medium effort; cached so the second daily run is free).
+1. Add the repo secret `DISCORD_WEBHOOK_URL`. Headlines research works with no extra setup;
+   for `research.mode: claude` also add `ANTHROPIC_API_KEY` (cached per day, so the second run is free).
 2. Actions → **Daily Picks** → **Run workflow**. The first run pulls Kalshi's full
    settled history for every enabled league, so allow a few minutes.
 3. The workflow uses a concurrency group and `git pull --rebase -X theirs` before

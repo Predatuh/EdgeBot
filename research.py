@@ -1,31 +1,49 @@
-"""Web research on a matchup via the Claude API + web search.
+"""Web research on a matchup. Two modes (research.mode in config.yaml):
 
-For each candidate pick, Claude searches the web for what the Kalshi price might
-be missing: recent results, injuries / lineups / starting pitcher / QB status,
-suspensions, travel & schedule, motivation (must-win, resting starters), and
-returns a structured brief. The brief is:
-  - shown under the pick on the Discord card,
-  - logged to picks_log.csv (summary, lean, adj, flag) and data/v2/research/<date>.json,
-  - turned into a small, capped Elo nudge on the pick and a red-flag demotion
-    (EDGE -> LEAN) so a known problem never gets staked.
+  headlines (default, free, no key): Google News RSS for both sides, last N days,
+      injury / lineup / availability keywords first. Shown under the pick as 📰
+      lines; strong keywords about the pick ("ruled out", "withdraws"...) become
+      🚩 flags. No probability nudge.
+  claude (paid): Claude + the web_search tool returns a structured brief
+      (health, form, situational, red flags, lean). The lean becomes a small,
+      capped Elo nudge on the pick and a red flag demotes an EDGE to an unstaked
+      LEAN. Needs ANTHROPIC_API_KEY. Hard per-run cap for cost control.
 
-Runs only when ANTHROPIC_API_KEY is set and research.enabled is true; every
-failure degrades to "no research" so the card still goes out.
+Both modes cache per matchup per day (data/v2/research/<date>.json), log to
+picks_log.csv, and degrade to "no research" on any failure so the card still goes out.
 """
 import datetime as dt
 import json
 import os
+import re
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
+
+import requests
 
 DEFAULTS = {
-    "enabled": True,
-    "model": "claude-opus-5",
-    "effort": "medium",           # low | medium | high — research depth vs cost/latency
-    "max_searches": 6,            # web searches Claude may run per matchup
-    "max_per_run": 15,            # hard cap on matchups researched per run (cost control)
-    "near_edge": 0.02,            # also research leans within this of edge_threshold
+    "mode": "headlines",          # headlines (free) | claude (paid) | off
+    "max_per_run": 60,            # matchups researched per run (set ~8 in claude mode)
+    "near_edge": 0.02,            # claude mode: also research leans within this of edge_threshold
+    # headlines mode
+    "headlines_days": 7,
+    "headlines_max": 3,           # lines shown per matchup
+    "headlines_demote": False,    # let a strong headline about the pick demote an EDGE
+    # claude mode
+    "model": "claude-haiku-4-5",
+    "effort": "low",              # low | medium | high — depth vs cost/latency
+    "max_searches": 3,            # web searches Claude may run per matchup
     "elo_per_point": 8,           # research lean points (-3..+3) -> Elo on the pick (max ±24)
     "demote_on_red_flag": True,   # a red flag turns an EDGE into an unstaked LEAN
 }
+
+# words that make a headline worth showing / flagging
+WATCH = re.compile(r"\b(injur\w*|out\b|doubtful|questionable|ruled out|sidelined|will miss|misses|"
+                   r"lineup|starting|starter|scratch\w*|withdraw\w*|retire\w*|pulls out|suspend\w*|"
+                   r"ban\w*|illness|ill\b|sick|concussion|surgery|IL\b|injured list|day-to-day|"
+                   r"rest\w*|benched|fatigue|late fitness)", re.I)
+STRONG = re.compile(r"\b(ruled out|out for|will miss|withdraws?|withdrawn|pulls out|retires?|"
+                    r"suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
 
 SCHEMA = {
     "type": "object",
@@ -91,17 +109,98 @@ def _save_cache(data_dir, date):
         json.dump(_state["cache"], f, indent=1)
 
 
+def mode():
+    m = str(_cfg.get("mode", "headlines")).lower()
+    if _cfg.get("enabled") is False:
+        m = "off"
+    return m
+
+
 def available():
     """Why research is off (str) or '' if it can run."""
-    if not _cfg.get("enabled", True):
+    m = mode()
+    if m == "off":
         return "research disabled in config"
-    if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
-        return "no ANTHROPIC_API_KEY secret"
-    try:
-        import anthropic  # noqa: F401
-    except ImportError:
-        return "anthropic package not installed"
+    if m == "claude":
+        if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+            return "no ANTHROPIC_API_KEY secret (set research.mode: headlines for the free option)"
+        try:
+            import anthropic  # noqa: F401
+        except ImportError:
+            return "anthropic package not installed"
     return ""
+
+
+def eligible(tier, edge, threshold):
+    """Headlines are free: research every posted pick. Claude costs: edges and near-edges only."""
+    if mode() == "headlines":
+        return True
+    return tier == "EDGE" or edge >= threshold - float(_cfg["near_edge"])
+
+
+# ------------------------------------------------------------- headlines mode
+def _fetch_rss(query, days):
+    """Google News RSS search -> list of {title, source, link, when(datetime)}."""
+    r = requests.get("https://news.google.com/rss/search",
+                     params={"q": f"{query} when:{int(days)}d", "hl": "en-US", "gl": "US", "ceid": "US:en"},
+                     headers={"User-Agent": "Mozilla/5.0 (EdgeBot)"}, timeout=15)
+    r.raise_for_status()
+    out = []
+    for it in ET.fromstring(r.content).iter("item"):
+        title = (it.findtext("title") or "").strip()
+        src = (it.findtext("source") or "").strip()
+        if src and title.endswith(" - " + src):
+            title = title[: -len(src) - 3].strip()
+        try:
+            when = parsedate_to_datetime(it.findtext("pubDate") or "")
+        except (TypeError, ValueError):
+            when = None
+        out.append({"title": title, "source": src, "link": (it.findtext("link") or "").strip(), "when": when})
+    return out
+
+
+def _display_name(name):
+    try:
+        from espn import ALIASES
+        return ALIASES.get(name.lower().strip(), name).title() if name.lower().strip() in ALIASES else name
+    except ImportError:
+        return name
+
+
+def _headlines(date, league_label, matchup, pick, opp, sport_hint):
+    days, n = int(_cfg["headlines_days"]), int(_cfg["headlines_max"])
+    picked, flags, health = [], [], {"pick": [], "opp": []}
+    for role, name in (("pick", pick), ("opp", opp)):
+        q = f'"{_display_name(name)}" {league_label}'
+        try:
+            items = _fetch_rss(q, days)
+        except Exception as e:
+            print(f"[research] rss {name}: {type(e).__name__}: {str(e)[:80]}")
+            continue
+        items.sort(key=lambda i: i["when"] or dt.datetime.min.replace(tzinfo=dt.timezone.utc), reverse=True)
+        hits = [i for i in items if WATCH.search(i["title"])]
+        for i in hits[:2]:
+            health[role].append(i["title"])
+            if role == "pick" and STRONG.search(i["title"]):
+                flags.append(i["title"])
+        for i in (hits + [i for i in items if i not in hits])[:n]:
+            picked.append({"side": name, "title": i["title"], "source": i["source"],
+                           "date": i["when"].strftime("%b %d") if i["when"] else "", "watch": bool(WATCH.search(i["title"]))})
+    if not picked:
+        return None
+    picked.sort(key=lambda h: (not h["watch"], h["date"]), reverse=False)
+    return {
+        "mode": "headlines",
+        "summary": f"{sum(1 for h in picked if h['watch'])} injury/lineup headline(s) in last {days}d",
+        "pick_health": "; ".join(health["pick"]) or "no issues found",
+        "opp_health": "; ".join(health["opp"]) or "no issues found",
+        "recent_form": "", "situational": "nothing notable",
+        "red_flags": flags[:2], "lean": 0, "confidence": "low", "sources": [],
+        "headlines": picked[: n * 2],
+    }
+
+
+# ---------------------------------------------------------------- claude mode
 
 
 def _get_client():
@@ -158,6 +257,13 @@ def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, 
         _state["note"] = f"research cap {_cfg['max_per_run']}/run reached"
         return None
     _state["used"] += 1
+    if mode() == "headlines":
+        brief = _headlines(date, league_label, matchup, pick, opp, sport_hint)
+        if brief:
+            brief["_ts"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+            cache[key] = brief
+            _save_cache(data_dir, date)
+        return brief
     prompt = (
         f"Date: {date}. League: {league_label}{(' (' + sport_hint + ')') if sport_hint else ''}.\n"
         f"Matchup: {matchup}\n"
@@ -171,6 +277,7 @@ def lookup(data_dir, date, league_label, matchup, pick, opp, pick_price, notes, 
     except Exception as e:                 # never let research break the run
         print(f"[research] {matchup}: {type(e).__name__}: {str(e)[:160]}")
         return None
+    brief["mode"] = "claude"
     brief["lean"] = max(-3, min(3, int(brief.get("lean", 0) or 0)))
     brief["red_flags"] = [str(x) for x in (brief.get("red_flags") or [])][:4]
     brief["_ts"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
@@ -187,13 +294,24 @@ def elo_adjust(brief):
 
 
 def red_flag(brief):
-    return bool(brief and brief.get("red_flags") and _cfg.get("demote_on_red_flag", True))
+    """Should this brief stop an EDGE from being staked?"""
+    if not brief or not brief.get("red_flags"):
+        return False
+    if brief.get("mode") == "headlines":
+        return bool(_cfg.get("headlines_demote", False))
+    return bool(_cfg.get("demote_on_red_flag", True))
 
 
 def card_lines(brief):
     """Lines to show under the pick on the Discord card."""
     if not brief:
         return []
+    if brief.get("mode") == "headlines":
+        out = [f"📰 {h['side']} · {h['date']} · {h['title']}" + (f" ({h['source']})" if h["source"] else "")
+               for h in brief.get("headlines", [])[: int(_cfg["headlines_max"])]]
+        if brief.get("red_flags"):
+            out.append("🚩 " + "; ".join(brief["red_flags"]))
+        return out
     out = [f"🔎 {brief['summary']} _(lean {brief['lean']:+d}, {brief['confidence']} conf)_"]
     health = []
     if brief.get("pick_health") and "no issues" not in brief["pick_health"].lower():
@@ -211,3 +329,8 @@ def card_lines(brief):
 
 def run_note():
     return _state["note"]
+
+
+def label():
+    m = mode()
+    return "headlines (Google News, free)" if m == "headlines" else f"claude ({_cfg['model']})"

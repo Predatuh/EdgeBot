@@ -174,8 +174,7 @@ def model_game(key, lg, cfg, ev, ratings, hist):
 
     # --- web research on the pick (edges and near-edges only; capped per run) ---
     brief, r_adj = None, 0.0
-    near = float((cfg.get("research") or {}).get("near_edge", research.DEFAULTS["near_edge"]))
-    if tier == "EDGE" or c["edge"] >= thr - near:
+    if research.eligible(tier, c["edge"], thr):
         opp = away if c["side"] is home else home
         brief = research.lookup(state.DATA, dt.date.today().isoformat(), lg.get("label", key), matchup,
                                 c["side"]["name"], opp["name"], c["side"]["ask"], notes,
@@ -266,7 +265,7 @@ def main():
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     research.configure(cfg.get("research"))
     off = research.available()
-    print(f"[research] {'off: ' + off if off else 'on (' + research._cfg['model'] + ')'}")
+    print(f"[research] {'off: ' + off if off else 'on: ' + research.label()}")
     body = [f"🤖 **EdgeBot picks — {dt.date.today().isoformat()}** (market: Kalshi)"]
     gw = gl = 0
     errors, tops = [], {}
