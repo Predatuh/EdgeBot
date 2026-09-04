@@ -20,6 +20,8 @@ import yaml
 import kalshi, espn, elo, edge, weather, state, notify
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# All-Star style events: not real teams, keep them out of the ratings and the card.
+EXHIBITION = {"AL", "NL", "American League", "National League", "AFC", "NFC", "East", "West"}
 
 
 def load_config():
@@ -46,8 +48,8 @@ def ingest_history(key, lg):
         if ev["event"] in seen:
             continue
         seen.add(ev["event"])
-        teams = [s for s in ev["sides"] if not s["is_tie"]]
-        if len(teams) != 2:
+        teams = [s for s in kalshi.match_sides(ev) if not s["is_tie"]]
+        if len(teams) != 2 or any(s["name"] in EXHIBITION for s in teams):
             continue
         # order: (away, home) for team sports so home adv is applied consistently
         teams.sort(key=lambda s: s["home"])
@@ -71,9 +73,10 @@ def ingest_history(key, lg):
 # ---------------------------------------------------------------- modelling
 def model_game(key, lg, cfg, ev, ratings, hist):
     """Return a dict describing the pick for one Kalshi event, or None."""
-    sides = [s for s in ev["sides"] if not s["is_tie"]]
-    tie = next((s for s in ev["sides"] if s["is_tie"]), None)
-    if len(sides) != 2:
+    msides = kalshi.match_sides(ev)
+    sides = [s for s in msides if not s["is_tie"]]
+    tie = next((s for s in msides if s["is_tie"]), None)
+    if len(sides) != 2 or any(s["name"] in EXHIBITION for s in sides):
         return None
     sides.sort(key=lambda s: s["home"])          # [away, home] (tennis: arbitrary)
     away, home = sides[0], sides[1]

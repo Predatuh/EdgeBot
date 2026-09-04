@@ -87,11 +87,17 @@ def _code(market_ticker):
     return market_ticker.rsplit("-", 1)[-1]
 
 
+REG_PREFIX = re.compile(r"^(reg(ular)?\.?\s*time|regulation|90\s*min(ute)?s?)\s*:\s*", re.I)
+
+
 def _name(m):
+    """Side name. Cup/qualifier events carry both 'X' (to advance) and
+    'Reg Time: X' (to win in regulation) markets; returns (clean_name, is_reg_time)."""
     n = (m.get("yes_sub_title") or "").strip()
     if not n:
         n = re.sub(r"\s+wins?\??$", "", (m.get("title") or "?").strip())
-    return n
+    reg = bool(REG_PREFIX.match(n))
+    return REG_PREFIX.sub("", n).strip(), reg
 
 
 def _is_tie(code, name):
@@ -120,10 +126,10 @@ def _mark_home(sides, event_ticker):
         s["home"] = False
     teams = [s for s in sides if not s["is_tie"]]
     hits = [s for s in teams if s["code"] and event_ticker.endswith(s["code"])]
-    if hits:
-        max(hits, key=lambda s: len(s["code"]))["home"] = True
-    elif teams:
-        teams[-1]["home"] = True
+    home = max(hits, key=lambda s: len(s["code"])) if hits else (teams[-1] if teams else None)
+    if home:
+        for s in teams:                 # both the 'advance' and 'Reg Time' markets of that team
+            s["home"] = s["name"] == home["name"]
 
 
 def open_events(series, max_spread=None):
@@ -135,9 +141,9 @@ def open_events(series, max_spread=None):
         e = ev.setdefault(et, {"event": et, "series": series,
                                "date": event_date(et, close), "close": close, "sides": []})
         mid, ask = _price(m, max_spread)
-        code, name = _code(m["ticker"]), _name(m)
+        code, (name, reg) = _code(m["ticker"]), _name(m)
         e["sides"].append({
-            "name": name, "ticker": m["ticker"], "code": code,
+            "name": name, "ticker": m["ticker"], "code": code, "reg": reg,
             "prob": mid, "ask": ask, "bid": _money(m, "yes_bid"),
             "vol": _f(m.get("volume_fp")) or _f(m.get("volume")) or 0.0,
             "oi": _f(m.get("open_interest_fp")) or _f(m.get("open_interest")) or 0.0,
@@ -166,9 +172,9 @@ def settled_events(series, since_ts=None):
         et = m.get("event_ticker") or ""
         close = m.get("close_time") or m.get("expiration_time") or ""
         e = ev.setdefault(et, {"event": et, "date": event_date(et, close), "close": close, "sides": []})
-        code, name = _code(m["ticker"]), _name(m)
+        code, (name, reg) = _code(m["ticker"]), _name(m)
         e["sides"].append({
-            "name": name, "code": code,
+            "name": name, "code": code, "reg": reg,
             "won": m.get("result") == "yes",
             "last": _money(m, "last_price"),        # closing line, used for CLV
             "is_tie": _is_tie(code, name),
@@ -178,9 +184,19 @@ def settled_events(series, since_ts=None):
     return sorted(ev.values(), key=lambda e: (e["date"], e["close"]))
 
 
+def match_sides(ev):
+    """The sides that describe the match result. When an event lists both
+    'advance' and 'regulation time' markets, use the regulation ones (they are
+    what Elo models and what the Tie market belongs to)."""
+    sides = ev["sides"]
+    if any(s.get("reg") for s in sides):
+        return [s for s in sides if s.get("reg") or s["is_tie"]]
+    return sides
+
+
 def winner(ev):
     """Name of the winning side, 'Tie', or None if not settled cleanly (void etc)."""
-    for s in ev["sides"]:
+    for s in match_sides(ev):
         if s["won"]:
             return "Tie" if s["is_tie"] else s["name"]
     return None
@@ -189,4 +205,4 @@ def winner(ev):
 def closing_probs(ev):
     """{side_name: last traded YES price} for a settled event."""
     return {("Tie" if s["is_tie"] else s["name"]): s["last"]
-            for s in ev["sides"] if s.get("last") is not None}
+            for s in match_sides(ev) if s.get("last") is not None}
