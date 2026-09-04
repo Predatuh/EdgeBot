@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-04T13:43Z",
+ "generated_utc": "2026-09-04T14:06Z",
  "picks_logged": 50,
  "overall": {
   "EDGE": {
@@ -391,6 +391,78 @@
     "brier_model": null,
     "brier_market": null
    }
+  }
+ },
+ "by_research": {
+  "for_pick": {
+   "w": 0,
+   "l": 0,
+   "n": 0,
+   "pending": 0,
+   "units": 0,
+   "risked": 0,
+   "roi": 0.0,
+   "avg_edge": null,
+   "avg_clv": null,
+   "clv_n": 0,
+   "brier_model": null,
+   "brier_market": null
+  },
+  "neutral": {
+   "w": 0,
+   "l": 0,
+   "n": 0,
+   "pending": 0,
+   "units": 0,
+   "risked": 0,
+   "roi": 0.0,
+   "avg_edge": null,
+   "avg_clv": null,
+   "clv_n": 0,
+   "brier_model": null,
+   "brier_market": null
+  },
+  "against_pick": {
+   "w": 0,
+   "l": 0,
+   "n": 0,
+   "pending": 0,
+   "units": 0,
+   "risked": 0,
+   "roi": 0.0,
+   "avg_edge": null,
+   "avg_clv": null,
+   "clv_n": 0,
+   "brier_model": null,
+   "brier_market": null
+  },
+  "not_researched": {
+   "w": 0,
+   "l": 0,
+   "n": 0,
+   "pending": 50,
+   "units": 0,
+   "risked": 0,
+   "roi": 0.0,
+   "avg_edge": null,
+   "avg_clv": null,
+   "clv_n": 0,
+   "brier_model": null,
+   "brier_market": null
+  },
+  "flagged": {
+   "w": 0,
+   "l": 0,
+   "n": 0,
+   "pending": 0,
+   "units": 0,
+   "risked": 0,
+   "roi": 0.0,
+   "avg_edge": null,
+   "avg_clv": null,
+   "clv_n": 0,
+   "brier_model": null,
+   "brier_market": null
   }
  },
  "top_ratings": {
