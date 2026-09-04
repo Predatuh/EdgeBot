@@ -1,0 +1,105 @@
+edge_threshold: 0.04
+kelly_fraction: 0.25
+max_units: 1.0
+show_passes: true
+skip_extreme_wx: true
+
+leagues:
+  nfl:
+    enabled: true
+    label: NFL
+    sport: football
+    league: nfl
+    k: 20
+    home_adv: 48
+    injuries: true
+    injury_elo: 12
+    weather: true
+    min_games: 48
+    warmup_days: 260
+  cfb:
+    enabled: true
+    label: College Football
+    sport: football
+    league: college-football
+    k: 24
+    home_adv: 60
+    injuries: false
+    weather: true
+    min_games: 150
+    warmup_days: 300
+  mlb:
+    enabled: true
+    label: MLB
+    sport: baseball
+    league: mlb
+    k: 6
+    home_adv: 24
+    mov: false
+    injuries: true
+    injury_elo: 6
+    weather: true
+    min_games: 400
+    warmup_days: 60
+  epl:
+    enabled: true
+    label: Premier League
+    sport: soccer
+    league: eng.1
+    k: 22
+    home_adv: 55
+    draws: true
+    weather: false
+    min_games: 60
+    warmup_days: 120
+  laliga:
+    enabled: true
+    label: La Liga
+    sport: soccer
+    league: esp.1
+    k: 22
+    home_adv: 55
+    draws: true
+    min_games: 60
+    warmup_days: 120
+  ligue1:
+    enabled: true
+    label: Ligue 1
+    sport: soccer
+    league: fra.1
+    k: 22
+    home_adv: 55
+    draws: true
+    min_games: 60
+    warmup_days: 120
+  atp:
+    enabled: true
+    label: ATP Tennis
+    sport: tennis
+    league: atp
+    k: 32
+    home_matters: false
+    mov: false
+    weather: true
+    min_games: 600
+    warmup_days: 150
+  wta:
+    enabled: false
+    label: WTA Tennis
+    sport: tennis
+    league: wta
+    k: 32
+    home_matters: false
+    mov: false
+    min_games: 600
+    warmup_days: 150
+  cricket:
+    enabled: false
+    label: Cricket
+    sport: cricket
+    league: "8676"
+    k: 24
+    home_adv: 30
+    mov: false
+    min_games: 40
+    warmup_days: 120
