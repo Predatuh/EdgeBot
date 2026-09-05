@@ -20,3 +20,5 @@ date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_s
 2026-09-04,fph0,ligue1,KXLIGUE1GAME-26SEP04OLAUX,Lyon vs Auxerre,Lyon,SPREAD,Lyon vs Auxerre - Lyonnais -1.5 ML,,0.682,eb_log,Lyon,LEAN,0.669,yes,1.0,n/a,,,
 2026-09-04,fph0,ligue1,KXLIGUE1GAME-26SEP04PSGASM,Paris Saint Germain vs AS Monaco,PSG,ML,Paris Saint Germain vs AS Monaco - PSG ML,0.73,0.721,eb_log,PSG,LEAN,0.705,yes,0.93,,,,
 2026-09-04,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP04VFBKOE,Stuttgart vs Koln,Stuttgart,ML,Stuttgart vs Koln - Stuttgart ML,0.67,0.655,eb_log,Stuttgart,LEAN,0.648,yes,0.95,,,,
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04SHESHA,Ben Shelton vs Denis Shapovalov,Ben Shelton,ML,Ben Shelton vs Denis Shapovalov - Shelton ML,0.78,0.775,eb_log_derived,Denis Shapovalov,EDGE,0.27,no,1.0,,,,
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04SVIKAL,Elina Svitolina vs Anna Kalinskaya,Elina Svitolina,ML,Elina Svitolina vs Anna Kalinskaya - Svitolina ML,0.71,0.705,eb_log,Elina Svitolina,LEAN,0.666,yes,1.0,,,,
