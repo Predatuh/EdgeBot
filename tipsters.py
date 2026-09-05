@@ -27,6 +27,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MATCH_MIN = 0.72                      # event-match confidence floor
 SPLIT = re.compile(r"\s+(?:vs\.?|v\.?|@|versus)\s+", re.I)
 SPREAD = re.compile(r"[+-]\d+(\.\d+)?\b")
+ASIDE = re.compile(r"\([^)]*\)")                 # "(might sprinkle a little...)" is commentary
+# a set/game market, or an in-play instruction — neither is a match moneyline
+LIVE = re.compile(r"\bset\s*\d|→|->|\bswitch\b|\brest of the (match|game)\b", re.I)
 
 
 def _norm(s):
@@ -68,7 +71,17 @@ def parse_slate(text):
         a, b = parts[0].strip(), parts[1].strip()
         if not a or not b or len(a) > 60 or len(b) > 60:
             continue
-        pick_txt = right.strip()
+        # drop parenthetical commentary first, so an aside like "(Bayern -1.5)"
+        # cannot turn a plain moneyline into a spread
+        pick_txt = ASIDE.sub(" ", right).strip()
+        if not pick_txt:
+            continue
+        if LIVE.search(pick_txt):                     # set market / live switch: record, never score
+            name = re.split(r"\bset\b|→|->|\bswitch\b", pick_txt, flags=re.I)[0]
+            name = re.sub(r"\b(ml|moneyline|money line)\b", "", name, flags=re.I).strip(" .-")
+            if name:
+                out.append({"a": a, "b": b, "pick": name, "bet_type": "OTHER", "raw": line})
+            continue
         extra = "+" in pick_txt                       # extra legs on the ticket
         head = pick_txt.split("+")[0].strip()
         spread = bool(SPREAD.search(head))
