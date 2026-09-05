@@ -108,19 +108,25 @@ def load_config():
 
 def _board(cfg, date, backfill):
     """Kalshi events for `date`: today's open markets, or settled ones when backfilling."""
-    events = []
+    events, seen = [], set()
     since = state._ts(dt.date.fromisoformat(date) - dt.timedelta(days=1)) if backfill else None
     for key, lg in cfg["leagues"].items():
         if not lg.get("enabled", True):
             continue
+        evs = []
         try:
-            evs = (kalshi.settled_events(lg["ticker"], since) if backfill
-                   else kalshi.open_events(lg["ticker"], cfg.get("max_spread")))
+            evs += kalshi.open_events(lg["ticker"], cfg.get("max_spread"))
         except Exception as e:
-            print(f"[tipster] {key} board failed: {type(e).__name__}: {str(e)[:70]}")
-            continue
+            print(f"[tipster] {key} open board failed: {type(e).__name__}: {str(e)[:70]}")
+        if backfill:
+            # a past-day slate can hold matches that have settled AND ones still running
+            try:
+                evs += kalshi.settled_events(lg["ticker"], since)
+            except Exception as e:
+                print(f"[tipster] {key} settled board failed: {type(e).__name__}: {str(e)[:70]}")
         for ev in evs:
-            if ev["date"] == date:
+            if ev["date"] == date and ev["event"] not in seen:
+                seen.add(ev["event"])
                 ev["_league"] = key
                 events.append(ev)
     return events
