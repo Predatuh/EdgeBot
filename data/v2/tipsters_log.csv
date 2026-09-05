@@ -53,3 +53,6 @@ date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_s
 2026-09-05,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP05SVWRBL,Bremen vs Leipzig,Leipzig,ML,Bremen vs. Leipzig - Leipzig ML,0.56,0.555,live,,,,,1.0,,,,
 2026-09-05,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP05TSGBVB,Hoffenheim vs Dortmund,Dortmund,ML,Hoffenheim vs. Dortmund - Dortmund ML,0.39,0.385,live,,,,,1.0,,,,
 2026-09-05,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP05SCHBMU,Schalke vs Bayern,Bayern Munich,ML,Schalke vs. Bayern - Bayern ML (Bayern -1.5),0.86,0.855,live,,,,,0.95,,,,
+2026-09-05,fph0,wta,KXWTAMATCH-26SEP04POTANI,Anastasia Potapova vs Amanda Anisimova,Amanda Anisimova,ML,Anastasia Potapova vs. Amanda Anisimova - Anisimova ML,0.85,0.845,live,Amanda Anisimova,LEAN,0.8,yes,1.0,,,,
+2026-09-05,fph0,wta,KXWTAMATCH-26SEP04SWIBOU,Iga Swiatek vs Marie Bouzkova,Iga Swiatek,ML,Iga Swiatek vs. Marie Bouzkova - Swiatek ML,0.86,0.855,live,Marie Bouzkova,EDGE,0.211,no,1.0,,,,
+2026-09-05,fph0,wta,KXWTAMATCH-26SEP04OSAMER,Elise Mertens vs Naomi Osaka,Naomi Osaka,ML,Elise Mertens vs. Naomi Osaka - Osaka ML,0.74,0.735,live,Elise Mertens,EDGE,0.336,no,1.0,,,,
