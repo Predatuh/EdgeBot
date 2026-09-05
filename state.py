@@ -217,6 +217,27 @@ def append_tip(row):
     return True
 
 
+def link_own_picks():
+    """Fill in what EdgeBot picked on the same event for tipster rows logged before
+    our own daily run had produced a pick. Returns how many rows were filled."""
+    rows = read_tips()
+    if not rows:
+        return 0
+    own = {r["event_id"]: r for r in read_log()}
+    n = 0
+    for r in rows:
+        if r["agree"] or r["event_id"] not in own:
+            continue
+        eb = own[r["event_id"]]
+        r["eb_pick"], r["eb_tier"] = eb["pick"], eb["tier"]
+        r["eb_model_prob"] = eb["model_prob"]
+        r["agree"] = "yes" if eb["pick"] == r["pick"] else "no"
+        n += 1
+    if n:
+        write_tips(rows)
+    return n
+
+
 def grade_tips(winners, closes=None):
     """Same settlement feed as our own picks; P/L is a flat $100 per pick."""
     rows = read_tips()

@@ -120,7 +120,13 @@ def load_config():
 
 
 def _board(cfg, date, backfill):
-    """Kalshi events for `date`: today's open markets, or settled ones when backfilling."""
+    """Kalshi events around `date`: open markets, plus settled ones when backfilling.
+
+    A slate's "today" does not line up with Kalshi's UTC event dating - a US evening
+    match posted tonight can be dated either side of midnight - so accept a one-day
+    window on each side rather than an exact date."""
+    d = dt.date.fromisoformat(date)
+    window = {(d + dt.timedelta(days=n)).isoformat() for n in (-1, 0, 1)}
     events, seen = [], set()
     since = state._ts(dt.date.fromisoformat(date) - dt.timedelta(days=1)) if backfill else None
     for key, lg in cfg["leagues"].items():
@@ -138,7 +144,7 @@ def _board(cfg, date, backfill):
             except Exception as e:
                 print(f"[tipster] {key} settled board failed: {type(e).__name__}: {str(e)[:70]}")
         for ev in evs:
-            if ev["date"] == date and ev["event"] not in seen:
+            if ev["date"] in window and ev["event"] not in seen:
                 seen.add(ev["event"])
                 ev["_league"] = key
                 events.append(ev)
@@ -170,9 +176,9 @@ def record(name, text, date=None, cfg=None, backfill=False):
     print(f"[tipster] {name}: parsed {len(tips)} lines")
 
     events = _board(cfg, date, backfill)
-    print(f"[tipster] {len(events)} {'settled' if backfill else 'live'} events on the board for {date}")
+    print(f"[tipster] {len(events)} {'settled' if backfill else 'live'} events on the board around {date}")
 
-    own = {r["event_id"]: r for r in state.read_log() if r["date"] == date}
+    own = {r["event_id"]: r for r in state.read_log()}
     logged = skipped = 0
     for t in tips:
         ev, side, conf = match_event(t, events)
@@ -207,6 +213,9 @@ def record(name, text, date=None, cfg=None, backfill=False):
             print(f"[tipster] {side['name']} @ {row['price'] or '-'} — {ev['event']}{flag}")
         else:
             skipped += 1
+    linked = state.link_own_picks()
+    if linked:
+        print(f"[tipster] linked {linked} row(s) to our own picks")
     print(f"[tipster] logged {logged}, skipped {skipped}")
     return logged, skipped
 

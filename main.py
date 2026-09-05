@@ -336,6 +336,7 @@ def main(argv=None):
         except Exception as e:
             traceback.print_exc()
             errors.append(f"{key}: {type(e).__name__}: {str(e)[:80]}")
+    state.link_own_picks()          # tipster slates logged before today's picks existed
     s = state.record_summary()
     state.write_stats(s, tops)
     E, L = s["overall"]["EDGE"], s["overall"]["LEAN"]
