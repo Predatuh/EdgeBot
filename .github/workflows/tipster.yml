@@ -1,0 +1,60 @@
+name: Log Tipster Slate
+
+# Paste someone's slate and it gets matched to the live Kalshi board, priced,
+# compared with EdgeBot's own pick, and auto-graded when the games settle.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Tipster name (keep it identical each time)"
+        required: true
+        default: "fph0"
+      slate:
+        description: "Paste the slate. One pick per line: 'A vs B - Pick ML'"
+        required: true
+      date:
+        description: "Slate date (YYYY-MM-DD). Blank = today."
+        default: ""
+      backfill:
+        description: "Past day? Match settled markets and price from our own log."
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-daily-picks     # never write data/ while a picks run is going
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Log the slate
+        env:                       # via env, never inlined into the script
+          SLATE: ${{ inputs.slate }}
+          TIPSTER: ${{ inputs.name }}
+          SLATE_DATE: ${{ inputs.date }}
+          BACKFILL: ${{ inputs.backfill }}
+        run: |
+          printf '%s' "$SLATE" > slate.txt
+          ARGS=""
+          [ -n "$SLATE_DATE" ] && ARGS="$ARGS --date $SLATE_DATE"
+          [ "$BACKFILL" = "true" ] && ARGS="$ARGS --backfill"
+          python tipsters.py --name "$TIPSTER" --slate-file slate.txt $ARGS
+          rm -f slate.txt
+      - name: Commit the slate
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "tipster: $(date -u +%F)"
+          git pull --rebase -X theirs origin main
+          git push || (git pull --rebase -X theirs origin main && git push)

@@ -49,6 +49,7 @@ Elo ratings and the model weight used.
 | `hist_<league>.json` | game history used for form / H2H / rest |
 | `seen_<league>.json` | settled events already ingested (dedupe) |
 | `research/<date>.json` | full research briefs per matchup (also the per-day cache) |
+| `tipsters_log.csv` | outside tipsters' slates: price, market prob, our pick, agreement, result, CLV, $100 P/L |
 
 `picks_log.csv` columns: `date, time_utc, league, event_id, matchup, pick, side,
 tier, model_raw, model_prob, market_prob, edge, price, units, elo_pick, elo_opp,
@@ -89,6 +90,44 @@ What to actually judge it on: units and ROI, not win rate — and early on, **CL
 which shows up long before W-L does. `brier_model` below `brier_market` means the model is
 adding information the price didn't already have.
 
+## Tracking an outside tipster
+
+Paste someone's slate and EdgeBot logs it against the same Kalshi market it bets
+itself, then grades it from the same settlement feed — so the comparison is
+like-for-like rather than their record versus yours.
+
+Actions → **Log Tipster Slate** → *Run workflow*: put their name in `name` (keep it
+identical each time) and paste the post into `slate`. One pick per line, roughly
+`A vs B - Pick ML`; headers, chatter and reactions are ignored. Tick `backfill`
+for a past day — settled markets only report a closing price, so entry prices then
+come from our own pick log instead. Locally:
+`python tipsters.py --name fph0 --slate-file slate.txt [--backfill] [--date YYYY-MM-DD]`.
+
+Each line is matched to a live Kalshi event by scoring **both** competitor names
+against every event on the board, which tolerates surnames only ("Merida"),
+abbreviations ("PSG", "NY City"), and typos ("Nashvile"). Bet types are recorded:
+`ML` is scored, `ML+` scores the moneyline leg of a bigger ticket, and `SPREAD` /
+`OTHER` are stored but never scored, so a handicap can't flatter the ROI.
+
+`data/v2/tipsters_log.csv` is the dataset — per pick: the price and de-vigged
+market probability at post time, what EdgeBot picked and its model probability,
+whether they agreed, the result, CLV, and P/L on a flat $100. `stats.json` gains a
+`tipsters` block per person: overall, **agrees_with_model**, and
+**disagrees_with_model**.
+
+Two columns do the real work when judging them:
+
+- `expected_w` — wins the market price implied across those same picks. Beating it
+  by a lot over many picks is edge; a hit rate on its own is not, since backing
+  favorites wins often and still loses money.
+- `price_src` — `live` is a real ask captured at post time and is the only fully
+  trustworthy entry price. `eb_log` / `eb_log_derived` come from backfill and are
+  approximations, so filter on this before training anything on the data.
+
+The **disagrees_with_model** split is the one worth watching: when they take a side
+our model rejects, are they right? That is where they'd be adding information the
+model doesn't have.
+
 ## Setup / ops
 
 1. Add the repo secret `DISCORD_WEBHOOK_URL`. Headlines research works with no extra setup;
@@ -111,5 +150,6 @@ adding information the price didn't already have.
 
 Flat: `main.py` (orchestration + model), `kalshi.py` (market + results),
 `espn.py` (injuries/venue), `weather.py`, `elo.py`, `edge.py` (de-vig, Kelly),
-`state.py` (persistence + analytics), `research.py` (Claude web research), `notify.py` (Discord). Adding a factor is
+`state.py` (persistence + analytics), `research.py` (Claude web research),
+`tipsters.py` (outside slates), `notify.py` (Discord). Adding a factor is
 one function plus one adjustment line in `model_game`.

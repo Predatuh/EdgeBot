@@ -214,6 +214,7 @@ def model_game(key, lg, cfg, ev, ratings, hist):
 def run_league(key, lg, cfg, body, grade_only=False):
     winners, closes = ingest_history(key, lg)
     gw, gl = state.grade_pending(winners, closes)
+    state.grade_tips(winners, closes)
     ratings = state.load_elo(key)
     if grade_only:                      # results check: grade + rate, never log new picks
         print(f"[{key}] graded {gw}W/{gl}L")
@@ -293,6 +294,19 @@ def status_body(days):
             out.append(f"{mark} {r['pick']} @ {int(round(state._fl(r['price'])*100))}¢{money} — {r['matchup']}{clv}")
         for r in sorted(pend, key=lambda r: -state._fl(r["edge"]))[:8 if tier == "EDGE" else 0]:
             out.append(f"⏳ {r['pick']} @ {int(round(state._fl(r['price'])*100))}¢ — {r['matchup']}")
+    tips = state.tipster_summary()
+    for name, t in tips.items():
+        o, ag, dis = t["overall"], t["agrees_with_model"], t["disagrees_with_model"]
+        if not o["n"] and not o["pending"]:
+            continue
+        line = f"\n👤 **{name}: {o['w']}-{o['l']}** | ${o['profit_100']:+,.2f} per $100 flat | ROI {o['roi']}%"
+        if o["pending"]:
+            line += f" · {o['pending']} pending"
+        out.append(line)
+        if o["expected_w"] is not None:
+            out.append(f"   market priced those picks for ~{o['expected_w']} wins in {o['n']}")
+        if dis["n"]:
+            out.append(f"   vs our model — agree {ag['w']}-{ag['l']}, disagree {dis['w']}-{dis['l']} (ROI {dis['roi']}%)")
     return out
 
 

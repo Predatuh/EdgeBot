@@ -8,6 +8,7 @@ import datetime as dt
 
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "v2")
 LOG = os.path.join(DATA, "picks_log.csv")
+TIP_LOG = os.path.join(DATA, "tipsters_log.csv")
 STATS = os.path.join(DATA, "stats.json")
 TIERS = ("EDGE", "LEAN")
 LOG_FIELDS = [
@@ -25,6 +26,22 @@ LOG_FIELDS = [
     "close_prob",    # last traded Kalshi price for the pick (closing line)
     "clv",           # close_prob - price paid: positive = beat the close
     "profit",        # units won/lost
+]
+
+
+TIP_FIELDS = [
+    "date", "tipster", "league", "event_id", "matchup", "pick",
+    "bet_type",        # ML | ML+ (extra legs on the ticket) | SPREAD | OTHER
+    "raw",             # the original slate line
+    "price",           # Kalshi ask for that side when the slate was logged
+    "market_prob",     # de-vigged market probability at that moment
+    "price_src",       # live | eb_log | eb_log_derived (how the entry price was obtained)
+    "eb_pick", "eb_tier", "eb_model_prob",   # what EdgeBot said on the same event
+    "agree",           # did EdgeBot pick the same side
+    "match_conf",      # confidence the slate line was matched to the right event
+    "result",          # W / L, or n/a for tickets we can't score
+    "close_prob", "clv",
+    "profit_100",      # P/L from a flat $100 on this pick
 ]
 
 
@@ -169,6 +186,100 @@ def append_pick(row):
     return True
 
 
+# ---- outside tipsters ----
+def read_tips():
+    if not os.path.exists(TIP_LOG):
+        return []
+    with open(TIP_LOG, newline="") as f:
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        for k in TIP_FIELDS:
+            r.setdefault(k, "")
+    return rows
+
+
+def write_tips(rows):
+    os.makedirs(DATA, exist_ok=True)
+    with open(TIP_LOG, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=TIP_FIELDS, extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
+
+
+def append_tip(row):
+    rows = read_tips()
+    if any(r["date"] == row["date"] and r["tipster"] == row["tipster"]
+           and r["event_id"] == row["event_id"] for r in rows):
+        return False
+    rows.append(row)
+    write_tips(rows)
+    return True
+
+
+def grade_tips(winners, closes=None):
+    """Same settlement feed as our own picks; P/L is a flat $100 per pick."""
+    rows = read_tips()
+    w = l = 0
+    for r in rows:
+        if r["result"]:                       # graded, or 'n/a' for unscorable tickets
+            continue
+        win = winners.get(r["event_id"])
+        if win is None:
+            continue
+        price = _fl(r["price"])
+        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"])
+        if cp is not None:
+            r["close_prob"] = round(cp, 3)
+            if price:
+                r["clv"] = round(cp - price, 3)
+        if win == r["pick"]:
+            r["result"] = "W"
+            r["profit_100"] = round(100 * (1 - price) / price, 2) if price > 0 else 0
+            w += 1
+        else:
+            r["result"] = "L"
+            r["profit_100"] = -100 if price > 0 else 0
+            l += 1
+    if w or l:
+        write_tips(rows)
+    return w, l
+
+
+def _tip_stats(rows):
+    g = [r for r in rows if r["result"] in ("W", "L")]
+    w = sum(1 for r in g if r["result"] == "W")
+    pl = sum(_fl(r["profit_100"]) for r in g)
+    clv = [_fl(r["clv"]) for r in g if r["clv"] != ""]
+    # what the market said these picks were worth, for comparison with the hit rate
+    mk = [_fl(r["market_prob"]) for r in g if r["market_prob"] != ""]
+    return {
+        "n": len(g), "w": w, "l": len(g) - w,
+        "pending": sum(1 for r in rows if not r["result"]),
+        "unscorable": sum(1 for r in rows if r["result"] == "n/a"),
+        "profit_100": round(pl, 2),
+        "roi": round(pl / (100 * len(g)) * 100, 1) if g else 0.0,
+        "avg_price": round(sum(mk) / len(mk), 3) if mk else None,
+        "expected_w": round(sum(mk), 1) if mk else None,   # wins the price implied
+        "avg_clv": round(sum(clv) / len(clv), 4) if clv else None,
+    }
+
+
+def tipster_summary():
+    """Per tipster, plus the split that matters: how they do when they agree with
+    our model versus when they disagree."""
+    rows = read_tips()
+    out = {}
+    for name in sorted({r["tipster"] for r in rows}):
+        rs = [r for r in rows if r["tipster"] == name]
+        out[name] = {
+            "overall": _tip_stats(rs),
+            "agrees_with_model": _tip_stats([r for r in rs if r["agree"] == "yes"]),
+            "disagrees_with_model": _tip_stats([r for r in rs if r["agree"] == "no"]),
+        }
+    return out
+
+
 def grade_pending(winners, closes=None):
     """winners: {event_id: winner_name|'Tie'}; closes: {event_id: {side: close_prob}}.
     Returns (w, l) graded now."""
@@ -245,6 +356,9 @@ def record_summary():
     out["by_research"] = {b: _stats([r for r in rows if lean_bucket(r) == b])
                           for b in ("for_pick", "neutral", "against_pick", "not_researched")}
     out["by_research"]["flagged"] = _stats([r for r in rows if r["research_flag"]])
+    tips = tipster_summary()
+    if tips:
+        out["tipsters"] = tips
     return out
 
 
