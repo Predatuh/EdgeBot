@@ -13,6 +13,10 @@ Per league (a Kalshi series):
      injuries, lineups, form, situational factors -> card notes, a capped Elo nudge,
      and a red-flag demotion so a known problem never gets staked.
   6. Write data/v2/stats.json (record, ROI, CLV, Brier by tier/league/research) for analytics.
+
+Run `python main.py --grade-only [--days=N]` for a results-only check: it grades
+picks that have settled and posts a W/L + units + CLV card, without logging any
+new picks (so it is safe to run at any hour).
 """
 import datetime as dt
 import os
@@ -207,10 +211,13 @@ def model_game(key, lg, cfg, ev, ratings, hist):
 
 
 # ---------------------------------------------------------------- main
-def run_league(key, lg, cfg, body):
+def run_league(key, lg, cfg, body, grade_only=False):
     winners, closes = ingest_history(key, lg)
     gw, gl = state.grade_pending(winners, closes)
     ratings = state.load_elo(key)
+    if grade_only:                      # results check: grade + rate, never log new picks
+        print(f"[{key}] graded {gw}W/{gl}L")
+        return gw, gl, state.top_ratings(ratings)
     hist = state.load_history(key)
     evs = kalshi.open_events(lg["ticker"], cfg.get("max_spread"))
     today = dt.date.today().isoformat()
@@ -261,20 +268,55 @@ def run_league(key, lg, cfg, body):
     return gw, gl, state.top_ratings(ratings)
 
 
-def main():
+def status_body(days):
+    """Results card: how the last `days` days of picks actually did."""
+    rows = state.read_log()
+    since = (dt.date.today() - dt.timedelta(days=days - 1)).isoformat()
+    recent = [r for r in rows if r["date"] >= since]
+    graded = [r for r in recent if r["result"]]
+    out = [f"📋 **EdgeBot results — {since} to {dt.date.today().isoformat()}**"]
+    for tier, icon in (("EDGE", "🔥"), ("LEAN", "📌")):
+        rs = [r for r in graded if r["tier"] == tier]
+        pend = [r for r in recent if r["tier"] == tier and not r["result"]]
+        if not rs and not pend:
+            continue
+        w = sum(1 for r in rs if r["result"] == "W")
+        pl = sum(state._fl(r["profit"]) for r in rs)
+        head = f"\n{icon} **{tier}: {w}-{len(rs) - w}**"
+        if tier == "EDGE":
+            head += f" | {pl:+.2f}u"
+        out.append(head + (f" · {len(pend)} still pending" if pend else ""))
+        for r in sorted(rs, key=lambda r: (r["date"], r["league"])):
+            mark = "✅" if r["result"] == "W" else "❌"
+            money = f" {state._fl(r['profit']):+.2f}u" if tier == "EDGE" else ""
+            clv = f" · CLV {state._fl(r['clv'])*100:+.0f}¢" if r["clv"] != "" else ""
+            out.append(f"{mark} {r['pick']} @ {int(round(state._fl(r['price'])*100))}¢{money} — {r['matchup']}{clv}")
+        for r in sorted(pend, key=lambda r: -state._fl(r["edge"]))[:8 if tier == "EDGE" else 0]:
+            out.append(f"⏳ {r['pick']} @ {int(round(state._fl(r['price'])*100))}¢ — {r['matchup']}")
+    return out
+
+
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    grade_only = "--grade-only" in argv or "--status" in argv
+    days = 2
+    for a in argv:
+        if a.startswith("--days="):
+            days = max(1, int(a.split("=", 1)[1]))
     cfg = load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     research.configure(cfg.get("research"))
-    off = research.available()
-    print(f"[research] {'off: ' + off if off else 'on: ' + research.label()}")
-    body = [f"🤖 **EdgeBot picks — {dt.date.today().isoformat()}** (market: Kalshi)"]
+    off = "" if grade_only else research.available()
+    if not grade_only:
+        print(f"[research] {'off: ' + off if off else 'on: ' + research.label()}")
+    body = [] if grade_only else [f"🤖 **EdgeBot picks — {dt.date.today().isoformat()}** (market: Kalshi)"]
     gw = gl = 0
     errors, tops = [], {}
     for key, lg in cfg["leagues"].items():
         if not lg.get("enabled", True):
             continue
         try:
-            w, l, top = run_league(key, lg, cfg, body)
+            w, l, top = run_league(key, lg, cfg, body, grade_only)
             gw += w; gl += l
             tops[key] = top
         except Exception as e:
@@ -283,9 +325,14 @@ def main():
     s = state.record_summary()
     state.write_stats(s, tops)
     E, L = s["overall"]["EDGE"], s["overall"]["LEAN"]
-    body.append(f"\n📊 **EDGE plays: {E['w']}-{E['l']} | {E['units']:+.2f}u | ROI {E['roi']}%**"
+    if grade_only:
+        body = status_body(days)
+        body.append(f"\n📊 **All-time EDGE: {E['w']}-{E['l']} | {E['units']:+.2f}u | ROI {E['roi']}%**"
+                    + (f" · {E['pending']} pending" if E["pending"] else ""))
+    else:
+        body.append(f"\n📊 **EDGE plays: {E['w']}-{E['l']} | {E['units']:+.2f}u | ROI {E['roi']}%**"
                 + (f" · {E['pending']} pending" if E["pending"] else ""))
-    body.append(f"📌 Leans (paper): {L['w']}-{L['l']}  · graded {gw}W/{gl}L this run")
+        body.append(f"📌 Leans (paper): {L['w']}-{L['l']}  · graded {gw}W/{gl}L this run")
     if E["clv_n"] or E["brier_model"] is not None:
         bits = []
         if E["avg_clv"] is not None:
@@ -295,11 +342,14 @@ def main():
         body.append("📈 " + " · ".join(bits))
     if errors:
         body.append("⚠️ leagues skipped this run: " + "; ".join(errors))
-    if off:
-        body.append(f"_🔎 research off ({off})_")
-    elif research.run_note():
-        body.append(f"_🔎 {research.run_note()}_")
-    body.append("_🔥 = real edge vs Kalshi price, staked. 📌 = model favorite, no edge, tracked only._")
+    if grade_only:
+        body.append(f"_graded {gw}W/{gl}L this check · CLV = price move after we bet; positive means we beat the close._")
+    else:
+        if off:
+            body.append(f"_🔎 research off ({off})_")
+        elif research.run_note():
+            body.append(f"_🔎 {research.run_note()}_")
+        body.append("_🔥 = real edge vs Kalshi price, staked. 📌 = model favorite, no edge, tracked only._")
     try:
         notify.post("\n".join(body))
     except Exception as e:

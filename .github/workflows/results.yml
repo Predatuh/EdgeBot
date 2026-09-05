@@ -1,0 +1,44 @@
+name: Results Check
+
+# Grades picks that have settled and posts a results card to Discord.
+# Never logs new picks, so it is safe to run at any hour.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days of picks to report on"
+        default: "2"
+  # Uncomment for an automatic end-of-day results card (06:00 UTC = 2am ET,
+  # after US games have settled):
+  # schedule:
+  #   - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-daily-picks     # same group as Daily Picks: never write data/ at the same time
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Grade settled picks
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python main.py --grade-only --days=${{ inputs.days || '2' }}
+      - name: Commit graded results
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "grade: $(date -u +%F)"
+          git pull --rebase -X theirs origin main
+          git push || (git pull --rebase -X theirs origin main && git push)

@@ -73,6 +73,22 @@ conf, notes, research, research_lean, research_adj, research_flag, result, close
 - `research:` block — `mode` (headlines / claude / off), per-run cap, headline days and count, and for claude mode the model, effort, searches, `near_edge`, `elo_per_point`, `demote_on_red_flag`
 - per league: `k` (Elo K), `home_adv`, `neutral` (tennis), `min_games` (drops the ⚠️low-data tag), `espn: [sport, league]` + `injuries` / `injury_elo` / `weather`
 
+## Checking how it's doing
+
+- **Discord**: every picks card ends with the running EDGE record, units, ROI and average CLV.
+- **On demand**: Actions → **Results Check** → *Run workflow* (`days` input, default 2). It grades
+  every pick that has settled and posts a results card — ✅/❌ per pick with units and CLV — and
+  **never logs new picks**, so it is safe to run at any hour. Locally: `python main.py --grade-only --days=3`.
+  (A normal Daily Picks run also grades, but it logs that day's picks at whatever the prices are
+  at that moment, so don't run it off-schedule just to check results.)
+- **The files**: `data/v2/picks_log.csv` is every pick with its result, profit and CLV;
+  `data/v2/stats.json` is the rolled-up record by tier, league, last 7 days and research bucket.
+
+What to actually judge it on: units and ROI, not win rate — and early on, **CLV** (`clv` column,
+`avg_clv` in stats). Positive average CLV means the market moved toward the bot after it bet,
+which shows up long before W-L does. `brier_model` below `brier_market` means the model is
+adding information the price didn't already have.
+
 ## Setup / ops
 
 1. Add the repo secret `DISCORD_WEBHOOK_URL`. Headlines research works with no extra setup;
