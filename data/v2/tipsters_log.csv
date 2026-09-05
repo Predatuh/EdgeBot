@@ -1,24 +1,24 @@
 date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_src,eb_pick,eb_tier,eb_model_prob,agree,match_conf,result,close_prob,clv,profit_100
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04MEDRIN,Daniil Medvedev vs Arthur Rinderknech,Daniil Medvedev,ML,Daniil Medvedev vs Arthur Rinderknech - Medvedev ML,0.736,0.728,eb_log_derived,Arthur Rinderknech,EDGE,0.316,no,1.0,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04BUBPAU,Tommy Paul vs Alexander Bublik,Tommy Paul,ML,Tommy Paul vs Alexander Bublik - Paul ML,0.62,0.609,eb_log,Tommy Paul,LEAN,0.588,yes,1.0,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04YIBALC,Carlos Alcaraz vs Yibing Wu,Carlos Alcaraz,ML,Carlos Alcaraz vs Yibing Wu - Alcaraz ML,0.93,0.925,eb_log,Carlos Alcaraz,LEAN,0.91,yes,1.0,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04MICMER,Alex Michelsen vs Daniel Merida Aguilar,Daniel Merida,ML,Alex Michelsen vs Daniel Merida Aguilar - Merida ML,0.37,0.365,eb_log,Daniel Merida,EDGE,0.416,yes,0.97,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04ETCNAV,Tomas Martin Etcheverry vs Mariano Navone,Tomas Martin Etcheverry,ML,Tomas Martin Etcheverry vs Mariano Navone - Etcheverry ML,0.52,0.515,eb_log,Tomas Martin Etcheverry,LEAN,0.5,yes,1.0,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04LEHTSI,Stefanos Tsitsipas vs Jiri Lehecka,Jiri Lehecka,ML,Stefanos Tsitsipas vs Jiri Lehecka - Lehecka ML,0.62,0.615,eb_log,Jiri Lehecka,LEAN,0.576,yes,1.0,,,,
-2026-09-04,fph0,atp,KXATPMATCH-26SEP04VACTIA,Frances Tiafoe vs Valentin Vacherot,Frances Tiafoe,ML,Frances Tiafoe vs Valentin Vacherot - Tiafoe ML,0.64,0.635,eb_log,Frances Tiafoe,LEAN,0.635,yes,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04KOSALE,Ekaterina Alexandrova vs Marta Kostyuk,Marta Kostyuk,ML,Ekaterina Alexandrova vs Marta Kostyuk - Kostyuk ML,0.76,0.748,eb_log,Marta Kostyuk,LEAN,0.713,yes,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04PAOCIR,Jasmine Paolini vs Sorana Cirstea,Sorana Cirstea,ML,Jasmine Paolini vs Sorana Cirstea - Cirstea ML,0.62,0.615,eb_log,Sorana Cirstea,LEAN,0.595,yes,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04SABRAK,Kamilla Rakhimova vs Aryna Sabalenka,Aryna Sabalenka,ML,Kamilla Rakhimova vs Aryna Sabalenka - Sabalenka ML,0.95,0.945,eb_log_derived,Kamilla Rakhimova,EDGE,0.146,no,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04PEGFER,Jessica Pegula vs Leylah Fernandez,Jessica Pegula,ML,Jessica Pegula vs Leylah Fernandez - Pegula ML,0.85,0.837,eb_log,Jessica Pegula,LEAN,0.808,yes,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04TOWSHN,Diana Shnaider vs Taylor Townsend,Taylor Townsend,ML,Diana Shnaider vs Taylor Townsend - Townsend ML,0.4,0.395,eb_log_derived,Diana Shnaider,LEAN,0.601,no,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04ANNNOS,Ann Li vs Linda Noskova,Linda Noskova,ML,Ann Li vs Linda Noskova - Noskova ML,0.76,0.755,eb_log,Linda Noskova,LEAN,0.721,yes,1.0,,,,
-2026-09-04,fph0,wta,KXWTAMATCH-26SEP04NAVMUC,Emma Navarro vs Karolina Muchova,Karolina Muchova,ML,Emma Navarro vs Karolina Muchova - Muchova ML,0.8,0.787,eb_log,Karolina Muchova,LEAN,0.76,yes,1.0,,,,
-2026-09-04,fph0,mls,KXMLSGAME-26SEP04NYCNSH,NY City vs Nashvile,Nashville,ML,NY City vs Nashvile - Nashville ML,0.39,0.391,eb_log,Nashville,LEAN,0.407,yes,0.9,,,,
-2026-09-04,fph0,epl,KXEPLGAME-26SEP04IPSLFC,Ipswich vs Liverpool,Liverpool,ML,Ipswich vs Liverpool - Liverpool ML,0.65,0.648,eb_log,Liverpool,LEAN,0.642,yes,0.95,,,,
-2026-09-04,fph0,seriea,KXSERIEAGAME-26SEP04GENCOM,Genoa vs Como,Como,ML,Genoa vs Como - Como ML,0.56,0.552,eb_log,Como,LEAN,0.55,yes,1.0,,,,
-2026-09-04,fph0,laliga,KXLALIGAGAME-26SEP04RBBRMA,Real Betis vs Real Madrid,Real Madrid,ML+,Real Betis vs Real Madrid - Real Madrid ML + -1.5 Real Madrid + player prop - Bellingham goal,0.69,0.682,eb_log,Real Madrid,LEAN,0.672,yes,1.0,,,,
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04MEDRIN,Daniil Medvedev vs Arthur Rinderknech,Daniil Medvedev,ML,Daniil Medvedev vs Arthur Rinderknech - Medvedev ML,0.736,0.728,eb_log_derived,Arthur Rinderknech,EDGE,0.316,no,1.0,W,0.99,0.254,35.87
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04BUBPAU,Tommy Paul vs Alexander Bublik,Tommy Paul,ML,Tommy Paul vs Alexander Bublik - Paul ML,0.62,0.609,eb_log,Tommy Paul,LEAN,0.588,yes,1.0,W,0.99,0.37,61.29
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04YIBALC,Carlos Alcaraz vs Yibing Wu,Carlos Alcaraz,ML,Carlos Alcaraz vs Yibing Wu - Alcaraz ML,0.93,0.925,eb_log,Carlos Alcaraz,LEAN,0.91,yes,1.0,W,0.99,0.06,7.53
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04MICMER,Alex Michelsen vs Daniel Merida Aguilar,Daniel Merida,ML,Alex Michelsen vs Daniel Merida Aguilar - Merida ML,0.37,0.365,eb_log,Daniel Merida,EDGE,0.416,yes,0.97,L,0.01,-0.36,-100
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04ETCNAV,Tomas Martin Etcheverry vs Mariano Navone,Tomas Martin Etcheverry,ML,Tomas Martin Etcheverry vs Mariano Navone - Etcheverry ML,0.52,0.515,eb_log,Tomas Martin Etcheverry,LEAN,0.5,yes,1.0,W,0.99,0.47,92.31
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04LEHTSI,Stefanos Tsitsipas vs Jiri Lehecka,Jiri Lehecka,ML,Stefanos Tsitsipas vs Jiri Lehecka - Lehecka ML,0.62,0.615,eb_log,Jiri Lehecka,LEAN,0.576,yes,1.0,L,0.01,-0.61,-100
+2026-09-04,fph0,atp,KXATPMATCH-26SEP04VACTIA,Frances Tiafoe vs Valentin Vacherot,Frances Tiafoe,ML,Frances Tiafoe vs Valentin Vacherot - Tiafoe ML,0.64,0.635,eb_log,Frances Tiafoe,LEAN,0.635,yes,1.0,W,0.99,0.35,56.25
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04KOSALE,Ekaterina Alexandrova vs Marta Kostyuk,Marta Kostyuk,ML,Ekaterina Alexandrova vs Marta Kostyuk - Kostyuk ML,0.76,0.748,eb_log,Marta Kostyuk,LEAN,0.713,yes,1.0,W,0.99,0.23,31.58
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04PAOCIR,Jasmine Paolini vs Sorana Cirstea,Sorana Cirstea,ML,Jasmine Paolini vs Sorana Cirstea - Cirstea ML,0.62,0.615,eb_log,Sorana Cirstea,LEAN,0.595,yes,1.0,W,0.99,0.37,61.29
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04SABRAK,Kamilla Rakhimova vs Aryna Sabalenka,Aryna Sabalenka,ML,Kamilla Rakhimova vs Aryna Sabalenka - Sabalenka ML,0.95,0.945,eb_log_derived,Kamilla Rakhimova,EDGE,0.146,no,1.0,W,0.99,0.04,5.26
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04PEGFER,Jessica Pegula vs Leylah Fernandez,Jessica Pegula,ML,Jessica Pegula vs Leylah Fernandez - Pegula ML,0.85,0.837,eb_log,Jessica Pegula,LEAN,0.808,yes,1.0,W,0.99,0.14,17.65
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04TOWSHN,Diana Shnaider vs Taylor Townsend,Taylor Townsend,ML,Diana Shnaider vs Taylor Townsend - Townsend ML,0.4,0.395,eb_log_derived,Diana Shnaider,LEAN,0.601,no,1.0,W,0.99,0.59,150.0
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04ANNNOS,Ann Li vs Linda Noskova,Linda Noskova,ML,Ann Li vs Linda Noskova - Noskova ML,0.76,0.755,eb_log,Linda Noskova,LEAN,0.721,yes,1.0,W,0.99,0.23,31.58
+2026-09-04,fph0,wta,KXWTAMATCH-26SEP04NAVMUC,Emma Navarro vs Karolina Muchova,Karolina Muchova,ML,Emma Navarro vs Karolina Muchova - Muchova ML,0.8,0.787,eb_log,Karolina Muchova,LEAN,0.76,yes,1.0,L,0.01,-0.79,-100
+2026-09-04,fph0,mls,KXMLSGAME-26SEP04NYCNSH,NY City vs Nashvile,Nashville,ML,NY City vs Nashvile - Nashville ML,0.39,0.391,eb_log,Nashville,LEAN,0.407,yes,0.9,L,0.01,-0.38,-100
+2026-09-04,fph0,epl,KXEPLGAME-26SEP04IPSLFC,Ipswich vs Liverpool,Liverpool,ML,Ipswich vs Liverpool - Liverpool ML,0.65,0.648,eb_log,Liverpool,LEAN,0.642,yes,0.95,W,0.99,0.34,53.85
+2026-09-04,fph0,seriea,KXSERIEAGAME-26SEP04GENCOM,Genoa vs Como,Como,ML,Genoa vs Como - Como ML,0.56,0.552,eb_log,Como,LEAN,0.55,yes,1.0,W,0.99,0.43,78.57
+2026-09-04,fph0,laliga,KXLALIGAGAME-26SEP04RBBRMA,Real Betis vs Real Madrid,Real Madrid,ML+,Real Betis vs Real Madrid - Real Madrid ML + -1.5 Real Madrid + player prop - Bellingham goal,0.69,0.682,eb_log,Real Madrid,LEAN,0.672,yes,1.0,L,0.01,-0.68,-100
 2026-09-04,fph0,ligue1,KXLIGUE1GAME-26SEP04OLAUX,Lyon vs Auxerre,Lyon,SPREAD,Lyon vs Auxerre - Lyonnais -1.5 ML,,0.682,eb_log,Lyon,LEAN,0.669,yes,1.0,n/a,,,
-2026-09-04,fph0,ligue1,KXLIGUE1GAME-26SEP04PSGASM,Paris Saint Germain vs AS Monaco,PSG,ML,Paris Saint Germain vs AS Monaco - PSG ML,0.73,0.721,eb_log,PSG,LEAN,0.705,yes,0.93,,,,
-2026-09-04,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP04VFBKOE,Stuttgart vs Koln,Stuttgart,ML,Stuttgart vs Koln - Stuttgart ML,0.67,0.655,eb_log,Stuttgart,LEAN,0.648,yes,0.95,,,,
+2026-09-04,fph0,ligue1,KXLIGUE1GAME-26SEP04PSGASM,Paris Saint Germain vs AS Monaco,PSG,ML,Paris Saint Germain vs AS Monaco - PSG ML,0.73,0.721,eb_log,PSG,LEAN,0.705,yes,0.93,L,0.01,-0.72,-100
+2026-09-04,fph0,bundesliga,KXBUNDESLIGAGAME-26SEP04VFBKOE,Stuttgart vs Koln,Stuttgart,ML,Stuttgart vs Koln - Stuttgart ML,0.67,0.655,eb_log,Stuttgart,LEAN,0.648,yes,0.95,W,0.99,0.32,49.25
 2026-09-04,fph0,atp,KXATPMATCH-26SEP04SHESHA,Ben Shelton vs Denis Shapovalov,Ben Shelton,ML,Ben Shelton vs Denis Shapovalov - Shelton ML,0.78,0.775,eb_log_derived,Denis Shapovalov,EDGE,0.27,no,1.0,,,,
 2026-09-04,fph0,wta,KXWTAMATCH-26SEP04SVIKAL,Elina Svitolina vs Anna Kalinskaya,Elina Svitolina,ML,Elina Svitolina vs Anna Kalinskaya - Svitolina ML,0.71,0.705,eb_log,Elina Svitolina,LEAN,0.666,yes,1.0,,,,
