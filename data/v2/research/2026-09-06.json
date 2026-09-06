@@ -2769,5 +2769,226 @@
    }
   ],
   "_ts": "2026-09-06T13:13Z"
+ },
+ "ATP Tennis|Daniil Medvedev vs Frances Tiafoe|Frances Tiafoe": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Frances Tiafoe",
+    "title": "Brandon Nakashima Vs Frances Tiafoe \ud83c\udfbeLIVE SCORE TENNIS ATP CINCINNATI USA OPEN 2026 | Semifinals Spurs Fixtures (YLCuPDNeBb)",
+    "source": "Mshale",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Frances Tiafoe",
+    "title": "\u201cBest I\u2019ve played for sure in this event,\u201d Frances Tiafoe reacts after US Open victory over Valentin Vacherot",
+    "source": "Tennis Tonic",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Medvedev joins cousins Rinderknech and Vacherot in Shanghai semi-finals",
+    "source": "Flashscore.com",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev is Having Fun Again",
+    "source": "Last Word On Sports",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "\u201cThat was a great match,\u201d Daniil Medvedev reflects after overcoming Arthur Rinderknech at the US Open",
+    "source": "Tennis Tonic",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Frances Tiafoe",
+    "title": "Frances Tiafoe\u2019s parents fled war for his US Open dream",
+    "source": "rollingout.com",
+    "date": "Sep 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-06T21:03Z"
+ },
+ "ATP Tennis|Alex Michelsen vs Tomas Martin Etcheverry|Tomas Martin Etcheverry": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "Tomas Martin Etcheverry vs Mariano Navone - Match ATP - US Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 03",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Alex Michelsen vs Daniel M\u00e9rida \u00b7 Round 3 \u00b7 US Open",
+    "source": "tennis.com",
+    "date": "Sep 04",
+    "watch": false
+   },
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "Alexander Bublik Vs Tomas Martin Etcheverry \ud83c\udfbeLIVE SCORE TENNIS ATP KITZBUHEL AUSTRIA OPEN 2026 | SF Aaron Rodgers (wpSsJWQpNO)",
+    "source": "Mshale",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "\u201cI\u2019m super happy to be in the fourth round,\u201d Alex Michelsen says after US Open breakthrough",
+    "source": "Tennis Tonic",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Dani M\u00e9rida faces Alex Michelsen in high-stakes US Open third round",
+    "source": "RUSSPAIN.com",
+    "date": "Sep 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-06T21:03Z"
+ },
+ "MLB|A's @ Seattle|A's": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Mariners Injury Updates: Latest on Donovan, Hancock, and more; Injured Mariners reliever Matt Brash undergoes MRI",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Seattle",
+    "title": "Lazaro Montes brings Mariners something they were missing",
+    "source": "Seattle Sports",
+    "date": "Sep 03",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Mariners Injury Updates: Latest on Donovan, Hancock, and more",
+    "source": "Seattle Sports",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Injured Mariners reliever Matt Brash undergoes MRI",
+    "source": "Seattle Sports",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "A's",
+    "title": "Football vs Ohio-PHOTOS - University of Nebraska - Official Athletics Website",
+    "source": "huskers.com",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Five things to know about the World Athletics Ultimate Championship",
+    "source": "worldathletics.org",
+    "date": "Sep 05",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Buffs Battle In Five, Take Down New Mexico - University of Colorado Athletics",
+    "source": "University of Colorado Athletics",
+    "date": "Sep 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-06T21:03Z"
+ },
+ "MLB|St. Louis @ Colorado|Colorado": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rockies\u2019 TJ Rumfield needs to be getting more ROY hype | The Starting Lineup; Rockies place ailing Willi Castro (heel) on IL",
+  "opp_health": "Is Michael McGreevy the Cardinals\u2019 Opening Day starter?; A profile of St. Louis Cardinals starter Kyle Leahy",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "St. Louis",
+    "title": "A profile of St. Louis Cardinals starter Kyle Leahy",
+    "source": "Viva El Birdos",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Rockies Bring Ezequiel Tovar Back Into Lineup Against Cardinals Lefty",
+    "source": "Sports Illustrated",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Rockies\u2019 TJ Rumfield needs to be getting more ROY hype | The Starting Lineup",
+    "source": "Denver Gazette",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Rockies place ailing Willi Castro (heel) on IL",
+    "source": "WTVB",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "Is Michael McGreevy the Cardinals\u2019 Opening Day starter?",
+    "source": "Viva El Birdos",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals vs Colorado Rockies Game Discussion Sunday",
+    "source": "Yahoo Sports",
+    "date": "Sep 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-06T21:03Z"
  }
 }
