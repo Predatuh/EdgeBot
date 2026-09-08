@@ -1549,5 +1549,62 @@
    }
   ],
   "_ts": "2026-09-08T13:14Z"
+ },
+ "MLB|New York M @ Miami|New York M": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Mets at Marlins: Lineups, broadcast info, and open thread, 9/7/26; Jonah Tong\u2019s return to Mets comes with new arsenal, \u2018boatload of experience\u2019 in hope of better results",
+  "opp_health": "Marlins Announce Probable Starters Against Mets With Playoff Hopes Slowly Fading; NY Mets announce lineup vs Miami Marlins for Monday game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York M",
+    "title": "As Jonah Tong nears return to the bigs, a Mets exec assesses his development: a Q&A",
+    "source": "The New York Times",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Jonah Tong\u2019s return to Mets comes with new arsenal, \u2018boatload of experience\u2019 in hope of better results",
+    "source": "New York Post",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Mets at Marlins: Lineups, broadcast info, and open thread, 9/7/26",
+    "source": "Yahoo Sports",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Marlins Announce Probable Starters Against Mets With Playoff Hopes Slowly Fading",
+    "source": "Sports Illustrated",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "NY Mets announce lineup vs Miami Marlins for Monday game",
+    "source": "Bergen Record",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "FADING: Miami Marlins Playoff Hopes DWINDLING After Ugly Loss to New York Mets",
+    "source": "fox61.com",
+    "date": "Sep 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-08T21:04Z"
  }
 }
