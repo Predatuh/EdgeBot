@@ -2241,5 +2241,233 @@
    }
   ],
   "_ts": "2026-09-09T13:14Z"
+ },
+ "MLB|Cincinnati @ Los Angeles D|Los Angeles D": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Shohei Ohtani out of the Dodgers lineup, available to pinch-hit; Dodgers Lineup vs Reds: Shohei Ohtani Out in Concerning Development",
+  "opp_health": "Dodgers Lineup vs Reds: Shohei Ohtani Out in Concerning Development; Dodgers Lineup vs Reds: Shohei Ohtani Finally Returns After 4-Game Absence",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Dodgers Lineup vs Reds: Shohei Ohtani Finally Returns After 4-Game Absence",
+    "source": "Sports Illustrated",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers Lineup vs Reds: Shohei Ohtani Out in Concerning Development",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Ohtani back in Dodgers' lineup after 4-day break, unlikely to pitch again in 2026",
+    "source": "NBC Los Angeles",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Dodgers Lineup vs Reds: Shohei Ohtani Out in Concerning Development",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Shohei Ohtani out of the Dodgers lineup, available to pinch-hit",
+    "source": "Los Angeles Times",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds Rookie Sal Stewart sets another MLB Record",
+    "source": "Redleg Nation",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-09T21:03Z"
+ },
+ "MLB|Texas @ Seattle|Texas": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas Rangers lineup for September 9, 2026; Rangers Set Lineup, Turn to Cal Quantrill on Mound in Mariners Series Opener",
+  "opp_health": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List; Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Lazaro Montes: leaves game with hip injury",
+    "source": "Lookout Landing",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion",
+    "source": "sports.mynorthwest.com",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers Set Lineup, Turn to Cal Quantrill on Mound in Mariners Series Opener",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 9, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-09T21:05Z"
+ },
+ "MLB|St. Louis @ San Francisco|San Francisco": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Cardinals Announce Starters vs. Must-Win Giants Series",
+  "opp_health": "Masyn Winn makes his return to the Cardinals lineup; Cardinals Announce Starters vs. Must-Win Giants Series",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "St. Louis",
+    "title": "Is Michael McGreevy the Cardinals\u2019 Opening Day starter?",
+    "source": "Viva El Birdos",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "Cardinals Announce Starters vs. Must-Win Giants Series",
+    "source": "Sports Illustrated",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "Cardinals Announce Starters vs. Must-Win Giants Series",
+    "source": "Sports Illustrated",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "Masyn Winn makes his return to the Cardinals lineup",
+    "source": "mlb.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco Giants Announce Rafael Devers Decision Before Cardinals Game",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "St. Louis Cardinals vs San Francisco Giants Game Discussion Wednesday",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-09T21:05Z"
+ },
+ "MLB|Minnesota @ Detroit|Minnesota": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Twins Reveal Lineup as Zebby Matthews Goes for Series Win Against Tigers; Twins Reveal Lineup as Dean Kremer Looks to Bounce Back Against Tigers",
+  "opp_health": "Detroit Tigers' Riley Greene scorching at the plate in return from IL",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Twins bring back Joe Ryan from the injured list to start the series opener against the Tigers",
+    "source": "AP News",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Twins Reveal Lineup as Dean Kremer Looks to Bounce Back Against Tigers",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers' Riley Greene scorching at the plate in return from IL",
+    "source": "Detroit Free Press",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Twins Reveal Lineup as Zebby Matthews Goes for Series Win Against Tigers",
+    "source": "Sports Illustrated",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Tigers-Twins wrap up three-game series",
+    "source": "The Detroit News",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Tigers-Twins resume play after lengthy rain delay",
+    "source": "The Detroit News",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-09T21:05Z"
  }
 }

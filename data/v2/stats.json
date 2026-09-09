@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-09T14:52Z",
+ "generated_utc": "2026-09-09T21:05Z",
  "picks_logged": 341,
  "overall": {
   "EDGE": {
@@ -17,18 +17,18 @@
    "brier_market": 0.1152
   },
   "LEAN": {
-   "w": 186,
+   "w": 193,
    "l": 90,
-   "n": 276,
-   "pending": 38,
+   "n": 283,
+   "pending": 31,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.007,
-   "avg_clv": -0.0196,
-   "clv_n": 276,
-   "brier_model": 0.1774,
-   "brier_market": 0.1773
+   "avg_edge": -0.0069,
+   "avg_clv": -0.013,
+   "clv_n": 283,
+   "brier_model": 0.1752,
+   "brier_market": 0.1751
   }
  },
  "last_7_days": {
@@ -47,18 +47,18 @@
    "brier_market": 0.1152
   },
   "LEAN": {
-   "w": 186,
+   "w": 193,
    "l": 90,
-   "n": 276,
-   "pending": 38,
+   "n": 283,
+   "pending": 31,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.007,
-   "avg_clv": -0.0196,
-   "clv_n": 276,
-   "brier_model": 0.1774,
-   "brier_market": 0.1773
+   "avg_edge": -0.0069,
+   "avg_clv": -0.013,
+   "clv_n": 283,
+   "brier_model": 0.1752,
+   "brier_market": 0.1751
   }
  },
  "by_league": {
@@ -408,18 +408,18 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 4,
+    "w": 9,
     "l": 2,
-    "n": 6,
-    "pending": 6,
+    "n": 11,
+    "pending": 1,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0015,
-    "avg_clv": 0.1367,
-    "clv_n": 6,
-    "brier_model": 0.1767,
-    "brier_market": 0.1754
+    "avg_edge": -0.0008,
+    "avg_clv": 0.1773,
+    "clv_n": 11,
+    "brier_model": 0.1343,
+    "brier_market": 0.1336
    }
   },
   "wta": {
@@ -438,18 +438,18 @@
     "brier_market": 0.0371
    },
    "LEAN": {
-    "w": 10,
+    "w": 12,
     "l": 8,
-    "n": 18,
-    "pending": 2,
+    "n": 20,
+    "pending": 0,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0232,
-    "avg_clv": -0.1544,
-    "clv_n": 18,
-    "brier_model": 0.2532,
-    "brier_market": 0.2592
+    "avg_edge": -0.0224,
+    "avg_clv": -0.1095,
+    "clv_n": 20,
+    "brier_model": 0.2386,
+    "brier_market": 0.2432
    }
   }
  },
@@ -469,18 +469,18 @@
    "brier_market": null
   },
   "neutral": {
-   "w": 98,
+   "w": 105,
    "l": 57,
-   "n": 155,
-   "pending": 41,
+   "n": 162,
+   "pending": 34,
    "units": -2.14,
    "risked": 2.66,
    "roi": -80.6,
-   "avg_edge": -0.0017,
-   "avg_clv": -0.0228,
-   "clv_n": 155,
-   "brier_model": 0.1655,
-   "brier_market": 0.163
+   "avg_edge": -0.0018,
+   "avg_clv": -0.0112,
+   "clv_n": 162,
+   "brier_model": 0.1623,
+   "brier_market": 0.1598
   },
   "against_pick": {
    "w": 0,
@@ -528,32 +528,32 @@
  "tipsters": {
   "fph0": {
    "overall": {
-    "n": 87,
-    "w": 51,
+    "n": 91,
+    "w": 55,
     "l": 36,
-    "priced_n": 70,
+    "priced_n": 74,
     "unpriced_n": 17,
-    "pending": 2,
-    "unscorable": 4,
-    "profit_100": -422.71,
-    "roi": -6.0,
-    "avg_price": 0.64,
-    "expected_w": 44.8,
-    "avg_clv": -0.0339
+    "pending": 5,
+    "unscorable": 5,
+    "profit_100": -93.69,
+    "roi": -1.3,
+    "avg_price": 0.636,
+    "expected_w": 47.0,
+    "avg_clv": -0.0092
    },
    "agrees_with_model": {
-    "n": 56,
-    "w": 31,
+    "n": 59,
+    "w": 34,
     "l": 25,
-    "priced_n": 56,
+    "priced_n": 59,
     "unpriced_n": 0,
-    "pending": 0,
-    "unscorable": 2,
-    "profit_100": -615.61,
-    "roi": -11.0,
-    "avg_price": 0.625,
-    "expected_w": 35.0,
-    "avg_clv": -0.0782
+    "pending": 1,
+    "unscorable": 3,
+    "profit_100": -329.45,
+    "roi": -5.6,
+    "avg_price": 0.619,
+    "expected_w": 36.5,
+    "avg_clv": -0.0505
    },
    "disagrees_with_model": {
     "n": 14,
@@ -561,7 +561,7 @@
     "l": 2,
     "priced_n": 14,
     "unpriced_n": 0,
-    "pending": 0,
+    "pending": 2,
     "unscorable": 2,
     "profit_100": 192.9,
     "roi": 13.8,
@@ -617,7 +617,7 @@
   "wta": [
    {
     "name": "Coco Gauff",
-    "elo": 1713.9
+    "elo": 1724.0
    },
    {
     "name": "Jessica Pegula",
@@ -625,7 +625,7 @@
    },
    {
     "name": "Elena Rybakina",
-    "elo": 1656.8
+    "elo": 1670.3
    },
    {
     "name": "Iga Swiatek",
@@ -1044,10 +1044,6 @@
     "elo": 1542.4
    },
    {
-    "name": "Slovan Bratislava",
-    "elo": 1532.9
-   },
-   {
     "name": "Levski Sofia",
     "elo": 1531.9
    },
@@ -1064,15 +1060,19 @@
     "elo": 1523.2
    },
    {
-    "name": "Viking",
-    "elo": 1513.7
+    "name": "Slovan Bratislava",
+    "elo": 1519.7
+   },
+   {
+    "name": "PSG",
+    "elo": 1513.1
+   },
+   {
+    "name": "Stuttgart",
+    "elo": 1512.5
    },
    {
     "name": "Aston Villa",
-    "elo": 1512.0
-   },
-   {
-    "name": "Real Madrid",
     "elo": 1512.0
    }
   ],
