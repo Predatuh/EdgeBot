@@ -56,3 +56,20 @@ date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_s
 2026-09-05,fph0,wta,KXWTAMATCH-26SEP04POTANI,Anastasia Potapova vs Amanda Anisimova,Amanda Anisimova,ML,Anastasia Potapova vs. Amanda Anisimova - Anisimova ML,0.85,0.845,live,Amanda Anisimova,LEAN,0.8,yes,1.0,L,0.01,-0.84,-100
 2026-09-05,fph0,wta,KXWTAMATCH-26SEP04SWIBOU,Iga Swiatek vs Marie Bouzkova,Iga Swiatek,ML,Iga Swiatek vs. Marie Bouzkova - Swiatek ML,0.86,0.855,live,Marie Bouzkova,EDGE,0.211,no,1.0,W,0.99,0.13,16.28
 2026-09-05,fph0,wta,KXWTAMATCH-26SEP04OSAMER,Elise Mertens vs Naomi Osaka,Naomi Osaka,ML,Elise Mertens vs. Naomi Osaka - Osaka ML,0.74,0.735,live,Elise Mertens,EDGE,0.336,no,1.0,W,0.99,0.25,35.14
+2026-09-07,fph0,atp,KXATPMATCH-26SEP06CERBLO,Francisco Cerundolo vs Alexander Blockx,Alexander Blockx,ML,Francisco Cerundolo vs Alexander Blockx - Blockx ML,0.61,0.597,eb_log,Alexander Blockx,LEAN,0.588,yes,1.0,,,,
+2026-09-07,fph0,atp,KXATPMATCH-26SEP07GEAVAN,Botic van de Zandschulp vs Arthur Gea,Botic Van de Zandschulp,ML,Botic van de Zandschulp vs Arthur Gea - Van de Zandschulp ML,0.62,0.609,eb_log,Botic Van de Zandschulp,LEAN,0.57,yes,1.0,,,,
+2026-09-07,fph0,atp,KXATPMATCH-26SEP07ZVEDAR,Luciano Darderi vs Alexander Zverev,Alexander Zverev,ML,Luciano Darderi vs Alexander Zverev - Zverev ML,0.9,0.895,eb_log_derived,Luciano Darderi,EDGE,0.188,no,1.0,,,,
+2026-09-07,fph0,wta,KXWTAMATCH-26SEP06ANDPOT,Mirra Andreeva vs Anastasia Potapova,Mirra Andreeva,ML,Mirra Andreeva vs Anastasia Potapova - Andreeva ML,0.846,0.843,eb_log_derived,Anastasia Potapova,EDGE,0.208,no,1.0,,,,
+2026-09-07,fph0,wta,KXWTAMATCH-26SEP06SWIZHE,Iga Swiatek vs Zheng Qinwen,Iga Swiatek,ML,Iga Swiatek vs Zheng Qinwen - Swiatek ML,0.8,0.795,eb_log,Iga Swiatek,LEAN,0.757,yes,1.0,,,,
+2026-09-07,fph0,wta,KXWTAMATCH-26SEP07OSARYB,Elena Rybakina vs Naomi Osaka,Elena Rybakina,ML,Elena Rybakina vs Naomi Osaka - Rybakina ML,0.57,0.565,eb_log,Elena Rybakina,LEAN,0.553,yes,1.0,,,,
+2026-09-07,fph0,wta,KXWTAMATCH-26SEP07JOVGAU,Iva Jovic vs Coco Gauff,Coco Gauff,ML,Iva Jovic vs Coco Gauff - Gauff ML,0.73,0.725,eb_log,Coco Gauff,LEAN,0.713,yes,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07PIRFEL,Gabriele Piraino vs Kilian Feldbausch,Kilian Feldbausch,ML,Gabriele Piraino vs Kilian Feldbausch - Feldbausch ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CECDJE,Laslo Djere vs Marco Cecchinato,Marco Cecchinato,ML,Laslo Djere vs Marco Cecchinato - Cecchinato ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07AJDROM,Duje Ajdukovic vs Filippo Romano,Duje Ajdukovic,ML,Duje Ajdukovic vs Filippo Romano - Ajdukovic ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CADMAR,Gianluca Cadenasso vs Juan Cruz Martin Manzano,Gianluca Cadenasso,ML,Gianluca Cadenasso vs Juan Cruz Martin Manzano - Cadenasso ML,0.54,0.54,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07POLSAK,Mili Poljicak vs Stefanos Sakellaridis,Stefanos Sakellaridis,ML,Mili Poljicak vs Stefanos Sakellaridis - Sakellaridis ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MILBAR,Alex Barrena vs Ognjen Milic,Alex Barrena,ML,Alex Barrena vs Ognjen Milic - Barrena ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MRVMOE,Marvin Moeller vs Maxim Mrva,Marvin Moeller,ML,Marvin Moeller vs Maxim Mrva - Moeller ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07SOTKOP,Sandro Kopp vs Matias Soto,Matias Soto,ML,Sandro Kopp vs Matias Soto - Soto ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07KRUSOR,Martin Krumich vs Sebastian Sorger,Sebastian Sorger,ML,Martin Krumich vs Sebastian Sorger - Sorger ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07TOPGAL,Daniel Elahi Galan vs Marko Topo,Daniel Elahi Galan,ML,Daniel Elahi Galan vs Marko Topo - Galan ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
