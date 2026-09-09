@@ -26,6 +26,15 @@ import kalshi, state
 HERE = os.path.dirname(os.path.abspath(__file__))
 MATCH_MIN = 0.72                      # event-match confidence floor
 SPLIT = re.compile(r"\s+(?:vs\.?|v\.?|@|versus)\s+", re.I)
+# matchup/pick separators, in the order they may appear; the FIRST hit splits the line
+# (so an arrow used later as an in-play marker still lands inside the pick text)
+SEP = re.compile(r"\s+-\s+|\s+[\u2013\u2014]\s+|[\u2013\u2014]|\u2192|->")
+MD = re.compile(r"\*+|__|`|#+\s*")               # markdown bold/italic/heading marks
+ML_KW = re.compile(r"\b(ml|moneyline|money line)\b", re.I)
+# bets that are not a side of the match at all
+PROP = re.compile(r"\bbtts\b|both teams to score|\bover\b|\bunder\b|\bo\d|\bu\d|"
+                  r"double chance|\bdraw\b|\bstay out\b|no bet|\bpass\b", re.I)
+TRIM = re.compile(r"^[^0-9A-Za-z\u00C0-\u024F]+|[^0-9A-Za-z\u00C0-\u024F.'\)]+$")
 SPREAD = re.compile(r"[+-]\d+(\.\d+)?\b")
 ASIDE = re.compile(r"\([^)]*\)")                 # "(might sprinkle a little...)" is commentary
 # a set/game market, or an in-play instruction — neither is a match moneyline
@@ -60,37 +69,46 @@ def parse_slate(text):
     """Free text -> [{a, b, pick, bet_type, raw}]. bet_type: ML | ML+ | SPREAD | OTHER."""
     out = []
     for raw in (text or "").splitlines():
-        line = raw.strip().lstrip("*•-").strip()
-        if not line or " - " not in line and " – " not in line:
+        line = MD.sub("", raw).strip().lstrip("*•-\u2022").strip()
+        if not line:
             continue
-        line = line.replace(" – ", " - ")
-        left, _, right = line.partition(" - ")
+        m = SEP.search(line)
+        if not m:
+            continue
+        left, right = line[:m.start()], line[m.end():]
         parts = SPLIT.split(left)
         if len(parts) != 2:
             continue
         a, b = parts[0].strip(), parts[1].strip()
         if not a or not b or len(a) > 60 or len(b) > 60:
             continue
-        # drop parenthetical commentary first, so an aside like "(Bayern -1.5)"
-        # cannot turn a plain moneyline into a spread
-        pick_txt = ASIDE.sub(" ", right).strip()
+        pick_txt = ASIDE.sub(" ", right).strip()      # drop "(55/45 lean...)" commentary
         if not pick_txt:
             continue
-        if LIVE.search(pick_txt):                     # set market / live switch: record, never score
-            name = re.split(r"\bset\b|→|->|\bswitch\b", pick_txt, flags=re.I)[0]
-            name = re.sub(r"\b(ml|moneyline|money line)\b", "", name, flags=re.I).strip(" .-")
+
+        def clean(name):
+            return TRIM.sub("", name).strip()
+
+        if PROP.search(pick_txt.split("+")[0]):       # BTTS, totals, "stay out" — not a side
+            name = clean(ML_KW.sub("", pick_txt.split("+")[0]))
+            if name:
+                out.append({"a": a, "b": b, "pick": name[:40], "bet_type": "OTHER", "raw": line})
+            continue
+        if LIVE.search(pick_txt):                     # set market / in-play switch
+            name = clean(ML_KW.sub("", re.split(r"\bset\b|\u2192|->|\bswitch\b", pick_txt, flags=re.I)[0]))
             if name:
                 out.append({"a": a, "b": b, "pick": name, "bet_type": "OTHER", "raw": line})
             continue
         extra = "+" in pick_txt                       # extra legs on the ticket
         head = pick_txt.split("+")[0].strip()
         spread = bool(SPREAD.search(head))
-        name = re.sub(r"\b(ml|moneyline|money line)\b", "", head, flags=re.I)
-        name = SPREAD.sub("", name).strip(" .-")
+        kw = ML_KW.search(head)
+        # the side is whatever precedes the ML keyword, so trailing notes and his own
+        # win/loss markers ("Feldbausch ML 🟥", "Cadenasso ML postponed") drop away
+        name = clean(SPREAD.sub("", head[:kw.start()] if kw else head))
         if not name:
             continue
-        bet = "SPREAD" if spread else ("ML+" if extra else
-              ("ML" if re.search(r"\bml\b|moneyline", pick_txt, re.I) else "OTHER"))
+        bet = "SPREAD" if spread else ("ML+" if extra else ("ML" if kw else "OTHER"))
         out.append({"a": a, "b": b, "pick": name, "bet_type": bet, "raw": line})
     return out
 
@@ -130,9 +148,7 @@ def _board(cfg, date, backfill):
     events, seen = [], set()
     since = state._ts(dt.date.fromisoformat(date) - dt.timedelta(days=1)) if backfill else None
     for key, lg in cfg["leagues"].items():
-        if not lg.get("enabled", True):
-            continue
-        evs = []
+        evs = []                       # every league: we price his picks even where we don't bet
         try:
             evs += kalshi.open_events(lg["ticker"], cfg.get("max_spread"))
         except Exception as e:
@@ -151,18 +167,22 @@ def _board(cfg, date, backfill):
     return events
 
 
-def _price_from_own_log(eb, side_name):
-    """A settled market only reports its closing price, so for a backfill take the
-    entry price from our own log: the real ask when we picked the same side, or the
-    de-vigged complement plus the same vig when we were on the other one."""
-    if not eb or not eb.get("price"):
-        return None, None, ""
-    price, mkt = state._fl(eb["price"]), state._fl(eb["market_prob"])
-    if eb.get("pick") == side_name:
-        return price, mkt, "eb_log"
-    if not mkt:
-        return None, None, ""
-    return round((1 - mkt) + (price - mkt), 4), round(1 - mkt, 4), "eb_log_derived"
+def _entry_price(eb, side):
+    """Entry price for a backfilled pick, best source first:
+    our own logged ask for the same side, the de-vigged complement when we were on the
+    other side, or - for events we never bet at all - the market's closing price. The
+    last is only an approximation of what he could have taken, hence price_src."""
+    name = side["name"]
+    if eb and eb.get("price"):
+        price, mkt = state._fl(eb["price"]), state._fl(eb["market_prob"])
+        if eb.get("pick") == name:
+            return price, mkt, "eb_log"
+        if mkt:
+            return round((1 - mkt) + (price - mkt), 4), round(1 - mkt, 4), "eb_log_derived"
+    last = side.get("last")
+    if last and 0 < last < 1:
+        return round(last, 4), round(last, 4), "kalshi_close"
+    return None, None, ""
 
 
 def record(name, text, date=None, cfg=None, backfill=False):
@@ -189,7 +209,7 @@ def record(name, text, date=None, cfg=None, backfill=False):
         eb = own.get(ev["event"], {})
         gradeable = t["bet_type"] in ("ML", "ML+")
         if backfill:
-            price, mprob, psrc = _price_from_own_log(eb, side["name"])
+            price, mprob, psrc = _entry_price(eb, side)
         else:
             price, mprob, psrc = side["ask"], side["prob"], "live"
         row = {
