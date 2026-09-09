@@ -168,20 +168,20 @@ def _board(cfg, date, backfill):
 
 
 def _entry_price(eb, side):
-    """Entry price for a backfilled pick, best source first:
-    our own logged ask for the same side, the de-vigged complement when we were on the
-    other side, or - for events we never bet at all - the market's closing price. The
-    last is only an approximation of what he could have taken, hence price_src."""
-    name = side["name"]
+    """Entry price for a backfilled pick: our own logged ask for the same side, or the
+    de-vigged complement plus the same vig when we were on the other one.
+
+    There is deliberately no fallback to the market's own closing price. A settled
+    market closes at ~1 for the winner and ~0 for the loser, so that number IS the
+    result - it would make ROI meaningless and leak the label into any model trained
+    on this file. Picks on events we never bet are recorded and graded W/L, but carry
+    no price and are left out of ROI."""
     if eb and eb.get("price"):
         price, mkt = state._fl(eb["price"]), state._fl(eb["market_prob"])
-        if eb.get("pick") == name:
+        if eb.get("pick") == side["name"]:
             return price, mkt, "eb_log"
         if mkt:
             return round((1 - mkt) + (price - mkt), 4), round(1 - mkt, 4), "eb_log_derived"
-    last = side.get("last")
-    if last and 0 < last < 1:
-        return round(last, 4), round(last, 4), "kalshi_close"
     return None, None, ""
 
 
@@ -224,7 +224,7 @@ def record(name, text, date=None, cfg=None, backfill=False):
             "agree": ("yes" if eb.get("pick") == side["name"] else "no") if eb else "",
             "match_conf": round(conf, 2),
             # non-moneyline tickets are recorded but never scored
-            "result": "" if (gradeable and price) else "n/a",
+            "result": "" if gradeable else "n/a",
             "close_prob": "", "clv": "", "profit_100": "",
         }
         if state.append_tip(row):

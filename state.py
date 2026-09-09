@@ -35,7 +35,7 @@ TIP_FIELDS = [
     "raw",             # the original slate line
     "price",           # Kalshi ask for that side when the slate was logged
     "market_prob",     # de-vigged market probability at that moment
-    "price_src",       # live | eb_log | eb_log_derived (how the entry price was obtained)
+    "price_src",       # live | eb_log | eb_log_derived; blank when we have no usable entry price
     "eb_pick", "eb_tier", "eb_model_prob",   # what EdgeBot said on the same event
     "agree",           # did EdgeBot pick the same side
     "match_conf",      # confidence the slate line was matched to the right event
@@ -249,18 +249,18 @@ def grade_tips(winners, closes=None):
         if win is None:
             continue
         price = _fl(r["price"])
-        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"])
+        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"]) if price else None
         if cp is not None:
             r["close_prob"] = round(cp, 3)
             if price:
                 r["clv"] = round(cp - price, 3)
         if win == r["pick"]:
             r["result"] = "W"
-            r["profit_100"] = round(100 * (1 - price) / price, 2) if price > 0 else 0
+            r["profit_100"] = round(100 * (1 - price) / price, 2) if price > 0 else ""
             w += 1
         else:
             r["result"] = "L"
-            r["profit_100"] = -100 if price > 0 else 0
+            r["profit_100"] = -100 if price > 0 else ""
             l += 1
     if w or l:
         write_tips(rows)
@@ -270,16 +270,19 @@ def grade_tips(winners, closes=None):
 def _tip_stats(rows):
     g = [r for r in rows if r["result"] in ("W", "L")]
     w = sum(1 for r in g if r["result"] == "W")
-    pl = sum(_fl(r["profit_100"]) for r in g)
-    clv = [_fl(r["clv"]) for r in g if r["clv"] != ""]
-    # what the market said these picks were worth, for comparison with the hit rate
+    # W/L covers every graded pick; money only counts picks with a real entry price
+    # (events we never bet ourselves have no trustworthy price, so they are W/L only)
+    priced = [r for r in g if r["price"] != ""]
+    pl = sum(_fl(r["profit_100"]) for r in priced)
+    clv = [_fl(r["clv"]) for r in priced if r["clv"] != ""]
     mk = [_fl(r["market_prob"]) for r in g if r["market_prob"] != ""]
     return {
         "n": len(g), "w": w, "l": len(g) - w,
+        "priced_n": len(priced), "unpriced_n": len(g) - len(priced),
         "pending": sum(1 for r in rows if not r["result"]),
         "unscorable": sum(1 for r in rows if r["result"] == "n/a"),
         "profit_100": round(pl, 2),
-        "roi": round(pl / (100 * len(g)) * 100, 1) if g else 0.0,
+        "roi": round(pl / (100 * len(priced)) * 100, 1) if priced else None,
         "avg_price": round(sum(mk) / len(mk), 3) if mk else None,
         "expected_w": round(sum(mk), 1) if mk else None,   # wins the price implied
         "avg_clv": round(sum(clv) / len(clv), 4) if clv else None,

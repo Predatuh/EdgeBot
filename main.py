@@ -269,6 +269,32 @@ def run_league(key, lg, cfg, body, grade_only=False):
     return gw, gl, state.top_ratings(ratings)
 
 
+def grade_outside_leagues(cfg, done):
+    """Grade tipster picks in leagues we don't bet ourselves (Challenger, say).
+    Their settlements never come through our own ingest loop, so without this
+    those rows would sit pending for ever."""
+    tips = state.read_tips()
+    want = {r["league"] for r in tips if not r["result"] and r["league"]} - done
+    gw = gl = 0
+    for key in sorted(want):
+        lg = (cfg.get("leagues") or {}).get(key)
+        if not lg:
+            continue
+        dates = [r["date"] for r in tips if r["league"] == key and not r["result"] and r["date"]]
+        try:
+            since = state._ts(dt.date.fromisoformat(min(dates)) - dt.timedelta(days=1)) if dates else None
+            evs = kalshi.settled_events(lg["ticker"], since)
+        except Exception as e:
+            print(f"[{key}] outside-league settle fetch failed: {type(e).__name__}: {str(e)[:70]}")
+            continue
+        winners = {ev["event"]: kalshi.winner(ev) for ev in evs if kalshi.winner(ev) is not None}
+        closes = {ev["event"]: kalshi.closing_probs(ev) for ev in evs}
+        w, l = state.grade_tips(winners, closes)
+        gw += w; gl += l
+        print(f"[{key}] outside league: {len(evs)} settled, graded {w}W/{l}L of his picks")
+    return gw, gl
+
+
 def status_body(days):
     """Results card: how the last `days` days of picks actually did."""
     rows = state.read_log()
@@ -336,6 +362,7 @@ def main(argv=None):
         except Exception as e:
             traceback.print_exc()
             errors.append(f"{key}: {type(e).__name__}: {str(e)[:80]}")
+    grade_outside_leagues(cfg, {k for k, v in cfg["leagues"].items() if v.get("enabled", True)})
     state.link_own_picks()          # tipster slates logged before today's picks existed
     s = state.record_summary()
     state.write_stats(s, tops)

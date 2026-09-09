@@ -60,15 +60,15 @@ date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_s
 2026-09-08,fph0,atp,KXATPMATCH-26SEP08SHEALC,Shelton vs Alcaraz,Carlos Alcaraz,OTHER,Shelton vs Alcaraz - Stay out pregame,,0.777,eb_log,Carlos Alcaraz,LEAN,0.748,yes,0.9,n/a,,,
 2026-09-08,fph0,wta,KXWTAMATCH-26SEP08SABNOS,Sabalenka vs Noskova,Aryna Sabalenka,ML,Sabalenka vs Noskova - Sabalenka ML,0.72,0.715,eb_log_derived,Linda Noskova,EDGE,0.356,no,0.9,W,0.99,0.27,38.89
 2026-09-08,fph0,wta,KXWTAMATCH-26SEP08PEGNAV,Navarro vs Pegula,Jessica Pegula,ML,Navarro vs Pegula - Pegula ML,0.78,0.775,eb_log,Jessica Pegula,LEAN,0.743,yes,0.9,W,0.99,0.21,28.21
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08MONBRA,Brancaccio vs Montes-De La Torre,Raul Brancaccio,ML,Brancaccio vs Montes-De La Torre - Brancaccio ML,0.6,0.6,kalshi_close,,,,,0.93,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08ROCTAB,Taberner vs Rocha,Henrique Rocha,ML,Taberner vs Rocha - Rocha ML,0.99,0.99,kalshi_close,,,,,0.9,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08LAJLAN,Lajovic vs Landaluce,Martin Landaluce,ML,Lajovic vs Landaluce - Landaluce ML,0.01,0.01,kalshi_close,,,,,0.9,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08PERTRU,Trungelliti vs Pereira,Marco Trungelliti,ML,Trungelliti vs Pereira - Trungelliti ML,0.01,0.01,kalshi_close,,,,,0.9,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08SAIROD,Rodriguez Taverna vs Sanchez Izquierdo,Nikolas Sanchez Izquierdo,ML,Rodriguez Taverna vs Sanchez Izquierdo - Sanchez Izquierdo ML,0.01,0.01,kalshi_close,,,,,0.93,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08CARRIT,Carballes Baena vs Ritschard,Roberto Carballes Baena,ML,Carballes Baena vs Ritschard - Carballes Baena ML,0.01,0.01,kalshi_close,,,,,0.92,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08MUNROC,Munar vs Roca Batalla,Jaume Munar,ML,Munar vs Roca Batalla - Munar ML,0.99,0.99,kalshi_close,,,,,0.92,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08CAMALC,Alcala Gurri vs Campana Lee,Max Alcala Gurri,ML,Alcala Gurri vs Campana Lee - Alcala Gurri ML,0.99,0.99,kalshi_close,,,,,0.93,,,,
-2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08GAULAG,Gaubas vs Lagutin,Vilius Gaubas,ML,Gaubas vs Lagutin - Gaubas ML,0.01,0.01,kalshi_close,,,,,0.9,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08MONBRA,Brancaccio vs Montes-De La Torre,Raul Brancaccio,ML,Brancaccio vs Montes-De La Torre - Brancaccio ML,,,,,,,,0.93,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08ROCTAB,Taberner vs Rocha,Henrique Rocha,ML,Taberner vs Rocha - Rocha ML,,,,,,,,0.9,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08LAJLAN,Lajovic vs Landaluce,Martin Landaluce,ML,Lajovic vs Landaluce - Landaluce ML,,,,,,,,0.9,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08PERTRU,Trungelliti vs Pereira,Marco Trungelliti,ML,Trungelliti vs Pereira - Trungelliti ML,,,,,,,,0.9,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08SAIROD,Rodriguez Taverna vs Sanchez Izquierdo,Nikolas Sanchez Izquierdo,ML,Rodriguez Taverna vs Sanchez Izquierdo - Sanchez Izquierdo ML,,,,,,,,0.93,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08CARRIT,Carballes Baena vs Ritschard,Roberto Carballes Baena,ML,Carballes Baena vs Ritschard - Carballes Baena ML,,,,,,,,0.92,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08MUNROC,Munar vs Roca Batalla,Jaume Munar,ML,Munar vs Roca Batalla - Munar ML,,,,,,,,0.92,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08CAMALC,Alcala Gurri vs Campana Lee,Max Alcala Gurri,ML,Alcala Gurri vs Campana Lee - Alcala Gurri ML,,,,,,,,0.93,,,,
+2026-09-08,fph0,challenger,KXATPCHALLENGERMATCH-26SEP08GAULAG,Gaubas vs Lagutin,Vilius Gaubas,ML,Gaubas vs Lagutin - Gaubas ML,,,,,,,,0.9,,,,
 2026-09-08,fph0,ucl,KXUCLGAME-26SEP08AEKASK,AEK vs LASK,AEK Athens,ML,AEK vs LASK - AEK ML,0.57,0.565,eb_log,AEK Athens,LEAN,0.556,yes,0.95,W,0.99,0.42,75.44
 2026-09-08,fph0,ucl,KXUCLGAME-26SEP08BRUAVL,Club Brugge vs Aston Villa,Club Brugge,ML,Club Brugge vs Aston Villa - Club Brugge ML,0.39,0.383,eb_log,Club Brugge,LEAN,0.383,yes,1.0,L,0.01,-0.38,-100
 2026-09-08,fph0,ucl,KXUCLGAME-26SEP08BVBVIL,Dortmund vs Villarreal,Dortmund,ML,Dortmund vs Villarreal - Dortmund ML,0.55,0.542,eb_log,Dortmund,LEAN,0.542,yes,1.0,W,0.99,0.44,81.82
@@ -82,13 +82,13 @@ date,tipster,league,event_id,matchup,pick,bet_type,raw,price,market_prob,price_s
 2026-09-07,fph0,wta,KXWTAMATCH-26SEP06SWIZHE,Iga Swiatek vs Zheng Qinwen,Iga Swiatek,ML,Iga Swiatek vs Zheng Qinwen - Swiatek ML,0.8,0.795,eb_log,Iga Swiatek,LEAN,0.757,yes,1.0,L,0.01,-0.79,-100
 2026-09-07,fph0,wta,KXWTAMATCH-26SEP07OSARYB,Elena Rybakina vs Naomi Osaka,Elena Rybakina,ML,Elena Rybakina vs Naomi Osaka - Rybakina ML,0.57,0.565,eb_log,Elena Rybakina,LEAN,0.553,yes,1.0,W,0.99,0.42,75.44
 2026-09-07,fph0,wta,KXWTAMATCH-26SEP07JOVGAU,Iva Jovic vs Coco Gauff,Coco Gauff,ML,Iva Jovic vs Coco Gauff - Gauff ML,0.73,0.725,eb_log,Coco Gauff,LEAN,0.713,yes,1.0,W,0.99,0.26,36.99
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07PIRFEL,Gabriele Piraino vs Kilian Feldbausch,Kilian Feldbausch,ML,Gabriele Piraino vs Kilian Feldbausch - Feldbausch ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CECDJE,Laslo Djere vs Marco Cecchinato,Marco Cecchinato,ML,Laslo Djere vs Marco Cecchinato - Cecchinato ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07AJDROM,Duje Ajdukovic vs Filippo Romano,Duje Ajdukovic,ML,Duje Ajdukovic vs Filippo Romano - Ajdukovic ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CADMAR,Gianluca Cadenasso vs Juan Cruz Martin Manzano,Gianluca Cadenasso,ML,Gianluca Cadenasso vs Juan Cruz Martin Manzano - Cadenasso ML,0.54,0.54,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07POLSAK,Mili Poljicak vs Stefanos Sakellaridis,Stefanos Sakellaridis,ML,Mili Poljicak vs Stefanos Sakellaridis - Sakellaridis ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MILBAR,Alex Barrena vs Ognjen Milic,Alex Barrena,ML,Alex Barrena vs Ognjen Milic - Barrena ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MRVMOE,Marvin Moeller vs Maxim Mrva,Marvin Moeller,ML,Marvin Moeller vs Maxim Mrva - Moeller ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07SOTKOP,Sandro Kopp vs Matias Soto,Matias Soto,ML,Sandro Kopp vs Matias Soto - Soto ML,0.99,0.99,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07KRUSOR,Martin Krumich vs Sebastian Sorger,Sebastian Sorger,ML,Martin Krumich vs Sebastian Sorger - Sorger ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
-2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07TOPGAL,Daniel Elahi Galan vs Marko Topo,Daniel Elahi Galan,ML,Daniel Elahi Galan vs Marko Topo - Galan ML,0.01,0.01,kalshi_close,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07PIRFEL,Gabriele Piraino vs Kilian Feldbausch,Kilian Feldbausch,ML,Gabriele Piraino vs Kilian Feldbausch - Feldbausch ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CECDJE,Laslo Djere vs Marco Cecchinato,Marco Cecchinato,ML,Laslo Djere vs Marco Cecchinato - Cecchinato ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07AJDROM,Duje Ajdukovic vs Filippo Romano,Duje Ajdukovic,ML,Duje Ajdukovic vs Filippo Romano - Ajdukovic ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07CADMAR,Gianluca Cadenasso vs Juan Cruz Martin Manzano,Gianluca Cadenasso,ML,Gianluca Cadenasso vs Juan Cruz Martin Manzano - Cadenasso ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07POLSAK,Mili Poljicak vs Stefanos Sakellaridis,Stefanos Sakellaridis,ML,Mili Poljicak vs Stefanos Sakellaridis - Sakellaridis ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MILBAR,Alex Barrena vs Ognjen Milic,Alex Barrena,ML,Alex Barrena vs Ognjen Milic - Barrena ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07MRVMOE,Marvin Moeller vs Maxim Mrva,Marvin Moeller,ML,Marvin Moeller vs Maxim Mrva - Moeller ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07SOTKOP,Sandro Kopp vs Matias Soto,Matias Soto,ML,Sandro Kopp vs Matias Soto - Soto ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07KRUSOR,Martin Krumich vs Sebastian Sorger,Sebastian Sorger,ML,Martin Krumich vs Sebastian Sorger - Sorger ML,,,,,,,,1.0,,,,
+2026-09-07,fph0,challenger,KXATPCHALLENGERMATCH-26SEP07TOPGAL,Daniel Elahi Galan vs Marko Topo,Daniel Elahi Galan,ML,Daniel Elahi Galan vs Marko Topo - Galan ML,,,,,,,,1.0,,,,
