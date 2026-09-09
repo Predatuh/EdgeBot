@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-09T13:14Z",
+ "generated_utc": "2026-09-09T14:49Z",
  "picks_logged": 341,
  "overall": {
   "EDGE": {
@@ -528,40 +528,40 @@
  "tipsters": {
   "fph0": {
    "overall": {
-    "n": 55,
-    "w": 31,
-    "l": 24,
-    "pending": 0,
-    "unscorable": 2,
-    "profit_100": -744.81,
-    "roi": -13.5,
-    "avg_price": 0.639,
-    "expected_w": 35.1,
-    "avg_clv": -0.0827
+    "n": 70,
+    "w": 43,
+    "l": 27,
+    "pending": 19,
+    "unscorable": 4,
+    "profit_100": -422.71,
+    "roi": -6.0,
+    "avg_price": 0.64,
+    "expected_w": 44.8,
+    "avg_clv": -0.0339
    },
    "agrees_with_model": {
-    "n": 44,
-    "w": 22,
-    "l": 22,
+    "n": 56,
+    "w": 31,
+    "l": 25,
     "pending": 0,
-    "unscorable": 1,
-    "profit_100": -869.51,
-    "roi": -19.8,
-    "avg_price": 0.632,
-    "expected_w": 27.8,
-    "avg_clv": -0.1375
+    "unscorable": 2,
+    "profit_100": -615.61,
+    "roi": -11.0,
+    "avg_price": 0.625,
+    "expected_w": 35.0,
+    "avg_clv": -0.0782
    },
    "disagrees_with_model": {
-    "n": 11,
-    "w": 9,
+    "n": 14,
+    "w": 12,
     "l": 2,
     "pending": 0,
-    "unscorable": 1,
-    "profit_100": 124.7,
-    "roi": 11.3,
-    "avg_price": 0.668,
-    "expected_w": 7.4,
-    "avg_clv": 0.1367
+    "unscorable": 2,
+    "profit_100": 192.9,
+    "roi": 13.8,
+    "avg_price": 0.7,
+    "expected_w": 9.8,
+    "avg_clv": 0.1434
    }
   }
  },
