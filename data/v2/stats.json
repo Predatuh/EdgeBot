@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-09T14:49Z",
+ "generated_utc": "2026-09-09T14:52Z",
  "picks_logged": 341,
  "overall": {
   "EDGE": {
@@ -528,10 +528,12 @@
  "tipsters": {
   "fph0": {
    "overall": {
-    "n": 70,
-    "w": 43,
-    "l": 27,
-    "pending": 19,
+    "n": 87,
+    "w": 51,
+    "l": 36,
+    "priced_n": 70,
+    "unpriced_n": 17,
+    "pending": 2,
     "unscorable": 4,
     "profit_100": -422.71,
     "roi": -6.0,
@@ -543,6 +545,8 @@
     "n": 56,
     "w": 31,
     "l": 25,
+    "priced_n": 56,
+    "unpriced_n": 0,
     "pending": 0,
     "unscorable": 2,
     "profit_100": -615.61,
@@ -555,6 +559,8 @@
     "n": 14,
     "w": 12,
     "l": 2,
+    "priced_n": 14,
+    "unpriced_n": 0,
     "pending": 0,
     "unscorable": 2,
     "profit_100": 192.9,
