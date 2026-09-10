@@ -15,10 +15,14 @@ def mov_multiplier(margin, elo_diff):
     return math.log(abs(margin) + 1) * (2.2 / (abs(elo_diff) * 0.001 + 2.2))
 
 
-def update(ratings, ida, idb, score_a, score_b, k, use_mov=True, draw=False):
+def update(ratings, ida, idb, score_a, score_b, k, use_mov=True, draw=False, home_adv_b=0.0):
+    """Update both ratings from one result. idb is the home side; home_adv_b is the
+    home bonus in Elo points, included in the EXPECTED score so ratings are not
+    biased by a team's home/away schedule imbalance (it was only ever applied at
+    prediction time, which quietly rewarded whoever played more away games)."""
     ra = ratings.get(ida, BASE_RATING)
     rb = ratings.get(idb, BASE_RATING)
-    ea = expected(ra, rb)
+    ea = expected(ra, rb + home_adv_b)
     if draw:
         sa = 0.5
     else:

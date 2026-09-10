@@ -101,7 +101,10 @@ def _name(m):
 
 
 def _is_tie(code, name):
-    return code == "TIE" or name.lower() in ("tie", "draw")
+    """Tie-ness comes from the NAME only. The 3-letter market code is not safe:
+    Kalshi codes ATP player Learner Tien as TIE, which silently turned 14 of his
+    matches into 'the draw market' - never rated, never posted."""
+    return name.strip().lower() in ("tie", "draw")
 
 
 def _price(m, max_spread=None):
@@ -118,21 +121,31 @@ def _price(m, max_spread=None):
     return None, None
 
 
-def _mark_home(sides, event_ticker):
-    """Kalshi event tickers end with the HOME team's code (AWAY+HOME).
-    Exactly one side should match; if codes overlap take the longest match,
-    and if nothing matches fall back to listing order so sorting stays stable."""
+def _mark_home(sides, event_ticker, order="away_home"):
+    """Flag the home side from the event ticker's code order.
+
+    The convention is per sport, not universal. US series are AWAY+HOME so the
+    ticker ENDS with the home code; every Kalshi soccer series is HOME+AWAY, so
+    the same rule handed home advantage to the away team in every soccer game
+    (settled history: ticker-suffix side won 28% vs 44% for the other side).
+    order: 'away_home' (suffix is home) | 'home_away' (suffix is away) | 'neutral'."""
     for s in sides:
         s["home"] = False
     teams = [s for s in sides if not s["is_tie"]]
+    if order == "neutral" or not teams:
+        return
     hits = [s for s in teams if s["code"] and event_ticker.endswith(s["code"])]
-    home = max(hits, key=lambda s: len(s["code"])) if hits else (teams[-1] if teams else None)
+    suffix = max(hits, key=lambda s: len(s["code"])) if hits else teams[-1]
+    if order == "home_away":            # the suffix names the AWAY team
+        home = next((s for s in teams if s["name"] != suffix["name"]), None)
+    else:
+        home = suffix
     if home:
         for s in teams:                 # both the 'advance' and 'Reg Time' markets of that team
             s["home"] = s["name"] == home["name"]
 
 
-def open_events(series, max_spread=None):
+def open_events(series, max_spread=None, ticker_order="away_home"):
     ms = _page({"series_ticker": series, "status": "open", "limit": 1000})
     ev = {}
     for m in ms:
@@ -150,11 +163,11 @@ def open_events(series, max_spread=None):
             "is_tie": _is_tie(code, name),
         })
     for e in ev.values():
-        _mark_home(e["sides"], e["event"])
+        _mark_home(e["sides"], e["event"], ticker_order)
     return list(ev.values())
 
 
-def settled_events(series, since_ts=None):
+def settled_events(series, since_ts=None, ticker_order="away_home"):
     """Settled markets grouped by event, oldest first. since_ts (unix seconds)
     limits the pull to markets that closed after that time so daily runs only
     fetch what's new; any error there falls back to the full history."""
@@ -176,11 +189,15 @@ def settled_events(series, since_ts=None):
         e["sides"].append({
             "name": name, "code": code, "reg": reg,
             "won": m.get("result") == "yes",
-            "last": _money(m, "last_price"),        # closing line, used for CLV
+            "settled": bool(m.get("result")),
+            # NB: last_price on a SETTLED market is the in-play settlement trade
+            # (~0.99 winner / ~0.01 loser), NOT a closing line. Kept for reference
+            # only - closing_probs() no longer exists and grading never reads it.
+            "settle_price": _money(m, "last_price"),
             "is_tie": _is_tie(code, name),
         })
     for e in ev.values():
-        _mark_home(e["sides"], e["event"])
+        _mark_home(e["sides"], e["event"], ticker_order)
     return sorted(ev.values(), key=lambda e: (e["date"], e["close"]))
 
 
@@ -195,14 +212,15 @@ def match_sides(ev):
 
 
 def winner(ev):
-    """Name of the winning side, 'Tie', or None if not settled cleanly (void etc)."""
-    for s in match_sides(ev):
+    """Winning side's name, 'Tie', 'VOID' when the event resolved with no winner
+    (postponed/cancelled: every side settles NO), or None if it has not settled.
+
+    Returning None for a voided event used to leave the pick pending for ever and
+    pin the incremental-history window open."""
+    sides = match_sides(ev)
+    for s in sides:
         if s["won"]:
             return "Tie" if s["is_tie"] else s["name"]
+    if sides and all(s.get("settled") for s in sides):
+        return "VOID"
     return None
-
-
-def closing_probs(ev):
-    """{side_name: last traded YES price} for a settled event."""
-    return {("Tie" if s["is_tie"] else s["name"]): s["last"]
-            for s in match_sides(ev) if s.get("last") is not None}

@@ -1,6 +1,26 @@
 # EdgeBot v2 — Kalshi-first configuration
-edge_threshold: 0.04     # model must beat Kalshi price by 4%+ to be an EDGE play
+#
+# STAKING IS OFF. Over 306 graded picks the model has not beaten the market in any
+# regime: the raw model's Brier is 0.058 worse than the de-vigged Kalshi price, and
+# picks where it disagreed with the market most (raw-market >= 0.10) went 2-24 against
+# 6.2 market-implied wins. Edges are still computed, tiered, logged and graded as PAPER
+# so the filter keeps being measured. Turn `staking` back on only when the paper edges
+# show the raw model beating the market out of sample (see README, "Is it working?").
+staking: false
+
+edge_threshold: 0.04     # model must beat the price you'd actually PAY (the ask) by this
 max_price: 0.90          # never buy YES above 90¢ (no value in heavy chalk)
+min_price: 0.0           # floor on the ask. 0 = off: tested at 0.20-0.30 and it removed
+                         # winners as well as losers (leave-one-out ROI got worse), so
+                         # price is only a proxy for the real problem below.
+max_disagreement: 0.15   # THE gate that matters. edge = (1-market_weight)*conf*(raw-market),
+                         # so with a shrunken model weight the 4% threshold can only be
+                         # cleared by asserting a huge mispricing in a liquid market -
+                         # which unseparated Elo only ever does against heavy favourites.
+                         # 0.15 lets a fully-confident model stake a 7.5% edge and still
+                         # excludes the artefact.
+require_rating_edge: true  # never stake a side the raw Elo rates BELOW its opponent
+                           # (20 of 27 staked edges were on the lower-rated side)
 max_spread: 0.15         # YES bid/ask gap wider than 15¢ = no real market -> PASS (also catches empty books)
 market_weight: 0.5       # final prob = 50% market + 50% model (model share shrinks further on thin data)
 full_conf_games: 25      # model gets its full 50% voice only once BOTH sides have this many rated games
@@ -12,22 +32,24 @@ show_passes: false       # only events with no live price / liquidity get passed
 # k = Elo K-factor, home_adv = Elo points for the home side, min_games = league-wide
 # rated games before the ⚠️low-data tag drops. Per-league full_conf_games overrides the global.
 leagues:
-  atp:        {ticker: KXATPMATCH,         label: ATP Tennis,          k: 32, neutral: true,  min_games: 300}
-  wta:        {ticker: KXWTAMATCH,         label: WTA Tennis,          k: 32, neutral: true,  min_games: 300}
-  challenger: {ticker: KXATPCHALLENGERMATCH, label: ATP Challenger,    k: 32, neutral: true,  min_games: 300, enabled: false}
+  # stake: false — tennis Elo has not separated (players sit 1506-1665 after ~4-6 rated
+  # matches each), so raw is ~0.5 on every match and every "edge" is an artefact: 0-14.
+  atp:        {ticker: KXATPMATCH,         label: ATP Tennis,          k: 32, neutral: true,  min_games: 300, stake: false}
+  wta:        {ticker: KXWTAMATCH,         label: WTA Tennis,          k: 32, neutral: true,  min_games: 300, stake: false}
+  challenger: {ticker: KXATPCHALLENGERMATCH, label: ATP Challenger,    k: 32, neutral: true,  min_games: 300, enabled: false, stake: false}
   nfl:        {ticker: KXNFLGAME,          label: NFL,                 k: 20, home_adv: 48, min_games: 30,
-               espn: [football, nfl], injuries: true, injury_elo: 12, weather: true}
+               espn: [football, nfl], injuries: true, injury_elo: 12, weather: true, ticker_order: away_home}
   ncaaf:      {ticker: KXNCAAFGAME,        label: College Football,    k: 24, home_adv: 60, min_games: 80,
-               espn: [football, college-football], weather: true}
+               espn: [football, college-football], weather: true, ticker_order: away_home}
   mlb:        {ticker: KXMLBGAME,          label: MLB,                 k: 10,  home_adv: 24, min_games: 300,
-               espn: [baseball, mlb], injuries: true, injury_elo: 6, weather: true}
-  epl:        {ticker: KXEPLGAME,          label: Premier League,      k: 22, home_adv: 55, min_games: 30, espn: [soccer, eng.1]}
-  laliga:     {ticker: KXLALIGAGAME,       label: La Liga,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, esp.1]}
-  ligue1:     {ticker: KXLIGUE1GAME,       label: Ligue 1,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, fra.1]}
-  seriea:     {ticker: KXSERIEAGAME,       label: Serie A,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, ita.1]}
-  bundesliga: {ticker: KXBUNDESLIGAGAME,   label: Bundesliga,          k: 22, home_adv: 55, min_games: 30, espn: [soccer, ger.1]}
-  mls:        {ticker: KXMLSGAME,          label: MLS,                 k: 22, home_adv: 50, min_games: 60, espn: [soccer, usa.1]}
-  ucl:        {ticker: KXUCLGAME,          label: Champions League,    k: 24, home_adv: 50, min_games: 20}
+               espn: [baseball, mlb], injuries: true, injury_elo: 6, weather: true, ticker_order: away_home}
+  epl:        {ticker: KXEPLGAME,          label: Premier League,      k: 22, home_adv: 55, min_games: 30, espn: [soccer, eng.1], ticker_order: home_away}
+  laliga:     {ticker: KXLALIGAGAME,       label: La Liga,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, esp.1], ticker_order: home_away}
+  ligue1:     {ticker: KXLIGUE1GAME,       label: Ligue 1,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, fra.1], ticker_order: home_away}
+  seriea:     {ticker: KXSERIEAGAME,       label: Serie A,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, ita.1], ticker_order: home_away}
+  bundesliga: {ticker: KXBUNDESLIGAGAME,   label: Bundesliga,          k: 22, home_adv: 55, min_games: 30, espn: [soccer, ger.1], ticker_order: home_away}
+  mls:        {ticker: KXMLSGAME,          label: MLS,                 k: 22, home_adv: 50, min_games: 60, espn: [soccer, usa.1], ticker_order: home_away}
+  ucl:        {ticker: KXUCLGAME,          label: Champions League,    k: 24, home_adv: 50, min_games: 20, ticker_order: home_away}
   cricket_t20i: {ticker: KXCRICKETT20IMATCH, label: Cricket T20I,      k: 24, home_adv: 30, min_games: 20}
   cricket_odi:  {ticker: KXCRICKETODIMATCH,  label: Cricket ODI,       k: 24, home_adv: 30, min_games: 20}
   cricket_test: {ticker: KXCRICKETTESTMATCH, label: Cricket Test,      k: 24, home_adv: 30, min_games: 10}

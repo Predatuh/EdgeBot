@@ -18,13 +18,22 @@ LOG_FIELDS = [
     "market_prob",   # de-vigged Kalshi probability at pick time
     "edge", "price", "units",
     "elo_pick", "elo_opp", "conf", "notes",
+    "staked",         # 1 = real money at risk, 0 = paper (staking off or a gate blocked it)
+    "gate",           # which gate stopped a stake: edge/price_cap/price_floor/disagreement/rating/weather/kelly
+    "model_fav",      # side the RAW Elo preferred - the only track that tests the model
+                      # (tier LEAN is the blended favourite, which is the market's favourite ~84% of the time)
     "research",       # one-paragraph web research brief (research.py)
     "research_lean",  # -3..+3: how the research moved us on the pick
     "research_adj",   # Elo points applied to the pick from that lean
     "research_flag",  # red flags found (an EDGE with a flag is demoted to LEAN)
-    "result",        # W / L, filled when Kalshi settles
-    "close_prob",    # last traded Kalshi price for the pick (closing line)
-    "clv",           # close_prob - price paid: positive = beat the close
+    "result",        # W / L / V (void: the event resolved with no winner)
+    "graded_utc",    # when we graded it, so a late settlement still reaches a results card
+    "close_prob",    # last LIVE price seen before settlement - a real pre-start close.
+                     # NEVER the settled market's last trade: Kalshi trades in-play, so
+                     # that number is ~0.99 for the winner and ~0.01 for the loser, i.e.
+                     # the result. Every CLV figure before 2026-09-10 was that mistake.
+    "close_utc",     # when the snapshot was taken; blank = no usable close, so no CLV
+    "clv",           # close_prob - price paid: positive = the market moved our way
     "profit",        # units won/lost
 ]
 
@@ -39,7 +48,9 @@ TIP_FIELDS = [
     "eb_pick", "eb_tier", "eb_model_prob",   # what EdgeBot said on the same event
     "agree",           # did EdgeBot pick the same side
     "match_conf",      # confidence the slate line was matched to the right event
-    "result",          # W / L, or n/a for tickets we can't score
+    "result",          # W / L / V (void), or n/a for tickets we can't score
+    "graded_utc",
+    "close_utc",       # timestamp of the live pre-settlement snapshot (blank = no CLV)
     "close_prob", "clv",
     "profit_100",      # P/L from a flat $100 on this pick
 ]
@@ -238,7 +249,7 @@ def link_own_picks():
     return n
 
 
-def grade_tips(winners, closes=None):
+def grade_tips(winners):
     """Same settlement feed as our own picks; P/L is a flat $100 per pick."""
     rows = read_tips()
     w = l = 0
@@ -249,11 +260,10 @@ def grade_tips(winners, closes=None):
         if win is None:
             continue
         price = _fl(r["price"])
-        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"]) if price else None
-        if cp is not None:
-            r["close_prob"] = round(cp, 3)
-            if price:
-                r["clv"] = round(cp - price, 3)
+        r["graded_utc"] = _now()
+        if win == "VOID":
+            r["result"], r["profit_100"] = "V", 0
+            continue
         if win == r["pick"]:
             r["result"] = "W"
             r["profit_100"] = round(100 * (1 - price) / price, 2) if price > 0 else ""
@@ -273,18 +283,27 @@ def _tip_stats(rows):
     # W/L covers every graded pick; money only counts picks with a real entry price
     # (events we never bet ourselves have no trustworthy price, so they are W/L only)
     priced = [r for r in g if r["price"] != ""]
+    live = [r for r in priced if r.get("price_src") == "live"]
     pl = sum(_fl(r["profit_100"]) for r in priced)
-    clv = [_fl(r["clv"]) for r in priced if r["clv"] != ""]
-    mk = [_fl(r["market_prob"]) for r in g if r["market_prob"] != ""]
+    live_pl = sum(_fl(r["profit_100"]) for r in live)
+    clv = [_fl(r["clv"]) for r in priced if r["clv"] != "" and r.get("close_utc")]
+    # expected_w must be summed over the SAME rows we report a record for, or the
+    # comparison flatters whoever has unpriced picks (it did, by 8 wins).
+    mk = [_fl(r["market_prob"]) for r in priced if r["market_prob"] != ""]
+    pw = sum(1 for r in priced if r["result"] == "W")
     return {
         "n": len(g), "w": w, "l": len(g) - w,
         "priced_n": len(priced), "unpriced_n": len(g) - len(priced),
+        "priced_w": pw, "priced_l": len(priced) - pw,
         "pending": sum(1 for r in rows if not r["result"]),
+        "void": sum(1 for r in rows if r["result"] == "V"),
         "unscorable": sum(1 for r in rows if r["result"] == "n/a"),
         "profit_100": round(pl, 2),
         "roi": round(pl / (100 * len(priced)) * 100, 1) if priced else None,
+        # only 'live' prices were captured at post time; backfilled ones are estimates
+        "live_n": len(live), "live_roi": round(live_pl / (100 * len(live)) * 100, 1) if live else None,
         "avg_price": round(sum(mk) / len(mk), 3) if mk else None,
-        "expected_w": round(sum(mk), 1) if mk else None,   # wins the price implied
+        "expected_w": round(sum(mk), 1) if mk else None,   # over priced rows only
         "avg_clv": round(sum(clv) / len(clv), 4) if clv else None,
     }
 
@@ -300,13 +319,48 @@ def tipster_summary():
             "overall": _tip_stats(rs),
             "agrees_with_model": _tip_stats([r for r in rs if r["agree"] == "yes"]),
             "disagrees_with_model": _tip_stats([r for r in rs if r["agree"] == "no"]),
+            # our longshot EDGEs lost almost everything, so "he beats us when we
+            # disagree" is mostly a restatement of that; split it out
+            "disagrees_vs_our_edge": _tip_stats([r for r in rs if r["agree"] == "no" and r.get("eb_tier") == "EDGE"]),
+            "disagrees_vs_our_lean": _tip_stats([r for r in rs if r["agree"] == "no" and r.get("eb_tier") == "LEAN"]),
         }
     return out
 
 
-def grade_pending(winners, closes=None):
-    """winners: {event_id: winner_name|'Tie'}; closes: {event_id: {side: close_prob}}.
-    Returns (w, l) graded now."""
+def _now():
+    return dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+
+
+def snapshot_open_prices(by_event, tips=False):
+    """Record the current live price of every ungraded pick whose market is still open.
+
+    The last snapshot taken before an event settles is our closing line. Grading must
+    never take it from the settled market: Kalshi trades in-play, so a settled market's
+    last trade is ~0.99 for the winner and ~0.01 for the loser - i.e. the result.
+    """
+    read, write = (read_tips, write_tips) if tips else (read_log, write_log)
+    rows = read()
+    n = 0
+    for r in rows:
+        if r["result"] or r["event_id"] not in by_event:
+            continue
+        p = by_event[r["event_id"]].get(r["pick"])
+        if p is None:
+            continue
+        r["close_prob"], r["close_utc"] = round(p, 3), _now()
+        price = _fl(r["price"])
+        if price:
+            r["clv"] = round(p - price, 3)
+        n += 1
+    if n:
+        write(rows)
+    return n
+
+
+def grade_pending(winners):
+    """winners: {event_id: winner_name|'Tie'|'VOID'}. Returns (w, l) graded now.
+    A VOID event (postponed/cancelled - every side settles NO) is closed out at zero
+    rather than left pending for ever."""
     rows = read_log()
     w = l = 0
     for r in rows:
@@ -316,11 +370,10 @@ def grade_pending(winners, closes=None):
         if win is None:
             continue
         units, price = _fl(r["units"]), _fl(r["price"])
-        cp = (closes or {}).get(r["event_id"], {}).get(r["pick"])
-        if cp is not None:
-            r["close_prob"] = round(cp, 3)
-            if price:
-                r["clv"] = round(cp - price, 3)
+        r["graded_utc"] = _now()
+        if win == "VOID":
+            r["result"], r["profit"] = "V", 0
+            continue
         if win == r["pick"]:
             r["result"] = "W"
             r["profit"] = round(units * (1 - price) / price, 3) if price > 0 and units > 0 else 0
@@ -329,7 +382,7 @@ def grade_pending(winners, closes=None):
             r["result"] = "L"
             r["profit"] = -units if units else 0
             l += 1
-    if w or l:
+    if w or l or any(r["result"] == "V" and r["graded_utc"] for r in rows):
         write_log(rows)
     return w, l
 
@@ -340,17 +393,28 @@ def _stats(rows):
     w = sum(1 for r in g if r["result"] == "W")
     units = sum(_fl(r["profit"]) for r in g)
     risked = sum(_fl(r["units"]) for r in g)
-    clv = [_fl(r["clv"]) for r in g if r["clv"] != ""]
+    # CLV only counts snapshots taken while the market was still open; a settled
+    # market's last trade is the result, not a close.
+    clv = [_fl(r["clv"]) for r in g if r["clv"] != "" and r.get("close_utc")]
+    # brier_model scores the BLEND, which is mostly the market - a near-tie by
+    # construction. brier_raw scores the model's own opinion, which is the real test.
     bm = [(_fl(r["model_prob"]) - (r["result"] == "W")) ** 2 for r in g if r["model_prob"] != ""]
+    br = [(_fl(r["model_raw"]) - (r["result"] == "W")) ** 2 for r in g if r["model_raw"] != ""]
     bk = [(_fl(r["market_prob"]) - (r["result"] == "W")) ** 2 for r in g if r["market_prob"] != ""]
+    staked = [r for r in g if _fl(r.get("staked")) == 1 or _fl(r["units"]) > 0]
     return {
         "w": w, "l": len(g) - w, "n": len(g),
         "pending": sum(1 for r in rows if not r["result"]),
+        "void": sum(1 for r in rows if r["result"] == "V"),
+        "staked_n": len(staked),
+        # what the market said these same picks were worth - the honest yardstick
+        "expected_w": round(sum(_fl(r["market_prob"]) for r in g if r["market_prob"] != ""), 1) if g else None,
         "units": round(units, 2), "risked": round(risked, 2),
         "roi": round(units / risked * 100, 1) if risked else 0.0,
         "avg_edge": round(sum(_fl(r["edge"]) for r in g) / len(g), 4) if g else None,
         "avg_clv": round(sum(clv) / len(clv), 4) if clv else None,
         "clv_n": len(clv),
+        "brier_raw": round(sum(br) / len(br), 4) if br else None,
         # Brier score of the pick's win probability (lower = better calibrated).
         # If brier_model stays above brier_market, the model isn't adding information.
         "brier_model": round(sum(bm) / len(bm), 4) if bm else None,
@@ -380,6 +444,23 @@ def record_summary():
     out["by_research"] = {b: _stats([r for r in rows if lean_bucket(r) == b])
                           for b in ("for_pick", "neutral", "against_pick", "not_researched")}
     out["by_research"]["flagged"] = _stats([r for r in rows if r["research_flag"]])
+    # Does the RAW model beat the market when it actually disagrees? The only
+    # question that matters, and the one the LEAN record cannot answer.
+    def d(r):
+        return _fl(r["model_raw"]) - _fl(r["market_prob"])
+    graded = [r for r in rows if r["result"] in ("W", "L") and r["model_raw"] != ""]
+    out["model_vs_market"] = {
+        "model_likes_our_side_a_lot (d>0.10)": _stats([r for r in graded if d(r) > 0.10]),
+        "model_likes_our_side (0.02<d<=0.10)": _stats([r for r in graded if 0.02 < d(r) <= 0.10]),
+        "agrees (|d|<=0.02)": _stats([r for r in graded if abs(d(r)) <= 0.02]),
+        "model_dislikes_our_side (d<-0.02)": _stats([r for r in graded if d(r) < -0.02]),
+    }
+    # Which gate stopped each would-be stake, so the paper edges stay measurable.
+    gates = {}
+    for r in rows:
+        if r["tier"] == "EDGE" or r.get("gate"):
+            gates.setdefault(r.get("gate") or "staked", []).append(r)
+    out["by_gate"] = {k: _stats(v) for k, v in sorted(gates.items())}
     tips = tipster_summary()
     if tips:
         out["tipsters"] = tips
