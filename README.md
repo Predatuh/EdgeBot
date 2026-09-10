@@ -28,9 +28,12 @@ ODI, Test, CPL). Turn a league on/off with `enabled:` in `config.yaml`.
      and a red flag posts the EDGE as an unstaked LEAN. Defaults to Haiku 4.5, 3 searches,
      `max_per_run: 8`, so a few dollars of credit lasts weeks.
 5. **Post the card** to Discord:
-   - 🔥 **EDGE** — model beats the Kalshi ask by `edge_threshold`+, ask ≤ `max_price`,
-     no extreme weather → staked (quarter-Kelly), tracked in units and ROI
-   - 📌 **LEAN** — model's favorite with no real edge → paper pick, W-L only
+   - 🔥 **EDGE** (staked) / 🧪 **PAPER EDGE** — the model beats the price you would
+     actually pay by `edge_threshold`+ and clears every gate. **Staking is currently
+     off**, so these post as paper and are still graded; see "Is it working?" below.
+   - 📌 **market favourite** — the blended favourite, which is the market's favourite
+     ~84% of the time. Tracked, but it does not test the model; `model_fav` (the side
+     the raw Elo preferred) is the column that does.
    - ⏸️ **PASS** — only when there is no usable price (empty book or spread wider
      than `max_spread`); hidden unless `show_passes: true`
    - ⚠️ a line naming any league that errored, so a quiet card is never mistaken for a clean one
@@ -56,11 +59,22 @@ tier, model_raw, model_prob, market_prob, edge, price, units, elo_pick, elo_opp,
 conf, notes, research, research_lean, research_adj, research_flag, result, close_prob, clv, profit`.
 
 - `model_raw` is the model before blending; `model_prob` is what the pick was made on.
-- `clv = close_prob − price`: positive means we beat the closing line, the best
-  early signal an edge is real before the W-L sample is big enough to mean anything.
+- `clv = close_prob − price`, where `close_prob` is the last **live** price seen
+  before the event settled (`close_utc` records when). It is never taken from the
+  settled market: Kalshi trades in-play, so a settled market's last trade is ~0.99 for
+  the winner and ~0.01 for the loser — that is the result, not a close. Every CLV
+  figure produced before 2026-09-10 was that mistake and has been cleared.
 - `by_research` in `stats.json` splits graded picks by how the research leaned
   (for / neutral / against / not researched / flagged). If "for_pick" doesn't beat
   "against_pick" over time, the research isn't earning its cost.
+- `brier_raw` vs `brier_market` is the real test — it scores the model's own opinion.
+  `brier_model` scores the *blend*, which is mostly the market, so it is a near-tie by
+  construction and tells you almost nothing.
+- `model_vs_market` in `stats.json` splits every graded pick by how far the raw model
+  disagreed with the price, and shows actual wins against market-implied wins in each
+  bucket. This is the one table that can tell you the model has learned something.
+- `by_gate` shows which staking gate stopped each would-be edge, so the paper filter
+  stays measurable while staking is off.
 - `brier_model` vs `brier_market` in `stats.json`: if the model's score is not
   lower than the market's after a few hundred graded picks, it is not adding information.
 
@@ -71,6 +85,17 @@ conf, notes, research, research_lean, research_adj, research_flag, result, close
 - `max_spread` 0.15 — bid/ask gap that counts as "no market"
 - `market_weight` 0.5 / `full_conf_games` 25 — how much the model is trusted, and how many rated games each side needs for full trust
 - `kelly_fraction` 0.25, `max_units` 1.0 — stake sizing
+- `staking` — master switch. False = compute, log and grade edges as paper, stake nothing.
+- `max_disagreement` 0.15 — refuse to stake when the raw model differs from the market by
+  more than this; a model that asserts a 15-point mispricing in a liquid market on a
+  handful of rated games is uninformed, not right.
+- `require_rating_edge` — never stake a side the raw Elo rates below its opponent.
+- `min_price` 0.0 (off) — floor on the ask. Tested at 0.20–0.30 and it removed winners
+  as well as losers, so price is only a proxy for the disagreement problem.
+- per league `ticker_order` — `away_home` (US series: ticker ends with the home code),
+  `home_away` (all soccer), `neutral`. ESPN's homeAway overrides it when available.
+- per league `stake: false` — off for ATP/WTA until their ratings separate.
+- `card.compact_leans` — collapse market-favourite picks to one line per league.
 - `research:` block — `mode` (headlines / claude / off), per-run cap, headline days and count, and for claude mode the model, effort, searches, `near_edge`, `elo_per_point`, `demote_on_red_flag`
 - per league: `k` (Elo K), `home_adv`, `neutral` (tennis), `min_games` (drops the ⚠️low-data tag), `espn: [sport, league]` + `injuries` / `injury_elo` / `weather`
 
@@ -137,19 +162,55 @@ model doesn't have.
 3. The workflow uses a concurrency group and `git pull --rebase -X theirs` before
    pushing, so two runs can't clobber each other's `data/` commit.
 
+## Is it working?
+
+**No — and staking is off because of it.** Over the first 306 graded picks:
+
+| test | result |
+|---|---|
+| staked edges | **3-20**, −$1,238 flat, −53.8% ROI |
+| the raw model's Brier vs the de-vigged Kalshi price | **0.058 worse** (95% CI +0.040 to +0.075) |
+| picks where the model disagreed with the market most (raw − market ≥ 0.10) | **2-24** against 6.2 market-implied wins |
+| paper leans | 186-90 against 187.8 market-implied — i.e. exactly the market |
+
+There is no bucket — by league, price, confidence or disagreement — where the model
+beat the market. The leans track the market because the blend *is* mostly the market:
+with `model_w = (1 − market_weight) × conf` and a median `conf` around 0.2, the
+"model's favourite" is the market's favourite about 84% of the time.
+
+**Why the edges were all longshots.** `edge = (1 − market_weight) × conf × (raw −
+market)`. Elo starts everyone at 1500 and tennis players had ~4-6 rated matches each,
+so `raw` sits near 0.5 on every match while the market prices favourites up to 0.955.
+The gap `raw − market` is therefore biggest exactly where the market is most
+confident, and the positive-edge side is always the underdog: 21 of 23 staked edges
+were priced under 40¢, and 20 of 27 were on the side the model's own Elo rated
+*lower*. The filter wasn't finding value, it was converting "I have no information"
+into "the longshot is underpriced".
+
+### Turning staking back on
+
+Set `staking: true` in config.yaml — but only once the paper record answers yes to
+both: `brier_raw` below `brier_market` in `stats.json`, and the
+`model_vs_market` block showing the model beating market-implied wins where it
+actually disagrees, over 100+ graded picks it did not choose. The gates
+(`max_disagreement`, `require_rating_edge`, per-league `stake`) stay on either way.
+
 ## Honest expectations
 
-- Elo starts from Kalshi's history only, so leagues with a short Kalshi record show
-  ⚠️low-data and lean heavily on the market until they've seen enough games.
-- Win % means nothing; units, ROI and CLV in `data/v2/` are the truth.
-- Kalshi lines are sharp-ish. Sustained positive CLV and 3–5% ROI is a very good result.
-- ESPN and Open-Meteo are free public APIs; if one hiccups, the pick still goes
-  out without that note.
+- Elo is built from Kalshi's settled history only, which reaches back weeks, not years.
+  Leagues with few games per competitor (tennis: hundreds of players, ~5 matches each)
+  cannot produce a meaningful rating and should not be staked.
+- Win % means nothing. Units, ROI and — once there are enough snapshots — CLV are the
+  truth, and `expected_w` (what the market priced those same picks at) is the yardstick.
+- Kalshi lines are sharp. Sustained positive CLV and 3–5% ROI would be a very good result.
+- ESPN and Open-Meteo are free public APIs; if one hiccups the pick still goes out
+  without that note.
 
 ## Layout
 
 Flat: `main.py` (orchestration + model), `kalshi.py` (market + results),
 `espn.py` (injuries/venue), `weather.py`, `elo.py`, `edge.py` (de-vig, Kelly),
 `state.py` (persistence + analytics), `research.py` (Claude web research),
-`tipsters.py` (outside slates), `notify.py` (Discord). Adding a factor is
+`tipsters.py` (outside slates), `notify.py` (Discord, rate-limit aware),
+`merge_state.py` (unions the append-only logs before each commit). Adding a factor is
 one function plus one adjustment line in `model_game`.
