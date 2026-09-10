@@ -1,0 +1,854 @@
+{
+ "WTA Tennis|Elena Rybakina vs Coco Gauff|Coco Gauff": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Conference League Final 2026 (GcFxC1EwTX)",
+  "opp_health": "Naomi Osaka issues fitness update after losing to Elena Rybakina at the US Open, \u2018it just got a lot worse\u2019",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Coco Gauff",
+    "title": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Conference League Final 2026 (GcFxC1EwTX)",
+    "source": "Mshale",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "Elena Rybakina",
+    "title": "Naomi Osaka issues fitness update after losing to Elena Rybakina at the US Open, \u2018it just got a lot worse\u2019",
+    "source": "Tennishead",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Coco Gauff",
+    "title": "\u201cIt\u2019s the best and it\u2019s the best in women\u2019s tennis,\u201d Andy Roddick praises Coco Gauff",
+    "source": "Tennis Tonic",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Coco Gauff",
+    "title": "Coco Gauff Saves Two Match Points, Beats Mirra Andreeva to Reach US Open Semifinals: how 19 outlets framed it",
+    "source": "NewsCord",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Elena Rybakina",
+    "title": "Elena Rybakina displaces Aryna Sabalenka to become the new WTA World No. 1",
+    "source": "Khel Now",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Elena Rybakina",
+    "title": "Elena Rybakina Becomes World No. 1: A Historic First for Kazakhstan",
+    "source": "infohub.kz",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "WTA Tennis|Aryna Sabalenka vs Jessica Pegula|Aryna Sabalenka": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Jessica Pegula Vs Alex Eala, Mubadala DC Open Tennis Final Live Score (Play Suspended Due To Rain) \uc5d8\uc5d0\uc774 Fc \ub300 \ud734\uc2a4\ud134 \ub2e4\uc774\ub108\ubaa8 (AtCSqd0fTg); Jessica Pegula Leads Alexandra Eala As DC Open Final Is Suspended By Rain \u26c8\ufe0f\ud83d\udd25 Lotto Max Second Prize Ontario (naAddTmvjq)",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jessica Pegula",
+    "title": "Jessica Pegula Leads Alexandra Eala As DC Open Final Is Suspended By Rain \u26c8\ufe0f\ud83d\udd25 Lotto Max Second Prize Ontario (naAddTmvjq)",
+    "source": "Mshale",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "Jessica Pegula",
+    "title": "Jessica Pegula Vs Alex Eala, Mubadala DC Open Tennis Final Live Score (Play Suspended Due To Rain) \uc5d8\uc5d0\uc774 Fc \ub300 \ud734\uc2a4\ud134 \ub2e4\uc774\ub108\ubaa8 (AtCSqd0fTg)",
+    "source": "Mshale",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Jessica Pegula",
+    "title": "Sabalenka vs. Pegula | Semifinals US Open 2026",
+    "source": "wtatennis.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Aryna Sabalenka",
+    "title": "Aryna Sabalenka loses World No. 1 throne as WTA top ranking goes to THIS player",
+    "source": "SportsTak",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Aryna Sabalenka",
+    "title": "$23 Million Setback Puts WTA at Risk as Aryna Sabalenka, Coco Gauff & Others\u2019 Star Power Falls Short",
+    "source": "EssentiallySports",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Aryna Sabalenka",
+    "title": "Aryna Sabalenka\u2019s Reaction to Losing World No. 1 Ranking Goes Viral",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "NFL|San Francisco @ Los Angeles R|Los Angeles R": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alfred Collins OUT, James Thompson Jr. Questionable vs. Rams; Injury Report Ahead of #SFvsLAR; Rams Injury Report, Week 1 vs. 49ers: Aaron Donald only player ruled out among those listed; no designation for Myles Garrett",
+  "opp_health": "49ers DT Alfred Collins out for the year | 'The NFL Report'; San Francisco 49ers suffer major injury blow as DT Alfred Collins ruled out for the season",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Rams Injury Report, Week 1 vs. 49ers: Aaron Donald only player ruled out among those listed; no designation for Myles Garrett"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles R",
+    "title": "Rams vs 49ers prediction: Odds, expert picks, QB matchup, injury update, betting trends, and stats",
+    "source": "NBC Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "49ers DT Alfred Collins out for the year | 'The NFL Report'",
+    "source": "NFL.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco 49ers suffer major injury blow as DT Alfred Collins ruled out for the season",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "49ers' Alfred Collins (knee) injured in practice, out for season",
+    "source": "ESPN",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Alfred Collins OUT, James Thompson Jr. Questionable vs. Rams; Injury Report Ahead of #SFvsLAR",
+    "source": "San Francisco 49ers",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Rams Injury Report, Week 1 vs. 49ers: Aaron Donald only player ruled out among those listed; no designation for Myles Garrett",
+    "source": "Rams",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "MLB|Pittsburgh @ Chicago WS|Chicago WS": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Guillen brought to tears as White Sox plan to retire his No. 13; White Sox put Tommy Pham on injured list after he strains calf during on-field workout",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Guillen brought to tears as White Sox plan to retire his No. 13"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "Kyle Teel returns from IL eager to boost Chicago White Sox in playoff push: \u2018He\u2019s a big part of this\u2019",
+    "source": "Chicago Tribune",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox put Tommy Pham on injured list after he strains calf during on-field workout",
+    "source": "Chicago Sun-Times",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Guillen brought to tears as White Sox plan to retire his No. 13",
+    "source": "mlb.com",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates at Chicago White Sox - Where to Watch, Stream Info, TV Channel, and Live Updates (September 10, 2026)",
+    "source": "Fubo",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Benches clear in Pirates-White Sox after inning-ending double play",
+    "source": "mlb.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "With fifth straight series win, Pirates aren't yet out of playoff race",
+    "source": "mlb.com",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "MLB|Colorado @ New York Y|New York Y": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Yankees Manager Makes Anthony Volpe Comment Amid Sudden Injury News; BREAKING: New York Yankees Make Anthony Volpe Decision After Injury Update",
+  "opp_health": "Rockies\u2019 Kyle Karros returns to lineup as Colorado drops opener to Yankees; How to Watch Game 1 of Yankees' Series vs. Rockies (Time, Channel, Starting Lineup & More)",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Colorado",
+    "title": "How to Watch Game 1 of Yankees' Series vs. Rockies (Time, Channel, Starting Lineup & More)",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado Rockies Announce Probable Starters for Yankees Series",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees summon Anthony Volpe from Triple-A as infield question emerges after Jazz Chisholm Jr. injury",
+    "source": "New York Post",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Rockies\u2019 Kyle Karros returns to lineup as Colorado drops opener to Yankees",
+    "source": "Colorado Springs Gazette",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees Manager Makes Anthony Volpe Comment Amid Sudden Injury News",
+    "source": "heavy.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "BREAKING: New York Yankees Make Anthony Volpe Decision After Injury Update",
+    "source": "heavy.com",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "MLB|Texas @ Seattle|Seattle": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion; Mariners\u2019 Lazaro Montes: leaves game with hip injury",
+  "opp_health": "Texas Rangers lineup for September 9, 2026; Rangers Set Lineup, Turn to Cal Quantrill on Mound in Mariners Series Opener",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Seattle",
+    "title": "Mariners Injury Updates: Latest on Donovan, Hancock, and more",
+    "source": "Seattle Sports",
+    "date": "Sep 04",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Lazaro Montes: leaves game with hip injury",
+    "source": "Lookout Landing",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion",
+    "source": "Seattle Sports",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers Set Lineup, Turn to Cal Quantrill on Mound in Mariners Series Opener",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 9, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "MLB|Houston @ Philadelphia|Philadelphia": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "'Pests' at bottom of Astros' lineup come up big in win vs. Phillies",
+  "opp_health": "Astros Get Much-Needed Production From Crucial Spots in Lineup; Astros Have Found Their No. 3 Starter in the Rotation After Latest Performance",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philadelphia",
+    "title": "'Pests' at bottom of Astros' lineup come up big in win vs. Phillies",
+    "source": "Houston Chronicle",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Astros Get Much-Needed Production From Crucial Spots in Lineup",
+    "source": "Sports Illustrated",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Astros Have Found Their No. 3 Starter in the Rotation After Latest Performance",
+    "source": "Sports Illustrated",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "'Pests' at bottom of Astros' lineup come up big in win vs. Phillies",
+    "source": "Houston Chronicle",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Who made the cut for our 2026 Phillies All-Prospect team?",
+    "source": "NBC10 Philadelphia",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Hunter Brown got grounders, but Phillies turned them into runs. 'Unfortunate'",
+    "source": "Houston Chronicle",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "MLB|Tampa Bay @ Atlanta|Atlanta": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Injured Former Atlanta Braves All-Star Gets Good News With Current Team; Braves News: Bryce Elder sidelined, Robert Suarez update, and more",
+  "opp_health": "Rays place Walls (hip) on IL, call up veteran Madrigal; Rays put shortstop Walls on 15-day IL with hip flexor strain",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Braves RHP Bryce Elder headed to injured list after undergoing right knee surgery",
+    "source": "Atlanta News First",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Rays put shortstop Walls on 15-day IL with hip flexor strain",
+    "source": "ESPN",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Braves News: Bryce Elder sidelined, Robert Suarez update, and more",
+    "source": "Battery Power",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Rays place Walls (hip) on IL, call up veteran Madrigal",
+    "source": "mlb.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Injured Former Atlanta Braves All-Star Gets Good News With Current Team",
+    "source": "heavy.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "How the Rays turned baseball tradition on its head \u2014 and improved Freddy Peralta",
+    "source": "The New York Times",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "Champions League|Lens @ Slavia Prague|Lens": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Slavia Prague vs Lens Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026; Slavia Praha vs Lens Lineups - Champions League 2026/27",
+  "opp_health": "Slavia Prague vs Lens Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026; Slavia Prague vs Lens Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Slavia Prague",
+    "title": "Slavia Prague vs Lens - live score, predicted lineups and H2H stats",
+    "source": "FotMob",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Slavia Praha vs Lens Lineups - Champions League 2026/27",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Slavia Prague vs Lens Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch",
+    "source": "TechnoSports Media Group",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Slavia Prague",
+    "title": "Slavia Prague vs Lens Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch",
+    "source": "TechnoSports Media Group",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Slavia Prague vs Lens Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026",
+    "source": "sportsgambler.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Slavia Prague",
+    "title": "Slavia Prague vs Lens Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026",
+    "source": "sportsgambler.com",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "Champions League|Sabah Masazir @ Manchester United|Manchester United": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Manchester United projected lineup vs Sabah: Red Devils return to Champions League; Manchester United vs Sabah \u2013 Predicted lineup and team news",
+  "opp_health": "Man United vs. Sabah prediction, lineups, odds and bet builder tips for Champions League opener",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Manchester United",
+    "title": "Manchester United return to Champions League under Michael Carrick against Sabah",
+    "source": "CBS Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Manchester United",
+    "title": "Manchester United projected lineup vs Sabah: Red Devils return to Champions League",
+    "source": "Central Oregon Daily",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Manchester United",
+    "title": "Manchester United vs Sabah \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Sabah Masazir",
+    "title": "Man United vs. Sabah prediction, lineups, odds and bet builder tips for Champions League opener",
+    "source": "sportingnews.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Sabah Masazir",
+    "title": "Manchester United vs. Sabah Masazir - Live Score - September 10, 2026",
+    "source": "FOX Sports",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Sabah Masazir",
+    "title": "Manchester United vs Sabah Masazir",
+    "source": "coinbase.com",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "Champions League|Bodoe/Glimt @ Bayern Munich|Bayern Munich": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "PREVIEW | Bayern M\u00fcnchen vs Bodo/Glimt: team news, lineups, predictions (Champions League 10/09)",
+  "opp_health": "Bayern Munich vs Bodo/Glimt Predictions, Lineups, Odds & Tips: Expect a close game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Bayern Munich",
+    "title": "PREVIEW | Bayern M\u00fcnchen vs Bodo/Glimt: team news, lineups, predictions (Champions League 10/09)",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Bodoe/Glimt",
+    "title": "Bayern Munich vs Bodo/Glimt Predictions, Lineups, Odds & Tips: Expect a close game",
+    "source": "Goal.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Bodoe/Glimt",
+    "title": "Bodoe/Glimt Standings",
+    "source": "Goal.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Bodoe/Glimt",
+    "title": "Where to watch Bodo/Glimt today? Live soccer streams and TV channels for upcoming games",
+    "source": "Goal.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Bayern Munich",
+    "title": "Bod\u00f8/Glimt visits Bayern Munich and upstart Como makes its Champions League debut",
+    "source": "AP News",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Bayern Munich",
+    "title": "Pundit says Bayern Munich\u2019s season will be defined by Champions League\u2026do you agree?",
+    "source": "Bavarian Football Works",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:13Z"
+ },
+ "Champions League|Leipzig @ Como|Como": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Como vs RB Leipzig: Champions League preview, projected lineups and players to watch; RB Leipzig receive injury boost ahead of Como clash",
+  "opp_health": "Como vs RB Leipzig Predictions, Lineups, Odds & Tips: I Lariani to win on home soil; Como vs RB Leipzig: Champions League preview, projected lineups and players to watch",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Como",
+    "title": "Como vs RB Leipzig Lineups - Champions League 2026/27",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Como",
+    "title": "RB Leipzig receive injury boost ahead of Como clash",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Leipzig",
+    "title": "RB Leipzig receive injury boost ahead of Como clash",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Como",
+    "title": "Como vs RB Leipzig: Champions League preview, projected lineups and players to watch",
+    "source": "Sofascore",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Leipzig",
+    "title": "Como vs RB Leipzig Predictions, Lineups, Odds & Tips: I Lariani to win on home soil",
+    "source": "Goal.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Leipzig",
+    "title": "Como vs RB Leipzig: Champions League preview, projected lineups and players to watch",
+    "source": "Sofascore",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:14Z"
+ },
+ "Champions League|Shakhtar @ Eindhoven|Eindhoven": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "PSV Eindhoven vs Shakhtar Donetsk Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch; Preview: PSV Eindhoven vs Shakhtar Donetsk - prediction, team news, lineups",
+  "opp_health": "PSV vs Shakhtar Donetsk Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026; PSV vs Shakhtar Donetsk: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Eindhoven",
+    "title": "Preview: PSV Eindhoven vs Shakhtar Donetsk - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Eindhoven",
+    "title": "PSV Eindhoven vs Shakhtar Donetsk Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch",
+    "source": "TechnoSports Media Group",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Shakhtar",
+    "title": "PSV Eindhoven vs Shakhtar Donetsk Match Preview, Prediction, Timings, Lineups, Teams, and How to Watch",
+    "source": "TechnoSports Media Group",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Shakhtar",
+    "title": "PSV vs Shakhtar Donetsk Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026",
+    "source": "sportsgambler.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Shakhtar",
+    "title": "PSV vs Shakhtar Donetsk: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Eindhoven",
+    "title": "PSV Eindhoven vs Shakhtar Donetsk",
+    "source": "Nine.com.au",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:14Z"
+ },
+ "Champions League|Roma @ Fenerbahce|Roma": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Fenerbahce vs Roma: Lineups, Prediction, Odds & Bet Builder Tip; AS Roma XI vs Fenerbah\u00e7e \u2013 Predicted lineup and team news",
+  "opp_health": "Fenerbahce vs Roma Predictions, Lineups, Odds & Tips; Fenerbahce vs Roma Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Roma",
+    "title": "Fenerbahce vs Roma Predictions, Lineups, Odds & Tips: Italians' goal spree to continue",
+    "source": "Goal.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Roma",
+    "title": "Fenerbahce vs Roma: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Roma",
+    "title": "AS Roma XI vs Fenerbah\u00e7e \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Fenerbahce",
+    "title": "Fenerbahce vs Roma Predictions, Lineups, Odds & Tips",
+    "source": "Goal.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Fenerbahce",
+    "title": "Fenerbahce vs Roma Prediction, Betting Tips, Lineups & Odds | 10 Sep 2026",
+    "source": "sportsgambler.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Fenerbahce",
+    "title": "Fenerbahce vs Roma: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T11:14Z"
+ },
+ "Caribbean Premier League|St. Kitts and Nevis Patriots @ Barbados Royals|Barbados Royals": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Barbados Royals",
+    "title": "CPL 2026 Match 29: Barbados Tridents crush Saint Lucia Kings by 8 wickets",
+    "source": "Cricket World",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026 Match 28: Guyana Amazon Warriors secure playoff spot beating St Kitts & Nevis Patriots by 7 wickets",
+    "source": "Cricket World",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026: Guyana Amazon Warriors beat St. Kitts and Nevis Patriots by seven wickets",
+    "source": "WIC News",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026 - Guyana Amazon Warriors vs St Kitts and Nevis Patriots",
+    "source": "Tapmad",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "Barbados Tridents rise again: Royals Group and Government forge landmark partnership",
+    "source": "Trinidad Guardian",
+    "date": "Sep 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T11:14Z"
+ }
+}
