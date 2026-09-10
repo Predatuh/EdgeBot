@@ -850,5 +850,105 @@
    }
   ],
   "_ts": "2026-09-10T11:14Z"
+ },
+ "MLB|Texas @ Seattle|Texas": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas Rangers lineup for September 10, 2026; Texas Rangers lineup for September 9, 2026",
+  "opp_health": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List; Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Lazaro Montes: leaves game with hip injury",
+    "source": "Lookout Landing",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Mariners\u2019 Brendan Donovan still dealing with symptoms after concussion",
+    "source": "sports.mynorthwest.com",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers Set Lineup, Turn to Cal Quantrill on Mound in Mariners Series Opener",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Rangers-Mariners Series Preview: How to Watch, Probable Pitchers, Injured List",
+    "source": "Sports Illustrated",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 9, 2026",
+    "source": "Lone Star Ball",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 10, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-10T21:03Z"
+ },
+ "Caribbean Premier League|St. Kitts and Nevis Patriots @ Barbados Royals|St. Kitts and Nevis Patriots": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026 Match 28: Guyana Amazon Warriors secure playoff spot beating St Kitts & Nevis Patriots by 7 wickets",
+    "source": "Cricket World",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026: Guyana Amazon Warriors beat St. Kitts and Nevis Patriots by seven wickets",
+    "source": "WIC News",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "St. Kitts and Nevis Patriots",
+    "title": "CPL 2026 - Guyana Amazon Warriors vs St Kitts and Nevis Patriots",
+    "source": "Tapmad",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "CPL 2026 Match 29: Barbados Tridents crush Saint Lucia Kings by 8 wickets",
+    "source": "Cricket World",
+    "date": "Sep 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-10T21:03Z"
  }
 }
