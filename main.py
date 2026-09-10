@@ -63,10 +63,11 @@ def ingest_history(key, lg):
         winners[ev["event"]] = win
         if win == "VOID" or ev["event"] in seen:
             continue                    # a voided event grades the pick but teaches nothing
-        seen.add(ev["event"])
         teams = [s for s in kalshi.match_sides(ev) if not s["is_tie"]]
         if len(teams) != 2 or any(s["name"] in EXHIBITION for s in teams):
-            continue
+            continue                    # mark seen only once we've actually rated it, so a
+                                        # parsing bug can't permanently swallow the event
+        seen.add(ev["event"])
         # order: (away, home) for team sports so home adv is applied consistently
         teams.sort(key=lambda s: s["home"])
         a, b = teams[0]["name"], teams[1]["name"]
