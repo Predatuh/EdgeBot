@@ -1404,5 +1404,62 @@
    }
   ],
   "_ts": "2026-09-11T13:14Z"
+ },
+ "MLB|Chicago WS @ St. Louis|St. Louis": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "St. Louis Cardinals Announce Sudden Masyn Winn Injury Before Giants Game; Cardinals news: St. Louis gets important Masyn Winn injury update",
+  "opp_health": "White Sox vs. Pirates Lineup: Hagen Smith's First Career Start, No Kyle Teel, More; White Sox put Tommy Pham on injured list after he strains calf during on-field workout",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "Kyle Teel returns from IL eager to boost Chicago White Sox in playoff push: \u2018He\u2019s a big part of this\u2019",
+    "source": "Chicago Tribune",
+    "date": "Sep 05",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "Is Michael McGreevy the Cardinals\u2019 Opening Day starter?",
+    "source": "Viva El Birdos",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox put Tommy Pham on injured list after he strains calf during on-field workout",
+    "source": "Chicago Sun-Times",
+    "date": "Sep 06",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "Cardinals news: St. Louis gets important Masyn Winn injury update",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals Announce Sudden Masyn Winn Injury Before Giants Game",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Pirates Lineup: Hagen Smith's First Career Start, No Kyle Teel, More",
+    "source": "Sports Illustrated",
+    "date": "Sep 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-11T21:03Z"
  }
 }

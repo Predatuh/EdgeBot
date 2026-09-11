@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-11T13:14Z",
+ "generated_utc": "2026-09-11T21:05Z",
  "picks_logged": 381,
  "overall": {
   "EDGE": {
@@ -21,22 +21,22 @@
    "brier_market": 0.1026
   },
   "LEAN": {
-   "w": 219,
-   "l": 109,
-   "n": 328,
-   "pending": 24,
+   "w": 221,
+   "l": 110,
+   "n": 331,
+   "pending": 21,
    "void": 1,
    "staked_n": 0,
-   "expected_w": 217.7,
+   "expected_w": 219.0,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
    "avg_edge": -0.0068,
    "avg_clv": -0.0297,
    "clv_n": 15,
-   "brier_raw": 0.2358,
-   "brier_model": 0.1837,
-   "brier_market": 0.1837
+   "brier_raw": 0.2366,
+   "brier_model": 0.1846,
+   "brier_market": 0.1845
   }
  },
  "last_7_days": {
@@ -59,22 +59,22 @@
    "brier_market": 0.1026
   },
   "LEAN": {
-   "w": 219,
-   "l": 109,
-   "n": 328,
-   "pending": 24,
+   "w": 221,
+   "l": 110,
+   "n": 331,
+   "pending": 21,
    "void": 1,
    "staked_n": 0,
-   "expected_w": 217.7,
+   "expected_w": 219.0,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
    "avg_edge": -0.0068,
    "avg_clv": -0.0297,
    "clv_n": 15,
-   "brier_raw": 0.2358,
-   "brier_model": 0.1837,
-   "brier_market": 0.1837
+   "brier_raw": 0.2366,
+   "brier_model": 0.1846,
+   "brier_market": 0.1845
   }
  },
  "by_league": {
@@ -137,21 +137,21 @@
    },
    "LEAN": {
     "w": 5,
-    "l": 4,
-    "n": 9,
-    "pending": 1,
+    "l": 5,
+    "n": 10,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 5.1,
+    "expected_w": 5.5,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0033,
+    "avg_edge": -0.0028,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.2825,
-    "brier_model": 0.3061,
-    "brier_market": 0.3077
+    "brier_raw": 0.2737,
+    "brier_model": 0.2918,
+    "brier_market": 0.2932
    }
   },
   "cpl": {
@@ -288,22 +288,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 3,
+    "w": 4,
     "l": 5,
-    "n": 8,
-    "pending": 1,
+    "n": 9,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 4.5,
+    "expected_w": 5.0,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0079,
+    "avg_edge": -0.0068,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.1822,
-    "brier_model": 0.3075,
-    "brier_market": 0.3148
+    "brier_raw": 0.1897,
+    "brier_model": 0.3041,
+    "brier_market": 0.3106
    }
   },
   "mlb": {
@@ -478,22 +478,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 6,
+    "w": 7,
     "l": 4,
-    "n": 10,
-    "pending": 1,
+    "n": 11,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 4.7,
+    "expected_w": 5.1,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0054,
+    "avg_edge": -0.0055,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.2904,
-    "brier_model": 0.2383,
-    "brier_market": 0.2376
+    "brier_raw": 0.312,
+    "brier_model": 0.252,
+    "brier_market": 0.2506
    }
   },
   "ucl": {
@@ -593,22 +593,22 @@
    "brier_market": null
   },
   "neutral": {
-   "w": 131,
-   "l": 80,
-   "n": 211,
-   "pending": 25,
+   "w": 133,
+   "l": 81,
+   "n": 214,
+   "pending": 22,
    "void": 0,
    "staked_n": 17,
-   "expected_w": 129.7,
+   "expected_w": 131.0,
    "units": -2.87,
    "risked": 3.39,
    "roi": -84.8,
    "avg_edge": -0.0015,
    "avg_clv": -0.0297,
    "clv_n": 15,
-   "brier_raw": 0.2369,
-   "brier_model": 0.1763,
-   "brier_market": 0.174
+   "brier_raw": 0.2381,
+   "brier_model": 0.1777,
+   "brier_market": 0.1753
   },
   "against_pick": {
    "w": 0,
@@ -685,22 +685,22 @@
    "brier_market": 0.1063
   },
   "model_likes_our_side (0.02<d<=0.10)": {
-   "w": 14,
-   "l": 15,
-   "n": 29,
+   "w": 15,
+   "l": 16,
+   "n": 31,
    "pending": 0,
    "void": 0,
    "staked_n": 2,
-   "expected_w": 13.6,
+   "expected_w": 14.5,
    "units": 0.12,
    "risked": 0.32,
    "roi": 36.9,
-   "avg_edge": 0.0155,
+   "avg_edge": 0.0146,
    "avg_clv": -0.0217,
    "clv_n": 3,
-   "brier_raw": 0.2723,
-   "brier_model": 0.2756,
-   "brier_market": 0.2738
+   "brier_raw": 0.269,
+   "brier_model": 0.272,
+   "brier_market": 0.2703
   },
   "agrees (|d|<=0.02)": {
    "w": 25,
@@ -721,22 +721,22 @@
    "brier_market": 0.2311
   },
   "model_dislikes_our_side (d<-0.02)": {
-   "w": 180,
+   "w": 181,
    "l": 73,
-   "n": 253,
+   "n": 254,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 179.0,
+   "expected_w": 179.4,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
    "avg_edge": -0.0107,
    "avg_clv": -0.0077,
    "clv_n": 11,
-   "brier_raw": 0.2324,
-   "brier_model": 0.1655,
-   "brier_market": 0.1659
+   "brier_raw": 0.2335,
+   "brier_model": 0.1664,
+   "brier_market": 0.1667
   }
  },
  "by_gate": {
@@ -759,22 +759,22 @@
    "brier_market": 0.126
   },
   "edge": {
-   "w": 8,
-   "l": 6,
-   "n": 14,
-   "pending": 21,
+   "w": 10,
+   "l": 7,
+   "n": 17,
+   "pending": 18,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 8.4,
+   "expected_w": 9.7,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0029,
+   "avg_edge": -0.0026,
    "avg_clv": -0.0314,
    "clv_n": 14,
-   "brier_raw": 0.2634,
-   "brier_model": 0.2399,
-   "brier_market": 0.237
+   "brier_raw": 0.2741,
+   "brier_model": 0.2463,
+   "brier_market": 0.2435
   },
   "rating": {
    "w": 0,
@@ -1213,16 +1213,16 @@
     "elo": 1534.1
    },
    {
+    "name": "Stade Rennais",
+    "elo": 1528.3
+   },
+   {
     "name": "Lille",
     "elo": 1522.7
    },
    {
     "name": "Paris FC",
     "elo": 1521.7
-   },
-   {
-    "name": "Stade Rennais",
-    "elo": 1520.0
    },
    {
     "name": "Lyon",
@@ -1317,6 +1317,10 @@
     "elo": 1510.4
    },
    {
+    "name": "Schalke",
+    "elo": 1502.3
+   },
+   {
     "name": "Stuttgart",
     "elo": 1500.6
    },
@@ -1327,10 +1331,6 @@
    {
     "name": "Leverkusen",
     "elo": 1500.2
-   },
-   {
-    "name": "Leipzig",
-    "elo": 1499.4
    }
   ],
   "mls": [
