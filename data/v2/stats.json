@@ -1,6 +1,6 @@
 {
- "generated_utc": "2026-09-12T13:21Z",
- "picks_logged": 545,
+ "generated_utc": "2026-09-12T21:11Z",
+ "picks_logged": 546,
  "overall": {
   "EDGE": {
    "w": 3,
@@ -21,22 +21,22 @@
    "brier_market": 0.1036
   },
   "LEAN": {
-   "w": 238,
-   "l": 114,
-   "n": 352,
-   "pending": 164,
-   "void": 1,
+   "w": 259,
+   "l": 135,
+   "n": 394,
+   "pending": 121,
+   "void": 3,
    "staked_n": 0,
-   "expected_w": 232.4,
+   "expected_w": 259.7,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0071,
+   "avg_edge": -0.0068,
    "avg_clv": -0.0154,
    "clv_n": 35,
-   "brier_raw": 0.2354,
-   "brier_model": 0.1841,
-   "brier_market": 0.1838
+   "brier_raw": 0.234,
+   "brier_model": 0.1833,
+   "brier_market": 0.1832
   }
  },
  "last_7_days": {
@@ -59,22 +59,22 @@
    "brier_market": 0.1176
   },
   "LEAN": {
-   "w": 208,
-   "l": 101,
-   "n": 309,
-   "pending": 164,
-   "void": 1,
+   "w": 229,
+   "l": 122,
+   "n": 351,
+   "pending": 121,
+   "void": 3,
    "staked_n": 0,
-   "expected_w": 204.1,
+   "expected_w": 231.4,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0065,
+   "avg_edge": -0.0062,
    "avg_clv": -0.0154,
    "clv_n": 35,
-   "brier_raw": 0.2345,
-   "brier_model": 0.1804,
-   "brier_market": 0.1797
+   "brier_raw": 0.2331,
+   "brier_model": 0.1799,
+   "brier_market": 0.1795
   }
  },
  "by_league": {
@@ -136,22 +136,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 5,
-    "l": 5,
-    "n": 10,
-    "pending": 6,
+    "w": 8,
+    "l": 8,
+    "n": 16,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 5.5,
+    "expected_w": 8.8,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0028,
+    "avg_edge": -0.0032,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.2737,
-    "brier_model": 0.2918,
-    "brier_market": 0.2932
+    "brier_raw": 0.2507,
+    "brier_model": 0.2661,
+    "brier_market": 0.2673
    }
   },
   "cpl": {
@@ -212,22 +212,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 3,
-    "l": 7,
-    "n": 10,
-    "pending": 7,
+    "w": 4,
+    "l": 13,
+    "n": 17,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 5.5,
+    "expected_w": 9.4,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0074,
+    "avg_edge": -0.0069,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.1947,
-    "brier_model": 0.2097,
-    "brier_market": 0.2119
+    "brier_raw": 0.2148,
+    "brier_model": 0.2383,
+    "brier_market": 0.2411
    }
   },
   "laliga": {
@@ -289,21 +289,21 @@
    },
    "LEAN": {
     "w": 4,
-    "l": 5,
-    "n": 9,
-    "pending": 5,
+    "l": 10,
+    "n": 14,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 5.0,
+    "expected_w": 6.9,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0068,
+    "avg_edge": -0.0044,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.1897,
-    "brier_model": 0.3041,
-    "brier_market": 0.3106
+    "brier_raw": 0.1779,
+    "brier_model": 0.2504,
+    "brier_market": 0.2547
    }
   },
   "mlb": {
@@ -326,22 +326,22 @@
     "brier_market": 0.162
    },
    "LEAN": {
-    "w": 57,
-    "l": 41,
-    "n": 98,
-    "pending": 15,
+    "w": 59,
+    "l": 42,
+    "n": 101,
+    "pending": 12,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 55.8,
+    "expected_w": 57.6,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0083,
+    "avg_edge": -0.0082,
     "avg_clv": -0.0221,
     "clv_n": 19,
-    "brier_raw": 0.241,
+    "brier_raw": 0.2405,
     "brier_model": 0.2384,
-    "brier_market": 0.2367
+    "brier_market": 0.2371
    }
   },
   "mls": {
@@ -402,22 +402,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 99,
-    "l": 10,
-    "n": 109,
-    "pending": 98,
+    "w": 109,
+    "l": 13,
+    "n": 122,
+    "pending": 85,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 93.1,
+    "expected_w": 103.8,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0017,
+    "avg_edge": -0.0021,
     "avg_clv": -0.0083,
     "clv_n": 3,
-    "brier_raw": 0.2051,
-    "brier_model": 0.0737,
-    "brier_market": 0.0736
+    "brier_raw": 0.2069,
+    "brier_model": 0.0784,
+    "brier_market": 0.0782
    }
   },
   "nfl": {
@@ -479,21 +479,21 @@
    },
    "LEAN": {
     "w": 7,
-    "l": 4,
-    "n": 11,
-    "pending": 3,
+    "l": 6,
+    "n": 13,
+    "pending": 1,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 5.1,
+    "expected_w": 6.1,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0055,
+    "avg_edge": -0.0059,
     "avg_clv": null,
     "clv_n": 0,
-    "brier_raw": 0.312,
-    "brier_model": 0.252,
-    "brier_market": 0.2506
+    "brier_raw": 0.2898,
+    "brier_model": 0.2563,
+    "brier_market": 0.2563
    }
   },
   "ucl": {
@@ -554,22 +554,22 @@
     "brier_market": 0.0371
    },
    "LEAN": {
-    "w": 13,
-    "l": 9,
-    "n": 22,
-    "pending": 17,
-    "void": 0,
+    "w": 18,
+    "l": 10,
+    "n": 28,
+    "pending": 10,
+    "void": 2,
     "staked_n": 0,
-    "expected_w": 15.1,
+    "expected_w": 19.7,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0219,
+    "avg_edge": -0.0172,
     "avg_clv": 0.0,
     "clv_n": 2,
-    "brier_raw": 0.2394,
-    "brier_model": 0.2372,
-    "brier_market": 0.2373
+    "brier_raw": 0.2484,
+    "brier_model": 0.2059,
+    "brier_market": 0.206
    }
   }
  },
@@ -593,22 +593,22 @@
    "brier_market": null
   },
   "neutral": {
-   "w": 150,
-   "l": 86,
-   "n": 236,
-   "pending": 57,
-   "void": 0,
+   "w": 155,
+   "l": 87,
+   "n": 242,
+   "pending": 50,
+   "void": 2,
    "staked_n": 17,
-   "expected_w": 144.8,
+   "expected_w": 149.4,
    "units": -2.87,
    "risked": 3.39,
    "roi": -84.8,
-   "avg_edge": -0.0023,
+   "avg_edge": -0.0022,
    "avg_clv": -0.0251,
    "clv_n": 36,
-   "brier_raw": 0.2361,
-   "brier_model": 0.1775,
-   "brier_market": 0.1748
+   "brier_raw": 0.2372,
+   "brier_model": 0.1754,
+   "brier_market": 0.1728
   },
   "against_pick": {
    "w": 0,
@@ -629,22 +629,22 @@
    "brier_market": null
   },
   "not_researched": {
-   "w": 91,
-   "l": 53,
-   "n": 144,
-   "pending": 107,
+   "w": 107,
+   "l": 73,
+   "n": 180,
+   "pending": 71,
    "void": 1,
    "staked_n": 10,
-   "expected_w": 94.4,
+   "expected_w": 117.1,
    "units": -0.41,
    "risked": 1.61,
    "roi": -25.3,
-   "avg_edge": -0.0023,
+   "avg_edge": -0.0028,
    "avg_clv": null,
    "clv_n": 0,
-   "brier_raw": 0.2308,
-   "brier_model": 0.1833,
-   "brier_market": 0.1828
+   "brier_raw": 0.2271,
+   "brier_model": 0.1848,
+   "brier_market": 0.1848
   },
   "flagged": {
    "w": 6,
@@ -686,57 +686,57 @@
   },
   "model_likes_our_side (0.02<d<=0.10)": {
    "w": 16,
-   "l": 17,
-   "n": 33,
+   "l": 21,
+   "n": 37,
    "pending": 0,
    "void": 0,
    "staked_n": 2,
-   "expected_w": 15.6,
+   "expected_w": 17.1,
    "units": 0.12,
    "risked": 0.32,
    "roi": 36.9,
-   "avg_edge": 0.0154,
+   "avg_edge": 0.0141,
    "avg_clv": -0.014,
    "clv_n": 5,
-   "brier_raw": 0.2672,
-   "brier_model": 0.2703,
-   "brier_market": 0.2691
+   "brier_raw": 0.2587,
+   "brier_model": 0.257,
+   "brier_market": 0.2557
   },
   "agrees (|d|<=0.02)": {
-   "w": 29,
-   "l": 19,
-   "n": 48,
+   "w": 32,
+   "l": 23,
+   "n": 55,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 26.7,
+   "expected_w": 30.2,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0001,
+   "avg_edge": 0.0,
    "avg_clv": -0.0533,
    "clv_n": 6,
-   "brier_raw": 0.2267,
-   "brier_model": 0.2258,
-   "brier_market": 0.2256
+   "brier_raw": 0.2269,
+   "brier_model": 0.2273,
+   "brier_market": 0.2274
   },
   "model_dislikes_our_side (d<-0.02)": {
-   "w": 192,
-   "l": 75,
-   "n": 267,
+   "w": 210,
+   "l": 88,
+   "n": 298,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 188.4,
+   "expected_w": 210.6,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0114,
+   "avg_edge": -0.0109,
    "avg_clv": -0.0054,
    "clv_n": 23,
-   "brier_raw": 0.2335,
+   "brier_raw": 0.2326,
    "brier_model": 0.1662,
-   "brier_market": 0.166
+   "brier_market": 0.1663
   }
  },
  "by_gate": {
@@ -759,22 +759,22 @@
    "brier_market": 0.1008
   },
   "edge": {
-   "w": 24,
-   "l": 11,
-   "n": 35,
-   "pending": 163,
-   "void": 0,
+   "w": 45,
+   "l": 32,
+   "n": 77,
+   "pending": 120,
+   "void": 2,
    "staked_n": 0,
-   "expected_w": 21.1,
+   "expected_w": 48.4,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0045,
+   "avg_edge": -0.0043,
    "avg_clv": -0.0165,
    "clv_n": 31,
-   "brier_raw": 0.245,
-   "brier_model": 0.2132,
-   "brier_market": 0.212
+   "brier_raw": 0.2326,
+   "brier_model": 0.1931,
+   "brier_market": 0.1937
   },
   "rating": {
    "w": 2,
@@ -1065,20 +1065,20 @@
     "elo": 1524.1
    },
    {
+    "name": "Penn St.",
+    "elo": 1524.0
+   },
+   {
+    "name": "South Florida",
+    "elo": 1524.0
+   },
+   {
     "name": "South Carolina St.",
     "elo": 1524.0
    },
    {
     "name": "Illinois St.",
     "elo": 1524.0
-   },
-   {
-    "name": "William & Mary",
-    "elo": 1523.9
-   },
-   {
-    "name": "Montana St.",
-    "elo": 1523.9
    }
   ],
   "mlb": [
@@ -1096,7 +1096,7 @@
    },
    {
     "name": "New York Y",
-    "elo": 1542.4
+    "elo": 1536.7
    },
    {
     "name": "Arizona",
@@ -1115,18 +1115,18 @@
     "elo": 1532.8
    },
    {
-    "name": "Philadelphia",
-    "elo": 1523.7
+    "name": "New York M",
+    "elo": 1526.2
    },
    {
-    "name": "Toronto",
-    "elo": 1521.4
+    "name": "Philadelphia",
+    "elo": 1523.7
    }
   ],
   "epl": [
    {
     "name": "Arsenal",
-    "elo": 1530.7
+    "elo": 1542.5
    },
    {
     "name": "Manchester City",
@@ -1134,35 +1134,35 @@
    },
    {
     "name": "Hull City",
-    "elo": 1518.4
-   },
-   {
-    "name": "Chelsea",
-    "elo": 1512.6
+    "elo": 1520.0
    },
    {
     "name": "Leeds United",
     "elo": 1512.3
    },
    {
-    "name": "Liverpool",
-    "elo": 1512.3
+    "name": "Chelsea",
+    "elo": 1511.1
    },
    {
     "name": "Brentford",
-    "elo": 1509.0
+    "elo": 1510.2
+   },
+   {
+    "name": "Nottingham Forest",
+    "elo": 1509.8
    },
    {
     "name": "Everton",
-    "elo": 1508.4
+    "elo": 1509.3
+   },
+   {
+    "name": "Liverpool",
+    "elo": 1509.1
    },
    {
     "name": "Newcastle",
     "elo": 1508.4
-   },
-   {
-    "name": "Manchester United",
-    "elo": 1502.6
    }
   ],
   "laliga": [
@@ -1171,8 +1171,8 @@
     "elo": 1540.7
    },
    {
-    "name": "Alaves",
-    "elo": 1528.8
+    "name": "Real Madrid",
+    "elo": 1528.4
    },
    {
     "name": "Real Betis",
@@ -1183,16 +1183,12 @@
     "elo": 1520.9
    },
    {
-    "name": "Real Madrid",
-    "elo": 1520.0
+    "name": "Alaves",
+    "elo": 1518.2
    },
    {
     "name": "Sevilla",
     "elo": 1517.5
-   },
-   {
-    "name": "Osasuna",
-    "elo": 1510.5
    },
    {
     "name": "Atletico",
@@ -1203,14 +1199,18 @@
     "elo": 1504.0
    },
    {
+    "name": "Real Sociedad",
+    "elo": 1502.0
+   },
+   {
     "name": "Bilbao",
-    "elo": 1502.2
+    "elo": 1499.5
    }
   ],
   "ligue1": [
    {
     "name": "Monaco",
-    "elo": 1534.1
+    "elo": 1535.1
    },
    {
     "name": "Stade Rennais",
@@ -1221,28 +1221,28 @@
     "elo": 1522.7
    },
    {
-    "name": "Paris FC",
-    "elo": 1521.7
+    "name": "Lyon",
+    "elo": 1520.3
    },
    {
-    "name": "Lyon",
-    "elo": 1518.5
+    "name": "Paris FC",
+    "elo": 1519.8
    },
    {
     "name": "Strasbourg Alsace",
-    "elo": 1513.6
+    "elo": 1512.5
    },
    {
     "name": "Stade Brest 29",
     "elo": 1512.0
    },
    {
-    "name": "Lorient",
-    "elo": 1501.9
-   },
-   {
     "name": "Paris",
     "elo": 1501.7
+   },
+   {
+    "name": "Lorient",
+    "elo": 1499.5
    },
    {
     "name": "Troyes",
@@ -1252,7 +1252,7 @@
   "seriea": [
    {
     "name": "Lazio",
-    "elo": 1533.6
+    "elo": 1531.6
    },
    {
     "name": "Roma",
@@ -1268,69 +1268,69 @@
    },
    {
     "name": "Milan",
-    "elo": 1523.0
+    "elo": 1525.0
+   },
+   {
+    "name": "Cagliari",
+    "elo": 1521.9
    },
    {
     "name": "Juventus",
     "elo": 1519.5
    },
    {
-    "name": "Cagliari",
-    "elo": 1509.2
-   },
-   {
-    "name": "Atalanta",
-    "elo": 1508.7
-   },
-   {
     "name": "Frosinone",
-    "elo": 1508.7
+    "elo": 1509.2
    },
    {
     "name": "Sassuolo",
     "elo": 1501.0
+   },
+   {
+    "name": "Udinese",
+    "elo": 1498.4
    }
   ],
   "bundesliga": [
    {
     "name": "Freiburg",
-    "elo": 1521.8
+    "elo": 1529.7
    },
    {
-    "name": "Augsburg",
-    "elo": 1521.8
+    "name": "Dortmund",
+    "elo": 1529.7
    },
    {
     "name": "Elversberg",
     "elo": 1521.4
    },
    {
-    "name": "Dortmund",
-    "elo": 1521.4
-   },
-   {
-    "name": "Mainz",
-    "elo": 1510.8
+    "name": "Augsburg",
+    "elo": 1519.4
    },
    {
     "name": "Bayern Munich",
     "elo": 1510.4
    },
    {
+    "name": "Leverkusen",
+    "elo": 1502.6
+   },
+   {
+    "name": "Frankfurt",
+    "elo": 1502.6
+   },
+   {
     "name": "Schalke",
     "elo": 1502.3
    },
    {
-    "name": "Stuttgart",
-    "elo": 1500.6
-   },
-   {
     "name": "Bremen",
-    "elo": 1500.6
+    "elo": 1502.3
    },
    {
-    "name": "Leverkusen",
-    "elo": 1500.2
+    "name": "Leipzig",
+    "elo": 1499.4
    }
   ],
   "mls": [
