@@ -419,11 +419,105 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
         "scope": scope,
         "tickets": ladder(scope_legs(legs, scope)),
         "calibration_note": CALIBRATION_NOTE,
+        "backtest_note": backtest_note(),
     }
 
 
 # ---------------------------------------------------------------- presentation
 TEMPLATE = os.path.join(HERE, "webapp", "parlay.html")
+
+
+def _png(size, bg, fg, lace=(255, 248, 236)):
+    """A square PNG, written by hand so the app needs no image library.
+
+    An ellipse reads as a blob, so the ball is a lens - |y| <= h(1-(x/a)^2)^0.8 -
+    which comes to a point at both tips the way a football does, with laces across
+    it. Supersampled 2x2 because hard pixel edges at 192px look like a mistake.
+    """
+    import struct
+    import zlib
+
+    cx = cy = (size - 1) / 2.0
+    a, h = size * 0.36, size * 0.225
+    cos, sin = 0.9063, 0.4226                       # 25 degrees, thrown-pass tilt
+    lace_len, lace_w, tick_n, tick_h = a * 0.40, size * 0.026, 4, size * 0.075
+
+    def sample(px, py):
+        dx, dy = px - cx, py - cy
+        x = cos * dx + sin * dy                     # into the ball's own frame
+        y = -sin * dx + cos * dy
+        t = 1.0 - (x / a) ** 2
+        if t <= 0 or abs(y) > h * (t ** 0.8):
+            return bg
+        if abs(y) <= lace_w and abs(x) <= lace_len:
+            return lace                             # the long seam
+        step = lace_len * 2 / (tick_n + 1)
+        for i in range(tick_n):
+            if abs(x - (-lace_len + step * (i + 1))) <= lace_w and abs(y) <= tick_h:
+                return lace                         # a cross stitch
+        return fg
+
+    rows = bytearray()
+    for py in range(size):
+        rows.append(0)                              # PNG filter byte: none
+        for px in range(size):
+            r = g = b = 0
+            for oy in (0.25, 0.75):
+                for ox in (0.25, 0.75):
+                    c = sample(px + ox, py + oy)
+                    r += c[0]; g += c[1]; b += c[2]
+            rows += bytes((r // 4, g // 4, b // 4))
+
+    def chunk(tag, data):
+        return (struct.pack(">I", len(data)) + tag + data
+                + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF))
+
+    return (b"\x89PNG\r\n\x1a\n"
+            + chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 2, 0, 0, 0))
+            + chunk(b"IDAT", zlib.compress(bytes(rows), 9))
+            + chunk(b"IEND", b""))
+
+
+def write_pwa(outdir, name="Gridiron Ticket", short="Ticket"):
+    """Manifest and icons, so the page installs to a phone home screen as an app."""
+    os.makedirs(outdir, exist_ok=True)
+    bg, fg = (12, 18, 22), (242, 169, 59)
+    for px in (192, 512):
+        with open(os.path.join(outdir, f"icon-{px}.png"), "wb") as f:
+            f.write(_png(px, bg, fg))
+    manifest = {
+        "name": name, "short_name": short,
+        "description": "Kalshi parlays built to a target win chance",
+        "start_url": "./", "scope": "./", "display": "standalone",
+        "orientation": "portrait", "background_color": "#0C1216", "theme_color": "#0C1216",
+        "icons": [{"src": f"icon-{px}.png", "sizes": f"{px}x{px}", "type": "image/png",
+                   "purpose": "any maskable"} for px in (192, 512)],
+    }
+    with open(os.path.join(outdir, "manifest.webmanifest"), "w") as f:
+        json.dump(manifest, f, indent=1)
+    return ["manifest.webmanifest", "icon-192.png", "icon-512.png"]
+
+
+def backtest_note(path=None):
+    """One line about how whole TICKETS have actually done, for the app's Why tab.
+
+    Leg-level calibration and ticket-level results are different claims, and the
+    app showed only the first. Reading the real backtest keeps the second honest
+    instead of frozen in a hand-written sentence.
+    """
+    path = path or os.path.join(HERE, "data", "v2", "backtest.json")
+    try:
+        with open(path) as f:
+            d = json.load(f)
+        s = d["summary"]
+    except (OSError, ValueError, KeyError):
+        return ""
+    return (f"Replayed on the board as it stood {d['cutoff_utc'][:10]}, {s['n']} different tickets "
+            f"went {s['won']}/{s['n']} against prices that implied {s['expected_won']:.1f} - so the "
+            f"prices were about right and the spread took {abs(s['roi'])*100:.0f}%. "
+            + (f"One game, {s['worst_killer']['pick']}, killed {s['worst_killer']['tickets']} of them, "
+               if s.get("worst_killer") else "")
+            + "which is the real lesson: these tickets share legs, so one upset takes down most of them.")
 
 
 def render_html(snap, template=TEMPLATE):
@@ -500,7 +594,7 @@ def _cli(argv=None):
         snap = {"generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                 "days": a.days, "board": board_summary([]), "legs": [], "presets": PRESETS,
                 "scopes": [], "scope": a.scope, "tickets": [],
-                "calibration_note": CALIBRATION_NOTE}
+                "calibration_note": CALIBRATION_NOTE, "backtest_note": backtest_note()}
     else:
         if a.no_research:
             cfg = dict(cfg, research=dict(cfg.get("research") or {}, mode="off"))
@@ -523,10 +617,12 @@ def _cli(argv=None):
             json.dump(snap, f, separators=(",", ":"))
         print(f"[parlay] wrote {a.json}")
     if a.html:
-        os.makedirs(os.path.dirname(os.path.abspath(a.html)), exist_ok=True)
+        outdir = os.path.dirname(os.path.abspath(a.html))
+        os.makedirs(outdir, exist_ok=True)
         with open(a.html, "w", encoding="utf-8") as f:
             f.write(render_html(snap))
-        print(f"[parlay] wrote {a.html}")
+        extra = write_pwa(outdir)
+        print(f"[parlay] wrote {a.html} (+ {', '.join(extra)})")
     if a.discord:
         import notify
         notify.post("\n".join(discord_lines(snap, a.url)))
