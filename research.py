@@ -41,10 +41,10 @@ DEFAULTS = {
 # headline actually names the competitor, see _mentions)
 WATCH = re.compile(r"\b(injur\w+|ruled out|out for|out of the|sits? out|sidelined|doubtful|questionable|"
                    r"will miss|misses|missing|lineup|starting lineup|starter|scratch\w*|withdraw\w*|"
-                   r"retire[sd]?\b|pulls? out|suspend\w*|banned|illness|concussion|surgery|"
+                   r"retire[sd]?\b|pulls? out of|suspend\w*|banned|illness|concussion|surgery|"
                    r"\bIL\b|injured list|day-to-day|benched|fatigue|fitness|return[s]? (from|to))", re.I)
 STRONG = re.compile(r"\b(ruled out|out for (the )?(season|year|match|game|week)|will miss|withdraws?|withdrawn|"
-                    r"pulls? out|retires?\b|suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
+                    r"pulls? out of|retires?\b|suspended|placed on (the )?(10|15|60)-day IL|season-ending|scratched)\b", re.I)
 # betting previews / listings: shown only if they also carry an injury or lineup word
 NOISE = re.compile(r"\b(prediction|predictions|odds|betting|best bets?|picks?|h2h|head-to-head|preview|"
                    r"how to watch|live stream\w*|tips|highlights|welcomes|things you didn'?t know)\b", re.I)
@@ -162,6 +162,34 @@ def _mentions(keys, title):
     return any(k in t for k in keys)
 
 
+def _first_at(keys, title):
+    """Where the competitor is first named, or None."""
+    t = title.lower()
+    hits = [t.index(k) for k in keys if k in t]
+    return min(hits) if hits else None
+
+
+def _attributable(keys, other_keys, title):
+    """Is this injury headline definitely about OUR side?
+
+    A red flag removes the leg from every ticket, so it has to be right more than
+    it has to be sensitive. Two ways a headline lies about whose injury it is:
+
+      "SMU's Ahmaad Moses expected to be out for Week 2 vs. UC Davis"
+          - our team is named, but only as the opponent, AFTER the injury phrase.
+      "Washington Huskies vs. Utah State recap"
+          - both sides named, so the subject is genuinely unknowable.
+
+    Requiring our name to lead the headline catches the first; requiring the other
+    side to be absent catches the second. Anything that fails becomes a note.
+    """
+    if _mentions(other_keys, title):
+        return False
+    m = STRONG.search(title)
+    at = _first_at(keys, title)
+    return at is not None and m is not None and at < m.start()
+
+
 def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None):
     days, n = int(_cfg["headlines_days"]), int(_cfg["headlines_max"])
     aliases = aliases or {}
@@ -198,12 +226,10 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None)
         for i in hits[:2]:
             health[role].append(i["title"])
             if role == "pick" and STRONG.search(i["title"]):
-                # Both teams named: the headline could be about either one, and a
-                # false flag silently drops a good pick. Surface it, don't act on it.
-                if _mentions(other, i["title"]):
-                    ambiguous.append(i["title"])
-                else:
+                if _attributable(keys, other, i["title"]):
                     flags.append(i["title"])
+                else:
+                    ambiguous.append(i["title"])
         for i in (hits + [i for i in items if i not in hits])[:n]:
             picked.append({"side": name, "title": i["title"], "source": i["source"],
                            "date": i["when"].strftime("%b %d") if i["when"] else "",

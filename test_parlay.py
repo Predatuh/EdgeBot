@@ -238,9 +238,9 @@ check("empty board says so rather than inventing a ticket",
       any("too thin" in l for l in empty_card))
 
 # ---------------------------------------------------------------- injury attribution
-# A red flag drops the leg from every ticket, so a misattributed one silently
-# costs you a good favourite. Team names collide by substring, which is exactly
-# how the first live run flagged UC Davis for an SMU injury.
+# A red flag drops the leg from every ticket, so it has to be right more than it
+# has to be sensitive. Every headline below is one the first two live runs really
+# produced, and four of the six were flagging the wrong thing.
 print("\ninjury attribution")
 import datetime as _dt
 import research
@@ -248,35 +248,54 @@ import research
 _NOW = _dt.datetime.now(_dt.timezone.utc)
 
 
-def with_headlines(titles):
+def brief_for(pick, opp, titles):
     research.configure({})
     research._fetch_rss = lambda q, days: [
         {"title": t, "source": "Test Wire", "when": _NOW} for t in titles]
-    return research
-
-
-def brief_for(pick, opp, titles):
-    with_headlines(titles)
     return research._headlines("2026-09-13", "College Football",
                                f"{pick} vs {opp}", pick, opp, "football") or {}
 
 
-b = brief_for("Oklahoma", "Murray St.",
-              ["No. 11 Oklahoma LB Kip Lewis will miss some time with knee injury"])
-check("an injury naming only our pick is a red flag", b.get("red_flags"), str(b.get("red_flags")))
+def flags_on(pick, opp, title):
+    return bool(brief_for(pick, opp, [title]).get("red_flags"))
 
-b = brief_for("UC Davis", "SMU",
-              ["SMU's Ahmaad Moses expected to be out for Week 2 vs. UC Davis"])
-check("an injury to the OPPONENT is not a flag against us", not b.get("red_flags"),
-      str(b.get("red_flags")))
-check("...it is surfaced as unattributed instead", b.get("unattributed"), str(b))
 
-b = brief_for("Utah", "Utah St.",
-              ["Washington Huskies vs. Utah State recap: UW pulls out uninspiring win"])
-check("a headline naming both sides never becomes a flag", not b.get("red_flags"))
+def noted_on(pick, opp, title):
+    b = brief_for(pick, opp, [title])
+    return bool(b.get("unattributed")) and not b.get("red_flags")
 
-b = brief_for("Iowa", "Northern Iowa", ["Completely unrelated wire story about golf"])
-check("a headline about neither team is dropped entirely", not b)
+
+# "pulls out a win" is the opposite of pulling out. This idiom alone produced two
+# of the four bad flags, because the pattern was `pulls? out` with nothing after.
+IDIOM = "No. 17 Washington struggles on offense but pulls out 24-10 Apple Cup win over Washington State"
+check("winning a game is not an injury", not research.STRONG.search(IDIOM), repr(IDIOM[-40:]))
+check("...nor is it worth a flag", not flags_on("Washington St.", "Duquesne", IDIOM))
+check("withdrawing still is",
+      bool(research.STRONG.search("Alcaraz pulls out of the Shanghai Masters")))
+
+# Our team named only as the OPPONENT, after the injury phrase: the player is SMU's.
+SMU = "SMU's Ahmaad Moses Expected to Be Out for Week 2 vs. UC Davis"
+check("someone else's injury does not flag our leg", not flags_on("UC Davis", "Stetson", SMU))
+check("...it is surfaced as unattributable instead", noted_on("UC Davis", "Stetson", SMU))
+
+# Both sides named: genuinely unknowable, so it cannot be acted on.
+RECAP = "Washington Huskies vs. Utah State recap: UW pulls out uninspiring win"
+check("a headline naming both sides never flags", not flags_on("Utah", "Utah St.", RECAP))
+
+# The true positives have to survive all of that.
+REAL = "No. 11 Oklahoma LB Kip Lewis leaves Michigan game and will miss some time with knee injury"
+check("a real injury led by our team still flags", flags_on("Oklahoma", "New Mexico", REAL))
+check("so does the plainest possible one",
+      flags_on("Alabama", "Wisconsin", "Alabama QB ruled out for the season with torn ACL"))
+
+# Known cost of the leading-name rule: a real injury written subject-first is
+# demoted to a note. Shown, not acted on - the safe direction to be wrong in.
+DEPTH = "How Ryan Estrada's season-ending injury impacts Minnesota's running back depth"
+check("an injury written player-first is demoted, not dropped",
+      noted_on("Minnesota", "Akron", DEPTH))
+
+check("a headline about neither team is dropped entirely",
+      not brief_for("Iowa", "Northern Iowa", ["Completely unrelated wire story about golf"]))
 
 # ---------------------------------------------------------------- config wiring
 print("\nconfig wiring")
