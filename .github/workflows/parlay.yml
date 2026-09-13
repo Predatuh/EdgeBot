@@ -1,4 +1,4 @@
-name: Football Parlays
+name: Parlays
 
 on:
   # Dispatch only finds a workflow that exists on the default branch, so while this
@@ -17,8 +17,13 @@ on:
   workflow_dispatch:
     inputs:
       days:
-        description: "How many days of football to pull"
+        description: "How many days of games to pull"
         default: "8"
+      scope:
+        description: "Which board the Discord card shows (the page carries them all)"
+        default: "football"
+        type: choice
+        options: [football, nfl, ncaaf, soccer, tennis, mlb, cricket, all]
       post:
         description: "Post the card to Discord"
         type: boolean
@@ -54,6 +59,7 @@ jobs:
         run: |
           python parlay.py \
             --days "${{ inputs.days || 8 }}" \
+            --scope "${{ inputs.scope || 'football' }}" \
             --json data/v2/parlay.json \
             --html docs/index.html \
             --url "${{ vars.PARLAY_URL || format('https://{0}.github.io/{1}/', github.repository_owner, 'EdgeBot') }}" \

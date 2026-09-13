@@ -74,20 +74,41 @@ def _devig(a, b):
     return (a / s, b / s) if s > 0 else (None, None)
 
 
+def _normalise(sides):
+    """Every priced outcome, scaled to sum to 1.
+
+    This is the whole reason non-football sports needed care. Soccer and Test
+    cricket price three outcomes, and a DRAW LOSES a win contract. De-vigging
+    just the two teams would report P(win | no draw) - for a tight league match
+    that reads 55c when the contract is really worth 40c. Dividing by the full
+    book, draw included, is what makes a soccer leg comparable to an NFL leg.
+    """
+    priced = [s for s in sides if s.get("prob") is not None]
+    total = sum(s["prob"] for s in priced)
+    if len(priced) < 2 or total <= 0:
+        return None, False
+    return {id(s): s["prob"] / total for s in priced}, any(s["is_tie"] for s in priced)
+
+
 def legs_from_events(evs, league, label):
-    """One candidate leg per side of every two-way game with a usable market."""
+    """One candidate leg per side that can actually win the market.
+
+    Two-way sports give two legs a game. Three-way sports give two as well - the
+    draw is priced into both, but is never itself a leg, because nobody builds a
+    parlay out of draws and the tier language ("Lock") would be a lie on one.
+    """
     out = []
     for ev in evs:
-        sides = [s for s in kalshi.match_sides(ev) if not s["is_tie"]]
-        if len(sides) != 2:
+        sides = kalshi.match_sides(ev)
+        probs, has_draw = _normalise(sides)
+        if probs is None:
             continue
-        a, b = sides
-        if a["prob"] is None or b["prob"] is None or not a["ask"] or not b["ask"]:
+        picks = [s for s in sides if not s["is_tie"] and s.get("prob") is not None]
+        if len(picks) != 2:
             continue
-        pa, pb = _devig(a["prob"], b["prob"])
-        if pa is None:
-            continue
-        for side, opp, p in ((a, b, pa), (b, a, pb)):
+        a, b = picks
+        for side, opp in ((a, b), (b, a)):
+            p = probs[id(side)]
             ask, bid = side["ask"], side.get("bid")
             if not ask or not (0 < ask < 1):
                 continue
@@ -100,6 +121,7 @@ def legs_from_events(evs, league, label):
                 "event_id": ev["event"], "ticker": side["ticker"],
                 "game": f"{a['name']} vs {b['name']}",
                 "pick": side["name"], "opp": opp["name"],
+                "draw": has_draw,                 # a tie loses this leg
                 "home": bool(side.get("home")),
                 "p": round(p, 4),                 # de-vigged true probability
                 "ask": round(ask, 4),             # what you pay
@@ -205,7 +227,35 @@ def board_summary(legs):
         by_tier[l["tier"]] = by_tier.get(l["tier"], 0) + 1
         by_league[l["league_label"]] = by_league.get(l["league_label"], 0) + 1
     return {"legs": len(legs), "games": len({l["event_id"] for l in legs}),
+            "draws": sum(1 for l in legs if l.get("draw")),
             "by_tier": by_tier, "by_league": by_league}
+
+
+def scope_of(key):
+    for sc in SCOPES:
+        if sc["key"] == key:
+            return sc
+    return SCOPES[-1]
+
+
+def scope_legs(legs, key):
+    sc = scope_of(key)
+    if not sc["leagues"]:
+        return list(legs)
+    keep = set(sc["leagues"])
+    return [l for l in legs if l["league"] in keep]
+
+
+def live_scopes(legs):
+    """Only the scopes the board can actually fill, so the picker never offers a
+    tab that opens on nothing. 'Everything' is kept whenever anything is on."""
+    have = {l["league"] for l in legs}
+    out = []
+    for sc in SCOPES:
+        n = len(legs) if not sc["leagues"] else sum(1 for l in legs if l["league"] in sc["leagues"])
+        if n and (sc["leagues"] is None or set(sc["leagues"]) & have):
+            out.append(dict(sc, legs=n, games=len({l["event_id"] for l in scope_legs(legs, sc["key"])})))
+    return out
 
 
 # ---------------------------------------------------------------- data + output
@@ -230,7 +280,7 @@ def load_config():
 
 
 def league_spec(cfg, key):
-    """FOOTBALL's entry for `key`, overlaid with config.yaml's if it has one."""
+    """config.yaml's entry for `key`, or parlay's own football table, or both."""
     spec = dict(FOOTBALL.get(key) or {})
     lg = (cfg.get("leagues") or {}).get(key) or {}
     for f in ("ticker", "label", "ticker_order"):
@@ -243,8 +293,39 @@ def league_spec(cfg, key):
     return spec
 
 
+# Scopes are what the picker offers as one tap. They are pure league filters over a
+# single fetch, so switching between them on the phone costs nothing and works offline.
+SCOPES = [
+    {"key": "football", "label": "Football",  "emoji": "🏈", "leagues": ["nfl", "ncaaf", "cfl"]},
+    {"key": "nfl",      "label": "NFL",       "emoji": "🏆", "leagues": ["nfl"]},
+    {"key": "ncaaf",    "label": "College",   "emoji": "🎓", "leagues": ["ncaaf"]},
+    {"key": "soccer",   "label": "Soccer",    "emoji": "⚽", "leagues": ["epl", "laliga", "ligue1",
+                                                                        "seriea", "bundesliga",
+                                                                        "mls", "ucl"]},
+    {"key": "tennis",   "label": "Tennis",    "emoji": "🎾", "leagues": ["atp", "wta", "challenger"]},
+    {"key": "mlb",      "label": "Baseball",  "emoji": "⚾", "leagues": ["mlb"]},
+    {"key": "cricket",  "label": "Cricket",   "emoji": "🏏", "leagues": ["cricket_t20i", "cricket_odi",
+                                                                        "cricket_test", "cpl"]},
+    {"key": "all",      "label": "Everything", "emoji": "🌐", "leagues": None},   # None = no filter
+]
+
+
+def all_leagues(cfg):
+    """Every league worth pulling a board from: config.yaml's, plus parlay's own
+    football table for anything config does not carry (CFL).
+
+    `enabled: false` in config is about what the bot RATES, not what a market
+    exists for - and this tool never uses a rating - so a disabled league is still
+    offered here. `stake: false` likewise: it is a warning about our model, and
+    there is no model in a parlay.
+    """
+    keys = list((cfg.get("leagues") or {}).keys())
+    keys += [k for k in FOOTBALL if k not in keys]
+    return keys
+
+
 def fetch(cfg, days=8, leagues=None):
-    """Every football leg on the board over the next `days` days.
+    """Every leg on the board over the next `days` days.
 
     NCAAF is a weekly sport, so a same-day-only view would be empty most of the week;
     the window is what makes this usable on a Tuesday.
@@ -252,7 +333,7 @@ def fetch(cfg, days=8, leagues=None):
     today = dt.date.today()
     horizon = {(today + dt.timedelta(days=n)).isoformat() for n in range(days)}
     legs = []
-    for key in (leagues or list(FOOTBALL)):
+    for key in (leagues or all_leagues(cfg)):
         spec = league_spec(cfg, key)
         if not spec:
             continue
@@ -267,6 +348,12 @@ def fetch(cfg, days=8, leagues=None):
         print(f"[parlay] {key}: {len(evs)} games in the next {days}d -> {len(got)} legs")
         legs += got
     return legs
+
+
+SPORT_HINT = {"nfl": "football", "ncaaf": "football", "cfl": "football",
+              "mlb": "baseball", "atp": "tennis", "wta": "tennis", "challenger": "tennis",
+              "cricket_t20i": "cricket", "cricket_odi": "cricket",
+              "cricket_test": "cricket", "cpl": "cricket"}
 
 
 def add_research(legs, cfg, min_p=0.80, cap=40):
@@ -286,7 +373,8 @@ def add_research(legs, cfg, min_p=0.80, cap=40):
         try:
             brief = research.lookup(os.path.join(HERE, "data", "v2"), date,
                                     l["league_label"], l["game"], l["pick"], l["opp"],
-                                    l["ask"], [], sport_hint="football")
+                                    l["ask"], [],
+                                    sport_hint=SPORT_HINT.get(l["league"], "soccer"))
         except Exception as e:
             print(f"[parlay] research {l['pick']}: {type(e).__name__}")
             continue
@@ -305,22 +393,31 @@ def add_research(legs, cfg, min_p=0.80, cap=40):
     return done
 
 
-def snapshot(cfg=None, days=8):
-    """Everything the phone app needs, as one JSON blob."""
+def snapshot(cfg=None, days=8, scope="football", leagues=None):
+    """Everything the phone app needs, as one JSON blob.
+
+    Every league is fetched once and the scopes are filters over that one board, so
+    switching from NFL to Everything on the phone is instant and works with no signal.
+    """
     cfg = cfg or load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
-    legs = fetch(cfg, days)
+    legs = fetch(cfg, days, leagues)
     n = add_research(legs, cfg)
     flagged = sum(1 for l in legs if l["flags"])
     print(f"[parlay] researched {n} legs, {flagged} carry a red flag")
     legs.sort(key=lambda l: -l["p"])
+    scopes = live_scopes(legs)
+    if not any(sc["key"] == scope for sc in scopes):
+        scope = scopes[-1]["key"] if scopes else "all"
     return {
         "generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "days": days,
         "board": board_summary(legs),
         "legs": legs,
         "presets": PRESETS,
-        "tickets": ladder(legs),
+        "scopes": scopes,
+        "scope": scope,
+        "tickets": ladder(scope_legs(legs, scope)),
         "calibration_note": CALIBRATION_NOTE,
     }
 
@@ -347,8 +444,15 @@ def render_html(snap, template=TEMPLATE):
 def discord_lines(snap, url=""):
     """The daily parlay card. One line per ticket, then the legs of the safest one."""
     b = snap["board"]
-    out = [f"**🏈 Football parlay board** — {b['games']} games, {b['legs']} legs, "
-           f"next {snap['days']} days"]
+    sc = scope_of(snap.get("scope", "football"))
+    shown = next((x for x in snap.get("scopes", []) if x["key"] == sc["key"]), None)
+    head = (f"{shown['games']} games, {shown['legs']} legs" if shown
+            else f"{b['games']} games, {b['legs']} legs")
+    out = [f"**{sc['emoji']} {sc['label']} parlay board** — {head}, next {snap['days']} days"]
+    others = [x for x in snap.get("scopes", []) if x["key"] != sc["key"]]
+    if others:
+        out.append("_also on the board: " +
+                   ", ".join(f"{x['label']} {x['games']}" for x in others) + "_")
     if not snap["tickets"]:
         out.append("_No ticket clears the floors today — the board is too thin._")
         return out
@@ -362,8 +466,9 @@ def discord_lines(snap, url=""):
     out.append(f"**{top['label']} legs** (weakest {top['weakest_leg']*100:.0f}c):")
     for l in sorted(top["legs"], key=lambda x: -x["p"]):
         flag = f"  ⚠ {l['flags'][0][:60]}" if l["flags"] else ""
+        draw = " · draw loses" if l.get("draw") else ""
         out.append(f"{l['emoji']} {l['pick']} vs {l['opp']} — {l['p']*100:.0f}c "
-                   f"(pay {l['ask']*100:.0f}c) · {l['league_label']}{flag}")
+                   f"(pay {l['ask']*100:.0f}c) · {l['league_label']}{draw}{flag}")
     out.append("")
     out.append("_A parlay's win chance is 1 / its payout. Extra legs buy payout, not edge — "
                "every one of them crosses another spread._")
@@ -376,7 +481,11 @@ def _cli(argv=None):
     import argparse
     ap = argparse.ArgumentParser(description="Football-only Kalshi parlay builder")
     ap.add_argument("--days", type=int, default=8, help="how far ahead to pull games")
-    ap.add_argument("--leagues", default="", help="comma-separated subset, e.g. nfl,ncaaf")
+    ap.add_argument("--scope", default="football",
+                    choices=[sc["key"] for sc in SCOPES],
+                    help="which board the printed ladder and the Discord card use "
+                         "(the page carries them all either way)")
+    ap.add_argument("--leagues", default="", help="only fetch these, e.g. nfl,ncaaf")
     ap.add_argument("--no-research", action="store_true", help="skip the injury/lineup scan")
     ap.add_argument("--json", default="", help="write the snapshot here")
     ap.add_argument("--html", default="", help="write the phone app here")
@@ -390,20 +499,17 @@ def _cli(argv=None):
     if a.offline:
         snap = {"generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                 "days": a.days, "board": board_summary([]), "legs": [], "presets": PRESETS,
-                "tickets": [], "calibration_note": CALIBRATION_NOTE}
+                "scopes": [], "scope": a.scope, "tickets": [],
+                "calibration_note": CALIBRATION_NOTE}
     else:
         if a.no_research:
             cfg = dict(cfg, research=dict(cfg.get("research") or {}, mode="off"))
         leagues = [s.strip() for s in a.leagues.split(",") if s.strip()] or None
-        kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
-        legs = fetch(cfg, a.days, leagues)
-        add_research(legs, cfg)
-        legs.sort(key=lambda l: -l["p"])
-        snap = {"generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
-                "days": a.days, "board": board_summary(legs), "legs": legs,
-                "presets": PRESETS, "tickets": ladder(legs),
-                "calibration_note": CALIBRATION_NOTE}
+        snap = snapshot(cfg, a.days, a.scope, leagues)
 
+    for sc in snap.get("scopes", []):
+        print(f"[parlay] {sc['emoji']} {sc['label']:<11} {sc['games']:>4} games  {sc['legs']:>4} legs")
+    print(f"[parlay] ladder below is the '{snap.get('scope')}' board")
     for t in snap["tickets"]:
         print(f"{t['emoji']} {t['label']:<9} {t['n']:>2} legs  win {t['win_prob']*100:6.2f}%  "
               f"pays {t['multiple']:7.2f}x  ev {t['ev']*100:+6.2f}%  weakest "

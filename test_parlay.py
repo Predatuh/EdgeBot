@@ -71,13 +71,30 @@ check("favourite's p is below its raw mid (vig removed)",
 check("ask is preserved as the price you pay", legs[0]["ask"] == 0.92)
 check("spread is recorded", near(legs[0]["spread"], 0.02, 1e-9))
 
-three_way = parlay.legs_from_events([fake_event("E2", "ARS", "CHE", 0.45, 0.30, 0.47, 0.32, tie=True)],
-                                    "epl", "EPL")
-check("draw markets are excluded from the pair", len(three_way) == 2)
+no_ask = parlay.legs_from_events([fake_event("E3", "X", "Y", 0.80, 0.20, 0, 0.22)], "nfl", "NFL")
+check("a side you cannot buy is dropped", all(l["pick"] != "X" for l in no_ask))
+check("...but its opponent is still a usable leg",
+      len(no_ask) == 1 and no_ask[0]["pick"] == "Y", str([l["pick"] for l in no_ask]))
+check("...priced off the full book, not just the tradeable half",
+      near(no_ask[0]["p"], 0.20, 1e-6), f"{no_ask[0]['p']}")
 
-no_ask = fake_event("E3", "X", "Y", 0.80, 0.20, 0, 0.22)
-check("a side with no ask is skipped entirely",
-      parlay.legs_from_events([no_ask], "nfl", "NFL") == [])
+# ---- three-way markets: a draw loses the contract, so it must stay in the book
+print("\nthree-way markets (soccer, Test cricket)")
+soccer = fake_event("S1", "Arsenal", "Chelsea", 0.45, 0.30, 0.47, 0.32, tie=True)
+sl = parlay.legs_from_events([soccer], "epl", "Premier League")
+check("only the two teams become legs, never the draw", len(sl) == 2)
+check("both legs are marked as losing on a draw", all(l["draw"] for l in sl))
+ars = [l for l in sl if l["pick"] == "Arsenal"][0]
+check("the draw stays in the denominator",
+      near(ars["p"], 0.45 / (0.45 + 0.30 + 0.25), 1e-6), f"{ars['p']}")
+check("...which is well below P(win | no draw)",
+      ars["p"] < 0.45 / (0.45 + 0.30) - 0.09, f'{ars["p"]} vs {0.45/0.75}')
+check("a three-way book still sums to 1 across all three outcomes",
+      near(sum(l["p"] for l in sl) + 0.25 / (0.45 + 0.30 + 0.25), 1.0, 1e-6))
+two_way = parlay.legs_from_events([fake_event("S2", "KC", "TEN", 0.90, 0.12, 0.92, 0.14)],
+                                  "nfl", "NFL")
+check("two-way games are unaffected and not marked as draw games",
+      not any(l["draw"] for l in two_way) and near(sum(l["p"] for l in two_way), 1.0, 1e-6))
 
 # ---------------------------------------------------------------- the builder
 print("\nbuilder")
@@ -236,6 +253,45 @@ check("discord card links the app", any("example.test" in l for l in lines))
 empty_card = parlay.discord_lines({"board": parlay.board_summary([]), "days": 8, "tickets": []})
 check("empty board says so rather than inventing a ticket",
       any("too thin" in l for l in empty_card))
+
+# ---------------------------------------------------------------- scopes
+print("\nscopes")
+mixed = ([leg(0.97, 0.975, f"n{i}", f"NFL{i}", league="nfl") for i in range(4)] +
+         [leg(0.98, 0.985, f"c{i}", f"CFB{i}", league="ncaaf") for i in range(6)] +
+         [dict(leg(0.55, 0.57, f"s{i}", f"EPL{i}", league="epl"), draw=True) for i in range(4)] +
+         [leg(0.80, 0.82, f"t{i}", f"ATP{i}", league="atp") for i in range(3)])
+check("nfl scope takes only NFL",
+      {l["league"] for l in parlay.scope_legs(mixed, "nfl")} == {"nfl"})
+check("college scope takes only NCAAF",
+      {l["league"] for l in parlay.scope_legs(mixed, "ncaaf")} == {"ncaaf"})
+check("football scope mixes the football leagues",
+      {l["league"] for l in parlay.scope_legs(mixed, "football")} == {"nfl", "ncaaf"})
+check("everything takes everything", len(parlay.scope_legs(mixed, "all")) == len(mixed))
+check("an unknown scope falls through to everything, not to empty",
+      len(parlay.scope_legs(mixed, "quidditch")) == len(mixed))
+
+live = parlay.live_scopes(mixed)
+keys = [sc["key"] for sc in live]
+check("only scopes with legs are offered", "mlb" not in keys and "cricket" not in keys, str(keys))
+check("the ones with legs all show up",
+      {"nfl", "ncaaf", "football", "soccer", "tennis", "all"} <= set(keys), str(keys))
+check("each scope reports its own counts",
+      next(sc for sc in live if sc["key"] == "nfl")["legs"] == 4)
+check("everything counts the whole board",
+      next(sc for sc in live if sc["key"] == "all")["legs"] == len(mixed))
+check("an empty board offers no scopes at all", parlay.live_scopes([]) == [])
+
+# a scope is only a filter - it must not change how a ticket is priced
+nfl_only = parlay.build(parlay.scope_legs(mixed, "nfl"), target=0.85, min_leg=0.90, max_legs=9)
+check("scoping to NFL builds from NFL alone",
+      all(l["league"] == "nfl" for l in nfl_only["legs"]))
+check("...and prices identically to passing those legs directly",
+      parlay.build([l for l in mixed if l["league"] == "nfl"], target=0.85, min_leg=0.90,
+                   max_legs=9)["win_prob"] == nfl_only["win_prob"])
+
+check("every scope points at leagues that exist",
+      all(not sc["leagues"] or set(sc["leagues"]) <= set(parlay.all_leagues(parlay.load_config()))
+          for sc in parlay.SCOPES))
 
 # ---------------------------------------------------------------- injury attribution
 # A red flag drops the leg from every ticket, so it has to be right more than it
