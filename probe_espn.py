@@ -1,84 +1,59 @@
-"""One-off: dump the ESPN payloads the next three changes depend on.
+"""Round 2: find an ESPN endpoint that actually returns injuries.
 
-Guessing a response shape cost a whole cycle on the Kalshi candlesticks, so this
-prints the real thing: whether college football carries injuries at all, what an
-injury record actually contains (position? player? status?), and what a historical
-scoreboard returns for a past date.
+Round 1 established that teams/{id}?enable=injuries returns nothing for NFL or
+college football - team_out_count has silently returned 0 for every pick ever
+logged. Try the alternatives and print what each one gives.
 """
-import datetime as dt
 import json
-
 import espn
 
 def head(t): print("\n" + "=" * 8 + " " + t)
 
-# --- 1. is there a college football board at all, and what team ids does it give
-head("NCAAF scoreboard for a past Saturday (2025-09-13)")
-js = espn.S.get(f"{espn.BASE}/football/college-football/scoreboard",
-                params={"dates": "20250913", "groups": 80, "limit": 400}, timeout=30).json()
-evs = js.get("events", [])
-print(f"events: {len(evs)}")
-if evs:
-    ev = evs[0]
-    comp = (ev.get("competitions") or [{}])[0]
-    print("event keys:", list(ev.keys()))
-    print("competition keys:", list(comp.keys()))
-    for c in comp.get("competitors", []):
-        t = c.get("team") or {}
-        print(f"   {c.get('homeAway'):<5} id={t.get('id'):<6} score={c.get('score')!r:>6} "
-              f"winner={c.get('winner')!r:<6} displayName={t.get('displayName')!r}")
-    print("status:", json.dumps((comp.get("status") or {}).get("type", {}), indent=1)[:300])
-    print("date:", ev.get("date"))
-
-# --- 2. does a college team carry injuries, and what is in a record
-head("NCAAF team injuries payload")
-tid = None
-for c in ((evs[0].get("competitions") or [{}])[0].get("competitors") or []):
-    tid = (c.get("team") or {}).get("id"); break
-print("team id:", tid)
-if tid:
-    r = espn.S.get(f"{espn.BASE}/football/college-football/teams/{tid}",
-                   params={"enable": "injuries"}, timeout=25).json()
-    team = r.get("team") or {}
-    print("team keys:", list(team.keys()))
-    inj = team.get("injuries") or []
-    print(f"injuries returned: {len(inj)}")
-    if inj:
-        print("first record:"); print(json.dumps(inj[0], indent=1)[:1200])
-
-head("NFL team injuries payload (known to work) for comparison")
-nb = espn.S.get(f"{espn.BASE}/football/nfl/scoreboard", params={"limit": 20}, timeout=25).json()
-nid = None
-for e in nb.get("events", []):
-    for c in ((e.get("competitions") or [{}])[0].get("competitors") or []):
-        nid = (c.get("team") or {}).get("id"); break
-    if nid: break
-print("team id:", nid)
-if nid:
-    r = espn.S.get(f"{espn.BASE}/football/nfl/teams/{nid}",
-                   params={"enable": "injuries"}, timeout=25).json()
-    inj = ((r.get("team") or {}).get("injuries")) or []
-    print(f"injuries returned: {len(inj)}")
-    for rec in inj[:3]:
-        print(json.dumps(rec, indent=1)[:900])
-
-# --- 3. how far back does the scoreboard go, and can we walk a season
-head("how much history is reachable")
-for d in ("20240914", "20230916"):
+def get(url, **params):
     try:
-        j = espn.S.get(f"{espn.BASE}/football/college-football/scoreboard",
-                       params={"dates": d, "groups": 80, "limit": 400}, timeout=30).json()
-        n = len(j.get("events", []))
-        done = sum(1 for e in j.get("events", [])
-                   if ((e.get("competitions") or [{}])[0].get("status") or {}).get("type", {}).get("completed"))
-        print(f"   {d}: {n} events, {done} completed")
+        r = espn.S.get(url, params=params or None, timeout=25)
+        return r.status_code, (r.json() if r.headers.get("content-type","").startswith("application/json") else None)
     except Exception as e:
-        print(f"   {d}: {type(e).__name__} {str(e)[:80]}")
+        return type(e).__name__, None
 
-head("NFL scoreboard, past date")
-j = espn.S.get(f"{espn.BASE}/football/nfl/scoreboard", params={"dates": "20250914", "limit": 100}, timeout=30).json()
-print(f"events: {len(j.get('events', []))}")
-for e in j.get("events", [])[:2]:
-    comp = (e.get("competitions") or [{}])[0]
-    print("  ", e.get("date"), [(c.get("homeAway"), (c.get("team") or {}).get("displayName"), c.get("score"))
-                                 for c in comp.get("competitors", [])])
+for sport, league, date, grp in (("football","nfl","20260913",None),
+                                 ("football","college-football","20260912",80)):
+    head(f"{league}: find a live event")
+    p = {"dates": date, "limit": 100}
+    if grp: p["groups"] = grp
+    st, js = get(f"{espn.BASE}/{sport}/{league}/scoreboard", **p)
+    evs = (js or {}).get("events", [])
+    print(f"  scoreboard {st}, {len(evs)} events")
+    if not evs: continue
+    ev = evs[0]; eid = ev.get("id")
+    comp = (ev.get("competitions") or [{}])[0]
+    tid = ((comp.get("competitors") or [{}])[0].get("team") or {}).get("id")
+    print(f"  event {eid} ({ev.get('shortName')}), team id {tid}")
+
+    head(f"{league}: summary?event= (per-game, both teams in one call)")
+    st, js = get(f"{espn.BASE}/{sport}/{league}/summary", event=eid)
+    print("  status:", st, "| top keys:", list((js or {}).keys())[:18])
+    inj = (js or {}).get("injuries")
+    print(f"  injuries key present: {inj is not None}, entries: {len(inj) if inj else 0}")
+    if inj:
+        for team_block in inj[:2]:
+            print("   team block keys:", list(team_block.keys()))
+            t = team_block.get("team") or {}
+            print("   team:", t.get("displayName") or t.get("abbreviation"), "| id", t.get("id"))
+            for rec in (team_block.get("injuries") or [])[:3]:
+                print("   record:", json.dumps(rec, indent=1)[:700])
+
+    head(f"{league}: teams/{{id}}/injuries")
+    st, js = get(f"{espn.BASE}/{sport}/{league}/teams/{tid}/injuries")
+    print("  status:", st, "| keys:", list((js or {}).keys())[:12] if js else None)
+    if js: print("  ", json.dumps(js, indent=1)[:500])
+
+    head(f"{league}: core API team injuries")
+    st, js = get(f"https://sports.core.api.espn.com/v2/sports/{sport}/leagues/{league}/teams/{tid}/injuries",
+                 limit=50)
+    print("  status:", st, "| keys:", list((js or {}).keys())[:12] if js else None)
+    if js and js.get("items"):
+        print(f"   {js.get('count')} items; first ref: {js['items'][0]}")
+        st2, one = get(js["items"][0].get("$ref","").replace("http://","https://"))
+        print("   dereferenced:", st2)
+        if one: print("   ", json.dumps(one, indent=1)[:800])
