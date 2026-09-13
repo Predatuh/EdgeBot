@@ -125,10 +125,13 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 26px + env(safe-area-inset-bott
 /* ---------- leg rows ---------- */
 .legs{display:flex; flex-direction:column; background:var(--surface);
   border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
-.leg{display:grid; grid-template-columns:4px 1fr auto auto; align-items:center; gap:0 11px;
-  padding:10px 10px 10px 0; border:0; border-bottom:1px solid var(--line);
-  background:none; text-align:left; width:100%; min-height:56px}
-.leg:last-child{border-bottom:0}
+.legwrap{display:flex; align-items:stretch; border-bottom:1px solid var(--line)}
+.legwrap:last-child{border-bottom:0}
+.legwrap.pinned{background:var(--accent-soft)}
+.legwrap.banned{opacity:.45}
+.legwrap.banned .nm{text-decoration:line-through}
+.leg{flex:1; min-width:0; display:grid; grid-template-columns:4px 1fr auto; align-items:center;
+  gap:0 11px; padding:10px 4px 10px 0; border:0; background:none; text-align:left; min-height:56px}
 .leg .stripe{align-self:stretch; border-radius:0 3px 3px 0; background:var(--tc)}
 .leg .who{min-width:0; display:flex; flex-direction:column; gap:2px}
 .leg .nm{font-weight:700; font-size:.95rem; line-height:1.2; overflow:hidden;
@@ -139,9 +142,8 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 26px + env(safe-area-inset-bott
   font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
 .leg .pc .p{font-size:1.02rem; font-weight:600; line-height:1.1; color:var(--tc)}
 .leg .pc .a{font-size:.63rem; color:var(--muted); white-space:nowrap}
-.leg .act{border:0; background:none; font-size:1.05rem; color:var(--muted);
-  width:38px; height:38px; display:grid; place-items:center; border-radius:8px}
-.leg.pinned{background:var(--accent-soft)}
+.act{border:0; background:none; font-size:1.05rem; color:var(--muted);
+  width:46px; flex:0 0 46px; display:grid; place-items:center}
 .flagline{grid-column:2/-1; font-size:.7rem; color:var(--warn); font-weight:600; margin-top:3px;
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
   line-height:1.35}
@@ -288,11 +290,13 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
         <button class="pill" type="button" data-sort="p" aria-pressed="true">Best odds</button>
         <button class="pill" type="button" data-sort="spread" aria-pressed="false">Tightest spread</button>
         <button class="pill" type="button" data-sort="vol" aria-pressed="false">Most traded</button>
+        <button class="pill" type="button" data-sort="value" aria-pressed="false">Best value</button>
+        <button class="pill" type="button" data-sort="news" aria-pressed="false">Has news</button>
         <button class="pill" type="button" data-sort="pinned" aria-pressed="false">My pins</button>
       </div>
       <p class="lbl" id="boardcount"></p>
       <div class="legs" id="board"></div>
-      <p class="prose">Tap a row to pin it into every ticket. Tap again to ban it. Pinned legs ignore the filters.</p>
+      <p class="prose">Tap any leg to read its research and prices. The button on the right pins it into every ticket; tap again to ban it. Pinned legs ignore every filter, so this is how you force a 50/50 game in.</p>
     </section>
 
     <!-- ============ SLIP ============ -->
@@ -321,7 +325,9 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
       <div class="card pad prose">
         <p class="lbl" style="margin-bottom:8px">The one rule</p>
         <p>Kalshi prices a combo as the product of its legs, so a fairly priced parlay wins <code>1 ÷ payout</code> of the time. A 3-leg ticket paying 11× and a 39-leg ticket paying 11× are the same 9% bet — the long one just crosses 39 spreads to get there.</p>
-        <p><b>Leg count is not the risk. The payout is.</b> So the risk dial moves a target win chance, and the builder answers with the fewest, tightest-spread legs that reach it.</p>
+        <p><b>Leg count is not the risk. The payout is.</b> You pick what you want to win; the builder finds the highest win chance that still pays it.</p>
+        <p><b>There is no price floor, on purpose.</b> Kalshi's spread is about 1¢ whatever a contract costs, so a cent on a 97¢ leg is 1% of its value and a cent on a 50¢ leg is 2% — but reaching a given payout out of 97¢ favourites takes far more of them, and you cross a spread every time. On a real board, 5× costs 27 chalk legs at −21% EV, or 8 mid-priced legs at about −0%. Same payout, same win chance. Above 5× the chalk route does not exist at all. So a 55¢ game earns its place whenever it buys payout more cheaply.</p>
+        <p>What still protects you is the book, not the price: a leg has to be trading with a tight spread to be used. And legs under 90¢ are docked by how much that price band has historically underperformed, so a coin flip has to be genuinely cheap to get in.</p>
       </div>
       <div class="card pad prose">
         <p class="lbl" style="margin-bottom:8px">Reading the numbers</p>
@@ -351,43 +357,29 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
   <div class="sh"><h2>Filters &amp; risk</h2><button class="x" type="button" data-close>✕</button></div>
   <div class="body">
     <div class="grp">
-      <p class="lbl">Risk</p>
+      <p class="lbl">What you want to win</p>
       <div class="ctl">
-        <div class="row"><span class="k">Target win chance</span><span class="v" id="tgtv"></span></div>
-        <input id="tgt" type="range" min="2" max="97" step="1" value="50">
-        <p class="hint">Lower target = more legs = bigger payout. The payout follows this number, not the leg count.</p>
-      </div>
-      <div class="ctl">
-        <div class="row"><span class="k">Cheapest leg allowed</span><span class="v" id="minlv"></span></div>
-        <input id="minl" type="range" min="50" max="99" step="1" value="92">
-        <p class="hint">The hard floor. One coin flip halves the whole ticket no matter how safe the rest are.</p>
+        <div class="row"><span class="k">Target payout</span><span class="v" id="payv"></span></div>
+        <input id="pay" type="range" min="0" max="100" step="1" value="40">
+        <p class="hint" id="payhint"></p>
       </div>
       <div class="ctl">
         <div class="row"><span class="k">Most legs</span><span class="v" id="maxlv"></span></div>
-        <input id="maxl" type="range" min="2" max="50" step="1" value="20">
+        <input id="maxl" type="range" min="1" max="45" step="1" value="40">
+        <p class="hint">Only a cap. The builder already uses the fewest legs it can — every extra one crosses another spread.</p>
       </div>
     </div>
 
     <div class="grp">
-      <p class="lbl">Market quality</p>
-      <div class="ctl">
-        <div class="row"><span class="k">Widest spread allowed</span><span class="v" id="spv"></span></div>
-        <input id="sp" type="range" min="1" max="20" step="1" value="12">
-        <p class="hint">Spread is the only cost you control. Every leg you add pays it again.</p>
-      </div>
-      <div class="ctl">
-        <div class="row"><span class="k">Minimum traded</span><span class="v" id="volv"></span></div>
-        <input id="vol" type="range" min="0" max="2000" step="50" value="0">
-        <p class="hint">Thin markets can be hard to actually fill at the price shown.</p>
-      </div>
-    </div>
-
-    <div class="grp">
-      <p class="lbl">Safety</p>
+      <p class="lbl">Which legs it may use</p>
+      <label class="sw"><input type="checkbox" id="liquid" checked>
+        <span>Tradeable markets only<span class="sub">Spread 3¢ or tighter and actually traded. Price is not the test — a 1¢ book is fine at any price.</span></span></label>
+      <label class="sw"><input type="checkbox" id="trust">
+        <span>Trust cheap legs fully<span class="sub">Off by default: legs under 90¢ are docked by how much that price band has historically underperformed, so a coin flip has to be genuinely cheaper to earn its place.</span></span></label>
       <label class="sw"><input type="checkbox" id="noflag" checked>
-        <span>Skip injury &amp; lineup news<span class="sub">Only drops legs we can pin on that team</span></span></label>
+        <span>Skip confirmed injury news<span class="sub">Drops a leg only when a headline names your team, not the opponent — a starter ruled out. Everything else is shown on the leg, never filtered.</span></span></label>
       <label class="sw"><input type="checkbox" id="onegame" checked>
-        <span>One leg per game<span class="sub">Both sides of one game can never both win</span></span></label>
+        <span>One leg per game<span class="sub">Both sides of a game can never both win</span></span></label>
     </div>
 
     <div class="grp">
@@ -398,6 +390,12 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
     <button class="btn ghost" id="reset" type="button">Clear pins and bans</button>
     <button class="btn primary" type="button" data-close>Show me the ticket</button>
   </div>
+</div>
+
+<div class="sheet" id="legsheet" hidden role="dialog" aria-modal="true" aria-label="Leg detail">
+  <div class="grab"></div>
+  <div class="sh"><h2 id="ls-name">Leg</h2><button class="x" type="button" data-close>✕</button></div>
+  <div class="body" id="ls-body"></div>
 </div>
 
 <div class="sheet" id="scopesheet" hidden role="dialog" aria-modal="true" aria-label="Choose sports">
@@ -455,12 +453,13 @@ var TIERS=[[0.97,"Lock","var(--t-lock)"],[0.92,"Strong","var(--t-strong)"],
 function tierOf(p){ for(var i=0;i<TIERS.length;i++){ if(p>=TIERS[i][0]) return TIERS[i]; } return TIERS[4]; }
 
 var isDemo=!(DATA.legs&&DATA.legs.length), SNAP=isDemo?DEMO:DATA, LEGS=(SNAP.legs||[]).slice();
-var PRESETS=(SNAP.presets&&SNAP.presets.length)?SNAP.presets:[
-  {key:"vault",label:"Vault",target:0.90,min_leg:0.97,max_legs:8,emoji:"🔒"},
-  {key:"safe",label:"Safe",target:0.75,min_leg:0.95,max_legs:14,emoji:"🛡️"},
-  {key:"balanced",label:"Balanced",target:0.50,min_leg:0.92,max_legs:20,emoji:"⚖️"},
-  {key:"swing",label:"Swing",target:0.25,min_leg:0.88,max_legs:30,emoji:"🎯"},
-  {key:"lottery",label:"Lottery",target:0.08,min_leg:0.85,max_legs:45,emoji:"🎰"}];
+LEGS.forEach(function(l){ if(l.research===undefined) l.research=null; });
+var PRESETS=(SNAP.presets&&SNAP.presets.length&&SNAP.presets[0].payout)?SNAP.presets:[
+  {key:"banker",label:"Banker",payout:1.15,emoji:"🔒"},
+  {key:"solid",label:"Solid",payout:2.0,emoji:"🛡️"},
+  {key:"swing",label:"Swing",payout:8.0,emoji:"⚖️"},
+  {key:"longshot",label:"Longshot",payout:40.0,emoji:"🎯"},
+  {key:"lottery",label:"Lottery",payout:250.0,emoji:"🎰"}];
 
 var ALL_SCOPES=[
   {key:"football",label:"Football",emoji:"🏈",leagues:["nfl","ncaaf","cfl"]},
@@ -472,8 +471,8 @@ var ALL_SCOPES=[
   {key:"cricket",label:"Cricket",emoji:"🏏",leagues:["cricket_t20i","cricket_odi","cricket_test","cpl"]},
   {key:"all",label:"Everything",emoji:"🌐",leagues:null}];
 var labelOf={}; LEGS.forEach(function(l){ labelOf[l.league]=l.league_label; });
-function scopeLeagues(k){ var s=ALL_SCOPES.filter(function(x){return x.key===k;})[0];
-  return (s&&s.leagues)?s.leagues:null; }
+function scopeLeagues(k){ var x=ALL_SCOPES.filter(function(y){return y.key===k;})[0];
+  return (x&&x.leagues)?x.leagues:null; }
 function inScope(l,k){ var lg=scopeLeagues(k); return !lg||lg.indexOf(l.league)>=0; }
 function leaguesIn(k){ var o=[]; LEGS.forEach(function(l){
   if(inScope(l,k)&&o.indexOf(l.league)<0) o.push(l.league); }); return o; }
@@ -489,88 +488,103 @@ var SCOPES=(SNAP.scopes&&SNAP.scopes.length)?SNAP.scopes:(function(){
 function scopeInfo(k){ return SCOPES.filter(function(s){return s.key===k;})[0]; }
 
 var START=(scopeInfo(SNAP.scope||"football")||SCOPES[0]||{key:"all"}).key;
-var S={tab:"build", scope:START, preset:"balanced", target:0.50, minLeg:0.92, maxLegs:20,
-       maxSpread:0.12, minVol:0, leagues:leaguesIn(START), noflag:true, onegame:true,
-       pins:{}, bans:{}, stake:10, q:"", sort:"p"};
+var S={tab:"build", scope:START, preset:"swing", payout:8.0, maxLegs:40,
+       liquid:true, trustCheap:false, noflag:true, onegame:true,
+       leagues:leaguesIn(START), pins:{}, bans:{}, stake:10, q:"", sort:"p", leg:null};
 
-/* remembered between visits; a blocked or cleared store just means defaults */
-try{ var saved=JSON.parse(localStorage.getItem("gt.v2")||"null");
+try{ var saved=JSON.parse(localStorage.getItem("gt.v3")||"null");
   if(saved && scopeInfo(saved.scope)){
-    ["scope","preset","target","minLeg","maxLegs","maxSpread","minVol","noflag","onegame","stake"]
+    ["scope","preset","payout","maxLegs","liquid","trustCheap","noflag","onegame","stake"]
       .forEach(function(k){ if(saved[k]!==undefined) S[k]=saved[k]; });
     S.leagues=leaguesIn(S.scope);
   }
 }catch(e){}
-function remember(){ try{ localStorage.setItem("gt.v2", JSON.stringify({
-  scope:S.scope,preset:S.preset,target:S.target,minLeg:S.minLeg,maxLegs:S.maxLegs,
-  maxSpread:S.maxSpread,minVol:S.minVol,noflag:S.noflag,onegame:S.onegame,stake:S.stake}));
-}catch(e){} }
+function remember(){ try{ localStorage.setItem("gt.v3", JSON.stringify({
+  scope:S.scope,preset:S.preset,payout:S.payout,maxLegs:S.maxLegs,liquid:S.liquid,
+  trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake})); }catch(e){} }
 
-/* ---- builder: the same greedy as parlay.py ---- */
-function eligible(l){
+/* ---- builder: the same objective as parlay.py ----
+   Reach the payout with the highest win probability. Each leg buys -log(ask) of
+   payout and costs -log(p) of win chance, so the best legs are the ones with the
+   least probability cost per unit of payout - which is why a 55c game can beat
+   nine 97c favourites. A leg that would blow past what is left to buy is only
+   taken when nothing smaller will do. There is no price floor. */
+function discount(p){ return p>=0.90?1.0 : p>=0.60?0.990 : p>=0.40?0.966 : 0.936; }
+function isLiquid(l){
+  if(l.spread!=null && l.spread>0.03) return false;
+  return (l.vol||0) >= 50;
+}
+function usable(l){
   if(!inScope(l,S.scope)) return false;
   if(S.leagues.indexOf(l.league)<0) return false;
   if(S.bans[l.ticker]) return false;
-  if(!(l.ask>0&&l.ask<0.999)) return false;
-  if(l.p<S.minLeg) return false;
-  if(S.noflag&&l.flags&&l.flags.length) return false;
-  if(l.spread!=null&&l.spread>S.maxSpread) return false;
-  if((l.vol||0)<S.minVol) return false;
+  if(!(l.ask>0 && l.ask<0.999)) return false;
+  if(S.noflag && l.flags && l.flags.length) return false;
+  if(S.liquid && !isLiquid(l)) return false;
   return true;
 }
-function costRatio(l){
-  var b=-Math.log(Math.max(l.p,1e-9)), loss=-Math.log(Math.max(l.p/l.ask,1e-9));
-  return b>1e-9?loss/b:Infinity;
+function est(l){
+  var v=Math.min(l.p,l.ask);
+  return S.trustCheap ? v : v*discount(l.p);
 }
+function gainOf(l){ return -Math.log(l.ask); }
+function ratioOf(l){ var g=gainOf(l);
+  return g>1e-12 ? (-Math.log(Math.max(est(l),1e-9)))/g : Infinity; }
+
 function build(){
   var pinned=LEGS.filter(function(l){ return S.pins[l.ticker]&&!S.bans[l.ticker]&&inScope(l,S.scope); });
-  var pool=LEGS.filter(function(l){ return !S.pins[l.ticker]&&eligible(l); });
-  pool.sort(function(a,b){ return (costRatio(a)-costRatio(b))||(b.p-a.p); });
-  var chosen=[],used={},prob=1;
+  var left=LEGS.filter(function(l){ return !S.pins[l.ticker]&&usable(l); })
+    .sort(function(a,b){ return (ratioOf(a)-ratioOf(b))||(b.p-a.p); });
+  var chosen=[],used={},got=0;
   pinned.forEach(function(l){ if(S.onegame&&used[l.event_id]) return;
-    chosen.push(l); used[l.event_id]=1; prob*=l.p; });
-  for(var i=0;i<pool.length;i++){ var l=pool[i];
-    if(chosen.length>=S.maxLegs) break;
-    if(S.onegame&&used[l.event_id]) continue;
-    if(prob*l.p<S.target) continue;
-    chosen.push(l); used[l.event_id]=1; prob*=l.p; }
+    chosen.push(l); used[l.event_id]=1; got+=gainOf(l); });
+  var need=Math.log(Math.max(S.payout,1.0000001));
+  while(got<need-1e-12 && chosen.length<S.maxLegs){
+    var avail=left.filter(function(l){ return !(S.onegame&&used[l.event_id]); });
+    if(!avail.length) break;
+    var rem=need-got;
+    var fits=avail.filter(function(l){ return gainOf(l)<=rem+1e-12; });
+    var pick;
+    if(fits.length){ pick=fits.reduce(function(a,b){ return ratioOf(b)<ratioOf(a)?b:a; }); }
+    else { pick=avail.reduce(function(a,b){ return est(b)>est(a)?b:a; }); }
+    chosen.push(pick); used[pick.event_id]=1; got+=gainOf(pick);
+    left=left.filter(function(l){ return l!==pick; });
+  }
   return chosen;
 }
 function summarise(ch){
-  var win=1,cost=1; ch.forEach(function(l){ win*=l.p; cost*=l.ask; });
+  var win=1,cost=1,fair=1;
+  ch.forEach(function(l){ win*=l.p; cost*=l.ask; fair*=Math.min(l.p,l.ask); });
   var mult=cost>0?1/cost:0;
-  return {legs:ch,n:ch.length,win:win,mult:mult,cost:cost,ev:win*mult-1,
-          weak:ch.length?Math.min.apply(null,ch.map(function(l){return l.p;})):0};
+  return {legs:ch,n:ch.length,win:win,mult:mult,cost:cost,ev:cost>0?fair*mult-1:-1,
+          weak:ch.length?Math.min.apply(null,ch.map(function(l){return l.p;})):0,
+          reached:ch.length?mult>=S.payout*0.85:false};
 }
 
-/* ---- why an empty ticket is empty, and the one tap that fixes it ---- */
-function diagnose(){
+/* ---- why an empty or short ticket is that way ---- */
+function diagnose(r){
   var sc=LEGS.filter(function(l){ return inScope(l,S.scope); });
   if(!sc.length) return {msg:"No markets are open on this board."};
   var pool=sc.filter(function(l){ return !S.bans[l.ticker]; });
   if(!pool.length) return {msg:"You have banned every leg here.",fix:"Clear bans",
     go:function(){ S.bans={}; }};
   pool=pool.filter(function(l){ return S.leagues.indexOf(l.league)>=0; });
-  if(!pool.length) return {msg:"Every league in this scope is switched off.",fix:"Turn them back on",
-    go:function(){ S.leagues=leaguesIn(S.scope); }};
+  if(!pool.length) return {msg:"Every league in this scope is switched off.",
+    fix:"Turn them back on", go:function(){ S.leagues=leaguesIn(S.scope); }};
   if(S.noflag){ var cl=pool.filter(function(l){ return !(l.flags&&l.flags.length); });
-    if(!cl.length) return {msg:"Every leg here has injury or lineup news against it.",
+    if(!cl.length) return {msg:"Every leg here has a confirmed injury against it.",
       fix:"Show them anyway", go:function(){ S.noflag=false; }};
     pool=cl; }
-  var liq=pool.filter(function(l){
-    return (l.spread==null||l.spread<=S.maxSpread)&&(l.vol||0)>=S.minVol; });
-  if(!liq.length) return {msg:"Every leg here is wider than "+Math.round(100*S.maxSpread)+"¢ or too thinly traded.",
-    fix:"Loosen both", go:function(){ S.maxSpread=0.20; S.minVol=0; }};
-  pool=liq;
-  var best=Math.max.apply(null,pool.map(function(l){return l.p;}));
-  var who=pool.filter(function(l){ return l.p===best; })[0];
-  if(best<S.minLeg){ var f=Math.floor(best*100)/100;
-    return {msg:"Nothing here reaches "+cents(S.minLeg)+". The best is "+who.pick+" at "+cents(best)+".",
-      fix:"Drop the floor to "+cents(f), go:function(){ S.minLeg=f; S.preset=""; }}; }
-  if(best<S.target){ var t=Math.floor(best*100)/100;
-    return {msg:"Even the safest leg here ("+who.pick+" at "+cents(best)+") is under your "+
-      Math.round(100*S.target)+"% target.",
-      fix:"Target "+Math.round(100*t)+"%", go:function(){ S.target=t; S.preset=""; }}; }
+  if(S.liquid){ var lq=pool.filter(isLiquid);
+    if(!lq.length) return {msg:"Nothing here is trading tightly enough to be worth buying.",
+      fix:"Allow thin markets", go:function(){ S.liquid=false; }};
+    pool=lq; }
+  if(r && r.n && !r.reached){
+    return {msg:"This board tops out at "+r.mult.toFixed(2)+"× — it has "+pool.length+
+      " usable legs and that is every bit of payout in them.",
+      fix:"Aim for "+Math.max(1.05,Math.floor(r.mult*20)/20).toFixed(2)+"×",
+      go:function(){ S.payout=Math.max(1.05,Math.floor(r.mult*20)/20); S.preset=""; }};
+  }
   return {msg:"Nothing clears the current filters."};
 }
 
@@ -584,22 +598,26 @@ function oneIn(w){ return w>0?Math.round(1/w).toLocaleString():"—"; }
 var $=function(id){ return document.getElementById(id); };
 var FIX=null;
 
-/* ---- leg row, shared by ticket and board ---- */
-function legRow(l,opts){
+/* ---- leg rows: the row opens the detail, the button acts on it ---- */
+function legRow(l,board){
   var t=tierOf(l.p), pinned=!!S.pins[l.ticker], banned=!!S.bans[l.ticker];
-  var act=opts.board?(banned?"🚫":(pinned?"📌":"＋")):"✕";
-  var flag=(l.flags&&l.flags.length)?'<span class="flagline">⚠ '+esc(l.flags[0])+'</span>'
+  var act=board?(banned?"🚫":(pinned?"📌":"＋")):"✕";
+  var r=l.research||{}, mark = (l.flags&&l.flags.length)?"⚠"
+       : (r.checked ? (r.unattributed&&r.unattributed.length ? "❔" : "📰") : "");
+  var sub=(l.flags&&l.flags.length)?'<span class="flagline">⚠ '+esc(l.flags[0])+'</span>'
         :(l.notes?'<span class="flagline" style="color:var(--muted);font-weight:500">'+esc(l.notes)+'</span>':'');
-  return '<button class="leg'+(pinned?" pinned":"")+'" type="button" style="--tc:'+t[2]+
-    '" data-'+(opts.board?"tk":"rm")+'="'+esc(l.ticker)+'"'+(banned?' style="opacity:.45"':'')+'>'+
-    '<span class="stripe"></span>'+
-    '<span class="who"><span class="nm">'+esc(l.pick)+
-      (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
-      '<span class="mt">'+esc(t[1])+' · vs '+esc(l.opp)+(l.home?' (home)':'')+
-      ' · '+esc(l.league_label)+'</span></span>'+
-    '<span class="pc"><span class="p">'+cents(l.p)+'</span>'+
-      '<span class="a">pay '+cents(l.ask)+(l.spread!=null?' · '+Math.round(100*l.spread)+'¢ sp':'')+'</span></span>'+
-    '<span class="act">'+act+'</span>'+flag+'</button>';
+  return '<div class="legwrap'+(banned?" banned":"")+(pinned?" pinned":"")+'">'+
+    '<button class="leg" type="button" style="--tc:'+t[2]+'" data-open="'+esc(l.ticker)+'">'+
+      '<span class="stripe"></span>'+
+      '<span class="who"><span class="nm">'+esc(l.pick)+
+        (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
+        '<span class="mt">'+(mark?mark+" ":"")+esc(t[1])+' · vs '+esc(l.opp)+
+        (l.home?' (home)':'')+' · '+esc(l.league_label)+'</span></span>'+
+      '<span class="pc"><span class="p">'+cents(l.p)+'</span>'+
+        '<span class="a">pay '+cents(l.ask)+(l.spread!=null?' · '+Math.round(100*l.spread)+'¢ sp':'')+'</span></span>'+
+      sub+'</button>'+
+    '<button class="act" type="button" data-act="'+esc(l.ticker)+'" aria-label="'+
+      (board?"pin or ban":"remove")+' '+esc(l.pick)+'">'+act+'</button></div>';
 }
 
 /* ---- render ---- */
@@ -619,16 +637,23 @@ function renderDial(){
   $("dial").innerHTML=PRESETS.map(function(p){
     return '<button type="button" data-k="'+esc(p.key)+'" aria-pressed="'+(p.key===S.preset)+'">'+
       '<span class="e">'+esc(p.emoji||"")+'</span><span class="l">'+esc(p.label)+'</span>'+
-      '<span class="t">'+Math.round(p.target*100)+'%</span></button>';
+      '<span class="t">'+payLabel(p.payout)+'</span></button>';
   }).join("");
   $("custom").hidden=!!S.preset;
 }
+function payLabel(x){ return x>=100?Math.round(x)+"×":x.toFixed(x<10?2:1).replace(/\.?0+$/,"")+"×"; }
+var PMIN=1.05, PMAX=1000;
+function payToSlider(x){ return Math.round(100*Math.log(x/PMIN)/Math.log(PMAX/PMIN)); }
+function sliderToPay(v){ return PMIN*Math.pow(PMAX/PMIN, v/100); }
 function renderControls(){
-  $("tgt").value=Math.round(S.target*100); $("tgtv").textContent=Math.round(S.target*100)+"%";
-  $("minl").value=Math.round(S.minLeg*100); $("minlv").textContent=cents(S.minLeg);
-  $("maxl").value=S.maxLegs;                $("maxlv").textContent=S.maxLegs;
-  $("sp").value=Math.round(S.maxSpread*100);$("spv").textContent=Math.round(S.maxSpread*100)+"¢";
-  $("vol").value=S.minVol;                  $("volv").textContent=S.minVol?S.minVol.toLocaleString():"any";
+  $("pay").value=payToSlider(S.payout);
+  $("payv").textContent=payLabel(S.payout);
+  var st=parseFloat($("stake").value)||10;
+  $("payhint").textContent="Turns "+money(st)+" into about "+money(st*S.payout)+
+    ". A fairly priced parlay wins roughly 1 ÷ "+payLabel(S.payout).replace("×","")+
+    " = "+(100/S.payout).toFixed(S.payout>20?2:1)+"% of the time, however it is built.";
+  $("maxl").value=S.maxLegs; $("maxlv").textContent=S.maxLegs;
+  $("liquid").checked=S.liquid; $("trust").checked=S.trustCheap;
   $("noflag").checked=S.noflag; $("onegame").checked=S.onegame;
   $("lgchips").innerHTML=leaguesIn(S.scope).map(function(k){
     return '<button type="button" class="chip" data-lg="'+esc(k)+'" aria-pressed="'+
@@ -641,41 +666,37 @@ function renderTicket(r){
   $("mult").textContent = r.n?r.mult.toFixed(2)+"×":"—";
   $("nlegs").textContent= r.n||"0";
   $("weak").textContent = r.n?cents(r.weak):"—";
-  $("ev").textContent   = r.n?((r.ev>=0?"+":"")+pct(r.ev,1)):"—";
+  $("ev").textContent   = r.n?((r.ev>=0?"":"")+pct(r.ev,1)):"—";
   $("ev").style.color   = r.n?(r.ev<-0.15?"var(--t-live)":"var(--muted)"):"";
   $("payout").textContent = r.n?money(st*r.mult)+"  ·  1 in "+oneIn(r.win):"—";
-
-  $("s-win").textContent  = r.n?pct(r.win):"—";
-  $("s-ret").textContent  = r.n?money(st*r.mult):"—";
-  $("s-legs").textContent = r.n||"0";
-  $("s-stake").textContent= money(st);
-  $("s-one").textContent  = r.n?oneIn(r.win):"—";
+  $("s-win").textContent=r.n?pct(r.win):"—"; $("s-ret").textContent=r.n?money(st*r.mult):"—";
+  $("s-legs").textContent=r.n||"0"; $("s-stake").textContent=money(st);
+  $("s-one").textContent=r.n?oneIn(r.win):"—";
 
   var w=$("whatif");
-  if(!r.n){ var d=diagnose(); FIX=d.go||null;
+  if(!r.n || !r.reached){ var d=diagnose(r); FIX=d.go||null;
     w.innerHTML=esc(d.msg)+(d.fix?' <button class="chip" type="button" id="fixit" style="margin-top:9px">'+
       esc(d.fix)+'</button>':''); return; }
   var drop=r.legs.slice().sort(function(a,b){ return a.p-b.p; })[0];
   if(r.n===1){ w.innerHTML="One leg: <b>"+esc(drop.pick)+"</b> at "+cents(drop.ask)+
-    ". Lower the target to stack more on."; return; }
+    ". Ask for a bigger payout to stack more on."; return; }
   var without=summarise(r.legs.filter(function(l){ return l!==drop; }));
   w.innerHTML="Weak point: <b>"+esc(drop.pick)+"</b> at "+cents(drop.p)+". Drop it and the ticket wins <b>"+
-    pct(without.win)+"</b> instead of "+pct(r.win)+", paying "+without.mult.toFixed(2)+"× instead of "+
-    r.mult.toFixed(2)+"×.";
+    pct(without.win)+"</b> instead of "+pct(r.win)+", but only pays "+without.mult.toFixed(2)+"×.";
 }
 function renderLegs(r){
   $("legcount").textContent=r.n?"("+r.n+")":"";
   var host=$("legs");
   if(!r.n){ host.className="empty"; host.innerHTML="Nothing clears the filters — see the note above."; }
-  else { host.className="legs";
+  else{ host.className="legs";
     host.innerHTML=r.legs.slice().sort(function(a,b){ return b.p-a.p; })
-      .map(function(l){ return legRow(l,{board:false}); }).join(""); }
-
+      .map(function(l){ return legRow(l,false); }).join(""); }
   var list=$("sliplist");
   if(!r.n){ list.className="empty"; list.innerHTML="No legs yet."; $("tickers").value=""; }
   else{
     list.className="card";
-    list.innerHTML=r.legs.slice().sort(function(a,b){ return b.p-a.p; }).map(function(l,i){
+    var sorted=r.legs.slice().sort(function(a,b){ return b.p-a.p; });
+    list.innerHTML=sorted.map(function(l,i){
       return '<div class="slipline"><span class="n">'+(i+1)+'</span>'+
         '<span class="b"><span class="nm2"><b>'+esc(l.pick)+'</b> '+
           '<span style="color:var(--muted)">vs '+esc(l.opp)+'</span>'+
@@ -683,8 +704,7 @@ function renderLegs(r){
         '<span class="t">'+esc(l.ticker)+'</span></span>'+
         '<span class="pr">'+cents(l.ask)+'</span></div>';
     }).join("");
-    $("tickers").value=r.legs.slice().sort(function(a,b){ return b.p-a.p; })
-      .map(function(l){ return l.ticker; }).join("\n");
+    $("tickers").value=sorted.map(function(l){ return l.ticker; }).join("\n");
   }
   var dot=$("slipdot"); dot.hidden=!r.n; dot.textContent=r.n;
 }
@@ -693,20 +713,73 @@ function renderBoard(){
   var rows=LEGS.filter(function(l){
     if(!inScope(l,S.scope)) return false;
     if(S.sort==="pinned"&&!S.pins[l.ticker]&&!S.bans[l.ticker]) return false;
+    if(S.sort==="news"&&!((l.research||{}).checked)) return false;
     if(!q) return true;
     return (l.pick+" "+l.opp+" "+l.league_label+" "+l.ticker).toLowerCase().indexOf(q)>=0;
   });
   rows.sort(function(a,b){
     if(S.sort==="spread") return (a.spread==null?9:a.spread)-(b.spread==null?9:b.spread)||b.p-a.p;
     if(S.sort==="vol") return (b.vol||0)-(a.vol||0)||b.p-a.p;
+    if(S.sort==="value") return ratioOf(a)-ratioOf(b);
     return b.p-a.p;
   });
   $("boardcount").textContent=rows.length+(rows.length===1?" leg":" legs");
   var host=$("board");
   if(!rows.length){ host.className="empty"; host.innerHTML="Nothing matches."; return; }
   host.className="legs";
-  host.innerHTML=rows.slice(0,300).map(function(l){ return legRow(l,{board:true}); }).join("");
+  host.innerHTML=rows.slice(0,300).map(function(l){ return legRow(l,true); }).join("");
 }
+
+/* ---- leg detail: the research, in full ---- */
+function openLeg(tk){
+  var l=LEGS.filter(function(x){ return x.ticker===tk; })[0]; if(!l) return;
+  S.leg=tk;
+  var t=tierOf(l.p), r=l.research||{};
+  var rows=[["True odds",cents(l.p)],["You pay",cents(l.ask)],
+    ["Spread",l.spread==null?"—":Math.round(100*l.spread)+"¢"],
+    ["Traded",Math.round(l.vol||0).toLocaleString()+" contracts"],
+    ["Tradeable",isLiquid(l)?"yes":"no — wide or thin"],
+    ["Kick-off",l.date||"—"]];
+  var html='<p class="prose" style="margin-bottom:4px"><b style="color:'+t[2]+'">'+esc(t[1])+
+    '</b> · vs '+esc(l.opp)+(l.home?" (home)":"")+' · '+esc(l.league_label)+
+    (l.draw?' · <span class="draw">DRAW LOSES</span>':'')+'</p>'+
+    '<div class="card"><table style="width:100%;border-collapse:collapse">'+
+    rows.map(function(kv){ return '<tr><td style="padding:8px 12px;font-size:.8rem;color:var(--muted)">'+
+      esc(kv[0])+'</td><td class="mono" style="padding:8px 12px;text-align:right;font-weight:600">'+
+      esc(kv[1])+'</td></tr>'; }).join("")+'</table></div>';
+
+  if(l.flags&&l.flags.length){
+    html+='<div class="banner">⚠ '+l.flags.map(esc).join("<br>")+
+      '<br><span style="font-weight:400">Confirmed against this team, so it is excluded unless you turn that filter off.</span></div>';
+  }
+  if(r.checked){
+    html+='<div class="grp"><p class="lbl">What the news says</p>';
+    if(r.pick_health) html+='<p class="prose"><b>'+esc(l.pick)+':</b> '+esc(r.pick_health)+'</p>';
+    if(r.opp_health)  html+='<p class="prose"><b>'+esc(l.opp)+':</b> '+esc(r.opp_health)+'</p>';
+    (r.unattributed||[]).forEach(function(u){
+      html+='<p class="prose">❔ Could be either side: '+esc(u)+'</p>'; });
+    if((r.headlines||[]).length){
+      html+='<div class="card">'+r.headlines.map(function(h){
+        return '<div class="slipline"><span class="n">'+(h.watch?"⚠":"·")+'</span>'+
+          '<span class="b"><span class="nm2" style="font-size:.85rem">'+esc(h.title)+'</span>'+
+          '<span class="t">'+esc([h.side,h.source,h.date].filter(Boolean).join(" · "))+'</span></span></div>';
+      }).join("")+'</div>';
+    }
+    html+='</div>';
+  } else {
+    html+='<p class="prose">No news checked for this one. Research runs on the legs the '+
+      'builder actually wants, so a leg no ticket uses is usually left unchecked.</p>';
+  }
+  var pinned=!!S.pins[l.ticker], banned=!!S.bans[l.ticker];
+  html+='<button class="btn '+(pinned?"":"primary")+'" type="button" data-pin="'+esc(l.ticker)+'">'+
+    (pinned?"Unpin from every ticket":"Pin into every ticket")+'</button>'+
+    '<button class="btn ghost" type="button" data-ban="'+esc(l.ticker)+'">'+
+    (banned?"Allow this leg again":"Never use this leg")+'</button>';
+  $("ls-name").textContent=l.pick;
+  $("ls-body").innerHTML=html;
+  openSheet("legsheet");
+}
+
 function render(){
   renderScopeBtn(); renderControls();
   var r=summarise(build());
@@ -729,7 +802,8 @@ function showTab(k){
   window.scrollTo(0,0);
 }
 function openSheet(id){ $("scrim").hidden=false; $(id).hidden=false; }
-function closeSheets(){ $("scrim").hidden=true; $("tune").hidden=true; $("scopesheet").hidden=true; }
+function closeSheets(){ $("scrim").hidden=true;
+  ["tune","scopesheet","legsheet"].forEach(function(i){ $(i).hidden=true; }); }
 function toast(msg){
   var t=document.createElement("div"); t.className="toast"; t.textContent=msg;
   document.body.appendChild(t); setTimeout(function(){ t.remove(); },1600);
@@ -740,9 +814,6 @@ $("tabs").addEventListener("click",function(e){
 $("scopebtn").addEventListener("click",function(){ renderScopeList(); openSheet("scopesheet"); });
 $("opentune").addEventListener("click",function(){ openSheet("tune"); });
 $("scrim").addEventListener("click",closeSheets);
-document.addEventListener("click",function(e){
-  if(e.target.closest("[data-close]")) closeSheets();
-});
 $("scopelist").addEventListener("click",function(e){
   var b=e.target.closest("button[data-sc]"); if(!b) return;
   S.scope=b.dataset.sc; S.leagues=leaguesIn(S.scope); S.q=""; $("q").value="";
@@ -751,24 +822,24 @@ $("scopelist").addEventListener("click",function(e){
 $("dial").addEventListener("click",function(e){
   var b=e.target.closest("button[data-k]"); if(!b) return;
   var p=PRESETS.filter(function(x){ return x.key===b.dataset.k; })[0]; if(!p) return;
-  S.preset=p.key; S.target=p.target; S.minLeg=p.min_leg; S.maxLegs=p.max_legs||20;
+  S.preset=p.key; S.payout=p.payout; renderDial(); render();
+});
+$("pay").addEventListener("input",function(){
+  S.payout=Math.round(sliderToPay(+this.value)*100)/100; S.preset="";
   renderDial(); render();
 });
-function slider(id,key,scale,clears){
-  $(id).addEventListener("input",function(){
-    S[key]=(+this.value)/scale; if(clears) S.preset=""; renderDial(); render(); });
-}
-slider("tgt","target",100,true); slider("minl","minLeg",100,true);
-slider("maxl","maxLegs",1,true); slider("sp","maxSpread",100,false);
-slider("vol","minVol",1,false);
+$("maxl").addEventListener("input",function(){ S.maxLegs=+this.value; render(); });
+["liquid","trust","noflag","onegame"].forEach(function(id){
+  $(id).addEventListener("change",function(){
+    S[{liquid:"liquid",trust:"trustCheap",noflag:"noflag",onegame:"onegame"}[id]]=this.checked;
+    render(); });
+});
 $("lgchips").addEventListener("click",function(e){
   var b=e.target.closest("button[data-lg]"); if(!b) return;
   var k=b.dataset.lg,i=S.leagues.indexOf(k);
   if(i>=0){ if(S.leagues.length>1) S.leagues.splice(i,1); } else S.leagues.push(k);
   render();
 });
-$("noflag").addEventListener("change",function(){ S.noflag=this.checked; render(); });
-$("onegame").addEventListener("change",function(){ S.onegame=this.checked; render(); });
 $("stake").addEventListener("input",function(){ S.stake=parseFloat(this.value)||0; render(); });
 $("q").addEventListener("input",function(){ S.q=this.value; renderBoard(); });
 $("reset").addEventListener("click",function(){ S.pins={}; S.bans={}; render(); toast("Pins and bans cleared"); });
@@ -782,24 +853,31 @@ $("sorts").addEventListener("click",function(e){
 $("copy").addEventListener("click",function(){
   var t=$("tickers"); if(!t.value){ toast("No legs to copy"); return; }
   t.focus(); t.select();
-  var ok=false;
-  try{ ok=document.execCommand("copy"); }catch(e){}
-  if(!ok && navigator.clipboard){
+  var ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  if(!ok&&navigator.clipboard){
     navigator.clipboard.writeText(t.value).then(function(){ toast("Tickers copied"); },
       function(){ toast("Select the box below to copy"); });
-    return;
-  }
+    return; }
   toast(ok?"Tickers copied":"Select the box below to copy");
 });
 document.addEventListener("click",function(e){
+  if(e.target.closest("[data-close]")){ closeSheets(); return; }
   if(e.target.id==="fixit"&&FIX){ FIX(); renderDial(); render(); return; }
-  var rm=e.target.closest("[data-rm]");
-  if(rm){ S.bans[rm.dataset.rm]=1; delete S.pins[rm.dataset.rm]; render(); return; }
-  var tk=e.target.closest("[data-tk]");
-  if(tk){ var k=tk.dataset.tk;
-    if(S.bans[k]) delete S.bans[k];
-    else if(S.pins[k]){ delete S.pins[k]; S.bans[k]=1; }
-    else S.pins[k]=1;
+  var open=e.target.closest("[data-open]"); if(open){ openLeg(open.dataset.open); return; }
+  var pin=e.target.closest("[data-pin]");
+  if(pin){ var k=pin.dataset.pin;
+    if(S.pins[k]) delete S.pins[k]; else { S.pins[k]=1; delete S.bans[k]; }
+    render(); openLeg(k); return; }
+  var ban=e.target.closest("[data-ban]");
+  if(ban){ var b=ban.dataset.ban;
+    if(S.bans[b]) delete S.bans[b]; else { S.bans[b]=1; delete S.pins[b]; }
+    render(); openLeg(b); return; }
+  var act=e.target.closest("[data-act]");
+  if(act){ var a=act.dataset.act;
+    if(S.tab==="build"){ S.bans[a]=1; delete S.pins[a]; }
+    else if(S.bans[a]) delete S.bans[a];
+    else if(S.pins[a]){ delete S.pins[a]; S.bans[a]=1; }
+    else S.pins[a]=1;
     render(); }
 });
 
@@ -807,8 +885,8 @@ document.addEventListener("click",function(e){
 $("demo").hidden=!isDemo;
 $("calib").innerHTML="<b>Leg prices.</b> "+esc(SNAP.calibration_note||"");
 $("bt").innerHTML="<b>Whole tickets.</b> "+esc(SNAP.backtest_note||
-  "Replayed over two past weekends the builder came in close to what the prices implied and lost to the spread. "+
-  "Both weekends were decided by one or two high-priced favourites losing, so treat any single result as noise.");
+  "Replayed over two past weekends the builder came in close to what the prices implied "+
+  "and lost to the spread, with one or two upsets deciding each weekend.");
 renderDial(); render(); showTab("build");
 })();
 </script>

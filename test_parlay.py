@@ -196,29 +196,107 @@ check("adding one 50/50 halves the ticket",
       near(plus["win_prob"] / safe["win_prob"], 0.50, 1e-6),
       f"{safe['win_prob']:.4f} -> {plus['win_prob']:.4f}")
 
-# ---------------------------------------------------------------- the ladder
-print("\nladder")
+# ---------------------------------------------------------------- payout builder
+# The rebuild. A price floor made high payouts unreachable and handed back a 1.3x
+# ticket labelled "Lottery"; these lock in the objective that replaced it.
+print("\npayout builder")
 big = []
 for i in range(60):
     p = 0.995 - i * 0.0035
     big.append(leg(round(p, 4), round(min(p + 0.008, 0.998), 4), f"gm{i}", f"T{i}"))
-lad = parlay.ladder(big)
+mixed_board = big + [leg(0.55, 0.565, f"cf{i}", f"C{i}") for i in range(12)]
+
+r = parlay.build_payout(mixed_board, payout=5.0)
+check("a payout target is actually reached", r and r["multiple"] >= 5.0,
+      f'{r["multiple"] if r else None}')
+check("win probability is close to 1/payout, as it must be",
+      abs(r["win_prob"] - 1 / r["multiple"]) < 0.05, f'{r["win_prob"]:.3f} vs {1/r["multiple"]:.3f}')
+check("EV is never positive", r["ev"] <= 0, f'{r["ev"]}')
+
+# the finding that motivated the rebuild
+chalk = parlay.build_payout(mixed_board, payout=5.0, min_leg=0.88)
+free  = parlay.build_payout(mixed_board, payout=5.0, trust_cheap=True)
+check("chalk-only needs more legs for the same payout", chalk["n"] > free["n"],
+      f'{chalk["n"]} vs {free["n"]}')
+check("...and pays worse EV for it", free["ev"] > chalk["ev"], f'{free["ev"]} vs {chalk["ev"]}')
+
+# a payout a board cannot reach must say so rather than return a small ticket
+thin = [leg(0.97, 0.975, "g1", "A"), leg(0.96, 0.965, "g2", "B")]
+short = parlay.build_payout(thin, payout=250.0)
+check("a payout the board cannot reach is flagged, not quietly relabelled",
+      short and not short["reached"] and short["multiple"] < 2,
+      f'{short["multiple"] if short else None}')
+check("...and a reachable one is flagged reached",
+      all(parlay.build_payout(mixed_board, p)["reached"] for p in (2.0, 8.0, 40.0)))
+
+# overshoot: asked for 1.04x, a 50c leg pays 1.98x and wins half as often
+over = parlay.build_payout([leg(0.95, 0.955, "a", "CHALK"), leg(0.50, 0.505, "b", "FLIP")],
+                           payout=1.04, trust_cheap=True)
+check("a small target does not grab a leg that blows past it",
+      over["legs"][0]["ticker"] == "CHALK", over["legs"][0]["ticker"])
+check("...even with the cheap-leg penalty switched off", over["win_prob"] > 0.9)
+
+check("more payout wanted means fewer wins",
+      parlay.build_payout(mixed_board, 2.0)["win_prob"]
+      > parlay.build_payout(mixed_board, 50.0)["win_prob"])
+check("leg cap is honoured", parlay.build_payout(mixed_board, 1e6, max_legs=5)["n"] <= 5)
+check("an empty board builds nothing", parlay.build_payout([], 5.0) is None)
+
+# the cheap-leg penalty
+cheapish = [leg(0.95, 0.955, "a", "CHALK"), leg(0.50, 0.505, "b", "FLIP")]
+pen = parlay.build_payout(cheapish, payout=1.04)
+trust = parlay.build_payout(cheapish, payout=1.04, trust_cheap=True)
+check("with the penalty on, the favourite is preferred",
+      pen["legs"][0]["ticker"] == "CHALK", pen["legs"][0]["ticker"])
+check("discount only bites below 90c",
+      parlay.discount(0.95) == 1.0 and parlay.discount(0.5) < 1.0)
+check("the shown win probability is never discounted",
+      abs(pen["win_prob"] - 0.95) < 1e-9, f'{pen["win_prob"]}')
+
+# liquidity replaced the two price sliders
+check("a wide book is not liquid", not parlay.is_liquid(leg(0.9, 0.92, "x", spread=0.09)))
+check("a thin book is not liquid",
+      not parlay.is_liquid(dict(leg(0.9, 0.91, "x", spread=0.01), vol=3)))
+check("a tight, traded book is liquid at ANY price",
+      parlay.is_liquid(dict(leg(0.42, 0.43, "x", spread=0.01), vol=5000)))
+illiquid = [dict(l, vol=0) for l in mixed_board]
+check("liquid_only can empty a board", parlay.build_payout(illiquid, 5.0) is None)
+check("...and turning it off brings the board back",
+      parlay.build_payout(illiquid, 5.0, liquid_only=False) is not None)
+
+# ---------------------------------------------------------------- the ladder
+print("\nladder")
+lad = parlay.ladder(mixed_board)
 check("the ladder produces tickets", len(lad) >= 3, str(len(lad)))
 check("every ticket carries its preset identity", all("label" in t for t in lad))
-for t in lad:
-    check(f"  {t['label']} clears its own target", t["win_prob"] >= t["target"],
-          f"{t['win_prob']:.4f} < {t['target']}")
-    check(f"  {t['label']} respects its own floor",
-          all(l["p"] >= t["min_leg"] for l in t["legs"]) if "min_leg" in t else True)
 wins = [t["win_prob"] for t in lad]
 mults = [t["multiple"] for t in lad]
 check("riskier tickets win less often", wins == sorted(wins, reverse=True), str(wins))
 check("riskier tickets pay more", mults == sorted(mults), str(mults))
+check("a Lottery rung actually pays like one",
+      [t for t in lad if t["key"] == "lottery"][0]["multiple"] > 50,
+      str([t["multiple"] for t in lad]))
 sigs = [tuple(sorted(l["ticker"] for l in t["legs"])) for t in lad]
 check("no two tickets are the same bet twice", len(sigs) == len(set(sigs)))
 
-thin = parlay.ladder([leg(0.99, 0.992, "g1", "ONLY")])
-check("a one-game board still returns something sane", len(thin) >= 1 and thin[0]["n"] == 1)
+thin1 = parlay.ladder([leg(0.99, 0.992, "g1", "ONLY")])
+check("a one-game board still returns something sane", len(thin1) >= 1 and thin1[0]["n"] == 1)
+
+# ---------------------------------------------------------------- research targeting
+print("\nresearch targeting")
+cands = parlay.candidates(mixed_board, cap=30)
+check("candidates come back", len(cands) > 0, str(len(cands)))
+check("candidates are capped", len(cands) <= 30)
+check("no duplicates", len({c["ticker"] for c in cands}) == len(cands))
+used = set()
+for t in parlay.ladder(mixed_board, exclude_flagged=False):
+    for l in t["legs"]:
+        used.add(l["ticker"])
+check("every leg a ticket would use is a candidate",
+      used <= {c["ticker"] for c in cands} or len(used) > 30,
+      f'{len(used - {c["ticker"] for c in cands})} missed')
+check("cheap legs are researched too, not just chalk",
+      any(c["p"] < 0.7 for c in cands) or not any(l["p"] < 0.7 for l in mixed_board))
 
 # ---------------------------------------------------------------- board + render
 print("\nboard + render")

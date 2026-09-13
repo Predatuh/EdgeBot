@@ -13,12 +13,14 @@ reaching a given payout with more legs takes another bite each time:
     EV = product(mid_i / ask_i) - 1        (always negative, growing with leg count)
 
 Two consequences drive every choice below:
-  1. For a target payout, use the FEWEST legs with the TIGHTEST spreads.
-  2. A single coin-flip leg halves the whole ticket. One 50/50 dropped into 39 legs
-     at 97% takes it from 30% to 15%.
+  1. For a target payout, use the FEWEST legs that get you there.
+  2. Cheap legs are not the enemy; extra legs are. Reaching 5x out of 97c favourites
+     takes 27 of them and costs -21.5% to spread. Eight mid-priced legs reach the
+     same 5x at the same win probability for about -0%.
 
-So the builder solves: hit a target win probability while losing as little as
-possible to spread, subject to a hard floor on any individual leg.
+So the builder solves: given a payout you want, find the highest win probability
+that still pays it. There is no price floor - a 55c game earns its place whenever
+it buys payout more cheaply than another 97c leg would.
 """
 import datetime as dt
 import json
@@ -37,18 +39,48 @@ TIERS = [                       # (min de-vigged probability, key, label, emoji)
     (0.00, "live",   "Coin flip",   "🎲"),
 ]
 
-# Presets target a probability that the WHOLE ticket wins. Risk is dialled with LEG
-# COUNT, never by adding cheap legs: in 422 graded picks, legs priced under 40c came
-# in 6.4% BELOW their price and 40-60c legs 3.4% below, while >=90c favourites beat
-# theirs slightly. Coin flips are not just volatile, they are bad value - which is
-# why every preset keeps a hard floor and buys its payout with more favourites.
+# Presets target a PAYOUT, because that is the thing you actually choose. Win
+# probability is then whatever the board's best route to that payout gives you.
+#
+# The earlier ladder targeted a win probability behind a hard price floor, and that
+# was backwards. Kalshi's spread is about 1c whatever the contract costs, so a cent
+# on a 97c leg is 1% of its value and a cent on a 50c leg is 2% - but reaching a
+# given payout out of 97c legs takes MANY more of them, and you cross a spread every
+# time. On a real board, 5x costs 27 chalk legs at -21.5% EV, or 8 mid-priced legs at
+# about -0%. Same win probability, same payout. Above 5x the chalk route does not
+# exist at all, which is why a "Lottery" rung used to hand back 1.3x.
+#
+# So there is no price floor. The builder takes whichever legs buy the payout most
+# cheaply in win probability, and a 55c game earns its place when it is the efficient
+# route. What still protects you is liquidity, not price.
+# Win probability is about 1/payout however you build it - that identity is not
+# negotiable, so these rungs are really one continuous dial from "nearly certain,
+# pays little" to "almost never, pays a fortune".
 PRESETS = [
-    {"key": "vault",    "label": "Vault",    "target": 0.90, "min_leg": 0.97, "max_legs": 8,  "emoji": "🔒"},
-    {"key": "safe",     "label": "Safe",     "target": 0.75, "min_leg": 0.95, "max_legs": 14, "emoji": "🛡️"},
-    {"key": "balanced", "label": "Balanced", "target": 0.50, "min_leg": 0.92, "max_legs": 20, "emoji": "⚖️"},
-    {"key": "swing",    "label": "Swing",    "target": 0.25, "min_leg": 0.88, "max_legs": 30, "emoji": "🎯"},
-    {"key": "lottery",  "label": "Lottery",  "target": 0.08, "min_leg": 0.85, "max_legs": 45, "emoji": "🎰"},
+    {"key": "banker",  "label": "Banker",  "payout": 1.15,  "emoji": "🔒"},
+    {"key": "solid",   "label": "Solid",   "payout": 2.0,   "emoji": "🛡️"},
+    {"key": "swing",   "label": "Swing",   "payout": 8.0,   "emoji": "⚖️"},
+    {"key": "longshot","label": "Longshot","payout": 40.0,  "emoji": "🎯"},
+    {"key": "lottery", "label": "Lottery", "payout": 250.0, "emoji": "🎰"},
 ]
+
+# What our own 422 graded picks did against their price, by bucket. Favourite-longshot
+# bias is one of the most replicated findings in betting markets and our sample points
+# the same way, so it is applied when CHOOSING legs - a cheap leg has to be enough
+# cheaper to be worth it. It is never applied to the win probability shown, which
+# stays the market's own number. `trust_cheap=True` turns the penalty off.
+def discount(p):
+    if p >= 0.90:
+        return 1.000
+    if p >= 0.60:
+        return 0.990
+    if p >= 0.40:
+        return 0.966
+    return 0.936
+
+MAX_LEGS = 40           # a ticket longer than this is unmanageable to actually place
+LIQUID_SPREAD = 0.03    # a wider book than this is not really tradeable at the shown price
+LIQUID_VOL = 50         # contracts traded; below this the price is barely a price
 
 # Observed calibration of the Kalshi price, from our own graded picks. Reported to the
 # user as context only - it is NOT applied to any probability. n is small and these are
@@ -133,7 +165,7 @@ def legs_from_events(evs, league, label):
                 "close": ev.get("close", ""),
                 "date": ev.get("date", ""),
                 "tier": key, "tier_label": tlabel, "emoji": emoji,
-                "flags": [], "notes": "",
+                "flags": [], "notes": "", "research": None,
             })
     return out
 
@@ -177,14 +209,21 @@ def build(legs, target=0.5, min_leg=0.90, max_legs=12, exclude_flagged=True,
 
 
 def summarise(chosen):
-    """True win probability, what Kalshi pays, and the EV of the ticket."""
+    """True win probability, what Kalshi pays, and the EV of the ticket.
+
+    EV uses min(p, ask) per leg. On a zero-vig book the de-vigged mid can land a
+    hair above the ask through sub-cent rounding, and a tool that advertises
+    positive edge off a rounding artefact is worse than one that shows none.
+    """
     win = 1.0
     cost = 1.0                     # cost of $1 payout = product of asks
+    fair = 1.0                     # same, but never crediting a leg with edge
     for l in chosen:
         win *= l["p"]
         cost *= l["ask"]
+        fair *= min(l["p"], l["ask"])
     mult = (1.0 / cost) if cost > 0 else 0.0
-    ev = win * mult - 1.0          # per $1 staked
+    ev = (fair * mult - 1.0) if cost > 0 else -1.0     # per $1 staked, never positive
     return {
         "legs": chosen,
         "n": len(chosen),
@@ -200,15 +239,88 @@ def summarise(chosen):
     }
 
 
+def is_liquid(l, spread=LIQUID_SPREAD, vol=LIQUID_VOL):
+    """Can you actually get filled near the shown price?
+
+    This replaced the two price sliders. Price never told you whether a market was
+    real; the book does. A 1c spread on a heavily traded game is tradeable at any
+    price, and a 9c spread on nothing is not tradeable at 97c.
+    """
+    if l.get("spread") is not None and l["spread"] > spread:
+        return False
+    return (l.get("vol") or 0) >= vol
+
+
+def build_payout(legs, payout=5.0, max_legs=MAX_LEGS, exclude_flagged=True,
+                 one_per_game=True, liquid_only=True, min_leg=0.0, trust_cheap=False):
+    """The best shot at `payout`: the highest win probability that still pays it.
+
+    You need the asks to multiply down to 1/payout, so each leg contributes
+    -log(ask) toward that and costs -log(p) of your win probability. Taking the
+    legs with the least probability cost per unit of payout is the right objective,
+    and it is what lets a 55c game beat nine 97c favourites.
+
+    The catch is overshoot. Ranking purely on that ratio, a 1.04x target grabs a
+    50c leg - which pays 1.98x and wins 50%, when one 95c favourite pays 1.05x and
+    wins 95%. So a leg that would blow past what is left to buy is only taken when
+    nothing smaller will do, and then the cheapest one in win probability wins.
+    """
+    pool = [l for l in legs if l["p"] >= min_leg and 0 < l["ask"] < 0.999]
+    if exclude_flagged:
+        pool = [l for l in pool if not l["flags"]]
+    if liquid_only:
+        pool = [l for l in pool if is_liquid(l)]
+    if not pool:
+        return None
+
+    def est(l):
+        """What this leg is worth, never crediting it with edge, and docking a cheap
+        one by how much its price band has historically underperformed."""
+        v = min(l["p"], l["ask"])
+        return v if trust_cheap else v * discount(l["p"])
+
+    def gain(l):
+        return -math.log(l["ask"])              # payout this leg buys
+
+    def ratio(l):
+        g = gain(l)
+        return (-math.log(max(est(l), 1e-9)) / g) if g > 1e-12 else float("inf")
+
+    need = math.log(max(payout, 1.0000001))
+    got, chosen, used, left = 0.0, [], set(), sorted(pool, key=lambda l: (ratio(l), -l["p"]))
+    while got < need - 1e-12 and len(chosen) < max_legs:
+        avail = [l for l in left if not (one_per_game and l["event_id"] in used)]
+        if not avail:
+            break
+        rem = need - got
+        fits = [l for l in avail if gain(l) <= rem + 1e-12]
+        # a leg that fits keeps the budget alive for cheaper ones after it; when
+        # none fits, any of them finishes the job, so take the one that costs the
+        # least win probability rather than the one with the prettiest ratio
+        pick = min(fits, key=ratio) if fits else max(avail, key=est)
+        chosen.append(pick)
+        used.add(pick["event_id"])
+        got += gain(pick)
+        left = [l for l in left if l is not pick]
+    if not chosen:
+        return None
+    r = summarise(chosen)
+    r["requested"] = payout
+    # Below this the rung is not the rung. A board that cannot reach 250x should say
+    # so, not hand back 1.3x with the word "Lottery" on it.
+    r["reached"] = r["multiple"] >= payout * 0.85
+    return r
+
+
 def ladder(legs, presets=None, **kw):
     """One parlay per preset, skipping any the board cannot support."""
     out = []
     for ps in (presets or PRESETS):
-        r = build(legs, target=ps["target"], min_leg=ps["min_leg"],
-                  max_legs=ps.get("max_legs", 20), **kw)
+        r = build_payout(legs, payout=ps["payout"],
+                         max_legs=ps.get("max_legs", MAX_LEGS), **kw)
         if r:
             r.update({k: ps[k] for k in ("key", "label", "emoji")})
-            r["target"] = ps["target"]
+            r["payout"] = ps["payout"]
             out.append(r)
     # two presets can land on the same ticket when the board is thin; keep the first
     seen, uniq = set(), []
@@ -350,26 +462,52 @@ def fetch(cfg, days=8, leagues=None):
     return legs
 
 
-SPORT_HINT = {"nfl": "football", "ncaaf": "football", "cfl": "football",
-              "mlb": "baseball", "atp": "tennis", "wta": "tennis", "challenger": "tennis",
-              "cricket_t20i": "cricket", "cricket_odi": "cricket",
-              "cricket_test": "cricket", "cpl": "cricket"}
+def candidates(legs, cap=60):
+    """The legs a ticket would actually use, across every scope and rung.
+
+    Research used to run down the board by price, which now researches the wrong
+    legs entirely: a 60c game can be in four tickets while a 96c blowout is in none.
+    Asking the builder which legs it wants, then researching those, spends the same
+    budget on the games you might really bet.
+    """
+    want, order = set(), []
+    for sc in SCOPES:
+        pool = scope_legs(legs, sc["key"])
+        if not pool:
+            continue
+        for t in ladder(pool, exclude_flagged=False):
+            for l in t["legs"]:
+                if l["ticker"] not in want:
+                    want.add(l["ticker"])
+                    order.append(l)
+    # top-up with the safest legs on the board, so a pinned favourite is covered too
+    for l in sorted(legs, key=lambda x: -x["p"]):
+        if len(order) >= cap:
+            break
+        if l["ticker"] not in want:
+            want.add(l["ticker"])
+            order.append(l)
+    return order[:cap]
 
 
-def add_research(legs, cfg, min_p=0.80, cap=40):
-    """Flag legs whose team has injury/lineup news. A 97c favourite with its starting
-    quarterback out is the single most dangerous thing you can put in a parlay, because
-    the price has not moved but the probability has."""
+def add_research(legs, cfg, cap=60):
+    """Attach what the news says about each candidate leg.
+
+    Two separate things come back. A `flag` is an injury we can pin on THIS team and
+    is strong enough to act on. Everything else is a `note` - shown, never acted on,
+    because a filter that quietly deletes a good leg is worse than one that warns.
+    """
     try:
         import research
     except ImportError:
         return 0
     research.configure(cfg.get("research"))
     if research.available():
+        print(f"[parlay] research off: {research.available()}")
         return 0
     date = dt.date.today().isoformat()
     done = 0
-    for l in sorted([x for x in legs if x["p"] >= min_p], key=lambda x: -x["p"])[:cap]:
+    for l in candidates(legs, cap):
         try:
             brief = research.lookup(os.path.join(HERE, "data", "v2"), date,
                                     l["league_label"], l["game"], l["pick"], l["opp"],
@@ -381,16 +519,30 @@ def add_research(legs, cfg, min_p=0.80, cap=40):
         if not brief:
             continue
         done += 1
+        heads = [{"side": h.get("side", ""), "title": h.get("title", ""),
+                  "source": h.get("source", ""), "date": h.get("date", ""),
+                  "watch": bool(h.get("watch"))}
+                 for h in brief.get("headlines", [])][:5]
+        l["research"] = {
+            "checked": True,
+            "pick_health": brief.get("pick_health", ""),
+            "opp_health": brief.get("opp_health", ""),
+            "unattributed": list(brief.get("unattributed", []))[:2],
+            "headlines": heads,
+        }
         if brief.get("red_flags"):
             l["flags"] = list(brief["red_flags"])[:2]
-        # News we could not pin on one team is shown, never acted on: dropping a
-        # 97c favourite because its OPPONENT lost a player is the wrong direction.
         notes = [f"could be either side: {t}" for t in brief.get("unattributed", [])[:1]]
-        notes += [f"{h['side']}: {h['title']}" for h
-                  in [x for x in brief.get("headlines", []) if x.get("watch")][:2]]
+        notes += [f"{h['side']}: {h['title']}" for h in heads if h["watch"]][:2]
         if notes:
             l["notes"] = " | ".join(notes)[:240]
     return done
+
+
+SPORT_HINT = {"nfl": "football", "ncaaf": "football", "cfl": "football",
+              "mlb": "baseball", "atp": "tennis", "wta": "tennis", "challenger": "tennis",
+              "cricket_t20i": "cricket", "cricket_odi": "cricket",
+              "cricket_test": "cricket", "cpl": "cricket"}
 
 
 def snapshot(cfg=None, days=8, scope="football", leagues=None):
@@ -405,6 +557,8 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
     n = add_research(legs, cfg)
     flagged = sum(1 for l in legs if l["flags"])
     print(f"[parlay] researched {n} legs, {flagged} carry a red flag")
+    print(f"[parlay] {sum(1 for l in legs if (l.get('research') or {}).get('checked'))} legs "
+          f"carry news the app can show")
     legs.sort(key=lambda l: -l["p"])
     scopes = live_scopes(legs)
     if not any(sc["key"] == scope for sc in scopes):

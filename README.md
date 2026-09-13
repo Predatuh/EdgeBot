@@ -223,11 +223,29 @@ worth 40¢. The draw stays in the denominator, and any leg that can be drawn is 
 **The one fact it is built around:** Kalshi prices a combo as the product of its legs,
 so a fairly priced parlay wins `1 / payout` of the time. A 3-leg ticket paying 11× and a
 39-leg ticket paying 11× are the same 9% bet — the long one just crosses 39 spreads to
-get there. Leg count is not the risk; the payout is. So the risk dial moves a **target
-win probability**, and the builder answers with the fewest, tightest-spread legs that
-reach it, subject to a hard floor on any single leg.
+get there. Leg count is not the risk; the payout is. **You pick the payout; the builder
+returns the highest win probability that still pays it.**
 
-That floor is the point. One 50/50 dropped into twelve 97¢ legs halves the whole ticket.
+**There is no price floor, and that is the whole correction.** The first version targeted
+a win probability behind a hard floor on each leg, which was backwards. Kalshi's spread is
+about 1¢ whatever the contract costs, so a cent on a 97¢ leg is 1% of its value and a cent
+on a 50¢ leg is 2% — but reaching a payout out of 97¢ favourites takes far more of them,
+and you cross a spread every time. Measured on a real board:
+
+| to win | chalk only (≥88¢) | any price allowed |
+|---|---|---|
+| 5× | 27 legs, 15.4%, **−21.5% EV** | 8 legs, 15.7%, **−0.0% EV** |
+| 10× | *unreachable* | 9 legs, 8.9% |
+| 250× | *unreachable* | 15 legs, 0.2% |
+
+Same win chance, same payout, a third of the legs. Above 5× the chalk route does not
+exist at all — which is why a "Lottery" rung used to hand back 1.3×. So a 55¢ game earns
+its place whenever it buys payout more cheaply than another favourite would.
+
+What protects you is the book, not the price: `is_liquid()` requires a spread of 3¢ or
+tighter on a market that is actually trading. And `discount()` docks legs under 90¢ by
+how much that price band has historically underperformed, so a coin flip has to be
+genuinely cheap to get picked — `trust_cheap=True` turns that off.
 
 ```
 python parlay.py                                   # print the football ladder
@@ -247,10 +265,15 @@ carries every scope.
 page is a phone bookmark. Every slider recomputes in the browser from data baked into the
 file, so it also works saved locally with no connection.
 
-Presets run Vault (90% target, 97¢ floor) → Safe → Balanced → Swing → Lottery (8% target).
-When a scope has nothing that clears the current floor — tapping NFL under a 97¢ floor is
-the usual case, since college football has the blowouts and the NFL does not — the page
-says which filter bit, names the board's best leg, and offers the one tap that fixes it.
+Rungs are payouts: Banker 1.15× → Solid 2× → Swing 8× → Longshot 40× → Lottery 250×.
+Win probability is about `1/payout` however a ticket is built, so that ladder runs from
+~87% to ~0.4%. A board that cannot reach a rung says so and offers the payout it *can*
+reach, rather than relabelling a small ticket.
+
+Research runs on `candidates()` — the legs the builder actually wants across every scope
+and rung — not on the highest prices. On a live board those two sets overlapped by only
+18 of 40. Findings are attached to the leg and shown in the app; only an injury we can pin
+on that team filters anything out.
 
 Leagues come from `config.yaml`, plus `parlay.FOOTBALL` for anything config lacks (CFL).
 `enabled: false` and `stake: false` are about what the bot *rates*, and there is no rating
