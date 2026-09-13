@@ -5879,5 +5879,179 @@
    }
   ],
   "_ts": "2026-09-13T21:04Z"
+ },
+ "WTA Tennis|Cristina Bucsa vs Bianca Andreescu|Cristina Bucsa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Bianca Andreescu",
+    "title": "Bianca Andreescu",
+    "source": "olympic.ca",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Cristina Bucsa",
+    "title": "Cristina Bucsa v Bianca Vanessa Andreescu LIVE 13/09/2026 | Tennis",
+    "source": "Flashscore UK",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cristina Bucsa",
+    "title": "Bucsa / Melichar-Martinez vs Cabezas Dominguez S / Gomez Pezuela Cano",
+    "source": "Robinhood",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cristina Bucsa",
+    "title": "Bucsa vs. Gauff | Round of 32 US Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bianca Andreescu",
+    "title": "Cristina Buc\u0219a vs Bianca Andreescu \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bianca Andreescu",
+    "title": "Cristina Bucsa v Bianca Vanessa Andreescu LIVE 13/09/2026 | Tennis",
+    "source": "Flashscore UK",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-13T23:00Z"
+ },
+ "NFL|Arizona @ Los Angeles C|Arizona": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Myles Garrett to IR with knee surgery, Rams face Cardinals in Week 6; Is Jeremiyah Love playing today? Latest injury update on Cardinals RB for Week 1",
+  "opp_health": "Predicting Chargers Starters vs Cardinals for NFL Week 1: Injuries, Matchup Shakeups; Injury Report: Week 1 at Chargers",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles C",
+    "title": "Injury Report: Week 1 at Chargers",
+    "source": "Arizona Cardinals",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Chargers vs. Cardinals Injury Report: Tuli Tuipulotu Questionable for Week 1",
+    "source": "Chargers",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Experts release first-look Seahawks vs. Cardinals predictions, preview, and best bets for Week 2; Darnold\u2019s hip injury shifts Seattle markets",
+    "source": "OregonLive.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Myles Garrett to IR with knee surgery, Rams face Cardinals in Week 6",
+    "source": "Arizona Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Is Jeremiyah Love playing today? Latest injury update on Cardinals RB for Week 1",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Predicting Chargers Starters vs Cardinals for NFL Week 1: Injuries, Matchup Shakeups",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T23:00Z"
+ },
+ "MLS|New England @ Chicago Fire|New England": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds; Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Starting Lineups (September 13) | Revolution at Chicago Fire FC; Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Starting Lineups (September 13) | Revolution at Chicago Fire FC",
+    "source": "revolutionsoccer.net",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T23:00Z"
  }
 }
