@@ -1,0 +1,31 @@
+name: Pages Verify
+on: {workflow_dispatch: {}}
+permissions: {contents: read, pages: read}
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}", R: "${{ github.repository }}"}
+        run: |
+          echo "=== how Pages is configured"
+          gh api "repos/$R/pages" --jq '{status,html_url,build_type,source}' || echo "(unreadable)"
+          URL=$(gh api "repos/$R/pages" --jq .html_url 2>/dev/null)
+          echo
+          echo "=== does the site serve the app?  $URL"
+          for path in "" "manifest.webmanifest" "icon-192.png"; do
+            code=$(curl -s -o /tmp/o -w '%{http_code}' -L "${URL}${path}")
+            size=$(wc -c </tmp/o)
+            printf '   %-24s HTTP %s  %s bytes\n' "/${path:-(index)}" "$code" "$size"
+          done
+          echo
+          echo "=== is it really the app?"
+          curl -sL "$URL" -o /tmp/page.html
+          grep -o '<title>[^<]*</title>' /tmp/page.html || echo "   no title found"
+          for want in 'Target payout' 'data-tab="slip"' 'raw.githubusercontent.com'; do
+            grep -q "$want" /tmp/page.html && echo "   ok   contains: $want" || echo "   MISSING: $want"
+          done
+          echo
+          echo "=== the feed the app refreshes from"
+          curl -s -o /tmp/d.json -w '   raw parlay.json HTTP %{http_code}\n' \
+            "https://raw.githubusercontent.com/$R/main/data/v2/parlay.json"
+          python3 -c "import json;d=json.load(open('/tmp/d.json'));print('   board:',d['board']['games'],'games,',d['board']['legs'],'legs, generated',d['generated_utc'])"
