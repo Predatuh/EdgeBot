@@ -33,7 +33,7 @@ def board_at(cfg, cutoff, days, leagues=None, max_games=None):
     """The legs that were actually buyable at `cutoff`, plus who went on to win."""
     ts = int(cutoff.timestamp())
     horizon = {(cutoff.date() + dt.timedelta(days=n)).isoformat() for n in range(days + 1)}
-    legs, winners, seen, skipped = [], {}, 0, 0
+    legs, winners, seen, skipped, quote_ts = [], {}, 0, 0, []
 
     for key in (leagues or parlay.all_leagues(cfg)):
         spec = parlay.league_spec(cfg, key)
@@ -54,11 +54,15 @@ def board_at(cfg, cutoff, days, leagues=None, max_games=None):
                 continue
             priced = []
             for s in sides:
-                bid, ask, mid = kalshi.quote_at(spec["ticker"], s["ticker"], ts)
-                if mid is None:
+                q = kalshi.quote_at(spec["ticker"], s["ticker"], ts)
+                if not q:
                     skipped += 1
                     continue
-                priced.append(dict(s, prob=mid, ask=ask, bid=bid, vol=0, oi=0))
+                if q["ts"] > ts:          # belt and braces; quote_at already filters
+                    raise AssertionError(f"{s['ticker']} quote is after the cutoff")
+                quote_ts.append(q["ts"])
+                priced.append(dict(s, prob=q["mid"], ask=q["ask"], bid=q["bid"],
+                                   vol=0, oi=0))
             if len(priced) != len(sides):
                 continue                       # a half-quoted game is not a game you could bet
             seen += 1
@@ -72,6 +76,12 @@ def board_at(cfg, cutoff, days, leagues=None, max_games=None):
                 winners[s["ticker"]] = bool(s["won"])
         print(f"[backtest] {key}: {len(evs)} settled games in window -> {got} legs")
     print(f"[backtest] {seen} fully quoted games, {skipped} sides had no quote at the cutoff")
+    if quote_ts:
+        newest = max(quote_ts)
+        ages = sorted((ts - q) / 3600 for q in quote_ts)
+        print(f"[backtest] every quote predates the cutoff: newest is "
+              f"{(ts - newest) / 60:.0f} min before it; "
+              f"quote age median {ages[len(ages) // 2]:.1f}h, oldest {ages[-1]:.1f}h")
     return legs, winners
 
 

@@ -3,7 +3,7 @@ name: Parlay Backtest
 on:
   push:
     branches: ["claude/**"]
-    paths: ["backtest.py", "test_backtest.py", "probe_candles.py", ".github/workflows/backtest.yml"]
+    paths: ["backtest.py", "test_backtest.py", "kalshi.py", ".github/workflows/backtest.yml"]
   workflow_dispatch:
     inputs:
       at:
@@ -32,10 +32,6 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Check the backtest cannot see the future
         run: python test_backtest.py
-      - name: Probe the candlestick payload
-        if: hashFiles('probe_candles.py') != ''
-        continue-on-error: true
-        run: python probe_candles.py
       - name: Replay the board
         run: |
           python backtest.py \

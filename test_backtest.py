@@ -40,9 +40,60 @@ def fake_settled(favourite_won=True, n=6):
 
 
 def install(evs, quotes, leagues=("nfl",)):
+    def stub(series, ticker, ts, **kw):
+        q = quotes.get(ticker)
+        return None if not q else {"bid": q[0], "ask": q[1], "mid": q[2], "ts": ts - 3600}
     kalshi.settled_events = lambda series, ts=None, order="away_home": list(evs)
-    kalshi.quote_at = lambda series, ticker, ts, **kw: quotes.get(ticker, (None, None, None))
+    kalshi.quote_at = stub
     parlay.all_leagues = lambda cfg: list(leagues)
+
+
+# ---------------------------------------------------------------- candle parsing
+# The first live run priced 0 of 665 sides and raised nothing, because Kalshi
+# returns dollar STRINGS under <field>_dollars and the parser asked for `close`.
+print("\ncandle parsing")
+REAL = {"end_period_ts": 1789131600, "volume_fp": "2521.46",
+        "price": {"close_dollars": "0.9900", "open_dollars": "0.9900"},
+        "yes_bid": {"close_dollars": "0.9900", "open_dollars": "0.9900"},
+        "yes_ask": {"close_dollars": "1.0000", "open_dollars": "1.0000"}}
+check("a dollar string parses to a probability",
+      kalshi._candle_price(REAL["yes_bid"]) == 0.99,
+      str(kalshi._candle_price(REAL["yes_bid"])))
+check("the ask side too", kalshi._candle_price(REAL["yes_ask"]) == 1.0)
+check("integer cents still work (older payloads)",
+      kalshi._candle_price({"close": 47}) == 0.47)
+check("a missing book is not a price", kalshi._candle_price(None) is None)
+check("an unparseable string is not a price",
+      kalshi._candle_price({"close_dollars": "n/a"}) is None)
+check("an empty book is not a price", kalshi._candle_price({}) is None)
+check("a candle timestamp is read", kalshi._candle_ts(REAL) == 1789131600)
+check("a candle with NO readable timestamp is rejected, not defaulted",
+      kalshi._candle_ts({"yes_bid": {"close_dollars": "0.50"}}) is None)
+
+# quote_at must never hand back a quote from after the cutoff.
+CUT_TS = 1789131600
+def fake_candles(rows):
+    kalshi.candles = lambda series, ticker, a, b, period=60: rows
+fake_candles([
+    {"end_period_ts": CUT_TS - 7200, "yes_bid": {"close_dollars": "0.60"}, "yes_ask": {"close_dollars": "0.62"}},
+    {"end_period_ts": CUT_TS - 3600, "yes_bid": {"close_dollars": "0.64"}, "yes_ask": {"close_dollars": "0.66"}},
+    {"end_period_ts": CUT_TS + 3600, "yes_bid": {"close_dollars": "0.99"}, "yes_ask": {"close_dollars": "1.00"}},
+])
+q = kalshi.quote_at("S", "T", CUT_TS)
+check("quote_at takes the latest candle at or before the cutoff",
+      q and abs(q["bid"] - 0.64) < 1e-9 and abs(q["ask"] - 0.66) < 1e-9, str(q))
+check("...and never the one after it, however tempting",
+      q and q["ts"] == CUT_TS - 3600 and q["ask"] < 0.9, str(q))
+fake_candles([{"end_period_ts": CUT_TS + 60, "yes_bid": {"close_dollars": "0.99"},
+               "yes_ask": {"close_dollars": "1.00"}}])
+check("a market only quoted after the cutoff yields nothing",
+      kalshi.quote_at("S", "T", CUT_TS) is None)
+fake_candles([{"yes_bid": {"close_dollars": "0.99"}, "yes_ask": {"close_dollars": "1.00"}}])
+check("an undated candle is discarded, not trusted",
+      kalshi.quote_at("S", "T", CUT_TS) is None)
+fake_candles([{"end_period_ts": CUT_TS - 60, "yes_bid": {"close_dollars": "0.80"},
+               "yes_ask": {"close_dollars": "0.20"}}])
+check("a crossed book is discarded", kalshi.quote_at("S", "T", CUT_TS) is None)
 
 
 # ---------------------------------------------------------------- leakage guard

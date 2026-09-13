@@ -213,29 +213,55 @@ def candles(series, ticker, start_ts, end_ts, period=60):
     return js.get("candlesticks", [])
 
 
-def quote_at(series, ticker, ts, look_back_h=36, period=60):
-    """(bid, ask, mid) as of `ts`, from the last candle that closed at or before it.
+def _candle_price(book, field="close"):
+    """Kalshi returns candle prices as dollar STRINGS ("0.9900") under
+    <field>_dollars. Reading them as `close` in cents - which is what the older
+    market payloads use - silently yields None on every candle, which is how the
+    first backtest priced 0 of 665 sides without raising a thing."""
+    if not isinstance(book, dict):
+        return None
+    v = book.get(field + "_dollars")
+    if v is not None:
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+    v = book.get(field)
+    return v / 100.0 if isinstance(v, (int, float)) else None
 
-    Returns (None, None, None) when the market had no quote yet - a market listed
-    after the cutoff cannot be in a ticket built at the cutoff, and pretending
-    otherwise is exactly the hindsight this whole exercise is trying to avoid.
+
+def _candle_ts(c):
+    """When the candle closed, or None. Never a default: a candle whose time we
+    cannot read must be discarded, not assumed to predate the cutoff."""
+    for k in ("end_period_ts", "end_ts", "period_end_ts", "ts"):
+        v = c.get(k)
+        if isinstance(v, (int, float)) and v > 0:
+            return int(v)
+    return None
+
+
+def quote_at(series, ticker, ts, look_back_h=48, period=60):
+    """The market's last bid/ask at or before `ts`, as {bid, ask, mid, ts}, or None.
+
+    None when the market had no quote yet - a market listed after the cutoff could
+    not have been in a ticket built at the cutoff, and back-filling one is exactly
+    the hindsight this is meant to avoid.
     """
     cs = candles(series, ticker, ts - look_back_h * 3600, ts, period)
     best = None
     for c in cs:
-        if c.get("end_period_ts", 0) > ts:
+        cts = _candle_ts(c)
+        if cts is None or cts > ts:
+            continue                      # unknown or after the cutoff: not usable
+        bid = _candle_price(c.get("yes_bid"))
+        ask = _candle_price(c.get("yes_ask"))
+        if bid is None or ask is None:
             continue
-        b = (c.get("yes_bid") or {}).get("close")
-        a = (c.get("yes_ask") or {}).get("close")
-        if b is None or a is None:
+        if not (0 <= bid <= ask <= 1) or ask <= 0 or bid >= 1:
             continue
-        best = (b / 100.0, a / 100.0)
-    if not best:
-        return None, None, None
-    bid, ask = best
-    if ask <= 0 or bid >= 1 or ask < bid:
-        return None, None, None
-    return bid, ask, (bid + ask) / 2
+        if best is None or cts > best["ts"]:
+            best = {"bid": bid, "ask": ask, "mid": (bid + ask) / 2, "ts": cts}
+    return best
 
 
 def match_sides(ev):
