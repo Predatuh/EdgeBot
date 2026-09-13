@@ -206,11 +206,63 @@ actually disagrees, over 100+ graded picks it did not choose. The gates
 - ESPN and Open-Meteo are free public APIs; if one hiccups the pick still goes out
   without that note.
 
+## Parlays (`parlay.py` + `webapp/`)
+
+A separate tool. It does not use Elo, the edge model or staking — it builds combos out
+of Kalshi's own prices, because the record says the market is the better estimate and a
+parlay is a market product, not a model product.
+
+One fetch pulls every league; **scopes** are one-tap filters over that board — Football
+(NFL + NCAAF + CFL), NFL alone, College alone, Soccer, Tennis, Baseball, Cricket, or
+Everything. Switching between them on the phone is instant and needs no connection.
+
+**Draws.** Soccer and Test cricket price three outcomes, and a draw settles a win
+contract at zero. A two-way de-vig would report P(win | no draw) — 55¢ for a leg really
+worth 40¢. The draw stays in the denominator, and any leg that can be drawn is badged.
+
+**The one fact it is built around:** Kalshi prices a combo as the product of its legs,
+so a fairly priced parlay wins `1 / payout` of the time. A 3-leg ticket paying 11× and a
+39-leg ticket paying 11× are the same 9% bet — the long one just crosses 39 spreads to
+get there. Leg count is not the risk; the payout is. So the risk dial moves a **target
+win probability**, and the builder answers with the fewest, tightest-spread legs that
+reach it, subject to a hard floor on any single leg.
+
+That floor is the point. One 50/50 dropped into twelve 97¢ legs halves the whole ticket.
+
+```
+python parlay.py                                   # print the football ladder
+python parlay.py --scope nfl                       # NFL only
+python parlay.py --scope all                       # every sport Kalshi lists
+python parlay.py --html board.html                 # the phone app, one self-contained file
+python parlay.py --json data/v2/parlay.json --discord
+python parlay.py --offline --html board.html       # no network; page falls back to an example board
+python test_parlay.py                              # 90+ offline checks on the math
+```
+
+`--scope` only chooses which ladder gets printed and posted to Discord; the page always
+carries every scope.
+
+`.github/workflows/parlay.yml` runs it daily, posts the card to Discord, and writes
+`docs/index.html` — open **Settings → Pages → Deploy from branch → `/docs`** once and the
+page is a phone bookmark. Every slider recomputes in the browser from data baked into the
+file, so it also works saved locally with no connection.
+
+Presets run Vault (90% target, 97¢ floor) → Safe → Balanced → Swing → Lottery (8% target).
+When a scope has nothing that clears the current floor — tapping NFL under a 97¢ floor is
+the usual case, since college football has the blowouts and the NFL does not — the page
+says which filter bit, names the board's best leg, and offers the one tap that fixes it.
+
+Leagues come from `config.yaml`, plus `parlay.FOOTBALL` for anything config lacks (CFL).
+`enabled: false` and `stake: false` are about what the bot *rates*, and there is no rating
+in a parlay, so those leagues are still offered here.
+
 ## Layout
 
 Flat: `main.py` (orchestration + model), `kalshi.py` (market + results),
 `espn.py` (injuries/venue), `weather.py`, `elo.py`, `edge.py` (de-vig, Kelly),
 `state.py` (persistence + analytics), `research.py` (Claude web research),
 `tipsters.py` (outside slates), `notify.py` (Discord, rate-limit aware),
-`merge_state.py` (unions the append-only logs before each commit). Adding a factor is
+`merge_state.py` (unions the append-only logs before each commit),
+`parlay.py` + `webapp/parlay.html` (the football parlay builder and its phone app).
+Adding a factor is
 one function plus one adjustment line in `model_game`.

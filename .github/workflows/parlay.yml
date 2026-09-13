@@ -1,0 +1,86 @@
+name: Parlays
+
+on:
+  # Dispatch only finds a workflow that exists on the default branch, so while this
+  # feature lives on a branch the push trigger is how it gets a real run. The paths
+  # filter is what stops it looping: the run commits docs/ and data/, never these.
+  push:
+    branches: ["claude/**"]
+    paths:
+      - "parlay.py"
+      - "test_parlay.py"
+      - "webapp/**"
+      - ".github/workflows/parlay.yml"
+  schedule:
+    - cron: "0 14 * * *"      # mid-morning ET, before the early kickoffs
+    - cron: "0 23 * * 4,5,6"  # Thu/Fri/Sat night, once the week's board is fully listed
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days of games to pull"
+        default: "8"
+      scope:
+        description: "Which board the Discord card shows (the page carries them all)"
+        default: "football"
+        type: choice
+        options: [football, nfl, ncaaf, soccer, tennis, mlb, cricket, all]
+      post:
+        description: "Post the card to Discord"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+# Shares data/ with the other workflows, so it takes its turn rather than racing them.
+concurrency:
+  group: edgebot-parlay
+  cancel-in-progress: false
+
+jobs:
+  parlay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      # The builder's math is the product; a wrong one looks just as confident.
+      - name: Check the parlay math
+        run: python test_parlay.py
+
+      - name: Build the board
+        env:
+          DISCORD_WEBHOOK_URL: ${{ inputs.post == false && '' || secrets.DISCORD_WEBHOOK_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python parlay.py \
+            --days "${{ inputs.days || 8 }}" \
+            --scope "${{ inputs.scope || 'football' }}" \
+            --json data/v2/parlay.json \
+            --html docs/index.html \
+            --url "${{ vars.PARLAY_URL || format('https://{0}.github.io/{1}/', github.repository_owner, 'EdgeBot') }}" \
+            --discord
+
+      - name: Commit the board
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add docs/ data/v2/parlay.json
+          git diff --cached --quiet || git commit -m "parlay board: $(date -u +%F)"
+          # both files are regenerated whole every run, so this run's copy wins a conflict
+          # (during a rebase "theirs" is the commit being replayed, i.e. ours).
+          BR="${{ github.ref_name }}"
+          git pull --rebase -X theirs origin "$BR"
+          git push -u origin "HEAD:$BR" || (git pull --rebase -X theirs origin "$BR" && git push -u origin "HEAD:$BR")
+
+      - name: Upload the page as an artifact too
+        uses: actions/upload-artifact@v4
+        with:
+          name: parlay-board
+          path: |
+            docs/index.html
+            data/v2/parlay.json

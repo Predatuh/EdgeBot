@@ -187,7 +187,7 @@ def settled_events(series, since_ts=None, ticker_order="away_home"):
         e = ev.setdefault(et, {"event": et, "date": event_date(et, close), "close": close, "sides": []})
         code, (name, reg) = _code(m["ticker"]), _name(m)
         e["sides"].append({
-            "name": name, "code": code, "reg": reg,
+            "name": name, "ticker": m["ticker"], "code": code, "reg": reg,
             "won": m.get("result") == "yes",
             "settled": bool(m.get("result")),
             # NB: last_price on a SETTLED market is the in-play settlement trade
@@ -199,6 +199,69 @@ def settled_events(series, since_ts=None, ticker_order="away_home"):
     for e in ev.values():
         _mark_home(e["sides"], e["event"], ticker_order)
     return sorted(ev.values(), key=lambda e: (e["date"], e["close"]))
+
+
+def candles(series, ticker, start_ts, end_ts, period=60):
+    """Historical quotes for one market, `period` minutes apiece.
+
+    This is the only leak-free way to ask what a market cost BEFORE a game. A
+    settled market's last_price is the in-play settlement trade, so anything
+    priced off it already knows the result.
+    """
+    js = _get(f"/series/{series}/markets/{ticker}/candlesticks",
+              {"start_ts": int(start_ts), "end_ts": int(end_ts), "period_interval": period})
+    return js.get("candlesticks", [])
+
+
+def _candle_price(book, field="close"):
+    """Kalshi returns candle prices as dollar STRINGS ("0.9900") under
+    <field>_dollars. Reading them as `close` in cents - which is what the older
+    market payloads use - silently yields None on every candle, which is how the
+    first backtest priced 0 of 665 sides without raising a thing."""
+    if not isinstance(book, dict):
+        return None
+    v = book.get(field + "_dollars")
+    if v is not None:
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+    v = book.get(field)
+    return v / 100.0 if isinstance(v, (int, float)) else None
+
+
+def _candle_ts(c):
+    """When the candle closed, or None. Never a default: a candle whose time we
+    cannot read must be discarded, not assumed to predate the cutoff."""
+    for k in ("end_period_ts", "end_ts", "period_end_ts", "ts"):
+        v = c.get(k)
+        if isinstance(v, (int, float)) and v > 0:
+            return int(v)
+    return None
+
+
+def quote_at(series, ticker, ts, look_back_h=48, period=60):
+    """The market's last bid/ask at or before `ts`, as {bid, ask, mid, ts}, or None.
+
+    None when the market had no quote yet - a market listed after the cutoff could
+    not have been in a ticket built at the cutoff, and back-filling one is exactly
+    the hindsight this is meant to avoid.
+    """
+    cs = candles(series, ticker, ts - look_back_h * 3600, ts, period)
+    best = None
+    for c in cs:
+        cts = _candle_ts(c)
+        if cts is None or cts > ts:
+            continue                      # unknown or after the cutoff: not usable
+        bid = _candle_price(c.get("yes_bid"))
+        ask = _candle_price(c.get("yes_ask"))
+        if bid is None or ask is None:
+            continue
+        if not (0 <= bid <= ask <= 1) or ask <= 0 or bid >= 1:
+            continue
+        if best is None or cts > best["ts"]:
+            best = {"bid": bid, "ask": ask, "mid": (bid + ask) / 2, "ts": cts}
+    return best
 
 
 def match_sides(ev):

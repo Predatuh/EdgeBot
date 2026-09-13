@@ -1,0 +1,55 @@
+name: Parlay Backtest
+
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["backtest.py", "test_backtest.py", "kalshi.py", ".github/workflows/backtest.yml"]
+  workflow_dispatch:
+    inputs:
+      at:
+        description: "Cutoff, e.g. 2026-09-11T13:00Z — only quotes at or before this are used"
+        default: "2026-09-11T13:00Z"
+      days:
+        description: "Grade games starting within this many days of the cutoff"
+        default: "3"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Check the backtest cannot see the future
+        run: python test_backtest.py
+      - name: Replay the board
+        run: |
+          python backtest.py \
+            --at "${{ inputs.at || '2026-09-11T13:00Z' }}" \
+            --days "${{ inputs.days || 3 }}" \
+            --json data/v2/backtest.json | tee backtest.txt
+      - name: Commit the result
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add data/v2/backtest.json
+          git diff --cached --quiet || git commit -m "backtest: $(date -u +%F)"
+          BR="${{ github.ref_name }}"
+          git pull --rebase -X theirs origin "$BR"
+          git push -u origin "HEAD:$BR" || (git pull --rebase -X theirs origin "$BR" && git push -u origin "HEAD:$BR")
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backtest
+          path: |
+            data/v2/backtest.json
+            backtest.txt

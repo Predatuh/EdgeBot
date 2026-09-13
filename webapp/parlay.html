@@ -1,0 +1,693 @@
+<title>Gridiron Ticket</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#E9EDEF; --surface:#FFFFFF; --surface-2:#F3F6F8; --sunk:#E2E8EB;
+  --ink:#101A1F; --muted:#5A6C75; --line:#CFD9DE; --line-hard:#AEBDC4;
+  --accent:#8F4D05; --accent-ink:#FFFFFF; --accent-soft:#F6E6D1;
+  --t-lock:#0A6E52; --t-strong:#3F7D2E; --t-solid:#7E6A0E; --t-lean:#A8560F; --t-live:#A82F27;
+  --warn:#A8560F; --warn-soft:#FBEBD8;
+  --shadow:0 1px 2px rgba(16,26,31,.10), 0 8px 24px -16px rgba(16,26,31,.35);
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1216; --surface:#151F25; --surface-2:#1B272E; --sunk:#0F181D;
+    --ink:#E7EFF2; --muted:#8CA0AA; --line:#243740; --line-hard:#37505C;
+    --accent:#F2A93B; --accent-ink:#142026; --accent-soft:#3A2B12;
+    --t-lock:#2FD0A0; --t-strong:#82CB5E; --t-solid:#D9C243; --t-lean:#F09B4A; --t-live:#F2695E;
+    --warn:#F0A33C; --warn-soft:#332512;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 28px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1216; --surface:#151F25; --surface-2:#1B272E; --sunk:#0F181D;
+  --ink:#E7EFF2; --muted:#8CA0AA; --line:#243740; --line-hard:#37505C;
+  --accent:#F2A93B; --accent-ink:#142026; --accent-soft:#3A2B12;
+  --t-lock:#2FD0A0; --t-strong:#82CB5E; --t-solid:#D9C243; --t-lean:#F09B4A; --t-live:#F2695E;
+  --warn:#F0A33C; --warn-soft:#332512;
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 28px -18px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  font-size:15px; line-height:1.45; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:600px; margin:0 auto; padding-inline:16px; padding-block:18px 56px;
+  display:flex; flex-direction:column; gap:16px}
+h1,h2,h3{margin:0; text-wrap:balance; font-variation-settings:"wdth" 112; letter-spacing:-.01em}
+h1{font-size:1.55rem; font-weight:800; line-height:1.05}
+h2{font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em;
+  font-variation-settings:"wdth" 100; color:var(--muted)}
+p{margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit; color:inherit; cursor:pointer}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+/* ---------- masthead ---------- */
+.head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.head .sub{font-size:.74rem; color:var(--muted); letter-spacing:.04em}
+.stamp{font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em}
+.banner{background:var(--warn-soft); color:var(--warn); border:1px solid currentColor;
+  border-radius:var(--r); padding:9px 12px; font-size:.8rem; font-weight:600}
+
+/* ---------- sport rail ---------- */
+.rail{display:flex; gap:6px; overflow-x:auto; padding-bottom:3px; scrollbar-width:none;
+  -webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail button{flex:0 0 auto; display:flex; align-items:center; gap:6px; white-space:nowrap;
+  background:var(--surface); border:1px solid var(--line); border-radius:999px;
+  padding:6px 13px 6px 10px; font-size:.82rem; font-weight:700; color:var(--muted)}
+.rail button .n{font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:500; opacity:.8}
+.rail button[aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--bg)}
+
+/* ---------- risk dial ---------- */
+.dial{display:grid; grid-template-columns:repeat(5,1fr); gap:6px}
+.dial button{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:9px 2px 7px; display:flex; flex-direction:column; align-items:center; gap:3px;
+  transition:background .12s, border-color .12s, transform .12s}
+.dial button .e{font-size:1.05rem; line-height:1}
+.dial button .l{font-size:.63rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--muted)}
+.dial button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent)}
+.dial button[aria-pressed="true"] .l{color:var(--accent-ink)}
+.dial button:active{transform:translateY(1px)}
+
+/* ---------- the ticket ---------- */
+.ticket{background:var(--surface); border:1px solid var(--line-hard); border-radius:var(--r);
+  box-shadow:var(--shadow); overflow:hidden}
+.ticket .top{padding:16px 16px 14px; display:flex; align-items:flex-end; justify-content:space-between; gap:14px}
+.big{display:flex; flex-direction:column; gap:1px; min-width:0}
+.big .k{font-size:.66rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); font-weight:700}
+.big .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:2.5rem; font-weight:600; line-height:1; letter-spacing:-.03em}
+.big.right{text-align:right; align-items:flex-end}
+.big.right .v{color:var(--accent)}
+.perf{height:1px; background:repeating-linear-gradient(90deg,var(--line-hard) 0 5px,transparent 5px 10px)}
+.facts{display:grid; grid-template-columns:repeat(3,1fr); background:var(--surface-2)}
+.facts div{padding:10px 12px; border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts .k{font-size:.62rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700}
+.facts .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; font-size:1rem; font-weight:500}
+.stakebar{display:flex; align-items:center; gap:10px; padding:11px 14px; border-top:1px solid var(--line);
+  background:var(--surface-2); flex-wrap:wrap}
+.stakebar label{font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700}
+.stakebar input{width:78px; padding:5px 8px; border:1px solid var(--line-hard); border-radius:6px;
+  background:var(--surface); color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:.95rem}
+.stakebar .out{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.05rem; font-weight:600; color:var(--t-lock)}
+
+/* ---------- what-if ---------- */
+.whatif{font-size:.79rem; color:var(--muted); padding:10px 13px; background:var(--sunk);
+  border-radius:var(--r); border:1px dashed var(--line-hard)}
+.whatif b{color:var(--ink); font-weight:700}
+
+/* ---------- leg lines ---------- */
+.legs{display:flex; flex-direction:column; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+.leg{display:grid; grid-template-columns:4px 1fr auto auto; align-items:center; gap:0 10px;
+  padding:9px 11px 9px 0; border-bottom:1px solid var(--line); background:none; border-left:0; border-right:0; border-top:0;
+  text-align:left; width:100%}
+.leg:last-child{border-bottom:0}
+.leg .stripe{align-self:stretch; border-radius:0 2px 2px 0; background:var(--tc)}
+.leg .who{min-width:0; display:flex; flex-direction:column; gap:1px}
+.leg .nm{display:block; font-weight:700; font-size:.95rem; line-height:1.2;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.leg .mt{display:block; font-size:.69rem; color:var(--muted); line-height:1.25;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.leg .pc{display:flex; flex-direction:column; align-items:flex-end; gap:0; flex:0 0 auto;
+  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+.leg .pc .p{font-size:1.02rem; font-weight:600; line-height:1.1; color:var(--tc)}
+.leg .pc .a{font-size:.63rem; color:var(--muted); line-height:1.2; white-space:nowrap}
+.leg .act{font-size:1rem; color:var(--muted); padding:2px 4px; background:none; border:0; line-height:1}
+.leg.pinned{background:var(--accent-soft)}
+.flag{grid-column:2/-1; font-size:.71rem; color:var(--warn); font-weight:600; margin-top:3px}
+.draw{display:inline-block; margin-left:5px; padding:0 5px; border-radius:4px;
+  background:var(--warn-soft); color:var(--warn); font-size:.6rem; font-weight:800;
+  letter-spacing:.04em; vertical-align:1px}
+.empty{padding:22px 14px; text-align:center; color:var(--muted); font-size:.86rem;
+  background:var(--surface); border:1px dashed var(--line-hard); border-radius:var(--r)}
+
+/* ---------- controls ---------- */
+details{background:var(--surface); border:1px solid var(--line); border-radius:var(--r)}
+summary{padding:11px 13px; font-size:.78rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--muted); cursor:pointer; list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋"; float:right; font-weight:400}
+details[open] summary::after{content:"－"}
+.pane{padding:4px 13px 14px; display:flex; flex-direction:column; gap:13px; border-top:1px solid var(--line)}
+.ctl{display:flex; flex-direction:column; gap:5px}
+.ctl .row{display:flex; justify-content:space-between; align-items:baseline; gap:8px}
+.ctl .row span:first-child{font-size:.73rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:.08em; color:var(--muted)}
+.ctl .row span:last-child{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:.9rem; font-weight:600}
+.ctl .hint{font-size:.7rem; color:var(--muted)}
+input[type=range]{width:100%; accent-color:var(--accent); height:22px}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chip{border:1px solid var(--line-hard); background:var(--surface-2); border-radius:999px;
+  padding:5px 11px; font-size:.76rem; font-weight:600; color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.toggles{display:flex; flex-direction:column; gap:8px}
+.tog{display:flex; align-items:center; gap:9px; font-size:.83rem}
+.tog input{width:17px; height:17px; accent-color:var(--accent)}
+
+/* ---------- board table ---------- */
+.search{width:100%; padding:9px 11px; border:1px solid var(--line-hard); border-radius:var(--r);
+  background:var(--surface); color:var(--ink); font:inherit; font-size:.88rem}
+.scroll{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r); background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:330px; font-size:.82rem; table-layout:fixed}
+th{position:sticky; top:0; background:var(--surface-2); text-align:left; padding:8px 9px;
+  font-size:.63rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted);
+  border-bottom:1px solid var(--line-hard); white-space:nowrap}
+td{padding:7px 8px; border-bottom:1px solid var(--line); white-space:nowrap}
+td.t{max-width:0; overflow:hidden}
+td.t .nm2{display:block; font-weight:700; overflow:hidden; text-overflow:ellipsis}
+td.t .tk{display:block; overflow:hidden; text-overflow:ellipsis}
+col.w-num{width:52px} col.w-spr{width:44px} col.w-pin{width:34px}
+tbody tr:last-child td{border-bottom:0}
+tr.banned td{opacity:.4; text-decoration:line-through}
+tr.pin td{background:var(--accent-soft)}
+td.t{font-weight:700}
+td.r{text-align:right; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+.mini{border:1px solid var(--line-hard); background:var(--surface-2); border-radius:6px;
+  padding:2px 7px; font-size:.7rem; font-weight:700}
+.tk{font-family:"IBM Plex Mono",monospace; font-size:.68rem; color:var(--muted)}
+
+/* ---------- notes ---------- */
+.note{font-size:.78rem; color:var(--muted); line-height:1.55}
+.note b{color:var(--ink)}
+.note code{font-family:"IBM Plex Mono",monospace; font-size:.92em; background:var(--sunk);
+  padding:1px 5px; border-radius:4px}
+hr{border:0; border-top:1px solid var(--line); margin:0}
+@media (prefers-reduced-motion: reduce){*{transition:none !important; animation:none !important}}
+</style>
+
+<div class="wrap">
+
+  <header class="head">
+    <div>
+      <h1>Gridiron Ticket</h1>
+      <p class="sub" id="boardline">loading board…</p>
+    </div>
+    <p class="stamp" id="stamp"></p>
+  </header>
+
+  <p class="banner" id="demo" hidden>Example board — this snapshot has no live markets. Numbers below are illustrative.</p>
+
+  <nav class="rail" id="scopes" aria-label="Which sports"></nav>
+
+  <nav class="dial" id="dial" aria-label="Risk level"></nav>
+
+  <section class="ticket" aria-labelledby="ticketh">
+    <h2 id="ticketh" style="position:absolute;left:-9999px">Current ticket</h2>
+    <div class="top">
+      <div class="big"><span class="k">Wins</span><span class="v" id="win">—</span></div>
+      <div class="big right"><span class="k">Pays</span><span class="v" id="mult">—</span></div>
+    </div>
+    <div class="perf"></div>
+    <div class="facts">
+      <div><div class="k">Legs</div><div class="v" id="nlegs">—</div></div>
+      <div><div class="k">Weakest</div><div class="v" id="weak">—</div></div>
+      <div><div class="k">Edge</div><div class="v" id="ev">—</div></div>
+    </div>
+    <div class="stakebar">
+      <label for="stake">Stake $</label>
+      <input id="stake" type="number" min="1" step="1" value="10" inputmode="decimal">
+      <span class="out" id="payout">—</span>
+    </div>
+  </section>
+
+  <p class="whatif" id="whatif"></p>
+
+  <section aria-labelledby="legsh">
+    <h2 id="legsh" style="margin-bottom:7px">The legs <span id="legcount" class="mono"></span></h2>
+    <div class="legs" id="legs"></div>
+  </section>
+
+  <details id="tune">
+    <summary>Tune it</summary>
+    <div class="pane">
+      <div class="ctl">
+        <div class="row"><span>Target win chance</span><span id="tgtv"></span></div>
+        <input id="tgt" type="range" min="2" max="97" step="1" value="50">
+        <p class="hint">Lower target = more legs = bigger payout. Payout is fixed by this number, not by leg count.</p>
+      </div>
+      <div class="ctl">
+        <div class="row"><span>Cheapest leg allowed</span><span id="minlv"></span></div>
+        <input id="minl" type="range" min="50" max="99" step="1" value="92">
+        <p class="hint">The hard floor. One coin flip halves the whole ticket no matter how safe the rest are.</p>
+      </div>
+      <div class="ctl">
+        <div class="row"><span>Leg cap</span><span id="maxlv"></span></div>
+        <input id="maxl" type="range" min="2" max="50" step="1" value="20">
+      </div>
+      <div class="ctl">
+        <div class="row"><span>Widest spread allowed</span><span id="spv"></span></div>
+        <input id="sp" type="range" min="1" max="20" step="1" value="12">
+        <p class="hint">Spread is the only cost you control. Every leg you add pays it again.</p>
+      </div>
+      <div class="ctl">
+        <div class="row"><span>Minimum contracts traded</span><span id="volv"></span></div>
+        <input id="vol" type="range" min="0" max="2000" step="50" value="0">
+      </div>
+      <div class="ctl">
+        <div class="row"><span>Leagues</span><span></span></div>
+        <div class="chips" id="lgchips"></div>
+      </div>
+      <div class="toggles">
+        <label class="tog"><input type="checkbox" id="noflag" checked> Skip teams with injury or lineup news</label>
+        <label class="tog"><input type="checkbox" id="onegame" checked> One leg per game</label>
+      </div>
+      <button class="chip" id="reset" type="button" style="align-self:flex-start">Clear pins and bans</button>
+    </div>
+  </details>
+
+  <section aria-labelledby="boardh">
+    <h2 id="boardh" style="margin-bottom:7px">Every leg on the board</h2>
+    <input class="search" id="q" type="search" placeholder="Filter by team, league or ticker" autocomplete="off">
+    <div class="scroll" style="margin-top:7px">
+      <table>
+        <colgroup><col><col class="w-num"><col class="w-num"><col class="w-spr"><col class="w-pin"></colgroup>
+        <thead><tr><th>Team</th><th style="text-align:right">True</th><th style="text-align:right">Ask</th><th style="text-align:right">Spr</th><th></th></tr></thead>
+        <tbody id="board"></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:7px">Tap a row to pin a leg in. Tap the pin again to ban it. Ticker codes are what you search on Kalshi.</p>
+  </section>
+
+  <hr>
+
+  <section class="note" aria-labelledby="mathh">
+    <h2 id="mathh" style="margin-bottom:7px">Why this is built the way it is</h2>
+    <p>Kalshi prices a combo as the product of its legs, so a fairly priced parlay wins <code>1 ÷ payout</code> of the time. A 3-leg ticket paying 11× and a 39-leg ticket paying 11× are the same 9% bet — the 39-leg version just crosses 39 spreads to get there. That is why the risk dial moves the <b>target</b> and the builder answers with the fewest, tightest legs that reach it.</p>
+    <p style="margin-top:9px"><b>True</b> is the de-vigged mid — every outcome in the game normalised to sum to 100%. <b>Ask</b> is what you actually pay. The gap between them is the whole cost of the ticket, and <b>Edge</b> is that gap compounded across every leg. It is always negative. A shorter ticket is a less negative one.</p>
+    <p style="margin-top:9px"><b>Draw loses.</b> Soccer and Test cricket price three outcomes, and a draw settles a win contract at zero — so the draw stays in the denominator. A match quoted 55¢ to win between two teams is worth about 40¢ once the draw is counted, and that lower number is what you see here. Any leg that can be drawn is badged.</p>
+    <p style="margin-top:9px" id="calib"></p>
+    <p style="margin-top:9px">Prices move. Re-check each leg on Kalshi before you buy — this page is a snapshot, not a live quote.</p>
+  </section>
+</div>
+
+<script id="parlay-data" type="application/json">__PARLAY_DATA__</script>
+<script>
+(function(){
+"use strict";
+var DATA = JSON.parse(document.getElementById("parlay-data").textContent);
+
+/* A board this page can still demonstrate itself with when football is between
+   weeks or the fetch came back empty. Flagged in the UI so it is never mistaken
+   for live prices. */
+var DEMO = {demo:true, generated_utc:"", days:8, calibration_note:DATA.calibration_note||"",
+  presets:DATA.presets||[], legs:[
+  ["ncaaf","College Football","Georgia","Austin Peay",0.991,0.993,0.988,1],
+  ["ncaaf","College Football","Alabama","Wisconsin",0.978,0.982,0.975,1],
+  ["ncaaf","College Football","Ohio State","Ohio",0.985,0.989,0.983,1],
+  ["ncaaf","College Football","Texas","UTEP",0.982,0.986,0.980,1],
+  ["ncaaf","College Football","Oregon","Montana State",0.971,0.977,0.969,1],
+  ["ncaaf","College Football","Michigan","Central Michigan",0.963,0.970,0.960,1],
+  ["ncaaf","College Football","Penn State","Villanova",0.968,0.974,0.965,1],
+  ["ncaaf","College Football","LSU","Southeastern Louisiana",0.974,0.980,0.972,1],
+  ["ncaaf","College Football","Notre Dame","Purdue",0.931,0.941,0.927,1],
+  ["ncaaf","College Football","Tennessee","UAB",0.955,0.963,0.951,1],
+  ["ncaaf","College Football","Clemson","Troy",0.928,0.939,0.922,0],
+  ["ncaaf","College Football","Florida State","Kent State",0.944,0.953,0.940,1],
+  ["nfl","NFL","Kansas City Chiefs","Tennessee Titans",0.886,0.897,0.880,0],
+  ["nfl","NFL","Baltimore Ravens","Cleveland Browns",0.842,0.855,0.836,1],
+  ["nfl","NFL","San Francisco 49ers","Carolina Panthers",0.897,0.908,0.891,1],
+  ["nfl","NFL","Philadelphia Eagles","New York Giants",0.815,0.829,0.808,1],
+  ["nfl","NFL","Detroit Lions","Chicago Bears",0.762,0.778,0.754,1],
+  ["nfl","NFL","Buffalo Bills","New York Jets",0.804,0.818,0.797,0],
+  ["nfl","NFL","Green Bay Packers","Washington Commanders",0.573,0.590,0.563,1],
+  ["nfl","NFL","Houston Texans","Jacksonville Jaguars",0.612,0.629,0.602,1],
+  ["epl","Premier League","Manchester City","Burnley",0.812,0.828,0.805,1,1],
+  ["epl","Premier League","Arsenal","Brentford",0.734,0.752,0.727,1,1],
+  ["laliga","La Liga","Real Madrid","Levante",0.845,0.860,0.838,1,1],
+  ["seriea","Serie A","Inter","Lecce",0.776,0.793,0.769,1,1],
+  ["atp","ATP Tennis","Carlos Alcaraz","Jaume Munar",0.921,0.932,0.914,0],
+  ["atp","ATP Tennis","Jannik Sinner","Alexei Popyrin",0.934,0.944,0.927,0],
+  ["wta","WTA Tennis","Aryna Sabalenka","Emma Navarro",0.868,0.881,0.861,0],
+  ["mlb","MLB","Los Angeles Dodgers","Colorado Rockies",0.724,0.741,0.716,1],
+  ["mlb","MLB","New York Yankees","Chicago White Sox",0.706,0.723,0.698,1],
+].map(function(r,i){
+  var p=r[4], ask=r[5], bid=r[6];
+  return {league:r[0], league_label:r[1], event_id:"DEMO"+i, ticker:"DEMO-"+i,
+    game:r[2]+" vs "+r[3], pick:r[2], opp:r[3], home:!!r[7], draw:!!r[8], p:p, ask:ask, bid:bid,
+    spread:+(ask-bid).toFixed(4), drag:+(p/ask).toFixed(4), vol:4200, oi:1800,
+    close:"", date:"", tier:"", tier_label:"", emoji:"", flags:[], notes:""};
+})};
+
+var TIERS = [[0.97,"lock","Lock","var(--t-lock)"],[0.92,"strong","Strong","var(--t-strong)"],
+             [0.85,"solid","Solid","var(--t-solid)"],[0.70,"lean","Lean","var(--t-lean)"],
+             [0.00,"live","Coin flip","var(--t-live)"]];
+function tierOf(p){ for(var i=0;i<TIERS.length;i++){ if(p>=TIERS[i][0]) return TIERS[i]; } return TIERS[4]; }
+
+var isDemo = !(DATA.legs && DATA.legs.length);
+var SNAP = isDemo ? DEMO : DATA;
+var LEGS = (SNAP.legs||[]).slice();
+var PRESETS = (SNAP.presets && SNAP.presets.length) ? SNAP.presets : [
+  {key:"vault",label:"Vault",target:0.90,min_leg:0.97,max_legs:8,emoji:"🔒"},
+  {key:"safe",label:"Safe",target:0.75,min_leg:0.95,max_legs:14,emoji:"🛡️"},
+  {key:"balanced",label:"Balanced",target:0.50,min_leg:0.92,max_legs:20,emoji:"⚖️"},
+  {key:"swing",label:"Swing",target:0.25,min_leg:0.88,max_legs:30,emoji:"🎯"},
+  {key:"lottery",label:"Lottery",target:0.08,min_leg:0.85,max_legs:45,emoji:"🎰"}];
+
+var labelOf = {}; LEGS.forEach(function(l){ labelOf[l.league]=l.league_label; });
+
+/* Scopes are one-tap league filters. The page carries the whole board, so switching
+   between NFL, all football and everything is instant and needs no connection. */
+var ALL_SCOPES = [
+  {key:"football", label:"Football",   emoji:"🏈", leagues:["nfl","ncaaf","cfl"]},
+  {key:"nfl",      label:"NFL",        emoji:"🏆", leagues:["nfl"]},
+  {key:"ncaaf",    label:"College",    emoji:"🎓", leagues:["ncaaf"]},
+  {key:"soccer",   label:"Soccer",     emoji:"⚽", leagues:["epl","laliga","ligue1","seriea","bundesliga","mls","ucl"]},
+  {key:"tennis",   label:"Tennis",     emoji:"🎾", leagues:["atp","wta","challenger"]},
+  {key:"mlb",      label:"Baseball",   emoji:"⚾", leagues:["mlb"]},
+  {key:"cricket",  label:"Cricket",    emoji:"🏏", leagues:["cricket_t20i","cricket_odi","cricket_test","cpl"]},
+  {key:"all",      label:"Everything", emoji:"🌐", leagues:null}
+];
+function scopeLeagues(key){
+  var sc = ALL_SCOPES.filter(function(x){ return x.key===key; })[0];
+  if(!sc || !sc.leagues) return null;
+  return sc.leagues;
+}
+/* Prefer the scopes the snapshot itself worked out; fall back to counting locally
+   so the demo board and any older snapshot still render a rail. */
+var SCOPES = (SNAP.scopes && SNAP.scopes.length) ? SNAP.scopes : (function(){
+  var have = {}; LEGS.forEach(function(l){ have[l.league]=1; });
+  return ALL_SCOPES.map(function(sc){
+    var got = LEGS.filter(function(l){ return !sc.leagues || sc.leagues.indexOf(l.league)>=0; });
+    var games = {}; got.forEach(function(l){ games[l.event_id]=1; });
+    return {key:sc.key, label:sc.label, emoji:sc.emoji, leagues:sc.leagues,
+            legs:got.length, games:Object.keys(games).length};
+  }).filter(function(sc){ return sc.legs > 0; });
+})();
+function inScope(l, key){
+  var lg = scopeLeagues(key);
+  return !lg || lg.indexOf(l.league) >= 0;
+}
+function leaguesIn(key){
+  var out = [];
+  LEGS.forEach(function(l){ if(inScope(l,key) && out.indexOf(l.league)<0) out.push(l.league); });
+  return out;
+}
+
+var START = (SCOPES.filter(function(sc){ return sc.key===(SNAP.scope||"football"); })[0]
+             || SCOPES[0] || {key:"all"}).key;
+
+/* ---- state ---- */
+var S = {scope:START, preset:"balanced", target:0.50, minLeg:0.92, maxLegs:20,
+         maxSpread:0.12, minVol:0, leagues:leaguesIn(START), noflag:true, onegame:true,
+         pins:{}, bans:{}, stake:10, q:""};
+
+/* ---- the builder, same greedy as parlay.py ---- */
+function eligible(l){
+  if(!inScope(l, S.scope)) return false;
+  if(S.leagues.indexOf(l.league)<0) return false;
+  if(S.bans[l.ticker]) return false;
+  if(!(l.ask>0 && l.ask<0.999)) return false;
+  if(l.p < S.minLeg) return false;
+  if(S.noflag && l.flags && l.flags.length) return false;
+  if(l.spread!=null && l.spread > S.maxSpread) return false;
+  if((l.vol||0) < S.minVol) return false;
+  return true;
+}
+function costRatio(l){
+  var budget = -Math.log(Math.max(l.p,1e-9));
+  var loss = -Math.log(Math.max(l.p/l.ask,1e-9));
+  return budget>1e-9 ? loss/budget : Infinity;
+}
+function build(){
+  var pinned = LEGS.filter(function(l){
+    return S.pins[l.ticker] && !S.bans[l.ticker] && inScope(l, S.scope); });
+  var pool = LEGS.filter(function(l){ return !S.pins[l.ticker] && eligible(l); });
+  pool.sort(function(a,b){ var c=costRatio(a)-costRatio(b); return c || (b.p-a.p); });
+  var chosen=[], used={}, prob=1;
+  pinned.forEach(function(l){                     // pins always ride, filters or not
+    if(S.onegame && used[l.event_id]) return;
+    chosen.push(l); used[l.event_id]=1; prob*=l.p;
+  });
+  for(var i=0;i<pool.length;i++){
+    var l=pool[i];
+    if(chosen.length>=S.maxLegs) break;
+    if(S.onegame && used[l.event_id]) continue;
+    if(prob*l.p < S.target) continue;
+    chosen.push(l); used[l.event_id]=1; prob*=l.p;
+  }
+  return chosen;
+}
+function summarise(ch){
+  var win=1, cost=1;
+  ch.forEach(function(l){ win*=l.p; cost*=l.ask; });
+  var mult = cost>0 ? 1/cost : 0;
+  return {legs:ch, n:ch.length, win:win, mult:mult, cost:cost, ev:win*mult-1,
+          weak: ch.length ? Math.min.apply(null, ch.map(function(l){return l.p;})) : 0};
+}
+
+/* ---- formatting ---- */
+function pct(x,d){ return (100*x).toFixed(d==null?1:d)+"%"; }
+function cents(x){ return Math.round(100*x)+"¢"; }
+function money(x){ return "$"+x.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function oneIn(w){ return w>0 ? Math.round(1/w).toLocaleString() : "—"; }
+
+/* Why the ticket came back empty, and the one tap that fixes it.
+
+   Switching to NFL under a 92c floor is the common case: college football has a
+   dozen 98c tune-up games and the NFL board has none, so the preset that filled
+   a ticket a second ago now fills nothing. Saying "no results" there is useless -
+   the page knows exactly which filter bit and what the board's best leg is. */
+function diagnose(){
+  var scoped = LEGS.filter(function(l){ return inScope(l, S.scope); });
+  if(!scoped.length) return {msg:"No markets are open on this board."};
+
+  var pool = scoped.filter(function(l){ return !S.bans[l.ticker]; });
+  if(!pool.length) return {msg:"You have banned every leg here.",
+    fixLabel:"Clear bans", fix:function(){ S.bans={}; }};
+
+  pool = pool.filter(function(l){ return S.leagues.indexOf(l.league)>=0; });
+  if(!pool.length) return {msg:"Every league on this board is switched off under Tune it.",
+    fixLabel:"Turn them back on", fix:function(){ S.leagues = leaguesIn(S.scope); }};
+
+  if(S.noflag){
+    var clean = pool.filter(function(l){ return !(l.flags && l.flags.length); });
+    if(!clean.length) return {msg:"Every leg here has injury or lineup news against it.",
+      fixLabel:"Show them anyway", fix:function(){ S.noflag=false; $("noflag").checked=false; }};
+    pool = clean;
+  }
+
+  var liquid = pool.filter(function(l){
+    return (l.spread==null || l.spread<=S.maxSpread) && (l.vol||0)>=S.minVol; });
+  if(!liquid.length) return {
+    msg:"Every leg here is wider than "+Math.round(100*S.maxSpread)+"¢ or too thinly traded.",
+    fixLabel:"Loosen both", fix:function(){ S.maxSpread=0.20; S.minVol=0; syncInputs(); }};
+  pool = liquid;
+
+  var best = Math.max.apply(null, pool.map(function(l){ return l.p; }));
+  var who = pool.filter(function(l){ return l.p===best; })[0];
+  if(best < S.minLeg){
+    var floor = Math.floor(best*100)/100;
+    return {msg:"Nothing here reaches "+cents(S.minLeg)+". The best is "+who.pick+
+                " at "+cents(best)+".",
+            fixLabel:"Drop the floor to "+cents(floor),
+            fix:function(){ S.minLeg=floor; S.preset=""; syncInputs(); }};
+  }
+  if(best < S.target){
+    var t = Math.floor(best*100)/100;
+    return {msg:"Even the safest leg here ("+who.pick+" at "+cents(best)+
+                ") is under your "+Math.round(100*S.target)+"% target.",
+            fixLabel:"Target "+Math.round(100*t)+"%",
+            fix:function(){ S.target=t; S.preset=""; syncInputs(); }};
+  }
+  return {msg:"Nothing clears the current filters."};
+}
+
+/* ---- render ---- */
+var $ = function(id){ return document.getElementById(id); };
+var PENDING_FIX = null;
+
+function renderScopes(){
+  $("scopes").innerHTML = SCOPES.map(function(sc){
+    return '<button type="button" data-sc="'+esc(sc.key)+'" aria-pressed="'+(sc.key===S.scope)+'">'+
+      '<span>'+esc(sc.emoji||"")+'</span><span>'+esc(sc.label)+'</span>'+
+      '<span class="n">'+sc.games+'</span></button>';
+  }).join("");
+}
+function applyScope(k){
+  S.scope = k;
+  S.leagues = leaguesIn(k);     // re-open every league inside the new scope
+  S.q = ""; $("q").value = "";
+  renderScopes(); render();
+}
+function renderDial(){
+  $("dial").innerHTML = PRESETS.map(function(p){
+    return '<button type="button" data-k="'+esc(p.key)+'" aria-pressed="'+(p.key===S.preset)+'">'+
+      '<span class="e">'+esc(p.emoji||"")+'</span><span class="l">'+esc(p.label)+'</span></button>';
+  }).join("");
+}
+function applyPreset(k){
+  var p = PRESETS.filter(function(x){return x.key===k;})[0];
+  if(!p) return;
+  S.preset=k; S.target=p.target; S.minLeg=p.min_leg; S.maxLegs=p.max_legs||20;
+  syncInputs(); renderDial(); render();
+}
+function syncInputs(){
+  $("tgt").value = Math.round(S.target*100);
+  $("minl").value = Math.round(S.minLeg*100);
+  $("maxl").value = S.maxLegs;
+  $("sp").value = Math.round(S.maxSpread*100);
+  $("vol").value = S.minVol;
+}
+function renderControls(){
+  $("tgtv").textContent = Math.round(S.target*100)+"%";
+  $("minlv").textContent = cents(S.minLeg);
+  $("maxlv").textContent = S.maxLegs+" legs";
+  $("spv").textContent = Math.round(S.maxSpread*100)+"¢";
+  $("volv").textContent = S.minVol ? S.minVol.toLocaleString() : "any";
+  $("lgchips").innerHTML = leaguesIn(S.scope).map(function(k){
+    return '<button type="button" class="chip" data-lg="'+esc(k)+'" aria-pressed="'+
+      (S.leagues.indexOf(k)>=0)+'">'+esc(labelOf[k]||k)+'</button>'; }).join("")
+    || '<span class="hint">no leagues on the board</span>';
+}
+
+function renderTicket(r){
+  $("win").textContent  = r.n ? pct(r.win) : "—";
+  $("mult").textContent = r.n ? r.mult.toFixed(2)+"×" : "—";
+  $("nlegs").textContent = r.n || "0";
+  $("weak").textContent = r.n ? cents(r.weak) : "—";
+  $("ev").textContent   = r.n ? (r.ev>=0?"+":"")+pct(r.ev,1) : "—";
+  $("ev").style.color = r.n ? (r.ev < -0.15 ? "var(--t-live)" : "var(--muted)") : "";
+  var st = parseFloat($("stake").value)||0;
+  $("payout").textContent = r.n ? money(st*r.mult)+"  ·  1 in "+oneIn(r.win) : "—";
+
+  var w = $("whatif");
+  w.hidden = !r.n;
+  if(!r.n) return;
+  var sorted = r.legs.slice().sort(function(a,b){ return a.p-b.p; });
+  var drop = sorted[0];
+  var without = summarise(r.legs.filter(function(l){ return l!==drop; }));
+  if(r.n===1){ w.innerHTML = "One leg: <b>"+esc(drop.pick)+"</b> at "+cents(drop.ask)+". Lower the target to stack more on."; return; }
+  w.innerHTML = "Your weak point is <b>"+esc(drop.pick)+"</b> at "+cents(drop.p)+
+    ". Drop it and the ticket wins <b>"+pct(without.win)+"</b> instead of "+pct(r.win)+
+    ", paying "+without.mult.toFixed(2)+"× instead of "+r.mult.toFixed(2)+"×.";
+}
+
+function renderLegs(r){
+  $("legcount").textContent = r.n ? "("+r.n+")" : "";
+  if(!r.n){
+    var d = diagnose();
+    PENDING_FIX = d.fix || null;
+    $("legs").className = "empty";
+    $("legs").innerHTML = esc(d.msg) +
+      (d.fixLabel ? '<br><button class="chip" type="button" id="fixit" style="margin-top:11px">'+
+        esc(d.fixLabel)+'</button>' : "");
+    return;
+  }
+  var html = r.legs.slice().sort(function(a,b){ return b.p-a.p; }).map(function(l){
+    var t = tierOf(l.p);
+    var flag = (l.flags&&l.flags.length) ? '<div class="flag">⚠ '+esc(l.flags[0])+'</div>'
+             : (l.notes ? '<div class="flag" style="color:var(--muted);font-weight:500">'+esc(l.notes)+'</div>' : '');
+    return '<div class="leg'+(S.pins[l.ticker]?" pinned":"")+'" style="--tc:'+t[3]+'">'+
+      '<span class="stripe"></span>'+
+      '<span class="who"><span class="nm">'+esc(l.pick)+
+        (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
+        '<span class="mt">'+esc(t[2])+' · vs '+esc(l.opp)+(l.home?' (home)':'')+
+        ' · '+esc(l.league_label)+'</span></span>'+
+      '<span class="pc"><span class="p">'+cents(l.p)+'</span><span class="a">pay '+cents(l.ask)+'</span></span>'+
+      '<button class="act" type="button" data-ban="'+esc(l.ticker)+'" aria-label="Remove '+esc(l.pick)+'">✕</button>'+
+      flag+'</div>';
+  }).join("");
+  $("legs").className = "legs";
+  $("legs").innerHTML = html;
+}
+
+function renderBoard(){
+  var q = S.q.toLowerCase();
+  var rows = LEGS.filter(function(l){
+    if(!inScope(l, S.scope)) return false;
+    if(!q) return true;
+    return (l.pick+" "+l.opp+" "+l.league_label+" "+l.ticker).toLowerCase().indexOf(q)>=0;
+  }).sort(function(a,b){ return b.p-a.p; }).slice(0,300);
+  $("board").innerHTML = rows.map(function(l){
+    var t=tierOf(l.p);
+    var cls = S.bans[l.ticker] ? "banned" : (S.pins[l.ticker] ? "pin" : "");
+    return '<tr class="'+cls+'" data-tk="'+esc(l.ticker)+'">'+
+      '<td class="t"><span class="nm2" style="color:'+t[3]+'">'+esc(l.pick)+'</span>'+
+        '<span class="tk">vs '+esc(l.opp)+' · '+esc(l.league_label)+(l.draw?' · draw loses':'')+'</span></td>'+
+      '<td class="r">'+cents(l.p)+'</td>'+
+      '<td class="r">'+cents(l.ask)+'</td>'+
+      '<td class="r">'+(l.spread==null?"—":Math.round(100*l.spread)+"¢")+'</td>'+
+      '<td>'+(S.bans[l.ticker]?"🚫":(S.pins[l.ticker]?"📌":"＋"))+'</td></tr>';
+  }).join("") || '<tr><td colspan="5" style="color:var(--muted)">Nothing matches.</td></tr>';
+}
+
+function render(){
+  var r = summarise(build());
+  renderControls(); renderTicket(r); renderLegs(r); renderBoard();
+  var sc = SCOPES.filter(function(x){ return x.key===S.scope; })[0];
+  $("boardline").textContent = sc
+    ? sc.games+" games · "+sc.legs+" legs · next "+(SNAP.days||8)+" days"
+    : "no markets open";
+}
+
+/* ---- wiring ---- */
+$("dial").addEventListener("click", function(e){
+  var b=e.target.closest("button[data-k]"); if(b) applyPreset(b.dataset.k);
+});
+$("scopes").addEventListener("click", function(e){
+  var b=e.target.closest("button[data-sc]"); if(b) applyScope(b.dataset.sc);
+});
+function slider(id, key, scale, snapOff){
+  $(id).addEventListener("input", function(){
+    S[key] = (+this.value)/scale; if(snapOff) S.preset="";
+    renderDial(); render();
+  });
+}
+slider("tgt","target",100,true); slider("minl","minLeg",100,true);
+slider("maxl","maxLegs",1,true); slider("sp","maxSpread",100,false);
+slider("vol","minVol",1,false);
+$("lgchips").addEventListener("click", function(e){
+  var b=e.target.closest("button[data-lg]"); if(!b) return;
+  var k=b.dataset.lg, i=S.leagues.indexOf(k);
+  if(i>=0){ if(S.leagues.length>1) S.leagues.splice(i,1); } else S.leagues.push(k);
+  render();
+
+});
+$("noflag").addEventListener("change", function(){ S.noflag=this.checked; render(); });
+$("onegame").addEventListener("change", function(){ S.onegame=this.checked; render(); });
+$("stake").addEventListener("input", render);
+$("q").addEventListener("input", function(){ S.q=this.value; renderBoard(); });
+$("reset").addEventListener("click", function(){ S.pins={}; S.bans={}; render(); });
+document.addEventListener("click", function(e){
+  if(e.target.id==="fixit" && PENDING_FIX){ PENDING_FIX(); renderDial(); render(); }
+});
+document.addEventListener("click", function(e){
+  var x=e.target.closest("[data-ban]");
+  if(x){ S.bans[x.dataset.ban]=1; delete S.pins[x.dataset.ban]; render(); return; }
+  var tr=e.target.closest("tr[data-tk]");
+  if(tr){
+    var tk=tr.dataset.tk;
+    if(S.bans[tk]) delete S.bans[tk];
+    else if(S.pins[tk]){ delete S.pins[tk]; S.bans[tk]=1; }
+    else S.pins[tk]=1;
+    render();
+  }
+});
+
+/* ---- boot ---- */
+$("demo").hidden = !isDemo;
+$("stamp").textContent = SNAP.generated_utc ? "as of "+SNAP.generated_utc : "";
+var b = SNAP.board || {legs:LEGS.length, games:0};
+var ngames = b.games || (function(){ var s={}; LEGS.forEach(function(l){s[l.event_id]=1;}); return Object.keys(s).length; })();
+$("boardline").textContent = LEGS.length
+  ? ngames+" games · "+LEGS.length+" legs · next "+(SNAP.days||8)+" days"
+  : "no markets open";
+$("calib").innerHTML = "<b>What the record says.</b> "+esc(SNAP.calibration_note||"");
+renderScopes();
+applyPreset(S.preset);
+})();
+</script>
