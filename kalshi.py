@@ -187,7 +187,7 @@ def settled_events(series, since_ts=None, ticker_order="away_home"):
         e = ev.setdefault(et, {"event": et, "date": event_date(et, close), "close": close, "sides": []})
         code, (name, reg) = _code(m["ticker"]), _name(m)
         e["sides"].append({
-            "name": name, "code": code, "reg": reg,
+            "name": name, "ticker": m["ticker"], "code": code, "reg": reg,
             "won": m.get("result") == "yes",
             "settled": bool(m.get("result")),
             # NB: last_price on a SETTLED market is the in-play settlement trade
@@ -199,6 +199,43 @@ def settled_events(series, since_ts=None, ticker_order="away_home"):
     for e in ev.values():
         _mark_home(e["sides"], e["event"], ticker_order)
     return sorted(ev.values(), key=lambda e: (e["date"], e["close"]))
+
+
+def candles(series, ticker, start_ts, end_ts, period=60):
+    """Historical quotes for one market, `period` minutes apiece.
+
+    This is the only leak-free way to ask what a market cost BEFORE a game. A
+    settled market's last_price is the in-play settlement trade, so anything
+    priced off it already knows the result.
+    """
+    js = _get(f"/series/{series}/markets/{ticker}/candlesticks",
+              {"start_ts": int(start_ts), "end_ts": int(end_ts), "period_interval": period})
+    return js.get("candlesticks", [])
+
+
+def quote_at(series, ticker, ts, look_back_h=36, period=60):
+    """(bid, ask, mid) as of `ts`, from the last candle that closed at or before it.
+
+    Returns (None, None, None) when the market had no quote yet - a market listed
+    after the cutoff cannot be in a ticket built at the cutoff, and pretending
+    otherwise is exactly the hindsight this whole exercise is trying to avoid.
+    """
+    cs = candles(series, ticker, ts - look_back_h * 3600, ts, period)
+    best = None
+    for c in cs:
+        if c.get("end_period_ts", 0) > ts:
+            continue
+        b = (c.get("yes_bid") or {}).get("close")
+        a = (c.get("yes_ask") or {}).get("close")
+        if b is None or a is None:
+            continue
+        best = (b / 100.0, a / 100.0)
+    if not best:
+        return None, None, None
+    bid, ask = best
+    if ask <= 0 or bid >= 1 or ask < bid:
+        return None, None, None
+    return bid, ask, (bid + ask) / 2
 
 
 def match_sides(ev):
