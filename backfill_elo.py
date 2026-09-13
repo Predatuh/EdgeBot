@@ -161,6 +161,35 @@ def rebuild(key, games, name_map, k, home_adv):
     return ratings
 
 
+def schedule_check(ratings, games, name_map, floor=1700, strong=1600, min_strong=4):
+    """Teams rated highly on a schedule that never tested them.
+
+    Elo assumes everyone eventually plays everyone. FCS and FBS barely meet, so
+    the two divisions float apart, and margin of victory makes it worse: North
+    Dakota St. came out of the first real backfill at 1888 - above Texas and
+    Alabama - on 39 wins of which TWO were against anyone rated 1600+.
+
+    This does not adjust anything. A rating built on a weak schedule is not wrong
+    so much as unknowable, and quietly shrinking it would be a guess dressed as a
+    correction. It is reported so the number is never read as settled.
+    """
+    opps = {}
+    for g in games:
+        a = name_map.get(g["away"], g["away"])
+        b = name_map.get(g["home"], g["home"])
+        opps.setdefault(a, []).append(b)
+        opps.setdefault(b, []).append(a)
+    flagged = []
+    for team, rating in ratings.items():
+        if team.startswith("_") or rating < floor:
+            continue
+        faced = opps.get(team, [])
+        n_strong = sum(1 for o in faced if ratings.get(o, elo.BASE_RATING) >= strong)
+        if n_strong < min_strong:
+            flagged.append((team, rating, len(faced), n_strong))
+    return sorted(flagged, key=lambda t: -t[1])
+
+
 def separation(ratings):
     vals = sorted(v for k, v in ratings.items() if not k.startswith("_"))
     if len(vals) < 2:
@@ -222,6 +251,13 @@ def main(argv=None):
     top = sorted(((k, v) for k, v in ratings.items() if not k.startswith("_")),
                  key=lambda kv: -kv[1])[:8]
     print("[backfill] top: " + ", ".join(f"{k} {v:.0f}" for k, v in top))
+
+    weak = schedule_check(ratings, games, name_map)
+    if weak:
+        print(f"[backfill] {len(weak)} highly rated team(s) never played a hard schedule - "
+              f"treat their rating as unproven, not elite:")
+        for team, r, n, ns in weak[:6]:
+            print(f"[backfill]    {team:<24} {r:.0f} on {n} games, only {ns} vs 1600+")
 
     # form and H2H read the same history file and were seeing ~2 games per team
     hist = state.load_history(a.league)

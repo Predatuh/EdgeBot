@@ -140,6 +140,20 @@ r2 = backfill_elo.rebuild("t", games, nm, k=24, home_adv=60)
 check("ESPN names are rewritten to the Kalshi vocabulary",
       "Jugg St." in r2 and "Juggernaut" not in r2, str([k for k in r2 if not k.startswith("_")]))
 
+# a team that only ever played weak opposition must be reported, not trusted
+iso = []
+for i in range(12):
+    iso.append(game(f"2025-09-{i+1:02d}", "Nobody%d" % i, "Isolated", 3, 59))
+for i in range(12):
+    iso.append(game(f"2025-10-{i+1:02d}", "Tested", "Contender%d" % i, 31, 28))
+    iso.append(game(f"2025-10-{i+1:02d}", "Contender%d" % i, "Filler", 55, 3))
+ri = backfill_elo.rebuild("t", iso, {}, k=24, home_adv=0)
+flagged = {t for t, *_ in backfill_elo.schedule_check(ri, iso, {})}
+check("a team fattened on weak opponents is flagged", "Isolated" in flagged, str(flagged))
+check("...and one that beat real teams is not", "Tested" not in flagged, str(flagged))
+check("the flag does not change any rating",
+      backfill_elo.rebuild("t", iso, {}, k=24, home_adv=0)["Isolated"] == ri["Isolated"])
+
 sd, rng, n = backfill_elo.separation(r)
 check("separation is reported", sd > 0 and rng > 0 and n == 4, f'{sd:.1f}/{rng:.1f}/{n}')
 check("an empty table reports no separation", backfill_elo.separation({"_games": 0})[2] == 0)

@@ -195,10 +195,52 @@ both: `brier_raw` below `brier_market` in `stats.json`, and the
 actually disagrees, over 100+ graded picks it did not choose. The gates
 (`max_disagreement`, `require_rating_edge`, per-league `stake`) stay on either way.
 
+## Ratings (`backfill_elo.py`)
+
+Elo was trained only on Kalshi's settled results — weeks of history, and no scores, so
+margin of victory was off. College football sat at a **median of two rated games per
+team**: every team near 1500, and every "edge" an artefact of that.
+
+`backfill_elo.py` rebuilds a league from ESPN's historical scores instead. For college
+football that is 2,887 games over three seasons, with margins:
+
+| | before | after |
+|---|---|---|
+| rated games | 329 | 2,887 |
+| rating spread (sd) | 16.7 | 135.7 |
+| rating range | 74 | 771 |
+| games per team (median) | 2 | 8 |
+
+```
+python backfill_elo.py --league ncaaf --seasons 3 --dry-run   # report, write nothing
+python backfill_elo.py --league ncaaf --seasons 3
+```
+
+Ratings record `_espn_through`; the Kalshi ingest skips anything on or before it, so no
+game is taught twice. The same history merges into `hist_*.json`, which is what form and
+H2H read. Re-run it when Kalshi starts listing teams it has not seen before — a team
+absent from the Kalshi vocabulary keeps its ESPN name and will not join up later.
+
+**Names are the joint.** The table is keyed by Kalshi's `Ohio St.` while ESPN says
+`Ohio State Buckeyes`. `match_score` ranks candidates by where the match starts, how many
+characters match, and the parenthetical; ties are then retried against names already
+claimed. That is what separates Miami (FL) from Miami (OH), Duquesne from Duke,
+Jacksonville St. from Jackson St., and Colorado from Buffalo.
+
+**A rating is not a verdict on schedule strength.** North Dakota St. came out of the
+first backfill at 1888 — above Texas and Alabama — on 39 wins of which two were against
+anyone rated 1600+. Elo assumes everyone eventually plays everyone; FCS and FBS barely
+meet, so the divisions float apart and MOV widens the gap. The backfill reports these
+rather than shrinking them, because a rating built on a weak schedule is unknowable
+rather than wrong, and a silent correction would be a guess dressed up as a fix.
+
 ## Honest expectations
 
-- Elo is built from Kalshi's settled history only, which reaches back weeks, not years.
-  Leagues with few games per competitor (tennis: hundreds of players, ~5 matches each)
+- Better ratings are necessary, not sufficient. The calibration study said the model
+  loses to the market; the backfill removes the most obvious reason why, but whether it
+  now beats the price is an empirical question. Keep `staking: false` until
+  `model_vs_market` in `stats.json` says otherwise.
+- Leagues with few games per competitor (tennis: hundreds of players, ~5 matches each)
   cannot produce a meaningful rating and should not be staked.
 - Win % means nothing. Units, ROI and — once there are enough snapshots — CLV are the
   truth, and `expected_w` (what the market priced those same picks at) is the yardstick.
@@ -284,6 +326,7 @@ in a parlay, so those leagues are still offered here.
 Flat: `main.py` (orchestration + model), `kalshi.py` (market + results),
 `espn.py` (injuries/venue), `weather.py`, `elo.py`, `edge.py` (de-vig, Kelly),
 `state.py` (persistence + analytics), `research.py` (Claude web research),
+`backfill_elo.py` (rebuild ratings from ESPN scores),
 `tipsters.py` (outside slates), `notify.py` (Discord, rate-limit aware),
 `merge_state.py` (unions the append-only logs before each commit),
 `parlay.py` + `webapp/parlay.html` (the football parlay builder and its phone app).
