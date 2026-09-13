@@ -71,16 +71,16 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 26px + env(safe-area-inset-bott
 
 /* ---------- bottom nav ---------- */
 .tabs{position:fixed; bottom:0; left:0; right:0; z-index:40; display:grid;
-  grid-template-columns:repeat(4,1fr); background:var(--surface); box-shadow:var(--lift);
+  grid-template-columns:repeat(5,1fr); background:var(--surface); box-shadow:var(--lift);
   padding-bottom:env(safe-area-inset-bottom); max-width:520px; margin:0 auto}
 .tabs button{display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:3px; border:0; background:none; height:var(--nav); color:var(--muted); position:relative}
 .tabs button .ic{font-size:1.15rem; line-height:1}
-.tabs button .tx{font-size:.63rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase}
+.tabs button .tx{font-size:.58rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase}
 .tabs button[aria-selected="true"]{color:var(--accent)}
 .tabs button[aria-selected="true"]::before{content:""; position:absolute; top:0; left:22%; right:22%;
   height:3px; border-radius:0 0 3px 3px; background:var(--accent)}
-.tabs .dot{position:absolute; top:9px; right:calc(50% - 22px); min-width:17px; height:17px;
+.tabs .dot{position:absolute; top:9px; right:calc(50% - 20px); min-width:17px; height:17px;
   border-radius:999px; background:var(--accent); color:var(--accent-ink);
   font-size:.6rem; font-weight:800; display:grid; place-items:center; padding:0 4px}
 
@@ -232,6 +232,49 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
 .scopelist button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
 .scopelist button[aria-pressed="true"] .ct{color:var(--accent-ink)}
 
+/* ---------- charts ----------
+   Rounded data-ends anchored to the track, a 2px gap where fills meet, thin marks,
+   and a value printed on every row - the number is never carried by colour alone. */
+.bar{display:flex; align-items:center; gap:9px; padding:5px 0}
+.bar .k{flex:0 0 76px; font-size:.74rem; color:var(--muted); line-height:1.2}
+.bar .track{flex:1; height:10px; background:var(--sunk); border-radius:5px; min-width:40px}
+.bar .fill{height:10px; border-radius:5px; background:var(--muted); opacity:.55; transition:width .2s}
+.bar.best .fill{background:var(--good); opacity:1}
+.bar .v{flex:0 0 58px; text-align:right; font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums; font-size:.78rem; font-weight:600}
+.bar.best .v{color:var(--good)}
+
+.dv{display:flex; align-items:center; gap:8px; padding:5px 0}
+.dv .k{flex:0 0 96px; font-size:.73rem; color:var(--muted); line-height:1.2}
+.dv .mid{flex:1; display:flex; position:relative; min-width:70px}
+.dv .zero{position:absolute; left:50%; top:-1px; bottom:-1px; width:1px;
+  background:var(--line-hard)}
+.dv .half{flex:1; display:flex; align-items:center}
+.dv .half.l{justify-content:flex-end; padding-right:2px}
+.dv .half.r{padding-left:2px}
+.dv .seg{height:10px; border-radius:5px; min-width:2px}
+.dv .seg.up{background:var(--good)}
+.dv .seg.down{background:var(--t-live)}
+.dv .v{flex:0 0 66px; text-align:right; font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums; font-size:.78rem; font-weight:600}
+.dv .v.up{color:var(--good)} .dv .v.down{color:var(--t-live)}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:9px}
+.tile{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:12px 13px}
+.tile .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.45rem; font-weight:600; line-height:1.1; margin-top:2px}
+.tile .sub{font-size:.7rem; color:var(--muted); margin-top:3px}
+.verdict{border-left:4px solid var(--warn)}
+.verdict b{color:var(--ink)}
+.rows{width:100%; border-collapse:collapse; font-size:.8rem}
+.rows th{text-align:left; font-size:.62rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--muted); font-weight:700; padding:7px 8px; border-bottom:1px solid var(--line)}
+.rows td{padding:7px 8px; border-bottom:1px solid var(--line)}
+.rows tr:last-child td{border-bottom:0}
+.rows td.n{text-align:right; font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums}
+
 /* ---------- prose ---------- */
 .prose{font-size:.82rem; color:var(--muted); line-height:1.6}
 .prose b{color:var(--ink)}
@@ -325,6 +368,18 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
       <p class="prose">Search each ticker on Kalshi to build the combo. <b>Prices move</b> — the numbers here are from the snapshot time in the header, not a live quote.</p>
     </section>
 
+    <!-- ============ RECORD ============ -->
+    <section class="tab" id="tab-stats" hidden>
+      <p class="lbl" id="statsstamp" style="text-transform:none; letter-spacing:.02em"></p>
+      <div class="card pad prose verdict" id="verdict"></div>
+      <div id="brierwrap"></div>
+      <div id="vsmarket"></div>
+      <div class="grid2" id="tiles"></div>
+      <div id="gatewrap"></div>
+      <div id="leaguewrap"></div>
+      <div id="ratingwrap"></div>
+    </section>
+
     <!-- ============ WHY ============ -->
     <section class="tab" id="tab-why" hidden>
       <div class="card pad prose">
@@ -351,6 +406,7 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
     <button type="button" role="tab" data-tab="build" aria-selected="true"><span class="ic">🎯</span><span class="tx">Build</span></button>
     <button type="button" role="tab" data-tab="board" aria-selected="false"><span class="ic">📋</span><span class="tx">Board</span></button>
     <button type="button" role="tab" data-tab="slip"  aria-selected="false"><span class="ic">🎟️</span><span class="tx">Slip</span><span class="dot" id="slipdot" hidden>0</span></button>
+    <button type="button" role="tab" data-tab="stats" aria-selected="false"><span class="ic">📊</span><span class="tx">Record</span></button>
     <button type="button" role="tab" data-tab="why"   aria-selected="false"><span class="ic">📐</span><span class="tx">Why</span></button>
   </nav>
 </div>
@@ -822,7 +878,7 @@ function render(){
 /* ---- tabs & sheets ---- */
 function showTab(k){
   S.tab=k;
-  ["build","board","slip","why"].forEach(function(t){ $("tab-"+t).hidden=(t!==k); });
+  ["build","board","slip","stats","why"].forEach(function(t){ $("tab-"+t).hidden=(t!==k); });
   Array.prototype.forEach.call($("tabs").children,function(b){
     b.setAttribute("aria-selected", String(b.dataset.tab===k)); });
   window.scrollTo(0,0);
@@ -907,6 +963,161 @@ document.addEventListener("click",function(e){
     render(); }
 });
 
+/* ---- the record ----
+   The question this tab answers is not "how are we doing" but "should this model
+   ever be trusted with money". Brier score settles it: the market's number beats
+   the model's raw number, and that is why staking is off. */
+var STATS = DATA.stats || null;
+var STATS_URL="https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/stats.json";
+
+function n0(x){ return (x==null||isNaN(x)) ? "—" : Math.round(x).toLocaleString(); }
+function sgn(x,d){ return (x>=0?"+":"")+x.toFixed(d==null?1:d); }
+
+function barRow(label, value, max, text, best){
+  var w = max>0 ? Math.max(2, Math.round(100*value/max)) : 0;
+  return '<div class="bar'+(best?" best":"")+'"><span class="k">'+esc(label)+'</span>'+
+    '<span class="track"><span class="fill" style="width:'+w+'%"></span></span>'+
+    '<span class="v">'+esc(text)+'</span></div>';
+}
+function divRow(label, delta, max, text){
+  var up = delta >= 0;
+  var w = max>0 ? Math.max(1, Math.round(100*Math.abs(delta)/max)) : 0;
+  return '<div class="dv"><span class="k">'+esc(label)+'</span>'+
+    '<span class="mid"><span class="zero"></span>'+
+      '<span class="half l">'+(up?"":'<span class="seg down" style="width:'+w+'%"></span>')+'</span>'+
+      '<span class="half r">'+(up?'<span class="seg up" style="width:'+w+'%"></span>':"")+'</span>'+
+    '</span>'+
+    '<span class="v '+(up?"up":"down")+'">'+(up?"▲":"▼")+' '+esc(text)+'</span></div>';
+}
+function card(title, note, body){
+  return '<div class="card" style="overflow:hidden">'+
+    '<div class="pad" style="padding-bottom:6px"><p class="lbl">'+esc(title)+'</p>'+
+    (note?'<p class="prose" style="margin-top:5px">'+note+'</p>':'')+'</div>'+
+    '<div class="pad" style="padding-top:4px">'+body+'</div></div>';
+}
+
+function renderStats(){
+  var st=STATS;
+  if(!st){ $("verdict").innerHTML="No record yet. The bot writes this after its first graded run."; return; }
+  $("statsstamp").textContent=st.picks_logged+" picks logged · updated "+
+    (st.generated_utc||"").replace("T"," ").replace("Z"," UTC");
+
+  // --- verdict: whichever tier has the most graded picks decides it
+  var tiers=Object.keys(st.overall||{});
+  var main=tiers.sort(function(a,b){ return (st.overall[b].n||0)-(st.overall[a].n||0); })[0];
+  var o=main?st.overall[main]:null;
+  if(o){
+    var beat=o.brier_raw < o.brier_market;
+    $("verdict").innerHTML="<b>Does the model beat the price?</b> "+
+      (beat ? "On "+o.n+" graded "+esc(main)+" picks it does — its own number scores "+
+              o.brier_raw.toFixed(4)+" against the market's "+o.brier_market.toFixed(4)+
+              ". Worth re-checking before staking anything."
+            : "No. On "+o.n+" graded "+esc(main)+" picks the model's own number scores "+
+              o.brier_raw.toFixed(4)+" and the market's scores "+o.brier_market.toFixed(4)+
+              " — lower is better, so the price is the better estimate. That is why staking is off.");
+  }
+
+  // --- Brier per tier. Lower is better, so the shortest bar wins and is the one
+  //     coloured; every bar is labelled, so colour is not carrying the meaning.
+  var bh="";
+  tiers.forEach(function(t){
+    var x=st.overall[t];
+    var vals=[["Model",x.brier_raw],["Blended",x.brier_model],["Market",x.brier_market]];
+    var mx=Math.max.apply(null,vals.map(function(v){return v[1];}));
+    var best=Math.min.apply(null,vals.map(function(v){return v[1];}));
+    bh+='<p class="lbl" style="margin:10px 0 2px">'+esc(t)+' · '+x.n+' graded</p>'+
+      vals.map(function(v){
+        return barRow(v[0], v[1], mx, v[1].toFixed(4), v[1]===best);
+      }).join("");
+  });
+  $("brierwrap").innerHTML=card("Brier score — lower is better",
+    "How far each estimate sat from what actually happened. <b>Model</b> is Elo alone, "+
+    "<b>Blended</b> is Elo mixed with the price, <b>Market</b> is the price by itself.", bh);
+
+  // --- did each bucket beat the price it was given
+  var mv=st.model_vs_market||{}, keys=Object.keys(mv);
+  var deltas=keys.map(function(k){ return (mv[k].w||0)-(mv[k].expected_w||0); });
+  var mx=Math.max.apply(null, deltas.map(Math.abs).concat([1]));
+  var dh=keys.map(function(k,i){
+    var b=mv[k];
+    return divRow(k.replace(/\s*\(.*\)/,""), deltas[i], mx,
+                  sgn(deltas[i])+"  "+b.w+"-"+b.l);
+  }).join("");
+  $("vsmarket").innerHTML=card("Wins above or below what the price implied",
+    "Each bucket is how far the model's number sat from the market's. Right of the "+
+    "line beat its price; left of it fell short.", dh);
+
+  // --- the money
+  var tl="";
+  tiers.forEach(function(t){
+    var x=st.overall[t];
+    var staked=(x.staked_n||0)>0;
+    tl+='<div class="tile"><p class="lbl">'+esc(t)+(staked?" · staked":" · paper")+'</p>'+
+      '<p class="v">'+x.w+"-"+x.l+'</p><p class="sub">'+
+      (staked ? sgn(x.units,2)+"u on "+x.risked.toFixed(2)+"u risked · ROI "+x.roi.toFixed(1)+"%"
+              : "not staked · expected "+(x.expected_w||0).toFixed(1)+" wins")+'</p></div>';
+  });
+  $("tiles").innerHTML=tl;
+
+  // --- gates: what was blocked, and whether blocking it was right
+  var g=st.by_gate||{};
+  var gr=Object.keys(g).sort(function(a,b){ return g[b].n-g[a].n; }).map(function(k){
+    var x=g[k], d=(x.w||0)-(x.expected_w||0);
+    return '<tr><td>'+esc(k)+'</td><td class="n">'+x.n+'</td><td class="n">'+x.w+"-"+x.l+
+      '</td><td class="n" style="color:'+(d>=0?"var(--good)":"var(--t-live)")+'">'+sgn(d)+'</td></tr>';
+  }).join("");
+  $("gatewrap").innerHTML=card("Why picks were held back",
+    "<b>vs price</b> is wins above what the market implied for those same picks.",
+    '<div class="scroll"><table class="rows"><thead><tr><th>Gate</th><th class="n">n</th>'+
+    '<th class="n">W-L</th><th class="n">vs price</th></tr></thead><tbody>'+gr+
+    '</tbody></table></div>');
+
+  // --- leagues
+  // by_league nests league -> tier -> record, unlike by_gate which is flat
+  var bl=st.by_league||{};
+  var totals={};
+  Object.keys(bl).forEach(function(k){
+    var t={n:0,w:0,l:0,exp:0};
+    Object.keys(bl[k]).forEach(function(tier){
+      var x=bl[k][tier];
+      t.n+=x.n||0; t.w+=x.w||0; t.l+=x.l||0; t.exp+=x.expected_w||0;
+    });
+    if(t.n>=5) totals[k]=t;
+  });
+  var lr=Object.keys(totals).sort(function(a,b){ return totals[b].n-totals[a].n; })
+    .map(function(k){
+      var x=totals[k], d=x.w-x.exp;
+      return '<tr><td>'+esc(k)+'</td><td class="n">'+x.n+'</td><td class="n">'+x.w+"-"+x.l+
+        '</td><td class="n" style="color:'+(d>=0?"var(--good)":"var(--t-live)")+'">'+sgn(d)+'</td></tr>';
+    }).join("") || '<tr><td colspan="4" style="color:var(--muted)">Nothing graded yet.</td></tr>';
+  $("leaguewrap").innerHTML=card("By league", "Leagues with at least five graded picks.",
+    '<div class="scroll"><table class="rows"><thead><tr><th>League</th><th class="n">n</th>'+
+    '<th class="n">W-L</th><th class="n">vs price</th></tr></thead><tbody>'+lr+
+    '</tbody></table></div>');
+
+  // --- ratings
+  var tr=st.top_ratings||{};
+  var order=["ncaaf","nfl","mlb","epl","laliga","seriea","bundesliga","ligue1","mls","ucl"];
+  var have=order.filter(function(k){ return (tr[k]||[]).length; })
+    .concat(Object.keys(tr).filter(function(k){ return order.indexOf(k)<0 && (tr[k]||[]).length; }));
+  var rr=have.slice(0,4).map(function(k){
+    var list=tr[k].slice(0,5);
+    var spread=list.length>1 ? list[0].elo-list[list.length-1].elo : 0;
+    return '<p class="lbl" style="margin:10px 0 3px">'+esc(k)+
+      (spread>60?'':' · <span style="color:var(--warn);text-transform:none;letter-spacing:0">'+
+        'barely separated — needs an ESPN backfill</span>')+'</p>'+
+      list.map(function(r){
+        return '<div class="bar"><span class="k" style="flex:0 0 120px;color:var(--ink)">'+
+          esc(r.name)+'</span><span class="track"><span class="fill" style="width:'+
+          Math.max(2,Math.round(100*(r.elo-1300)/900))+'%"></span></span>'+
+          '<span class="v">'+n0(r.elo)+'</span></div>';
+      }).join("");
+  }).join("");
+  $("ratingwrap").innerHTML=card("Top Elo ratings",
+    "A league whose top five sit within ~60 points has not separated, and its "+
+    "\"edges\" are noise. <code>backfill_elo.py</code> is what fixes that.", rr);
+}
+
 /* ---- staying current ----
    Tries the repo's latest board. Failure is normal and silent: the Artifact
    sandbox blocks the request, and a phone on no signal has nothing to ask. The
@@ -947,6 +1158,10 @@ function refresh(manual){
   }).catch(function(){
     done("Could not reach the board; showing the saved one", false);
   });
+  // the record refreshes on its own schedule; a failure here is not worth a toast
+  fetch(STATS_URL, {cache:"no-store"}).then(function(r){ return r.ok?r.json():null; })
+    .then(function(st){ if(st && st.overall){ STATS=st; renderStats(); } })
+    .catch(function(){});
 }
 $("refresh").addEventListener("click", function(){ refresh(true); });
 
@@ -956,7 +1171,7 @@ $("calib").innerHTML="<b>Leg prices.</b> "+esc(SNAP.calibration_note||"");
 $("bt").innerHTML="<b>Whole tickets.</b> "+esc(SNAP.backtest_note||
   "Replayed over two past weekends the builder came in close to what the prices implied "+
   "and lost to the spread, with one or two upsets deciding each weekend.");
-renderDial(); render(); showTab("build");
+renderDial(); render(); renderStats(); showTab("build");
 refresh(false);        // the page is already usable; this only ever upgrades it
 })();
 </script>

@@ -576,6 +576,7 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
         "tickets": ladder(scope_legs(legs, scope)),
         "calibration_note": CALIBRATION_NOTE,
         "backtest_note": backtest_note(),
+        "stats": load_stats(),
     }
 
 
@@ -652,6 +653,24 @@ def write_pwa(outdir, name="Gridiron Ticket", short="Ticket"):
     with open(os.path.join(outdir, "manifest.webmanifest"), "w") as f:
         json.dump(manifest, f, indent=1)
     return ["manifest.webmanifest", "icon-192.png", "icon-512.png"]
+
+
+def load_stats(path=None, keep=("generated_utc", "picks_logged", "overall", "last_7_days",
+                                "by_league", "model_vs_market", "by_gate", "top_ratings",
+                                "tipsters")):
+    """The bot's own record, for the app's Stats tab.
+
+    main.py has always written this and it has only ever been readable as raw JSON
+    or a Discord card. model_vs_market in particular is the number that decides
+    whether staking should ever come back on, and it had no UI at all.
+    """
+    path = path or os.path.join(HERE, "data", "v2", "stats.json")
+    try:
+        with open(path) as f:
+            d = json.load(f)
+    except (OSError, ValueError):
+        return None
+    return {k: d[k] for k in keep if k in d}
 
 
 def backtest_note(path=None):
@@ -750,7 +769,8 @@ def _cli(argv=None):
         snap = {"generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                 "days": a.days, "board": board_summary([]), "legs": [], "presets": PRESETS,
                 "scopes": [], "scope": a.scope, "tickets": [],
-                "calibration_note": CALIBRATION_NOTE, "backtest_note": backtest_note()}
+                "calibration_note": CALIBRATION_NOTE, "backtest_note": backtest_note(),
+                "stats": load_stats()}
     else:
         if a.no_research:
             cfg = dict(cfg, research=dict(cfg.get("research") or {}, mode="off"))
