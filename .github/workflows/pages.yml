@@ -1,7 +1,22 @@
 name: Deploy Pages
 
-# Publishes docs/ as the phone app. configure-pages turns Pages on by itself the
-# first time this runs, which is the only way to enable it from a workflow.
+# Publishes docs/ as the phone app.
+#
+# This only runs once a human has enabled Pages in Settings -> Pages. Neither the
+# dev environment nor a runner can do it: the REST path is blocked from the dev
+# proxy, and a workflow GITHUB_TOKEN gets 403 "Resource not accessible by
+# integration" on both POST /pages and the environment's branch policies, even
+# with pages:write. Enabling Pages needs repo-admin rights, which GITHUB_TOKEN
+# never has.
+#
+# If you pick "GitHub Actions" as the source, this workflow is the deploy. If you
+# pick "Deploy from a branch" (main, /docs), GitHub builds it itself and this
+# workflow is redundant but harmless.
+#
+# One gotcha found the hard way: the github-pages environment was created with a
+# deployment-branch policy allowing a single branch literally named "None", so
+# every deploy was rejected before any step ran. If a deploy fails that way, fix
+# it at Settings -> Environments -> github-pages -> Deployment branches.
 on:
   workflow_dispatch: {}
   push:
