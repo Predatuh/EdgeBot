@@ -1,0 +1,24 @@
+name: Pages Check
+on: {workflow_dispatch: {}}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: What does GitHub actually think Pages is set to
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
+          echo "=== GET /repos/$R/pages"
+          gh api "repos/$R/pages" 2>&1 | head -30 || echo "(not enabled / no access)"
+          echo
+          echo "=== GET /repos/$R/environments"
+          gh api "repos/$R/environments" --jq '.environments[]?|{name,protection_rules}' 2>&1 | head -30 || echo "(no access)"
+          echo
+          echo "=== deployment branch policies for github-pages"
+          gh api "repos/$R/environments/github-pages/deployment-branch-policies" 2>&1 | head -30 || echo "(none / no access)"
