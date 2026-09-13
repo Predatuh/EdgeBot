@@ -303,9 +303,16 @@ python test_parlay.py                              # 90+ offline checks on the m
 carries every scope.
 
 `.github/workflows/parlay.yml` runs it daily, posts the card to Discord, and writes
-`docs/index.html` — open **Settings → Pages → Deploy from branch → `/docs`** once and the
-page is a phone bookmark. Every slider recomputes in the browser from data baked into the
-file, so it also works saved locally with no connection.
+`docs/index.html` — open **Settings → Pages → Deploy from branch → `main` → `/docs`** once
+and the page is installable to a phone home screen (manifest and icons ship with it).
+
+The page carries a board baked in, so it renders instantly and works with no signal, then
+asks `raw.githubusercontent.com` whether a newer one exists and adopts it if so. That is
+what makes a single saved copy keep working: it is only a snapshot when it has to be. A
+failed fetch is silent and harmless — the sandbox an Artifact runs in blocks it, and a
+phone with no signal has nothing to ask — and a board that comes back empty or malformed
+is rejected rather than allowed to replace a good one. The ↻ button forces a check; the
+header says how old the board actually is.
 
 Rungs are payouts: Banker 1.15× → Solid 2× → Swing 8× → Longshot 40× → Lottery 250×.
 Win probability is about `1/payout` however a ticket is built, so that ladder runs from

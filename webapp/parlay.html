@@ -58,7 +58,11 @@ button{font:inherit; color:inherit; cursor:pointer; -webkit-tap-highlight-color:
 .bar h1{font-size:1.1rem; font-weight:800; line-height:1.1}
 .bar .fresh{font-size:.68rem; color:var(--muted); letter-spacing:.03em;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:56vw}
-.scopebtn{margin-left:auto; display:flex; align-items:center; gap:7px; white-space:nowrap;
+.refresh{margin-left:auto; flex:0 0 auto; width:38px; height:38px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted); font-size:1rem}
+.refresh[data-busy="1"]{opacity:.5}
+.refresh[data-fresh="1"]{color:var(--good); border-color:var(--good)}
+.scopebtn{display:flex; align-items:center; gap:7px; white-space:nowrap;
   background:var(--surface); border:1px solid var(--line-hard); border-radius:999px;
   padding:7px 12px; font-size:.8rem; font-weight:700; min-height:38px}
 .scopebtn .n{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--muted)}
@@ -245,6 +249,7 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
       <h1>Gridiron Ticket</h1>
       <p class="fresh" id="fresh">loading…</p>
     </div>
+    <button class="refresh" id="refresh" type="button" aria-label="Fetch the latest board">↻</button>
     <button class="scopebtn" id="scopebtn" type="button" aria-haspopup="dialog"></button>
   </header>
 
@@ -452,14 +457,32 @@ var TIERS=[[0.97,"Lock","var(--t-lock)"],[0.92,"Strong","var(--t-strong)"],
            [0.00,"Coin flip","var(--t-live)"]];
 function tierOf(p){ for(var i=0;i<TIERS.length;i++){ if(p>=TIERS[i][0]) return TIERS[i]; } return TIERS[4]; }
 
-var isDemo=!(DATA.legs&&DATA.legs.length), SNAP=isDemo?DEMO:DATA, LEGS=(SNAP.legs||[]).slice();
-LEGS.forEach(function(l){ if(l.research===undefined) l.research=null; });
-var PRESETS=(SNAP.presets&&SNAP.presets.length&&SNAP.presets[0].payout)?SNAP.presets:[
+/* The page ships with a board baked in so it renders instantly and works with no
+   signal, then asks the repo whether a newer one exists. That is what makes one
+   saved file keep working: it is not a snapshot unless it has to be. */
+var DATA_URL="https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/parlay.json";
+var isDemo, SNAP, LEGS;
+function adopt(snap){
+  isDemo=!(snap && snap.legs && snap.legs.length);
+  SNAP=isDemo?DEMO:snap;
+  LEGS=(SNAP.legs||[]).slice();
+  LEGS.forEach(function(l){ if(l.research===undefined) l.research=null; });
+  labelOf={}; LEGS.forEach(function(l){ labelOf[l.league]=l.league_label; });
+  SCOPES=computeScopes();
+}
+var labelOf={}, SCOPES=[];
+// assigned after adopt() has set SNAP - ALL_SCOPES has to exist before adopt can run
+var DEFAULT_PRESETS=[
   {key:"banker",label:"Banker",payout:1.15,emoji:"🔒"},
   {key:"solid",label:"Solid",payout:2.0,emoji:"🛡️"},
   {key:"swing",label:"Swing",payout:8.0,emoji:"⚖️"},
   {key:"longshot",label:"Longshot",payout:40.0,emoji:"🎯"},
   {key:"lottery",label:"Lottery",payout:250.0,emoji:"🎰"}];
+var PRESETS=DEFAULT_PRESETS;
+function presetsFrom(snap){
+  return (snap.presets && snap.presets.length && snap.presets[0].payout)
+    ? snap.presets : DEFAULT_PRESETS;
+}
 
 var ALL_SCOPES=[
   {key:"football",label:"Football",emoji:"🏈",leagues:["nfl","ncaaf","cfl"]},
@@ -470,23 +493,25 @@ var ALL_SCOPES=[
   {key:"mlb",label:"Baseball",emoji:"⚾",leagues:["mlb"]},
   {key:"cricket",label:"Cricket",emoji:"🏏",leagues:["cricket_t20i","cricket_odi","cricket_test","cpl"]},
   {key:"all",label:"Everything",emoji:"🌐",leagues:null}];
-var labelOf={}; LEGS.forEach(function(l){ labelOf[l.league]=l.league_label; });
 function scopeLeagues(k){ var x=ALL_SCOPES.filter(function(y){return y.key===k;})[0];
   return (x&&x.leagues)?x.leagues:null; }
 function inScope(l,k){ var lg=scopeLeagues(k); return !lg||lg.indexOf(l.league)>=0; }
 function leaguesIn(k){ var o=[]; LEGS.forEach(function(l){
   if(inScope(l,k)&&o.indexOf(l.league)<0) o.push(l.league); }); return o; }
 
-var SCOPES=(SNAP.scopes&&SNAP.scopes.length)?SNAP.scopes:(function(){
+function computeScopes(){
+  if(SNAP.scopes && SNAP.scopes.length) return SNAP.scopes;
   return ALL_SCOPES.map(function(sc){
     var got=LEGS.filter(function(l){ return !sc.leagues||sc.leagues.indexOf(l.league)>=0; });
     var g={}; got.forEach(function(l){ g[l.event_id]=1; });
     return {key:sc.key,label:sc.label,emoji:sc.emoji,leagues:sc.leagues,
             legs:got.length,games:Object.keys(g).length};
   }).filter(function(sc){ return sc.legs>0; });
-})();
+}
 function scopeInfo(k){ return SCOPES.filter(function(s){return s.key===k;})[0]; }
 
+adopt(DATA);
+PRESETS=presetsFrom(SNAP);
 var START=(scopeInfo(SNAP.scope||"football")||SCOPES[0]||{key:"all"}).key;
 var S={tab:"build", scope:START, preset:"swing", payout:8.0, maxLegs:40,
        liquid:true, trustCheap:false, noflag:true, onegame:true,
@@ -785,8 +810,9 @@ function render(){
   var r=summarise(build());
   renderTicket(r); renderLegs(r); renderBoard();
   var sc=scopeInfo(S.scope);
+  var age=ageOf(SNAP.generated_utc);
   $("fresh").textContent=(sc?sc.games+" games · "+sc.legs+" legs":"no markets")+
-    (SNAP.generated_utc?" · "+SNAP.generated_utc.slice(11):"");
+    (age?" · "+age:"");
   $("snapshot").textContent=SNAP.generated_utc
     ? "Snapshot "+SNAP.generated_utc.replace("T"," ").replace("Z"," UTC")+" — re-check on Kalshi before you buy"
     : "Prices are a snapshot — re-check on Kalshi before you buy";
@@ -881,6 +907,49 @@ document.addEventListener("click",function(e){
     render(); }
 });
 
+/* ---- staying current ----
+   Tries the repo's latest board. Failure is normal and silent: the Artifact
+   sandbox blocks the request, and a phone on no signal has nothing to ask. The
+   baked-in board keeps working either way, so this can only ever improve things. */
+function ageOf(stamp){
+  if(!stamp) return "";
+  var t=Date.parse(stamp.replace("Z",":00Z"));
+  if(isNaN(t)) return "";
+  var mins=Math.round((Date.now()-t)/60000);
+  if(mins<2) return "just now";
+  if(mins<60) return mins+"m old";
+  var h=Math.round(mins/60);
+  return h<48 ? h+"h old" : Math.round(h/24)+"d old";
+}
+function refresh(manual){
+  var btn=$("refresh");
+  btn.dataset.busy="1";
+  var done=function(msg, fresh){
+    delete btn.dataset.busy;
+    if(fresh) btn.dataset.fresh="1"; else delete btn.dataset.fresh;
+    if(manual && msg) toast(msg);
+  };
+  if(!window.fetch){ done("This browser cannot refresh", false); return; }
+  fetch(DATA_URL, {cache:"no-store"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  }).then(function(snap){
+    if(!snap || !snap.legs || !snap.legs.length) throw new Error("empty board");
+    var had=SNAP.generated_utc||"";
+    if(snap.generated_utc && snap.generated_utc === had){ done("Already the latest board", true); return; }
+    adopt(snap);
+    PRESETS=presetsFrom(SNAP);
+    if(!scopeInfo(S.scope)) S.scope=(SCOPES[0]||{key:"all"}).key;
+    S.leagues=leaguesIn(S.scope);
+    S.pins={}; S.bans={};            // a pin on a game that is no longer listed is not a pin
+    renderDial(); render();
+    done("Updated — " + (scopeInfo(S.scope)||{games:0}).games + " games", true);
+  }).catch(function(){
+    done("Could not reach the board; showing the saved one", false);
+  });
+}
+$("refresh").addEventListener("click", function(){ refresh(true); });
+
 /* ---- boot ---- */
 $("demo").hidden=!isDemo;
 $("calib").innerHTML="<b>Leg prices.</b> "+esc(SNAP.calibration_note||"");
@@ -888,5 +957,6 @@ $("bt").innerHTML="<b>Whole tickets.</b> "+esc(SNAP.backtest_note||
   "Replayed over two past weekends the builder came in close to what the prices implied "+
   "and lost to the spread, with one or two upsets deciding each weekend.");
 renderDial(); render(); showTab("build");
+refresh(false);        // the page is already usable; this only ever upgrades it
 })();
 </script>
