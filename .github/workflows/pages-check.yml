@@ -6,19 +6,33 @@ permissions:
   id-token: write
   actions: read
 jobs:
-  check:
+  fix:
     runs-on: ubuntu-latest
     steps:
-      - name: What does GitHub actually think Pages is set to
-        env:
-          GH_TOKEN: ${{ github.token }}
-          R: ${{ github.repository }}
+      # The github-pages environment allows exactly one branch, named "None",
+      # which does not exist - so every deploy is rejected. Two independent ways
+      # out; either one is enough.
+      - name: 1. allow main to deploy to the github-pages environment
+        continue-on-error: true
+        env: {GH_TOKEN: "${{ github.token }}", R: "${{ github.repository }}"}
         run: |
-          echo "=== GET /repos/$R/pages"
-          gh api "repos/$R/pages" 2>&1 | head -30 || echo "(not enabled / no access)"
-          echo
-          echo "=== GET /repos/$R/environments"
-          gh api "repos/$R/environments" --jq '.environments[]?|{name,protection_rules}' 2>&1 | head -30 || echo "(no access)"
-          echo
-          echo "=== deployment branch policies for github-pages"
-          gh api "repos/$R/environments/github-pages/deployment-branch-policies" 2>&1 | head -30 || echo "(none / no access)"
+          gh api -X POST "repos/$R/environments/github-pages/deployment-branch-policies" \
+            -f name=main -f type=branch 2>&1 | head -5 \
+            && echo "RESULT: branch policy added" || echo "RESULT: could not add branch policy"
+
+      - name: 2. enable classic Pages on main /docs (uses pages:write)
+        continue-on-error: true
+        env: {GH_TOKEN: "${{ github.token }}", R: "${{ github.repository }}"}
+        run: |
+          gh api -X POST "repos/$R/pages" \
+            -f 'source[branch]=main' -f 'source[path]=/docs' 2>&1 | head -10 \
+            && echo "RESULT: pages enabled" || echo "RESULT: could not enable pages"
+
+      - name: where things stand
+        env: {GH_TOKEN: "${{ github.token }}", R: "${{ github.repository }}"}
+        run: |
+          echo "--- pages site:"
+          gh api "repos/$R/pages" --jq '{status,html_url,source,build_type}' 2>&1 | head -10 || echo "still not enabled"
+          echo "--- branches allowed to deploy:"
+          gh api "repos/$R/environments/github-pages/deployment-branch-policies" \
+            --jq '.branch_policies[].name' 2>&1 | head -10 || echo "(none readable)"
