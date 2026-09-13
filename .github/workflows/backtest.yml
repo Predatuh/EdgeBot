@@ -10,8 +10,17 @@ on:
         description: "Cutoff, e.g. 2026-09-11T13:00Z — only quotes at or before this are used"
         default: "2026-09-11T13:00Z"
       days:
-        description: "Grade games starting within this many days of the cutoff"
+        description: "Grade games starting within this many days of the cutoff (0 = that day only)"
         default: "3"
+      leagues:
+        description: "Only pull these leagues, e.g. ncaaf"
+        default: ""
+      scopes:
+        description: "Only build these scopes, e.g. ncaaf"
+        default: ""
+      payouts:
+        description: "Payout targets to try, comma separated"
+        default: ""
 
 permissions:
   contents: write
@@ -37,6 +46,9 @@ jobs:
           python backtest.py \
             --at "${{ inputs.at || '2026-09-11T13:00Z' }}" \
             --days "${{ inputs.days || 3 }}" \
+            --leagues "${{ inputs.leagues }}" \
+            --scopes "${{ inputs.scopes }}" \
+            --payouts "${{ inputs.payouts }}" \
             --json data/v2/backtest.json | tee backtest.txt
       - name: Commit the result
         run: |
