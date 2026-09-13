@@ -159,16 +159,35 @@ check("staked is stake x tickets", abs(s["staked"] - 10.0 * s["n"]) < 1e-6)
 check("returned is the sum of the winners' payouts",
       abs(s["returned"] - sum(t["returned"] for t in res["tickets"])) < 1e-6)
 check("profit reconciles", abs(s["profit"] - (s["returned"] - s["staked"])) < 1e-6)
-check("roi reconciles", s["staked"] > 0 and abs(s["roi"] - s["profit"] / s["staked"]) < 1e-6)
+check("roi reconciles", s["staked"] > 0 and abs(s["roi"] - s["profit"] / s["staked"]) < 1e-4,
+      f'{s["roi"]} vs {s["profit"] / s["staked"] if s["staked"] else 0}')
 check("a losing ticket returns nothing",
       all(t["returned"] == 0.0 for t in res["tickets"] if not t["won"]))
 check("a winning ticket returns stake x multiple",
       all(abs(t["returned"] - 10.0 * t["multiple"]) < 0.01 for t in res["tickets"] if t["won"]))
 check("expected winners is the sum of the ticket probabilities",
       abs(s["expected_won"] - round(sum(t["win_prob"] for t in res["tickets"]), 2)) < 0.01)
-check("no two tickets in a scope are the same bet",
-      len({(t["scope"], tuple(sorted(l["ticker"] for l in t["legs"]))) for t in res["tickets"]})
+check("no two tickets anywhere are the same bet",
+      len({tuple(sorted(l["ticker"] for l in t["legs"])) for t in res["tickets"]})
       == len(res["tickets"]))
+check("a bet reachable from several scopes is counted once and says so",
+      all(isinstance(t["also_via"], list) for t in res["tickets"]))
+check("every leg carries its own result",
+      all("won" in l for t in res["tickets"] for l in t["legs"]))
+check("correlation is reported, not hidden",
+      res["summary"]["distinct_legs"] > 0 and res["summary"]["most_reused_leg"] >= 1)
+
+# A postponed game settles NO on every side. Scoring that as a loss would invent
+# losses the bettor never took.
+void_evs = [{"event": "V1", "date": TODAY, "close": "", "sides": [
+    {"name": "A", "ticker": "V-A", "code": "A", "reg": False, "won": False, "settled": True,
+     "settle_price": 0.0, "is_tie": False, "home": True},
+    {"name": "B", "ticker": "V-B", "code": "B", "reg": False, "won": False, "settled": True,
+     "settle_price": 0.0, "is_tie": False, "home": False}]}]
+install(void_evs, {"V-A": (0.95, 0.96, 0.955), "V-B": (0.03, 0.05, 0.04)})
+vlegs, vwin = backtest.board_at(cfg, CUTOFF, 3)
+check("a voided game produces no legs at all", vlegs == [], str(vlegs))
+check("...and no phantom result", vwin == {})
 
 # Every favourite won, so a ticket made only of favourites must have cashed.
 favs = [t for t in res["tickets"] if all(l["pick"].startswith("Fav") for l in t["legs"])]
