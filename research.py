@@ -165,7 +165,13 @@ def _mentions(keys, title):
 def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None):
     days, n = int(_cfg["headlines_days"]), int(_cfg["headlines_max"])
     aliases = aliases or {}
-    picked, flags, health = [], [], {"pick": [], "opp": []}
+    picked, flags, ambiguous, health = [], [], [], {"pick": [], "opp": []}
+    # Team names collide by substring - "Utah" matches "Utah State", "Washington"
+    # matches "Washington State" - so a headline about the OPPONENT reads as a
+    # headline about our pick. Knowing both sides' keys up front is what lets a
+    # flag be attributed instead of guessed.
+    keys_by_role = {"pick": _keys(pick, aliases.get(pick, "")),
+                    "opp": _keys(opp, aliases.get(opp, ""))}
     for role, name in (("pick", pick), ("opp", opp)):
         full = aliases.get(name) or _display_name(name)
         q = f'"{full}"' if full != name else f'"{name}" {league_label}'
@@ -174,7 +180,8 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None)
         except Exception as e:
             print(f"[research] rss {name}: {type(e).__name__}: {str(e)[:80]}")
             continue
-        keys = _keys(name, aliases.get(name, ""))
+        keys = keys_by_role[role]
+        other = keys_by_role["opp" if role == "pick" else "pick"]
         seen_titles = set()
         kept = []
         for i in items:
@@ -191,7 +198,12 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None)
         for i in hits[:2]:
             health[role].append(i["title"])
             if role == "pick" and STRONG.search(i["title"]):
-                flags.append(i["title"])
+                # Both teams named: the headline could be about either one, and a
+                # false flag silently drops a good pick. Surface it, don't act on it.
+                if _mentions(other, i["title"]):
+                    ambiguous.append(i["title"])
+                else:
+                    flags.append(i["title"])
         for i in (hits + [i for i in items if i not in hits])[:n]:
             picked.append({"side": name, "title": i["title"], "source": i["source"],
                            "date": i["when"].strftime("%b %d") if i["when"] else "",
@@ -205,7 +217,8 @@ def _headlines(date, league_label, matchup, pick, opp, sport_hint, aliases=None)
         "pick_health": "; ".join(health["pick"]) or "no issues found",
         "opp_health": "; ".join(health["opp"]) or "no issues found",
         "recent_form": "", "situational": "nothing notable",
-        "red_flags": flags[:2], "lean": 0, "confidence": "low", "sources": [],
+        "red_flags": flags[:2], "unattributed": ambiguous[:2],
+        "lean": 0, "confidence": "low", "sources": [],
         "headlines": picked[: n * 2],
     }
 
@@ -321,6 +334,8 @@ def card_lines(brief):
                for h in brief.get("headlines", [])[: int(_cfg["headlines_max"])]]
         if brief.get("red_flags"):
             out.append("🚩 " + "; ".join(brief["red_flags"]))
+        if brief.get("unattributed"):
+            out.append("❔ could be either side: " + "; ".join(brief["unattributed"]))
         return out
     out = [f"🔎 {brief['summary']} _(lean {brief['lean']:+d}, {brief['confidence']} conf)_"]
     health = []

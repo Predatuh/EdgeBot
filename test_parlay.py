@@ -237,6 +237,47 @@ empty_card = parlay.discord_lines({"board": parlay.board_summary([]), "days": 8,
 check("empty board says so rather than inventing a ticket",
       any("too thin" in l for l in empty_card))
 
+# ---------------------------------------------------------------- injury attribution
+# A red flag drops the leg from every ticket, so a misattributed one silently
+# costs you a good favourite. Team names collide by substring, which is exactly
+# how the first live run flagged UC Davis for an SMU injury.
+print("\ninjury attribution")
+import datetime as _dt
+import research
+
+_NOW = _dt.datetime.now(_dt.timezone.utc)
+
+
+def with_headlines(titles):
+    research.configure({})
+    research._fetch_rss = lambda q, days: [
+        {"title": t, "source": "Test Wire", "when": _NOW} for t in titles]
+    return research
+
+
+def brief_for(pick, opp, titles):
+    with_headlines(titles)
+    return research._headlines("2026-09-13", "College Football",
+                               f"{pick} vs {opp}", pick, opp, "football") or {}
+
+
+b = brief_for("Oklahoma", "Murray St.",
+              ["No. 11 Oklahoma LB Kip Lewis will miss some time with knee injury"])
+check("an injury naming only our pick is a red flag", b.get("red_flags"), str(b.get("red_flags")))
+
+b = brief_for("UC Davis", "SMU",
+              ["SMU's Ahmaad Moses expected to be out for Week 2 vs. UC Davis"])
+check("an injury to the OPPONENT is not a flag against us", not b.get("red_flags"),
+      str(b.get("red_flags")))
+check("...it is surfaced as unattributed instead", b.get("unattributed"), str(b))
+
+b = brief_for("Utah", "Utah St.",
+              ["Washington Huskies vs. Utah State recap: UW pulls out uninspiring win"])
+check("a headline naming both sides never becomes a flag", not b.get("red_flags"))
+
+b = brief_for("Iowa", "Northern Iowa", ["Completely unrelated wire story about golf"])
+check("a headline about neither team is dropped entirely", not b)
+
 # ---------------------------------------------------------------- config wiring
 print("\nconfig wiring")
 cfg = parlay.load_config()

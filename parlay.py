@@ -295,9 +295,13 @@ def add_research(legs, cfg, min_p=0.80, cap=40):
         done += 1
         if brief.get("red_flags"):
             l["flags"] = list(brief["red_flags"])[:2]
-        heads = [h for h in brief.get("headlines", []) if h.get("watch")]
-        if heads:
-            l["notes"] = " | ".join(f"{h['side']}: {h['title']}" for h in heads[:2])[:240]
+        # News we could not pin on one team is shown, never acted on: dropping a
+        # 97c favourite because its OPPONENT lost a player is the wrong direction.
+        notes = [f"could be either side: {t}" for t in brief.get("unattributed", [])[:1]]
+        notes += [f"{h['side']}: {h['title']}" for h
+                  in [x for x in brief.get("headlines", []) if x.get("watch")][:2]]
+        if notes:
+            l["notes"] = " | ".join(notes)[:240]
     return done
 
 
