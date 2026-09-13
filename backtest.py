@@ -65,7 +65,7 @@ def board_at(cfg, cutoff, days, leagues=None, max_games=None):
                     raise AssertionError(f"{s['ticker']} quote is after the cutoff")
                 quote_ts.append(q["ts"])
                 priced.append(dict(s, prob=q["mid"], ask=q["ask"], bid=q["bid"],
-                                   vol=0, oi=0))
+                                   vol=q.get("vol") or 0, oi=q.get("oi") or 0))
             if len(priced) != len(sides):
                 continue                       # a half-quoted game is not a game you could bet
             seen += 1
@@ -107,42 +107,45 @@ def grade(ticket, winners):
     }
 
 
-TARGETS = [0.90, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.12, 0.06]
-FLOORS = [0.97, 0.93, 0.88]
+# A spread of payouts wide enough to show the whole risk curve, from a near-lock
+# that pays almost nothing to a ticket that turns $10 into thousands.
+PAYOUTS = [1.1, 1.25, 1.5, 2.0, 3.0, 5.0, 8.0, 12.0, 20.0, 35.0, 60.0, 100.0, 250.0, 600.0]
 
 
-def configs():
-    """A grid wide enough that the distinct tickets, not the grid, set the count.
+def configs(scopes=None, payouts=None):
+    """One ticket per payout per scope, plus a trusting variant at each payout.
 
-    The preset ladder alone does not give thirty different bets: Football, College
-    and Everything all resolve to the same college-football favourites, so the same
-    ticket comes back three times wearing different labels. Sweeping target and
-    floor produces genuinely different bets, and the dedupe below is global.
+    The variant matters: the default docks legs under 90c by how much that band has
+    historically underperformed, and a replay is the only way to see whether that
+    penalty earned its keep or just cost payout.
     """
     out = []
-    for sc in parlay.SCOPES:
-        for tgt in TARGETS:
-            for floor in FLOORS:
-                out.append({"scope": sc["key"], "scope_label": sc["label"],
-                            "scope_emoji": sc["emoji"], "preset": f"t{int(tgt*100)}f{int(floor*100)}",
-                            "preset_label": f"{int(tgt*100)}% @ {int(floor*100)}c",
-                            "emoji": "", "target": tgt, "min_leg": floor, "max_legs": 45})
+    for sc in (scopes or [s["key"] for s in parlay.SCOPES]):
+        label = parlay.scope_of(sc)
+        for pay in (payouts or PAYOUTS):
+            for trust in (False, True):
+                out.append({"scope": sc, "scope_label": label["label"],
+                            "scope_emoji": label["emoji"], "trust_cheap": trust,
+                            "preset": f'p{pay}{"t" if trust else ""}',
+                            "preset_label": f'{pay:g}x' + (" trusting" if trust else ""),
+                            "emoji": "", "payout": pay})
     return out
 
 
-def run(cutoff, days=3, leagues=None, stake=10.0, max_games=None):
+def run(cutoff, days=3, leagues=None, stake=10.0, max_games=None,
+        scopes=None, payouts=None):
     cfg = parlay.load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     legs, winners = board_at(cfg, cutoff, days, leagues, max_games)
     legs.sort(key=lambda l: -l["p"])
 
     tickets, seen = [], {}
-    for c in configs():
+    for c in configs(scopes, payouts):
         pool = parlay.scope_legs(legs, c["scope"])
-        r = parlay.build(pool, target=c["target"], min_leg=c["min_leg"],
-                         max_legs=c["max_legs"], exclude_flagged=False)
-        if not r:
-            continue
+        r = parlay.build_payout(pool, payout=c["payout"], exclude_flagged=False,
+                                trust_cheap=c["trust_cheap"])
+        if not r or not r["reached"]:
+            continue                    # a payout this board could not reach is not a bet
         sig = tuple(sorted(l["ticker"] for l in r["legs"]))
         if sig in seen:
             # The identical bet reached from another scope or setting. Counting it
@@ -201,12 +204,16 @@ def main(argv=None):
     ap.add_argument("--leagues", default="", help="comma-separated subset")
     ap.add_argument("--stake", type=float, default=10.0)
     ap.add_argument("--max-games", type=int, default=0, help="cap per league (keeps API calls sane)")
+    ap.add_argument("--scopes", default="", help="comma-separated scopes, e.g. ncaaf")
+    ap.add_argument("--payouts", default="", help="comma-separated payout targets")
     ap.add_argument("--json", default="", help="write the full result here")
     a = ap.parse_args(argv)
 
     res = run(parse_ts(a.at), a.days,
               [s.strip() for s in a.leagues.split(",") if s.strip()] or None,
-              a.stake, a.max_games or None)
+              a.stake, a.max_games or None,
+              [s.strip() for s in a.scopes.split(",") if s.strip()] or None,
+              [float(x) for x in a.payouts.split(",") if x.strip()] or None)
 
     s, b = res["summary"], res["board"]
     print(f"\nBoard at {res['cutoff_utc']}: {b['games']} games, {b['legs']} legs\n")

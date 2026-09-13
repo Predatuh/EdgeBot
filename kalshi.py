@@ -260,7 +260,9 @@ def quote_at(series, ticker, ts, look_back_h=48, period=60):
         if not (0 <= bid <= ask <= 1) or ask <= 0 or bid >= 1:
             continue
         if best is None or cts > best["ts"]:
-            best = {"bid": bid, "ask": ask, "mid": (bid + ask) / 2, "ts": cts}
+            best = {"bid": bid, "ask": ask, "mid": (bid + ask) / 2, "ts": cts,
+                    "vol": _f(c.get("volume_fp")) or _f(c.get("volume")) or 0.0,
+                    "oi": _f(c.get("open_interest_fp")) or _f(c.get("open_interest")) or 0.0}
     return best
 
 

@@ -256,10 +256,12 @@ check("the shown win probability is never discounted",
 # liquidity replaced the two price sliders
 check("a wide book is not liquid", not parlay.is_liquid(leg(0.9, 0.92, "x", spread=0.09)))
 check("a thin book is not liquid",
-      not parlay.is_liquid(dict(leg(0.9, 0.91, "x", spread=0.01), vol=3)))
+      not parlay.is_liquid(dict(leg(0.9, 0.91, "x", spread=0.01), vol=3, oi=0)))
+check("open interest stands in for volume when replaying history",
+      parlay.is_liquid(dict(leg(0.9, 0.91, "x", spread=0.01), vol=0, oi=9000)))
 check("a tight, traded book is liquid at ANY price",
       parlay.is_liquid(dict(leg(0.42, 0.43, "x", spread=0.01), vol=5000)))
-illiquid = [dict(l, vol=0) for l in mixed_board]
+illiquid = [dict(l, vol=0, oi=0) for l in mixed_board]
 check("liquid_only can empty a board", parlay.build_payout(illiquid, 5.0) is None)
 check("...and turning it off brings the board back",
       parlay.build_payout(illiquid, 5.0, liquid_only=False) is not None)

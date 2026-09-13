@@ -248,7 +248,9 @@ def is_liquid(l, spread=LIQUID_SPREAD, vol=LIQUID_VOL):
     """
     if l.get("spread") is not None and l["spread"] > spread:
         return False
-    return (l.get("vol") or 0) >= vol
+    # volume is cumulative on a live market but per-period on a historical candle,
+    # so open interest stands in for it when replaying the past
+    return max(l.get("vol") or 0, l.get("oi") or 0) >= vol
 
 
 def build_payout(legs, payout=5.0, max_legs=MAX_LEGS, exclude_flagged=True,

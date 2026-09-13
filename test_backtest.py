@@ -42,7 +42,8 @@ def fake_settled(favourite_won=True, n=6):
 def install(evs, quotes, leagues=("nfl",)):
     def stub(series, ticker, ts, **kw):
         q = quotes.get(ticker)
-        return None if not q else {"bid": q[0], "ask": q[1], "mid": q[2], "ts": ts - 3600}
+        return None if not q else {"bid": q[0], "ask": q[1], "mid": q[2], "ts": ts - 3600,
+                                   "vol": 900, "oi": 4000}
     kalshi.settled_events = lambda series, ts=None, order="away_home": list(evs)
     kalshi.quote_at = stub
     parlay.all_leagues = lambda cfg: list(leagues)
