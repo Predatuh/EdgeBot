@@ -55,6 +55,7 @@ def ingest_history(key, lg):
     evs = kalshi.settled_events(lg["ticker"], since, ticker_order(lg))
     ratings = state.load_elo(key)
     seen = state.load_seen(key)
+    through = ratings.get("_espn_through") or ""
     winners, new = {}, 0
     for ev in evs:
         win = kalshi.winner(ev)
@@ -63,6 +64,9 @@ def ingest_history(key, lg):
         winners[ev["event"]] = win
         if win == "VOID" or ev["event"] in seen:
             continue                    # a voided event grades the pick but teaches nothing
+        if through and (ev.get("date") or "") <= through:
+            continue                    # already rated from ESPN's scores, with the margin;
+                                        # re-teaching it from Kalshi would count it twice
         teams = [s for s in kalshi.match_sides(ev) if not s["is_tie"]]
         if len(teams) != 2 or any(s["name"] in EXHIBITION for s in teams):
             continue                    # mark seen only once we've actually rated it, so a
@@ -86,7 +90,8 @@ def ingest_history(key, lg):
     state.save_history(key, hist)
     state.save_seen(key, seen)
     print(f"[{key}] settled: {len(evs)} fetched, {new} new, {ratings.get('_games', 0)} rated"
-          f"{' (incremental)' if since else ' (full history)'}")
+          f"{' (incremental)' if since else ' (full history)'}"
+          f"{f', ESPN history through {through}' if through else ''}")
     return winners
 
 
@@ -148,13 +153,15 @@ def model_game(key, lg, cfg, ev, ratings, hist):
         notes.append(espn_note)
     if g:
         full_names = {s["name"]: t["name"] for s, t in ((home, th), (away, ta)) if t}   # 'Philadelphia' -> 'Philadelphia Eagles'
-        if lg.get("injuries"):
-            if th and ta:
-                oh = espn.team_out_count(lg["espn"][0], lg["espn"][1], th["id"])
-                oa = espn.team_out_count(lg["espn"][0], lg["espn"][1], ta["id"])
-                adj -= (oh - oa) * lg.get("injury_elo", 10)
-                if oh or oa:
-                    notes.append(f"OUT {home['name']} {oh} / {away['name']} {oa}")
+        if lg.get("injuries") and g.get("event") and th and ta:
+            inj = espn.game_injuries(lg["espn"][0], lg["espn"][1], g["event"])
+            ih, ia = inj.get(str(th["id"])), inj.get(str(ta["id"]))
+            scale = lg.get("injury_scale", 1.0)
+            adj -= ((ih or {}).get("elo", 0) - (ia or {}).get("elo", 0)) * scale
+            for side, info in ((home["name"], ih), (away["name"], ia)):
+                line = espn.injury_note(side, info)
+                if line:
+                    notes.append(line)
         if g.get("venue"):
             notes.append(f"@ {g['venue']}")
         if lg.get("weather") and g.get("indoor") is not True and g.get("city"):

@@ -38,12 +38,14 @@ leagues:
   wta:        {ticker: KXWTAMATCH,         label: WTA Tennis,          k: 32, neutral: true,  min_games: 300, stake: false}
   challenger: {ticker: KXATPCHALLENGERMATCH, label: ATP Challenger,    k: 32, neutral: true,  min_games: 300, enabled: false, stake: false}
   nfl:        {ticker: KXNFLGAME,          label: NFL,                 k: 20, home_adv: 48, min_games: 30,
-               espn: [football, nfl], injuries: true, injury_elo: 12, weather: true, ticker_order: away_home}
+               espn: [football, nfl], injuries: true, injury_scale: 1.0, weather: true, ticker_order: away_home}
+  # injuries: ESPN's summary payload carries no injuries block for college football
+  # (checked against a live game - the key is simply absent), so there is nothing to
+  # switch on. NFL and MLB do carry it, with positions.
   ncaaf:      {ticker: KXNCAAFGAME,        label: College Football,    k: 24, home_adv: 60, min_games: 80,
-               espn: [football, college-football], injuries: true, injury_elo: 10,
-               weather: true, ticker_order: away_home}
+               espn: [football, college-football], weather: true, ticker_order: away_home}
   mlb:        {ticker: KXMLBGAME,          label: MLB,                 k: 10,  home_adv: 24, min_games: 300,
-               espn: [baseball, mlb], injuries: true, injury_elo: 6, weather: true, ticker_order: away_home}
+               espn: [baseball, mlb], injuries: true, injury_scale: 1.0, weather: true, ticker_order: away_home}
   epl:        {ticker: KXEPLGAME,          label: Premier League,      k: 22, home_adv: 55, min_games: 30, espn: [soccer, eng.1], ticker_order: home_away}
   laliga:     {ticker: KXLALIGAGAME,       label: La Liga,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, esp.1], ticker_order: home_away}
   ligue1:     {ticker: KXLIGUE1GAME,       label: Ligue 1,             k: 22, home_adv: 55, min_games: 30, espn: [soccer, fra.1], ticker_order: home_away}

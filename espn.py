@@ -46,7 +46,8 @@ def _board(sport, league):
                               "name": t.get("displayName", ""),
                               "home": c.get("homeAway") == "home"})
             ven = comp.get("venue") or {}
-            out.append({"teams": teams,
+            out.append({"event": str(ev.get("id", "")),
+                        "teams": teams,
                         "indoor": ven.get("indoor"),
                         "city": (ven.get("address") or {}).get("city"),
                         "venue": ven.get("fullName")})
@@ -88,19 +89,124 @@ def find_game(sport, league, name_a, name_b):
     return None
 
 
-def team_out_count(sport, league, team_id):
-    """Number of players listed as out (Out / IR / IL / suspended / doubtful)."""
+def scores_range(sport, league, start, end, groups=None):
+    """Completed games between two dates: [{d, away, home, sa, sb, neutral}].
+
+    Kalshi's settled history says who won but never by how much, which is why Elo
+    has been trained with margin-of-victory off. ESPN has the scores, so a history
+    built from here can use MOV - and reaches back seasons instead of weeks.
+    """
+    span = start.strftime("%Y%m%d")
+    if end and end != start:
+        span += "-" + end.strftime("%Y%m%d")
+    params = {"dates": span, "limit": 900}
+    if groups:
+        params["groups"] = groups
+    out = []
+    js = S.get(f"{BASE}/{sport}/{league}/scoreboard", params=params, timeout=30).json()
+    for ev in js.get("events", []):
+        comp = (ev.get("competitions") or [{}])[0]
+        if not ((comp.get("status") or {}).get("type") or {}).get("completed"):
+            continue                     # in progress, postponed or cancelled
+        sides = {}
+        for c in comp.get("competitors", []):
+            try:
+                sides[c.get("homeAway")] = ((c.get("team") or {}).get("displayName", ""),
+                                            float(c.get("score")))
+            except (TypeError, ValueError):
+                sides = {}
+                break                    # a game with no score teaches nothing
+        if set(sides) != {"home", "away"}:
+            continue
+        out.append({"d": (ev.get("date") or "")[:10],
+                    "away": sides["away"][0], "home": sides["home"][0],
+                    "sa": sides["away"][1], "sb": sides["home"][1],
+                    "neutral": bool(comp.get("neutralSite"))})
+    return out
+
+
+# How much a player being unavailable is worth, in Elo points. These are priors,
+# not fitted values - nobody has enough graded games to fit them - but the ordering
+# is not controversial: a starting quarterback is worth more than the rest of the
+# roster combined, and a punter is worth almost nothing. The old code counted heads,
+# so a third-string long snapper and a franchise QB were both worth 1.
+POSITION_ELO = {
+    "football": {"QB": 55, "RB": 9, "WR": 8, "TE": 5, "FB": 2,
+                 "OT": 7, "OG": 6, "G": 6, "C": 6, "OL": 6, "T": 7,
+                 "DE": 8, "DT": 7, "EDGE": 9, "NT": 5, "DL": 7,
+                 "LB": 6, "ILB": 6, "OLB": 6, "MLB": 6,
+                 "CB": 9, "S": 6, "FS": 6, "SS": 6, "DB": 6,
+                 "K": 2, "P": 1, "LS": 1, "PK": 2},
+    "baseball": {"SP": 26, "P": 12, "RP": 5, "CP": 7, "C": 7,
+                 "1B": 5, "2B": 5, "3B": 5, "SS": 6, "LF": 5, "CF": 6, "RF": 5,
+                 "OF": 5, "IF": 4, "DH": 4},
+}
+DEFAULT_ELO = {"football": 5, "baseball": 5}
+# A player who is merely doubtful still plays sometimes; weight the status rather
+# than treating every listing as a certainty.
+STATUS_WEIGHT = (("out", 1.0), ("injured reserve", 1.0), ("-il", 1.0), (" il", 1.0),
+                 ("suspended", 1.0), ("doubtful", 0.7), ("questionable", 0.3))
+# One team is never 200 Elo worse because a dozen reserves are listed.
+MAX_INJURY_ELO = 90
+
+
+def _status_weight(status):
+    s = " " + str(status or "").lower()
+    for word, w in STATUS_WEIGHT:
+        if word in s:
+            return w
+    return 0.0
+
+
+def _records(block):
+    """The injury records inside one team's block of a summary payload."""
+    for rec in (block.get("injuries") or []):
+        ath = rec.get("athlete") or {}
+        pos = (ath.get("position") or {})
+        yield {"name": ath.get("displayName") or ath.get("fullName") or "",
+               "pos": (pos.get("abbreviation") or pos.get("name") or "").upper(),
+               "status": rec.get("status") or "",
+               "note": rec.get("shortComment") or ""}
+
+
+def game_injuries(sport, league, event_id):
+    """{team_id: {"elo": points, "out": [record, ...]}} for one game.
+
+    One call covers both teams. The old path asked teams/{id}?enable=injuries,
+    which returns no injuries key at all - it had been silently returning 0 for
+    every pick ever logged.
+    """
+    weights = POSITION_ELO.get(sport, {})
+    default = DEFAULT_ELO.get(sport, 4)
+    out = {}
     try:
-        js = S.get(f"{BASE}/{sport}/{league}/teams/{team_id}",
-                   params={"enable": "injuries"}, timeout=20).json()
-        n = 0
-        for i in (js.get("team") or {}).get("injuries") or []:
-            st = i.get("status") or ""
-            if isinstance(st, dict):
-                st = st.get("type", {}).get("description", "") or st.get("name", "")
-            st = " " + str(st).lower()
-            if any(w in st for w in OUT_WORDS):
-                n += 1
-        return n
-    except Exception:
-        return 0
+        js = S.get(f"{BASE}/{sport}/{league}/summary",
+                   params={"event": event_id}, timeout=25).json()
+    except Exception as e:
+        print(f"[espn] injuries for {event_id}: {type(e).__name__}: {str(e)[:60]}")
+        return out
+    for block in (js.get("injuries") or []):
+        tid = str(((block.get("team") or {}).get("id")) or "")
+        if not tid:
+            continue
+        pts, hurt = 0.0, []
+        for rec in _records(block):
+            w = _status_weight(rec["status"])
+            if not w:
+                continue
+            val = weights.get(rec["pos"], default) * w
+            pts += val
+            rec["elo"] = round(val, 1)
+            hurt.append(rec)
+        hurt.sort(key=lambda r: -r["elo"])
+        out[tid] = {"elo": round(min(pts, MAX_INJURY_ELO), 1), "out": hurt}
+    return out
+
+
+def injury_note(side, info, top=2):
+    """A short, readable line for the card: who is out and what it costs."""
+    if not info or not info.get("out"):
+        return ""
+    who = ", ".join(f"{r['name']} ({r['pos']})" for r in info["out"][:top] if r["name"])
+    more = len(info["out"]) - top
+    return (f"{side} -{info['elo']:.0f} Elo: {who}" + (f" +{more} more" if more > 0 else "")) if who else ""

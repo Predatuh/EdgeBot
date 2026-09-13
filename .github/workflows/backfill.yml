@@ -1,0 +1,52 @@
+name: Backfill Elo
+
+on:
+  workflow_dispatch:
+    inputs:
+      league:
+        description: "League key from config.yaml (nfl, ncaaf, mlb, epl, ...)"
+        default: "ncaaf"
+      seasons:
+        description: "Years of ESPN history to pull"
+        default: "3"
+      dry_run:
+        description: "Report only, write nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Check the injury and rebuild logic
+        run: python test_espn.py
+      - name: Rebuild ratings from ESPN scores
+        run: |
+          python backfill_elo.py \
+            --league "${{ inputs.league || 'ncaaf' }}" \
+            --seasons "${{ inputs.seasons || 3 }}" \
+            ${{ inputs.dry_run && '--dry-run' || '' }} | tee backfill.txt
+      - name: Commit the rebuilt ratings
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          python merge_state.py
+          git add -A data/
+          git diff --cached --quiet || git commit -m "elo: ESPN backfill for ${{ inputs.league || 'ncaaf' }}"
+          git pull --rebase -X theirs origin main
+          git push -u origin HEAD:main || (git pull --rebase -X theirs origin main && git push -u origin HEAD:main)
+      - uses: actions/upload-artifact@v4
+        with: {name: backfill, path: backfill.txt}
