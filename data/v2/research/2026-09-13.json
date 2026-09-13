@@ -5371,5 +5371,513 @@
    }
   ],
   "_ts": "2026-09-13T18:45Z"
+ },
+ "WTA Tennis|Alycia Parks vs Varvara Lepchenko|Varvara Lepchenko": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alycia Parks",
+    "title": "Preston vs. Parks | Round of 128 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Varvara Lepchenko vs Nicole Melichar",
+    "source": "365Scores",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Alycia Parks vs Varvara Lepchenko \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Varvara Lepchenko \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Varvara Lepchenko 0 - 2 Claire Liu (09/09) - Game Report",
+    "source": "365Scores",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-13T21:03Z"
+ },
+ "WTA Tennis|Panna Udvardy vs Lois Boisson|Panna Udvardy": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lois Boisson",
+    "title": "Navarro vs. Boisson | Round of 128 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Udvardy vs. Boisson | Round of 32 Guadalajara Open presentado por Santander 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Lois Boisson",
+    "title": "Udvardy vs. Boisson | Round of 32 Guadalajara Open presentado por Santander 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Panna Udvardy vs Lo\u00efs Boisson \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Emiliana Arango/Panna Udvardy - Yvonne Cavall\u00e9/Lara Salden",
+    "source": "TNT Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-13T21:03Z"
+ },
+ "NFL|Green Bay @ Minnesota|Green Bay": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Packers\u2019 Josh Jacobs could avoid missing additional games as NFL suspension looms; When do the Packers play? Vikings game Sunday, injury update",
+  "opp_health": "Final Vikings Vs. Packers Injury Report for Week 1 of 2026; Packers list three questionable vs. Vikings | Week 1 Injury Report",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Why did Harrison Smith decide to return to the Vikings?",
+    "source": "Pioneer Press",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "When do the Packers play? Vikings game Sunday, injury update",
+    "source": "Milwaukee Journal Sentinel",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Final Vikings Vs. Packers Injury Report for Week 1 of 2026",
+    "source": "vikings.com",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Final Vikings Vs. Packers Injury Report for Week 1 of 2026",
+    "source": "vikings.com",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Packers list three questionable vs. Vikings | Week 1 Injury Report",
+    "source": "Packers.com",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Packers\u2019 Josh Jacobs could avoid missing additional games as NFL suspension looms",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T21:03Z"
+ },
+ "MLB|Texas @ Arizona|Texas": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas Rangers lineup for September 13, 2026; Texas Rangers lineup for September 12, 2026",
+  "opp_health": "Pavin Smith returns to Diamondbacks in desperate search for answers vs. righties; Diamondbacks Give Latest Injury Update on Ryne Nelson",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arizona",
+    "title": "Diamondbacks Give Latest Injury Update on Ryne Nelson",
+    "source": "Sports Illustrated",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Corbin Carroll Back in Diamondbacks' Lineup After Injury Concern",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 12, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Rangers Activate RHP Nathan Eovaldi and 3B Josh Jung from Injured List, Option LHP Adam Macko and C Logan O'Hoppe to Triple-A Round Rock",
+    "source": "MLB.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Pavin Smith returns to Diamondbacks in desperate search for answers vs. righties",
+    "source": "Arizona Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 13, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T21:03Z"
+ },
+ "MLB|Pittsburgh @ Chicago C|Pittsburgh": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Pirates' Esmerlyn Valdez exits with left hamstring injury",
+  "opp_health": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -; Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pittsburgh",
+    "title": "Pirates' Esmerlyn Valdez exits with left hamstring injury",
+    "source": "ESPN",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
+    "source": "Bleed Cubbie Blue",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Chicago Cubs Lineup (9/12/26): No Ace Like Holmes, Pirates Sending Skenes to Bump -",
+    "source": "Cubs Insider",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -",
+    "source": "Cubs Insider",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates vs. Chicago Cubs: Bubba Chandler vs. Matthew Boyd",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates Abruptly Promote 3 Players During Terrible Cubs Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-13T21:03Z"
+ },
+ "MLS|Philadelphia @ San Diego FC|Philadelphia": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Philadelphia Union vs FC Cincinnati Lineups, Prediction, Betting Picks & MLS Odds for Wednesday, September 9th; Philadelphia Union vs FC Cincinnati: Preview, How to Watch, & Predicted Lineups",
+  "opp_health": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds; San Diego vs Philadelphia Union Prediction, Betting Tips, Lineups & Odds | 13 Sep 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Union vs FC Cincinnati Lineups, Prediction, Betting Picks & MLS Odds for Wednesday, September 9th",
+    "source": "Oddschecker",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Union vs FC Cincinnati: Preview, How to Watch, & Predicted Lineups",
+    "source": "MLS Multiplex",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Union vs FC Cincinnati: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego vs Philadelphia Union Prediction, Betting Tips, Lineups & Odds | 13 Sep 2026",
+    "source": "sportsgambler.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego FC vs Philadelphia Union Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T21:04Z"
+ },
+ "MLS|Austin @ Vancouver|Vancouver": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Vancouver Whitecaps vs. Austin FC Live Today: Lineups, How & Where to Watch MLS on TV, Streaming; Vancouver Whitecaps vs Austin FC: Predictions, Picks, Odds & Lineups",
+  "opp_health": "Vancouver Whitecaps vs. Austin FC Live Today: Lineups, How & Where to Watch MLS on TV, Streaming; Vancouver Whitecaps vs Austin FC: Predictions, Picks, Odds & Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Vancouver",
+    "title": "Vancouver Whitecaps vs. Austin FC Live Today: Lineups, How & Where to Watch MLS on TV, Streaming",
+    "source": "heavy.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Vancouver",
+    "title": "Vancouver Whitecaps vs Austin FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Vancouver",
+    "title": "Vancouver Whitecaps FC vs Austin FC: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "Vancouver Whitecaps vs. Austin FC Live Today: Lineups, How & Where to Watch MLS on TV, Streaming",
+    "source": "heavy.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "Vancouver Whitecaps vs Austin FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "Vancouver Whitecaps FC vs Austin FC: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T21:04Z"
+ },
+ "MLS|New England @ Chicago Fire|Chicago Fire": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Starting Lineups (September 13) | Revolution at Chicago Fire FC; Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+  "opp_health": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds; Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Starting Lineups (September 13) | Revolution at Chicago Fire FC",
+    "source": "revolutionsoccer.net",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago Fire",
+    "title": "Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "Chicago Fire vs New England Revolution: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-13T21:04Z"
+ },
+ "Caribbean Premier League|Guyana Amazon Warriors @ Barbados Royals|Guyana Amazon Warriors": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Barbados Royals",
+    "title": "CPL 2026 Match 29: Barbados Tridents crush Saint Lucia Kings by 8 wickets",
+    "source": "Cricket World",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "India's Harleen Deol Joins Barbados Tridents for WCPL 2026",
+    "source": "LatestLY",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Guyana Amazon Warriors",
+    "title": "Amazon Warriors Women stun Knight Riders for first win",
+    "source": "Guyana Chronicle",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Guyana Amazon Warriors",
+    "title": "CPL 2026 - Guyana Amazon Warriors Women vs Trinbago Knight Riders Women",
+    "source": "Tapmad",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Guyana Amazon Warriors",
+    "title": "Warriors storm into Playoffs as Knight Riders\u2019 title defence ends",
+    "source": "caribbeannationalweekly.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "Royals Family Continues to Impress With Consistent Performances",
+    "source": "SportsCafe.in",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-13T21:04Z"
  }
 }
