@@ -75,19 +75,30 @@ check("a failed request yields nothing rather than a silent zero",
 
 # ------------------------------------------------------------- name mapping
 print("\nname mapping (ESPN -> Kalshi)")
-vocab = {"Ohio", "Ohio St.", "Miami (FL)", "Texas", "Texas St.", "Alabama"}
-m, amb = backfill_elo.build_name_map(
-    {"Ohio State Buckeyes", "Ohio Bobcats", "Miami Hurricanes", "Texas Longhorns",
-     "Texas State Bobcats", "Alabama Crimson Tide", "Sam Houston Bearkats"}, vocab)
-check("the most specific Kalshi name wins", m.get("Ohio State Buckeyes") == "Ohio St.",
-      str(m.get("Ohio State Buckeyes")))
-check("...and the plain one still maps to itself", m.get("Ohio Bobcats") == "Ohio",
-      str(m.get("Ohio Bobcats")))
-check("Texas State does not swallow Texas", m.get("Texas Longhorns") == "Texas"
-      and m.get("Texas State Bobcats") == "Texas St.", str([m.get("Texas Longhorns"), m.get("Texas State Bobcats")]))
-check("a parenthesised Kalshi name still matches", m.get("Miami Hurricanes") == "Miami (FL)",
-      str(m.get("Miami Hurricanes")))
+# Every one of these collided on the first live backfill and came back ambiguous.
+VOCAB = {"Ohio", "Ohio St.", "Miami (FL)", "Miami (OH)", "Duke", "Duquesne",
+         "Jackson St.", "Jacksonville St.", "Buffalo", "Colorado",
+         "Texas", "Texas St.", "Alabama", "Alabama St."}
+CASES = [("Ohio State Buckeyes", "Ohio St."), ("Ohio Bobcats", "Ohio"),
+         ("Miami Hurricanes", "Miami (FL)"), ("Miami (OH) RedHawks", "Miami (OH)"),
+         ("Duquesne Dukes", "Duquesne"), ("Duke Blue Devils", "Duke"),
+         ("Jacksonville State Gamecocks", "Jacksonville St."),
+         ("Jackson State Tigers", "Jackson St."),
+         ("Colorado Buffaloes", "Colorado"), ("Buffalo Bulls", "Buffalo"),
+         ("Texas Longhorns", "Texas"), ("Texas State Bobcats", "Texas St."),
+         ("Alabama Crimson Tide", "Alabama"), ("Alabama State Hornets", "Alabama St.")]
+m, amb = backfill_elo.build_name_map({e for e, _ in CASES} | {"Sam Houston Bearkats"}, VOCAB)
+for espn_name, want in CASES:
+    check(f"  {espn_name} -> {want}", m.get(espn_name) == want, repr(m.get(espn_name)))
+check("nothing is left ambiguous", not amb, str(amb))
 check("a team we have never bet is left alone", "Sam Houston Bearkats" not in m)
+check("the nickname cannot beat the first word",
+      backfill_elo.match_score("Colorado", "Colorado Buffaloes")
+      > backfill_elo.match_score("Buffalo", "Colorado Buffaloes"))
+check("a contradicted parenthetical is rejected outright",
+      backfill_elo.match_score("Miami (FL)", "Miami (OH) RedHawks")
+      < backfill_elo.match_score("Miami (OH)", "Miami (OH) RedHawks"))
+check("a non-match scores nothing", backfill_elo.match_score("Georgia", "Texas Longhorns") is None)
 
 # ------------------------------------------------------------- Elo rebuild
 print("\nElo rebuild from scores")

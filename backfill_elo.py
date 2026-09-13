@@ -21,6 +21,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 
 import elo
@@ -39,24 +40,83 @@ def kalshi_vocabulary(key):
     return {n for n in names if n}
 
 
+def _paren(name):
+    m = re.search(r"\(([^)]*)\)", name)
+    return m.group(1).strip().lower() if m else ""
+
+
+def match_score(kalshi, espn_name):
+    """How well a Kalshi name fits an ESPN one, or None if it does not fit.
+
+    Token count alone could not separate the real collisions - Colorado Buffaloes
+    matched both "Colorado" and "Buffalo", Duquesne Dukes matched both "Duquesne"
+    and "Duke". Three tie-breaks settle every one of them:
+
+      1. where the match starts. "Colorado" is the first word of Colorado
+         Buffaloes; "Buffalo" only matches the nickname.
+      2. how much of the name is actually matched. Jacksonville State beats
+         Jackson St. on characters, both starting at word one.
+      3. the parenthetical. Miami (OH) RedHawks is the only way to tell that
+         team from Miami (FL), and both Kalshi names are just "miami" in tokens.
+    """
+    if not espn.name_match(kalshi, espn_name):
+        return None
+    kt, et = espn._tokens(kalshi), espn._tokens(espn_name)
+    first, chars, i = None, 0, 0
+    for k in kt:
+        while i < len(et) and not et[i].startswith(k):
+            i += 1
+        if i == len(et):
+            return None
+        if first is None:
+            first = i
+        chars += len(k)
+        i += 1
+    kp, ep = _paren(kalshi), _paren(espn_name)
+    # a parenthetical on both sides must agree; "Miami (OH)" cannot claim
+    # "Miami Hurricanes", but "Miami (FL)" may, since nothing contradicts it
+    if kp and ep:
+        paren = 2 if kp == ep else -5
+    elif kp:
+        paren = 0
+    else:
+        paren = 1
+    return (paren, -first, chars, len(kt))
+
+
 def build_name_map(espn_names, vocab):
     """ESPN displayName -> Kalshi name, where one can be identified.
 
     Returns (mapping, ambiguous). An ESPN name with no Kalshi counterpart keeps its
     own name: those teams still train their opponents' ratings, they just never get
-    bet on. An ambiguous one is left out and reported rather than guessed.
+    bet on. A genuine tie is left out and reported rather than guessed.
     """
-    mapping, ambiguous = {}, {}
+    scores = {}
     for en in espn_names:
-        hits = [kn for kn in vocab if espn.name_match(kn, en)]
-        if not hits:
-            continue
-        best = max(len(espn._tokens(h)) for h in hits)
-        top = [h for h in hits if len(espn._tokens(h)) == best]
+        hits = [(sc, kn) for sc, kn in ((match_score(kn, en), kn) for kn in vocab)
+                if sc is not None]
+        if hits:
+            best = max(sc for sc, _ in hits)
+            scores[en] = sorted(kn for sc, kn in hits if sc == best)
+
+    # Pass 1: everything that was never in doubt.
+    mapping = {en: top[0] for en, top in scores.items() if len(top) == 1}
+    taken = set(mapping.values())
+
+    # Pass 2: a tie often resolves once the certain matches are spoken for. ESPN
+    # names the bigger program plainly and qualifies the smaller one, so "Miami
+    # (OH) RedHawks" claims "Miami (OH)" outright and leaves "Miami Hurricanes"
+    # with only "Miami (FL)" to be.
+    ambiguous = {}
+    for en, top in sorted(scores.items()):
         if len(top) == 1:
-            mapping[en] = top[0]
+            continue
+        free = [kn for kn in top if kn not in taken]
+        if len(free) == 1:
+            mapping[en] = free[0]
+            taken.add(free[0])
         else:
-            ambiguous[en] = sorted(top)
+            ambiguous[en] = top
     return mapping, ambiguous
 
 
