@@ -69,7 +69,13 @@ jobs:
         run: |
           git config user.name "edgebot"
           git config user.email "edgebot@users.noreply.github.com"
-          git add docs/ data/v2/parlay.json
+          # parlay.py also refreshes data/v2/research/<date>.json, which the daily
+          # job has already committed. Leaving it unstaged made `git pull --rebase`
+          # refuse outright ("you have unstaged changes"), so stage everything the
+          # run touched - and union the caches first so this run does not wipe
+          # briefs another workflow fetched today.
+          python merge_state.py
+          git add -A docs/ data/
           git diff --cached --quiet || git commit -m "parlay board: $(date -u +%F)"
           # both files are regenerated whole every run, so this run's copy wins a conflict
           # (during a rebase "theirs" is the commit being replayed, i.e. ours).
