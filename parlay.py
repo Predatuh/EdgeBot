@@ -582,6 +582,7 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
 
 # ---------------------------------------------------------------- presentation
 TEMPLATE = os.path.join(HERE, "webapp", "parlay.html")
+FONTS = os.path.join(HERE, "webapp", "fonts.css")
 
 
 def _png(size, bg, fg, lace=(255, 248, 236)):
@@ -695,11 +696,13 @@ def backtest_note(path=None):
             + "which is the real lesson: these tickets share legs, so one upset takes down most of them.")
 
 
-def render_html(snap, template=TEMPLATE):
+def render_html(snap, template=TEMPLATE, fonts=FONTS):
     """The phone app: one self-contained HTML file with the board baked in.
 
     The builder is reimplemented in the page's JS so every slider recomputes
-    locally - no server, no network, works from a saved file on a plane.
+    locally - no server, no network, works from a saved file on a plane. The
+    fonts are inlined for the same reason: the APK opens with no connection and
+    a webfont request would leave it unstyled, so they ship as data URIs.
     """
     with open(template, encoding="utf-8") as f:
         html = f.read()
@@ -707,7 +710,11 @@ def render_html(snap, template=TEMPLATE):
     blob = json.dumps(snap, separators=(",", ":")).replace("</", "<\\/")
     if "__PARLAY_DATA__" not in html:
         raise ValueError(f"{template} has no __PARLAY_DATA__ placeholder")
-    return html.replace("__PARLAY_DATA__", blob)
+    html = html.replace("__PARLAY_DATA__", blob)
+    if "/*__FONTS__*/" in html and os.path.exists(fonts):
+        with open(fonts, encoding="utf-8") as f:
+            html = html.replace("/*__FONTS__*/", f.read(), 1)
+    return html
 
 
 def discord_lines(snap, url=""):
@@ -762,10 +769,22 @@ def _cli(argv=None):
     ap.add_argument("--url", default="", help="link to the hosted app, shown on the card")
     ap.add_argument("--offline", action="store_true",
                     help="skip Kalshi and emit an empty board (the app falls back to its example)")
+    ap.add_argument("--from-json", dest="from_json", default="",
+                    help="re-render a saved snapshot instead of pulling a new board - "
+                         "how the APK build rebuilds the page without touching Kalshi")
     a = ap.parse_args(argv)
 
     cfg = load_config()
-    if a.offline:
+    if a.from_json:
+        with open(a.from_json, encoding="utf-8") as f:
+            snap = json.load(f)
+        # the record is regenerated rather than trusted: it is written by a
+        # different job and the saved board may predate the last grading run
+        snap["stats"] = load_stats()
+        snap.setdefault("backtest_note", backtest_note())
+        print(f"[parlay] re-rendering {a.from_json} "
+              f"({len(snap.get('legs') or [])} legs, {snap.get('generated_utc','?')})")
+    elif a.offline:
         snap = {"generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                 "days": a.days, "board": board_summary([]), "legs": [], "presets": PRESETS,
                 "scopes": [], "scope": a.scope, "tickets": [],

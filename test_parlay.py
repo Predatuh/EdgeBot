@@ -321,9 +321,18 @@ block = hostile_html[start:hostile_html.index("</script>", start)]
 check("a team name cannot break out of the data block", "</script>" not in block)
 check("...and still round-trips intact",
       json.loads(block)["legs"][0]["pick"] == "Rice</script><script>alert(1)</script>")
-check("page carries both theme blocks",
-      'prefers-color-scheme: dark' in html and '[data-theme="dark"]' in html)
+check("page carries both themes, and both are reachable explicitly",
+      "prefers-color-scheme" in html
+      and '[data-theme="dark"]' in html and '[data-theme="light"]' in html)
 check("page has a title", "<title>" in html)
+check("page is not in quirks mode", html.lstrip().lower().startswith("<!doctype html>"))
+check("[hidden] beats the display:flex on tabs and sheets",
+      "[hidden]{display:none !important}" in html)
+check("fonts are inlined, so a cold offline start is still styled",
+      "/*__FONTS__*/" not in html and "data:font/woff2;base64," in html)
+no_fonts = parlay.render_html(snap, fonts="/nonexistent.css")
+check("...and a missing font file degrades to system fonts, not a crash",
+      "__PARLAY_DATA__" not in no_fonts)
 
 lines = parlay.discord_lines(snap, "https://example.test/parlay")
 check("discord card leads with the board", "Football parlay board" in lines[0])

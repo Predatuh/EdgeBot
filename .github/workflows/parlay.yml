@@ -1,11 +1,11 @@
 name: Parlays
 
 on:
-  # Dispatch only finds a workflow that exists on the default branch, so while this
-  # feature lives on a branch the push trigger is how it gets a real run. The paths
-  # filter is what stops it looping: the run commits docs/ and data/, never these.
+  # The paths filter is what stops this looping: the run commits docs/ and data/,
+  # never these. Pushing a template change rebuilds the page immediately rather
+  # than leaving the site a day behind the code.
   push:
-    branches: ["claude/**"]
+    branches: ["main", "claude/**"]
     paths:
       - "parlay.py"
       - "test_parlay.py"

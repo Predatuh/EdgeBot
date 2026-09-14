@@ -1,332 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gridiron Ticket</title>
-<meta name="theme-color" content="#0C1216">
+<meta name="description" content="Build a Kalshi parlay to a payout you choose, on the board the bot priced this morning.">
+<meta name="theme-color" content="#080C10">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="apple-touch-icon" href="icon-192.png">
 <style>
+/*__FONTS__*/
+
+/* ============================================================================
+   Tokens. Dark is the design, not a variant of a light design: this is a thing
+   you open on a phone at a kickoff, and the numbers have to be the brightest
+   objects on the screen. The light set below is a straight token swap for
+   daylight, and both are reachable explicitly through [data-theme].
+
+   The three chart colours are not taste. Marks on the dark surface have to sit
+   in OKLCH L 0.48-0.67 to read as the same weight, and the positive/negative
+   pair has to stay apart under colour-blind simulation - these three were
+   picked by running the validator, not by eye (deutan dE 8.6, normal 19.2).
+   Every value they carry is also printed and arrow-marked, so nothing here is
+   held by colour alone.
+   ========================================================================== */
 :root{
-  --bg:#E9EDEF; --surface:#FFFFFF; --surface-2:#F3F6F8; --sunk:#E2E8EB;
-  --ink:#101A1F; --muted:#5A6C75; --line:#CFD9DE; --line-hard:#AEBDC4;
-  --accent:#8F4D05; --accent-ink:#FFFFFF; --accent-soft:#F6E6D1;
-  --t-lock:#0A6E52; --t-strong:#3F7D2E; --t-solid:#7E6A0E; --t-lean:#A8560F; --t-live:#A82F27;
-  --warn:#A8560F; --warn-soft:#FBEBD8; --good:#0A6E52;
-  --shadow:0 1px 2px rgba(16,26,31,.10), 0 10px 26px -18px rgba(16,26,31,.5);
-  --lift:0 -1px 0 var(--line), 0 -8px 24px -18px rgba(16,26,31,.5);
-  --r:12px; --nav:60px;
+  color-scheme:dark;
+  --bg:#080C10; --surface:#111920; --raise:#18232C; --sunk:#0B1217; --glass:rgba(17,25,32,.86);
+  --line:#1E2B34; --line-2:#2B3C47;
+  --ink:#EAF2F6; --ink-2:#9BB0BB; --ink-3:#6A828E;
+  --gold:#F3B44A; --gold-2:#FFD08A; --gold-ink:#0E1419; --gold-dim:rgba(243,180,74,.13);
+  --pos:#03A17D; --pos-ink:#3FD9B4; --neg:#DB4C3F; --neg-ink:#FF8478;
+  --warn:#C0821F; --warn-ink:#F0B75C; --warn-bg:rgba(192,130,31,.14);
+  --ring:rgba(243,180,74,.35);
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -28px rgba(0,0,0,.95);
+  --shadow-2:0 24px 60px -30px rgba(0,0,0,1);
+  --r:16px; --r-sm:11px; --r-lg:22px; --nav:64px;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0C1216; --surface:#151F25; --surface-2:#1B272E; --sunk:#0F181D;
-  --ink:#E7EFF2; --muted:#8CA0AA; --line:#243740; --line-hard:#37505C;
-  --accent:#F2A93B; --accent-ink:#142026; --accent-soft:#3A2B12;
-  --t-lock:#2FD0A0; --t-strong:#82CB5E; --t-solid:#D9C243; --t-lean:#F09B4A; --t-live:#F2695E;
-  --warn:#F0A33C; --warn-soft:#332512; --good:#2FD0A0;
-  --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 30px -20px rgba(0,0,0,.95);
-  --lift:0 -1px 0 var(--line), 0 -10px 28px -20px rgba(0,0,0,.9);
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#EEF1F3; --surface:#FFFFFF; --raise:#F4F7F9; --sunk:#E6EBEE; --glass:rgba(255,255,255,.88);
+  --line:#DDE4E8; --line-2:#C3CFD6;
+  --ink:#0D161C; --ink-2:#4E626D; --ink-3:#74878F;
+  --gold:#8A5A08; --gold-2:#6E4705; --gold-ink:#FFFFFF; --gold-dim:rgba(138,90,8,.10);
+  --pos:#00896A; --pos-ink:#006B53; --neg:#CB3E32; --neg-ink:#A82F27;
+  --warn:#B0730F; --warn-ink:#8A5A08; --warn-bg:rgba(176,115,15,.12);
+  --ring:rgba(138,90,8,.28);
+  --shadow:0 1px 2px rgba(13,22,28,.07), 0 14px 34px -26px rgba(13,22,28,.5);
+  --shadow-2:0 22px 50px -28px rgba(13,22,28,.45);
 }}
-:root[data-theme="dark"]{
-  --bg:#0C1216; --surface:#151F25; --surface-2:#1B272E; --sunk:#0F181D;
-  --ink:#E7EFF2; --muted:#8CA0AA; --line:#243740; --line-hard:#37505C;
-  --accent:#F2A93B; --accent-ink:#142026; --accent-soft:#3A2B12;
-  --t-lock:#2FD0A0; --t-strong:#82CB5E; --t-solid:#D9C243; --t-lean:#F09B4A; --t-live:#F2695E;
-  --warn:#F0A33C; --warn-soft:#332512; --good:#2FD0A0;
-  --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 30px -20px rgba(0,0,0,.95);
-  --lift:0 -1px 0 var(--line), 0 -10px 28px -20px rgba(0,0,0,.9);
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#EEF1F3; --surface:#FFFFFF; --raise:#F4F7F9; --sunk:#E6EBEE; --glass:rgba(255,255,255,.88);
+  --line:#DDE4E8; --line-2:#C3CFD6;
+  --ink:#0D161C; --ink-2:#4E626D; --ink-3:#74878F;
+  --gold:#8A5A08; --gold-2:#6E4705; --gold-ink:#FFFFFF; --gold-dim:rgba(138,90,8,.10);
+  --pos:#00896A; --pos-ink:#006B53; --neg:#CB3E32; --neg-ink:#A82F27;
+  --warn:#B0730F; --warn-ink:#8A5A08; --warn-bg:rgba(176,115,15,.12);
+  --ring:rgba(138,90,8,.28);
+  --shadow:0 1px 2px rgba(13,22,28,.07), 0 14px 34px -26px rgba(13,22,28,.5);
+  --shadow-2:0 22px 50px -28px rgba(13,22,28,.45);
 }
 
 *{box-sizing:border-box}
-/* .tab and .sheet set display:flex, which beats the UA stylesheet's [hidden] rule.
-   The Artifact host injects this same line, so the bug only ever showed up on a
-   plain static host - where every tab and both sheets rendered stacked at once. */
+/* .tab, .sheet and .row set display:flex, which beats the UA stylesheet's
+   [hidden] rule - without this every tab and both sheets render stacked. */
 [hidden]{display:none !important}
-body{background:var(--bg); color:var(--ink);
-  font-family:"Archivo","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.45;
-  -webkit-text-size-adjust:100%; overscroll-behavior-y:none}
-h1,h2,h3{margin:0; text-wrap:balance; font-variation-settings:"wdth" 112; letter-spacing:-.01em}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font-size:15px; line-height:1.45;
+  font-family:Archivo,"Segoe UI Variable",system-ui,-apple-system,"Helvetica Neue",sans-serif;
+  font-variation-settings:"wdth" 100; overscroll-behavior-y:none;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+h1,h2,h3{margin:0; font-weight:800; letter-spacing:-.015em; text-wrap:balance}
 p{margin:0}
-button{font:inherit; color:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent}
-:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
-.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-variant-numeric:tabular-nums}
-.lbl{font-size:.65rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--muted)}
+button{font:inherit; color:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent;
+  font-variation-settings:"wdth" 100}
+input,textarea{font-family:inherit}
+:focus-visible{outline:2px solid var(--gold); outline-offset:2px; border-radius:8px}
+::selection{background:var(--gold); color:var(--gold-ink)}
+
+.mono{font-family:"IBM Plex Mono",ui-monospace,"Roboto Mono",Menlo,monospace;
+  font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.num{font-family:"IBM Plex Mono",ui-monospace,"Roboto Mono",Menlo,monospace;
+  font-variant-numeric:tabular-nums; font-weight:600; letter-spacing:-.03em}
+.lbl{font-size:.625rem; text-transform:uppercase; letter-spacing:.14em; font-weight:700;
+  color:var(--ink-3); font-variation-settings:"wdth" 92}
 
 /* ---------- shell ---------- */
-.app{max-width:520px; margin:0 auto; min-height:100dvh; display:flex; flex-direction:column}
-.bar{position:sticky; top:0; z-index:30; display:flex; align-items:center; gap:10px;
-  padding:10px 16px 9px; background:var(--bg); border-bottom:1px solid var(--line)}
-.bar h1{font-size:1.1rem; font-weight:800; line-height:1.1}
-.bar .fresh{font-size:.68rem; color:var(--muted); letter-spacing:.03em;
-  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:56vw}
-.refresh{margin-left:auto; flex:0 0 auto; width:38px; height:38px; border-radius:999px;
-  border:1px solid var(--line); background:var(--surface); color:var(--muted); font-size:1rem}
-.refresh[data-busy="1"]{opacity:.5}
-.refresh[data-fresh="1"]{color:var(--good); border-color:var(--good)}
-.scopebtn{display:flex; align-items:center; gap:7px; white-space:nowrap;
-  background:var(--surface); border:1px solid var(--line-hard); border-radius:999px;
-  padding:7px 12px; font-size:.8rem; font-weight:700; min-height:38px}
-.scopebtn .n{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--muted)}
-main{flex:1; padding:14px 16px calc(var(--nav) + 26px + env(safe-area-inset-bottom))}
-.tab{display:flex; flex-direction:column; gap:14px}
+.app{max-width:540px; margin:0 auto; min-height:100dvh; display:flex; flex-direction:column}
+.bar{position:sticky; top:0; z-index:30; display:flex; align-items:center; gap:9px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;
+  background:var(--glass); backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%); border-bottom:1px solid var(--line)}
+.brand{min-width:0; display:flex; flex-direction:column; gap:1px}
+.brand h1{font-size:1.02rem; line-height:1.1; font-variation-settings:"wdth" 96}
+.brand .fresh{font-size:.67rem; color:var(--ink-3); white-space:nowrap; overflow:hidden;
+  text-overflow:ellipsis; max-width:52vw; display:flex; align-items:center; gap:5px}
+.pulse{width:6px; height:6px; border-radius:99px; background:var(--ink-3); flex:0 0 auto}
+.pulse.live{background:var(--pos-ink); box-shadow:0 0 0 0 var(--pos-ink); animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,217,180,.5)} 70%{box-shadow:0 0 0 6px rgba(63,217,180,0)} 100%{box-shadow:0 0 0 0 rgba(63,217,180,0)}}
+.iconbtn{margin-left:auto; flex:0 0 auto; width:37px; height:37px; border-radius:99px;
+  border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2);
+  display:grid; place-items:center; font-size:.95rem; transition:transform .16s, color .16s}
+.iconbtn+.iconbtn{margin-left:0}
+.iconbtn:active{transform:scale(.93)}
+.iconbtn[data-busy="1"]{color:var(--gold)}
+.iconbtn[data-busy="1"] svg{animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scopebtn{display:flex; align-items:center; gap:7px; white-space:nowrap; min-height:37px;
+  background:var(--surface); border:1px solid var(--line-2); border-radius:99px;
+  padding:6px 12px; font-size:.8rem; font-weight:700; transition:transform .16s}
+.scopebtn:active{transform:scale(.96)}
+.scopebtn .n{font-family:"IBM Plex Mono",monospace; font-size:.68rem; color:var(--ink-3)}
+main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bottom))}
+.tab{display:flex; flex-direction:column; gap:13px; animation:rise .26s cubic-bezier(.2,.7,.3,1)}
+@keyframes rise{from{opacity:0; transform:translateY(7px)} to{opacity:1; transform:none}}
 
-/* ---------- bottom nav ---------- */
-.tabs{position:fixed; bottom:0; left:0; right:0; z-index:40; display:grid;
-  grid-template-columns:repeat(5,1fr); background:var(--surface); box-shadow:var(--lift);
-  padding-bottom:env(safe-area-inset-bottom); max-width:520px; margin:0 auto}
-.tabs button{display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:3px; border:0; background:none; height:var(--nav); color:var(--muted); position:relative}
-.tabs button .ic{font-size:1.15rem; line-height:1}
-.tabs button .tx{font-size:.58rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase}
-.tabs button[aria-selected="true"]{color:var(--accent)}
-.tabs button[aria-selected="true"]::before{content:""; position:absolute; top:0; left:22%; right:22%;
-  height:3px; border-radius:0 0 3px 3px; background:var(--accent)}
-.tabs .dot{position:absolute; top:9px; right:calc(50% - 20px); min-width:17px; height:17px;
-  border-radius:999px; background:var(--accent); color:var(--accent-ink);
-  font-size:.6rem; font-weight:800; display:grid; place-items:center; padding:0 4px}
+/* ---------- bottom nav: floating, with a pill that slides to the active tab --- */
+.navwrap{position:fixed; left:0; right:0; bottom:0; z-index:40; display:flex; justify-content:center;
+  padding:0 12px calc(10px + env(safe-area-inset-bottom)); pointer-events:none}
+.tabs{pointer-events:auto; position:relative; width:100%; max-width:440px; display:grid;
+  grid-template-columns:repeat(5,1fr); background:var(--glass); border:1px solid var(--line-2);
+  border-radius:99px; box-shadow:var(--shadow-2); backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%); overflow:hidden}
+.tabs .glide{position:absolute; top:5px; bottom:5px; width:20%; padding:0 5px; z-index:0;
+  transition:transform .3s cubic-bezier(.2,.8,.25,1)}
+.tabs .glide i{display:block; height:100%; border-radius:99px; background:var(--gold-dim);
+  border:1px solid var(--ring)}
+.tabs button{position:relative; z-index:1; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:2px; border:0; background:none; height:var(--nav); color:var(--ink-3);
+  transition:color .2s}
+.tabs button .ic{display:grid; place-items:center; height:21px;
+  transition:transform .24s cubic-bezier(.2,.8,.25,1)}
+.tabs button .tx{font-size:.56rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase;
+  font-variation-settings:"wdth" 90}
+.tabs button[aria-selected="true"]{color:var(--gold)}
+.tabs button[aria-selected="true"] .ic{transform:translateY(-1px) scale(1.12)}
+.tabs .dot{position:absolute; top:11px; right:calc(50% - 21px); min-width:16px; height:16px;
+  border-radius:99px; background:var(--gold); color:var(--gold-ink); font-size:.58rem;
+  font-weight:800; display:grid; place-items:center; padding:0 4px;
+  font-family:"IBM Plex Mono",monospace}
 
 /* ---------- cards ---------- */
-.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r)}
-.pad{padding:14px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow)}
+.pad{padding:15px}
+.cardhead{padding:14px 15px 8px}
+.cardhead .sub{font-size:.76rem; color:var(--ink-2); line-height:1.5; margin-top:5px}
 
-/* ---------- risk dial ---------- */
-.dial{display:grid; grid-template-columns:repeat(5,1fr); gap:7px}
-.dial button{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
-  padding:10px 2px 8px; display:flex; flex-direction:column; align-items:center; gap:4px;
-  min-height:70px; transition:background .12s, border-color .12s}
-.dial .e{font-size:1.1rem; line-height:1}
-.dial .l{font-size:.6rem; text-transform:uppercase; letter-spacing:.06em; font-weight:800; color:var(--muted)}
-.dial .t{font-family:"IBM Plex Mono",monospace; font-size:.62rem; color:var(--muted)}
-.dial button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent)}
-.dial button[aria-pressed="true"] .l,.dial button[aria-pressed="true"] .t{color:var(--accent-ink)}
-.custom{text-align:center; font-size:.7rem; color:var(--muted); margin-top:-4px}
+/* ---------- risk dial: a scroll rail of chips, the live one lit ---------- */
+.rail{display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;
+  margin:0 -16px; padding:2px 16px 4px; scroll-snap-type:x proximity}
+.rail::-webkit-scrollbar{display:none}
+.dial button{scroll-snap-align:center; flex:0 0 auto; min-width:82px; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-sm); padding:9px 12px 8px;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  transition:transform .16s, border-color .2s, background .2s}
+.dial button:active{transform:scale(.95)}
+.dial .e{font-size:1.05rem; line-height:1.1; filter:grayscale(.35); transition:filter .2s}
+.dial .l{font-size:.6rem; text-transform:uppercase; letter-spacing:.09em; font-weight:800;
+  color:var(--ink-2); font-variation-settings:"wdth" 90}
+.dial .t{font-family:"IBM Plex Mono",monospace; font-size:.66rem; font-weight:600; color:var(--ink-3)}
+.dial button[aria-pressed="true"]{background:var(--gold-dim); border-color:var(--gold)}
+.dial button[aria-pressed="true"] .e{filter:none}
+.dial button[aria-pressed="true"] .l{color:var(--gold)}
+.dial button[aria-pressed="true"] .t{color:var(--gold)}
+.custom{font-size:.7rem; color:var(--ink-3); text-align:center}
 
-/* ---------- the ticket ---------- */
-.ticket{background:var(--surface); border:1px solid var(--line-hard); border-radius:var(--r);
-  box-shadow:var(--shadow); overflow:hidden}
-.head2{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; padding:16px 16px 13px}
-.big{display:flex; flex-direction:column; gap:2px; min-width:0}
-.big .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:2.55rem; font-weight:600; line-height:.95; letter-spacing:-.035em}
-.big.r{text-align:right; align-items:flex-end}
-.big.r .v{color:var(--accent)}
-.perf{height:1px; background:repeating-linear-gradient(90deg,var(--line-hard) 0 5px,transparent 5px 10px)}
-.facts{display:grid; grid-template-columns:repeat(3,1fr); background:var(--surface-2)}
-.facts>div{padding:10px 12px; border-right:1px solid var(--line)}
-.facts>div:last-child{border-right:0}
+/* ---------- the ticket stub ----------
+   One object, torn across the middle: the deal above the perforation, the
+   particulars below it. The ring is context for the number inside it, never a
+   substitute - a 250x ticket really does draw an almost empty ring. */
+.stub{position:relative; background:
+    radial-gradient(120% 80% at 85% -10%, var(--gold-dim), transparent 60%), var(--surface);
+  border:1px solid var(--line-2); border-radius:var(--r-lg); box-shadow:var(--shadow-2);
+  overflow:hidden}
+.stub .top{display:flex; align-items:center; gap:15px; padding:17px 18px 15px}
+.ring{position:relative; flex:0 0 auto; width:92px; height:92px}
+.ring svg{width:92px; height:92px; transform:rotate(-90deg); display:block}
+.ring .bg{fill:none; stroke:var(--sunk); stroke-width:9}
+.ring .fg{fill:none; stroke:url(#ringgrad); stroke-width:9; stroke-linecap:round;
+  transition:stroke-dashoffset .5s cubic-bezier(.2,.8,.25,1)}
+.ring .mid{position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:0}
+.ring .mid .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.16rem; font-weight:600; letter-spacing:-.04em; line-height:1}
+.ring .mid .k{font-size:.53rem; text-transform:uppercase; letter-spacing:.11em;
+  font-weight:800; color:var(--ink-3); margin-top:3px}
+.stub .pay{min-width:0; flex:1; display:flex; flex-direction:column; gap:1px}
+.stub .pay .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:2.9rem; font-weight:600; line-height:.94; letter-spacing:-.055em;
+  background:linear-gradient(168deg, var(--gold-2), var(--gold));
+  -webkit-background-clip:text; background-clip:text; color:transparent}
+.stub .pay .m{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:.92rem; font-weight:600; color:var(--ink-2); margin-top:5px}
+.stub .pay .m b{color:var(--ink)}
+.perf{position:relative; height:15px}
+.perf::before{content:""; position:absolute; left:14px; right:14px; top:7px; height:1px;
+  background:repeating-linear-gradient(90deg,var(--line-2) 0 4px,transparent 4px 9px)}
+.perf i{position:absolute; top:0; width:15px; height:15px; border-radius:99px;
+  background:var(--bg); border:1px solid var(--line-2)}
+.perf i.l{left:-8px} .perf i.r{right:-8px}
+.facts{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line)}
+.facts>div{padding:10px 13px 11px; background:var(--surface)}
 .facts .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:1.02rem; font-weight:500; margin-top:1px}
-.stakerow{display:flex; align-items:center; gap:10px; padding:12px 14px;
-  border-top:1px solid var(--line); background:var(--surface-2); flex-wrap:wrap}
-.stakerow input{width:84px; padding:7px 9px; border:1px solid var(--line-hard); border-radius:8px;
-  background:var(--surface); color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:1rem}
-.stakerow .out{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:1.1rem; font-weight:700; color:var(--good)}
+  font-size:1rem; font-weight:600; margin-top:2px}
+.stakerow{display:flex; align-items:center; gap:10px; padding:12px 15px 13px;
+  border-top:1px solid var(--line); background:var(--raise); flex-wrap:wrap}
+.stakerow .field{display:flex; align-items:center; gap:2px; background:var(--surface);
+  border:1px solid var(--line-2); border-radius:10px; padding:0 10px; min-height:40px}
+.stakerow .field span{color:var(--ink-3); font-family:"IBM Plex Mono",monospace; font-size:.9rem}
+.stakerow input{width:62px; padding:8px 2px; border:0; background:none; color:var(--ink);
+  font-family:"IBM Plex Mono",monospace; font-size:1rem; font-weight:600; outline:none}
+.stakerow .out{margin-left:auto; text-align:right}
+.stakerow .out .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.18rem; font-weight:600; color:var(--pos-ink); line-height:1.1}
+.stakerow .out .k{font-size:.62rem; color:var(--ink-3); letter-spacing:.03em}
 
-.note-in{font-size:.8rem; color:var(--muted); padding:11px 14px; background:var(--sunk);
-  border-radius:var(--r); border:1px dashed var(--line-hard)}
-.note-in b{color:var(--ink); font-weight:700}
+.note{font-size:.79rem; color:var(--ink-2); line-height:1.55; padding:12px 14px;
+  background:var(--sunk); border:1px solid var(--line); border-radius:var(--r); }
+.note b{color:var(--ink); font-weight:700}
+.note .chip{margin-top:10px}
 
-/* ---------- leg rows ---------- */
+/* ---------- leg rows ----------
+   Confidence is a length, not a hue. The meter under the name is the price, so
+   a 55c coin flip reads as a short bar rather than a red warning - which is the
+   whole argument of this app: a cheap leg is not a bad leg, it is a cheap one. */
 .legs{display:flex; flex-direction:column; background:var(--surface);
-  border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
-.legwrap{display:flex; align-items:stretch; border-bottom:1px solid var(--line)}
+  border:1px solid var(--line); border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow)}
+.legwrap{display:flex; align-items:stretch; border-bottom:1px solid var(--line);
+  transition:background .2s}
 .legwrap:last-child{border-bottom:0}
-.legwrap.pinned{background:var(--accent-soft)}
-.legwrap.banned{opacity:.45}
+.legwrap.pinned{background:var(--gold-dim)}
+.legwrap.banned{opacity:.42}
 .legwrap.banned .nm{text-decoration:line-through}
-.leg{flex:1; min-width:0; display:grid; grid-template-columns:4px 1fr auto; align-items:center;
-  gap:0 11px; padding:10px 4px 10px 0; border:0; background:none; text-align:left; min-height:56px}
-.leg .stripe{align-self:stretch; border-radius:0 3px 3px 0; background:var(--tc)}
-.leg .who{min-width:0; display:flex; flex-direction:column; gap:2px}
+.leg{flex:1; min-width:0; display:grid; grid-template-columns:1fr auto; align-items:center;
+  gap:2px 12px; padding:11px 2px 11px 14px; border:0; background:none; text-align:left;
+  min-height:62px; transition:background .15s}
+.leg:active{background:var(--raise)}
+.leg .who{min-width:0; display:flex; flex-direction:column; gap:3px}
 .leg .nm{font-weight:700; font-size:.95rem; line-height:1.2; overflow:hidden;
   text-overflow:ellipsis; white-space:nowrap}
-.leg .mt{font-size:.69rem; color:var(--muted); line-height:1.25; overflow:hidden;
+.leg .mt{font-size:.685rem; color:var(--ink-3); line-height:1.3; overflow:hidden;
   text-overflow:ellipsis; white-space:nowrap}
-.leg .pc{display:flex; flex-direction:column; align-items:flex-end; flex:0 0 auto;
-  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
-.leg .pc .p{font-size:1.02rem; font-weight:600; line-height:1.1; color:var(--tc)}
-.leg .pc .a{font-size:.63rem; color:var(--muted); white-space:nowrap}
-.act{border:0; background:none; font-size:1.05rem; color:var(--muted);
-  width:46px; flex:0 0 46px; display:grid; place-items:center}
-.flagline{grid-column:2/-1; font-size:.7rem; color:var(--warn); font-weight:600; margin-top:3px;
-  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
-  line-height:1.35}
-.draw{display:inline-block; margin-left:5px; padding:1px 5px; border-radius:4px;
-  background:var(--warn-soft); color:var(--warn); font-size:.58rem; font-weight:800;
-  letter-spacing:.04em; vertical-align:1px}
-.empty{padding:26px 16px; text-align:center; color:var(--muted); font-size:.87rem;
-  background:var(--surface); border:1px dashed var(--line-hard); border-radius:var(--r)}
+.leg .meter{height:3px; border-radius:99px; background:var(--sunk); margin-top:3px;
+  max-width:180px; overflow:hidden}
+.leg .meter i{display:block; height:3px; border-radius:99px;
+  background:linear-gradient(90deg, var(--ring), var(--gold)); transition:width .3s}
+.leg .pc{display:flex; flex-direction:column; align-items:flex-end; flex:0 0 auto; gap:2px}
+.leg .pc .p{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.05rem; font-weight:600; line-height:1.1; letter-spacing:-.03em}
+.leg .pc .a{font-family:"IBM Plex Mono",monospace; font-size:.62rem; color:var(--ink-3);
+  white-space:nowrap}
+.tierchip{display:inline-flex; align-items:center; padding:1px 6px; border-radius:5px;
+  font-size:.575rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase;
+  background:var(--sunk); color:var(--ink-2); border:1px solid var(--line-2);
+  font-variation-settings:"wdth" 90}
+.tierchip.t5{background:var(--gold-dim); color:var(--gold); border-color:var(--ring)}
+.tierchip.t4{background:var(--gold-dim); color:var(--gold)}
+.act{border:0; background:none; font-size:1rem; color:var(--ink-3); width:46px; flex:0 0 46px;
+  display:grid; place-items:center; transition:transform .16s, color .16s}
+.act:active{transform:scale(.88); color:var(--gold)}
+.flagline{grid-column:1/-1; font-size:.695rem; color:var(--warn-ink); font-weight:600;
+  margin-top:4px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+  overflow:hidden; line-height:1.4}
+.flagline.plain{color:var(--ink-3); font-weight:500}
+.draw{display:inline-block; margin-left:6px; padding:1px 5px; border-radius:5px;
+  background:var(--warn-bg); color:var(--warn-ink); font-size:.55rem; font-weight:800;
+  letter-spacing:.06em; vertical-align:2px; font-variation-settings:"wdth" 90}
+.empty{padding:30px 18px; text-align:center; color:var(--ink-3); font-size:.86rem;
+  background:var(--surface); border:1px dashed var(--line-2); border-radius:var(--r);
+  line-height:1.6}
 
 /* ---------- buttons ---------- */
 .btn{display:flex; align-items:center; justify-content:center; gap:8px; width:100%;
-  min-height:50px; border-radius:var(--r); border:1px solid var(--line-hard);
-  background:var(--surface); font-size:.92rem; font-weight:700}
-.btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-.btn.ghost{background:none; border-style:dashed; color:var(--muted); min-height:44px; font-weight:600}
+  min-height:52px; border-radius:14px; border:1px solid var(--line-2); background:var(--surface);
+  font-size:.92rem; font-weight:700; transition:transform .15s, filter .15s}
+.btn:active{transform:scale(.985); filter:brightness(1.08)}
+.btn.primary{background:linear-gradient(170deg, var(--gold-2), var(--gold));
+  border-color:transparent; color:var(--gold-ink); box-shadow:0 10px 26px -16px var(--gold)}
+.btn.ghost{background:none; border-style:dashed; color:var(--ink-3); min-height:46px; font-weight:600}
+.chip{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line-2);
+  background:var(--raise); border-radius:99px; padding:8px 13px; font-size:.78rem;
+  font-weight:700; color:var(--ink-2); min-height:37px; transition:transform .15s}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{background:var(--gold); border-color:var(--gold); color:var(--gold-ink)}
 
 /* ---------- board ---------- */
-.search{width:100%; min-height:46px; padding:11px 13px; border:1px solid var(--line-hard);
-  border-radius:var(--r); background:var(--surface); color:var(--ink); font:inherit; font-size:.92rem}
-.sorts{display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding-bottom:2px}
+.search{width:100%; min-height:46px; padding:12px 14px; border:1px solid var(--line-2);
+  border-radius:13px; background:var(--surface); color:var(--ink); font:inherit; font-size:.92rem;
+  outline:none; transition:border-color .2s}
+.search:focus{border-color:var(--gold)}
+.sorts{display:flex; gap:7px; overflow-x:auto; scrollbar-width:none; margin:0 -16px;
+  padding:1px 16px 3px}
 .sorts::-webkit-scrollbar{display:none}
-.pill{flex:0 0 auto; border:1px solid var(--line-hard); background:var(--surface);
-  border-radius:999px; padding:8px 14px; font-size:.78rem; font-weight:700; color:var(--muted);
-  min-height:38px}
-.pill[aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--bg)}
+.sorts .chip{flex:0 0 auto}
 
 /* ---------- slip ---------- */
-.slipline{display:flex; gap:11px; padding:11px 13px; border-bottom:1px solid var(--line);
+.slipline{display:flex; gap:12px; padding:12px 14px; border-bottom:1px solid var(--line);
   align-items:flex-start}
 .slipline:last-child{border-bottom:0}
-.slipline .n{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--muted);
-  min-width:20px; padding-top:2px}
-.slipline .b{min-width:0; flex:1; display:flex; flex-direction:column; gap:2px}
-.slipline .nm2{line-height:1.3}
-.slipline .t{display:block; font-family:"IBM Plex Mono",monospace; font-size:.66rem;
-  color:var(--muted); word-break:break-all; line-height:1.35}
-.slipline .pr{font-family:"IBM Plex Mono",monospace; font-weight:600; white-space:nowrap}
-.tickbox{width:100%; min-height:110px; padding:11px; border:1px solid var(--line-hard);
-  border-radius:var(--r); background:var(--sunk); color:var(--ink);
-  font-family:"IBM Plex Mono",monospace; font-size:.72rem; resize:vertical}
-.toast{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(var(--nav) + 22px);
-  z-index:60; background:var(--ink); color:var(--bg); padding:10px 18px; border-radius:999px;
-  font-size:.83rem; font-weight:700; box-shadow:var(--shadow)}
+.slipline .n{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-3);
+  min-width:18px; padding-top:3px}
+.slipline .b{min-width:0; flex:1; display:flex; flex-direction:column; gap:3px}
+.slipline .nm2{line-height:1.3; font-size:.9rem}
+.slipline .nm2 .vs{color:var(--ink-3); font-weight:400}
+.slipline .t{display:block; font-family:"IBM Plex Mono",monospace; font-size:.645rem;
+  color:var(--ink-3); word-break:break-all; line-height:1.4}
+.slipline .pr{font-family:"IBM Plex Mono",monospace; font-weight:600; white-space:nowrap;
+  font-size:.9rem}
+.tickbox{width:100%; min-height:104px; padding:12px; border:1px solid var(--line);
+  border-radius:var(--r); background:var(--sunk); color:var(--ink-2);
+  font-family:"IBM Plex Mono",monospace; font-size:.7rem; line-height:1.6; resize:vertical}
+.toast{position:fixed; left:50%; bottom:calc(var(--nav) + 30px); z-index:60; background:var(--ink);
+  color:var(--bg); padding:11px 19px; border-radius:99px; font-size:.83rem; font-weight:700;
+  box-shadow:var(--shadow-2); animation:pop .22s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes pop{from{opacity:0; transform:translate(-50%,10px) scale(.94)}
+               to{opacity:1; transform:translate(-50%,0) scale(1)}}
 
-/* ---------- sheet ---------- */
-.scrim{position:fixed; inset:0; z-index:50; background:rgba(8,14,18,.5); backdrop-filter:blur(2px)}
-.sheet{position:fixed; left:0; right:0; bottom:0; z-index:51; max-width:520px; margin:0 auto;
-  background:var(--surface); border-radius:18px 18px 0 0; box-shadow:var(--lift);
-  max-height:86dvh; display:flex; flex-direction:column}
-.sheet .grab{width:38px; height:4px; border-radius:999px; background:var(--line-hard);
-  margin:9px auto 2px}
-.sheet .sh{display:flex; align-items:center; gap:10px; padding:8px 16px 12px;
+/* ---------- sheets ---------- */
+.scrim{position:fixed; inset:0; z-index:50; background:rgba(4,8,11,.62);
+  backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); animation:fade .2s ease}
+@keyframes fade{from{opacity:0} to{opacity:1}}
+.sheet{position:fixed; left:0; right:0; bottom:0; z-index:51; max-width:540px; margin:0 auto;
+  background:var(--surface); border:1px solid var(--line-2); border-bottom:0;
+  border-radius:26px 26px 0 0; box-shadow:var(--shadow-2); max-height:88dvh;
+  display:flex; flex-direction:column; animation:slide .3s cubic-bezier(.2,.85,.25,1)}
+@keyframes slide{from{transform:translateY(100%)} to{transform:none}}
+.sheet .grab{width:40px; height:4px; border-radius:99px; background:var(--line-2); margin:10px auto 3px}
+.sheet .sh{display:flex; align-items:center; gap:10px; padding:8px 17px 13px;
   border-bottom:1px solid var(--line)}
-.sheet .sh h2{font-size:1rem; font-weight:800}
-.sheet .sh .x{margin-left:auto; border:0; background:var(--surface-2); border-radius:999px;
-  width:34px; height:34px; font-size:1rem; color:var(--muted)}
-.sheet .body{overflow-y:auto; padding:14px 16px calc(18px + env(safe-area-inset-bottom));
-  display:flex; flex-direction:column; gap:18px}
+.sheet .sh h2{font-size:1.02rem; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.sheet .sh .x{margin-left:auto; flex:0 0 auto; border:0; background:var(--raise); border-radius:99px;
+  width:34px; height:34px; font-size:.95rem; color:var(--ink-2)}
+.sheet .body{overflow-y:auto; -webkit-overflow-scrolling:touch;
+  padding:15px 17px calc(20px + env(safe-area-inset-bottom));
+  display:flex; flex-direction:column; gap:17px}
 .grp{display:flex; flex-direction:column; gap:11px}
-.grp>.lbl{padding-bottom:2px; border-bottom:1px solid var(--line)}
-.ctl{display:flex; flex-direction:column; gap:6px}
+.grp>.lbl{padding-bottom:3px; border-bottom:1px solid var(--line)}
+.ctl{display:flex; flex-direction:column; gap:7px}
 .ctl .row{display:flex; justify-content:space-between; align-items:baseline; gap:8px}
 .ctl .row .k{font-size:.85rem; font-weight:700}
 .ctl .row .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:.95rem; font-weight:700; color:var(--accent)}
-.ctl .hint{font-size:.72rem; color:var(--muted); line-height:1.4}
-input[type=range]{width:100%; accent-color:var(--accent); height:30px}
+  font-size:1.02rem; font-weight:600; color:var(--gold)}
+.ctl .hint{font-size:.72rem; color:var(--ink-3); line-height:1.5}
+input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:none}
 .chips{display:flex; flex-wrap:wrap; gap:7px}
-.chip{border:1px solid var(--line-hard); background:var(--surface-2); border-radius:999px;
-  padding:8px 13px; font-size:.79rem; font-weight:600; color:var(--muted); min-height:38px}
-.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-.sw{display:flex; align-items:center; gap:11px; padding:9px 0; font-size:.88rem; font-weight:600}
-.sw input{width:20px; height:20px; accent-color:var(--accent); flex:0 0 auto}
-.sw .sub{display:block; font-size:.71rem; color:var(--muted); font-weight:400; margin-top:1px}
-.scopelist{display:flex; flex-direction:column; gap:7px}
-.scopelist button{display:flex; align-items:center; gap:11px; width:100%; min-height:54px;
-  padding:10px 13px; border:1px solid var(--line); border-radius:var(--r);
-  background:var(--surface-2); text-align:left}
-.scopelist .e{font-size:1.2rem}
+.sw{display:flex; align-items:flex-start; gap:12px; padding:9px 0; font-size:.87rem; font-weight:600}
+.sw input{width:21px; height:21px; accent-color:var(--gold); flex:0 0 auto; margin:1px 0 0}
+.sw .sub{display:block; font-size:.715rem; color:var(--ink-3); font-weight:400; margin-top:3px;
+  line-height:1.5}
+.scopelist{display:flex; flex-direction:column; gap:8px}
+.scopelist button{display:flex; align-items:center; gap:12px; width:100%; min-height:56px;
+  padding:11px 14px; border:1px solid var(--line); border-radius:13px; background:var(--raise);
+  text-align:left; transition:transform .15s}
+.scopelist button:active{transform:scale(.98)}
+.scopelist .e{font-size:1.22rem}
 .scopelist .nm{font-weight:700; font-size:.92rem}
-.scopelist .ct{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--muted)}
-.scopelist button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-.scopelist button[aria-pressed="true"] .ct{color:var(--accent-ink)}
+.scopelist .ct{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:.72rem;
+  color:var(--ink-3)}
+.scopelist button[aria-pressed="true"]{background:var(--gold-dim); border-color:var(--gold)}
+.scopelist button[aria-pressed="true"] .nm{color:var(--gold)}
+.kv{width:100%; border-collapse:collapse}
+.kv td{padding:10px 14px; border-bottom:1px solid var(--line); font-size:.82rem; color:var(--ink-2)}
+.kv tr:last-child td{border-bottom:0}
+.kv td.n{text-align:right; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-weight:600; color:var(--ink)}
 
 /* ---------- charts ----------
-   Rounded data-ends anchored to the track, a 2px gap where fills meet, thin marks,
-   and a value printed on every row - the number is never carried by colour alone. */
-.bar{display:flex; align-items:center; gap:9px; padding:5px 0}
-.bar .k{flex:0 0 76px; font-size:.74rem; color:var(--muted); line-height:1.2}
-.bar .track{flex:1; height:10px; background:var(--sunk); border-radius:5px; min-width:40px}
-.bar .fill{height:10px; border-radius:5px; background:var(--muted); opacity:.55; transition:width .2s}
-.bar.best .fill{background:var(--good); opacity:1}
-.bar .v{flex:0 0 58px; text-align:right; font-family:"IBM Plex Mono",monospace;
-  font-variant-numeric:tabular-nums; font-size:.78rem; font-weight:600}
-.bar.best .v{color:var(--good)}
+   Thin marks on a recessive track, rounded data-ends anchored to the baseline,
+   a value printed on every row, and a 2px surface gap where a fill meets the
+   zero line. Nothing here is carried by colour: the diverging rows also encode
+   sign as position across the line, an arrow, and a signed number. */
+.bar{display:flex; align-items:center; gap:10px; padding:5px 0}
+.bar .k{flex:0 0 74px; font-size:.735rem; color:var(--ink-2); line-height:1.25}
+.bar .track{flex:1; height:9px; background:var(--sunk); border-radius:99px; min-width:40px;
+  overflow:hidden}
+.bar .fill{display:block; height:9px; border-radius:99px; background:var(--line-2);
+  transition:width .4s cubic-bezier(.2,.8,.25,1)}
+.bar.best .fill{background:var(--pos)}
+.bar .v{flex:0 0 56px; text-align:right; font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums; font-size:.755rem; font-weight:600; color:var(--ink-2)}
+.bar.best .v{color:var(--ink)}
+.bar.elo .k{flex:0 0 112px; color:var(--ink)}
+.bar.elo .fill{background:linear-gradient(90deg, var(--ring), var(--gold))}
 
-.dv{display:flex; align-items:center; gap:8px; padding:5px 0}
-.dv .k{flex:0 0 96px; font-size:.73rem; color:var(--muted); line-height:1.2}
+.dv{display:flex; align-items:center; gap:9px; padding:5px 0}
+.dv .k{flex:0 0 88px; font-size:.71rem; color:var(--ink-2); line-height:1.3}
 .dv .mid{flex:1; display:flex; position:relative; min-width:70px}
-.dv .zero{position:absolute; left:50%; top:-1px; bottom:-1px; width:1px;
-  background:var(--line-hard)}
-.dv .half{flex:1; display:flex; align-items:center}
+.dv .zero{position:absolute; left:50%; top:-3px; bottom:-3px; width:1px; background:var(--line-2)}
+.dv .half{flex:1; display:flex; align-items:center; min-width:0}
 .dv .half.l{justify-content:flex-end; padding-right:2px}
 .dv .half.r{padding-left:2px}
-.dv .seg{height:10px; border-radius:5px; min-width:2px}
-.dv .seg.up{background:var(--good)}
-.dv .seg.down{background:var(--t-live)}
-.dv .v{flex:0 0 66px; text-align:right; font-family:"IBM Plex Mono",monospace;
-  font-variant-numeric:tabular-nums; font-size:.78rem; font-weight:600}
-.dv .v.up{color:var(--good)} .dv .v.down{color:var(--t-live)}
+.dv .seg{height:9px; border-radius:99px; min-width:3px}
+.dv .seg.up{background:var(--pos)}
+.dv .seg.down{background:var(--neg)}
+.dv .v{flex:0 0 82px; text-align:right; font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums; font-size:.755rem; font-weight:600; white-space:nowrap}
+.dv .v small{display:block; font-size:.9em; font-weight:400; color:var(--ink-3)}
+.dv .v.up{color:var(--pos-ink)} .dv .v.down{color:var(--neg-ink)}
 
-.grid2{display:grid; grid-template-columns:1fr 1fr; gap:9px}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .tile{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
-  padding:12px 13px}
+  padding:13px 14px; box-shadow:var(--shadow)}
 .tile .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:1.45rem; font-weight:600; line-height:1.1; margin-top:2px}
-.tile .sub{font-size:.7rem; color:var(--muted); margin-top:3px}
-.verdict{border-left:4px solid var(--warn)}
-.verdict b{color:var(--ink)}
-.rows{width:100%; border-collapse:collapse; font-size:.8rem}
-.rows th{text-align:left; font-size:.62rem; text-transform:uppercase; letter-spacing:.08em;
-  color:var(--muted); font-weight:700; padding:7px 8px; border-bottom:1px solid var(--line)}
-.rows td{padding:7px 8px; border-bottom:1px solid var(--line)}
+  font-size:1.5rem; font-weight:600; line-height:1.1; margin-top:4px; letter-spacing:-.03em}
+.tile .sub{font-size:.695rem; color:var(--ink-3); margin-top:4px; line-height:1.45}
+.verdict{border-left:3px solid var(--warn)}
+.verdict.good{border-left-color:var(--pos)}
+.rows{width:100%; border-collapse:collapse; font-size:.79rem}
+.rows th{text-align:left; font-size:.6rem; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--ink-3); font-weight:700; padding:8px 9px; border-bottom:1px solid var(--line);
+  font-variation-settings:"wdth" 90}
+.rows td{padding:8px 9px; border-bottom:1px solid var(--line); color:var(--ink-2)}
 .rows tr:last-child td{border-bottom:0}
-.rows td.n{text-align:right; font-family:"IBM Plex Mono",monospace;
-  font-variant-numeric:tabular-nums}
+.rows td:first-child{color:var(--ink)}
+.rows td.n{text-align:right; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+.rows td.n.up{color:var(--pos-ink)} .rows td.n.down{color:var(--neg-ink)}
+.scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
 
 /* ---------- prose ---------- */
-.prose{font-size:.82rem; color:var(--muted); line-height:1.6}
-.prose b{color:var(--ink)}
-.prose code{font-family:"IBM Plex Mono",monospace; font-size:.92em; background:var(--sunk);
-  padding:1px 5px; border-radius:4px}
-.prose p+p{margin-top:10px}
-.banner{background:var(--warn-soft); color:var(--warn); border:1px solid currentColor;
-  border-radius:var(--r); padding:11px 13px; font-size:.8rem; font-weight:600}
+.prose{font-size:.815rem; color:var(--ink-2); line-height:1.65}
+.prose b{color:var(--ink); font-weight:700}
+.prose code{font-family:"IBM Plex Mono",monospace; font-size:.9em; background:var(--sunk);
+  padding:1px 5px; border-radius:5px; color:var(--ink)}
+.prose p+p{margin-top:11px}
+.banner{background:var(--warn-bg); color:var(--warn-ink); border:1px solid currentColor;
+  border-radius:var(--r); padding:12px 14px; font-size:.79rem; font-weight:600; line-height:1.5}
+.banner span{font-weight:400}
 @media (prefers-reduced-motion: reduce){*{transition:none !important; animation:none !important}}
+@media (max-width:359px){
+  .stub .pay .v{font-size:2.4rem}
+  .ring,.ring svg{width:80px; height:80px}
+}
 </style>
-
+</head>
+<body>
 <div class="app">
   <header class="bar">
-    <div>
+    <div class="brand">
       <h1>Gridiron Ticket</h1>
-      <p class="fresh" id="fresh">loading…</p>
+      <p class="fresh"><span class="pulse" id="pulse"></span><span id="fresh">loading…</span></p>
     </div>
-    <button class="refresh" id="refresh" type="button" aria-label="Fetch the latest board">↻</button>
+    <button class="iconbtn" id="theme" type="button" aria-label="Switch between the dark and light look">◐</button>
+    <button class="iconbtn" id="refresh" type="button" aria-label="Fetch the latest board">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+           stroke-width="2.1" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 11a8 8 0 1 0-.6 4"></path><path d="M20 4v7h-7"></path></svg>
+    </button>
     <button class="scopebtn" id="scopebtn" type="button" aria-haspopup="dialog"></button>
   </header>
 
   <main>
-    <p class="banner" id="demo" hidden>Example board — this snapshot has no live markets. Numbers are illustrative.</p>
+    <p class="banner" id="demo" hidden>Example board — this snapshot has no live markets.
+      <span>Every number below is illustrative until the next run lands.</span></p>
 
     <!-- ============ BUILD ============ -->
     <section class="tab" id="tab-build">
-      <nav class="dial" id="dial" aria-label="Risk level"></nav>
-      <p class="custom" id="custom" hidden>Custom settings — tap a level to snap back</p>
+      <nav class="rail dial" id="dial" aria-label="Risk level"></nav>
+      <p class="custom" id="custom" hidden>Custom target — tap a level to snap back</p>
 
-      <div class="ticket">
-        <div class="head2">
-          <div class="big"><span class="lbl">Wins</span><span class="v" id="win">—</span></div>
-          <div class="big r"><span class="lbl">Pays</span><span class="v" id="mult">—</span></div>
+      <div class="stub">
+        <div class="top">
+          <div class="ring">
+            <svg viewBox="0 0 92 92" aria-hidden="true">
+              <defs><linearGradient id="ringgrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--gold-2)"></stop>
+                <stop offset="100%" stop-color="var(--gold)"></stop>
+              </linearGradient></defs>
+              <circle class="bg" cx="46" cy="46" r="39"></circle>
+              <circle class="fg" id="arc" cx="46" cy="46" r="39"
+                      stroke-dasharray="245.04" stroke-dashoffset="245.04"></circle>
+            </svg>
+            <div class="mid"><span class="v" id="win">—</span><span class="k">wins</span></div>
+          </div>
+          <div class="pay">
+            <span class="lbl">Pays</span>
+            <span class="v" id="mult">—</span>
+            <span class="m" id="oneline">—</span>
+          </div>
         </div>
-        <div class="perf"></div>
+        <div class="perf"><i class="l"></i><i class="r"></i></div>
         <div class="facts">
           <div><div class="lbl">Legs</div><div class="v" id="nlegs">—</div></div>
           <div><div class="lbl">Weakest</div><div class="v" id="weak">—</div></div>
           <div><div class="lbl">Edge</div><div class="v" id="ev">—</div></div>
         </div>
         <div class="stakerow">
-          <label class="lbl" for="stake">Stake&nbsp;$</label>
-          <input id="stake" type="number" min="1" step="1" value="10" inputmode="decimal">
-          <span class="out" id="payout">—</span>
+          <label class="lbl" for="stake">Stake</label>
+          <div class="field"><span>$</span>
+            <input id="stake" type="number" min="1" step="1" value="10" inputmode="decimal"></div>
+          <div class="out"><div class="v" id="payout">—</div><div class="k">if every leg lands</div></div>
         </div>
       </div>
 
-      <p class="note-in" id="whatif"></p>
-      <button class="btn primary" id="opentune" type="button">⚙︎ Filters &amp; risk</button>
+      <p class="note" id="whatif"></p>
+      <button class="btn primary" id="opentune" type="button">Filters &amp; risk</button>
 
       <div>
-        <p class="lbl" style="margin-bottom:7px">In the ticket <span class="mono" id="legcount"></span></p>
+        <p class="lbl" style="margin-bottom:8px">In the ticket <span class="mono" id="legcount"></span></p>
         <div class="legs" id="legs"></div>
       </div>
     </section>
@@ -335,27 +510,40 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
     <section class="tab" id="tab-board" hidden>
       <input class="search" id="q" type="search" placeholder="Search team, league or ticker" autocomplete="off">
       <div class="sorts" id="sorts">
-        <button class="pill" type="button" data-sort="p" aria-pressed="true">Best odds</button>
-        <button class="pill" type="button" data-sort="spread" aria-pressed="false">Tightest spread</button>
-        <button class="pill" type="button" data-sort="vol" aria-pressed="false">Most traded</button>
-        <button class="pill" type="button" data-sort="value" aria-pressed="false">Best value</button>
-        <button class="pill" type="button" data-sort="news" aria-pressed="false">Has news</button>
-        <button class="pill" type="button" data-sort="pinned" aria-pressed="false">My pins</button>
+        <button class="chip" type="button" data-sort="p" aria-pressed="true">Best odds</button>
+        <button class="chip" type="button" data-sort="spread" aria-pressed="false">Tightest spread</button>
+        <button class="chip" type="button" data-sort="vol" aria-pressed="false">Most traded</button>
+        <button class="chip" type="button" data-sort="value" aria-pressed="false">Best value</button>
+        <button class="chip" type="button" data-sort="news" aria-pressed="false">Has news</button>
+        <button class="chip" type="button" data-sort="pinned" aria-pressed="false">My pins</button>
       </div>
       <p class="lbl" id="boardcount"></p>
       <div class="legs" id="board"></div>
-      <p class="prose">Tap any leg to read its research and prices. The button on the right pins it into every ticket; tap again to ban it. Pinned legs ignore every filter, so this is how you force a 50/50 game in.</p>
+      <p class="prose">Tap any leg to read its research and prices. The button on the right pins it
+        into every ticket; tap again to ban it. Pinned legs ignore every filter, so this is how you
+        force a 50/50 game in.</p>
     </section>
 
     <!-- ============ SLIP ============ -->
     <section class="tab" id="tab-slip" hidden>
-      <p class="lbl" id="snapshot" style="text-transform:none; letter-spacing:.02em"></p>
-      <div class="ticket">
-        <div class="head2">
-          <div class="big"><span class="lbl">Wins</span><span class="v" id="s-win">—</span></div>
-          <div class="big r"><span class="lbl">Returns</span><span class="v" id="s-ret">—</span></div>
+      <p class="prose" id="snapshot"></p>
+      <div class="stub">
+        <div class="top">
+          <div class="ring">
+            <svg viewBox="0 0 92 92" aria-hidden="true">
+              <circle class="bg" cx="46" cy="46" r="39"></circle>
+              <circle class="fg" id="s-arc" cx="46" cy="46" r="39"
+                      stroke-dasharray="245.04" stroke-dashoffset="245.04"></circle>
+            </svg>
+            <div class="mid"><span class="v" id="s-win">—</span><span class="k">wins</span></div>
+          </div>
+          <div class="pay">
+            <span class="lbl">Returns</span>
+            <span class="v" id="s-ret">—</span>
+            <span class="m" id="s-oneline">—</span>
+          </div>
         </div>
-        <div class="perf"></div>
+        <div class="perf"><i class="l"></i><i class="r"></i></div>
         <div class="facts">
           <div><div class="lbl">Legs</div><div class="v" id="s-legs">—</div></div>
           <div><div class="lbl">Stake</div><div class="v" id="s-stake">—</div></div>
@@ -365,12 +553,13 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
       <div class="card" id="sliplist"></div>
       <button class="btn primary" id="copy" type="button">Copy all tickers</button>
       <textarea class="tickbox" id="tickers" readonly aria-label="Kalshi tickers"></textarea>
-      <p class="prose">Search each ticker on Kalshi to build the combo. <b>Prices move</b> — the numbers here are from the snapshot time in the header, not a live quote.</p>
+      <p class="prose">Search each ticker on Kalshi to build the combo. <b>Prices move</b> — the
+        numbers here are from the snapshot time in the header, not a live quote.</p>
     </section>
 
     <!-- ============ RECORD ============ -->
     <section class="tab" id="tab-stats" hidden>
-      <p class="lbl" id="statsstamp" style="text-transform:none; letter-spacing:.02em"></p>
+      <p class="prose" id="statsstamp"></p>
       <div class="card pad prose verdict" id="verdict"></div>
       <div id="brierwrap"></div>
       <div id="vsmarket"></div>
@@ -383,39 +572,56 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
     <!-- ============ WHY ============ -->
     <section class="tab" id="tab-why" hidden>
       <div class="card pad prose">
-        <p class="lbl" style="margin-bottom:8px">The one rule</p>
-        <p>Kalshi prices a combo as the product of its legs, so a fairly priced parlay wins <code>1 ÷ payout</code> of the time. A 3-leg ticket paying 11× and a 39-leg ticket paying 11× are the same 9% bet — the long one just crosses 39 spreads to get there.</p>
-        <p><b>Leg count is not the risk. The payout is.</b> You pick what you want to win; the builder finds the highest win chance that still pays it.</p>
-        <p><b>There is no price floor, on purpose.</b> Kalshi's spread is about 1¢ whatever a contract costs, so a cent on a 97¢ leg is 1% of its value and a cent on a 50¢ leg is 2% — but reaching a given payout out of 97¢ favourites takes far more of them, and you cross a spread every time. On a real board, 5× costs 27 chalk legs at −21% EV, or 8 mid-priced legs at about −0%. Same payout, same win chance. Above 5× the chalk route does not exist at all. So a 55¢ game earns its place whenever it buys payout more cheaply.</p>
-        <p>What still protects you is the book, not the price: a leg has to be trading with a tight spread to be used. And legs under 90¢ are docked by how much that price band has historically underperformed, so a coin flip has to be genuinely cheap to get in.</p>
+        <p class="lbl" style="margin-bottom:9px">The one rule</p>
+        <p>Kalshi prices a combo as the product of its legs, so a fairly priced parlay wins
+          <code>1 ÷ payout</code> of the time. A 3-leg ticket paying 11× and a 39-leg ticket paying
+          11× are the same 9% bet — the long one just crosses 39 spreads to get there.</p>
+        <p><b>Leg count is not the risk. The payout is.</b> You pick what you want to win; the
+          builder finds the highest win chance that still pays it.</p>
+        <p><b>There is no price floor, on purpose.</b> Kalshi's spread is about 1¢ whatever a
+          contract costs, so a cent on a 97¢ leg is 1% of its value and a cent on a 50¢ leg is 2% —
+          but reaching a given payout out of 97¢ favourites takes far more of them, and you cross a
+          spread every time. On a real board, 5× costs 27 chalk legs at −21% EV, or 8 mid-priced
+          legs at about −0%. Same payout, same win chance. Above 5× the chalk route does not exist
+          at all. So a 55¢ game earns its place whenever it buys payout more cheaply.</p>
+        <p>What still protects you is the book, not the price: a leg has to be trading with a tight
+          spread to be used. And legs under 90¢ are docked by how much that price band has
+          historically underperformed, so a coin flip has to be genuinely cheap to get in.</p>
       </div>
       <div class="card pad prose">
-        <p class="lbl" style="margin-bottom:8px">Reading the numbers</p>
-        <p><b>True</b> is the de-vigged mid — every outcome in the game normalised to 100%. <b>Ask</b> is what you pay. <b>Edge</b> is the gap between them compounded across every leg. It is always negative; a shorter ticket is less negative.</p>
-        <p><b>Draw loses.</b> Soccer and Test cricket price three outcomes, and a draw settles a win contract at zero — so the draw stays in the denominator. A match quoted 55¢ is worth about 40¢ once the draw counts. Those legs are badged.</p>
+        <p class="lbl" style="margin-bottom:9px">Reading the numbers</p>
+        <p><b>True</b> is the de-vigged mid — every outcome in the game normalised to 100%.
+          <b>Ask</b> is what you pay. <b>Edge</b> is the gap between them compounded across every
+          leg. It is always negative; a shorter ticket is less negative.</p>
+        <p><b>Draw loses.</b> Soccer and Test cricket price three outcomes, and a draw settles a win
+          contract at zero — so the draw stays in the denominator. A match quoted 55¢ is worth about
+          40¢ once the draw counts. Those legs are badged.</p>
       </div>
       <div class="card pad prose">
-        <p class="lbl" style="margin-bottom:8px">What the record says</p>
+        <p class="lbl" style="margin-bottom:9px">What the record says</p>
         <p id="calib"></p>
         <p id="bt"></p>
       </div>
     </section>
   </main>
 
-  <nav class="tabs" id="tabs" role="tablist">
-    <button type="button" role="tab" data-tab="build" aria-selected="true"><span class="ic">🎯</span><span class="tx">Build</span></button>
-    <button type="button" role="tab" data-tab="board" aria-selected="false"><span class="ic">📋</span><span class="tx">Board</span></button>
-    <button type="button" role="tab" data-tab="slip"  aria-selected="false"><span class="ic">🎟️</span><span class="tx">Slip</span><span class="dot" id="slipdot" hidden>0</span></button>
-    <button type="button" role="tab" data-tab="stats" aria-selected="false"><span class="ic">📊</span><span class="tx">Record</span></button>
-    <button type="button" role="tab" data-tab="why"   aria-selected="false"><span class="ic">📐</span><span class="tx">Why</span></button>
-  </nav>
+  <div class="navwrap">
+    <nav class="tabs" id="tabs" role="tablist">
+      <span class="glide" id="glide" aria-hidden="true"><i></i></span>
+      <button type="button" role="tab" data-tab="build" aria-selected="true"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6"/></svg></span><span class="tx">Build</span></button>
+      <button type="button" role="tab" data-tab="board" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.4"/><path d="M7.8 9h8.4M7.8 12.6h8.4M7.8 16.2h4.8"/></svg></span><span class="tx">Board</span></button>
+      <button type="button" role="tab" data-tab="slip" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.4 8.2a2 2 0 0 1 2-2h13.2a2 2 0 0 1 2 2v1.4a2.4 2.4 0 0 0 0 4.8v1.4a2 2 0 0 1-2 2H5.4a2 2 0 0 1-2-2v-1.4a2.4 2.4 0 0 0 0-4.8z"/><path d="M13.6 8.6v6.8" stroke-dasharray="2 2.2"/></svg></span><span class="tx">Slip</span><span class="dot" id="slipdot" hidden>0</span></button>
+      <button type="button" role="tab" data-tab="stats" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20.2h16.4"/><path d="M7.4 20.2v-6.4M12 20.2V6.6M16.6 20.2v-9.4"/></svg></span><span class="tx">Record</span></button>
+      <button type="button" role="tab" data-tab="why" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.4 19.6 12 4.8l7.6 14.8z"/><path d="M8.6 15.4h6.8"/></svg></span><span class="tx">Why</span></button>
+    </nav>
+  </div>
 </div>
 
 <div class="scrim" id="scrim" hidden></div>
 
 <div class="sheet" id="tune" hidden role="dialog" aria-modal="true" aria-label="Filters and risk">
   <div class="grab"></div>
-  <div class="sh"><h2>Filters &amp; risk</h2><button class="x" type="button" data-close>✕</button></div>
+  <div class="sh"><h2>Filters &amp; risk</h2><button class="x" type="button" data-close aria-label="Close">✕</button></div>
   <div class="body">
     <div class="grp">
       <p class="lbl">What you want to win</p>
@@ -427,18 +633,24 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
       <div class="ctl">
         <div class="row"><span class="k">Most legs</span><span class="v" id="maxlv"></span></div>
         <input id="maxl" type="range" min="1" max="45" step="1" value="40">
-        <p class="hint">Only a cap. The builder already uses the fewest legs it can — every extra one crosses another spread.</p>
+        <p class="hint">Only a cap. The builder already uses the fewest legs it can — every extra
+          one crosses another spread.</p>
       </div>
     </div>
 
     <div class="grp">
       <p class="lbl">Which legs it may use</p>
       <label class="sw"><input type="checkbox" id="liquid" checked>
-        <span>Tradeable markets only<span class="sub">Spread 3¢ or tighter and actually traded. Price is not the test — a 1¢ book is fine at any price.</span></span></label>
+        <span>Tradeable markets only<span class="sub">Spread 3¢ or tighter and actually traded.
+          Price is not the test — a 1¢ book is fine at any price.</span></span></label>
       <label class="sw"><input type="checkbox" id="trust">
-        <span>Trust cheap legs fully<span class="sub">Off by default: legs under 90¢ are docked by how much that price band has historically underperformed, so a coin flip has to be genuinely cheaper to earn its place.</span></span></label>
+        <span>Trust cheap legs fully<span class="sub">Off by default: legs under 90¢ are docked by
+          how much that price band has historically underperformed, so a coin flip has to be
+          genuinely cheaper to earn its place.</span></span></label>
       <label class="sw"><input type="checkbox" id="noflag" checked>
-        <span>Skip confirmed injury news<span class="sub">Drops a leg only when a headline names your team, not the opponent — a starter ruled out. Everything else is shown on the leg, never filtered.</span></span></label>
+        <span>Skip confirmed injury news<span class="sub">Drops a leg only when a headline names
+          your team, not the opponent — a starter ruled out. Everything else is shown on the leg,
+          never filtered.</span></span></label>
       <label class="sw"><input type="checkbox" id="onegame" checked>
         <span>One leg per game<span class="sub">Both sides of a game can never both win</span></span></label>
     </div>
@@ -455,13 +667,13 @@ input[type=range]{width:100%; accent-color:var(--accent); height:30px}
 
 <div class="sheet" id="legsheet" hidden role="dialog" aria-modal="true" aria-label="Leg detail">
   <div class="grab"></div>
-  <div class="sh"><h2 id="ls-name">Leg</h2><button class="x" type="button" data-close>✕</button></div>
+  <div class="sh"><h2 id="ls-name">Leg</h2><button class="x" type="button" data-close aria-label="Close">✕</button></div>
   <div class="body" id="ls-body"></div>
 </div>
 
 <div class="sheet" id="scopesheet" hidden role="dialog" aria-modal="true" aria-label="Choose sports">
   <div class="grab"></div>
-  <div class="sh"><h2>Which sports</h2><button class="x" type="button" data-close>✕</button></div>
+  <div class="sh"><h2>Which sports</h2><button class="x" type="button" data-close aria-label="Close">✕</button></div>
   <div class="body"><div class="scopelist" id="scopelist"></div></div>
 </div>
 
@@ -508,9 +720,10 @@ var DEMO = {demo:true, generated_utc:"", days:8, calibration_note:DATA.calibrati
     close:"", date:"", flags:[], notes:""};
 })};
 
-var TIERS=[[0.97,"Lock","var(--t-lock)"],[0.92,"Strong","var(--t-strong)"],
-           [0.85,"Solid","var(--t-solid)"],[0.70,"Lean","var(--t-lean)"],
-           [0.00,"Coin flip","var(--t-live)"]];
+/* Confidence is ordinal, so it is drawn as a length - the meter under each name -
+   and the word is the label. The old five-colour traffic light argued the
+   opposite of what this app believes: a 55c leg is cheap, not dangerous. */
+var TIERS=[[0.97,"Lock",5],[0.92,"Strong",4],[0.85,"Solid",3],[0.70,"Lean",2],[0.00,"Coin flip",1]];
 function tierOf(p){ for(var i=0;i<TIERS.length;i++){ if(p>=TIERS[i][0]) return TIERS[i]; } return TIERS[4]; }
 
 /* The page ships with a board baked in so it renders instantly and works with no
@@ -678,6 +891,8 @@ function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
 function oneIn(w){ return w>0?Math.round(1/w).toLocaleString():"—"; }
 var $=function(id){ return document.getElementById(id); };
 var FIX=null;
+var CIRC=245.04;   // 2 pi r, r=39 - the ring in the stub
+function setArc(el,p){ if(el) el.setAttribute("stroke-dashoffset", (CIRC*(1-Math.max(0,Math.min(1,p)))).toFixed(2)); }
 
 /* ---- leg rows: the row opens the detail, the button acts on it ---- */
 function legRow(l,board){
@@ -686,14 +901,14 @@ function legRow(l,board){
   var r=l.research||{}, mark = (l.flags&&l.flags.length)?"⚠"
        : (r.checked ? (r.unattributed&&r.unattributed.length ? "❔" : "📰") : "");
   var sub=(l.flags&&l.flags.length)?'<span class="flagline">⚠ '+esc(l.flags[0])+'</span>'
-        :(l.notes?'<span class="flagline" style="color:var(--muted);font-weight:500">'+esc(l.notes)+'</span>':'');
+        :(l.notes?'<span class="flagline plain">'+esc(l.notes)+'</span>':'');
   return '<div class="legwrap'+(banned?" banned":"")+(pinned?" pinned":"")+'">'+
-    '<button class="leg" type="button" style="--tc:'+t[2]+'" data-open="'+esc(l.ticker)+'">'+
-      '<span class="stripe"></span>'+
+    '<button class="leg" type="button" data-open="'+esc(l.ticker)+'">'+
       '<span class="who"><span class="nm">'+esc(l.pick)+
         (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
-        '<span class="mt">'+(mark?mark+" ":"")+esc(t[1])+' · vs '+esc(l.opp)+
-        (l.home?' (home)':'')+' · '+esc(l.league_label)+'</span></span>'+
+        '<span class="mt"><span class="tierchip t'+t[2]+'">'+esc(t[1])+'</span> '+
+        (mark?mark+" ":"")+'vs '+esc(l.opp)+(l.home?' (home)':'')+' · '+esc(l.league_label)+'</span>'+
+        '<span class="meter"><i style="width:'+(100*l.p).toFixed(0)+'%"></i></span></span>'+
       '<span class="pc"><span class="p">'+cents(l.p)+'</span>'+
         '<span class="a">pay '+cents(l.ask)+(l.spread!=null?' · '+Math.round(100*l.spread)+'¢ sp':'')+'</span></span>'+
       sub+'</button>'+
@@ -739,7 +954,7 @@ function renderControls(){
   $("lgchips").innerHTML=leaguesIn(S.scope).map(function(k){
     return '<button type="button" class="chip" data-lg="'+esc(k)+'" aria-pressed="'+
       (S.leagues.indexOf(k)>=0)+'">'+esc(labelOf[k]||k)+'</button>'; }).join("")
-    || '<span class="hint">no leagues here</span>';
+    || '<span class="ctl hint">no leagues here</span>';
 }
 function renderTicket(r){
   var st=parseFloat($("stake").value)||0;
@@ -747,16 +962,21 @@ function renderTicket(r){
   $("mult").textContent = r.n?r.mult.toFixed(2)+"×":"—";
   $("nlegs").textContent= r.n||"0";
   $("weak").textContent = r.n?cents(r.weak):"—";
-  $("ev").textContent   = r.n?((r.ev>=0?"":"")+pct(r.ev,1)):"—";
-  $("ev").style.color   = r.n?(r.ev<-0.15?"var(--t-live)":"var(--muted)"):"";
-  $("payout").textContent = r.n?money(st*r.mult)+"  ·  1 in "+oneIn(r.win):"—";
+  $("ev").textContent   = r.n?pct(r.ev,1):"—";
+  $("ev").style.color   = r.n&&r.ev<-0.15?"var(--neg-ink)":"";
+  $("payout").textContent = r.n?money(st*r.mult):"—";
+  $("oneline").innerHTML = r.n?("1 in <b>"+oneIn(r.win)+"</b> · "+money(st)+" stake"):"—";
+  setArc($("arc"), r.n?r.win:0);
   $("s-win").textContent=r.n?pct(r.win):"—"; $("s-ret").textContent=r.n?money(st*r.mult):"—";
   $("s-legs").textContent=r.n||"0"; $("s-stake").textContent=money(st);
   $("s-one").textContent=r.n?oneIn(r.win):"—";
+  $("s-oneline").innerHTML = r.n?("<b>"+r.mult.toFixed(2)+"×</b> on "+r.n+
+    (r.n===1?" leg":" legs")):"—";
+  setArc($("s-arc"), r.n?r.win:0);
 
   var w=$("whatif");
   if(!r.n || !r.reached){ var d=diagnose(r); FIX=d.go||null;
-    w.innerHTML=esc(d.msg)+(d.fix?' <button class="chip" type="button" id="fixit" style="margin-top:9px">'+
+    w.innerHTML=esc(d.msg)+(d.fix?'<br><button class="chip" type="button" id="fixit">'+
       esc(d.fix)+'</button>':''); return; }
   var drop=r.legs.slice().sort(function(a,b){ return a.p-b.p; })[0];
   if(r.n===1){ w.innerHTML="One leg: <b>"+esc(drop.pick)+"</b> at "+cents(drop.ask)+
@@ -780,7 +1000,7 @@ function renderLegs(r){
     list.innerHTML=sorted.map(function(l,i){
       return '<div class="slipline"><span class="n">'+(i+1)+'</span>'+
         '<span class="b"><span class="nm2"><b>'+esc(l.pick)+'</b> '+
-          '<span style="color:var(--muted)">vs '+esc(l.opp)+'</span>'+
+          '<span class="vs">vs '+esc(l.opp)+'</span>'+
           (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
         '<span class="t">'+esc(l.ticker)+'</span></span>'+
         '<span class="pr">'+cents(l.ask)+'</span></div>';
@@ -821,17 +1041,16 @@ function openLeg(tk){
     ["Traded",Math.round(l.vol||0).toLocaleString()+" contracts"],
     ["Tradeable",isLiquid(l)?"yes":"no — wide or thin"],
     ["Kick-off",l.date||"—"]];
-  var html='<p class="prose" style="margin-bottom:4px"><b style="color:'+t[2]+'">'+esc(t[1])+
-    '</b> · vs '+esc(l.opp)+(l.home?" (home)":"")+' · '+esc(l.league_label)+
+  var html='<p class="prose"><span class="tierchip t'+t[2]+'">'+esc(t[1])+'</span> '+
+    'vs '+esc(l.opp)+(l.home?" (home)":"")+' · '+esc(l.league_label)+
     (l.draw?' · <span class="draw">DRAW LOSES</span>':'')+'</p>'+
-    '<div class="card"><table style="width:100%;border-collapse:collapse">'+
-    rows.map(function(kv){ return '<tr><td style="padding:8px 12px;font-size:.8rem;color:var(--muted)">'+
-      esc(kv[0])+'</td><td class="mono" style="padding:8px 12px;text-align:right;font-weight:600">'+
+    '<div class="card"><table class="kv">'+
+    rows.map(function(kv){ return '<tr><td>'+esc(kv[0])+'</td><td class="n">'+
       esc(kv[1])+'</td></tr>'; }).join("")+'</table></div>';
 
   if(l.flags&&l.flags.length){
     html+='<div class="banner">⚠ '+l.flags.map(esc).join("<br>")+
-      '<br><span style="font-weight:400">Confirmed against this team, so it is excluded unless you turn that filter off.</span></div>';
+      '<br><span>Confirmed against this team, so it is excluded unless you turn that filter off.</span></div>';
   }
   if(r.checked){
     html+='<div class="grp"><p class="lbl">What the news says</p>';
@@ -842,7 +1061,7 @@ function openLeg(tk){
     if((r.headlines||[]).length){
       html+='<div class="card">'+r.headlines.map(function(h){
         return '<div class="slipline"><span class="n">'+(h.watch?"⚠":"·")+'</span>'+
-          '<span class="b"><span class="nm2" style="font-size:.85rem">'+esc(h.title)+'</span>'+
+          '<span class="b"><span class="nm2" style="font-size:.84rem">'+esc(h.title)+'</span>'+
           '<span class="t">'+esc([h.side,h.source,h.date].filter(Boolean).join(" · "))+'</span></span></div>';
       }).join("")+'</div>';
     }
@@ -876,11 +1095,13 @@ function render(){
 }
 
 /* ---- tabs & sheets ---- */
+var TABS=["build","board","slip","stats","why"];
 function showTab(k){
   S.tab=k;
-  ["build","board","slip","stats","why"].forEach(function(t){ $("tab-"+t).hidden=(t!==k); });
-  Array.prototype.forEach.call($("tabs").children,function(b){
+  TABS.forEach(function(t){ $("tab-"+t).hidden=(t!==k); });
+  Array.prototype.forEach.call($("tabs").querySelectorAll("button[data-tab]"),function(b){
     b.setAttribute("aria-selected", String(b.dataset.tab===k)); });
+  $("glide").style.transform="translateX("+(TABS.indexOf(k)*100)+"%)";
   window.scrollTo(0,0);
 }
 function openSheet(id){ $("scrim").hidden=false; $(id).hidden=false; }
@@ -888,8 +1109,39 @@ function closeSheets(){ $("scrim").hidden=true;
   ["tune","scopesheet","legsheet"].forEach(function(i){ $(i).hidden=true; }); }
 function toast(msg){
   var t=document.createElement("div"); t.className="toast"; t.textContent=msg;
-  document.body.appendChild(t); setTimeout(function(){ t.remove(); },1600);
+  document.body.appendChild(t); setTimeout(function(){ t.remove(); },1700);
 }
+/* The APK wires the hardware back button here: a sheet closes, then a tab returns
+   to Build, and only then does the activity finish. Returning false means "I did
+   nothing with it, go ahead and leave". */
+window.__gtBack=function(){
+  if(!$("scrim").hidden){ closeSheets(); return true; }
+  if(S.tab!=="build"){ showTab("build"); return true; }
+  return false;
+};
+
+/* ---- theme: system, or whichever the eye wants at kickoff ---- */
+var THEMES=["auto","dark","light"], THEME_ICON={auto:"◐",dark:"☾",light:"☀"};
+var theme="auto";
+try{ theme=localStorage.getItem("gt.theme")||"auto"; }catch(e){}
+function applyTheme(){
+  if(theme==="auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme",theme);
+  $("theme").textContent=THEME_ICON[theme];
+  $("theme").setAttribute("aria-label","Appearance: "+theme+". Tap to change.");
+  var bg=getComputedStyle(document.body).backgroundColor;
+  var m=document.querySelector('meta[name="theme-color"]');
+  if(m) m.setAttribute("content", bg);
+  // in the APK this keeps the status and navigation bars the same colour as the
+  // page; in a browser there is no GTHost and nothing happens
+  try{ if(window.GTHost && GTHost.themeColor) GTHost.themeColor(bg); }catch(e){}
+}
+applyTheme();
+$("theme").addEventListener("click",function(){
+  theme=THEMES[(THEMES.indexOf(theme)+1)%THEMES.length];
+  try{ localStorage.setItem("gt.theme",theme); }catch(e){}
+  applyTheme(); toast(theme==="auto"?"Following the system":theme==="dark"?"Dark":"Light");
+});
 
 $("tabs").addEventListener("click",function(e){
   var b=e.target.closest("button[data-tab]"); if(b) showTab(b.dataset.tab); });
@@ -976,10 +1228,10 @@ function sgn(x,d){ return (x>=0?"+":"")+x.toFixed(d==null?1:d); }
 function barRow(label, value, max, text, best){
   var w = max>0 ? Math.max(2, Math.round(100*value/max)) : 0;
   return '<div class="bar'+(best?" best":"")+'"><span class="k">'+esc(label)+'</span>'+
-    '<span class="track"><span class="fill" style="width:'+w+'%"></span></span>'+
+    '<span class="track"><i class="fill" style="width:'+w+'%"></i></span>'+
     '<span class="v">'+esc(text)+'</span></div>';
 }
-function divRow(label, delta, max, text){
+function divRow(label, delta, max, text, sub){
   var up = delta >= 0;
   var w = max>0 ? Math.max(1, Math.round(100*Math.abs(delta)/max)) : 0;
   return '<div class="dv"><span class="k">'+esc(label)+'</span>'+
@@ -987,12 +1239,12 @@ function divRow(label, delta, max, text){
       '<span class="half l">'+(up?"":'<span class="seg down" style="width:'+w+'%"></span>')+'</span>'+
       '<span class="half r">'+(up?'<span class="seg up" style="width:'+w+'%"></span>':"")+'</span>'+
     '</span>'+
-    '<span class="v '+(up?"up":"down")+'">'+(up?"▲":"▼")+' '+esc(text)+'</span></div>';
+    '<span class="v '+(up?"up":"down")+'">'+(up?"▲":"▼")+' '+esc(text)+
+      '<small>'+esc(sub)+'</small></span></div>';
 }
 function card(title, note, body){
-  return '<div class="card" style="overflow:hidden">'+
-    '<div class="pad" style="padding-bottom:6px"><p class="lbl">'+esc(title)+'</p>'+
-    (note?'<p class="prose" style="margin-top:5px">'+note+'</p>':'')+'</div>'+
+  return '<div class="card"><div class="cardhead"><p class="lbl">'+esc(title)+'</p>'+
+    (note?'<p class="sub">'+note+'</p>':'')+'</div>'+
     '<div class="pad" style="padding-top:4px">'+body+'</div></div>';
 }
 
@@ -1008,6 +1260,7 @@ function renderStats(){
   var o=main?st.overall[main]:null;
   if(o){
     var beat=o.brier_raw < o.brier_market;
+    $("verdict").className="card pad prose verdict"+(beat?" good":"");
     $("verdict").innerHTML="<b>Does the model beat the price?</b> "+
       (beat ? "On "+o.n+" graded "+esc(main)+" picks it does — its own number scores "+
               o.brier_raw.toFixed(4)+" against the market's "+o.brier_market.toFixed(4)+
@@ -1025,7 +1278,7 @@ function renderStats(){
     var vals=[["Model",x.brier_raw],["Blended",x.brier_model],["Market",x.brier_market]];
     var mx=Math.max.apply(null,vals.map(function(v){return v[1];}));
     var best=Math.min.apply(null,vals.map(function(v){return v[1];}));
-    bh+='<p class="lbl" style="margin:10px 0 2px">'+esc(t)+' · '+x.n+' graded</p>'+
+    bh+='<p class="lbl" style="margin:11px 0 3px">'+esc(t)+' · '+x.n+' graded</p>'+
       vals.map(function(v){
         return barRow(v[0], v[1], mx, v[1].toFixed(4), v[1]===best);
       }).join("");
@@ -1040,8 +1293,10 @@ function renderStats(){
   var mx=Math.max.apply(null, deltas.map(Math.abs).concat([1]));
   var dh=keys.map(function(k,i){
     var b=mv[k];
-    return divRow(k.replace(/\s*\(.*\)/,""), deltas[i], mx,
-                  sgn(deltas[i])+"  "+b.w+"-"+b.l);
+    // the keys are snake_case identifiers from the grader; they are labels here
+    var nm=k.replace(/\s*\(.*\)/,"").replace(/_/g," ");
+    return divRow(nm.charAt(0).toUpperCase()+nm.slice(1), deltas[i], mx,
+                  sgn(deltas[i]), b.w+"-"+b.l);
   }).join("");
   $("vsmarket").innerHTML=card("Wins above or below what the price implied",
     "Each bucket is how far the model's number sat from the market's. Right of the "+
@@ -1064,7 +1319,7 @@ function renderStats(){
   var gr=Object.keys(g).sort(function(a,b){ return g[b].n-g[a].n; }).map(function(k){
     var x=g[k], d=(x.w||0)-(x.expected_w||0);
     return '<tr><td>'+esc(k)+'</td><td class="n">'+x.n+'</td><td class="n">'+x.w+"-"+x.l+
-      '</td><td class="n" style="color:'+(d>=0?"var(--good)":"var(--t-live)")+'">'+sgn(d)+'</td></tr>';
+      '</td><td class="n '+(d>=0?"up":"down")+'">'+(d>=0?"▲":"▼")+" "+sgn(d)+'</td></tr>';
   }).join("");
   $("gatewrap").innerHTML=card("Why picks were held back",
     "<b>vs price</b> is wins above what the market implied for those same picks.",
@@ -1088,8 +1343,8 @@ function renderStats(){
     .map(function(k){
       var x=totals[k], d=x.w-x.exp;
       return '<tr><td>'+esc(k)+'</td><td class="n">'+x.n+'</td><td class="n">'+x.w+"-"+x.l+
-        '</td><td class="n" style="color:'+(d>=0?"var(--good)":"var(--t-live)")+'">'+sgn(d)+'</td></tr>';
-    }).join("") || '<tr><td colspan="4" style="color:var(--muted)">Nothing graded yet.</td></tr>';
+        '</td><td class="n '+(d>=0?"up":"down")+'">'+(d>=0?"▲":"▼")+" "+sgn(d)+'</td></tr>';
+    }).join("") || '<tr><td colspan="4">Nothing graded yet.</td></tr>';
   $("leaguewrap").innerHTML=card("By league", "Leagues with at least five graded picks.",
     '<div class="scroll"><table class="rows"><thead><tr><th>League</th><th class="n">n</th>'+
     '<th class="n">W-L</th><th class="n">vs price</th></tr></thead><tbody>'+lr+
@@ -1103,13 +1358,13 @@ function renderStats(){
   var rr=have.slice(0,4).map(function(k){
     var list=tr[k].slice(0,5);
     var spread=list.length>1 ? list[0].elo-list[list.length-1].elo : 0;
-    return '<p class="lbl" style="margin:10px 0 3px">'+esc(k)+
-      (spread>60?'':' · <span style="color:var(--warn);text-transform:none;letter-spacing:0">'+
+    return '<p class="lbl" style="margin:11px 0 3px">'+esc(k)+
+      (spread>60?'':' · <span style="color:var(--warn-ink);text-transform:none;letter-spacing:0">'+
         'barely separated — needs an ESPN backfill</span>')+'</p>'+
       list.map(function(r){
-        return '<div class="bar"><span class="k" style="flex:0 0 120px;color:var(--ink)">'+
-          esc(r.name)+'</span><span class="track"><span class="fill" style="width:'+
-          Math.max(2,Math.round(100*(r.elo-1300)/900))+'%"></span></span>'+
+        return '<div class="bar elo"><span class="k">'+esc(r.name)+'</span>'+
+          '<span class="track"><i class="fill" style="width:'+
+          Math.max(2,Math.round(100*(r.elo-1300)/900))+'%"></i></span>'+
           '<span class="v">'+n0(r.elo)+'</span></div>';
       }).join("");
   }).join("");
@@ -1119,9 +1374,9 @@ function renderStats(){
 }
 
 /* ---- staying current ----
-   Tries the repo's latest board. Failure is normal and silent: the Artifact
-   sandbox blocks the request, and a phone on no signal has nothing to ask. The
-   baked-in board keeps working either way, so this can only ever improve things. */
+   Tries the repo's latest board. Failure is normal and silent: a phone on no
+   signal has nothing to ask. The baked-in board keeps working either way, so
+   this can only ever improve things. */
 function ageOf(stamp){
   if(!stamp) return "";
   var t=Date.parse(stamp.replace("Z",":00Z"));
@@ -1137,7 +1392,7 @@ function refresh(manual){
   btn.dataset.busy="1";
   var done=function(msg, fresh){
     delete btn.dataset.busy;
-    if(fresh) btn.dataset.fresh="1"; else delete btn.dataset.fresh;
+    $("pulse").className="pulse"+(fresh?" live":"");
     if(manual && msg) toast(msg);
   };
   if(!window.fetch){ done("This browser cannot refresh", false); return; }
@@ -1153,6 +1408,7 @@ function refresh(manual){
     if(!scopeInfo(S.scope)) S.scope=(SCOPES[0]||{key:"all"}).key;
     S.leagues=leaguesIn(S.scope);
     S.pins={}; S.bans={};            // a pin on a game that is no longer listed is not a pin
+    $("demo").hidden=!isDemo;
     renderDial(); render();
     done("Updated — " + (scopeInfo(S.scope)||{games:0}).games + " games", true);
   }).catch(function(){
@@ -1175,3 +1431,5 @@ renderDial(); render(); renderStats(); showTab("build");
 refresh(false);        // the page is already usable; this only ever upgrades it
 })();
 </script>
+</body>
+</html>
