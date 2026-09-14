@@ -7159,5 +7159,823 @@
    }
   ],
   "_ts": "2026-09-14T04:29Z"
+ },
+ "College Football|Illinois St. vs Eastern Illinois|Illinois St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Illinois St.",
+    "title": "Illinois State vs. Northern Illinois (Sep 12, 2026) Live Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Illinois St.",
+    "title": "Chicago State vs. Illinois State (Nov 2, 2026) Live Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Illinois St.",
+    "title": "Southern Illinois Salukis at Illinois Fighting Illini Matchup Overview | Week 3",
+    "source": "BettingPros",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Eastern Illinois",
+    "title": "Eastern Illinois Panthers vs Indiana State Sycamores Box Score - September 12, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Eastern Illinois",
+    "title": "Sycamores hold off Eastern Illinois to win 42-35",
+    "source": "Terre Haute Tribune-Star",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Eastern Illinois",
+    "title": "Roy throws late TD pass, lifts FCS-member Illinois State past Northern Illinois 28-24",
+    "source": "FOX Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|North Dakota vs Nebraska|Nebraska": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Nebraska commit suspended for remainder of senior season",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Nebraska commit suspended for remainder of senior season"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nebraska",
+    "title": "Nebraska commit suspended for remainder of senior season",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "North Dakota",
+    "title": "North Dakota St. beats Air Force 38-32, win first Mountain West Conference game",
+    "source": "The Washington Post",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Dakota",
+    "title": "North Dakota State beats Air Force in Mountain West debut",
+    "source": "247Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Nebraska",
+    "title": "Five burning questions heading into Nebraska-North Dakota week",
+    "source": "on3.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Nebraska",
+    "title": "Nebraska Rolls Past Bowling Green 56-7 | Photo Gallery",
+    "source": "Hurrdat Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "North Dakota",
+    "title": "Five burning questions heading into Nebraska-North Dakota week",
+    "source": "on3.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|North Carolina vs Clemson|Clemson": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Clemson Quarterback Christopher Vizzina Injured Before UNC Game; Clemson HC Dabo Swinney remains on alert after Christopher Vizzina\u2019s injury",
+  "opp_health": "North Carolina high school football player dies after injury during game; North Carolina high school football player dies after injury during game, family says",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Clemson",
+    "title": "Clemson Quarterback Christopher Vizzina Injured Before UNC Game",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Clemson",
+    "title": "Clemson HC Dabo Swinney remains on alert after Christopher Vizzina\u2019s injury",
+    "source": "bolavip.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Clemson",
+    "title": "\u2018Fire Dabo Swinney First Thing Monday Morning,\u2019 \u2018Hang It Up And Retire\u2019 \u2014 CFB Fans Demand Changes After Clemson Barely Escapes Georgia Southern",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "North Carolina",
+    "title": "North Carolina high school football player dies after injury during game, family says",
+    "source": "WLTX",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "North Carolina",
+    "title": "North Carolina high school football player dies after injury during game",
+    "source": "wusa9.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "North Carolina",
+    "title": "North Carolina College Football This Week: Full List of Games, Times & TV Info for Week 3 (Sept. 18-19)",
+    "source": "NC Football News",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Louisiana-Monroe vs Southeastern Louisiana|Louisiana-Monroe": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Louisiana-Monroe",
+    "title": "Missouri 52-10 Louisiana (Sep 13, 2025) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Louisiana-Monroe",
+    "title": "4 takeaways from UAB\u2019s victory over Louisiana-Monroe",
+    "source": "AL.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Louisiana-Monroe",
+    "title": "Louisiana-Monroe Warhawks 20 - UAB Blazers 26: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southeastern Louisiana",
+    "title": "UNA football stumbles on the road, falls 30-25 to Southeastern Louisiana",
+    "source": "WAFF",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southeastern Louisiana",
+    "title": "COLLEGE FOOTBALL | Southeastern rallies past North Alabama for first win of season",
+    "source": "Livingston Parish News",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southeastern Louisiana",
+    "title": "McNeese Cowgirls @ Southeastern Louisiana Lady Lions: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Florida vs Auburn|Auburn": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+  "opp_health": "Florida Gets Caught And Called Out For Pumping In Crowd Noise Against Campbell At The Swamp; Is Eric Singleton Jr. out? Florida football injury report vs Campbell",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Auburn",
+    "title": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida",
+    "title": "Florida Gets Caught And Called Out For Pumping In Crowd Noise Against Campbell At The Swamp",
+    "source": "BroBible",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida",
+    "title": "Is Eric Singleton Jr. out? Florida football injury report vs Campbell",
+    "source": "Gainesville Sun",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida",
+    "title": "Injury report: Pair of starters expected to miss Florida's contest vs. Campbell",
+    "source": "247Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Auburn football snap counts, advanced stats from Southern Miss game",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Auburn",
+    "title": "Where Auburn ranks in the ESPN FPI after Week 2 win over Southern Miss",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Charlotte vs Appalachian St.|Appalachian St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Appalachian St.",
+    "title": "Carolina Bruins @ Appalachian State Mountaineers: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "How far Ole Miss climbed in college football polls after beating Charlotte",
+    "source": "Hattiesburg American",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "No. 9 Ole Miss cruises past Charlotte",
+    "source": "National Football Post",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "Trinidad Chambliss leads No. 9 Ole Miss past Charlotte 41-9",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Western Carolina vs Presbyterian|Presbyterian": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Presbyterian",
+    "title": "Presbyterian Splits Friday Doubleheader in Charlotte",
+    "source": "Presbyterian College - Official Athletics Website",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Presbyterian",
+    "title": "Volleyball Bounces Back From Morning Defeat With Win Against Presbyterian",
+    "source": "University of Tennessee at Chattanooga Athletics",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Presbyterian",
+    "title": "Western Carolina Catamounts - Presbyterian \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Cincinnati vs. Western Carolina Winners And Losers",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "5 Cincinnati Bearcats football takeaways from win vs. Western Carolina",
+    "source": "Cincinnati Enquirer",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Cincinnati rushes for 418 yards in 62-10 rout of Western Carolina",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Texas Tech vs Houston|Texas Tech": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas Tech vs Houston | News, injuries, predictions and key matchups; Texas Tech football TE Terrance Carter Jr. out for Oregon State game",
+  "opp_health": "No. 22 Houston vs Southern: How to Watch, Odds, Injuries and More",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas Tech",
+    "title": "Big 12 withdraws lawsuit against Texas Tech filed during Brendan Sorsby saga - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Texas Tech",
+    "title": "Texas Tech football TE Terrance Carter Jr. out for Oregon State game",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "No. 22 Houston vs Southern: How to Watch, Odds, Injuries and More",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Texas Tech",
+    "title": "Texas Tech vs Houston | News, injuries, predictions and key matchups",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "!!![Free] *Buffalo Bills vs Houston Texans NFL Live \ud835\udc12\ud835\udc2d\ud835\udc2b\ud835\udc1e\ud835\udc1a\ud835\udc26\ud835\udc2c ON College Football Week-1",
+    "source": "BKReader",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "[Free] *Buffalo Bills vs Houston Texans NFL Live \ud835\udc12\ud835\udc2d\ud835\udc2b\ud835\udc1e\ud835\udc1a\ud835\udc26\ud835\udc2c ON College Football Week-1",
+    "source": "Sudbury News",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|UC Davis vs Stetson|UC Davis": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "SMU's Ahmaad Moses Expected to Be Out for Week 2 vs. UC Davis - College Football News | Fantasy CFB",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "SMU's Ahmaad Moses Expected to Be Out for Week 2 vs. UC Davis - College Football News | Fantasy CFB"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UC Davis",
+    "title": "SMU's Ahmaad Moses Expected to Be Out for Week 2 vs. UC Davis - College Football News | Fantasy CFB",
+    "source": "rotoballer.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "UC Davis",
+    "title": "The Dean's List: SMU dominates UC Davis 56-10",
+    "source": "on3.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UC Davis",
+    "title": "Recruits react to SMU's dominant win over UC-Davis",
+    "source": "on3.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stetson",
+    "title": "UGA legend Stetson Bennett makes NFL debut taking over for Matthew Stafford in Australia game",
+    "source": "11Alive.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stetson",
+    "title": "Stetson Hatters at UC Davis Aggies Matchup Overview | Week 3",
+    "source": "BettingPros",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stetson",
+    "title": "Can Stetson Bennett Beat Alabama? Georgia VS Alabama National Championship Rays Vs Red Sox (2IH6HEX7Dm)",
+    "source": "Unisba.ac.id",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "Serie A|Udinese vs Inter|Inter": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Inter Milan vs Udinese Predictions, Lineups, Odds & Tips: Visitors to put up a fight; Serie A Preview: Inter vs Udinese \u2013 Team News, Lineups & Prediction",
+  "opp_health": "Inter Milan vs Udinese Predictions, Lineups, Odds & Tips: Visitors to put up a fight; Serie A Preview: Inter vs Udinese \u2013 Team News, Lineups & Prediction",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Inter",
+    "title": "Inter Milan vs Udinese Predictions, Lineups, Odds & Tips: Visitors to put up a fight",
+    "source": "Goal.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Inter",
+    "title": "Serie A Preview: Inter vs Udinese \u2013 Team News, Lineups & Prediction",
+    "source": "LiveScore",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Inter",
+    "title": "Inter Milan vs Udinese Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "Inter Milan vs Udinese Predictions, Lineups, Odds & Tips: Visitors to put up a fight",
+    "source": "Goal.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "Serie A Preview: Inter vs Udinese \u2013 Team News, Lineups & Prediction",
+    "source": "LiveScore",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "Internazionale vs Udinese \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 14-09",
+    "source": "Odds Scanner",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "Ligue 1|Stade Rennais vs Lyon|Lyon": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Paris FC vs Lyon match lineup | Ligue 1 \u00b7 12 Sep 2026; Paris FC vs Lyon Confirmed Lineups",
+  "opp_health": "Stade Rennais vs Olympique Marseille Lineups - Ligue 1 2026/27",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Stade Rennais",
+    "title": "Stade Rennais vs Olympique Marseille Lineups - Ligue 1 2026/27",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "Paris FC vs Lyon match lineup | Ligue 1 \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "Paris FC vs Lyon Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "(VIDEO) Paris FC and Olympique Lyon Draw, Missing Chance to Challenge for Top Spot in Ligue 1",
+    "source": "beIN SPORTS",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Stade Rennais",
+    "title": "Stade Rennais - AJ Auxerre Related Matches: Live Football Updates",
+    "source": "TNT Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stade Rennais",
+    "title": "Stade Rennais - AJ Auxerre Stats: Football Scores & Results",
+    "source": "TNT Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "ATP Challenger|Elias Ymer vs Semen Pankin|Semen Pankin": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Semen Pankin",
+    "title": "Semen Pankin vs Alexis Galarneau \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Elias Ymer vs Pavel Kotov \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Semen Pankin",
+    "title": "Ho / Stalder vs Pankin / Ymer \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Ho / Stalder vs Pankin / Ymer \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "ATP Challenger|Inaki Montes-de la Torre vs Murphy Cassone|Inaki Montes-de la Torre": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Inaki Montes-de la Torre",
+    "title": "Murphy Cassone v Inaki Montes-De La Torre (14/09/2026)",
+    "source": "Flashscore.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Murphy Cassone",
+    "title": "Murphy Cassone v Inaki Montes-De La Torre (14/09/2026)",
+    "source": "Flashscore.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "WTA Tennis|Hayu Kinoshita vs Leylah Fernandez|Leylah Fernandez": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Leylah Fernandez",
+    "title": "WTA S\u00e3o Paulo: Fernandez and Badosa Headline Draw",
+    "source": "TennisTemple",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Kinoshita vs. Rodriguez | Qualifying SP Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Leylah Fernandez",
+    "title": "Sawangkaew vs. Fernandez | Round of 64 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Leylah Fernandez",
+    "title": "Leylah Fernandez vs Hayu Kinoshita - Match WTA - SP Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Leylah Fernandez vs Hayu Kinoshita - Match WTA - SP Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Hayu Kinoshita vs Cadence Brace \u00b7 Qualifying Round 2 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
+ },
+ "MLB|San Diego vs Colorado|San Diego": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Colorado",
+    "title": "Rockies GM Byrnes talks ups and downs of Colorado's season",
+    "source": "mlb.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Good Morning San Diego: Padres piece together back end of bullpen, complete sweep of Giants",
+    "source": "gaslampball.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "San Diego Padres at Colorado Rockies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Watch MLB Mini: San Diego Padres vs San Francisco Giants | Disney+ Australia",
+    "source": "disneyplus.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "San Diego Padres at Colorado Rockies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado Rockies After Dark: Who are you rooting for in the MLB postseason?",
+    "source": "purplerow.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T14:06Z"
  }
 }
