@@ -12440,6 +12440,543 @@
   ],
   "_ts": "2026-09-14T19:43Z"
  },
+ "ATP Challenger|Ryan Seggerman vs Alex Rybakov|Ryan Seggerman": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ryan Seggerman",
+    "title": "Andrew Fenty vs Ryan Seggerman \u00b7 Qualifying Round 1 \u00b7 ATP Challenger Tiburon, USA",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "ATP Challenger|Inaki Montes-de la Torre vs Murphy Cassone|Murphy Cassone": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Murphy Cassone",
+    "title": "Murphy Cassone v Inaki Montes-De La Torre (14/09/2026)",
+    "source": "Flashscore.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Inaki Montes-de la Torre",
+    "title": "Murphy Cassone v Inaki Montes-De La Torre (14/09/2026)",
+    "source": "Flashscore.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "WTA Tennis|Chloe Paquet vs Jazmin Ortenzi|Jazmin Ortenzi": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jazmin Ortenzi",
+    "title": "Jazmin Ortenzi vs Mary Stoiana \u00b7 Round 1 \u00b7 WTA 125K Barranquilla, Colombia",
+    "source": "Tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Chloe Paquet",
+    "title": "Mikulskyte vs. Paquet | Qualifying SP Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Chloe Paquet",
+    "title": "Paquet vs. Capurro Taborda | Qualifying SP Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Jazmin Ortenzi",
+    "title": "Jazmin Ortenzi vs Chlo\u00e9 Paquet \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "MLB|Kansas City vs Houston|Kansas City": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update; Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
+  "opp_health": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9; Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Astros' Yordan Alvarez out of lineup for second straight game with sore ankle",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Royals news: Carter Jensen is having a record Royals rookie year",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "MLB|Chicago WS vs Cleveland|Chicago WS": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151; White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Cardinals Lineup: Major Changes in Order? Opener for Castillo, More",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151",
+    "source": "Cleveland.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "September 16 Chicago WS vs Cleveland",
+    "source": "Robinhood",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "NFL Player Denzel Ward Becomes Minority Owner Of MLB Team Cleveland Guardians",
+    "source": "AfroTech",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Guardians, White Sox meet with AL Central lead on the line \u2013 Cleveland Baseball Talk Podcast",
+    "source": "Cleveland.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "MLB|Chicago C vs Atlanta|Atlanta": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Braves News: Lane Thomas to injured list, Atlanta avoids sweep, and more",
+  "opp_health": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -; Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Braves News: Lane Thomas to injured list, Atlanta avoids sweep, and more",
+    "source": "Battery Power",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Cubs Move Key Starter to Relief Role Amid Bullpen Struggles",
+    "source": "heavy.com",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
+    "source": "Bleed Cubbie Blue",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -",
+    "source": "Cubs Insider",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves Add 22-Year-Old Pitcher Before Cubs Series",
+    "source": "heavy.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "The Week Ahead for Atlanta: The battle-testing continues for the Braves",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "Caribbean Premier League|Jamaica Kingsmen vs Barbados Royals|Barbados Royals": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "Tridents secure playoff spot with last gasp win over Kingsmen",
+    "source": "Trinidad Guardian",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "CPL 2026: Barbados Tridents beat Guyana Amazon Warriors by 6 wickets in last Group match",
+    "source": "cricketworld.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "The Jamaica Kingsmen secures playoff spot in Caribbean Premier League",
+    "source": "IRIE FM",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "Powell laments fielding lapses as Kingsmen fall to Tridents",
+    "source": "Jamaica Observer",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "Caribbean Premier League|Jamaica Kingsmen vs Barbados Royals|Jamaica Kingsmen": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "Tridents secure playoff spot with last gasp win over Kingsmen",
+    "source": "Trinidad Guardian",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "The Jamaica Kingsmen secures playoff spot in Caribbean Premier League",
+    "source": "IRIE FM",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Jamaica Kingsmen",
+    "title": "Powell laments fielding lapses as Kingsmen fall to Tridents",
+    "source": "Jamaica Observer",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Barbados Royals",
+    "title": "CPL 2026: Barbados Tridents beat Guyana Amazon Warriors by 6 wickets in last Group match",
+    "source": "cricketworld.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "ATP Challenger|Ryuki Matsuda vs Moise Kouame|Moise Kouame": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ryuki Matsuda",
+    "title": "Taiyo Yamanaka 0 - 2 Ryuki Matsuda (09/14) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "College Football|Towson vs Morgan St.|Towson": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Morgan St.",
+    "title": "Morgan St Football",
+    "source": "The Herald Journal",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Towson",
+    "title": "Vicari Swain returns 2 punts for TDs as South Carolina routs Towson",
+    "source": "National Football Post",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Towson",
+    "title": "South Carolina-Towson in lightning delay in second half",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Towson",
+    "title": "Vicari Swain sets return record as South Carolina tops Towson",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "ATP Challenger|Fajing Sun vs Alexis Galarneau|Alexis Galarneau": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexis Galarneau",
+    "title": "Linang Xiao vs Alexis Galarneau \u00b7 Round 2 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Alexis Galarneau",
+    "title": "P.Kotov beats A.Galarneau - Shanghai Challenger 2026 - score",
+    "source": "Tennis Tonic",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Alexis Galarneau",
+    "title": "Pavel Kotov vs Alexis Galarneau \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:32Z"
+ },
+ "ATP Challenger|Hikaru Shiraishi vs Jake Delaney|Jake Delaney": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jake Delaney",
+    "title": "Delaney / Delaney vs Bayldon / Charlton \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Jake Delaney",
+    "title": "Delaney / Delaney vs Nam / Park \u00b7 Semifinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:33Z"
+ },
+ "ATP Challenger|Omar Jasika vs Luca Castelnuovo|Omar Jasika": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Luca Castelnuovo",
+    "title": "Luca Castelnuovo vs Chun Hsin Tseng \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Omar Jasika",
+    "title": "Jasika / Tomic vs Noguchi / Wang \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Luca Castelnuovo",
+    "title": "Tung-Lin Wu vs Luca Castelnuovo \u00b7 Round 2 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Luca Castelnuovo",
+    "title": "Ji Sung Nam vs Luca Castelnuovo \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T20:33Z"
+ },
  "NFL|Carolina vs Atlanta|Carolina": {
   "mode": "headlines",
   "summary": "3 injury/lineup headline(s) in last 7d",
@@ -12556,29 +13093,6 @@
   ],
   "_ts": "2026-09-14T20:21Z"
  },
- "ATP Challenger|Ryan Seggerman vs Alex Rybakov|Ryan Seggerman": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Ryan Seggerman",
-    "title": "Andrew Fenty vs Ryan Seggerman \u00b7 Qualifying Round 1 \u00b7 ATP Challenger Tiburon, USA",
-    "source": "Tennis.com",
-    "date": "Sep 13",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
  "WTA Tennis|Eva Lys vs Gabriela CE|Gabriela CE": {
   "mode": "headlines",
   "summary": "0 injury/lineup headline(s) in last 7d",
@@ -12617,64 +13131,6 @@
     "side": "Eva Lys",
     "title": "Eva Lys vs Gabriela Ce - Match WTA - SP Open 1970 - Third round",
     "source": "tennismajors.com",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "MLB|Kansas City vs Houston|Kansas City": {
-  "mode": "headlines",
-  "summary": "5 injury/lineup headline(s) in last 7d",
-  "pick_health": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update; Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
-  "opp_health": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9; Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Kansas City",
-    "title": "Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
-    "source": "Yahoo Sports",
-    "date": "Sep 08",
-    "watch": true
-   },
-   {
-    "side": "Kansas City",
-    "title": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update",
-    "source": "Yahoo Sports",
-    "date": "Sep 10",
-    "watch": true
-   },
-   {
-    "side": "Houston",
-    "title": "Houston Astros' Yordan Alvarez out of lineup for second straight game with sore ankle",
-    "source": "Yahoo Sports",
-    "date": "Sep 12",
-    "watch": true
-   },
-   {
-    "side": "Houston",
-    "title": "Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
-    "source": "Yahoo Sports",
-    "date": "Sep 13",
-    "watch": true
-   },
-   {
-    "side": "Houston",
-    "title": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9",
-    "source": "Yahoo Sports",
-    "date": "Sep 14",
-    "watch": true
-   },
-   {
-    "side": "Kansas City",
-    "title": "Kansas City Royals news: Carter Jensen is having a record Royals rookie year",
-    "source": "Yahoo Sports",
     "date": "Sep 14",
     "watch": false
    }
@@ -12738,387 +13194,5 @@
    }
   ],
   "_ts": "2026-09-14T20:21Z"
- },
- "MLB|Chicago WS vs Cleveland|Chicago WS": {
-  "mode": "headlines",
-  "summary": "3 injury/lineup headline(s) in last 7d",
-  "pick_health": "Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151; White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Chicago WS",
-    "title": "White Sox vs. Cardinals Lineup: Major Changes in Order? Opener for Castillo, More",
-    "source": "Yahoo Sports",
-    "date": "Sep 12",
-    "watch": true
-   },
-   {
-    "side": "Chicago WS",
-    "title": "White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More",
-    "source": "Sports Illustrated",
-    "date": "Sep 13",
-    "watch": true
-   },
-   {
-    "side": "Chicago WS",
-    "title": "Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151",
-    "source": "Cleveland.com",
-    "date": "Sep 14",
-    "watch": true
-   },
-   {
-    "side": "Cleveland",
-    "title": "September 16 Chicago WS vs Cleveland",
-    "source": "Robinhood",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Cleveland",
-    "title": "NFL Player Denzel Ward Becomes Minority Owner Of MLB Team Cleveland Guardians",
-    "source": "AfroTech",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Cleveland",
-    "title": "Guardians, White Sox meet with AL Central lead on the line \u2013 Cleveland Baseball Talk Podcast",
-    "source": "Cleveland.com",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "Caribbean Premier League|Jamaica Kingsmen vs Barbados Royals|Barbados Royals": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "Tridents secure playoff spot with last gasp win over Kingsmen",
-    "source": "Trinidad Guardian",
-    "date": "Sep 13",
-    "watch": false
-   },
-   {
-    "side": "Barbados Royals",
-    "title": "CPL 2026: Barbados Tridents beat Guyana Amazon Warriors by 6 wickets in last Group match",
-    "source": "Cricket World",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "The Jamaica Kingsmen secures playoff spot in Caribbean Premier League",
-    "source": "IRIE FM",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "Powell laments fielding lapses as Kingsmen fall to Tridents",
-    "source": "Jamaica Observer",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "Caribbean Premier League|Jamaica Kingsmen vs Barbados Royals|Jamaica Kingsmen": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "Tridents secure playoff spot with last gasp win over Kingsmen",
-    "source": "Trinidad Guardian",
-    "date": "Sep 13",
-    "watch": false
-   },
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "The Jamaica Kingsmen secures playoff spot in Caribbean Premier League",
-    "source": "IRIE FM",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Jamaica Kingsmen",
-    "title": "Powell laments fielding lapses as Kingsmen fall to Tridents",
-    "source": "Jamaica Observer",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Barbados Royals",
-    "title": "CPL 2026: Barbados Tridents beat Guyana Amazon Warriors by 6 wickets in last Group match",
-    "source": "Cricket World",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "ATP Challenger|Ryuki Matsuda vs Moise Kouame|Moise Kouame": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Ryuki Matsuda",
-    "title": "Taiyo Yamanaka 0 - 2 Ryuki Matsuda (09/14) - Match Report",
-    "source": "365Scores",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "College Football|Towson vs Morgan St.|Towson": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Morgan St.",
-    "title": "Morgan St Football",
-    "source": "The Herald Journal",
-    "date": "Sep 09",
-    "watch": false
-   },
-   {
-    "side": "Towson",
-    "title": "Vicari Swain returns 2 punts for TDs as South Carolina routs Towson",
-    "source": "National Football Post",
-    "date": "Sep 13",
-    "watch": false
-   },
-   {
-    "side": "Towson",
-    "title": "South Carolina-Towson in lightning delay in second half",
-    "source": "On3",
-    "date": "Sep 13",
-    "watch": false
-   },
-   {
-    "side": "Towson",
-    "title": "Vicari Swain sets return record as South Carolina tops Towson",
-    "source": "CBS Sports",
-    "date": "Sep 13",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "ATP Challenger|Fajing Sun vs Alexis Galarneau|Alexis Galarneau": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Alexis Galarneau",
-    "title": "Linang Xiao vs Alexis Galarneau \u00b7 Round 2 \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 09",
-    "watch": false
-   },
-   {
-    "side": "Alexis Galarneau",
-    "title": "P.Kotov beats A.Galarneau - Shanghai Challenger 2026 - score",
-    "source": "Tennis Tonic",
-    "date": "Sep 11",
-    "watch": false
-   },
-   {
-    "side": "Alexis Galarneau",
-    "title": "Pavel Kotov vs Alexis Galarneau \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 11",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "ATP Challenger|Hikaru Shiraishi vs Jake Delaney|Jake Delaney": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Jake Delaney",
-    "title": "Delaney / Delaney vs Bayldon / Charlton \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 10",
-    "watch": false
-   },
-   {
-    "side": "Jake Delaney",
-    "title": "Delaney / Delaney vs Nam / Park \u00b7 Semifinal \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 11",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "ATP Challenger|Omar Jasika vs Luca Castelnuovo|Omar Jasika": {
-  "mode": "headlines",
-  "summary": "0 injury/lineup headline(s) in last 7d",
-  "pick_health": "no issues found",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Luca Castelnuovo",
-    "title": "Luca Castelnuovo vs Chun Hsin Tseng \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 08",
-    "watch": false
-   },
-   {
-    "side": "Omar Jasika",
-    "title": "Jasika / Tomic vs Noguchi / Wang \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 09",
-    "watch": false
-   },
-   {
-    "side": "Luca Castelnuovo",
-    "title": "Tung-Lin Wu vs Luca Castelnuovo \u00b7 Round 2 \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 10",
-    "watch": false
-   },
-   {
-    "side": "Luca Castelnuovo",
-    "title": "Ji Sung Nam vs Luca Castelnuovo \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
-    "source": "Tennis.com",
-    "date": "Sep 11",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:21Z"
- },
- "MLB|Chicago C vs Atlanta|Atlanta": {
-  "mode": "headlines",
-  "summary": "4 injury/lineup headline(s) in last 7d",
-  "pick_health": "Braves News: Lane Thomas to injured list, Atlanta avoids sweep, and more",
-  "opp_health": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -; Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Atlanta",
-    "title": "Braves News: Lane Thomas to injured list, Atlanta avoids sweep, and more",
-    "source": "Battery Power",
-    "date": "Sep 11",
-    "watch": true
-   },
-   {
-    "side": "Chicago C",
-    "title": "Cubs Move Key Starter to Relief Role Amid Bullpen Struggles",
-    "source": "heavy.com",
-    "date": "Sep 11",
-    "watch": true
-   },
-   {
-    "side": "Chicago C",
-    "title": "Cubs roster move: Edward Cabrera activated, Trent Thornton to injured list",
-    "source": "Bleed Cubbie Blue",
-    "date": "Sep 12",
-    "watch": true
-   },
-   {
-    "side": "Chicago C",
-    "title": "Chicago Cubs Lineup (9/13/26): Boyd Facing Bubba, Bucs -",
-    "source": "Cubs Insider",
-    "date": "Sep 13",
-    "watch": true
-   },
-   {
-    "side": "Atlanta",
-    "title": "Atlanta Braves Add 22-Year-Old Pitcher Before Cubs Series",
-    "source": "heavy.com",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Atlanta",
-    "title": "The Week Ahead for Atlanta: The battle-testing continues for the Braves",
-    "source": "Yahoo Sports",
-    "date": "Sep 14",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-14T20:22Z"
  }
 }
