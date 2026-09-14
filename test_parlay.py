@@ -348,6 +348,10 @@ check("page carries both themes, and both are reachable explicitly",
       "prefers-color-scheme" in html
       and '[data-theme="dark"]' in html and '[data-theme="light"]' in html)
 check("page has a title", "<title>" in html)
+check("date rail offers today–tomorrow and a from–through range",
+      "today-tomorrow" in html and 'id="datesheet"' in html)
+check("leg detail reads the same notes the list teased",
+      "Injuries (Elo cost)" in html and "function parseCard" in html)
 check("page is not in quirks mode", html.lstrip().lower().startswith("<!doctype html>"))
 check("[hidden] beats the display:flex on tabs and sheets",
       "[hidden]{display:none !important}" in html)
@@ -476,6 +480,40 @@ check("cfl falls back to the module's own table", cfl and cfl["ticker"] == "KXCF
 check("an unknown league is skipped, not guessed", parlay.league_spec(cfg, "nope") is None)
 check("the parlay league table does not leak into the bot's leagues",
       "cfl" not in (cfg.get("leagues") or {}))
+
+# ---------------------------------------------------------------- card notes + Elo stamp
+print("\ncard notes")
+card = leg(0.82, 0.84)
+card["pick"] = "San Francisco"
+card["opp"] = "Los Angeles R"
+card["league"] = "nfl"
+parlay._note(card, "San Francisco -31 Elo: " +
+             ", ".join(f"Player{i} (CB)" for i in range(18)) + " +3 more")
+parlay._note(card, "wx 82°F wind 6mph precip at kickoff")
+parlay._note(card, "SP Miami Marlins: Sandy Alcantara / Arizona Diamondbacks: Corbin Burnes")
+check("injury + weather + pitcher notes are not chopped at 240",
+      len(card["notes"]) > 240 and "Player17" in card["notes"] and "Alcantara" in card["notes"])
+check("notes stay under the 800 cap", len(card["notes"]) <= parlay.NOTES_CAP)
+check("merge_notes keeps uniqueness",
+      parlay.merge_notes("wx 82°F", "wx 82°F | SP X") == "wx 82°F | SP X")
+
+import state as _state
+_orig_elo = _state.load_elo
+_state.load_elo = lambda key: (
+    {"San Francisco": 1684.2, "Los Angeles R": 1510.0} if key == "nfl" else {})
+try:
+    parlay.attach_elo([card])
+    check("elo_pick from the league table, not top_ratings", card["elo_pick"] == 1684.2)
+    check("elo_opp from the league table", card["elo_opp"] == 1510.0)
+    missing = leg(0.7, 0.72)
+    missing["league"] = "nfl"
+    missing["pick"] = "No Such Club"
+    missing["opp"] = "Also Missing"
+    parlay.attach_elo([missing])
+    check("unknown teams stay None instead of inventing 1500",
+          missing["elo_pick"] is None and missing["elo_opp"] is None)
+finally:
+    _state.load_elo = _orig_elo
 
 print("\n" + ("ALL PASS" if not FAILED else f"{len(FAILED)} FAILED: " + ", ".join(FAILED)))
 sys.exit(1 if FAILED else 0)
