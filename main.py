@@ -303,6 +303,7 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
         "flow_dir": flow.verdict(fl) if fl else "",
         "flow_ticket_share": ((fl or {}).get("tape") or {}).get("ticket_share"),
         "flow_money_share": ((fl or {}).get("tape") or {}).get("money_share"),
+        "flow_book_share": ((fl or {}).get("book") or {}).get("near_yes_share"),
     }
 
 
@@ -375,6 +376,8 @@ def run_league(key, lg, cfg, body, grade_only=False):
                                  if r.get("flow_ticket_share") is not None else "",
             "flow_money_share": r.get("flow_money_share")
                                 if r.get("flow_money_share") is not None else "",
+            "flow_book_share": r.get("flow_book_share")
+                               if r.get("flow_book_share") is not None else "",
             "result": "", "graded_utc": "", "close_prob": "", "close_utc": "", "clv": "", "profit": "",
         })
         if not logged:

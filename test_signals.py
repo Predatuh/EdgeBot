@@ -64,8 +64,15 @@ check("nothing to read is silence", flow.verdict(None) == "" and flow.note(None,
 
 print("\nthe tape: tickets against money")
 def tape(trades):
-    kalshi._get = lambda path, params, **k: {"trades": trades}
-t = [{"count": 1, "taker_side": "yes"} for _ in range(9)] + [{"count": 900, "taker_side": "no"}]
+    kalshi._get = lambda path, params, **k: {"trades": trades, "cursor": ""}
+def trade(size, side, ticker="T", block=False):
+    """A trade exactly as Kalshi sends one."""
+    return {"count_fp": f"{size:.2f}", "created_time": "2026-09-14T04:31:58Z",
+            "is_block_trade": block, "no_price_dollars": "0.5500",
+            "taker_book_side": "bid", "taker_outcome_side": side,
+            "taker_side": side, "ticker": ticker, "trade_id": "x",
+            "yes_price_dollars": "0.4500"}
+t = [trade(1, "yes") for _ in range(9)] + [trade(900, "no")]
 tape(t)
 f = flow.taker_flow("T")
 check("prints are counted as tickets", f["trades"] == 10)
@@ -76,17 +83,50 @@ check("the gap is money minus tickets", abs(f["gap"] - (f["money_share"] - f["ti
 check("the biggest print is kept", f["max_size"] == 900)
 check("that shape counts as a disagreement", flow.disagrees({"tape": f}))
 
-tape([{"count": 50, "taker_side": "yes"} for _ in range(10)])
+check("size is read from count_fp, the string Kalshi actually sends",
+      flow._size({"count_fp": "47.37"}) == 47.37)
+check("...and a plain count still works if it ever comes back",
+      flow._size({"count": 12}) == 12.0)
+check("a trade with neither is size zero, not a crash", flow._size({}) == 0.0)
+tape([trade(50, "yes") for _ in range(10)])
 f2 = flow.taker_flow("T")
 check("one-sided flow is not a disagreement", not flow.disagrees({"tape": f2}),
       f"tickets {f2['ticket_share']} money {f2['money_share']}")
-tape([{"count": 10, "taker_side": "yes"}] * 6 + [{"count": 200, "taker_side": "yes"}])
+tape([trade(10, "yes")] * 6 + [trade(200, "yes")])
 check("both sides agreeing is not a disagreement either",
       not flow.disagrees({"tape": flow.taker_flow("T")}))
-tape([{"count": 5, "taker_side": ""}, {"count": 0, "taker_side": "yes"}])
+tape([trade(5, ""), trade(0, "yes")])
 check("trades with no taker or no size are dropped", flow.taker_flow("T") is None)
+# Kalshi ignores a filter it does not recognise and answers with the whole
+# exchange's tape, which reads exactly like a busy market for the ticker asked
+# about. That has to be caught, or the signal is a confident fiction.
+tape([trade(100, "yes", ticker="KXBTC15M-SOMETHING-ELSE") for _ in range(20)]
+     + [trade(5, "no", ticker="T")])
+f3 = flow.taker_flow("T")
+check("another market's trades are thrown away, not counted",
+      f3["trades"] == 1 and f3["contracts"] == 5, str(f3))
+tape([trade(100, "yes", block=True), trade(10, "no")])
+check("block trades are counted as such", flow.taker_flow("T")["blocks"] == 1)
 kalshi._get = boom
 check("a missing tape endpoint is None, not a crash", flow.taker_flow("T") is None)
+
+print("\nthe book: where the size is resting")
+kalshi._get = lambda path, params, **k: {"orderbook_fp": {
+    "yes_dollars": [["0.2000", "500000.00"], ["0.4000", "11143.28"], ["0.4400", "193277.66"]],
+    "no_dollars": [["0.5100", "14203.76"], ["0.5500", "3599604.92"]]}}
+b = flow.book("T")
+check("both ladders are read", b["yes_size"] > 0 and b["no_size"] > 0)
+check("prices in dollars stay in dollars", b["best_yes"] == 0.44 and b["best_no"] == 0.55)
+check("the heavier side of the book shows up", b["yes_share"] < 0.5, str(b["yes_share"]))
+check("...and is heavier still right at the touch",
+      b["near_yes_share"] < b["yes_share"],
+      f"near {b['near_yes_share']} vs all {b['yes_share']}")
+check("size parked away from the touch is excluded from the near numbers",
+      b["near_yes"] < b["yes_size"], f"{b['near_yes']} of {b['yes_size']}")
+kalshi._get = lambda path, params, **k: {"orderbook_fp": {"yes_dollars": []}}
+check("half a book is no book", flow.book("T") is None)
+kalshi._get = boom
+check("a missing book is None, not a crash", flow.book("T") is None)
 
 print("\nEPA from play-by-play")
 HEAD = "posteam,defteam,epa,success,play_type,wp,week,season"

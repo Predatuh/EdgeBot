@@ -35,6 +35,7 @@ LOG_FIELDS = [
     "flow_dir",       # toward / away / flat - which way the market moved on our side
     "flow_ticket_share",  # share of PRINTS taking our side
     "flow_money_share",   # share of CONTRACTS taking it; the gap is the split
+    "flow_book_share",    # share of the resting size near the touch on our side
     "result",        # W / L / V (void: the event resolved with no winner)
     "graded_utc",    # when we graded it, so a late settlement still reaches a results card
     "close_prob",    # last LIVE price seen before settlement - a real pre-start close.

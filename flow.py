@@ -75,12 +75,26 @@ def move(hist):
     }
 
 
+def _size(t):
+    """Contracts on a trade.
+
+    It arrives as `count_fp`, a decimal STRING - the same shape that made the
+    first backtest price zero of 665 sides when it read candles as cents. Reading
+    `count` instead returns nothing, silently, and the whole tape reads as empty.
+    """
+    for field in ("count_fp", "count"):
+        v = kalshi._f(t.get(field))
+        if v:
+            return v
+    return 0.0
+
+
 def taker_flow(ticker, limit=500, big=BIG_TRADE):
     """Tickets versus money, from the tape.
 
-    `count` on a Kalshi trade is contracts, and `taker_side` is who crossed the
-    spread to get filled - the aggressor, which is the side with an opinion. A
-    resting order that gets hit is not making the argument; the taker is.
+    `taker_side` is whoever crossed the spread to get filled - the aggressor, and
+    the side with an opinion. A resting order that gets hit is not making the
+    argument; the taker is.
     """
     try:
         js = kalshi._get("/markets/trades", {"ticker": ticker, "limit": limit})
@@ -91,13 +105,21 @@ def taker_flow(ticker, limit=500, big=BIG_TRADE):
     if not trades:
         return None
     n_yes = n_no = c_yes = c_no = 0
-    sizes, big_yes, big_no = [], 0, 0
+    sizes, big_yes, big_no, blocks, foreign = [], 0, 0, 0, 0
     for t in trades:
-        cnt = kalshi._f(t.get("count")) or 0.0
-        side = (t.get("taker_side") or "").lower()
+        # The API ignores an unrecognised filter and answers with the WHOLE
+        # exchange's tape, which reads exactly like a busy market for the ticker
+        # asked about. Checking the ticker back is the difference between a
+        # signal and a confident fiction.
+        if t.get("ticker") and t["ticker"] != ticker:
+            foreign += 1
+            continue
+        cnt = _size(t)
+        side = (t.get("taker_side") or t.get("taker_outcome_side") or "").lower()
         if side not in ("yes", "no") or cnt <= 0:
             continue
         sizes.append(cnt)
+        blocks += 1 if t.get("is_block_trade") else 0
         if side == "yes":
             n_yes += 1
             c_yes += cnt
@@ -106,6 +128,8 @@ def taker_flow(ticker, limit=500, big=BIG_TRADE):
             n_no += 1
             c_no += cnt
             big_no += cnt if cnt >= big else 0
+    if foreign:
+        print(f"[flow] {ticker}: {foreign} trades came back for other markets; ignored")
     n, c = n_yes + n_no, c_yes + c_no
     if not n or not c:
         return None
@@ -115,18 +139,64 @@ def taker_flow(ticker, limit=500, big=BIG_TRADE):
         "ticket_share": round(n_yes / n, 4),        # share of PRINTS buying this side
         "money_share": round(c_yes / c, 4),         # share of CONTRACTS buying it
         "gap": round(c_yes / c - n_yes / n, 4),     # + = the big money agrees with the crowd
-        "median_size": sizes[len(sizes) // 2],
-        "max_size": sizes[-1],
+        "median_size": round(sizes[len(sizes) // 2], 1),
+        "max_size": round(sizes[-1], 1),
+        "blocks": blocks,
         "big_share": round((big_yes + big_no) / c, 4),
         "big_money_share": round(big_yes / (big_yes + big_no), 4) if (big_yes + big_no) else None,
     }
 
 
-def read(series, ticker, hours=LOOKBACK_H, now=None, limit=500):
+def book(ticker, near=0.05):
+    """Resting size on each side of the book - where the money is sitting, as
+    opposed to where it has already gone.
+
+    Kalshi answers with `orderbook_fp`: price/size ladders as decimal strings,
+    one for yes and one for no. `near` limits the second pair of numbers to the
+    orders close enough to the touch to actually matter; size parked ten cents
+    away is a wish, not a bid.
+    """
+    try:
+        js = kalshi._get(f"/markets/{ticker}/orderbook", {"depth": 20})
+    except Exception as e:
+        print(f"[flow] {ticker}: no book ({type(e).__name__}: {str(e)[:60]})")
+        return None
+    ob = js.get("orderbook_fp") or js.get("orderbook") or {}
+    sides = {}
+    for key, name in (("yes_dollars", "yes"), ("no_dollars", "no"),
+                      ("yes", "yes"), ("no", "no")):
+        ladder = ob.get(key)
+        if not ladder or name in sides:
+            continue
+        rows = []
+        for entry in ladder:
+            if not isinstance(entry, (list, tuple)) or len(entry) < 2:
+                continue
+            px, sz = kalshi._f(entry[0]), kalshi._f(entry[1])
+            if px is None or sz is None or sz <= 0:
+                continue
+            rows.append((px if px <= 1 else px / 100.0, sz))
+        if rows:
+            sides[name] = rows
+    if "yes" not in sides or "no" not in sides:
+        return None
+    y, n = sides["yes"], sides["no"]
+    top_y, top_n = max(p for p, _ in y), max(p for p, _ in n)
+    ny = sum(sz for p, sz in y if p >= top_y - near)
+    nn = sum(sz for p, sz in n if p >= top_n - near)
+    ty, tn = sum(sz for _, sz in y), sum(sz for _, sz in n)
+    return {"yes_size": round(ty, 1), "no_size": round(tn, 1),
+            "yes_share": round(ty / (ty + tn), 4) if ty + tn else None,
+            "near_yes": round(ny, 1), "near_no": round(nn, 1),
+            "near_yes_share": round(ny / (ny + nn), 4) if ny + nn else None,
+            "best_yes": round(top_y, 4), "best_no": round(top_n, 4)}
+
+
+def read(series, ticker, hours=LOOKBACK_H, now=None, limit=500, with_book=True):
     """Everything flow knows about one side of one game."""
     h = history(series, ticker, hours=hours, now=now)
     return {"move": move(h), "tape": taker_flow(ticker, limit=limit),
-            "candles": len(h)}
+            "book": book(ticker) if with_book else None, "candles": len(h)}
 
 
 def verdict(f, steam=STEAM):
@@ -163,7 +233,11 @@ def note(f, side_name, steam=STEAM):
     if t:
         bits.append(f"tape {100 * t['ticket_share']:.0f}% of {t['trades']} trades / "
                     f"{100 * t['money_share']:.0f}% of {t['contracts']:.0f} contracts"
-                    + (f", biggest {t['max_size']:.0f}" if t.get("max_size") else ""))
+                    + (f", biggest {t['max_size']:.0f}" if t.get("max_size") else "")
+                    + (f", {t['blocks']} block" if t.get("blocks") else ""))
+    b = f.get("book")
+    if b and b.get("near_yes_share") is not None:
+        bits.append(f"book {100 * b['near_yes_share']:.0f}% of the size near the touch")
     return " | ".join(bits)
 
 
