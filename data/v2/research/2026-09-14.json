@@ -3056,5 +3056,274 @@
    }
   ],
   "_ts": "2026-09-14T00:12Z"
+ },
+ "College Football|Notre Dame vs Michigan St.|Notre Dame": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Former Notre Dame linebacker taken to hospital following scary injury; Notre Dame suffers multiple injuries against Wisconsin, but they have the necessary depth to soften the blows",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Notre Dame",
+    "title": "Notre Dame suffers multiple injuries against Wisconsin, but they have the necessary depth to soften the blows",
+    "source": "A to Z Sports",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Notre Dame",
+    "title": "Brauntae Johnson, Jason Onye injured in Notre Dame's victory",
+    "source": "ESPN",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Notre Dame",
+    "title": "Former Notre Dame linebacker taken to hospital following scary injury",
+    "source": "Fighting Irish Wire",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Michigan St.",
+    "title": "Michigan St Football",
+    "source": "idahostatejournal.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Michigan St.",
+    "title": "Eastern Michigan vs Michigan St.: 1st Quarter Spread",
+    "source": "Coinbase",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Michigan St.",
+    "title": "Eastern Michigan Eagles 7 - Michigan State Spartans 35: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T00:15Z"
+ },
+ "NFL|Pittsburgh vs New England|New England": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "A.J. Brown injury: Patriots star hurt in his New England debut",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New England",
+    "title": "A.J. Brown injury: Patriots star hurt in his New England debut",
+    "source": "MassLive.com",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "UNC standout leads New England Patriots in receiving yards Wednesday",
+    "source": "Tar Heels Wire",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "New England",
+    "title": "New England Patriots agree to one-year deal with tackle DaQuan Jones",
+    "source": "upi.com",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Steelers stock report after Week 1 win over Falcons",
+    "source": "Behind the Steel Curtain",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Steelers 2026 NFL Regular Season Players Stats",
+    "source": "ESPN",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Atlanta Falcons running back Bijan Robinson's best plays from 173-yard game vs. Pittsburgh Steelers",
+    "source": "NFL.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T00:15Z"
+ },
+ "La Liga|Real Madrid vs Elche|Real Madrid": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Atletico Madrid XI vs Real Sociedad \u2013 Predicted lineup and team news; Atl\u00e9tico Madrid dealt injury blow ahead of Real Madrid showdown",
+  "opp_health": "Preview: Elche vs Real Madrid - prediction, team news, lineups; Real Madrid injury, suspension list vs. Elche: Eder Militao, Ferland Mendy, Rodrygo latest",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Real Madrid",
+    "title": "Atl\u00e9tico Madrid dealt injury blow ahead of Real Madrid showdown",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Real Madrid",
+    "title": "CONFIRMED lineups: Real Madrid vs Rayo Vallecano, 2026 La Liga",
+    "source": "Managing Madrid",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Real Madrid",
+    "title": "Atletico Madrid XI vs Real Sociedad \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Elche",
+    "title": "Preview: Elche vs Real Madrid - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Elche",
+    "title": "Real Madrid injury, suspension list vs. Elche: Eder Militao, Ferland Mendy, Rodrygo latest",
+    "source": "Sports Mole",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Elche",
+    "title": "Elche vs Real Madrid Preview \u2013 prediction, team news, lineups | LaLiga 2026-27",
+    "source": "Khel Now",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T00:15Z"
+ },
+ "ATP Challenger|Kaichi Uchida vs Rio Noguchi|Rio Noguchi": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rio Noguchi",
+    "title": "Rio Noguchi vs Rigele TE \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Rio Noguchi",
+    "title": "Jasika / Tomic vs Noguchi / Wang \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Rio Noguchi",
+    "title": "Bar Biryukov / Binda vs Noguchi / Wang \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Kaichi Uchida",
+    "title": "Uchida / Yuzuki vs Nam / Park \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T00:15Z"
+ },
+ "WTA Tennis|Suzan Lamens vs Carolina Alves|Carolina Alves": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Suzan Lamens",
+    "title": "Kayla Day vs Suzan Lamens \u00b7 Round 1 \u00b7 WTA 125K Barranquilla, Colombia",
+    "source": "Tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Carolina Alves",
+    "title": "Jeanjean vs. Alves | Round of 32 Kia Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Carolina Alves",
+    "title": "Leolia Jeanjean - Carolina Alves 2-0",
+    "source": "Flashscore.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Carolina Alves",
+    "title": "Suzan Lamens vs Carolina Alves - Match WTA - SP Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Suzan Lamens",
+    "title": "Suzan Lamens vs Carolina Alves - Match WTA - SP Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 12",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T00:15Z"
  }
 }
