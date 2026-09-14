@@ -12323,5 +12323,121 @@
    }
   ],
   "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|Texas vs Boston|Boston": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Boston's Willson Contreras activated from injured list as Anthony Seigler goes on IL; How Does Injury to Eli White Impct Boston Red Sox Lineup?",
+  "opp_health": "\u2018It\u2019s Going To Potentially Take A Little Bit Of Time\u2019: Joc Pederson\u2019s Hand Injury Leaves Texas Rangers Facing IL Decision; \u2018Pretty Sore\u2019: Jacob deGrom May Skip Bullpen As Texas Rangers Monitor Groin Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas",
+    "title": "Big 12 withdraws lawsuit against Texas Tech filed during Brendan Sorsby saga - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 07",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Boston Red Sox Place Outfielder Eli White on Injured List",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "How Does Injury to Eli White Impct Boston Red Sox Lineup?",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Boston's Willson Contreras activated from injured list as Anthony Seigler goes on IL",
+    "source": "FOX Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "\u2018It\u2019s Going To Potentially Take A Little Bit Of Time\u2019: Joc Pederson\u2019s Hand Injury Leaves Texas Rangers Facing IL Decision",
+    "source": "dallassportsjournal.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "\u2018Pretty Sore\u2019: Jacob deGrom May Skip Bullpen As Texas Rangers Monitor Groin Injury",
+    "source": "dallassportsjournal.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:42Z"
+ },
+ "College Football|Florida vs Auburn|Florida": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Florida Gets Caught And Called Out For Pumping In Crowd Noise Against Campbell At The Swamp; Injury report: Pair of starters expected to miss Florida's contest vs. Campbell",
+  "opp_health": "Auburn football injury updates: Alex Golesh provides latest on 2 Tigers; Florida football news: Star Auburn transfer gets injury update for revenge game vs. Tigers",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Florida",
+    "title": "Florida Gets Caught And Called Out For Pumping In Crowd Noise Against Campbell At The Swamp",
+    "source": "BroBible",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida",
+    "title": "Injury report: Pair of starters expected to miss Florida's contest vs. Campbell",
+    "source": "247Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida",
+    "title": "Gameday injury report for Florida vs Campbell in the Swamp",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Auburn football injury updates: Alex Golesh provides latest on 2 Tigers",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Florida football news: Star Auburn transfer gets injury update for revenge game vs. Tigers",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:43Z"
  }
 }
