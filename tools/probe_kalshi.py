@@ -58,7 +58,8 @@ def probe_series():
         ser = r.get("series") or []
         print("  series returned:", len(ser))
         hits = [s for s in ser if any(k in (s.get("ticker") or "").upper()
-                                      for k in ("NFL", "NCAAF", "CFB"))]
+                                      for k in ("SPREAD", "TOTAL", "MARGIN", "HANDICAP"))
+                and any(k in (s.get("ticker") or "").upper() for k in ("NFL", "NCAAF", "CFB"))]
         for s in hits:
             print("   ", s.get("ticker"), "|", (s.get("title") or "")[:70])
         if not hits:
