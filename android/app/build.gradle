@@ -12,6 +12,11 @@ def signingStore = releaseStore.exists() ? releaseStore : debugStore
 def signingPass = releaseStore.exists() ? (System.getenv("ANDROID_KEYSTORE_PASSWORD") ?: "") : "android"
 def signingAlias = releaseStore.exists() ? (System.getenv("ANDROID_KEYSTORE_ALIAS") ?: "release") : "androiddebugkey"
 
+// computed up here rather than inline: `versionCode (x) as Integer` binds as
+// `versionCode(x) as Integer`, which hands the DSL a String and fails evaluation
+def buildNumber = (System.getenv("VERSION_CODE") ?: "1").toInteger()
+def buildName = System.getenv("VERSION_NAME") ?: "dev"
+
 android {
   namespace 'app.gridiron.ticket'
   compileSdk 34
@@ -20,8 +25,8 @@ android {
     applicationId 'app.gridiron.ticket'
     minSdk 24
     targetSdk 34
-    versionCode (System.getenv("VERSION_CODE") ?: "1") as Integer
-    versionName (System.getenv("VERSION_NAME") ?: "dev")
+    versionCode buildNumber
+    versionName buildName
     resValue "string", "app_name", "Gridiron Ticket"
   }
 
