@@ -13194,5 +13194,63 @@
    }
   ],
   "_ts": "2026-09-14T20:21Z"
+ },
+ "NFL|Denver @ Kansas City|Denver": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Broncos get huge injury news ahead of Week 3 showdown with Rams; Eyioma Uwazurike ready to replace John Franklin-Myers in Broncos starting lineup",
+  "opp_health": "Injury Report: WR Marvin Mims Jr. not assigned game status for Week 1 vs. Chiefs; Chiefs QB Patrick Mahomes (knee) has no injury status, cleared for comeback Monday night vs. Broncos",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Injury Report: WR Marvin Mims Jr. not assigned game status for Week 1 vs. Chiefs",
+    "source": "Denver Broncos",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Chiefs QB Patrick Mahomes (knee) has no injury status, cleared for comeback Monday night vs. Broncos",
+    "source": "NFL.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Chiefs-Broncos Week 1 final injury report: Chris Jones has clear status",
+    "source": "Arrowhead Pride",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Eyioma Uwazurike ready to replace John Franklin-Myers in Broncos starting lineup",
+    "source": "denvergazette.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Denver Broncos release final injury report before Monday Night Football",
+    "source": "Mile High Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Broncos get huge injury news ahead of Week 3 showdown with Rams",
+    "source": "Mile High Report",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T21:03Z"
  }
 }
