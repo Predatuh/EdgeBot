@@ -4976,5 +4976,681 @@
    }
   ],
   "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Mercer vs Georgia Tech|Georgia Tech": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Georgia Tech football news: Starting CB who suffered scary injury vs. Tennessee gets positive update; Injured Georgia Tech player released from hospital, school thanks community for support",
+  "opp_health": "C Tyler Mercer: Cowboys struggled to rebound after Sexton injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mercer",
+    "title": "C Tyler Mercer: Cowboys struggled to rebound after Sexton injury",
+    "source": "On3",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Georgia Tech",
+    "title": "Georgia Tech football news: Starting CB who suffered scary injury vs. Tennessee gets positive update",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Georgia Tech",
+    "title": "Injured Georgia Tech player released from hospital, school thanks community for support",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Georgia Tech",
+    "title": "Georgia Tech defensive back Jaylen Mbakwe provides update after game injury",
+    "source": "fox5atlanta.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Mercer",
+    "title": "Wilmington cruises to win over Mercer",
+    "source": "New Castle News",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Mercer",
+    "title": "Georgia Tech vs. Mercer Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "College Football|Vanderbilt vs NC St.|Vanderbilt": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Vanderbilt Football Injury Report Ahead of Game Against Delaware",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Vanderbilt",
+    "title": "Vanderbilt Football Injury Report Ahead of Game Against Delaware",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Vanderbilt",
+    "title": "COLLEGE FOOTBALL GALLERY - VANDERBILT VS DELAWARE",
+    "source": "Williamson Herald",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Vanderbilt",
+    "title": "Why Vanderbilt Football Still Believes It's Set For Historical Season Despite Early Woes",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "NC St.",
+    "title": "NC St. Wolfpack at Vanderbilt Commodores Matchup Overview | Week 3",
+    "source": "BettingPros",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "College Football|Southern Miss vs UConn|Southern Miss": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Southern Miss",
+    "title": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Alex Golesh reacts to 43-8 win over Southern Miss",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Auburn football snap count leaders vs Southern Miss in Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UConn",
+    "title": "Malik Washington Powers Maryland Football to Commanding 38\u201314 Win Over UConn",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UConn",
+    "title": "Southern Miss vs. UConn Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UConn",
+    "title": "UConn Football Takeaways: Maryland ran away with it in Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "NFL|Kansas City vs Indianapolis|Kansas City": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Two Kansas City Chiefs Ruled Out for Week 1; Kansas City Chiefs' Friday injury report for Week 1 vs. Denver Broncos comes with a new injury that the team can't afford",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Two Kansas City Chiefs Ruled Out for Week 1"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' Friday injury report for Week 1 vs. Denver Broncos comes with a new injury that the team can't afford",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' final injury report for Week 1 tilt vs. Denver Broncos rules out 2 injured players for Monday night",
+    "source": "A to Z Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Two Kansas City Chiefs Ruled Out for Week 1",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Colts news: DeForest Buckner makes sure everyone knows Indianapolis 'got their a** whooped' by Ravens",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Ravens open Jesse Minter era with dominant 41-23 win over Indianapolis Colts",
+    "source": "WMAR 2 News Baltimore",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Indianapolis",
+    "title": "NFL Week 1 Recap: Baltimore Ravens 41, Indianapolis Colts 23",
+    "source": "PFF",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "College Football|Virginia Tech vs Maryland|Virginia Tech": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "UConn Coach Jason Candle Talks Maryland, MVPs and What Was Missing in Week 1",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maryland",
+    "title": "UConn Coach Jason Candle Talks Maryland, MVPs and What Was Missing in Week 1",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Virginia Tech",
+    "title": "HUGHES: Virginia Tech's First Two Clashes Helpful For Confidence, Though Week 3 Will Provide First Measuring Stick",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Virginia Tech",
+    "title": "3 takeaways from Virginia Tech football's win over ODU",
+    "source": "Roanoke Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Maryland",
+    "title": "2026 Maryland High School Football Top 25 Rankings - Sep. 13",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Virginia Tech",
+    "title": "Virginia Tech's offensive weapons create challenges for opponents",
+    "source": "wcyb.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Maryland",
+    "title": "UConn Football Takeaways: Maryland ran away with it in Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "La Liga|Vallecano vs Osasuna|Osasuna": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Osasuna vs Espanyol live score, H2H and lineups; Osasuna vs Espanyol Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+  "opp_health": "PREVIEW | Rayo Vallecano vs Espanyol: team news, lineups, predictions (La Liga 15/09); Madrid ease past Vallecano to return to winning ways, Milan held",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Osasuna",
+    "title": "Osasuna vs Espanyol match lineup | LaLiga \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Vallecano",
+    "title": "Madrid ease past Vallecano to return to winning ways, Milan held",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Vallecano",
+    "title": "Real Madrid vs. Rayo Vallecano Lineups & Confirmed Team News for La Liga Match",
+    "source": "Athlon Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Osasuna",
+    "title": "Osasuna vs Espanyol live score, H2H and lineups",
+    "source": "Sofascore",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Osasuna",
+    "title": "Osasuna vs Espanyol Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Vallecano",
+    "title": "PREVIEW | Rayo Vallecano vs Espanyol: team news, lineups, predictions (La Liga 15/09)",
+    "source": "Yahoo Sports Canada",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "MLS|San Diego FC vs Miami|Miami": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Inter Miami vs Nashville SC Lineups - MLS 2025/26; Inter Miami vs. Nashville SC: Prediction, Lineups, How to Watch (9/12/26)",
+  "opp_health": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds; San Diego FC vs Philadelphia Union Predictions, Bet Builder Tips, Lineups, Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami",
+    "title": "Inter Miami vs. Nashville SC: Prediction, Lineups, How to Watch (9/12/26)",
+    "source": "Globely News",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Confirmed lineups for Inter Miami vs Nashville SC today in 2026 MLS Matchday 26",
+    "source": "bolavip.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Inter Miami vs Nashville SC Lineups - MLS 2025/26",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego FC vs Philadelphia Union Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "San Diego FC",
+    "title": "San Diego FC vs Philadelphia Union: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "La Liga|Vallecano vs Espanyol|Vallecano": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "PREVIEW | Rayo Vallecano vs Espanyol: team news, lineups, predictions (La Liga 15/09); Madrid ease past Vallecano to return to winning ways, Milan held",
+  "opp_health": "Rayo Vallecano vs Espanyol Prediction, Betting Tips, Lineups & Odds | 15 Sep 2026; Rayo Vallecano vs Espanyol prediction: team news, lineups, expert analysis",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Vallecano",
+    "title": "Madrid ease past Vallecano to return to winning ways, Milan held",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Vallecano",
+    "title": "Real Madrid vs. Rayo Vallecano Lineups & Confirmed Team News for La Liga Match",
+    "source": "Athlon Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Vallecano",
+    "title": "PREVIEW | Rayo Vallecano vs Espanyol: team news, lineups, predictions (La Liga 15/09)",
+    "source": "Yahoo Sports Canada",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Rayo Vallecano vs Espanyol Prediction, Betting Tips, Lineups & Odds | 15 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Rayo Vallecano vs Espanyol prediction: team news, lineups, expert analysis",
+    "source": "RatingBet",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Preview: Rayo Vallecano vs Espanyol - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Lucas Poullain vs David Jorda Sanchis|Lucas Poullain": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lucas Poullain",
+    "title": "Moez Echargui vs Lucas Poullain \u00b7 Round 1 \u00b7 ATP Challenger Cassis, France",
+    "source": "tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Giuseppe La Vela vs Federico Iannaccone|Federico Iannaccone": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Federico Iannaccone",
+    "title": "Francesco Forti vs Federico Iannaccone \u00b7 Qualifying Round 2 \u00b7 ATP Challenger Genoa, Italy",
+    "source": "tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Ivan Gakhov vs Dali Blanch|Dali Blanch": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dali Blanch",
+    "title": "Olivieri, Genaro Alberto - Blanch, Dali, Central",
+    "source": "atptour.com",
+    "date": "Sep 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Justin Boulais vs Matisse Bobichon|Justin Boulais": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Justin Boulais",
+    "title": "Justin Boulais 1 - 1 Matisse Bobichon (09/07) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Justin Boulais",
+    "title": "Justin Boulais 1 - 2 Matisse Bobichon (07/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Matisse Bobichon",
+    "title": "Justin Boulais 1 - 2 Matisse Bobichon (07/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Matisse Bobichon",
+    "title": "Matisse Bobichon vs Jurij Rodionov \u00b7 Round 1 \u00b7 ATP Challenger Cassis, France",
+    "source": "tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Matisse Bobichon",
+    "title": "Matisse Bobichon 0 - 2 Jurij Rodionov (08/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Linang Xiao vs Colin Sinclair|Linang Xiao": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Linang Xiao",
+    "title": "Linang Xiao vs Alexis Galarneau \u00b7 Round 2 \u00b7 ATP Challenger Shanghai, China",
+    "source": "tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Robert Strombachs vs Santiago Rodriguez Taverna|Santiago Rodriguez Taverna": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Santiago Rodriguez Taverna",
+    "title": "Nikol\u00e1s S\u00e1nchez Izquierdo vs Santiago Rodriguez Taverna \u00b7 Round 1 \u00b7 ATP Challenger Seville, Spain",
+    "source": "tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Robert Strombachs",
+    "title": "Cornea / Neuchrist vs Opitz / Strombachs \u00b7 Round 1 \u00b7 ATP Challenger Tulln, Austria",
+    "source": "tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Santiago Rodriguez Taverna",
+    "title": "Henrique Rocha vs Santiago Rodriguez Taverna \u00b7 Round 2 \u00b7 ATP Challenger Seville, Spain",
+    "source": "tennis.com",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
+ },
+ "ATP Challenger|Elias Ymer vs Semen Pankin|Elias Ymer": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Semen Pankin",
+    "title": "Semen Pankin vs Alexis Galarneau \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Elias Ymer vs Pavel Kotov \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Ho / Stalder vs Pankin / Ymer \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Semen Pankin",
+    "title": "Ho / Stalder vs Pankin / Ymer \u00b7 Quarterfinal \u00b7 ATP Challenger Shanghai, China",
+    "source": "tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T04:29Z"
  }
 }
