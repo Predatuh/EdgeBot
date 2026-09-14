@@ -1,0 +1,7 @@
+.gradle/
+build/
+app/build/
+local.properties
+# filled from docs/ at build time - the page is generated, not source
+app/src/main/assets/*
+!app/src/main/assets/.gitkeep

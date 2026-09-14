@@ -1,0 +1,128 @@
+name: Android APK
+
+# Builds the phone app into an installable APK and attaches it to a release, so
+# the download is one tap from the phone: 
+#   https://github.com/Predatuh/EdgeBot/releases/latest/download/gridiron-ticket.apk
+#
+# The APK is a shell around the same page the site serves. It does NOT need
+# rebuilding when the board changes - the page fetches data/v2/parlay.json from
+# the repo every time it opens. Rebuild it when the app itself changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "android/**"
+      - "webapp/**"
+      - "parlay.py"
+      - ".github/workflows/android.yml"
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Attach the APK to the 'app' release (off = build artifact only)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-android
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: "17"}
+
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+
+      - name: Check the page still renders
+        run: python test_parlay.py
+
+      - name: Bundle the current page into the app
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          # Rebuilt from the committed board rather than copied out of docs/: the
+          # site is regenerated on its own schedule, so docs/index.html can still
+          # be yesterday's template. This renders today's template around the last
+          # board, and needs no Kalshi access to do it.
+          mkdir -p android/app/src/main/assets
+          python parlay.py --from-json data/v2/parlay.json \
+            --html android/app/src/main/assets/index.html
+          # adaptive icons cover API 26+; this is the bitmap older launchers use
+          # --html also writes the manifest and both icons next to the page
+          A=android/app/src/main/assets
+          mkdir -p android/app/src/main/res/mipmap-xxxhdpi
+          cp "$A/icon-192.png" android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+          cp "$A/icon-192.png" android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+          ls -l android/app/src/main/assets
+
+      - name: Use the release key if one is configured
+        env:
+          B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -n "${B64:-}" ]; then
+            echo "$B64" | base64 -d > android/release.jks
+            echo "signing with the configured release key"
+          else
+            echo "no ANDROID_KEYSTORE_B64 secret - signing with the committed sideload key"
+          fi
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      - name: Build the APK
+        working-directory: android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+          VERSION_NAME: ${{ github.run_number }}.${{ github.run_attempt }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
+        run: gradle --no-daemon assembleRelease
+
+      - name: Name it something a phone can read
+        id: apk
+        run: |
+          set -euo pipefail
+          src=$(find android/app/build/outputs/apk/release -name "*.apk" | head -1)
+          test -n "$src"
+          cp "$src" gridiron-ticket.apk
+          echo "size=$(du -h gridiron-ticket.apk | cut -f1)" >> "$GITHUB_OUTPUT"
+          unzip -l gridiron-ticket.apk | grep -E "assets/index.html|classes.dex" || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gridiron-ticket-apk
+          path: gridiron-ticket.apk
+          if-no-files-found: error
+
+      - name: Attach it to the app release
+        if: ${{ github.event_name == 'push' || inputs.release }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          notes="Gridiron Ticket ${{ github.run_number }} (${{ steps.apk.outputs.size }}).
+
+          Install: open this page on the phone, tap the .apk, allow installing
+          from the browser when Android asks. Updates install over the top -
+          every build is signed with the same key.
+
+          The app fetches the board from the repo each time it opens, so it stays
+          current without reinstalling."
+          if gh release view app >/dev/null 2>&1; then
+            gh release edit app --title "Gridiron Ticket (Android)" --notes "$notes"
+            gh release upload app gridiron-ticket.apk --clobber
+          else
+            gh release create app gridiron-ticket.apk \
+              --title "Gridiron Ticket (Android)" --notes "$notes" --latest
+          fi
+          echo "https://github.com/${{ github.repository }}/releases/latest/download/gridiron-ticket.apk"

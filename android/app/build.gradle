@@ -1,0 +1,59 @@
+plugins { id 'com.android.application' }
+
+/* Signing. The committed debug keystore is the default on purpose: Android
+   refuses to install an update signed with a different key, so a key that
+   changes every CI run would mean uninstalling the app for every update. The
+   debug key's password is the Android-wide default and is not pretending to be
+   a secret. Set ANDROID_KEYSTORE_B64 / _PASSWORD / _ALIAS in the repo's secrets
+   and the workflow writes release.jks instead, which this picks up. */
+def releaseStore = file("${rootDir}/release.jks")
+def debugStore = file("${rootDir}/debug.keystore")
+def signingStore = releaseStore.exists() ? releaseStore : debugStore
+def signingPass = releaseStore.exists() ? (System.getenv("ANDROID_KEYSTORE_PASSWORD") ?: "") : "android"
+def signingAlias = releaseStore.exists() ? (System.getenv("ANDROID_KEYSTORE_ALIAS") ?: "release") : "androiddebugkey"
+
+android {
+  namespace 'app.gridiron.ticket'
+  compileSdk 34
+
+  defaultConfig {
+    applicationId 'app.gridiron.ticket'
+    minSdk 24
+    targetSdk 34
+    versionCode (System.getenv("VERSION_CODE") ?: "1") as Integer
+    versionName (System.getenv("VERSION_NAME") ?: "dev")
+    resValue "string", "app_name", "Gridiron Ticket"
+  }
+
+  signingConfigs {
+    sideload {
+      storeFile signingStore
+      storePassword signingPass
+      keyAlias signingAlias
+      keyPassword signingPass
+    }
+  }
+
+  buildTypes {
+    release {
+      // one WebView and a few hundred lines of Java: there is nothing to shrink,
+      // and an unshrunk build is one less thing that can silently break the app
+      minifyEnabled false
+      signingConfig signingConfigs.sideload
+    }
+    debug { signingConfig signingConfigs.sideload }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+  lint { abortOnError false }
+}
+
+dependencies {
+  // WebViewAssetLoader: serves the bundled page from https://appassets.androidplatform.net
+  // instead of file://, which is what gives it a real origin - localStorage that
+  // survives, and a CORS-clean fetch of the board from raw.githubusercontent.com.
+  implementation 'androidx.webkit:webkit:1.12.1'
+}

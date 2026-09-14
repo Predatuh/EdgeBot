@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- app_name comes from resValue in app/build.gradle so the name lives in one place -->
+</resources>

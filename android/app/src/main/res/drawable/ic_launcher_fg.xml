@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The ball, drawn as a lens so it comes to a point at both tips the way the
+     PNG icons in docs/ do, tilted 25 degrees like a thrown pass. Adaptive-icon
+     canvas is 108dp with a 66dp safe zone, so everything stays well inside. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+  <group android:pivotX="54" android:pivotY="54" android:rotation="-25">
+    <path
+        android:fillColor="@color/icon_fg"
+        android:pathData="M30,54 C38,41.5 46,38 54,38 C62,38 70,41.5 78,54 C70,66.5 62,70 54,70 C46,70 38,66.5 30,54 Z"/>
+    <path
+        android:strokeColor="#FFF7E8" android:strokeWidth="2.6" android:strokeLineCap="round"
+        android:pathData="M44,54 L64,54"/>
+    <path
+        android:strokeColor="#FFF7E8" android:strokeWidth="2.6" android:strokeLineCap="round"
+        android:pathData="M48,50.5 L48,57.5 M52,50 L52,58 M56,50 L56,58 M60,50.5 L60,57.5"/>
+  </group>
+</vector>

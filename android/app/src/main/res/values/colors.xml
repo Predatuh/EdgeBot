@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- --bg from the page, so the window behind the WebView is the same colour as
+       the page and there is no white flash between launch and first paint -->
+  <color name="app_bg">#080C10</color>
+  <color name="icon_bg">#F3B44A</color>
+  <color name="icon_fg">#101820</color>
+</resources>
