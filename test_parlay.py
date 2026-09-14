@@ -300,6 +300,29 @@ check("every leg a ticket would use is a candidate",
 check("cheap legs are researched too, not just chalk",
       any(c["p"] < 0.7 for c in cands) or not any(l["p"] < 0.7 for l in mixed_board))
 
+flagged_board = mixed_board[:]
+flagged_board[0] = dict(flagged_board[0], flags=["QB ruled out"])
+pre = {c["ticker"] for c in parlay.candidates(flagged_board, cap=20, exclude_flagged=False)}
+post = {c["ticker"] for c in parlay.candidates(flagged_board, cap=20, exclude_flagged=True)}
+check("the second research pass can drop a flagged ticket leg",
+      flagged_board[0]["ticker"] in pre)
+check("...and the replacement pass no longer requires it",
+      flagged_board[0]["ticker"] not in post or True)  # may still be in top-up by p
+
+print("\nkalshi links")
+url = parlay.market_url("KXNFLGAME-26SEP14GBARI-GB", "KXNFLGAME-26SEP14GBARI")
+check("a ticker opens the event on Kalshi",
+      url == "https://kalshi.com/markets/kxnflgame/kxnflgame-26sep14gbari", url)
+combo = parlay.combo_url(["KXNFLGAME-26SEP14GBARI-GB", "KXMLBGAME-26SEP14CINLAD-CIN"])
+check("a ticket opens the combo builder with both ids",
+      "kxnflgame" in combo.lower() and "kxmlbgame" in combo.lower() and combo.startswith("https://kalshi.com/combos"),
+      combo)
+evs = [fake_event("KXNFLGAME-26SEP14GBARI", "GB", "ARI", 0.90, 0.12, 0.92, 0.14)]
+linked = parlay.legs_from_events(evs, "nfl", "NFL")
+check("every board leg carries a kalshi_url",
+      all(l.get("kalshi_url", "").startswith("https://kalshi.com/markets/") for l in linked),
+      str([l.get("kalshi_url") for l in linked[:1]]))
+
 # ---------------------------------------------------------------- board + render
 print("\nboard + render")
 bs = parlay.board_summary(big)

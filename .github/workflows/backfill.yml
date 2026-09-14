@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       league:
-        description: "League key from config.yaml (nfl, ncaaf, mlb, epl, ...)"
+        description: "League key(s), comma-separated (nfl, epl, laliga, ...)"
         default: "ncaaf"
       seasons:
         description: "Years of ESPN history to pull"
@@ -24,7 +24,7 @@ concurrency:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

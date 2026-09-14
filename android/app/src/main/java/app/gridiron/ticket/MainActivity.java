@@ -1,7 +1,12 @@
 package app.gridiron.ticket;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -33,11 +38,13 @@ import app.gridiron.ticket.R;
 public class MainActivity extends android.app.Activity {
 
   private static final String BASE = "https://appassets.androidplatform.net";
+  private static final String CHANNEL = "board";
   private WebView web;
 
   @SuppressLint("SetJavaScriptEnabled")
   @Override protected void onCreate(Bundle state) {
     super.onCreate(state);
+    ensureChannel();
 
     final WebViewAssetLoader loader = new WebViewAssetLoader.Builder()
         .setDomain("appassets.androidplatform.net")
@@ -81,13 +88,64 @@ public class MainActivity extends android.app.Activity {
   }
 
   /** Lets the page keep the system bars the same colour as itself when the
-   *  in-app light/dark toggle is used. Nothing else is exposed. */
+   *  in-app light/dark toggle is used, and fire a native ping when a new
+   *  board lands. Nothing else is exposed. */
   private class Host {
     @JavascriptInterface public void themeColor(final String css) {
       final Integer c = parseCss(css);
       if (c == null) return;
       runOnUiThread(new Runnable() { @Override public void run() { paintBars(c); } });
     }
+    @JavascriptInterface public void requestNotify() {
+      if (Build.VERSION.SDK_INT >= 33) {
+        if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+            != PackageManager.PERMISSION_GRANTED) {
+          requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 7);
+        }
+      }
+    }
+    @JavascriptInterface public void boardArrived(final String title, final String body) {
+      runOnUiThread(new Runnable() {
+        @Override public void run() { postBoard(title, body); }
+      });
+    }
+  }
+
+  private void ensureChannel() {
+    if (Build.VERSION.SDK_INT < 26) return;
+    NotificationChannel ch = new NotificationChannel(
+        CHANNEL, "Morning board", NotificationManager.IMPORTANCE_DEFAULT);
+    ch.setDescription("Fires when a new Gridiron Ticket board is on GitHub.");
+    NotificationManager nm = getSystemService(NotificationManager.class);
+    if (nm != null) nm.createNotificationChannel(ch);
+  }
+
+  private void postBoard(String title, String body) {
+    if (Build.VERSION.SDK_INT >= 33
+        && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+        != PackageManager.PERMISSION_GRANTED) {
+      return;
+    }
+    Intent open = new Intent(this, MainActivity.class)
+        .setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+    if (Build.VERSION.SDK_INT >= 23) flags |= PendingIntent.FLAG_IMMUTABLE;
+    PendingIntent pi = PendingIntent.getActivity(this, 1, open, flags);
+    android.app.Notification.Builder b;
+    if (Build.VERSION.SDK_INT >= 26) {
+      b = new android.app.Notification.Builder(this, CHANNEL);
+    } else {
+      b = new android.app.Notification.Builder(this);
+    }
+    android.app.Notification n = b
+        .setSmallIcon(R.mipmap.ic_launcher)
+        .setContentTitle(title == null ? "Morning board is up" : title)
+        .setContentText(body == null ? "" : body)
+        .setContentIntent(pi)
+        .setAutoCancel(true)
+        .build();
+    NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+    if (nm != null) nm.notify(42, n);
   }
 
   /** "rgb(8, 12, 16)" / "rgba(8, 12, 16, 1)" / "#080C10" -> colour int, or null. */

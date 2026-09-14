@@ -158,5 +158,104 @@ sd, rng, n = backfill_elo.separation(r)
 check("separation is reported", sd > 0 and rng > 0 and n == 4, f'{sd:.1f}/{rng:.1f}/{n}')
 check("an empty table reports no separation", backfill_elo.separation({"_games": 0})[2] == 0)
 
+print("\ncanonical NFL names")
+import names
+check("GB Packers folds onto Green Bay", names.canon("nfl", "GB Packers") == "Green Bay")
+check("Green Bay stays Green Bay", names.canon("nfl", "Green Bay") == "Green Bay")
+check("a tennis player is left alone", names.canon("atp", "Alcaraz") == "Alcaraz")
+folded = names.fold_elo("nfl", {"Green Bay": 1600, "GB Packers": 1400, "_games": 10})
+check("duplicate keys collapse to the live Kalshi name",
+      "Green Bay" in folded and "GB Packers" not in folded, str(folded))
+check("the live name keeps its rating when both exist", folded["Green Bay"] == 1600)
+only_nick = names.fold_elo("nfl", {"GB Packers": 1555, "_games": 2})
+check("an alias-only team moves onto the city name",
+      only_nick.get("Green Bay") == 1555 and "GB Packers" not in only_nick)
+hist = names.fold_history("nfl", [
+    {"d": "2026-09-01", "a": "GB Packers", "b": "CHI Bears", "w": "GB Packers"},
+    {"d": "2026-09-01", "a": "Green Bay", "b": "Chicago", "w": "Green Bay"},
+])
+check("history aliases collapse and dedupe",
+      len(hist) == 1 and hist[0]["a"] == "Green Bay" and hist[0]["b"] == "Chicago",
+      str(hist))
+check("PSG maps for soccer backfill", names.canon("ligue1", "PSG") == "Paris Saint-Germain")
+check("comma-separated backfill still accepts one league",
+      callable(backfill_elo.run_one))
+
+print("\nMLB pitchers + kickoff on the ESPN board")
+BOARD = {"events": [{"id": "401", "date": "2026-09-14T23:10Z", "competitions": [{
+    "venue": {"indoor": False, "address": {"city": "Cincinnati"}, "fullName": "GABP"},
+    "competitors": [
+        {"homeAway": "away", "team": {"id": "19", "displayName": "Los Angeles Dodgers"},
+         "probables": [{"displayName": "Yoshinobu Yamamoto"}]},
+        {"homeAway": "home", "team": {"id": "17", "displayName": "Cincinnati Reds"},
+         "probables": [{"fullName": "Hunter Greene"}]},
+    ],
+}]}]}
+espn._board_cache.clear()
+espn.S = type("S", (), {"get": staticmethod(
+    lambda url, params=None, timeout=None: type("R", (), {"json": staticmethod(lambda: BOARD)})())})()
+g = espn.find_game("baseball", "mlb", "Los Angeles D", "Cincinnati")
+check("the fixture is found", g is not None)
+check("kickoff is on the game", g and g.get("kickoff") == "2026-09-14T23:10Z", str(g))
+check("both probable pitchers are named",
+      espn.pitcher_note(g, "Cincinnati", "Los Angeles D") ==
+      "SP Los Angeles D: Yoshinobu Yamamoto / Cincinnati: Hunter Greene",
+      espn.pitcher_note(g, "Cincinnati", "Los Angeles D") if g else "")
+check("no pitchers means no note", espn.pitcher_note({"teams": []}, "A", "B") == "")
+
+print("\nCFBD injury parse")
+import cfbd
+cfbd._cache.clear()
+rows = [
+    {"team": "Ohio State", "player": "Julian Sayin", "position": "QB", "status": "Out"},
+    {"team": "Ohio State", "athleteName": "A Backup", "position": "LS", "classification": "Out"},
+    {"team": {"school": "Michigan"}, "name": "Fine Guy", "position": {"abbreviation": "RB"},
+     "status": "Probable"},
+]
+cfbd._get = lambda *a, **k: rows
+# force a key so injuries() does not bail
+import os
+os.environ["CFBD_API_KEY"] = os.environ.get("CFBD_API_KEY") or "test-key"
+table = cfbd.injuries(year=2026, week=3)
+check("Ohio State is keyed by CFBD name", "Ohio State" in table, str(list(table)))
+check("a QB out dominates the total", table.get("Ohio State", {}).get("elo", 0) > 50)
+check("a probable player is ignored",
+      all(r["name"] != "Fine Guy" for info in table.values() for r in info["out"]))
+ih, _ = cfbd.for_teams("Ohio St.", "Michigan")
+check("Kalshi 'Ohio St.' matches CFBD 'Ohio State'",
+      ih and ih["out"][0]["name"] == "Julian Sayin", str(ih))
+
+print("\nweather at kickoff, not current")
+import weather
+class FakeResp:
+    def __init__(self, payload):
+        self._p = payload
+    def json(self):
+        return self._p
+calls = []
+def fake_get(url, params=None, timeout=None):
+    calls.append((url, params))
+    if "geocoding" in url:
+        return FakeResp({"results": [{"latitude": 39.1, "longitude": -84.5}]})
+    if params and "hourly" in (params or {}):
+        return FakeResp({"hourly": {
+            "time": ["2026-09-14T12:00", "2026-09-14T13:00", "2026-09-14T19:00"],
+            "temperature_2m": [55.0, 58.0, 72.0],
+            "wind_speed_10m": [25.0, 24.0, 8.0],
+            "precipitation": [0.0, 0.0, 0.0],
+            "precipitation_probability": [10, 10, 5],
+        }})
+    return FakeResp({"current": {"temperature_2m": 40.0, "wind_speed_10m": 30.0, "precipitation": 0}})
+weather._geo_cache.clear()
+weather.requests.get = fake_get
+w = weather.forecast("Cincinnati", when="2026-09-14T19:10:00Z")
+check("hourly at kickoff is used, not current", w and w.get("kickoff") is True, str(w))
+check("the 7pm slot is picked over the windy morning",
+      w and round(w["temp_f"]) == 72 and round(w["wind_mph"]) == 8, str(w))
+check("the note says at kickoff", "kickoff" in weather.describe(w), weather.describe(w))
+check("morning gusts are not extreme at a calm kickoff", weather.extreme(w) is False)
+now = weather.forecast("Cincinnati")
+check("no kickoff time still returns current", now and now.get("kickoff") is False, str(now))
+
 print("\n" + ("ALL PASS" if not FAILED else f"{len(FAILED)} FAILED: " + ", ".join(FAILED)))
 sys.exit(1 if FAILED else 0)

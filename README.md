@@ -465,9 +465,19 @@ Win probability is about `1/payout` however a ticket is built, so that ladder ru
 reach, rather than relabelling a small ticket.
 
 Research runs on `candidates()` — the legs the builder actually wants across every scope
-and rung — not on the highest prices. On a live board those two sets overlapped by only
-18 of 40. Findings are attached to the leg and shown in the app; only an injury we can pin
-on that team filters anything out.
+and rung — not on the highest prices. Ticket legs are researched first, then the rest of
+the pool up to `research.max_per_run`. A second pass after flags land covers the
+replacement that actually sits on the slip. Findings are attached to the leg and shown
+in the app; only an injury we can pin on that team filters anything out.
+
+Weather is the hourly forecast at kickoff, not "current" at run time. College injuries
+come from CFBD (`CFBD_API_KEY`); ESPN has no injuries block for NCAAF. MLB legs carry
+the probable starters. NFL Elo folds nickname duplicates (`GB Packers` → `Green Bay`)
+so an ESPN backfill can actually separate the league.
+
+Each leg and the whole slip link out to Kalshi. Pinning a pick adds it to this ticket
+without restuffing the rung. Turn on "Ping me when the board lands" for a notice when
+the morning snapshot is new (Discord still posts either way).
 
 Leagues come from `config.yaml`, plus `parlay.FOOTBALL` for anything config lacks (CFL).
 `enabled: false` and `stake: false` are about what the bot *rates*, and there is no rating
@@ -481,6 +491,7 @@ Flat: `main.py` (orchestration + model), `kalshi.py` (market + results),
 `backfill_elo.py` (rebuild ratings from ESPN scores),
 `tipsters.py` (outside slates), `notify.py` (Discord, rate-limit aware),
 `merge_state.py` (unions the append-only logs before each commit),
-`parlay.py` + `webapp/parlay.html` (the football parlay builder and its phone app).
+`parlay.py` + `webapp/parlay.html` (the football parlay builder and its phone app),
+`names.py` (canonical NFL/soccer keys), `cfbd.py` (college injuries).
 Adding a factor is
 one function plus one adjustment line in `model_game`.

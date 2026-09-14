@@ -298,7 +298,8 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bott
 /* ---------- buttons ---------- */
 .btn{display:flex; align-items:center; justify-content:center; gap:8px; width:100%;
   min-height:52px; border-radius:14px; border:1px solid var(--line-2); background:var(--surface);
-  font-size:.92rem; font-weight:700; transition:transform .15s, filter .15s}
+  font-size:.92rem; font-weight:700; color:var(--ink); text-decoration:none;
+  transition:transform .15s, filter .15s}
 .btn:active{transform:scale(.985); filter:brightness(1.08)}
 .btn.primary{background:linear-gradient(170deg, var(--btn), var(--btn-2));
   border-color:transparent; color:var(--btn-ink); box-shadow:0 10px 26px -16px var(--btn-2)}
@@ -597,9 +598,8 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
       </div>
       <p class="lbl" id="boardcount"></p>
       <div class="legs" id="board"></div>
-      <p class="prose">Tap any leg to read its research and prices. The button on the right pins it
-        into every ticket; tap again to ban it. Pinned legs ignore every filter, so this is how you
-        force a 50/50 game in.</p>
+      <p class="prose">Tap any leg to read its research and prices. Pin puts it on <b>this</b> ticket
+        without restuffing the rung. Tap again to ban it. Pinned legs also ride into a rebuild.</p>
     </section>
 
     <!-- ============ SLIP ============ -->
@@ -629,9 +629,12 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
         </div>
       </div>
       <div class="card" id="sliplist"></div>
-      <button class="btn primary" id="copy" type="button">Copy all tickers</button>
+      <div class="row" style="gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn primary" id="copy" type="button">Copy tickers</button>
+        <button class="btn" id="openkalshi" type="button">Open combo on Kalshi</button>
+      </div>
       <textarea class="tickbox" id="tickers" readonly aria-label="Kalshi tickers"></textarea>
-      <p class="prose">Search each ticker on Kalshi to build the combo. <b>Prices move</b> — the
+      <p class="prose">Copy tickers or open the combo on Kalshi in one tap. <b>Prices move</b> — the
         numbers here are from the snapshot time in the header, not a live quote.</p>
     </section>
 
@@ -746,6 +749,9 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
           never filtered.</span></span></label>
       <label class="sw"><input type="checkbox" id="onegame" checked>
         <span>One leg per game<span class="sub">Both sides of a game can never both win</span></span></label>
+      <label class="sw"><input type="checkbox" id="notify">
+        <span>Ping me when the board lands<span class="sub">A notice when the morning snapshot is new.
+          Discord still posts either way. Works while the app is open, and the next time you open it.</span></span></label>
     </div>
 
     <div class="grp">
@@ -912,20 +918,47 @@ adopt(DATA);
 PRESETS=presetsFrom(SNAP);
 var START=(scopeInfo(SNAP.scope||"football")||SCOPES[0]||{key:"all"}).key;
 var S={tab:"build", scope:START, preset:"swing", payout:8.0, maxLegs:40,
-       liquid:true, trustCheap:false, noflag:true, onegame:true,
+       liquid:true, trustCheap:false, noflag:true, onegame:true, notify:false,
        leagues:leaguesIn(START), pins:{}, bans:{}, stake:10, q:"", sort:"p", leg:null,
        date:"week", frozen:false, ticket:[], replacing:null};
 
 try{ var saved=JSON.parse(localStorage.getItem("gt.v3")||"null");
   if(saved && scopeInfo(saved.scope)){
-    ["scope","preset","payout","maxLegs","liquid","trustCheap","noflag","onegame","stake","date"]
+    ["scope","preset","payout","maxLegs","liquid","trustCheap","noflag","onegame","stake","date","notify"]
       .forEach(function(k){ if(saved[k]!==undefined) S[k]=saved[k]; });
     S.leagues=leaguesIn(S.scope);
   }
 }catch(e){}
 function remember(){ try{ localStorage.setItem("gt.v3", JSON.stringify({
   scope:S.scope,preset:S.preset,payout:S.payout,maxLegs:S.maxLegs,liquid:S.liquid,
-  trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake,date:S.date})); }catch(e){} }
+  trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake,date:S.date,
+  notify:!!S.notify})); }catch(e){} }
+function kalshiMarket(l){
+  if(!l) return "https://kalshi.com";
+  if(l.kalshi_url) return l.kalshi_url;
+  var series=(l.series||(l.ticker||"").split("-")[0]||"").toLowerCase();
+  var event=(l.event_id||(l.ticker||"").replace(/-[^-]+$/,"")||"").toLowerCase();
+  return "https://kalshi.com/markets/"+series+"/"+event;
+}
+function kalshiCombo(legs){
+  var ids=(legs||[]).map(function(l){ return l.ticker; }).filter(Boolean).join(",");
+  return ids ? "https://kalshi.com/combos?ids="+ids : "https://kalshi.com/combos";
+}
+function addToFrozen(tk){
+  var l=LEGS.filter(function(x){ return x.ticker===tk; })[0]; if(!l) return;
+  S.pins[tk]=1; delete S.bans[tk];
+  var on=S.ticket.some(function(x){ return x.ticker===tk; });
+  if(!on){
+    if(S.onegame && S.ticket.some(function(x){ return x.event_id===l.event_id; })){
+      toast(l.pick+"'s game is already on this ticket — pinned for the next rebuild");
+    } else {
+      if(!S.frozen) S.ticket=currentTicket().legs.slice();
+      S.ticket.push(l);
+      toast("Pinned "+l.pick+" onto this ticket");
+    }
+  } else toast("Pinned "+l.pick+" — ticket stays as-is");
+  S.frozen=true;
+}
 
 /* ---- builder: the same objective as parlay.py ----
    Reach the payout with the highest win probability. Each leg buys -log(ask) of
@@ -1149,7 +1182,7 @@ function renderLegs(r){
         '<span class="b"><span class="nm2"><b>'+esc(l.pick)+'</b> '+
           '<span class="vs">vs '+esc(l.opp)+'</span>'+
           (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
-        '<span class="t">'+esc(l.ticker)+'</span></span>'+
+        '<span class="t"><a href="'+esc(kalshiMarket(l))+'" target="_blank" rel="noopener">'+esc(l.ticker)+'</a></span></span>'+
         '<span class="pr">'+cents(l.ask)+'</span></div>';
     }).join("");
     $("tickers").value=sorted.map(function(l){ return l.ticker; }).join("\n");
@@ -1224,8 +1257,9 @@ function openLeg(tk){
     ? '<button class="btn" type="button" data-replace="'+esc(l.ticker)+'">Replace this pick</button>'+
       '<button class="btn ghost" type="button" data-remove="'+esc(l.ticker)+'">Remove from ticket</button>'
     : '')+
+    '<a class="btn primary" href="'+esc(kalshiMarket(l))+'" target="_blank" rel="noopener">Open on Kalshi</a>'+
     '<button class="btn '+(pinned?"":"primary")+'" type="button" data-pin="'+esc(l.ticker)+'">'+
-    (pinned?"Unpin from every ticket":"Pin into every ticket")+'</button>'+
+    (pinned?"Unpin (ticket stays)":"Pin onto this ticket")+'</button>'+
     '<button class="btn ghost" type="button" data-ban="'+esc(l.ticker)+'">'+
     (banned?"Allow this leg again":"Never use this leg")+'</button>';
   $("ls-name").textContent=l.pick;
@@ -1368,6 +1402,17 @@ $("maxl").addEventListener("input",function(){ S.frozen=false; S.maxLegs=+this.v
     S[{liquid:"liquid",trust:"trustCheap",noflag:"noflag",onegame:"onegame"}[id]]=this.checked;
     render(); });
 });
+if($("notify")){
+  $("notify").checked=!!S.notify;
+  $("notify").addEventListener("change",function(){
+    S.notify=this.checked; remember();
+    if(S.notify){
+      if(window.GTHost && GTHost.requestNotify) GTHost.requestNotify();
+      else if(window.Notification && Notification.permission==="default") Notification.requestPermission();
+      toast("You will get a ping when a new board lands");
+    }
+  });
+}
 $("lgchips").addEventListener("click",function(e){
   var b=e.target.closest("button[data-lg]"); if(!b) return;
   var k=b.dataset.lg,i=S.leagues.indexOf(k);
@@ -1394,6 +1439,13 @@ $("copy").addEventListener("click",function(){
       function(){ toast("Select the box below to copy"); });
     return; }
   toast(ok?"Tickers copied":"Select the box below to copy");
+});
+if($("openkalshi")) $("openkalshi").addEventListener("click",function(){
+  var r=currentTicket();
+  if(!r.n){ toast("No legs to open"); return; }
+  var txt=r.legs.map(function(l){ return l.ticker; }).join("\n");
+  try{ if(navigator.clipboard) navigator.clipboard.writeText(txt); }catch(e){}
+  window.location.href=kalshiCombo(r.legs);
 });
 function dropFromTicket(tk){
   S.ticket=S.ticket.filter(function(l){ return l.ticker!==tk; });
@@ -1473,18 +1525,18 @@ document.addEventListener("click",function(e){
   var open=e.target.closest("[data-open]"); if(open){ openLeg(open.dataset.open); return; }
   var pin=e.target.closest("[data-pin]");
   if(pin){ var k=pin.dataset.pin;
-    if(S.pins[k]) delete S.pins[k]; else { S.pins[k]=1; delete S.bans[k]; }
-    S.frozen=false; render(); openLeg(k); return; }
+    if(S.pins[k]){ delete S.pins[k]; S.frozen=true; toast("Unpinned — this ticket is unchanged"); }
+    else addToFrozen(k);
+    render(); openLeg(k); return; }
   var ban=e.target.closest("[data-ban]");
   if(ban){ var b=ban.dataset.ban;
-    if(S.bans[b]) delete S.bans[b]; else { S.bans[b]=1; delete S.pins[b]; }
-    S.frozen=false; render(); openLeg(b); return; }
+    if(S.bans[b]) delete S.bans[b]; else { S.bans[b]=1; delete S.pins[b]; dropFromTicket(b); }
+    render(); openLeg(b); return; }
   var act=e.target.closest("[data-act]");
   if(act){ var a=act.dataset.act;
     if(S.bans[a]) delete S.bans[a];
-    else if(S.pins[a]){ delete S.pins[a]; S.bans[a]=1; }
-    else S.pins[a]=1;
-    S.frozen=false;
+    else if(S.pins[a]){ delete S.pins[a]; S.bans[a]=1; dropFromTicket(a); }
+    else addToFrozen(a);
     render(); }
 });
 
@@ -2001,6 +2053,7 @@ function refresh(manual){
     S.pins={}; S.bans={}; S.frozen=false; S.ticket=[];            // a pin on a game that is no longer listed is not a pin
     $("demo").hidden=!isDemo;
     renderDial(); render();
+    noteNewBoard(snap, manual);
     done("Updated — " + (scopeInfo(S.scope)||{games:0}).games + " games", true);
   }).catch(function(){
     done("Could not reach the board; showing the saved one", false);
@@ -2024,6 +2077,29 @@ function refresh(manual){
     }).catch(function(){});
 }
 $("refresh").addEventListener("click", function(){ refresh(true); });
+
+var SEEN_KEY="gt.seen.board";
+function pingBoard(title, body){
+  try{ if(window.GTHost && GTHost.boardArrived){ GTHost.boardArrived(title, body); return; } }catch(e){}
+  if(window.Notification && Notification.permission==="granted"){
+    try{ new Notification(title, {body:body, tag:"gt-board"}); }catch(e){}
+  }
+}
+function noteNewBoard(snap, noisy){
+  var stamp=(snap&&snap.generated_utc)||"";
+  var seen="";
+  try{ seen=localStorage.getItem(SEEN_KEY)||""; }catch(e){}
+  if(!stamp || stamp===seen) return;
+  try{ localStorage.setItem(SEEN_KEY, stamp); }catch(e){}
+  if(!seen) return;
+  var ids={}; (snap.legs||[]).forEach(function(l){ ids[l.event_id]=1; });
+  var n=Object.keys(ids).length;
+  if(S.notify || noisy) pingBoard("Morning board is up", n+" games · rebuild the ticket");
+}
+setInterval(function(){ if(S.notify) refresh(false); }, 15*60*1000);
+document.addEventListener("visibilitychange", function(){
+  if(!document.hidden && S.notify) refresh(false);
+});
 
 /* ---- boot ---- */
 $("demo").hidden=!isDemo;

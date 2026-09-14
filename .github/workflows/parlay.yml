@@ -56,6 +56,7 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ inputs.post == false && '' || secrets.DISCORD_WEBHOOK_URL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         run: |
           python parlay.py \
             --days "${{ inputs.days || 8 }}" \

@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
   <!-- The board is fetched from the repo on open; everything else is bundled,
-       so this is the only permission the app asks for. -->
+       so these are the only permissions the app asks for. POST_NOTIFICATIONS
+       is the morning-board ping, requested only if you turn that setting on. -->
   <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
   <application
       android:label="@string/app_name"
