@@ -268,6 +268,22 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bott
 .act{border:0; background:none; font-size:1rem; color:var(--ink-3); width:46px; flex:0 0 46px;
   display:grid; place-items:center; transition:transform .16s, color .16s}
 .act:active{transform:scale(.88); color:var(--gold)}
+.actpair{display:flex; flex-direction:column; justify-content:center; gap:4px; padding:8px 8px 8px 0; flex:0 0 auto}
+.actpair button{min-height:36px; min-width:78px; padding:6px 10px; border:1px solid var(--line-2);
+  border-radius:10px; background:var(--raise); color:var(--ink-2); font-size:.68rem; font-weight:800;
+  letter-spacing:.04em; text-transform:uppercase}
+.actpair button:active{transform:scale(.96)}
+.actpair .rm{color:var(--neg-ink); border-color:rgba(219,76,63,.35)}
+.when{display:inline-flex; align-items:center; margin-right:6px; padding:1px 6px; border-radius:5px;
+  font-size:.575rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+  background:var(--sunk); color:var(--ink-2); border:1px solid var(--line-2);
+  font-variation-settings:"wdth" 90; vertical-align:1px}
+.when.today{background:rgba(3,161,125,.16); color:var(--pos-ink); border-color:transparent}
+.dates button{scroll-snap-align:center; flex:0 0 auto; min-height:37px; padding:7px 13px;
+  border:1px solid var(--line); border-radius:99px; background:var(--surface);
+  font-size:.78rem; font-weight:700; color:var(--ink-2)}
+.dates button[aria-pressed="true"]{background:var(--gold-dim); border-color:var(--gold); color:var(--gold)}
+.edited{font-size:.72rem; color:var(--ink-3); padding:0 2px 2px}
 .flagline{grid-column:1/-1; font-size:.695rem; color:var(--warn-ink); font-weight:600;
   margin-top:4px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
   overflow:hidden; line-height:1.4}
@@ -517,6 +533,7 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
 
     <!-- ============ BUILD ============ -->
     <section class="tab" id="tab-build">
+      <nav class="rail dates" id="daterail" aria-label="Game date"></nav>
       <nav class="rail dial" id="dial" aria-label="Risk level"></nav>
       <p class="custom" id="custom" hidden>Custom target — tap a level to snap back</p>
 
@@ -562,6 +579,7 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
 
       <div>
         <p class="lbl" style="margin-bottom:8px">In the ticket <span class="mono" id="legcount"></span></p>
+        <p class="edited" id="edited" hidden>You edited this slip. Removing a pick no longer restuffs it to the rung.</p>
         <div class="legs" id="legs"></div>
       </div>
     </section>
@@ -752,6 +770,12 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
   <div class="body"><div class="scopelist" id="scopelist"></div></div>
 </div>
 
+<div class="sheet" id="replacesheet" hidden role="dialog" aria-modal="true" aria-label="Replace a pick">
+  <div class="grab"></div>
+  <div class="sh"><h2 id="rs-name">Replace</h2><button class="x" type="button" data-close aria-label="Close">✕</button></div>
+  <div class="body" id="rs-body"></div>
+</div>
+
 <script id="parlay-data" type="application/json">__PARLAY_DATA__</script>
 <script>
 (function(){
@@ -840,6 +864,36 @@ var ALL_SCOPES=[
 function scopeLeagues(k){ var x=ALL_SCOPES.filter(function(y){return y.key===k;})[0];
   return (x&&x.leagues)?x.leagues:null; }
 function inScope(l,k){ var lg=scopeLeagues(k); return !lg||lg.indexOf(l.league)>=0; }
+function todayISO(now){
+  now = now || new Date();
+  var parts = new Intl.DateTimeFormat("en-CA",{timeZone:"America/Chicago",
+    year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(now);
+  var o={}; parts.forEach(function(p){ o[p.type]=p.value; });
+  return o.year+"-"+o.month+"-"+o.day;
+}
+function addDaysISO(iso, days){
+  var p=iso.split("-").map(Number);
+  var dt=new Date(Date.UTC(p[0], p[1]-1, p[2]+days));
+  return dt.toISOString().slice(0,10);
+}
+function inDate(l){
+  var today=todayISO();
+  var d=l.date||"";
+  if(!S.date || S.date==="all") return true;
+  if(S.date==="today") return d===today;
+  if(S.date==="tomorrow") return d===addDaysISO(today,1);
+  if(S.date==="week") return d>=today && d<=addDaysISO(today,6);
+  return d===S.date;
+}
+function dateLabel(iso){
+  var today=todayISO();
+  if(!iso) return "";
+  if(iso===today) return "Today";
+  if(iso===addDaysISO(today,1)) return "Tomorrow";
+  var p=iso.split("-").map(Number);
+  var dt=new Date(Date.UTC(p[0], p[1]-1, p[2]));
+  return new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",timeZone:"UTC"}).format(dt);
+}
 function leaguesIn(k){ var o=[]; LEGS.forEach(function(l){
   if(inScope(l,k)&&o.indexOf(l.league)<0) o.push(l.league); }); return o; }
 
@@ -859,18 +913,19 @@ PRESETS=presetsFrom(SNAP);
 var START=(scopeInfo(SNAP.scope||"football")||SCOPES[0]||{key:"all"}).key;
 var S={tab:"build", scope:START, preset:"swing", payout:8.0, maxLegs:40,
        liquid:true, trustCheap:false, noflag:true, onegame:true,
-       leagues:leaguesIn(START), pins:{}, bans:{}, stake:10, q:"", sort:"p", leg:null};
+       leagues:leaguesIn(START), pins:{}, bans:{}, stake:10, q:"", sort:"p", leg:null,
+       date:"week", frozen:false, ticket:[], replacing:null};
 
 try{ var saved=JSON.parse(localStorage.getItem("gt.v3")||"null");
   if(saved && scopeInfo(saved.scope)){
-    ["scope","preset","payout","maxLegs","liquid","trustCheap","noflag","onegame","stake"]
+    ["scope","preset","payout","maxLegs","liquid","trustCheap","noflag","onegame","stake","date"]
       .forEach(function(k){ if(saved[k]!==undefined) S[k]=saved[k]; });
     S.leagues=leaguesIn(S.scope);
   }
 }catch(e){}
 function remember(){ try{ localStorage.setItem("gt.v3", JSON.stringify({
   scope:S.scope,preset:S.preset,payout:S.payout,maxLegs:S.maxLegs,liquid:S.liquid,
-  trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake})); }catch(e){} }
+  trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake,date:S.date})); }catch(e){} }
 
 /* ---- builder: the same objective as parlay.py ----
    Reach the payout with the highest win probability. Each leg buys -log(ask) of
@@ -895,6 +950,7 @@ function isLiquid(l){
 }
 function usable(l){
   if(!inScope(l,S.scope)) return false;
+  if(!inDate(l)) return false;
   if(S.leagues.indexOf(l.league)<0) return false;
   if(S.bans[l.ticker]) return false;
   if(!(l.ask>0 && l.ask<0.999)) return false;
@@ -911,7 +967,7 @@ function ratioOf(l){ var g=gainOf(l);
   return g>1e-12 ? (-Math.log(Math.max(est(l),1e-9)))/g : Infinity; }
 
 function build(){
-  var pinned=LEGS.filter(function(l){ return S.pins[l.ticker]&&!S.bans[l.ticker]&&inScope(l,S.scope); });
+  var pinned=LEGS.filter(function(l){ return S.pins[l.ticker]&&!S.bans[l.ticker]&&inScope(l,S.scope)&&inDate(l); });
   var left=LEGS.filter(function(l){ return !S.pins[l.ticker]&&usable(l); })
     .sort(function(a,b){ return (ratioOf(a)-ratioOf(b))||(b.p-a.p); });
   var chosen=[],used={},got=0;
@@ -987,18 +1043,24 @@ function legRow(l,board){
        : (r.checked ? (r.unattributed&&r.unattributed.length ? "❔" : "📰") : "");
   var sub=(l.flags&&l.flags.length)?'<span class="flagline">⚠ '+esc(l.flags[0])+'</span>'
         :(l.notes?'<span class="flagline plain">'+esc(l.notes)+'</span>':'');
+  var when=dateLabel(l.date);
+  var whenChip=when?'<span class="when'+(when==="Today"?" today":"")+'">'+esc(when)+'</span>':'';
+  var actions=board
+    ? '<button class="act" type="button" data-act="'+esc(l.ticker)+'" aria-label="pin or ban '+esc(l.pick)+'">'+act+'</button>'
+    : '<div class="actpair">'+
+        '<button type="button" data-replace="'+esc(l.ticker)+'" aria-label="Replace '+esc(l.pick)+'">Replace</button>'+
+        '<button class="rm" type="button" data-remove="'+esc(l.ticker)+'" aria-label="Remove '+esc(l.pick)+'">Remove</button>'+
+      '</div>';
   return '<div class="legwrap'+(banned?" banned":"")+(pinned?" pinned":"")+'">'+
     '<button class="leg" type="button" data-open="'+esc(l.ticker)+'">'+
       '<span class="who"><span class="nm">'+esc(l.pick)+
         (l.draw?'<span class="draw">DRAW LOSES</span>':'')+'</span>'+
-        '<span class="mt"><span class="tierchip t'+t[2]+'">'+esc(t[1])+'</span> '+
+        '<span class="mt">'+whenChip+'<span class="tierchip t'+t[2]+'">'+esc(t[1])+'</span> '+
         (mark?mark+" ":"")+'vs '+esc(l.opp)+(l.home?' (home)':'')+' · '+esc(l.league_label)+'</span>'+
         '<span class="meter"><i style="width:'+(100*l.p).toFixed(0)+'%"></i></span></span>'+
       '<span class="pc"><span class="p">'+cents(l.p)+'</span>'+
         '<span class="a">pay '+cents(l.ask)+(l.spread!=null?' · '+Math.round(100*l.spread)+'¢ sp':'')+'</span></span>'+
-      sub+'</button>'+
-    '<button class="act" type="button" data-act="'+esc(l.ticker)+'" aria-label="'+
-      (board?"pin or ban":"remove")+' '+esc(l.pick)+'">'+act+'</button></div>';
+      sub+'</button>'+actions+'</div>';
 }
 
 /* ---- render ---- */
@@ -1098,6 +1160,7 @@ function renderBoard(){
   var q=S.q.toLowerCase();
   var rows=LEGS.filter(function(l){
     if(!inScope(l,S.scope)) return false;
+    if(!inDate(l)) return false;
     if(S.sort==="pinned"&&!S.pins[l.ticker]&&!S.bans[l.ticker]) return false;
     if(S.sort==="news"&&!((l.research||{}).checked)) return false;
     if(!q) return true;
@@ -1156,7 +1219,12 @@ function openLeg(tk){
       'builder actually wants, so a leg no ticket uses is usually left unchecked.</p>';
   }
   var pinned=!!S.pins[l.ticker], banned=!!S.bans[l.ticker];
-  html+='<button class="btn '+(pinned?"":"primary")+'" type="button" data-pin="'+esc(l.ticker)+'">'+
+  var onSlip=S.ticket.some(function(x){ return x.ticker===l.ticker; });
+  html+=(onSlip
+    ? '<button class="btn" type="button" data-replace="'+esc(l.ticker)+'">Replace this pick</button>'+
+      '<button class="btn ghost" type="button" data-remove="'+esc(l.ticker)+'">Remove from ticket</button>'
+    : '')+
+    '<button class="btn '+(pinned?"":"primary")+'" type="button" data-pin="'+esc(l.ticker)+'">'+
     (pinned?"Unpin from every ticket":"Pin into every ticket")+'</button>'+
     '<button class="btn ghost" type="button" data-ban="'+esc(l.ticker)+'">'+
     (banned?"Allow this leg again":"Never use this leg")+'</button>';
@@ -1165,10 +1233,52 @@ function openLeg(tk){
   openSheet("legsheet");
 }
 
-function render(){
-  renderScopeBtn(); renderControls();
+function boardDates(){
+  var set={}, out=[];
+  LEGS.forEach(function(l){ if(l.date && !set[l.date]){ set[l.date]=1; out.push(l.date); } });
+  out.sort();
+  return out;
+}
+function renderDateRail(){
+  var today=todayISO();
+  var chips=[{id:"today",label:"Today"},{id:"tomorrow",label:"Tomorrow"},
+             {id:"week",label:"This week"},{id:"all",label:"All days"}];
+  boardDates().forEach(function(d){
+    if(d===today) return;
+    if(chips.some(function(c){ return c.id===d; })) return;
+    chips.push({id:d, label:d.slice(5)});
+  });
+  var host=$("daterail");
+  if(!host) return;
+  host.innerHTML=chips.map(function(c){
+    return '<button type="button" data-date="'+esc(c.id)+'" aria-pressed="'+
+      (S.date===c.id?"true":"false")+'">'+esc(c.label)+'</button>';
+  }).join("");
+}
+function rebuild(){
+  S.frozen=false;
   var r=summarise(build());
+  S.ticket=r.legs.slice();
+  return r;
+}
+function currentTicket(){
+  if(S.frozen){
+    var keep=S.ticket.filter(function(l){
+      return LEGS.some(function(x){ return x.ticker===l.ticker; });
+    }).map(function(l){
+      return LEGS.filter(function(x){ return x.ticker===l.ticker; })[0] || l;
+    });
+    S.ticket=keep;
+    return summarise(keep);
+  }
+  return rebuild();
+}
+function render(){
+  renderScopeBtn(); renderControls(); renderDateRail();
+  var r=currentTicket();
   renderTicket(r); renderLegs(r); renderBoard();
+  var ed=$("edited");
+  if(ed){ ed.hidden=!S.frozen; }
   markMine(); renderPaper();
   var sc=scopeInfo(S.scope);
   var age=ageOf(SNAP.generated_utc);
@@ -1192,7 +1302,7 @@ function showTab(k){
 }
 function openSheet(id){ $("scrim").hidden=false; $(id).hidden=false; }
 function closeSheets(){ $("scrim").hidden=true;
-  ["tune","scopesheet","legsheet"].forEach(function(i){ $(i).hidden=true; }); }
+  ["tune","scopesheet","legsheet","replacesheet"].forEach(function(i){ $(i).hidden=true; }); }
 function toast(msg){
   var t=document.createElement("div"); t.className="toast"; t.textContent=msg;
   document.body.appendChild(t); setTimeout(function(){ t.remove(); },1700);
@@ -1236,33 +1346,38 @@ $("opentune").addEventListener("click",function(){ openSheet("tune"); });
 $("scrim").addEventListener("click",closeSheets);
 $("scopelist").addEventListener("click",function(e){
   var b=e.target.closest("button[data-sc]"); if(!b) return;
+  S.frozen=false;
   S.scope=b.dataset.sc; S.leagues=leaguesIn(S.scope); S.q=""; $("q").value="";
   renderScopeList(); render(); closeSheets();
 });
 $("dial").addEventListener("click",function(e){
   var b=e.target.closest("button[data-k]"); if(!b) return;
   var p=PRESETS.filter(function(x){ return x.key===b.dataset.k; })[0]; if(!p) return;
+  S.frozen=false;
   S.preset=p.key; S.payout=p.payout; renderDial(); render();
 });
 $("pay").addEventListener("input",function(){
+  S.frozen=false;
   S.payout=Math.round(sliderToPay(+this.value)*100)/100; S.preset="";
   renderDial(); render();
 });
-$("maxl").addEventListener("input",function(){ S.maxLegs=+this.value; render(); });
+$("maxl").addEventListener("input",function(){ S.frozen=false; S.maxLegs=+this.value; render(); });
 ["liquid","trust","noflag","onegame"].forEach(function(id){
   $(id).addEventListener("change",function(){
+    S.frozen=false;
     S[{liquid:"liquid",trust:"trustCheap",noflag:"noflag",onegame:"onegame"}[id]]=this.checked;
     render(); });
 });
 $("lgchips").addEventListener("click",function(e){
   var b=e.target.closest("button[data-lg]"); if(!b) return;
   var k=b.dataset.lg,i=S.leagues.indexOf(k);
+  S.frozen=false;
   if(i>=0){ if(S.leagues.length>1) S.leagues.splice(i,1); } else S.leagues.push(k);
   render();
 });
 $("stake").addEventListener("input",function(){ S.stake=parseFloat(this.value)||0; render(); });
 $("q").addEventListener("input",function(){ S.q=this.value; renderBoard(); });
-$("reset").addEventListener("click",function(){ S.pins={}; S.bans={}; render(); toast("Pins and bans cleared"); });
+$("reset").addEventListener("click",function(){ S.frozen=false; S.pins={}; S.bans={}; render(); toast("Pins and bans cleared"); });
 $("sorts").addEventListener("click",function(e){
   var b=e.target.closest("button[data-sort]"); if(!b) return;
   S.sort=b.dataset.sort;
@@ -1280,24 +1395,96 @@ $("copy").addEventListener("click",function(){
     return; }
   toast(ok?"Tickers copied":"Select the box below to copy");
 });
+function dropFromTicket(tk){
+  S.ticket=S.ticket.filter(function(l){ return l.ticker!==tk; });
+  S.frozen=true;
+  delete S.pins[tk];
+}
+function eligibleReplacements(dropping){
+  var usedEvents={}, usedTickers={};
+  S.ticket.forEach(function(l){
+    if(l.ticker===dropping) return;
+    usedEvents[l.event_id]=1; usedTickers[l.ticker]=1;
+  });
+  return LEGS.filter(function(l){
+    if(usedTickers[l.ticker]) return false;
+    if(S.onegame && usedEvents[l.event_id]) return false;
+    return usable(l) || (!!S.pins[l.ticker] && !S.bans[l.ticker] && inDate(l));
+  }).sort(function(a,b){ return b.p-a.p; });
+}
+function applyReplace(next){
+  if(!S.replacing) return;
+  var found=false;
+  S.ticket=S.ticket.map(function(l){
+    if(l.ticker!==S.replacing) return l;
+    found=true; return next;
+  });
+  if(!found) S.ticket.push(next);
+  S.frozen=true;
+  S.replacing=null;
+  closeSheets();
+  toast("Swapped for "+next.pick);
+  render();
+}
+function openReplace(tk){
+  var l=LEGS.filter(function(x){ return x.ticker===tk; })[0]; if(!l) return;
+  S.replacing=tk;
+  var cands=eligibleReplacements(tk);
+  $("rs-name").textContent="Replace "+l.pick;
+  var html='<p class="prose">The payout will change. This will not restuff the ticket to the original rung.</p>'+
+    '<button class="btn primary" type="button" id="rs-random"'+(cands.length?"":" disabled")+'>Random eligible bet · '+cands.length+'</button>'+
+    '<button class="btn" type="button" id="rs-choose"'+(cands.length?"":" disabled")+'>Choose a bet</button>'+
+    '<p class="hint">Only legs that fit the current date, sport, and filters.</p>'+
+    '<div id="rs-list" hidden></div>';
+  $("rs-body").innerHTML=html;
+  $("rs-list").innerHTML=cands.map(function(x){
+    return '<button class="btn" type="button" data-pick="'+esc(x.ticker)+'" style="justify-content:space-between">'+
+      '<span>'+esc(x.pick)+' <span class="when'+(dateLabel(x.date)==="Today"?" today":"")+'">'+esc(dateLabel(x.date)||"")+'</span></span>'+
+      '<span class="num">'+cents(x.ask)+'</span></button>';
+  }).join("") || '<p class="empty">No eligible replacements on this filter.</p>';
+  $("rs-random").onclick=function(){
+    if(!cands.length){ toast("No eligible replacements"); return; }
+    applyReplace(cands[Math.floor(Math.random()*cands.length)]);
+  };
+  $("rs-choose").onclick=function(){ $("rs-list").hidden=false; };
+  openSheet("replacesheet");
+}
 document.addEventListener("click",function(e){
   if(e.target.closest("[data-close]")){ closeSheets(); return; }
-  if(e.target.id==="fixit"&&FIX){ FIX(); renderDial(); render(); return; }
+  if(e.target.id==="fixit"&&FIX){ FIX(); S.frozen=false; renderDial(); render(); return; }
+  var dateBtn=e.target.closest("[data-date]");
+  if(dateBtn){ S.date=dateBtn.dataset.date; S.frozen=false; render(); return; }
+  var pick=e.target.closest("[data-pick]");
+  if(pick){
+    var nxt=LEGS.filter(function(x){ return x.ticker===pick.dataset.pick; })[0];
+    if(nxt) applyReplace(nxt);
+    return;
+  }
+  var rm=e.target.closest("[data-remove]");
+  if(rm){
+    var name=(LEGS.filter(function(x){ return x.ticker===rm.dataset.remove; })[0]||{}).pick || "leg";
+    dropFromTicket(rm.dataset.remove);
+    closeSheets();
+    toast("Removed "+name+". Payout drops — not restuffed.");
+    render(); return;
+  }
+  var rp=e.target.closest("[data-replace]");
+  if(rp){ closeSheets(); openReplace(rp.dataset.replace); return; }
   var open=e.target.closest("[data-open]"); if(open){ openLeg(open.dataset.open); return; }
   var pin=e.target.closest("[data-pin]");
   if(pin){ var k=pin.dataset.pin;
     if(S.pins[k]) delete S.pins[k]; else { S.pins[k]=1; delete S.bans[k]; }
-    render(); openLeg(k); return; }
+    S.frozen=false; render(); openLeg(k); return; }
   var ban=e.target.closest("[data-ban]");
   if(ban){ var b=ban.dataset.ban;
     if(S.bans[b]) delete S.bans[b]; else { S.bans[b]=1; delete S.pins[b]; }
-    render(); openLeg(b); return; }
+    S.frozen=false; render(); openLeg(b); return; }
   var act=e.target.closest("[data-act]");
   if(act){ var a=act.dataset.act;
-    if(S.tab==="build"){ S.bans[a]=1; delete S.pins[a]; }
-    else if(S.bans[a]) delete S.bans[a];
+    if(S.bans[a]) delete S.bans[a];
     else if(S.pins[a]){ delete S.pins[a]; S.bans[a]=1; }
     else S.pins[a]=1;
+    S.frozen=false;
     render(); }
 });
 
@@ -1811,7 +1998,7 @@ function refresh(manual){
     PRESETS=presetsFrom(SNAP);
     if(!scopeInfo(S.scope)) S.scope=(SCOPES[0]||{key:"all"}).key;
     S.leagues=leaguesIn(S.scope);
-    S.pins={}; S.bans={};            // a pin on a game that is no longer listed is not a pin
+    S.pins={}; S.bans={}; S.frozen=false; S.ticket=[];            // a pin on a game that is no longer listed is not a pin
     $("demo").hidden=!isDemo;
     renderDial(); render();
     done("Updated — " + (scopeInfo(S.scope)||{games:0}).games + " games", true);
