@@ -270,8 +270,9 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
 
     # --- what the market did before we got here (recorded, never a gate yet) ---
     fl = None
+    near = float((cfg.get("research") or {}).get("near_edge", 0.02))
     if flow_budget is not None and flow_budget.get("left", 0) > 0 and \
-            research.eligible(tier, c["edge"], thr):
+            (tier == "EDGE" or c["edge"] >= thr - near):
         flow_budget["left"] -= 1
         fl = flow.read(lg["ticker"], c["side"]["ticker"],
                        hours=cfg.get("flow", {}).get("hours", flow.LOOKBACK_H))

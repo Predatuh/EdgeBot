@@ -30,7 +30,8 @@ epa_weight: 0.0          # per-league below. Share of the MODEL's own probabilit
 flow:
   enabled: true          # record what the market did before we got here
   hours: 96              # how far back to read the price history
-  max_per_run: 25        # two API calls a pick, so it goes where research goes
+  max_per_run: 12        # per league, per run. Two API calls a pick, and it only
+                         # runs on picks at or near a stake, so this is rarely reached.
   gate: false            # flow NEVER blocks a pick yet. Turn this on only once the graded
                          # record says the signal predicts something.
 full_conf_games: 25      # model gets its full 50% voice only once BOTH sides have this many rated games
