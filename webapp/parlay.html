@@ -625,6 +625,7 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
       <div id="vsmarket"></div>
       <div class="grid2" id="tiles"></div>
       <div id="gatewrap"></div>
+      <div id="signalwrap"></div>
       <div id="leaguewrap"></div>
       <div id="ratingwrap"></div>
     </section>
@@ -1411,6 +1412,39 @@ function renderStats(){
     '<div class="scroll"><table class="rows"><thead><tr><th>Gate</th><th class="n">n</th>'+
     '<th class="n">W-L</th><th class="n">vs price</th></tr></thead><tbody>'+gr+
     '</tbody></table></div>');
+
+  // --- the two signals added after the record said the model loses to the price.
+  //     They gate nothing; these rows are how we find out whether they should.
+  function bucketCard(title, note, obj, first) {
+    var keys = Object.keys(obj || {});
+    var any = keys.some(function(k){ return (obj[k].n || 0) > 0; });
+    if (!keys.length) return "";
+    if (!any) {
+      return card(title, note,
+        '<p class="prose">Nothing graded with this yet. Every pick from here on '+
+        'records it, so these rows fill in as games settle.</p>');
+    }
+    var rows = keys.filter(function(k){ return obj[k].n; }).map(function(k){
+      var x = obj[k], d = (x.w || 0) - (x.expected_w || 0);
+      return '<tr><td>'+esc(k.replace(/_/g, " "))+'</td><td class="n">'+x.n+
+        '</td><td class="n">'+x.w+"-"+x.l+'</td><td class="n '+(d>=0?"up":"down")+'">'+
+        (d>=0?"▲":"▼")+" "+sgn(d)+'</td></tr>';
+    }).join("");
+    return card(title, note,
+      '<div class="scroll"><table class="rows"><thead><tr><th>'+esc(first)+
+      '</th><th class="n">n</th><th class="n">W-L</th><th class="n">vs price</th>'+
+      '</tr></thead><tbody>'+rows+'</tbody></table></div>');
+  }
+  $("signalwrap").innerHTML =
+    bucketCard("What the market did before we bet",
+      "Which way our side's price moved between listing and the pick. "+
+      "<b>toward</b> means the market came to us and we are paying more for it; "+
+      "<b>away</b> means we are early, or wrong. "+
+      "<b>prints and size disagree</b> is the exchange's version of a "+
+      "tickets-versus-money split.", st.by_flow, "Market move") +
+    bucketCard("What the plays say",
+      "Play-by-play efficiency, against the side we took. EPA knows nothing about "+
+      "who won - that is the point of having it next to Elo.", st.by_epa, "EPA");
 
   // --- leagues
   // by_league nests league -> tier -> record, unlike by_gate which is flat

@@ -701,7 +701,7 @@ def write_pwa(outdir, name="Gridiron Ticket", short="Ticket"):
 
 def load_stats(path=None, keep=("generated_utc", "picks_logged", "overall", "last_7_days",
                                 "by_league", "model_vs_market", "by_gate", "top_ratings",
-                                "tipsters")):
+                                "by_flow", "by_epa", "tipsters")):
     """The bot's own record, for the app's Stats tab.
 
     main.py has always written this and it has only ever been readable as raw JSON
