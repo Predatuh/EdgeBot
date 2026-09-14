@@ -252,3 +252,46 @@ def disagrees(f, min_gap=0.15):
     if not t:
         return False
     return abs(t["gap"]) >= min_gap and (t["ticket_share"] - 0.5) * (t["money_share"] - 0.5) < 0
+
+
+# ---------------------------------------------------------------------- CLI
+def check(league_ticker, n=2, hours=LOOKBACK_H):
+    """Read flow off the most-traded open markets in a series, and print it.
+
+    This exists because the first live version of taker_flow returned None on
+    every pick and the pick log could not say why: a pick is written once, so a
+    re-run with a fix does not refresh it. Ask the market directly instead.
+    """
+    evs = [e for e in kalshi.open_events(league_ticker, 0.15, "away_home") if e["sides"]]
+    if not evs:
+        print(f"[flow] {league_ticker}: nothing open")
+        return 1
+    evs.sort(key=lambda e: -max((s.get("vol") or 0) for s in e["sides"]))
+    ok = 0
+    for ev in evs[:n]:
+        side = max(ev["sides"], key=lambda s: s.get("vol") or 0)
+        f = read(league_ticker, side["ticker"], hours=hours)
+        print(f"\n[flow] {side['ticker']}  vol {side.get('vol'):.0f}  ask {side.get('ask')}")
+        print(f"[flow]   history : {f['candles']} candles -> {f['move']}")
+        print(f"[flow]   tape    : {f['tape']}")
+        print(f"[flow]   book    : {f['book']}")
+        print(f"[flow]   reads as: {note(f, side['name']) or '(nothing)'}")
+        if f["tape"] and f["book"]:
+            ok += 1
+    print(f"\n[flow] {ok}/{min(n, len(evs))} markets gave a full reading")
+    return 0 if ok else 1
+
+
+def _cli(argv=None):
+    import argparse
+    ap = argparse.ArgumentParser(description="What the market did before we got here")
+    ap.add_argument("--check", default="KXNCAAFGAME",
+                    help="series ticker to read a live sample from")
+    ap.add_argument("--n", type=int, default=2, help="how many markets to sample")
+    ap.add_argument("--hours", type=int, default=LOOKBACK_H)
+    a = ap.parse_args(argv)
+    return check(a.check, a.n, a.hours)
+
+
+if __name__ == "__main__":
+    raise SystemExit(_cli())
