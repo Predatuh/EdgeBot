@@ -26,6 +26,15 @@ LOG_FIELDS = [
     "research_lean",  # -3..+3: how the research moved us on the pick
     "research_adj",   # Elo points applied to the pick from that lean
     "research_flag",  # red flags found (an EDGE with a flag is demoted to LEAN)
+    # The two signals added after 611 graded picks said the model was losing to
+    # the price. Recorded on every pick and gating nothing, so the question of
+    # whether either predicts anything is settled by the record.
+    "epa_points",     # play-by-play margin on OUR side, in points (+ = EPA likes the pick)
+    "epa_p",          # EPA's own win probability for the home side
+    "flow_move",      # how far our side's price travelled since it listed, in probability
+    "flow_dir",       # toward / away / flat - which way the market moved on our side
+    "flow_ticket_share",  # share of PRINTS taking our side
+    "flow_money_share",   # share of CONTRACTS taking it; the gap is the split
     "result",        # W / L / V (void: the event resolved with no winner)
     "graded_utc",    # when we graded it, so a late settlement still reaches a results card
     "close_prob",    # last LIVE price seen before settlement - a real pre-start close.
@@ -455,6 +464,27 @@ def record_summary():
         "agrees (|d|<=0.02)": _stats([r for r in graded if abs(d(r)) <= 0.02]),
         "model_dislikes_our_side (d<-0.02)": _stats([r for r in graded if d(r) < -0.02]),
     }
+    # Do the two new signals predict anything? Bucketed the same way as everything
+    # else - n, W-L, and wins against what the price implied - because that is the
+    # only comparison that survives a small sample. Neither gates a pick until
+    # these rows say something.
+    with_flow = [r for r in graded if r.get("flow_dir")]
+    out["by_flow"] = {b: _stats([r for r in with_flow if r["flow_dir"] == b])
+                      for b in ("toward", "flat", "away")}
+    split = [r for r in with_flow
+             if r.get("flow_ticket_share") != "" and r.get("flow_money_share") != ""
+             and (_fl(r["flow_ticket_share"]) - 0.5) * (_fl(r["flow_money_share"]) - 0.5) < 0]
+    out["by_flow"]["prints_and_size_disagree"] = _stats(split)
+
+    def epa_bucket(r):
+        if r.get("epa_points") in ("", None):
+            return None
+        v = _fl(r["epa_points"])
+        return "epa_likes_our_side" if v >= 3 else (
+            "epa_against_our_side" if v <= -3 else "epa_neutral")
+    out["by_epa"] = {b: _stats([r for r in graded if epa_bucket(r) == b])
+                     for b in ("epa_likes_our_side", "epa_neutral", "epa_against_our_side")}
+
     # Which gate stopped each would-be stake, so the paper edges stay measurable.
     gates = {}
     for r in rows:

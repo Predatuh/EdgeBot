@@ -25,6 +25,14 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      # Team efficiency from play-by-play, refreshed before the picks that use it.
+      # NFL needs nothing; college needs the free CFBD key and is skipped without it.
+      - name: Refresh EPA
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        continue-on-error: true          # a missing feed must not stop the card
+        run: python epa.py --league nfl,ncaaf
+
       - name: Run EdgeBot
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

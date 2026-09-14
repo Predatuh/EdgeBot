@@ -24,7 +24,7 @@ import sys
 import traceback
 import yaml
 
-import kalshi, espn, elo, edge, weather, state, notify, research
+import kalshi, espn, elo, edge, weather, state, notify, research, epa, flow
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # All-Star style events: not real teams, keep them out of the ratings and the card.
@@ -96,7 +96,7 @@ def ingest_history(key, lg):
 
 
 # ---------------------------------------------------------------- modelling
-def model_game(key, lg, cfg, ev, ratings, hist):
+def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None):
     """Return a dict describing the pick for one Kalshi event, or None."""
     msides = kalshi.match_sides(ev)
     sides = [s for s in msides if not s["is_tie"]]
@@ -184,10 +184,21 @@ def model_game(key, lg, cfg, ev, ratings, hist):
     require_rating_edge = cfg.get("require_rating_edge", False)
     staking = cfg.get("staking", False) and lg.get("stake", True)
 
+    # What the play-by-play says about this game, independent of who has won.
+    # Blended INTO the model's own probability, never added to Elo as a nudge:
+    # both know most of the same things, and stacking them counts that twice.
+    epa_w = lg.get("epa_weight", cfg.get("epa_weight", 0.0))
+    epa_m = epa.matchup(epa_table, home["name"], away["name"],
+                        home_points=(0 if neutral else home_adv / 25.0)) if epa_w else None
+    if epa_m:
+        notes.append(epa.note(epa_m, home["name"], away["name"]))
+
     def decide(extra_home_adj):
         """Blend model + market for a given extra Elo adjustment on the home side,
         pick the side with the most edge (a lean is simply the model favorite)."""
         p_home = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj + extra_home_adj)
+        if epa_m:
+            p_home = (1 - epa_w) * p_home + epa_w * epa_m["p_home"]
         if tie:
             pd = devigged[2]
             raw_home = max(0.0, min(1.0, p_home - pd / 2))
@@ -257,8 +268,22 @@ def model_game(key, lg, cfg, ev, ratings, hist):
                 tier, units, gate = "LEAN", 0.0, "research_flag"
                 notes.append("research red flag: not staked")
 
+    # --- what the market did before we got here (recorded, never a gate yet) ---
+    fl = None
+    if flow_budget is not None and flow_budget.get("left", 0) > 0 and \
+            research.eligible(tier, c["edge"], thr):
+        flow_budget["left"] -= 1
+        fl = flow.read(lg["ticker"], c["side"]["ticker"],
+                       hours=cfg.get("flow", {}).get("hours", flow.LOOKBACK_H))
+        line = flow.note(fl, c["side"]["name"])
+        if line:
+            notes.append(line)
+        if flow.disagrees(fl):
+            notes.append("tape split: the prints and the size are on opposite sides")
+
     notes.append(f"Elo {elo_h:.0f} v {elo_a:.0f}; model wt {model_w*100:.0f}%"
-                 + (f"; research {r_adj:+.0f} Elo" if r_adj else ""))
+                 + (f"; research {r_adj:+.0f} Elo" if r_adj else "")
+                 + (f"; epa wt {epa_w*100:.0f}%" if epa_m else ""))
 
     raw_home_final = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj)
     model_fav = home["name"] if raw_home_final >= 0.5 else away["name"]
@@ -269,6 +294,14 @@ def model_game(key, lg, cfg, ev, ratings, hist):
         "matchup": matchup, "games": games, "brief": brief, "r_adj": r_adj,
         "gate": gate, "staked": 1 if units > 0 else 0, "model_fav": model_fav,
         "model_fav_won": None,
+        # the two new signals, recorded on every pick so that whether they predict
+        # anything is something the graded record answers, not something I assert
+        "epa_points": (epa_m["points"] * c["sign"]) if epa_m else None,
+        "epa_p": epa_m["p_home"] if epa_m else None,
+        "flow_move": (fl or {}).get("move", {}).get("delta") if fl else None,
+        "flow_dir": flow.verdict(fl) if fl else "",
+        "flow_ticket_share": ((fl or {}).get("tape") or {}).get("ticket_share"),
+        "flow_money_share": ((fl or {}).get("tape") or {}).get("money_share"),
     }
 
 
@@ -289,6 +322,15 @@ def run_league(key, lg, cfg, body, grade_only=False):
         print(f"[{key}] graded {gw}W/{gl}L; {n_snap} live price snapshot(s)")
         return gw, gl, state.top_ratings(ratings)
     hist = state.load_history(key)
+    epa_table = epa.load(key) if lg.get("epa_weight", cfg.get("epa_weight", 0.0)) else None
+    if epa_table:
+        print(f"[{key}] epa: {len(epa_table.get('teams') or {})} teams rated "
+              f"({epa_table.get('_source', '?')})")
+    # Flow costs two API calls a pick, so it goes where research goes: the picks
+    # that are close to being staked, and no further.
+    fcfg = cfg.get("flow") or {}
+    flow_budget = ({"left": fcfg.get("max_per_run", 25)}
+                   if fcfg.get("enabled", True) else None)
     today = dt.date.today().isoformat()
     evs = [e for e in evs if e["date"] == today]
     print(f"[{key}] open events today: {len(evs)}; graded {gw}W/{gl}L")
@@ -296,7 +338,7 @@ def run_league(key, lg, cfg, body, grade_only=False):
     max_lean_lines = (cfg.get("card") or {}).get("max_lean_lines", 3)
     lines, leans = [], []
     for ev in evs:
-        r = model_game(key, lg, cfg, ev, ratings, hist)
+        r = model_game(key, lg, cfg, ev, ratings, hist, epa_table, flow_budget)
         if not r:
             continue
         if r["pass"]:
@@ -324,6 +366,14 @@ def run_league(key, lg, cfg, body, grade_only=False):
             "research_adj": r["r_adj"] or "",
             "research_flag": "; ".join((r["brief"] or {}).get("red_flags", [])),
             "staked": r["staked"], "gate": r["gate"], "model_fav": r["model_fav"],
+            "epa_points": r.get("epa_points") if r.get("epa_points") is not None else "",
+            "epa_p": r.get("epa_p") if r.get("epa_p") is not None else "",
+            "flow_move": r.get("flow_move") if r.get("flow_move") is not None else "",
+            "flow_dir": r.get("flow_dir") or "",
+            "flow_ticket_share": r.get("flow_ticket_share")
+                                 if r.get("flow_ticket_share") is not None else "",
+            "flow_money_share": r.get("flow_money_share")
+                                if r.get("flow_money_share") is not None else "",
             "result": "", "graded_utc": "", "close_prob": "", "close_utc": "", "clv": "", "profit": "",
         })
         if not logged:

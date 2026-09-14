@@ -23,6 +23,16 @@ require_rating_edge: true  # never stake a side the raw Elo rates BELOW its oppo
                            # (20 of 27 staked edges were on the lower-rated side)
 max_spread: 0.15         # YES bid/ask gap wider than 15¢ = no real market -> PASS (also catches empty books)
 market_weight: 0.5       # final prob = 50% market + 50% model (model share shrinks further on thin data)
+epa_weight: 0.0          # per-league below. Share of the MODEL's own probability that comes
+                         # from play-by-play efficiency rather than Elo. Not added to Elo as a
+                         # nudge: the two know mostly the same things, and stacking them counts
+                         # the same evidence twice.
+flow:
+  enabled: true          # record what the market did before we got here
+  hours: 96              # how far back to read the price history
+  max_per_run: 25        # two API calls a pick, so it goes where research goes
+  gate: false            # flow NEVER blocks a pick yet. Turn this on only once the graded
+                         # record says the signal predicts something.
 full_conf_games: 25      # model gets its full 50% voice only once BOTH sides have this many rated games
 kelly_fraction: 0.25
 max_units: 1.0
@@ -38,12 +48,14 @@ leagues:
   wta:        {ticker: KXWTAMATCH,         label: WTA Tennis,          k: 32, neutral: true,  min_games: 300, stake: false}
   challenger: {ticker: KXATPCHALLENGERMATCH, label: ATP Challenger,    k: 32, neutral: true,  min_games: 300, enabled: false, stake: false}
   nfl:        {ticker: KXNFLGAME,          label: NFL,                 k: 20, home_adv: 48, min_games: 30,
-               espn: [football, nfl], injuries: true, injury_scale: 1.0, weather: true, ticker_order: away_home}
+               espn: [football, nfl], injuries: true, injury_scale: 1.0, weather: true, ticker_order: away_home,
+               epa_weight: 0.35}
   # injuries: ESPN's summary payload carries no injuries block for college football
   # (checked against a live game - the key is simply absent), so there is nothing to
   # switch on. NFL and MLB do carry it, with positions.
   ncaaf:      {ticker: KXNCAAFGAME,        label: College Football,    k: 24, home_adv: 60, min_games: 80,
-               espn: [football, college-football], weather: true, ticker_order: away_home}
+               espn: [football, college-football], weather: true, ticker_order: away_home,
+               epa_weight: 0.35}   # needs the free CFBD_API_KEY secret; without it this is inert
   mlb:        {ticker: KXMLBGAME,          label: MLB,                 k: 10,  home_adv: 24, min_games: 300,
                espn: [baseball, mlb], injuries: true, injury_scale: 1.0, weather: true, ticker_order: away_home}
   epl:        {ticker: KXEPLGAME,          label: Premier League,      k: 22, home_adv: 55, min_games: 30, espn: [soccer, eng.1], ticker_order: home_away}
