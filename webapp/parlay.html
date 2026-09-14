@@ -125,11 +125,12 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bott
 /* ---------- bottom nav: floating, with a pill that slides to the active tab --- */
 .navwrap{position:fixed; left:0; right:0; bottom:0; z-index:40; display:flex; justify-content:center;
   padding:0 12px calc(10px + env(safe-area-inset-bottom)); pointer-events:none}
-.tabs{pointer-events:auto; position:relative; width:100%; max-width:440px; display:grid;
-  grid-template-columns:repeat(5,1fr); background:var(--glass); border:1px solid var(--line-2);
+.tabs{pointer-events:auto; position:relative; width:100%; max-width:470px; display:grid;
+  grid-template-columns:repeat(var(--tabs, 6),1fr); background:var(--glass); border:1px solid var(--line-2);
   border-radius:99px; box-shadow:var(--shadow-2); backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%); overflow:hidden}
-.tabs .glide{position:absolute; top:5px; bottom:5px; width:20%; padding:0 5px; z-index:0;
+.tabs .glide{position:absolute; top:5px; bottom:5px; padding:0 4px; z-index:0;
+  width:calc(100% / var(--tabs, 6));
   transition:transform .3s cubic-bezier(.2,.8,.25,1)}
 .tabs .glide i{display:block; height:100%; border-radius:99px; background:var(--gold-dim);
   border:1px solid var(--ring)}
@@ -138,11 +139,11 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bott
   transition:color .2s}
 .tabs button .ic{display:grid; place-items:center; height:21px;
   transition:transform .24s cubic-bezier(.2,.8,.25,1)}
-.tabs button .tx{font-size:.56rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase;
+.tabs button .tx{font-size:.53rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase;
   font-variation-settings:"wdth" 90}
 .tabs button[aria-selected="true"]{color:var(--gold)}
 .tabs button[aria-selected="true"] .ic{transform:translateY(-1px) scale(1.12)}
-.tabs .dot{position:absolute; top:11px; right:calc(50% - 21px); min-width:16px; height:16px;
+.tabs .dot{position:absolute; top:11px; right:calc(50% - 19px); min-width:16px; height:16px;
   border-radius:99px; background:var(--btn-2); color:var(--btn-ink); font-size:.58rem;
   font-weight:800; display:grid; place-items:center; padding:0 4px;
   font-family:"IBM Plex Mono",monospace}
@@ -425,6 +426,59 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
 .rows td.n.up{color:var(--pos-ink)} .rows td.n.down{color:var(--neg-ink)}
 .scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
 
+/* ---------- paper book ----------
+   A ticket here is a receipt: what it cost, what it is worth now, what it paid.
+   Open ones show a mark, settled ones show the money, and the two never use the
+   same number - an open ticket has no result, only a price. */
+.vs{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.vs .side{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:13px 14px; box-shadow:var(--shadow)}
+.vs .side.lead{border-color:var(--pos)}
+.vs .who2{display:flex; align-items:center; gap:7px}
+.vs .who2 .nm3{font-weight:800; font-size:.84rem}
+.vs .rec{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.4rem; font-weight:600; margin-top:5px; letter-spacing:-.03em}
+.vs .pl{font-family:"IBM Plex Mono",monospace; font-size:.8rem; font-weight:600; margin-top:3px}
+.vs .pl.up{color:var(--pos-ink)} .vs .pl.down{color:var(--neg-ink)}
+.vs .sub2{font-size:.68rem; color:var(--ink-3); margin-top:4px; line-height:1.4}
+
+.tix{display:flex; flex-direction:column; gap:9px}
+.tix .t{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  overflow:hidden; box-shadow:var(--shadow)}
+.tix .t.won{border-left:3px solid var(--pos)}
+.tix .t.lost{border-left:3px solid var(--neg)}
+.tix .t.void,.tix .t.cashed{border-left:3px solid var(--line-2)}
+.tix .th{display:flex; align-items:center; gap:9px; padding:11px 13px 9px; width:100%;
+  border:0; background:none; text-align:left}
+.tix .th .e2{font-size:1rem}
+.tix .th .nm3{font-weight:700; font-size:.89rem; min-width:0; overflow:hidden;
+  text-overflow:ellipsis; white-space:nowrap}
+.tix .th .st{margin-left:auto; flex:0 0 auto; font-family:"IBM Plex Mono",monospace;
+  font-size:.78rem; font-weight:600; text-align:right}
+.tix .th .st small{display:block; font-size:.62rem; font-weight:400; color:var(--ink-3);
+  font-family:Archivo,sans-serif; letter-spacing:.02em}
+.tix .st.up{color:var(--pos-ink)} .tix .st.down{color:var(--neg-ink)}
+.tix .meta{display:flex; flex-wrap:wrap; gap:4px 12px; padding:0 13px 10px;
+  font-size:.68rem; color:var(--ink-3)}
+.tix .meta b{color:var(--ink-2); font-weight:600; font-family:"IBM Plex Mono",monospace}
+.tix .body2{border-top:1px solid var(--line); background:var(--sunk)}
+.tix .lg{display:flex; align-items:center; gap:9px; padding:8px 13px; font-size:.76rem;
+  border-bottom:1px solid var(--line)}
+.tix .lg:last-child{border-bottom:0}
+.tix .lg .r{flex:0 0 16px; text-align:center; font-size:.74rem}
+.tix .lg .r.win{color:var(--pos-ink)} .tix .lg .r.loss{color:var(--neg-ink)}
+.tix .lg .n4{min-width:0; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.tix .lg .pr2{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  color:var(--ink-3); white-space:nowrap}
+.tix .acts{display:flex; gap:8px; padding:10px 13px; border-top:1px solid var(--line)}
+.tix .acts .chip{flex:1; justify-content:center}
+.seg{display:flex; gap:6px; background:var(--sunk); border:1px solid var(--line);
+  border-radius:99px; padding:4px}
+.seg button{flex:1; border:0; background:none; border-radius:99px; min-height:34px;
+  font-size:.78rem; font-weight:700; color:var(--ink-3)}
+.seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink);
+  box-shadow:var(--shadow)}
+
 /* ---------- prose ---------- */
 .prose{font-size:.815rem; color:var(--ink-2); line-height:1.65}
 .prose b{color:var(--ink); font-weight:700}
@@ -501,7 +555,10 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
       </div>
 
       <p class="note" id="whatif"></p>
-      <button class="btn primary" id="opentune" type="button">Filters &amp; risk</button>
+      <div style="display:flex; gap:9px">
+        <button class="btn" id="opentune" type="button" style="flex:1">Filters &amp; risk</button>
+        <button class="btn primary" id="placebet" type="button" style="flex:1">Paper bet</button>
+      </div>
 
       <div>
         <p class="lbl" style="margin-bottom:8px">In the ticket <span class="mono" id="legcount"></span></p>
@@ -572,6 +629,19 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
       <div id="ratingwrap"></div>
     </section>
 
+    <!-- ============ PAPER ============ -->
+    <section class="tab" id="tab-paper" hidden>
+      <div class="vs" id="scoreline"></div>
+      <p class="prose" id="papernote"></p>
+      <div class="seg" id="paperseg">
+        <button type="button" data-book="you" aria-pressed="true">Mine</button>
+        <button type="button" data-book="bot" aria-pressed="false">The bot's</button>
+        <button type="button" data-book="learn" aria-pressed="false">What it learned</button>
+      </div>
+      <div class="tix" id="paperlist"></div>
+      <p class="prose" id="paperfoot"></p>
+    </section>
+
     <!-- ============ WHY ============ -->
     <section class="tab" id="tab-why" hidden>
       <div class="card pad prose">
@@ -614,6 +684,7 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
       <button type="button" role="tab" data-tab="build" aria-selected="true"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6"/></svg></span><span class="tx">Build</span></button>
       <button type="button" role="tab" data-tab="board" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.4"/><path d="M7.8 9h8.4M7.8 12.6h8.4M7.8 16.2h4.8"/></svg></span><span class="tx">Board</span></button>
       <button type="button" role="tab" data-tab="slip" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.4 8.2a2 2 0 0 1 2-2h13.2a2 2 0 0 1 2 2v1.4a2.4 2.4 0 0 0 0 4.8v1.4a2 2 0 0 1-2 2H5.4a2 2 0 0 1-2-2v-1.4a2.4 2.4 0 0 0 0-4.8z"/><path d="M13.6 8.6v6.8" stroke-dasharray="2 2.2"/></svg></span><span class="tx">Slip</span><span class="dot" id="slipdot" hidden>0</span></button>
+      <button type="button" role="tab" data-tab="paper" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.6 3.8h9l4.8 4.8v11.6a1.8 1.8 0 0 1-1.8 1.8H5.6a1.8 1.8 0 0 1-1.8-1.8V5.6a1.8 1.8 0 0 1 1.8-1.8z"/><path d="M14.2 3.8v5h5"/><path d="M8.4 13.4h7.2M8.4 17h4.8"/></svg></span><span class="tx">Paper</span><span class="dot" id="paperdot" hidden>0</span></button>
       <button type="button" role="tab" data-tab="stats" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20.2h16.4"/><path d="M7.4 20.2v-6.4M12 20.2V6.6M16.6 20.2v-9.4"/></svg></span><span class="tx">Record</span></button>
       <button type="button" role="tab" data-tab="why" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.4 19.6 12 4.8l7.6 14.8z"/><path d="M8.6 15.4h6.8"/></svg></span><span class="tx">Why</span></button>
     </nav>
@@ -806,7 +877,17 @@ function remember(){ try{ localStorage.setItem("gt.v3", JSON.stringify({
    least probability cost per unit of payout - which is why a 55c game can beat
    nine 97c favourites. A leg that would blow past what is left to buy is only
    taken when nothing smaller will do. There is no price floor. */
-function discount(p){ return p>=0.90?1.0 : p>=0.60?0.990 : p>=0.40?0.966 : 0.936; }
+/* The bot publishes the table it is actually using, because paper results can
+   move it. Without this the phone would keep building on last month's curve and
+   quietly disagree with the bot about which legs are worth buying. */
+var HAND_DISCOUNT=[[0.90,1.0],[0.60,0.990],[0.40,0.966],[0.00,0.936]];
+function discount(p){
+  var tbl=(SNAP&&SNAP.discount&&SNAP.discount.length)?SNAP.discount:null;
+  if(tbl){ for(var i=0;i<tbl.length;i++){ if(p>=tbl[i].min) return tbl[i].factor; }
+           return tbl[tbl.length-1].factor; }
+  for(var j=0;j<HAND_DISCOUNT.length;j++){ if(p>=HAND_DISCOUNT[j][0]) return HAND_DISCOUNT[j][1]; }
+  return 0.936;
+}
 function isLiquid(l){
   if(l.spread!=null && l.spread>0.03) return false;
   return (l.vol||0) >= 50;
@@ -1087,6 +1168,7 @@ function render(){
   renderScopeBtn(); renderControls();
   var r=summarise(build());
   renderTicket(r); renderLegs(r); renderBoard();
+  markMine(); renderPaper();
   var sc=scopeInfo(S.scope);
   var age=ageOf(SNAP.generated_utc);
   $("fresh").textContent=(sc?sc.games+" games · "+sc.legs+" legs":"no markets")+
@@ -1098,7 +1180,7 @@ function render(){
 }
 
 /* ---- tabs & sheets ---- */
-var TABS=["build","board","slip","stats","why"];
+var TABS=["build","board","slip","paper","stats","why"];
 function showTab(k){
   S.tab=k;
   TABS.forEach(function(t){ $("tab-"+t).hidden=(t!==k); });
@@ -1376,6 +1458,291 @@ function renderStats(){
     "\"edges\" are noise. <code>backfill_elo.py</code> is what fixes that.", rr);
 }
 
+/* ---- the paper book ----
+   Yours lives on this phone; the bot's is published by the workflow that prices
+   it. They use the same arithmetic on purpose, so the two records are
+   comparable: a ticket costs the product of its legs' asks, it is worth the
+   product of their bids, and what it pays is fixed at the price you got.
+
+   Kalshi refuses any request with an Origin header, so this page cannot quote a
+   live price no matter how it asks. What it can do is re-price your open
+   tickets every time a new board lands, and grade them against the results the
+   bot publishes. Sending a ticket to the bot is what gets it priced at the real
+   book, and is also what lets it count towards what the bot learns. */
+var PAPER_URL="https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/paper/app.json";
+var SETTLED_URL="https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/settled.json";
+var BOOK=DATA.paper||null, SETTLED={}, BOOKVIEW="you", MINE=[];
+
+try{ MINE=JSON.parse(localStorage.getItem("gt.paper.v1")||"[]")||[]; }catch(e){ MINE=[]; }
+function saveMine(){ try{ localStorage.setItem("gt.paper.v1", JSON.stringify(MINE.slice(-300))); }catch(e){} }
+
+function prod(xs){ var c=1; for(var i=0;i<xs.length;i++) c*=Math.max(xs[i],1e-9); return c; }
+function costOf(legs){ return prod(legs.map(function(l){ return l.entry_ask; })); }
+function liveLegs(t){ return t.legs.filter(function(l){ return l.result!=="void"; }); }
+
+function placeLocal(r, stake){
+  if(!r.n){ toast("Nothing to place"); return null; }
+  var legs=r.legs.map(function(l){
+    return {ticker:l.ticker, pick:l.pick, opp:l.opp, league:l.league, date:l.date||"",
+            entry_ask:+l.ask.toFixed(4), entry_bid:l.bid==null?null:+l.bid.toFixed(4),
+            entry_p:+l.p.toFixed(4), result:null, mark_bid:null};
+  });
+  var cost=costOf(legs);
+  var t={id:"y-"+Date.now().toString(36), owner:"you",
+         label:(PRESETS.filter(function(x){return x.key===S.preset;})[0]||{}).label||"My ticket",
+         emoji:"🎟️", key:S.preset||"custom",
+         placed_utc:new Date().toISOString().slice(0,16)+"Z",
+         stake:stake, target_payout:S.payout,
+         price_source:"board "+(SNAP.generated_utc||""),
+         entry:{cost:cost, multiple:1/cost, win_prob:prod(legs.map(function(l){return l.entry_p;}))},
+         legs:legs, status:"open", mark:null, closed_utc:null, returned:null, pnl:null, sent:false};
+  // the same ticket twice is a duplicate, not a second opinion
+  var sig=legs.map(function(l){return l.ticker;}).sort().join("|");
+  var dupe=MINE.some(function(x){ return x.status==="open" &&
+    x.legs.map(function(l){return l.ticker;}).sort().join("|")===sig; });
+  if(dupe){ toast("You already have that ticket open"); return null; }
+  MINE.push(t); saveMine();
+  return t;
+}
+
+function markMine(){
+  if(!LEGS.length) return;
+  var moved=0, bid={}; LEGS.forEach(function(l){ if(l.bid!=null) bid[l.ticker]=l.bid; });
+  MINE.forEach(function(t){
+    if(t.status!=="open") return;
+    var seen=0, bids=t.legs.map(function(l){
+      if(bid[l.ticker]!=null){ l.mark_bid=bid[l.ticker]; seen++; }
+      return l.mark_bid==null ? l.entry_ask : l.mark_bid;
+    });
+    if(!seen) return;
+    var ratio=prod(bids)/Math.max(t.entry.cost,1e-9);
+    t.mark={utc:SNAP.generated_utc||"", legs_quoted:seen,
+            value:t.stake*ratio, pnl:t.stake*(ratio-1)};
+    moved++;
+  });
+  // the mark is part of the ticket, not a view of it: a leg that has left the
+  // board keeps its last quote, and that only survives if it is written down
+  if(moved) saveMine();
+}
+
+function gradeMine(){
+  var n=0;
+  MINE.forEach(function(t){
+    if(t.status!=="open") return;
+    t.legs.forEach(function(l){ if(l.result==null && SETTLED[l.ticker]) l.result=SETTLED[l.ticker]; });
+    var live=liveLegs(t);
+    if(live.some(function(l){ return l.result==="loss"; })) t.status="lost";
+    else if(live.length && live.every(function(l){ return l.result==="win"; })) t.status="won";
+    else if(!live.length && t.legs.length) t.status="void";
+    else return;
+    t.closed_utc=new Date().toISOString().slice(0,16)+"Z";
+    t.returned = t.status==="won" ? t.stake/Math.max(costOf(live),1e-9)
+               : t.status==="void" ? t.stake : 0;
+    t.pnl=t.returned-t.stake;
+    n++;
+  });
+  if(n) saveMine();
+  return n;
+}
+
+function tally(list){
+  var a={open:0,settled:0,won:0,lost:0,staked:0,returned:0,implied:0,open_stake:0,open_value:0};
+  list.forEach(function(t){
+    if(t.status==="open"){ a.open++; a.open_stake+=t.stake;
+      a.open_value+=(t.mark&&t.mark.value!=null)?t.mark.value:t.stake; return; }
+    a.settled++;
+    if(t.status==="won") a.won++; else if(t.status==="lost") a.lost++;
+    a.staked+=t.stake; a.returned+=t.returned||0; a.implied+=(t.entry||{}).win_prob||0;
+  });
+  a.pnl=a.returned-a.staked;
+  a.roi=a.staked?100*a.pnl/a.staked:0;
+  a.open_pnl=a.open_value-a.open_stake;
+  return a;
+}
+function botTickets(){
+  if(!BOOK) return [];
+  return (BOOK.open||[]).concat(BOOK.closed||[]).filter(function(t){ return t.owner==="bot"; });
+}
+
+function sideCard(name, emoji, a, lead){
+  // before anything has settled there is no p&l to colour, and a green dash
+  // reads as a result. The open marks below it are the live number until then.
+  var pl = a.settled
+    ? '<div class="pl '+(a.pnl>=0?"up":"down")+'">'+money2(a.pnl)+' · '+a.roi.toFixed(1)+'%</div>'
+    : '<div class="pl" style="color:var(--ink-3)">not settled</div>';
+  return '<div class="side'+(lead?" lead":"")+'"><div class="who2"><span>'+emoji+
+    '</span><span class="nm3">'+esc(name)+'</span></div>'+
+    '<div class="rec">'+(a.settled?a.won+"-"+a.lost:"0-0")+'</div>'+ pl +
+    '<div class="sub2">'+(a.settled?("expected "+a.implied.toFixed(2)+" wins"):"no tickets graded yet")+
+    (a.open?("<br>"+a.open+" open, worth "+money2(a.open_value)+" ("+money2(a.open_pnl)+")"):"")+
+    '</div></div>';
+}
+function money2(x){ return (x>=0?"+$":"-$")+Math.abs(x).toFixed(2); }
+
+function ticketCard(t, mine){
+  var open=t.status==="open";
+  var m=t.mark||{};
+  var big = open ? (m.value!=null?money2(m.pnl):"—")
+                 : (t.pnl!=null?money2(t.pnl):"—");
+  var cls = open ? (m.pnl>=0?"up":"down") : (t.status==="won"?"up":(t.status==="lost"?"down":""));
+  var sub = open ? (m.value!=null?("worth "+("$"+m.value.toFixed(2))):"not marked yet")
+                 : (t.status==="won"?("paid $"+(t.returned||0).toFixed(2))
+                    :(t.status==="void"?"voided, stake back":(t.status==="cashed"?"sold":"lost")));
+  var legs=t.legs.map(function(l){
+    var r=l.result, ic=r==="win"?"✓":r==="loss"?"✕":r==="void"?"—":"·";
+    return '<div class="lg"><span class="r '+(r||"")+'">'+ic+'</span>'+
+      '<span class="n4">'+esc(l.pick)+' <span style="color:var(--ink-3)">vs '+esc(l.opp)+'</span></span>'+
+      '<span class="pr2">'+Math.round(100*l.entry_ask)+'¢'+
+      (open&&l.mark_bid!=null&&l.mark_bid!==l.entry_ask?' → '+Math.round(100*l.mark_bid)+'¢':'')+
+      '</span></div>';
+  }).join("");
+  var acts="";
+  if(mine && open){
+    acts='<div class="acts">'+
+      '<button class="chip" type="button" data-send="'+esc(t.id)+'">'+(t.sent?"Sent ✓":"Send to the bot")+'</button>'+
+      '<button class="chip" type="button" data-drop="'+esc(t.id)+'">Delete</button></div>';
+  }
+  return '<div class="t '+t.status+'"><button class="th" type="button" data-tix="'+esc(t.id)+'">'+
+    '<span class="e2">'+esc(t.emoji||"🎟️")+'</span>'+
+    '<span class="nm3">'+esc(t.label||"Ticket")+'</span>'+
+    '<span class="st '+cls+'">'+big+'<small>'+esc(sub)+'</small></span></button>'+
+    '<div class="meta"><span>'+t.legs.length+' legs</span>'+
+    '<span>pays <b>'+(t.entry.multiple).toFixed(2)+'×</b></span>'+
+    '<span>wins <b>'+(100*t.entry.win_prob).toFixed(1)+'%</b></span>'+
+    '<span>$'+(t.stake||0).toFixed(2)+'</span>'+
+    '<span>'+esc((t.placed_utc||"").replace("T"," ").replace("Z",""))+'</span></div>'+
+    '<div class="body2"'+(OPENTIX[t.id]?"":" hidden")+'>'+legs+'</div>'+acts+'</div>';
+}
+var OPENTIX={};
+
+function renderPaper(){
+  var mine=tally(MINE), bot=tally(botTickets());
+  var lead = mine.settled&&bot.settled ? (mine.roi>bot.roi?"you":"bot") : "";
+  $("scoreline").innerHTML = sideCard("You","🎟️",mine,lead==="you") +
+                             sideCard("The bot","🤖",bot,lead==="bot");
+  var dot=$("paperdot"); dot.hidden=!mine.open; dot.textContent=mine.open;
+
+  var note;
+  if(!MINE.length){
+    note="Build a ticket, hit <b>Paper bet</b>, and it lands here. Nothing is staked — "+
+      "it is scored at the prices on the board when you placed it, and graded when the games settle.";
+  } else if(!mine.settled){
+    note="<b>"+mine.open+"</b> open. They grade themselves when the bot publishes the results — "+
+      "pull to refresh after the games finish.";
+  } else {
+    note="<b>"+mine.won+"-"+mine.lost+"</b> settled, "+money2(mine.pnl)+" on "+
+      ("$"+mine.staked.toFixed(2))+" staked. These exact tickets should have won about <b>"+
+      mine.implied.toFixed(2)+"</b>.";
+  }
+  $("papernote").innerHTML=note;
+
+  var host=$("paperlist"), foot="";
+  if(BOOKVIEW==="learn"){
+    host.className="tix";
+    host.innerHTML=learnCard();
+    foot="Bands are measured on entry prices only, so a later quote can never flatter them. "+
+      "A band steers the builder once it has enough settled legs to mean something; "+
+      "until then the hand-set curve stands.";
+  } else {
+    var list = BOOKVIEW==="you" ? MINE.slice().reverse()
+                                : botTickets().slice().sort(function(a,b){
+                                    return (b.placed_utc||"").localeCompare(a.placed_utc||""); });
+    host.className="tix";
+    if(!list.length){
+      host.className="empty";
+      host.innerHTML = BOOKVIEW==="you"
+        ? "No paper tickets yet. Build one and hit Paper bet."
+        : "The bot has not published a book yet. It buys one ticket per rung every day.";
+    } else {
+      host.innerHTML=list.slice(0,60).map(function(t){ return ticketCard(t, BOOKVIEW==="you"); }).join("");
+    }
+    foot = BOOKVIEW==="you"
+      ? "Your tickets are priced from the board on this phone, which can be hours old. "+
+        "<b>Send to the bot</b> copies the tickers — paste them into the Paper Parlays workflow "+
+        "and it re-prices them at the live book and grades them alongside its own."
+      : "The bot buys one ticket per rung every day at the live book, and marks them against "+
+        "it twice a day. A ticket is under water by the spread the moment it is bought — "+
+        "that is what it would cost to sell, not a mistake.";
+  }
+  $("paperfoot").innerHTML=foot;
+}
+
+function learnCard(){
+  var cal=(BOOK||{}).calibration;
+  if(!cal || !cal.bands || !Object.keys(cal.bands).length){
+    return '<div class="empty">Nothing settled yet. Once legs start grading, this is where '+
+      'the measured hit rate per price band shows up — and where it starts steering the builder.</div>';
+  }
+  var order=["90c+","60-90c","40-60c","under 40c"], rows="";
+  order.forEach(function(k){
+    var b=cal.bands[k]; if(!b) return;
+    var d=b.drag, over=d>=1;
+    rows+='<tr><td>'+esc(k)+'</td><td class="n">'+b.n+'</td>'+
+      '<td class="n">'+(100*b.hit).toFixed(0)+'%</td>'+
+      '<td class="n">'+(100*b.mean_entry).toFixed(0)+'¢</td>'+
+      '<td class="n '+(over?"up":"down")+'">'+(over?"▲":"▼")+' '+d.toFixed(3)+'</td>'+
+      '<td class="n">'+(b.trusted?"steering":"—")+'</td></tr>';
+  });
+  var rr="";
+  Object.keys(cal.rungs||{}).forEach(function(k){
+    var r=cal.rungs[k];
+    rr+='<tr><td>'+esc(k)+'</td><td class="n">'+r.n+'</td><td class="n">'+r.won+'</td>'+
+      '<td class="n">'+(100*r.implied).toFixed(1)+'%</td>'+
+      '<td class="n">'+(100*r.actual).toFixed(1)+'%</td></tr>';
+  });
+  return card("What the settled legs say",
+      "<b>Hit</b> is how often legs bought in that band actually won. <b>Drag</b> is the hit "+
+      "rate over what they cost: 1.000 means the price was right. A band needs "+
+      (cal.min_band_n||60)+" settled legs before its number replaces the hand-set one.",
+      '<div class="scroll"><table class="rows"><thead><tr><th>Band</th><th class="n">legs</th>'+
+      '<th class="n">hit</th><th class="n">paid</th><th class="n">drag</th><th class="n">steering</th>'+
+      '</tr></thead><tbody>'+rows+'</tbody></table></div>') +
+    (rr ? card("Rungs against their own odds",
+      "What each rung should win, and what it did. One 40× landing makes any win rate look "+
+      "like genius, so the two columns matter more than the record.",
+      '<div class="scroll"><table class="rows"><thead><tr><th>Rung</th><th class="n">n</th>'+
+      '<th class="n">won</th><th class="n">implied</th><th class="n">actual</th></tr></thead>'+
+      '<tbody>'+rr+'</tbody></table></div>') : "");
+}
+
+$("placebet").addEventListener("click", function(){
+  var r=summarise(build());
+  var t=placeLocal(r, parseFloat($("stake").value)||10);
+  if(!t) return;
+  markMine(); renderPaper();
+  toast("Paper bet placed · "+t.legs.length+" legs at "+t.entry.multiple.toFixed(2)+"×");
+  showTab("paper");
+});
+$("paperseg").addEventListener("click", function(e){
+  var b=e.target.closest("button[data-book]"); if(!b) return;
+  BOOKVIEW=b.dataset.book;
+  Array.prototype.forEach.call(this.children, function(x){
+    x.setAttribute("aria-pressed", String(x.dataset.book===BOOKVIEW)); });
+  renderPaper();
+});
+$("paperlist").addEventListener("click", function(e){
+  var head=e.target.closest("[data-tix]");
+  if(head){ var id=head.dataset.tix; OPENTIX[id]=!OPENTIX[id]; renderPaper(); return; }
+  var send=e.target.closest("[data-send]");
+  if(send){
+    var t=MINE.filter(function(x){ return x.id===send.dataset.send; })[0]; if(!t) return;
+    var txt=t.legs.map(function(l){ return l.ticker; }).join("\n");
+    var done=function(ok){
+      if(!ok){ toast("Could not copy — open the ticket and copy the tickers"); return; }
+      t.sent=true; saveMine(); renderPaper();
+      toast("Tickers copied · paste them into the Paper Parlays workflow");
+    };
+    if(navigator.clipboard) navigator.clipboard.writeText(txt).then(function(){done(true);},function(){done(false);});
+    else done(false);
+    return;
+  }
+  var drop=e.target.closest("[data-drop]");
+  if(drop){
+    MINE=MINE.filter(function(x){ return x.id!==drop.dataset.drop; });
+    saveMine(); renderPaper(); toast("Ticket deleted");
+  }
+});
+
 /* ---- staying current ----
    Tries the repo's latest board. Failure is normal and silent: a phone on no
    signal has nothing to ask. The baked-in board keeps working either way, so
@@ -1421,6 +1788,19 @@ function refresh(manual){
   fetch(STATS_URL, {cache:"no-store"}).then(function(r){ return r.ok?r.json():null; })
     .then(function(st){ if(st && st.overall){ STATS=st; renderStats(); } })
     .catch(function(){});
+  // the paper book moves twice a day, on its own workflow, so it is fetched
+  // separately rather than waiting for the next board
+  fetch(PAPER_URL, {cache:"no-store"}).then(function(r){ return r.ok?r.json():null; })
+    .then(function(b){ if(b && b.summary){ BOOK=b; renderPaper(); } })
+    .catch(function(){});
+  fetch(SETTLED_URL, {cache:"no-store"}).then(function(r){ return r.ok?r.json():null; })
+    .then(function(f){
+      if(!f || !f.results) return;
+      SETTLED=f.results;
+      var n=gradeMine();
+      renderPaper();
+      if(manual && n) toast(n+(n===1?" ticket":" tickets")+" settled");
+    }).catch(function(){});
 }
 $("refresh").addEventListener("click", function(){ refresh(true); });
 
@@ -1430,7 +1810,7 @@ $("calib").innerHTML="<b>Leg prices.</b> "+esc(SNAP.calibration_note||"");
 $("bt").innerHTML="<b>Whole tickets.</b> "+esc(SNAP.backtest_note||
   "Replayed over two past weekends the builder came in close to what the prices implied "+
   "and lost to the spread, with one or two upsets deciding each weekend.");
-renderDial(); render(); renderStats(); showTab("build");
+renderDial(); render(); renderStats(); renderPaper(); showTab("build");
 refresh(false);        // the page is already usable; this only ever upgrades it
 })();
 </script>

@@ -308,6 +308,60 @@ carries every scope.
 (Settings → Pages → Deploy from branch → `main` → `/docs`). It installs to a phone home
 screen from there; the manifest and icons ship with it.
 
+### Paper parlays (`paper.py` + `.github/workflows/paper.yml`)
+
+A ledger both sides bet into. The bot buys one ticket per rung every day at the
+prices on the book at that moment; yours go in beside them, so the comparison is
+like for like. Nothing is staked and nothing is real - it is practice with an
+honest scoreboard.
+
+```
+python paper.py --grade --mark --place --scope football --stake 10
+python paper.py --add "TICKER-A,TICKER-B" --owner you --label "Saturday"
+python paper.py --cash-out b-20260914-0243-swing     # sell at the last mark
+python test_paper.py                                 # 47 offline checks on the money
+```
+
+The arithmetic, which is the whole thing:
+
+- A ticket **costs** the product of its legs' asks - that is where the payout
+  comes from. It is **worth** the product of their bids, which is what selling it
+  would fetch. So a ticket is under water by the spread the moment it is bought.
+  That is the honest picture, not a bug.
+- **Grading reads the market, never a model.** One losing leg ends the ticket
+  immediately; a voided leg drops out and shrinks the payout the way a book drops
+  it. An event where nobody won is void, not a clean sweep of losses.
+- Every payout is worked out from the **entry price**. A later quote moves the
+  mark; it can never move what a settled ticket paid.
+
+**How the bot learns from it.** `paper.py` measures, per price band, how often
+legs bought at that price actually won, and writes the drag - hit rate over what
+was paid - to `data/v2/paper/calibration.json`. Once a band has 60 settled legs,
+that measured number replaces the hand-set one in `parlay.py`'s `discount()`, so
+which legs the builder thinks are worth buying is steered by results instead of
+by a guess. It is capped at 1.0 deliberately: a band that measured *better* than
+its price is a small sample telling you that you beat the market, and building on
+that belief is how a paper record turns into a real loss. The effective table is
+published in the board so the phone builds the same ticket the bot would.
+
+**Why pricing only happens in the workflow.** Kalshi refuses any request carrying
+an `Origin` header. Measured from a runner, one variable at a time:
+
+| request | result |
+|---|---|
+| bot UA, no Origin | 200 |
+| bot UA, with Origin | **403** |
+| browser UA, no Origin | 200 |
+| browser UA, with Origin | **403** |
+| `OPTIONS` preflight | **403** |
+
+That is a refusal, not a missing CORS header, so no page in any browser can quote
+a price however it asks. The app therefore keeps your tickets on the phone at the
+last published board price, re-prices them whenever a new board lands, and grades
+them against `data/v2/settled.json`. **Send to the bot** copies the tickers; paste
+them into the Paper Parlays workflow and they get priced at the real book and
+counted towards what the bot learns.
+
 ### On Android, as a real app
 
 **https://github.com/Predatuh/EdgeBot/releases/latest/download/gridiron-ticket.apk**

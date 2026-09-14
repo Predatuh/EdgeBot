@@ -872,6 +872,8 @@ def _cli(argv=None):
         # the record is regenerated rather than trusted: it is written by a
         # different job and the saved board may predate the last grading run
         snap["stats"] = load_stats()
+        snap["paper"] = load_paper()
+        snap["discount"] = discount_table()
         snap.setdefault("backtest_note", backtest_note())
         print(f"[parlay] re-rendering {a.from_json} "
               f"({len(snap.get('legs') or [])} legs, {snap.get('generated_utc','?')})")

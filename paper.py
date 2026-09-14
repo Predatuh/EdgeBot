@@ -520,9 +520,6 @@ def _cli(argv=None):
         print(f"[paper] graded {n} tickets from {len(results)} settled legs")
         settled_feed(led, results)
 
-    if a.mark and legs:
-        print(f"[paper] marked {mark_to_market(led, quote_map(legs))} open tickets to the book")
-
     if a.add and legs:
         t, missing = slate_from_tickers(a.add.replace("\n", ",").split(","), legs,
                                         owner=a.owner, stake=a.stake, label=a.label)
@@ -557,13 +554,25 @@ def _cli(argv=None):
                       f"wins {100*t['entry']['win_prob']:>5.2f}%")
         print(f"[paper] {bought} new tickets ({len(open_tickets(led))} open in total)")
 
+    # marked last, so a ticket bought a moment ago already shows what selling it
+    # would fetch - which is the spread it just crossed, and worth seeing
+    if a.mark and legs:
+        print(f"[paper] marked {mark_to_market(led, quote_map(legs))} open tickets to the book")
+
     cal = save_calibration(led)
     s = _report(led)
-    os.makedirs(os.path.dirname(os.path.abspath(a.ledger)), exist_ok=True)
-    with open(os.path.join(os.path.dirname(os.path.abspath(a.ledger)), "summary.json"),
-              "w", encoding="utf-8") as f:
+    out = os.path.dirname(os.path.abspath(a.ledger))
+    os.makedirs(out, exist_ok=True)
+    with open(os.path.join(out, "summary.json"), "w", encoding="utf-8") as f:
         json.dump(s, f, indent=1, sort_keys=True)
     save_ledger(led, a.ledger)
+    # one small file for the phone: the ledger itself is thousands of tickets,
+    # and the app only ever shows what is open and what closed recently
+    app = parlay.load_paper(out)
+    if app:
+        with open(os.path.join(out, "app.json"), "w", encoding="utf-8") as f:
+            json.dump(app, f, separators=(",", ":"), sort_keys=True)
+        print(f"[paper] app feed: {len(app['open'])} open, {len(app['closed'])} closed")
     learned = cal.get("learned_discount") or {}
     print(f"[paper] {cal['legs_settled']} legs settled; "
           + (f"calibration now steering the builder: {learned}" if learned
