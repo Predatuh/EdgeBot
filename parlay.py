@@ -69,14 +69,55 @@ PRESETS = [
 # the same way, so it is applied when CHOOSING legs - a cheap leg has to be enough
 # cheaper to be worth it. It is never applied to the win probability shown, which
 # stays the market's own number. `trust_cheap=True` turns the penalty off.
+#
+# These are the starting numbers, not the last word: paper.py measures what each band
+# actually does and writes the result to the calibration file below. Once a band has
+# enough settled legs to mean anything, its measured number replaces the one here -
+# which is the only way this thing ever learns from being wrong.
+HAND_DISCOUNT = [(0.90, 1.000, "90c+"), (0.60, 0.990, "60-90c"),
+                 (0.40, 0.966, "40-60c"), (0.00, 0.936, "under 40c")]
+PAPER_CALIBRATION = os.path.join(HERE, "data", "v2", "paper", "calibration.json")
+_LEARNED = None
+
+
+def learned_discounts(path=None, reload=False):
+    """The measured per-band factors, or {} before there is enough evidence.
+
+    Read straight from the file rather than importing paper.py: the dependency
+    runs the other way (paper builds tickets with this module's ladder), and a
+    cycle between them would be a real one.
+    """
+    global _LEARNED
+    if _LEARNED is None or reload or path:
+        try:
+            with open(path or PAPER_CALIBRATION, encoding="utf-8") as f:
+                got = json.load(f).get("learned_discount") or {}
+        except (OSError, ValueError):
+            got = {}
+        if path and not reload:
+            return got                      # a one-off read does not poison the cache
+        _LEARNED = got
+    return _LEARNED
+
+
 def discount(p):
-    if p >= 0.90:
-        return 1.000
-    if p >= 0.60:
-        return 0.990
-    if p >= 0.40:
-        return 0.966
-    return 0.936
+    learned = learned_discounts()
+    for lo, hand, band in HAND_DISCOUNT:
+        if p >= lo:
+            return learned.get(band, hand)
+    return HAND_DISCOUNT[-1][1]
+
+
+def discount_table():
+    """What the builder is actually using, so the app can build the same ticket.
+
+    The page carries its own copy of the builder; if the bot started discounting
+    a band differently and the phone did not, the two would quietly disagree
+    about which legs are worth buying.
+    """
+    learned = learned_discounts()
+    return [{"min": lo, "band": band, "factor": learned.get(band, hand),
+             "learned": band in learned} for lo, hand, band in HAND_DISCOUNT]
 
 MAX_LEGS = 40           # a ticket longer than this is unmanageable to actually place
 LIQUID_SPREAD = 0.03    # a wider book than this is not really tradeable at the shown price
@@ -577,6 +618,8 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
         "calibration_note": CALIBRATION_NOTE,
         "backtest_note": backtest_note(),
         "stats": load_stats(),
+        "discount": discount_table(),
+        "paper": load_paper(),
     }
 
 
@@ -672,6 +715,54 @@ def load_stats(path=None, keep=("generated_utc", "picks_logged", "overall", "las
     except (OSError, ValueError):
         return None
     return {k: d[k] for k in keep if k in d}
+
+
+PAPER_DIR = os.path.join(HERE, "data", "v2", "paper")
+
+
+def load_paper(path=None, keep=40):
+    """The paper book, trimmed to what a phone needs to show it.
+
+    The app carries this so the Paper tab has something to render on a cold
+    start; it refreshes it from the repo like everything else. Legs keep their
+    entry price and their last mark, because "what did I pay" and "what is it
+    worth now" are the two questions the tab exists to answer.
+    """
+    base = path or PAPER_DIR
+    try:
+        with open(os.path.join(base, "summary.json"), encoding="utf-8") as f:
+            summary = json.load(f)
+        with open(os.path.join(base, "ledger.json"), encoding="utf-8") as f:
+            led = json.load(f)
+    except (OSError, ValueError):
+        return None
+    tickets = led.get("tickets") or []
+    openers = [t for t in tickets if t.get("status") == "open"]
+    closed = sorted([t for t in tickets if t.get("status") != "open"],
+                    key=lambda t: t.get("closed_utc") or "")[-keep:]
+
+    def trim(t):
+        return {"id": t["id"], "owner": t["owner"], "label": t.get("label", ""),
+                "emoji": t.get("emoji", ""), "key": t.get("key", ""),
+                "placed_utc": t.get("placed_utc", ""), "stake": t.get("stake"),
+                "status": t.get("status"), "entry": t.get("entry"),
+                "mark": t.get("mark"), "returned": t.get("returned"),
+                "pnl": t.get("pnl"), "closed_utc": t.get("closed_utc"),
+                "legs": [{"ticker": l["ticker"], "pick": l.get("pick", ""),
+                          "opp": l.get("opp", ""), "league": l.get("league", ""),
+                          "date": l.get("date", ""), "entry_ask": l.get("entry_ask"),
+                          "mark_bid": l.get("mark_bid"), "result": l.get("result")}
+                         for l in t.get("legs", [])]}
+
+    try:
+        with open(os.path.join(base, "calibration.json"), encoding="utf-8") as f:
+            cal = json.load(f)
+    except (OSError, ValueError):
+        cal = None
+    return {"summary": summary,
+            "open": [trim(t) for t in openers][-keep:],
+            "closed": [trim(t) for t in closed][::-1],
+            "calibration": cal}
 
 
 def backtest_note(path=None):

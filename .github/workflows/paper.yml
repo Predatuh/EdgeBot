@@ -1,0 +1,99 @@
+name: Paper Parlays
+
+# The paper book. Every run does the same three things in the same order:
+#   grade  what the markets have settled since last time
+#   mark   every open ticket against the live book, so you can see it move
+#   place  the bot's own ticket per rung, at the prices on the book right now
+#
+# Entry prices come from Kalshi at the moment of placement - this is the only
+# place they can: Kalshi answers 403 to any request carrying an Origin header,
+# so no browser, on any phone, can quote a price. That is why your tickets are
+# logged here rather than priced on the handset.
+on:
+  schedule:
+    - cron: "30 14 * * *"     # after the board build, while the day's games are still listed
+    - cron: "0 6 * * *"       # after US games have settled
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Log a ticket of your own: paste the tickers, one per line"
+        default: ""
+      label:
+        description: "What to call it"
+        default: "My ticket"
+      stake:
+        description: "Paper stake in dollars"
+        default: "10"
+      scope:
+        description: "Which board the bot buys from"
+        default: "football"
+        type: choice
+        options: [football, nfl, ncaaf, soccer, tennis, mlb, cricket, all]
+      place:
+        description: "Let the bot place its own tickets this run"
+        type: boolean
+        default: true
+      cash_out:
+        description: "Close one open ticket at its last mark (paste its id)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgebot-paper
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+
+      # This one moves money, even if it is pretend money. The arithmetic gets
+      # checked before it is allowed to write anything down.
+      - name: Check the ledger math
+        run: python test_paper.py
+
+      - name: Run the book
+        env:
+          # through the environment, not the command line: a pasted slate is
+          # multi-line, and inlining that into a shell string is how you end up
+          # running half a ticker as a command
+          TICKERS: ${{ inputs.tickers }}
+          LABEL: ${{ inputs.label || 'My ticket' }}
+          CASH_OUT: ${{ inputs.cash_out }}
+          SCOPE: ${{ inputs.scope || 'football' }}
+          STAKE: ${{ inputs.stake || '10' }}
+          PLACE: ${{ github.event_name == 'schedule' || inputs.place }}
+        run: |
+          set -euo pipefail
+          ARGS=(--grade --mark --scope "$SCOPE" --stake "$STAKE")
+          [ "$PLACE" = "true" ] && ARGS+=(--place)
+          [ -n "${TICKERS:-}" ] && ARGS+=(--add "$TICKERS" --label "$LABEL" --owner you)
+          [ -n "${CASH_OUT:-}" ] && ARGS+=(--cash-out "$CASH_OUT")
+          python paper.py "${ARGS[@]}" | tee paper.txt
+
+      - name: Commit the book
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          python merge_state.py
+          git add -A data/
+          git diff --cached --quiet || git commit -m "paper book: $(date -u +%F)"
+          BR="${{ github.ref_name }}"
+          # the ledger is regenerated whole from the copy this run loaded, so on a
+          # conflict this run's copy is the complete one
+          git pull --rebase -X theirs origin "$BR"
+          git push -u origin "HEAD:$BR" || (git pull --rebase -X theirs origin "$BR" && git push -u origin "HEAD:$BR")
+
+      - name: Say what happened
+        run: |
+          echo '### Paper book' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          grep -E '^\[paper\]' paper.txt >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

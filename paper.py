@@ -18,6 +18,19 @@ quote, so a mark is what the legs are actually bid at.
 
 The ledger is append-only JSON. Nothing here ever deletes a ticket: a wrong
 ticket is part of the record, which is the point of paper trading.
+
+Why all of this runs here and not on the phone: Kalshi refuses any request that
+carries an Origin header. Measured, one variable at a time, from a runner:
+
+    bot UA,     no Origin  -> 200        browser UA, no Origin  -> 200
+    bot UA,   with Origin  -> 403        browser UA, with Origin -> 403
+    OPTIONS preflight                    -> 403
+
+That is not a missing CORS header, it is a refusal, so no page in a browser can
+quote a price no matter how it asks. Live pricing therefore only exists where
+this module runs. The app keeps your tickets locally at the last published
+board price and grades them against the results the bot publishes; sending them
+here is what gets them priced at the real book.
 """
 import datetime as dt
 import json
@@ -404,3 +417,159 @@ def save_calibration(led, path=CALIBRATION):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(cal, f, indent=1, sort_keys=True)
     return cal
+
+
+# ------------------------------------------------------------------ the bot's
+def bot_slate(legs, stake=STAKE, presets=None, **kw):
+    """One ticket per rung, off the board as it stands right now."""
+    import parlay
+    out = []
+    for r in parlay.ladder(legs, presets=presets, **kw):
+        out.append(make_ticket(r["legs"], owner="bot", stake=stake,
+                               key=r.get("key", "custom"), label=r.get("label", "Custom"),
+                               emoji=r.get("emoji", "🎫"), target_payout=r.get("payout")))
+    return out
+
+
+def slate_from_tickers(tickers, legs, owner="you", stake=STAKE, label="My ticket",
+                       key="custom", placed=None, source="live"):
+    """Your ticket, re-priced against the live board rather than trusting the
+    prices your phone showed. The phone's snapshot can be hours old; what you
+    would actually have paid is what the book says when it is logged."""
+    by_ticker = {l["ticker"]: l for l in legs}
+    picked, missing = [], []
+    for tk in tickers:
+        tk = tk.strip()
+        if not tk:
+            continue
+        if tk in by_ticker:
+            picked.append(by_ticker[tk])
+        else:
+            missing.append(tk)
+    if not picked:
+        return None, missing
+    return make_ticket(picked, owner=owner, stake=stake, key=key, label=label,
+                       emoji="🎟️", placed=placed, source=source), missing
+
+
+def _report(led):
+    s = summary(led)
+    for who, a in sorted(s["by_owner"].items()):
+        print(f"[paper] {who:<4} {a['settled']:>3} settled  {a['won']}-{a['lost']}"
+              f"  staked {a['staked']:.2f}  back {a['returned']:.2f}"
+              f"  pnl {a['pnl']:+.2f} ({a['roi']:+.1f}%)"
+              f"  | open {a['open']} worth {a['open_value']:.2f} ({a['open_pnl']:+.2f})"
+              f"  | expected {a['implied_wins']:.2f} wins, got {a['won']}")
+    for k, a in sorted(s["by_rung"].items(), key=lambda kv: -kv[1]["settled"]):
+        if a["settled"]:
+            print(f"[paper]   {k:<9} {a['won']}-{a['lost']} of {a['settled']}"
+                  f"  expected {a['implied_wins']:.2f}  pnl {a['pnl']:+.2f}")
+    return s
+
+
+def _cli(argv=None):
+    import argparse
+    ap = argparse.ArgumentParser(description="Paper parlays at live Kalshi prices")
+    ap.add_argument("--place", action="store_true", help="buy the bot a ticket per rung")
+    ap.add_argument("--mark", action="store_true", help="re-price open tickets at the book")
+    ap.add_argument("--grade", action="store_true", help="settle what the markets have settled")
+    ap.add_argument("--days", type=int, default=8, help="board window for placing")
+    ap.add_argument("--scope", default="football", help="which board the bot buys from")
+    ap.add_argument("--stake", type=float, default=STAKE)
+    ap.add_argument("--back-days", type=int, default=14, help="how far back to look for settlements")
+    ap.add_argument("--add", default="", help="log a ticket from comma/newline separated tickers")
+    ap.add_argument("--owner", default="you", help="who the --add ticket belongs to")
+    ap.add_argument("--label", default="My ticket")
+    ap.add_argument("--cash-out", default="", help="close an open ticket by id, at its last mark")
+    ap.add_argument("--ledger", default=LEDGER)
+    ap.add_argument("--report", action="store_true")
+    a = ap.parse_args(argv)
+
+    import parlay
+    led = load_ledger(a.ledger)
+    cfg = parlay.load_config()
+    need_board = a.place or a.mark or a.add
+    legs = []
+    if need_board:
+        kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
+        legs = parlay.fetch(cfg, a.days)
+        print(f"[paper] board: {len(legs)} legs live")
+
+    if a.grade:
+        since = (dt.datetime.now(dt.timezone.utc)
+                 - dt.timedelta(days=a.back_days)).timestamp()
+        wanted = {l["ticker"] for t in open_tickets(led) for l in t["legs"]
+                  if l["result"] is None}
+        results = {}
+        if wanted:
+            for key in parlay.all_leagues(cfg):
+                spec = parlay.league_spec(cfg, key)
+                if not spec:
+                    continue
+                try:
+                    evs = kalshi.settled_events(spec["ticker"], since, spec["ticker_order"])
+                except Exception as e:
+                    print(f"[paper] {key} settlements failed: {type(e).__name__}: {str(e)[:70]}")
+                    continue
+                got = results_from_events(evs)
+                hits = {k: v for k, v in got.items() if k in wanted}
+                if hits:
+                    print(f"[paper] {key}: {len(hits)} of our legs settled")
+                results.update(hits)
+        n = grade(led, results)
+        print(f"[paper] graded {n} tickets from {len(results)} settled legs")
+        settled_feed(led, results)
+
+    if a.mark and legs:
+        print(f"[paper] marked {mark_to_market(led, quote_map(legs))} open tickets to the book")
+
+    if a.add and legs:
+        t, missing = slate_from_tickers(a.add.replace("\n", ",").split(","), legs,
+                                        owner=a.owner, stake=a.stake, label=a.label)
+        if missing:
+            print(f"[paper] not on the board, skipped: {', '.join(missing[:6])}")
+        if not t:
+            print("[paper] nothing to log - none of those tickers are trading")
+        elif add(led, t):
+            print(f"[paper] logged {t['id']}: {len(t['legs'])} legs, "
+                  f"pays {t['entry']['multiple']:.2f}x, wins {100*t['entry']['win_prob']:.1f}%")
+        else:
+            print("[paper] you already have that exact ticket open")
+
+    if a.cash_out:
+        hit = [t for t in led["tickets"] if t["id"] == a.cash_out]
+        if not hit:
+            print(f"[paper] no ticket {a.cash_out}")
+        elif cash_out(hit[0]):
+            print(f"[paper] cashed {hit[0]['id']} for {hit[0]['returned']:.2f} "
+                  f"({hit[0]['pnl']:+.2f})")
+        else:
+            print("[paper] that ticket is not open, or has never been marked")
+
+    if a.place and legs:
+        book = parlay.scope_legs(legs, a.scope)
+        bought = 0
+        for t in bot_slate(book, stake=a.stake):
+            if add(led, t):
+                bought += 1
+                print(f"[paper] bot bought {t['label']:<9} {len(t['legs']):>2} legs  "
+                      f"pays {t['entry']['multiple']:>7.2f}x  "
+                      f"wins {100*t['entry']['win_prob']:>5.2f}%")
+        print(f"[paper] {bought} new tickets ({len(open_tickets(led))} open in total)")
+
+    cal = save_calibration(led)
+    s = _report(led)
+    os.makedirs(os.path.dirname(os.path.abspath(a.ledger)), exist_ok=True)
+    with open(os.path.join(os.path.dirname(os.path.abspath(a.ledger)), "summary.json"),
+              "w", encoding="utf-8") as f:
+        json.dump(s, f, indent=1, sort_keys=True)
+    save_ledger(led, a.ledger)
+    learned = cal.get("learned_discount") or {}
+    print(f"[paper] {cal['legs_settled']} legs settled; "
+          + (f"calibration now steering the builder: {learned}" if learned
+             else f"no band has {MIN_BAND_N} settled legs yet, so the hand-set curve still stands"))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(_cli())
