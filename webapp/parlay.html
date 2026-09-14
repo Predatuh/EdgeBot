@@ -288,6 +288,12 @@ main{flex:1; padding:14px 16px calc(var(--nav) + 34px + env(safe-area-inset-bott
   margin-top:4px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
   overflow:hidden; line-height:1.4}
 .flagline.plain{color:var(--ink-3); font-weight:500}
+.flagline b{color:var(--ink-2); font-weight:700}
+.datecols{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.datecols .col{display:flex; flex-direction:column; gap:6px; min-width:0}
+.datecols button{text-align:left; min-height:40px; padding:8px 10px; border:1px solid var(--line);
+  border-radius:10px; background:var(--raise); color:var(--ink-2); font-size:.78rem; font-weight:700}
+.datecols button[aria-pressed="true"]{background:var(--gold-dim); border-color:var(--gold); color:var(--gold)}
 .draw{display:inline-block; margin-left:6px; padding:1px 5px; border-radius:5px;
   background:var(--warn-bg); color:var(--warn-ink); font-size:.55rem; font-weight:800;
   letter-spacing:.06em; vertical-align:2px; font-variation-settings:"wdth" 90}
@@ -782,6 +788,12 @@ input[type=range]{width:100%; accent-color:var(--gold); height:32px; background:
   <div class="body" id="rs-body"></div>
 </div>
 
+<div class="sheet" id="datesheet" hidden role="dialog" aria-modal="true" aria-label="Date range">
+  <div class="grab"></div>
+  <div class="sh"><h2>From this date through this date</h2><button class="x" type="button" data-close aria-label="Close">✕</button></div>
+  <div class="body" id="ds-body"></div>
+</div>
+
 <script id="parlay-data" type="application/json">__PARLAY_DATA__</script>
 <script>
 (function(){
@@ -886,10 +898,32 @@ function inDate(l){
   var today=todayISO();
   var d=l.date||"";
   if(!S.date || S.date==="all") return true;
+  var tom=addDaysISO(today,1);
   if(S.date==="today") return d===today;
-  if(S.date==="tomorrow") return d===addDaysISO(today,1);
+  if(S.date==="tomorrow") return d===tom;
+  if(S.date==="today-tomorrow") return d===today || d===tom;
   if(S.date==="week") return d>=today && d<=addDaysISO(today,6);
+  var r=parseRange(S.date);
+  if(r){
+    var a=r.from<=r.to?r.from:r.to, b=r.from<=r.to?r.to:r.from;
+    return d>=a && d<=b;
+  }
   return d===S.date;
+}
+function parseRange(filter){
+  if(!filter || filter.indexOf("range:")!==0) return null;
+  var p=filter.split(":");
+  if(p.length<3 || !p[1] || !p[2]) return null;
+  return {from:p[1], to:p[2]};
+}
+function rangeKey(from, to){
+  return from<=to ? "range:"+from+":"+to : "range:"+to+":"+from;
+}
+function formatRangeChip(filter){
+  var r=parseRange(filter);
+  if(!r) return "From–through";
+  if(r.from===r.to) return dateLabel(r.from);
+  return dateLabel(r.from)+" – "+dateLabel(r.to);
 }
 function dateLabel(iso){
   var today=todayISO();
@@ -899,6 +933,52 @@ function dateLabel(iso){
   var p=iso.split("-").map(Number);
   var dt=new Date(Date.UTC(p[0], p[1]-1, p[2]));
   return new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",timeZone:"UTC"}).format(dt);
+}
+function noteBits(notes){
+  if(!notes) return [];
+  return String(notes).split(" | ").map(function(s){ return s.trim(); }).filter(Boolean);
+}
+function parseCard(l){
+  var bits=noteBits(l.notes), injury=[], weather=[], pitchers=[], extras=[], injuryElo=null;
+  bits.forEach(function(b){
+    var m=b.match(/-(\d+(?:\.\d+)?)\s*Elo/i);
+    if(m){ var n=Number(m[1]); if(isFinite(n)) injuryElo = injuryElo==null?n:Math.max(injuryElo,n); }
+    if(/\bElo:/i.test(b) || /-\d+(?:\.\d+)?\s*Elo/i.test(b)) injury.push(b);
+    else if(/^wx\b/i.test(b) || /\bat kickoff\b/i.test(b)) weather.push(b);
+    else if(/^SP\s/.test(b)) pitchers.push(b);
+    else extras.push(b);
+  });
+  var r=l.research||{}, heads=r.headlines||[], titles={};
+  heads.forEach(function(h){ if(h.title) titles[String(h.title).trim().toLowerCase()]=1; });
+  var stuffed=[l.pick,l.opp].filter(Boolean).map(function(s){ return String(s).toLowerCase()+":"; });
+  extras=extras.filter(function(e){
+    var low=e.toLowerCase();
+    if(low.indexOf("could be either side:")===0) return false;
+    if(stuffed.some(function(p){ return low.indexOf(p)===0; }) && heads.length) return false;
+    for(var t in titles){ if(t.length>12 && low.indexOf(t)>=0) return false; }
+    return true;
+  });
+  function health(s){
+    s=(s||"").trim();
+    if(!s || s.toLowerCase()==="no issues found") return "";
+    return s;
+  }
+  function num(v){ return typeof v==="number" && isFinite(v) ? v : null; }
+  return {injury:injury, weather:weather, pitchers:pitchers, extras:extras,
+    flags:l.flags||[], pickHealth:health(r.pick_health), oppHealth:health(r.opp_health),
+    unattributed:r.unattributed||[], headlines:heads,
+    eloPick:num(l.elo_pick), eloOpp:num(l.elo_opp), injuryElo:injuryElo};
+}
+function teaser(l){
+  var c=parseCard(l);
+  var lines=[].concat(c.flags, c.injury, c.weather, c.pitchers, c.extras);
+  if(c.pickHealth) lines.push(c.pickHealth);
+  c.headlines.forEach(function(h){ if(h.title) lines.push(h.title); });
+  if(!c.injury.length && (c.eloPick!=null || c.eloOpp!=null)){
+    lines.unshift((c.eloPick!=null?Math.round(c.eloPick):"—")+" Elo vs "+(c.eloOpp!=null?Math.round(c.eloOpp):"—"));
+  }
+  if(!lines.length) return {line:"", more:0};
+  return {line:lines[0], more:lines.length-1};
 }
 function leaguesIn(k){ var o=[]; LEGS.forEach(function(l){
   if(inScope(l,k)&&o.indexOf(l.league)<0) o.push(l.league); }); return o; }
@@ -1074,8 +1154,9 @@ function legRow(l,board){
   var act=board?(banned?"🚫":(pinned?"📌":"＋")):"✕";
   var r=l.research||{}, mark = (l.flags&&l.flags.length)?"⚠"
        : (r.checked ? (r.unattributed&&r.unattributed.length ? "❔" : "📰") : "");
+  var t=teaser(l);
   var sub=(l.flags&&l.flags.length)?'<span class="flagline">⚠ '+esc(l.flags[0])+'</span>'
-        :(l.notes?'<span class="flagline plain">'+esc(l.notes)+'</span>':'');
+        :(t.line?'<span class="flagline plain">'+esc(t.line)+(t.more?' <b>+'+t.more+' more</b>':'')+'</span>':'');
   var when=dateLabel(l.date);
   var whenChip=when?'<span class="when'+(when==="Today"?" today":"")+'">'+esc(when)+'</span>':'';
   var actions=board
@@ -1212,16 +1293,27 @@ function renderBoard(){
   host.innerHTML=rows.slice(0,300).map(function(l){ return legRow(l,true); }).join("");
 }
 
-/* ---- leg detail: the research, in full ---- */
+/* ---- leg detail: the same facts the list teased, in full ---- */
 function openLeg(tk){
   var l=LEGS.filter(function(x){ return x.ticker===tk; })[0]; if(!l) return;
   S.leg=tk;
-  var t=tierOf(l.p), r=l.research||{};
+  var t=tierOf(l.p), c=parseCard(l);
   var rows=[["True odds",cents(l.p)],["You pay",cents(l.ask)],
+    ["Bid",l.bid==null?"—":cents(l.bid)],
     ["Spread",l.spread==null?"—":Math.round(100*l.spread)+"¢"],
     ["Traded",Math.round(l.vol||0).toLocaleString()+" contracts"],
-    ["Tradeable",isLiquid(l)?"yes":"no — wide or thin"],
-    ["Kick-off",l.date||"—"]];
+    ["Open interest",Math.round(l.oi||0).toLocaleString()],
+    ["Kick-off",(dateLabel(l.date)||l.date||"—")+(l.close?" · "+String(l.close).replace("T"," ").replace("Z"," UTC"):"")],
+    ["Tradeable",isLiquid(l)?"yes":"no — wide or thin"]];
+  if(c.eloPick!=null || c.eloOpp!=null){
+    rows.push([l.pick+" Elo", c.eloPick==null?"—":String(Math.round(c.eloPick))]);
+    rows.push([l.opp+" Elo", c.eloOpp==null?"—":String(Math.round(c.eloOpp))]);
+    if(c.eloPick!=null && c.eloOpp!=null){
+      var gap=Math.round(c.eloPick-c.eloOpp);
+      rows.push(["Elo gap", (gap>0?"+":"")+gap]);
+    }
+  }
+  if(c.injuryElo!=null) rows.push(["Injury Elo cost", "−"+Math.round(c.injuryElo)]);
   var html='<p class="prose"><span class="tierchip t'+t[2]+'">'+esc(t[1])+'</span> '+
     'vs '+esc(l.opp)+(l.home?" (home)":"")+' · '+esc(l.league_label)+
     (l.draw?' · <span class="draw">DRAW LOSES</span>':'')+'</p>'+
@@ -1229,28 +1321,37 @@ function openLeg(tk){
     rows.map(function(kv){ return '<tr><td>'+esc(kv[0])+'</td><td class="n">'+
       esc(kv[1])+'</td></tr>'; }).join("")+'</table></div>';
 
-  if(l.flags&&l.flags.length){
-    html+='<div class="banner">⚠ '+l.flags.map(esc).join("<br>")+
+  if(c.flags.length){
+    html+='<div class="banner">⚠ '+c.flags.map(esc).join("<br>")+
       '<br><span>Confirmed against this team, so it is excluded unless you turn that filter off.</span></div>';
   }
-  if(r.checked){
-    html+='<div class="grp"><p class="lbl">What the news says</p>';
-    if(r.pick_health) html+='<p class="prose"><b>'+esc(l.pick)+':</b> '+esc(r.pick_health)+'</p>';
-    if(r.opp_health)  html+='<p class="prose"><b>'+esc(l.opp)+':</b> '+esc(r.opp_health)+'</p>';
-    (r.unattributed||[]).forEach(function(u){
-      html+='<p class="prose">❔ Could be either side: '+esc(u)+'</p>'; });
-    if((r.headlines||[]).length){
-      html+='<div class="card">'+r.headlines.map(function(h){
+  function block(title, lines){
+    if(!lines || !lines.length) return "";
+    return '<div class="grp"><p class="lbl">'+esc(title)+'</p>'+
+      lines.map(function(n){ return '<p class="prose">'+esc(n)+'</p>'; }).join("")+'</div>';
+  }
+  html+=block("Injuries (Elo cost)", c.injury);
+  html+=block("Weather at kickoff", c.weather);
+  html+=block("Starting pitchers", c.pitchers);
+  html+=block("On this card", c.extras);
+  var news=[];
+  if(c.pickHealth) news.push(l.pick+": "+c.pickHealth);
+  if(c.oppHealth) news.push(l.opp+": "+c.oppHealth);
+  (c.unattributed||[]).forEach(function(u){ news.push("Could be either side: "+u); });
+  html+=block("What the news says", news);
+  if(c.headlines.length){
+    html+='<div class="grp"><p class="lbl">Headlines · '+c.headlines.length+'</p><div class="card">'+
+      c.headlines.map(function(h){
         return '<div class="slipline"><span class="n">'+(h.watch?"⚠":"·")+'</span>'+
           '<span class="b"><span class="nm2" style="font-size:.84rem">'+esc(h.title)+'</span>'+
           '<span class="t">'+esc([h.side,h.source,h.date].filter(Boolean).join(" · "))+'</span></span></div>';
-      }).join("")+'</div>';
-    }
-    html+='</div>';
-  } else {
-    html+='<p class="prose">No news checked for this one. Research runs on the legs the '+
-      'builder actually wants, so a leg no ticket uses is usually left unchecked.</p>';
+      }).join("")+'</div></div>';
   }
+  if(!c.injury.length && !c.weather.length && !c.pitchers.length && !c.extras.length &&
+     !c.flags.length && !news.length && !c.headlines.length && c.eloPick==null && c.injuryElo==null){
+    html+='<p class="prose">Nothing extra on this card yet — market numbers are above.</p>';
+  }
+  if(l.ticker) html+='<p class="prose"><code>'+esc(l.ticker)+'</code></p>';
   var pinned=!!S.pins[l.ticker], banned=!!S.bans[l.ticker];
   var onSlip=S.ticket.some(function(x){ return x.ticker===l.ticker; });
   html+=(onSlip
@@ -1275,19 +1376,53 @@ function boardDates(){
 }
 function renderDateRail(){
   var today=todayISO();
-  var chips=[{id:"today",label:"Today"},{id:"tomorrow",label:"Tomorrow"},
-             {id:"week",label:"This week"},{id:"all",label:"All days"}];
+  var rangeOn=!!parseRange(S.date);
+  var chips=[{id:"today",label:"Today"},
+             {id:"today-tomorrow",label:"Today–tomorrow"},
+             {id:"tomorrow",label:"Tomorrow"},
+             {id:"week",label:"This week"},{id:"all",label:"All days"},
+             {id:"range",label: rangeOn?formatRangeChip(S.date):"From–through"}];
   boardDates().forEach(function(d){
     if(d===today) return;
     if(chips.some(function(c){ return c.id===d; })) return;
-    chips.push({id:d, label:d.slice(5)});
+    chips.push({id:d, label:dateLabel(d)});
   });
   var host=$("daterail");
   if(!host) return;
   host.innerHTML=chips.map(function(c){
+    var pressed = c.id==="range" ? rangeOn : (S.date===c.id);
     return '<button type="button" data-date="'+esc(c.id)+'" aria-pressed="'+
-      (S.date===c.id?"true":"false")+'">'+esc(c.label)+'</button>';
+      (pressed?"true":"false")+'">'+esc(c.label)+'</button>';
   }).join("");
+}
+function openDateRange(reset){
+  var dates=boardDates();
+  var today=todayISO();
+  if(!dates.length) dates=[today];
+  if(reset || !S.rangeFrom || !S.rangeTo){
+    var r=parseRange(S.date);
+    S.rangeFrom = (r && r.from) || dates[0];
+    S.rangeTo = (r && r.to) || dates[dates.length-1];
+  }
+  function col(kind, cur){
+    return '<div class="col"><p class="lbl">'+(kind==="from"?"From":"Through")+'</p>'+
+      dates.map(function(d){
+        return '<button type="button" data-range-'+kind+'="'+esc(d)+'" aria-pressed="'+
+          (cur===d?"true":"false")+'">'+esc(dateLabel(d))+'</button>';
+      }).join("")+'</div>';
+  }
+  var a=S.rangeFrom<=S.rangeTo?S.rangeFrom:S.rangeTo;
+  var b=S.rangeFrom<=S.rangeTo?S.rangeTo:S.rangeFrom;
+  $("ds-body").innerHTML='<p class="prose">Mix any stretch of the board — today through tomorrow, or a weekend slate.</p>'+
+    '<div class="datecols">'+col("from", S.rangeFrom)+col("to", S.rangeTo)+'</div>'+
+    '<button class="btn primary" type="button" id="ds-apply">Use '+esc(dateLabel(a))+' – '+esc(dateLabel(b))+'</button>';
+  $("ds-apply").onclick=function(){
+    S.date=rangeKey(S.rangeFrom, S.rangeTo);
+    S.frozen=false;
+    closeSheets();
+    render();
+  };
+  openSheet("datesheet");
 }
 function rebuild(){
   S.frozen=false;
@@ -1336,7 +1471,7 @@ function showTab(k){
 }
 function openSheet(id){ $("scrim").hidden=false; $(id).hidden=false; }
 function closeSheets(){ $("scrim").hidden=true;
-  ["tune","scopesheet","legsheet","replacesheet"].forEach(function(i){ $(i).hidden=true; }); }
+  ["tune","scopesheet","legsheet","replacesheet","datesheet"].forEach(function(i){ $(i).hidden=true; }); }
 function toast(msg){
   var t=document.createElement("div"); t.className="toast"; t.textContent=msg;
   document.body.appendChild(t); setTimeout(function(){ t.remove(); },1700);
@@ -1505,7 +1640,14 @@ document.addEventListener("click",function(e){
   if(e.target.closest("[data-close]")){ closeSheets(); return; }
   if(e.target.id==="fixit"&&FIX){ FIX(); S.frozen=false; renderDial(); render(); return; }
   var dateBtn=e.target.closest("[data-date]");
-  if(dateBtn){ S.date=dateBtn.dataset.date; S.frozen=false; render(); return; }
+  if(dateBtn){
+    if(dateBtn.dataset.date==="range"){ openDateRange(true); return; }
+    S.date=dateBtn.dataset.date; S.frozen=false; render(); return;
+  }
+  var fromBtn=e.target.closest("[data-range-from]");
+  if(fromBtn){ S.rangeFrom=fromBtn.getAttribute("data-range-from"); openDateRange(false); return; }
+  var toBtn=e.target.closest("[data-range-to]");
+  if(toBtn){ S.rangeTo=toBtn.getAttribute("data-range-to"); openDateRange(false); return; }
   var pick=e.target.closest("[data-pick]");
   if(pick){
     var nxt=LEGS.filter(function(x){ return x.ticker===pick.dataset.pick; })[0];

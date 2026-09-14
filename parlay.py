@@ -590,7 +590,7 @@ def add_research(legs, cfg, cap=None):
         heads = [{"side": h.get("side", ""), "title": h.get("title", ""),
                   "source": h.get("source", ""), "date": h.get("date", ""),
                   "watch": bool(h.get("watch"))}
-                 for h in brief.get("headlines", [])][:5]
+                 for h in brief.get("headlines", [])][:8]
         l["research"] = {
             "checked": True,
             "pick_health": brief.get("pick_health", ""),
@@ -600,16 +600,10 @@ def add_research(legs, cfg, cap=None):
         }
         if brief.get("red_flags"):
             l["flags"] = list(brief["red_flags"])[:2]
-        bits = [x for x in (l.get("notes") or "").split(" | ") if x]
-        bits += [f"could be either side: {t}" for t in brief.get("unattributed", [])[:1]]
-        bits += [f"{h['side']}: {h['title']}" for h in heads if h["watch"]][:2]
-        # keep weather/pitcher notes that enrich() already put on
-        uniq = []
-        for b in bits:
-            if b and b not in uniq:
-                uniq.append(b)
-        if uniq:
-            l["notes"] = " | ".join(uniq)[:240]
+        # Headlines live on research. Stuffing them into notes was chopping the
+        # injury-Elo / weather / pitcher line at 240 characters, so the list
+        # teaser and the tap-through card disagreed.
+        l["notes"] = merge_notes(l.get("notes"))
 
     def run_pass(flagged):
         nonlocal done
@@ -642,14 +636,70 @@ SPORT_HINT = {"nfl": "football", "ncaaf": "football", "cfl": "football",
               "cricket_t20i": "cricket", "cricket_odi": "cricket",
               "cricket_test": "cricket", "cpl": "cricket"}
 
+NOTES_CAP = 800
+
+
+def merge_notes(*parts):
+    """Join unique note bits. Cap is high enough for injury + weather + SP."""
+    bits = []
+    for p in parts:
+        if not p:
+            continue
+        chunks = p if isinstance(p, (list, tuple)) else str(p).split(" | ")
+        for x in chunks:
+            x = x.strip()
+            if x and x not in bits:
+                bits.append(x)
+    return " | ".join(bits)[:NOTES_CAP]
+
 
 def _note(leg, line):
     if not line:
         return
-    bits = [x for x in (leg.get("notes") or "").split(" | ") if x]
-    if line not in bits:
-        bits.append(line)
-    leg["notes"] = " | ".join(bits)[:360]
+    leg["notes"] = merge_notes(leg.get("notes"), line)
+
+
+def attach_elo(legs):
+    """Stamp each leg with this team's Elo and the opponent's.
+
+    top_ratings is a top-10 display list and is the wrong lookup. A missing
+    rating stays None so the card can hide the row instead of inventing 1500.
+    """
+    import names
+    import state
+    cache = {}
+    for l in legs:
+        lg = l.get("league") or ""
+        if lg not in cache:
+            try:
+                cache[lg] = state.load_elo(lg) or {}
+            except Exception:
+                cache[lg] = {}
+        table = cache[lg]
+
+        def val(name, league=lg, ratings=table):
+            if not name or not ratings:
+                return None
+            keys = [name, names.canon(league, name)]
+            seen = set()
+            for key in keys:
+                if not key or key in seen:
+                    continue
+                seen.add(key)
+                if key in ratings and not str(key).startswith("_"):
+                    v = ratings[key]
+                    if isinstance(v, (int, float)):
+                        return round(float(v), 1)
+                low = key.lower()
+                for k, v in ratings.items():
+                    if str(k).startswith("_") or not isinstance(v, (int, float)):
+                        continue
+                    if k.lower() == low:
+                        return round(float(v), 1)
+            return None
+
+        l["elo_pick"] = val(l.get("pick"))
+        l["elo_opp"] = val(l.get("opp"))
 
 
 def enrich(legs, cfg):
@@ -737,6 +787,10 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
     cfg = cfg or load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     legs = fetch(cfg, days, leagues)
+    try:
+        attach_elo(legs)
+    except Exception as e:
+        print(f"[parlay] elo stamp skipped: {type(e).__name__}: {str(e)[:80]}")
     try:
         enrich(legs, cfg)
     except Exception as e:
