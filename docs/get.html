@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get Gridiron Ticket</title>
+<meta name="theme-color" content="#080C10">
+<style>
+:root{color-scheme:dark;
+  --bg:#080C10; --surface:#111920; --line:#1E2B34; --line-2:#2B3C47;
+  --ink:#EAF2F6; --ink-2:#9BB0BB; --ink-3:#6A828E;
+  --gold:#F3B44A; --gold-2:#FFD08A; --gold-ink:#0E1419}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); line-height:1.55;
+  font-family:"Segoe UI Variable",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  -webkit-text-size-adjust:100%}
+.wrap{max-width:520px; margin:0 auto; padding:28px 18px calc(40px + env(safe-area-inset-bottom))}
+h1{font-size:1.5rem; margin:0 0 6px; letter-spacing:-.02em}
+p{margin:0 0 14px; color:var(--ink-2); font-size:.95rem}
+b{color:var(--ink)}
+.dl{display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
+  min-height:60px; margin:20px 0 10px; border-radius:15px; text-decoration:none;
+  background:linear-gradient(170deg,var(--gold-2),var(--gold)); color:var(--gold-ink);
+  font-size:1.05rem; font-weight:800; box-shadow:0 12px 30px -16px var(--gold)}
+.dl:active{filter:brightness(1.08)}
+.size{text-align:center; font-size:.78rem; color:var(--ink-3); margin:0 0 24px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:15px 16px; margin:0 0 14px}
+.card h2{font-size:.68rem; text-transform:uppercase; letter-spacing:.13em; color:var(--ink-3);
+  margin:0 0 9px}
+ol{margin:0; padding-left:20px; color:var(--ink-2); font-size:.9rem}
+li{margin-bottom:7px}
+a{color:var(--gold)}
+.alt{font-size:.85rem; color:var(--ink-3)}
+code{background:#0B1217; border:1px solid var(--line); padding:2px 6px; border-radius:5px;
+  font-size:.82em; word-break:break-all; color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🏈 Gridiron Ticket</h1>
+  <p>The parlay builder, as an Android app. Same board as the site, but it opens
+     instantly and works with no signal.</p>
+
+  <a class="dl" href="gridiron-ticket.apk" download>Download the app</a>
+  <p class="size" id="size">Android · about 1.1 MB</p>
+
+  <div class="card">
+    <h2>Installing it</h2>
+    <ol>
+      <li>Tap <b>Download the app</b> above.</li>
+      <li>Open the file from your notifications, or Downloads.</li>
+      <li>Android asks whether to allow installs from this browser the first time —
+          say yes, then tap Install.</li>
+      <li>Play Protect may warn that it doesn't recognise the app. That is what it
+          says about anything not from the Play Store. Tap <b>Install anyway</b>.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>If nothing happens when you tap</h2>
+    <p class="alt">You are probably in an app's built-in browser, which cannot finish
+      downloads. Long-press the link and choose <b>Open in Chrome</b> — or open Chrome
+      and type this address in yourself:</p>
+    <p><code>predatuh.github.io/EdgeBot/get.html</code></p>
+  </div>
+
+  <div class="card">
+    <h2>Once it is installed</h2>
+    <p class="alt" style="margin:0">It updates its own board every time you open it, so you
+      never need to reinstall for new games. A new version of the app itself lands here at
+      the same link, and installs over the top.</p>
+  </div>
+
+  <p class="alt">Prefer it in the browser? <a href="./">Open the web version</a>.</p>
+</div>
+</body>
+</html>

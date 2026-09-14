@@ -108,6 +108,22 @@ jobs:
           path: gridiron-ticket.apk
           if-no-files-found: error
 
+      - name: Publish it on the site, where a phone can just tap it
+        run: |
+          set -euo pipefail
+          cp gridiron-ticket.apk docs/gridiron-ticket.apk
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add -A docs/gridiron-ticket.apk docs/get.html
+          if git diff --cached --quiet; then
+            echo "same bytes as the published one; nothing to commit"
+          else
+            git commit -m "app: publish build ${{ github.run_number }} to the site"
+            BR="${{ github.ref_name }}"
+            git pull --rebase -X theirs origin "$BR"
+            git push -u origin "HEAD:$BR" || (git pull --rebase -X theirs origin "$BR" && git push -u origin "HEAD:$BR")
+          fi
+
       - name: Attach it to the app release
         if: ${{ github.event_name == 'push' || inputs.release }}
         env:
@@ -116,10 +132,11 @@ jobs:
           set -euo pipefail
           notes="Gridiron Ticket ${{ github.run_number }} (${{ steps.apk.outputs.size }}).
 
-          Install: open this page on the phone, tap the .apk, allow installing
-          from the browser when Android asks. Updates install over the top -
-          every build is signed with the same key.
+          **Easiest install: https://predatuh.github.io/EdgeBot/get.html** - one tap,
+          no redirect, no sign-in. The download below goes through a signed URL on
+          another host, which an app's built-in browser often cannot finish.
 
+          Updates install over the top: every build is signed with the same key.
           The app fetches the board from the repo each time it opens, so it stays
           current without reinstalling."
           if gh release view app >/dev/null 2>&1; then

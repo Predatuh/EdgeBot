@@ -364,9 +364,14 @@ counted towards what the bot learns.
 
 ### On Android, as a real app
 
-**https://github.com/Predatuh/EdgeBot/releases/latest/download/gridiron-ticket.apk**
+**https://predatuh.github.io/EdgeBot/get.html**
 
-Open that on the phone and tap it. `android/` is a WebView around the same page, built
+Open that on the phone and tap Download. It is served straight off the Pages site,
+one hop from the host the app already loads from - the release download
+(`/releases/latest/download/gridiron-ticket.apk`) works too, but it redirects
+twice onto a signed URL on another host, and an app's built-in browser often
+cannot finish that. If a tap does nothing, you are in one of those browsers:
+long-press and choose Open in Chrome. `android/` is a WebView around the same page, built
 and signed by `.github/workflows/android.yml` and attached to the `app` release. Updates
 install over the top, and the board keeps updating itself without a reinstall — the APK
 only needs rebuilding when the app itself changes. `android/README.md` covers the signing
