@@ -1,0 +1,14 @@
+name: Probe
+# One-shot: what Kalshi gives us for order flow, price history and market types.
+# Kalshi is unreachable from the dev container, so this asks from a runner.
+on: {workflow_dispatch: {}}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - run: python tools/probe_kalshi.py
