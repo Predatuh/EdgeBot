@@ -4366,5 +4366,615 @@
    }
   ],
   "_ts": "2026-09-14T02:43Z"
+ },
+ "College Football|Colorado St. vs BYU|BYU": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Starters, key matchups and a prediction for Arizona vs. BYU in Provo; Which BYU players are on the latest injury report ahead of Cougars\u2019 matchup with Arizona?",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "BYU",
+    "title": "Starters, key matchups and a prediction for Arizona vs. BYU in Provo",
+    "source": "Arizona Daily Star",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "BYU",
+    "title": "Which BYU players are on the latest injury report ahead of Cougars\u2019 matchup with Arizona?",
+    "source": "Deseret News",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Colorado St.",
+    "title": "Colorado St Football",
+    "source": "Idaho State Journal",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Colorado St.",
+    "title": "Wyoming Colorado St Football",
+    "source": "Bluefield Daily Telegraph",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "BYU",
+    "title": "BYU continues their hot start after defeating Arizona",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Colorado St.",
+    "title": "Oct. 3 Oregon St vs. Colorado St Football Tickets",
+    "source": "Rip City Radio 620 Portland",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Louisiana Tech vs Baylor|Louisiana Tech": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "\u201cHe\u2019s So Bad at Football,\u201d \u201cMight Be Worst QB in SEC\u201d: CFB Fans Want Sam Leavitt Benched After LSU QB Throws 3 INTs in First Half vs. Louisiana Tech",
+  "opp_health": "Dave Aranda Confirms Season-Ending Leg Injury for Baylor DT Devonte Tezino; Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baylor",
+    "title": "Baylor QB DJ Lagway ruled out vs. Prairie View A&M with left ankle injury, report says",
+    "source": "Dallas News",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "\u201cHe\u2019s So Bad at Football,\u201d \u201cMight Be Worst QB in SEC\u201d: CFB Fans Want Sam Leavitt Benched After LSU QB Throws 3 INTs in First Half vs. Louisiana Tech",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "Dave Aranda Confirms Season-Ending Leg Injury for Baylor DT Devonte Tezino",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "3 Overreactions After LSU's Win vs. Louisiana Tech",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "Where is LSU football ranked after hard-fought win v Louisiana Tech in Week 2?",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Sacramento St. vs North Dakota St.|North Dakota St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "North Dakota St.",
+    "title": "Polasek's rise through the ranks to Mountain West rookie North Dakota St. was launched by hard labor",
+    "source": "Bozeman Daily Chronicle",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Sacramento St.",
+    "title": "St. Francis High School (Sacramento, CA) Flag Football",
+    "source": "MaxPreps",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "North Dakota St.",
+    "title": "North Dakota State Bison vs. Air Force Falcons - Final Score - September 12, 2026",
+    "source": "FOX Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "North Dakota St.",
+    "title": "North Dakota St. beats Air Force 38-32, win first Mountain West Conference game",
+    "source": "The Washington Post",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Sacramento St.",
+    "title": "Mandal helps Fresno State unload on Sacramento State in 49-3 win",
+    "source": "abc30.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Sacramento St.",
+    "title": "Sacramento State Hornets 3 - Fresno State Bulldogs 49: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Southern Miss vs UConn|UConn": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Southern Miss",
+    "title": "Will Da'Shawn Womack play vs Southern Miss? Auburn football injury report",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "UConn",
+    "title": "Malik Washington Powers Maryland Football to Commanding 38\u201314 Win Over UConn",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UConn",
+    "title": "Southern Miss vs. UConn Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Alex Golesh reacts to 43-8 win over Southern Miss",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Auburn football snap count leaders vs Southern Miss in Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UConn",
+    "title": "UConn Football Takeaways: Maryland ran away with it in Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Florida St. vs Alabama|Alabama": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alabama Football Injury Updates at Kentucky",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alabama",
+    "title": "Alabama Football Injury Updates at Kentucky",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Florida St.",
+    "title": "SMU Florida St Football",
+    "source": "Journal-News.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Florida St.",
+    "title": "APTOPIX SMU Florida St Football",
+    "source": "The Herald Journal",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Florida St.",
+    "title": "Florida St Football",
+    "source": "The Herald Journal",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Alabama",
+    "title": "What We Really Learned About Alabama Football From Its Dominating Win Over Kentucky",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Alabama",
+    "title": "Point spread released for Alabama football rematch vs. Florida State",
+    "source": "247Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "College Football|Wake Forest vs Miami (FL)|Miami (FL)": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami (FL)",
+    "title": "Miami (FL) news: Hurricanes' win vs Florida A&M got so bad it had mercy rule measures",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Miami (FL)",
+    "title": "Miami (FL) Hurricanes\u2019 beatdown of Florida A&M gets so bad it needed mercy rule measures",
+    "source": "ClutchPoints",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Miami (FL)",
+    "title": "Bonkers Darian Mensah stat through Miami Hurricanes\u2019 2 games will kickstart Heisman campaign",
+    "source": "ClutchPoints",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Wake Forest",
+    "title": "3 Officiating Calls That Hurt Purdue in 38-36 Double Overtime Loss to Wake Forest",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Wake Forest",
+    "title": "Miami Hurricanes open as favorites over Wake Forest Demon Deacons in Week 3",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Wake Forest",
+    "title": "Purdue Football vs Wake Forest Recap",
+    "source": "wlfi.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "Premier League|Tottenham vs Aston Villa|Tottenham": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Tottenham Hotspur vs. Everton Lineups & Confirmed Team News for Premier League Match; Everton Starting XI vs Tottenham Hotspur: Confirmed Team News and Predicted Lineup",
+  "opp_health": "Unai Emery\u2019s Stance On \u00a340m Aston Villa Winger\u2019s Slow Start: Can They Turn Him Into A Regular Starter?; Aston Villa duo facing spells out with injury following defeat to Nottingham Forest",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tottenham",
+    "title": "Tottenham Hotspur vs. Everton Lineups & Confirmed Team News for Premier League Match",
+    "source": "Athlon Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Tottenham",
+    "title": "Everton Starting XI vs Tottenham Hotspur: Confirmed Team News and Predicted Lineup",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Tottenham",
+    "title": "Tottenham Hotspur Starting XI vs Everton: Confirmed Team News and Predicted Lineup",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Aston Villa",
+    "title": "Unai Emery\u2019s Stance On \u00a340m Aston Villa Winger\u2019s Slow Start: Can They Turn Him Into A Regular Starter?",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Aston Villa",
+    "title": "Aston Villa duo facing spells out with injury following defeat to Nottingham Forest",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Aston Villa",
+    "title": "Aston Villa vs. Nottingham Forest Lineups, Live Streaming, How & Where to Watch Premier League Match",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "Ligue 1|Lens vs Monaco|Monaco": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Strasbourg vs Monaco Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026; Monaco return to Ligue 1 summit after deserved draw with in-form Strasbourg",
+  "opp_health": "Le Mans vs Lens match lineup | Ligue 1 \u00b7 13 Sep 2026; Le Mans vs Lens Confirmed Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Monaco",
+    "title": "Monaco return to Ligue 1 summit after deserved draw with in-form Strasbourg",
+    "source": "TribalFootball",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Monaco",
+    "title": "Strasbourg vs Monaco match lineup | Ligue 1 \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Monaco",
+    "title": "Strasbourg vs Monaco Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Le Mans vs Lens match lineup | Ligue 1 \u00b7 13 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Le Mans vs Lens Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Le Mans vs Lens Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "Premier League|Liverpool vs Bournemouth|Liverpool": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Liverpool XI vs Fulham: Starting lineup and confirmed team news; Liverpool vs Fulham LIVE! Premier League score updates, news, prediction and lineups",
+  "opp_health": "Bournemouth vs Liverpool: Predictions, Picks, Odds & Lineups; Bournemouth vs Brentford LIVE! Premier League score updates, news, prediction and lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Liverpool",
+    "title": "Liverpool vs Fulham LIVE! Premier League score updates, news, prediction and lineups",
+    "source": "Sky Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Liverpool",
+    "title": "Liverpool XI vs Fulham: Predicted lineup and confirmed team news",
+    "source": "standard.co.uk",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "Bournemouth vs Brentford LIVE! Premier League score updates, news, prediction and lineups",
+    "source": "Sky Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "Bournemouth vs Brentford Lineups, Live Streaming, How & Where to Watch Premier League Match",
+    "source": "AOL.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Liverpool",
+    "title": "Liverpool XI vs Fulham: Starting lineup and confirmed team news",
+    "source": "standard.co.uk",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "Bournemouth vs Liverpool: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "ATP Challenger|Maximilian Marterer vs Pavel Lagutin|Pavel Lagutin": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pavel Lagutin",
+    "title": "Gonzalez Fernandez, Mario - Lagutin, Pavel, Pista 3",
+    "source": "ATP Tour",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Pavel Lagutin",
+    "title": "Vilius Gaubas vs Pavel Lagutin \u00b7 Round 1 \u00b7 ATP Challenger Seville, Spain",
+    "source": "Tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
+ },
+ "WTA Tennis|Darja Semenistaja vs Paula Badosa|Darja Semenistaja": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Darja Semenistaja",
+    "title": "Potapova vs. Semenistaja | Round of 128 US Open 2026 | WTA Official",
+    "source": "wtatennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "Kasatkina vs. Badosa | Round of 128 US Open 2026 | WTA Official",
+    "source": "wtatennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "WTA S\u00e3o Paulo: Fernandez and Badosa Headline Draw",
+    "source": "TennisTemple",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Darja Semenistaja",
+    "title": "Darja Semenistaja vs Paula Badosa \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Darja Semenistaja",
+    "title": "Semenistaja vs. Shubladze | Qualifying US Open 2026 | WTA Official",
+    "source": "wtatennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "Darja Semenistaja vs Paula Badosa \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T02:49Z"
  }
 }
