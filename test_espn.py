@@ -203,6 +203,26 @@ check("both probable pitchers are named",
       espn.pitcher_note(g, "Cincinnati", "Los Angeles D") if g else "")
 check("no pitchers means no note", espn.pitcher_note({"teams": []}, "A", "B") == "")
 
+LIVE_SHAPE = {"events": [{"id": "401", "date": "2026-09-14T23:10Z", "competitions": [{
+    "venue": {"indoor": False, "address": {"city": "Cincinnati"}, "fullName": "GABP"},
+    "competitors": [
+        {"homeAway": "away", "team": {"id": "19", "displayName": "Los Angeles Dodgers"},
+         "probables": [{"displayName": "Probable Starting Pitcher",
+                        "athlete": {"displayName": "Tarik Skubal", "fullName": "Tarik Skubal"}}]},
+        {"homeAway": "home", "team": {"id": "17", "displayName": "Cincinnati Reds"},
+         "probables": [{"displayName": "Probable Starting Pitcher",
+                        "athlete": {"displayName": "Nick Lodolo"}}]},
+    ],
+}]}]}
+espn._board_cache.clear()
+espn.S = type("S", (), {"get": staticmethod(
+    lambda url, params=None, timeout=None: type("R", (), {"json": staticmethod(lambda: LIVE_SHAPE)})())})()
+g = espn.find_game("baseball", "mlb", "Los Angeles D", "Cincinnati")
+check("nested athlete is the pitcher, not the role label",
+      espn.pitcher_note(g, "Cincinnati", "Los Angeles D") ==
+      "SP Los Angeles D: Tarik Skubal / Cincinnati: Nick Lodolo",
+      espn.pitcher_note(g, "Cincinnati", "Los Angeles D") if g else "")
+
 print("\nCFBD injury parse")
 import cfbd
 cfbd._cache.clear()
@@ -224,6 +244,20 @@ check("a probable player is ignored",
 ih, _ = cfbd.for_teams("Ohio St.", "Michigan")
 check("Kalshi 'Ohio St.' matches CFBD 'Ohio State'",
       ih and ih["out"][0]["name"] == "Julian Sayin", str(ih))
+
+cfbd._cache.clear()
+def fake_get(endpoint, params, timeout=25):
+    if endpoint == "/calendar":
+        return None
+    if (params or {}).get("week") == 4:
+        return []
+    if (params or {}).get("week") == 3:
+        return rows
+    return []
+cfbd._get = fake_get
+empty_week = cfbd.injuries(year=2026, week=4)
+check("an empty week falls back to an adjacent week with data",
+      "Ohio State" in empty_week, str(list(empty_week)))
 
 print("\nweather at kickoff, not current")
 import weather
