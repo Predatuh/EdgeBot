@@ -8422,5 +8422,3906 @@
    }
   ],
   "_ts": "2026-09-14T18:16Z"
+ },
+ "MLB|New York Y vs Minnesota|New York Y": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Volpe hits grand slam in return to majors as Yankees sweep Rockies 10-3 to pull closer in AL East; Yankees putting Jazz Chisholm on IL in latest injury blow with Anthony Volpe question looming",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York Y",
+    "title": "Yankees putting Jazz Chisholm on IL in latest injury blow with Anthony Volpe question looming",
+    "source": "New York Post",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Aaron Judge back in Yankees\u2019 lineup after early exit from return left him \u2018not happy\u2019",
+    "source": "New York Daily News",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Volpe hits grand slam in return to majors as Yankees sweep Rockies 10-3 to pull closer in AL East",
+    "source": "AP News",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "New York Yankees at Minnesota Twins - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Cleveland Guardians at Minnesota Twins - MLB Game Summary - Sep 13, 2026",
+    "source": "USA Today",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Twins Recent Struggles Masking Offensive Success of Two Players",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "MLB|Toronto vs Detroit|Detroit": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Toronto Blue Jays Provide Surprisingly Excellent Injury News on Trey Yesavage",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Provide Surprisingly Excellent Injury News on Trey Yesavage",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Pitching Probables, What to Watch For in Toronto Blue Jays-Detroit Tigers Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers at Toronto Blue Jays - MLB Game Summary - Sep 14, 2026 | USA TODAY",
+    "source": "Siskiyou Daily News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers right-hander Jackson Jobe set career highs in innings pitched and strikeouts in the Tigers' win on Sunday. See link below \u2b07\ufe0f \ud83d\udcf8 Duane Burleson, Getty Images",
+    "source": "facebook.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Pitching Probables, What to Watch For in Toronto Blue Jays-Detroit Tigers Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Make George Springer Announcement Before Detroit Tigers Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "MLB|Miami vs Arizona|Miami": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rojas injures shoulder in possible final game in Miami, will receive treatment",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami",
+    "title": "Rojas injures shoulder in possible final game in Miami, will receive treatment",
+    "source": "MLB.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Miami Marlins at Arizona Diamondbacks - MLB Game Summary - Sep 14, 2026",
+    "source": "USA Today",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Fall Rookies Program reaches record registration at the Miami Marlins MLB Youth Academy",
+    "source": "MLB.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Diamondbacks News 9/14",
+    "source": "AZ Snake Pit",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Miami Marlins at Arizona Diamondbacks - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "\u2018A Big Series Win\u2019: Corey Seager Powers Texas Rangers Past Arizona Diamondbacks 7-6",
+    "source": "dallassportsjournal.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "MLB|New York M vs Baltimore|Baltimore": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Baltimore Orioles Announce Kyle Bradish Injury Update Before Mets Series",
+  "opp_health": "Orioles Slugger Pete Alonso Returns To New York To Face Mets With Season In Despair; New York Mets Announce Intriguing Lineup Change After Bad Yankees Loss",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York M",
+    "title": "New York Mets Announce Intriguing Lineup Change After Bad Yankees Loss",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "New York Mets Suddenly Announce Bad Injury News on 21-Year-Old Top Prospect",
+    "source": "heavy.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Orioles Announce Kyle Bradish Injury Update Before Mets Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Orioles Slugger Pete Alonso Returns To New York To Face Mets With Season In Despair",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Frances Academy impacts Baltimore Nike RBI | 09/14/2026",
+    "source": "MLB.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Baltimore",
+    "title": "Why I Spent $1.7 Billion on the Baltimore Orioles",
+    "source": "WSJ",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Tennessee-Martin vs Memphis|Memphis": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Boise State vs. Memphis starting lineups for marquee Week 2 college football matchup",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Memphis",
+    "title": "Boise State vs. Memphis starting lineups for marquee Week 2 college football matchup",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Tennessee-Martin",
+    "title": "West Virginia football PFF grades: UT Martin",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Tennessee-Martin",
+    "title": "The Day After: UT Martin",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Memphis",
+    "title": "Boise State Broncos outrun Memphis Tigers",
+    "source": "Argus Observer",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Memphis",
+    "title": "Resetting Memphis' path to College Football Playoff after loss to Boise State",
+    "source": "The Commercial Appeal",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Tennessee-Martin",
+    "title": "Numbers and Notes: UT Martin",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Maine vs Boston College|Boston College": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Bodie Kahoun injury update: Boston College linebacker discharged from hospital; Bodie Kahoun injury update: Insider shares latest on Boston College football player's recovery after scary incident | Hindustan Times",
+  "opp_health": "Coaches Show returns to Sea Dog Brewing Company in 2026-27 - University of Maine Athletics",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maine",
+    "title": "Coaches Show returns to Sea Dog Brewing Company in 2026-27 - University of Maine Athletics",
+    "source": "University of Maine Athletics",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "Bodie Kahoun injury update: Insider shares latest on Boston College football player's recovery after scary incident | Hindustan Times",
+    "source": "Hindustan Times",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "Bodie Kahoun injury update: Boston College LB leaves Rutgers game in ambulance after scary collision",
+    "source": "On3",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "Bodie Kahoun injury update: Boston College linebacker discharged from hospital",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Maine",
+    "title": "Maine Football Falls To Merrimack 23-14 At Harold Alfond Stadium",
+    "source": "92.9 The Ticket",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Maine",
+    "title": "Boston College Eagles - Maine \u00bb migliori quote e statistiche",
+    "source": "Odds Scanner",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Utah vs Utah St.|Utah": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Utah St.",
+    "title": "Utah St Washington Football",
+    "source": "The Herald Journal",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Utah St.",
+    "title": "GALLERY: #19 Washington 16, Utah State 14",
+    "source": "Cache Valley Daily",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Utah St.",
+    "title": "No. 19 Washington struggles in 16-14 victory over Utah State",
+    "source": "LancasterOnline",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Utah",
+    "title": "2028 OT Lincoln Maggard raves about visit to Utah",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Utah",
+    "title": "Arkansas Utah Football",
+    "source": "Idaho State Journal",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Utah",
+    "title": "Utah's SEC humbling put an exclamation point on the Big 12's big day",
+    "source": "USA Today",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Tarleton St. vs Merrimack|Tarleton St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tarleton St.",
+    "title": "Merrimack Warriors at Tarleton St. Texans Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Tarleton St.",
+    "title": "Tarleton State 27-24 McNeese (13 Sep, 2026) Game Recap",
+    "source": "espn.com.au",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Tarleton St.",
+    "title": "Football Recap: #4 Tarleton State 27, McNeese 24",
+    "source": "McNeese State University Athletics",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Merrimack",
+    "title": "Merrimack",
+    "source": "Eagle-Tribune",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Merrimack",
+    "title": "Merrimack has big answer in Orono: Will play at FCS powerhouse Tarleton Saturday night",
+    "source": "Eagle-Tribune",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Merrimack",
+    "title": "College roundup: UMass Lowell field hockey team blanks Merrimack, 3-0",
+    "source": "Lowell Sun",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Minnesota vs Akron|Minnesota": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Is Mississippi State ranked after beating Minnesota? Latest college football polls",
+    "source": "The Clarion-Ledger",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota vs. Mississippi State: The Elite, The Meh & The Ugly",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Akron",
+    "title": "The Gophers have uncharacteristic problems to address against Akron before Big Ten play begins",
+    "source": "Star Tribune",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Visible Becomes Minnesota Football\u2019s First-Ever Helmet Bumper Partner",
+    "source": "That Eric Alper",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Akron",
+    "title": "P.J. Fleck\u2019s Gophers look to rebound at home against Akron before hitting the road for Big Ten play",
+    "source": "Star Tribune",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Akron",
+    "title": "Ohio high school football schedule | A look at the Akron area's Week 5 games",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Georgia vs Arkansas|Georgia": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Positive Updates Emerge Following Horrible Injury During Tennessee vs. Georgia Tech; Clemson beats Georgia Southern 22-7 after Christopher Vizzina injury",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Georgia",
+    "title": "Georgia football live updates, analysis, injury news, score for Western Kentucky game",
+    "source": "DawgNation",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Georgia",
+    "title": "Positive Updates Emerge Following Horrible Injury During Tennessee vs. Georgia Tech",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Georgia",
+    "title": "Clemson beats Georgia Southern 22-7 after Christopher Vizzina injury",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Arkansas",
+    "title": "Arkansas football players Caleb Wooden, Sean Williams win preliminary injunction case vs. NCAA",
+    "source": "Whole Hog Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Arkansas",
+    "title": "Arkansas Utah Football",
+    "source": "Idaho State Journal",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Arkansas",
+    "title": "Buy tickets for Georgia football SEC game vs. Arkansas",
+    "source": "Online Athens",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Iowa St. vs Bowling Green|Iowa St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Iowa St.",
+    "title": "Iowa St Iowa Football",
+    "source": "TelegraphHerald.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "Buhr hits 42-yard field goal with 15 seconds left to lift No. 21 Iowa past Iowa State, 16-13",
+    "source": "ehextra.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "Caden Buhr's field goal with 15 seconds left lifts No. 21 Iowa over Iowa State, 16-13",
+    "source": "CoastTV",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bowling Green",
+    "title": "PFF By The Numbers | Huskers vs Bowling Green",
+    "source": "Carriker Chronicles",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Bowling Green",
+    "title": "Corn Nation Overreaction: Biggest Takeaways from Nebraska\u2019s Big Win over Bowling Green",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Bowling Green",
+    "title": "Nebraska Rolls Past Bowling Green 56-7 | Photo Gallery",
+    "source": "Hurrdat Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|South Dakota vs Boise St.|Boise St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Boise St.",
+    "title": "Boise St Football",
+    "source": "Bluefield Daily Telegraph",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Boise St.",
+    "title": "Bear Alexander Sack vs. Boise St. | Oregon Football",
+    "source": "bvmsports.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "South Dakota",
+    "title": "Zimmer: Inside the huddle as South Dakota State routs New Haven",
+    "source": "Sioux Falls Live",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "South Dakota",
+    "title": "Chase Mason accounts for 4 TDs as South Dakota State routs New Haven",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Boise St.",
+    "title": "Boise St Oregon Football",
+    "source": "The Herald Journal",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "South Dakota",
+    "title": "Mi\u2019Quise Humphrey-Grace Learned More Than Football in South Dakota",
+    "source": "yoursportsedge.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Valparaiso vs Indiana St.|Indiana St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Indiana St.",
+    "title": "Indiana State Sycamores @ Eastern Illinois Panthers: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Indiana St.",
+    "title": "Indiana State vs. Northern Illinois (Nov 2, 2026) Live Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Indiana St.",
+    "title": "Valparaiso Beacons at Indiana St. Sycamores Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Valparaiso",
+    "title": "Valparaiso Beacons at Indiana St. Sycamores Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Valparaiso",
+    "title": "Valparaiso's winningest coach out after 25 seasons as Valpo volleyball moves on",
+    "source": "IndyStar",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Valparaiso",
+    "title": "Valparaiso University, volleyball coach Carin Avery part ways after more than 25 years",
+    "source": "nwitimes.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Sam Houston vs Nicholls St.|Sam Houston": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Sam Houston football set for return to renovated Bowers Stadium after 652 days",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sam Houston",
+    "title": "Sam Houston football set for return to renovated Bowers Stadium after 652 days",
+    "source": "KBTX News 3",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Sam Houston",
+    "title": "Tulsa survives Sam Houston to improve to 2-0 for first time since 2015",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Sam Houston",
+    "title": "Tulsa pulls out an ugly win at Sam Houston",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Nicholls St.",
+    "title": "Nicholls St. Colonels at Sam Houston Bearkats Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Western Illinois vs Morehead St.|Western Illinois": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Western Illinois",
+    "title": "Five takeaways from Wisconsin football\u2019s win over Western Illinois",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Illinois",
+    "title": "Wisconsin cruises past Western Illinois 36-9 in home opener",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Illinois",
+    "title": "Wisconsin football rebounds with 36-9 win over Western Illinois",
+    "source": "news8000.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Morehead St.",
+    "title": "Austin Peay 63-7 Morehead State (13 Sep, 2026) Game Recap",
+    "source": "espn.com.au",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Morehead St.",
+    "title": "Big Plays Fuel Govs in 63-7 Win Against Morehead State",
+    "source": "letsgopeay.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Louisiana Tech vs Baylor|Baylor": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Dave Aranda Confirms Season-Ending Leg Injury for Baylor DT Devonte Tezino; Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway",
+  "opp_health": "\u201cHe\u2019s So Bad at Football,\u201d \u201cMight Be Worst QB in SEC\u201d: CFB Fans Want Sam Leavitt Benched After LSU QB Throws 3 INTs in First Half vs. Louisiana Tech",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Dave Aranda Confirms Season-Ending Leg Injury for Baylor DT Devonte Tezino"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baylor",
+    "title": "Baylor QB DJ Lagway ruled out vs. Prairie View A&M with left ankle injury, report says",
+    "source": "Dallas News",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "Dave Aranda Confirms Season-Ending Leg Injury for Baylor DT Devonte Tezino",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "\u201cHe\u2019s So Bad at Football,\u201d \u201cMight Be Worst QB in SEC\u201d: CFB Fans Want Sam Leavitt Benched After LSU QB Throws 3 INTs in First Half vs. Louisiana Tech",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "What We Learned About LSU's Defense After Louisiana Tech",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "Why the Close LSU Win Over Louisiana Tech Was Right on Time",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Western Carolina vs Presbyterian|Western Carolina": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Presbyterian",
+    "title": "Presbyterian Splits Friday Doubleheader in Charlotte",
+    "source": "Presbyterian College - Official Athletics Website",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Cincinnati vs. Western Carolina Winners And Losers",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "5 Cincinnati Bearcats football takeaways from win vs. Western Carolina",
+    "source": "Cincinnati Enquirer",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Cincinnati rushes for 418 yards in 62-10 rout of Western Carolina",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Presbyterian",
+    "title": "Western Carolina Catamounts - Presbyterian \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Presbyterian",
+    "title": "Presbyterian Receives VanDerveer Grant from Women's Sports Foundation",
+    "source": "Presbyterian College - Official Athletics Website",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Kentucky vs Texas A&M|Texas A&M": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas surges to No. 1 spot, Michigan returns to top 25 in college football rankings; Texas A&M Injury Update: Who\u2019s Available vs. Arizona State?",
+  "opp_health": "Indiana football schedule vs. Western Kentucky: Kickoff, where to watch, tickets, injuries; Kentucky is on the verge of getting 2 defensive starters back for Alabama game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kentucky",
+    "title": "Kentucky is on the verge of getting 2 defensive starters back for Alabama game",
+    "source": "A Sea Of Blue",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Texas A&M",
+    "title": "Texas A&M Injury Update: Who\u2019s Available vs. Arizona State?",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Texas A&M",
+    "title": "Texas surges to No. 1 spot, Michigan returns to top 25 in college football rankings",
+    "source": "CBS Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Kentucky",
+    "title": "Indiana football schedule vs. Western Kentucky: Kickoff, where to watch, tickets, injuries",
+    "source": "IndyStar",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Texas A&M",
+    "title": "Texas A&M makes huge jump in latest ESPN power rankings",
+    "source": "Saturday Down South",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Kentucky",
+    "title": "Monday Huddle: Kentucky's first adversity test arrives in Week 3",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|UCLA vs Purdue|UCLA": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Purdue football schedule vs. UCLA: Kickoff, where to watch, tickets, injuries; UCLA football fans ecstatic for team\u2019s return to Rose Bowl: \u2018I\u2019m back home\u2019",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UCLA",
+    "title": "UCLA football fans ecstatic for team\u2019s return to Rose Bowl: \u2018I\u2019m back home\u2019",
+    "source": "New York Post",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "UCLA",
+    "title": "Injury updates for UCLA football ahead of Week 2's game versus SDSU",
+    "source": "UCLA Wire",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "UCLA",
+    "title": "Purdue football schedule vs. UCLA: Kickoff, where to watch, tickets, injuries",
+    "source": "IndyStar",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Purdue",
+    "title": "Purdue football recruiting recap: Recruits recap visits, standout 2027 commits and more",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Purdue",
+    "title": "GoldandBlack.com video: Purdue coach Barry Odom pre-UCLA",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Purdue",
+    "title": "2026 Purdue Football Game 3: Purdue (1-1) at UCLA (2-0)",
+    "source": "Hammer and Rails",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Miami (OH) vs Cincinnati|Cincinnati": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Cincinnati Country Day cancels Thursday's football game due to injuries",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Country Day cancels Thursday's football game due to injuries",
+    "source": "WCPO 9 Cincinnati",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Miami (OH)",
+    "title": "Miami (OH) 45-7 Holy Cross (Sep 12, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Miami (OH)",
+    "title": "Football falls to FBS foe Miami in Ohio",
+    "source": "Holy Cross Athletics",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Miami (OH)",
+    "title": "Miami (OH) vs Holy Cross Live Free NCAA Collage Football Game On TV CHANNEL",
+    "source": "FlamboroughToday.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati vs. Western Carolina Winners And Losers",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "5 overreactions to Cincinnati Bearcats rout vs. Western Carolina",
+    "source": "Cincinnati Enquirer",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Liberty vs Ball St.|Liberty": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ball St.",
+    "title": "Ball St Ohio St Football",
+    "source": "Columbia Missourian",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Ball St.",
+    "title": "College football Week 2: No. 1 Ohio State-No. 4 Texas rekindle Big Ten-SEC supremacy debate",
+    "source": "The Daily Gazette",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Ball St.",
+    "title": "A curious college football weekend: Blowouts loom before Ohio State-Texas steals the spotlight",
+    "source": "Dayton Daily News",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Liberty",
+    "title": "Liberty Flames - Ball State Cardinals \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Liberty",
+    "title": "Ball St. Cardinals at Liberty Flames Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Liberty",
+    "title": "Liberty vs. Ball State Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|San Diego vs Cal Poly|Cal Poly": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "San Diego Wave place US forward Catarina Macario on season-ending injury list with knee injury - The Athletic",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Diego",
+    "title": "San Diego Wave place US forward Catarina Macario on season-ending injury list with knee injury - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Cal Poly",
+    "title": "Local College Football Wrap: Cal Poly loses at San Jose State",
+    "source": "News Channel 3-12",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cal Poly",
+    "title": "San Jose State heats up in fourth quarter to turn back Cal Poly",
+    "source": "Santa Cruz Sentinel",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cal Poly",
+    "title": "Luke Weaver throws 3 TDs as San Jose State tops Cal Poly 30-20",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Oct. 3 Davidson vs. San Diego Football Tickets",
+    "source": "San Diego Sports 760",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "San Diego Wave sign Barbara Bonansea on loan from Juventus",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Incarnate Word vs Houston Christian|Incarnate Word": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston Christian",
+    "title": "Houston Christian vs. Incarnate Word (Sep 19, 2026) Live Score",
+    "source": "ESPN",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Houston Christian",
+    "title": "McNeese vs. Houston Christian (Nov 7, 2026) Live Score",
+    "source": "ESPN",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Incarnate Word",
+    "title": "Northern Arizona 38-28 Incarnate Word (Sep 12, 2026) Final Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Incarnate Word",
+    "title": "NAU football snags most turnovers in 19 years in win over Incarnate Word",
+    "source": "Arizona Daily Sun",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Incarnate Word",
+    "title": "Northern Arizona takes control early to beat Incarnate Word 38-28",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Houston Christian",
+    "title": "Houston Christian hangs 88 points on Arkansas Baptist to set program record",
+    "source": "Houston Chronicle",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|William & Mary vs Fordham|William & Mary": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "William & Mary",
+    "title": "William & Mary vs. American University",
+    "source": "ESPN.nl",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "William & Mary",
+    "title": "Fordham Rams at William & Mary Tribe Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "William & Mary",
+    "title": "No. 16 William & Mary falls 44-20 at No. 9/8 Lehigh",
+    "source": "13newsnow.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Fordham",
+    "title": "Fordham Rams at William & Mary Tribe Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Fordham",
+    "title": "CCU routs Fordham to give coach Ryan Beard his first win in Conway",
+    "source": "MyHorryNews.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Fordham",
+    "title": "Coastal Carolina routs Fordham 45-7 for Ryan Beard's first win",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Villanova vs LIU|Villanova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "LIU",
+    "title": "Alysa Liu Says She Returned To Figure Skating On Her Own Terms",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "LIU",
+    "title": "NCAA FOOTBALL: UAlbany regroups for early Saturday tilt at LIU",
+    "source": "Troy Record",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Villanova",
+    "title": "Lincoln Kienholz\u2019s 4 total TDs leads No. 24 Louisville\u2019s rout of Villanova",
+    "source": "National Football Post",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Villanova",
+    "title": "Villanova Louisville Football",
+    "source": "dailyrecordnews.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Villanova",
+    "title": "Louisville 59-13 Villanova (Sep 11, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "LIU",
+    "title": "NCAA FOOTBALL: Great Danes cruise past LIU, improve to 2-1",
+    "source": "Troy Record",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Chicago St. vs Butler|Butler": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "When Is Jimmy Butler Coming Back? Warriors Receive Fresh Injury Return Timeline",
+  "opp_health": "St. Patrick High School (Chicago, IL) Football; St. Rita High School (Chicago, IL) Football",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Butler",
+    "title": "When Is Jimmy Butler Coming Back? Warriors Receive Fresh Injury Return Timeline",
+    "source": "heavy.com",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Chicago St.",
+    "title": "St. Patrick High School (Chicago, IL) Football",
+    "source": "MaxPreps",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago St.",
+    "title": "St. Rita High School (Chicago, IL) Football",
+    "source": "MaxPreps",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago St.",
+    "title": "Men's soccer remains unbeaten behind 6-0 romp over Chicago State",
+    "source": "Bellarmine University Athletics",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Butler",
+    "title": "Franklin College football falls to Butler",
+    "source": "dailyjournal.net",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Butler",
+    "title": "AP's refusal to give Trump rights to Butler photo helped fuel Oval Office ban, report claims",
+    "source": "Fox News",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "ATP Challenger|Billy Harris vs Ugo Blanchet|Ugo Blanchet": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Billy Harris",
+    "title": "Hugo Grenier vs Billy Harris \u00b7 Round 1 \u00b7 ATP Challenger Cassis, France",
+    "source": "Tennis.com",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Billy Harris",
+    "title": "Moez Echargui 2 - 1 Billy Harris (10/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Ugo Blanchet",
+    "title": "Romain Arneodo/Ugo Blanchet's draws, scores, stats, age, bio, rankings",
+    "source": "Tennis Tonic",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Billy Harris",
+    "title": "Moez Echargui vs Billy Harris \u00b7 Round 2 \u00b7 ATP Challenger Cassis, France",
+    "source": "Tennis.com",
+    "date": "Sep 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "CFL|Ottawa Redblacks vs Calgary Stampeders|Calgary Stampeders": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "CFL Week 15: Edmonton Elks (9-3) vs. Calgary Stampeders (5-7) Game Preview, Injury Report and Predictions; Calgary Stampeders at Edmonton Elks Week 15 Injury Report",
+  "opp_health": "Toronto Argonauts (6-6) Week 15 Preview vs Ottawa Redblacks (0-11): Prediction, Depth Chart, Injuries, Odds; Ottawa Redblacks (0-11) Week 15 Preview vs Toronto Argonauts (6-6): Prediction, Depth Chart, Injuries, Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Calgary Stampeders",
+    "title": "CFL Week 15: Edmonton Elks (9-3) vs. Calgary Stampeders (5-7) Game Preview, Injury Report and Predictions",
+    "source": "CFL News Hub",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Calgary Stampeders",
+    "title": "Calgary Stampeders at Edmonton Elks Week 15 Injury Report",
+    "source": "BGMSportsTrax",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Ottawa Redblacks",
+    "title": "Ottawa Redblacks at Toronto Argonauts Week 15 Injury Report",
+    "source": "BGMSportsTrax",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Ottawa Redblacks",
+    "title": "Toronto Argonauts (6-6) Week 15 Preview vs Ottawa Redblacks (0-11): Prediction, Depth Chart, Injuries, Odds",
+    "source": "CFL News Hub",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Ottawa Redblacks",
+    "title": "Ottawa Redblacks (0-11) Week 15 Preview vs Toronto Argonauts (6-6): Prediction, Depth Chart, Injuries, Odds",
+    "source": "CFL News Hub",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Calgary Stampeders",
+    "title": "Dickenson: Stampeders Need Players to Lead After Blowout Loss",
+    "source": "CFL News Hub",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Western Michigan vs Rice|Western Michigan": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas surges to No. 1 spot, Michigan returns to top 25 in college football rankings; Michigan won the game on a Hail Mary and got dropped out of the AP Top 25 anyway. Why?",
+  "opp_health": "UPDATED Notre Dame injury report for home opener VS Rice Owls",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Western Michigan",
+    "title": "Inside the AP Poll: How Michigan played themselves out of the Top 25 despite win",
+    "source": "NBC Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Western Michigan",
+    "title": "Michigan won the game on a Hail Mary and got dropped out of the AP Top 25 anyway. Why?",
+    "source": "LancasterOnline",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Rice",
+    "title": "UPDATED Notre Dame injury report for home opener VS Rice Owls",
+    "source": "One Foot Down",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Western Michigan",
+    "title": "Texas surges to No. 1 spot, Michigan returns to top 25 in college football rankings",
+    "source": "CBS Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Rice",
+    "title": "The good, the bad, and the concerning from Notre Dame Football's blowout victory against the Rice Owls",
+    "source": "A to Z Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Rice",
+    "title": "Key Takeaways From The Notre Dame Defense vs The Rice Owls",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Eastern Kentucky vs Dayton|Eastern Kentucky": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dayton",
+    "title": "Dayton Flyer football never trails in win over Thomas More",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Eastern Kentucky",
+    "title": "Eastern Kentucky Colonels - Dayton \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Eastern Kentucky",
+    "title": "Dayton Flyers at Eastern Kentucky Colonels Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Dayton",
+    "title": "Dayton Flyers at Eastern Kentucky Colonels Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Eastern Kentucky",
+    "title": "Chattanooga Mocs blow late lead, fall 22-17 to Eastern Kentucky Colonels",
+    "source": "Local 3 News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Dayton",
+    "title": "Reds\u2019 first-rounder Justin Lebron making smooth transition to pro ball in Dayton",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "WTA Tennis|Alycia Parks vs Sara Bejlek|Sara Bejlek": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alycia Parks",
+    "title": "Preston vs. Parks | Round of 128 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Sara Bejlek",
+    "title": "Bejlek vs. Bucsa | Round of 128 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Varvara Lepchenko \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Sara Bejlek",
+    "title": "Alycia Parks vs Sara Bejlek - Match WTA - Guadalajara Open Akron presented by Santander 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Sara Bejlek",
+    "title": "WTA GUADALAJARA DRAW, PRIZE MONEY. Kostyuk, Jovic, Bejlek, Parry are the top seeds",
+    "source": "Tennis Tonic",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Sara Bejlek - Match WTA - Guadalajara Open Akron presented by Santander 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|West Virginia vs Virginia|Virginia": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Virginia",
+    "title": "Kickoff Time for Boston College Football's Home Matchup vs Virginia Tech Revealed",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Virginia",
+    "title": "Victim Claims West Virginia Coach Traced Her Location as New Details Emerge in Alleged Assault Case",
+    "source": "EssentiallySports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Virginia",
+    "title": "Gallery III: West Virginia Mountaineers - UT Martin Skyhawks",
+    "source": "WV News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "West Virginia",
+    "title": "LB Ashton Woods making impact felt on West Virginia defense",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "West Virginia",
+    "title": "Gallery III: West Virginia Mountaineers - UT Martin Skyhawks",
+    "source": "WV News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "West Virginia",
+    "title": "Virginia's week three FPI Virginia forecast: College Football Playoff?",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Yale vs Holy Cross|Yale": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Yale",
+    "title": "Cornell Big Red vs Yale Bulldogs Box Score - January 18, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Yale",
+    "title": "Dartmouth Big Green vs Yale Bulldogs Box Score - February 13, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Holy Cross",
+    "title": "College football: RedHawks respond in dominant fashion, roll past Holy Cross 45-7",
+    "source": "Dayton Daily News",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Holy Cross",
+    "title": "Miami dominates Holy Cross for first with of the 2026 campaign",
+    "source": "The Miami Student",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Holy Cross",
+    "title": "Miami Football vs Holy Cross 9-12",
+    "source": "Miami University RedHawks",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Yale",
+    "title": "Nick Rotondo is bound for Yale football, but first he's got his senior year at B-R",
+    "source": "Taunton Daily Gazette",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Stanford vs Duke|Duke": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Duke football vs Stanford: Odds, injuries, predictions and key matchups; Duke Football Injury Report Ahead of Week 2 Matchup",
+  "opp_health": "Duke football vs Stanford: Odds, injuries, predictions and key matchups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Duke",
+    "title": "Duke Football Injury Report Ahead of Week 2 Matchup",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Duke",
+    "title": "Duke football vs Stanford: Odds, injuries, predictions and key matchups",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Stanford",
+    "title": "Duke football vs Stanford: Odds, injuries, predictions and key matchups",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Stanford",
+    "title": "Davis Warren Shows How Far QBs Have Come in a Short Time with Stanford",
+    "source": "roundtable.io",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Stanford",
+    "title": "Mario Cristobal Wants More From Miami Off 45-6 Stanford Rout",
+    "source": "On3",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Duke",
+    "title": "Duke's Mayo Classic brings big-time college football to Charlotte \u2013 sponsored by Duke\u2019s Mayonaise",
+    "source": "WCNC",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "ATP Challenger|Digvijay Pratap Singh vs Cruz Hewitt|Cruz Hewitt": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Digvijay Pratap Singh",
+    "title": "Karan Singh clinches back-to-back ITF M15 titles in Bali",
+    "source": "The Hans India",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Digvijay Pratap Singh",
+    "title": "Karan Singh Wins Back-to-Back ITF M15 Titles in Bali, Extends Perfect Fortnight",
+    "source": "IndiaSportsHub",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Stephen F. Austin vs Prairie View A&M|Stephen F. Austin": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway; Baylor QB DJ Lagway ruled out vs. Prairie View A&M with left ankle injury, report says",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Prairie View A&M",
+    "title": "Baylor QB DJ Lagway ruled out vs. Prairie View A&M with left ankle injury, report says",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Prairie View A&M",
+    "title": "DJ Lagway injury update emerges before Baylor-Prairie View A&M game",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Prairie View A&M",
+    "title": "Injury News: Baylor Set to Host Prairie View A&M Without DJ Lagway",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Stephen F. Austin",
+    "title": "Stephen F. Austin Lumberjacks at Prairie View A&M Panthers Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stephen F. Austin",
+    "title": "Rutherford accounts for 3 TDs, leading Stephen F. Austin over Abilene Christian 26-7",
+    "source": "ABC News - Breaking News, Latest News and Videos",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Stephen F. Austin",
+    "title": "ACU Football falls to Stephen F. Austin, ending home game winning streak",
+    "source": "KTXS",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "WTA Tennis|Kaitlin Quevedo vs Whitney Osuigwe|Kaitlin Quevedo": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kaitlin Quevedo",
+    "title": "Quevedo vs. Williams | Round of 128 Mutua Madrid Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 07",
+    "watch": false
+   },
+   {
+    "side": "Kaitlin Quevedo",
+    "title": "Kaitlin Quevedo vs Anna Rogers \u00b7 Round 1 \u00b7 WTA 125K Barranquilla, Colombia",
+    "source": "Tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Kaitlin Quevedo",
+    "title": "Kaitlin Quevedo vs Claire Liu \u00b7 Quarterfinal \u00b7 WTA 125K Barranquilla, Colombia",
+    "source": "Tennis.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Whitney Osuigwe",
+    "title": "Whitney Osuigwe vs Fernanda Labrana \u00b7 Qualifying Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Whitney Osuigwe",
+    "title": "Osuigwe vs. Tikhonova | Qualifying SP Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Whitney Osuigwe",
+    "title": "Whitney Osuigwe vs Anastasia Tikhonova \u00b7 Qualifying Round 2 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|San Jose St. vs Fresno St.|Fresno St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Fresno St.",
+    "title": "Fresno St Football",
+    "source": "Bluefield Daily Telegraph",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Fresno St.",
+    "title": "Fresno State 49-3 Sacramento State (Sep 12, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Fresno St.",
+    "title": "Sacramento State Hornets 3 - Fresno State Bulldogs 49: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "San Jose St.",
+    "title": "Weaver to Clark connection nets 2TDs and San Jose St. fends off Cal Poly upset bid in 30-20 win",
+    "source": "ABC News - Breaking News, Latest News and Videos",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Penn vs Bucknell|Penn": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Penn",
+    "title": "The storm has arrived for Penn State. How the Nittany Lions respond will define them",
+    "source": "On3",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bucknell",
+    "title": "#15 Orange Close Road Swing with Rout at Bucknell",
+    "source": "Syracuse University Athletics",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bucknell",
+    "title": "Bucknell vs. Pennsylvania Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Bucknell",
+    "title": "Bucknell Bison vs Lafayette Leopards Box Score - February 13, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Penn",
+    "title": "5 Flip Candidates Penn State Football Must Target to Upgrade 2027 Recruiting Class",
+    "source": "nittanycentral.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Penn",
+    "title": "College Football Playoff, Bowl projections for Penn State after Week 2 win",
+    "source": "PennLive.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:21Z"
+ },
+ "College Football|Lehigh vs Dartmouth|Lehigh": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dartmouth",
+    "title": "Merrimack vs. Dartmouth 11/9/26 - Stream the Game Live - Watch ESPN",
+    "source": "ESPN",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Dartmouth",
+    "title": "Dartmouth Big Green vs Yale Bulldogs Box Score - January 30, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Dartmouth",
+    "title": "Dartmouth Big Green vs Yale Bulldogs Box Score - February 13, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Lehigh",
+    "title": "Lehigh Valley football: 5 things we learned from Week 3 in Colonial League",
+    "source": "mcall.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Lehigh",
+    "title": "No. 16 Football Falls at No. 8/9 Lehigh - William & Mary Athletics",
+    "source": "William & Mary Athletics",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Lehigh",
+    "title": "Army Black Knights vs Lehigh Mountain Hawks Box Score - January 20, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "WTA Tennis|Panna Udvardy vs Cristina Bucsa|Cristina Bucsa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cristina Bucsa",
+    "title": "Bucsa vs. Gauff | Round of 32 US Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Arango / Udvardy vs Cavalle-Reimers / Salden \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Panna Udvardy vs Lo\u00efs Boisson \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Emiliana Arango/Panna Udvardy - Yvonne Cavall\u00e9/Lara Salden",
+    "source": "TNT Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Cristina Bucsa",
+    "title": "Bucsa vs. Gauff | Round of 32 US Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cristina Bucsa",
+    "title": "Bucsa maintains perfect record vs. Andreescu in Guadalajara first round",
+    "source": "WTA Tennis",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Utah Tech vs Northern Arizona|Northern Arizona": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Utah Tech",
+    "title": "Photos: Montana vs. Utah Tech football",
+    "source": "406 Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Utah Tech",
+    "title": "Eli Gillman ties Big Sky record as Montana rolls past Utah Tech",
+    "source": "247sports.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Northern Arizona",
+    "title": "Utah Tech - Northern Arizona Lumberjacks \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Northern Arizona",
+    "title": "Arizona football opens as 5-touchdown favorite vs. Northern Illinois",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Utah Tech",
+    "title": "Recap: Eli Gillman\u2019s 3 TDs lead No. 3 Montana past Utah Tech",
+    "source": "Billings Gazette",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Northern Arizona",
+    "title": "Utah Tech - Northern Arizona Lumberjacks \u00bb migliori quote e statistiche",
+    "source": "Odds Scanner",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "CFL|Montreal Alouettes vs Hamilton Tiger-Cats|Montreal Alouettes": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Montreal Alouettes Week 15 Preview vs BC Lions: Keys to Victory, Players to Watch, Depth Chart, Injuries, Prediction, Odds; BC Lions (6-6) Week 15 Preview vs Montreal Alouettes (10-2): Prediction, Depth Chart, Injuries, Odds",
+  "opp_health": "Ticats thought rookie Cromwell would be so good they drafted him even though he was injured; Tiger-Cats QB Tre Ford suffers injury vs. Argonauts",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hamilton Tiger-Cats",
+    "title": "Tiger-Cats QB Tre Ford suffers injury vs. Argonauts",
+    "source": "Sportsnet.ca",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Hamilton Tiger-Cats",
+    "title": "Hamilton Tiger-Cats QB Tre Ford suffers head injury in Labour Day Classic loss to Argonauts",
+    "source": "3DownNation",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Hamilton Tiger-Cats",
+    "title": "Ticats thought rookie Cromwell would be so good they drafted him even though he was injured",
+    "source": "CBC",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Montreal Alouettes",
+    "title": "Montreal Alouettes Week 15 Preview vs BC Lions: Keys to Victory, Players to Watch, Depth Chart, Injuries, Prediction, Odds",
+    "source": "CFL News Hub",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Montreal Alouettes",
+    "title": "BC Lions (6-6) Week 15 Preview vs Montreal Alouettes (10-2): Prediction, Depth Chart, Injuries, Odds",
+    "source": "CFL News Hub",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Montreal Alouettes",
+    "title": "Montreal Alouettes (10-2) Week 15 Preview vs BC Lions (6-6): Prediction, Depth Chart, Injuries, Odds",
+    "source": "CFL News Hub",
+    "date": "Sep 12",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|Pittsburgh vs Milwaukee|Milwaukee": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Pittsburgh Pirates Breakout Rookie Lands on Injured List; Pittsburgh Pirates Replace All-Star Pitcher Braxton Ashcraft with Antwone Kelly After Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates Replace All-Star Pitcher Braxton Ashcraft with Antwone Kelly After Injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates Promote Young Arm As Braxton Ashcraft Hits Injured List",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates Breakout Rookie Lands on Injured List",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Game Discussion: Milwaukee Brewers vs. Cincinnati Reds",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "How to buy 2026 Milwaukee Brewers MLB playoff tickets, Brewers postseason scenarios",
+    "source": "Kitsap Sun",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers head to Pittsburgh with chance to clinch division",
+    "source": "Milwaukee Journal Sentinel",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Norfolk St. vs Hampton|Norfolk St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Norfolk St.",
+    "title": "Norfolk State Spartans 3 - Virginia Cavaliers 59: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Norfolk St.",
+    "title": "Greg Madia: What we learned from Virginia football's win over Norfolk State",
+    "source": "The Daily Progress",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Norfolk St.",
+    "title": "Virginia 59-3 Norfolk State (Sep 11, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Hampton",
+    "title": "Hampton Pirates vs Virginia-Lynchburg Dragons Box Score - August 29, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Hampton",
+    "title": "Norfolk State vs. Hampton Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Hampton",
+    "title": "Hampton University continues to struggle offensively, drops CAA opener to Bryant",
+    "source": "The Virginian-Pilot",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|West Georgia vs East Tennessee St.|East Tennessee St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "West Georgia",
+    "title": "Arkansas State Hosts West Georgia in First Meeting at Jonesboro",
+    "source": "SuaraGarut.ID",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "West Georgia",
+    "title": "East Tennessee State Buccaneers - West Georgia \u00bb migliori quote e statistiche",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "West Georgia",
+    "title": "Arkansas State blows out West Georgia 52-7 behind dominant defense",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Rhode Island vs Stony Brook|Rhode Island": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Stony Brook",
+    "title": "Keldric Luster throws 3 TDs as Ball State beats Stony Brook 41-17",
+    "source": "CBS Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Stony Brook",
+    "title": "#WAY TO LIVE Stony Brook vs Ball State Live Free NCAA Collage Football Game On TV CHANNEL",
+    "source": "SooToday.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Stony Brook",
+    "title": "Ball State vs Stony Brook Live Free NCAA Collage Football Game On TV CHANNEL",
+    "source": "StratfordToday.ca",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Rhode Island",
+    "title": "Stony Brook Seawolves - Rhode Island Rams \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Rhode Island",
+    "title": "Will Rhode Island football find an audience in Pawtucket stadium?",
+    "source": "providencejournal.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Rhode Island",
+    "title": "Stony Brook vs. Rhode Island Football Game Tickets, Venue, Start Time \u2013 Sept. 19",
+    "source": "Bleacher Nation",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|New Haven vs Brown|Brown": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "WATCH: Vernell Brown III goes OFF with back-to-back punt return touchdowns; Iowa Football Names Hank Brown Starter vs Iowa State: Biggest Takeaways",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Brown",
+    "title": "Latest fantasy football news: The fallout from Sam Darnold, A.J. Brown injuries",
+    "source": "The New York Times",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Brown",
+    "title": "Iowa Football Names Hank Brown Starter vs Iowa State: Biggest Takeaways",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Brown",
+    "title": "WATCH: Vernell Brown III goes OFF with back-to-back punt return touchdowns",
+    "source": "On3",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "New Haven",
+    "title": "SDSU bounces back with big win over New Haven",
+    "source": "keloland.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "New Haven",
+    "title": "Brown Bears at New Haven Chargers Matchup Overview | Week 3",
+    "source": "bettingpros.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "New Haven",
+    "title": "South Dakota State football D-line dominates in blowout over New Haven",
+    "source": "Argus Leader",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|North Alabama vs Alcorn St.|North Alabama": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alcorn St.",
+    "title": "Alcorn State Braves @ Minnesota Golden Gophers: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Alcorn St.",
+    "title": "Bethune-Cookman Wildcats @ Alcorn State Braves: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "North Alabama",
+    "title": "COLLEGE FOOTBALL | Southeastern rallies past North Alabama for first win of season",
+    "source": "Livingston Parish News",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Alabama",
+    "title": "Vote for the top North Alabama high school football performance from Week 4",
+    "source": "AL.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Alcorn St.",
+    "title": "Alcorn State 53-51 Arkansas-Pine Bluff (Sep 12, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Alabama",
+    "title": "Check out the statewide Alabama college football schedule for Week 3",
+    "source": "AL.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Tennessee St. vs Florida A&M|Florida A&M": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Florida A&M",
+    "title": "Florida A&M Rattlers vs Southern University Jaguars Box Score - February 25, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Tennessee St.",
+    "title": "Jackson State 26-24 Tennessee State (Aug 29, 2026) Final Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Florida A&M",
+    "title": "Florida A&M vs. #7 Miami",
+    "source": "ESPN",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Florida A&M",
+    "title": "Alabama A&M Bulldogs vs Florida A&M Rattlers Box Score - February 18, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|New Hampshire vs Harvard|Harvard": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New Hampshire",
+    "title": "Football Heads to New Hampshire Saturday Evening",
+    "source": "stonehillskyhawks.com",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "New Hampshire",
+    "title": "New Hampshire 42-35 Stonehill (Sep 12, 2026) Final Score",
+    "source": "ESPN",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "New Hampshire",
+    "title": "New Hampshire Wildcats vs Stonehill Skyhawks Box Score - September 12, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "Dudley\u2019s Closure Is a Loss for Harvard\u2019s Culture",
+    "source": "The Harvard Crimson",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "America Loves Underdogs in Sports \u2014 Why Not Harvard?",
+    "source": "The Harvard Crimson",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "More than 60 Percent of Harvard Faculty Say AI Harms Their Courses",
+    "source": "The Harvard Crimson",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "NFL|Houston vs Cincinnati|Houston": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston",
+    "title": "NFL: Buffalo Bills at Houston Texans",
+    "source": "The Lufkin Daily News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Texans Suffer Another Blow After Defensive Disaster Against The Bills",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "Buffalo Bills vs. Houston Texans Week 1 Recap | NFL Daily",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Photos: Bucs Depart For Week 1 Against The Cincinnati Bengals",
+    "source": "Tampa Bay Buccaneers",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Bengals vs. Tampa Bay Buccaneers Week 1 Recap | NFL Daily",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Did Cincinnati Bengals defense set new-day tone? | Williams",
+    "source": "Cincinnati Enquirer",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|Kansas City vs Houston|Houston": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9; Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
+  "opp_health": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update; Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Royals news: Kansas City gets big Jac Caglianone, Maikel Garcia injury updates",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Maikel Garcia Nearing Return to Kansas City Royals After Latest Update",
+    "source": "Yahoo Sports",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Astros' Yordan Alvarez out of lineup for second straight game with sore ankle",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Yordan Alvarez returns to Houston Astros' lineup after two-game absence",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Ultimate Astros Playoff Lineup: Houston\u2019s All-Time October Starting 9",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Royals news: Carter Jensen is having a record Royals rookie year",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|Chicago WS vs Cleveland|Cleveland": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More; White Sox vs. Cardinals Lineup: Major Changes in Order? Opener for Castillo, More",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Cardinals Lineup: Major Changes in Order? Opener for Castillo, More",
+    "source": "Sports Illustrated",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "It's Time For The White Sox To Drop Munetaka Murakami In The Lineup",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Cardinals Lineup: Tristan Peters in RF? David Sandlin Time? More",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "September 16 Chicago WS vs Cleveland",
+    "source": "Robinhood",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "NFL Player Denzel Ward Becomes Minority Owner Of MLB Team Cleveland Guardians",
+    "source": "AfroTech",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Chicago White Sox at Cleveland Guardians - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|VMI vs Davidson|VMI": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Elon\u2019s shutout of Davidson comes despite QB\u2019s injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Davidson",
+    "title": "Elon\u2019s shutout of Davidson comes despite QB\u2019s injury",
+    "source": "alamancenews.com",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "VMI",
+    "title": "Bucknell rallies past VMI 14-3 in Keydets\u2019 home opener",
+    "source": "WSLS",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "VMI",
+    "title": "Davidson - VMI \u00bb meilleures cotes et statistiques",
+    "source": "Odds Scanner",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Davidson",
+    "title": "Oct. 3 Davidson vs. San Diego Football Tickets",
+    "source": "San Diego Sports 760",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Davidson",
+    "title": "Davidson Wildcats vs Dickinson Red Devils Box Score - September 12, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "VMI",
+    "title": "VTSCOOP Roundtable: What We Want to See When Virginia Tech Hosts VMI",
+    "source": "247sports.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Gardner-Webb vs North Carolina Central|North Carolina Central": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Gardner-Webb",
+    "title": "Liberty Opens Home Slate with Win over Gardner-Webb",
+    "source": "libertyflames.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Gardner-Webb",
+    "title": "PHOTOS: Liberty football fends off Gardner-Webb in home opener",
+    "source": "Lynchburg News and Advance",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "North Carolina Central",
+    "title": "\"Don't Mess With The North Carolina Central Band\" \u2014 Wild Footage Shows Band Members Throwing Hands With Rival Football Staff [VIDEO]",
+    "source": "totalprosports.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Gardner-Webb",
+    "title": "Gardner-Webb Runnin' Bulldogs 23 - Liberty Flames 24: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Carolina Central",
+    "title": "South Carolina State stays No. 1 in Black College Football Poll",
+    "source": "HBCU Gameday",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "North Carolina Central",
+    "title": "North Carolina College Football This Week: Full List of Games, Times & TV Info for Week 3 (Sept. 18-19)",
+    "source": "NC Football News",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "ATP Challenger|Yuta Shimizu vs Philip Sekulic|Yuta Shimizu": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philip Sekulic",
+    "title": "Philip Sekulic 1 - 1 Koki Matsuda (10/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Philip Sekulic",
+    "title": "Philip Sekulic 1 - 0 Koki Matsuda (09/10) - Game Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLS|Toronto vs Saint Louis|Saint Louis": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Portland Timbers vs St. Louis City Lineups - MLS 2025/26",
+  "opp_health": "St. Louis City SC vs Toronto FC: Predictions, Picks, Odds & Lineups; Orlando City Starting XI: A look at the Lions' starters and bench as they host Toronto FC",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Saint Louis",
+    "title": "Portland Timbers vs St. Louis City Lineups - MLS 2025/26",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 10",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Orlando City Starting XI: A look at the Lions' starters and bench as they host Toronto FC",
+    "source": "Orlando City",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Orlando City vs. Toronto FC: Preview, How to Watch, TV Info, Live Stream, Lineups, Match Thread, and More",
+    "source": "The Mane Land",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "St. Louis City SC vs Toronto FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Saint Louis",
+    "title": "St Louis City vs Minnesota United: Kalshi Promo Code & $25 Bonus",
+    "source": "Squawka",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Saint Louis",
+    "title": "Saint Louis City SC faces Minnesota United in Western Conference play",
+    "source": "nhregister.com",
+    "date": "Sep 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLS|Kansas City vs Philadelphia|Philadelphia": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds; San Diego FC vs Philadelphia Union Predictions, Bet Builder Tips, Lineups, Odds",
+  "opp_health": "Sporting Kansas City vs Los Angeles FC Lineups - MLS 2025/26; Sporting Kansas City vs Los Angeles FC Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Austin FC II vs Sporting Kansas City II live score, H2H and lineups",
+    "source": "Sofascore",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Union vs FC Cincinnati: Preview, How to Watch, & Predicted Lineups",
+    "source": "MLS Multiplex",
+    "date": "Sep 09",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Sporting Kansas City vs Los Angeles FC Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "San Diego FC vs Philadelphia Union Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "San Diego FC vs Philadelphia Union Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Sporting Kansas City vs Los Angeles FC Lineups - MLS 2025/26",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|Ole Miss vs LSU|LSU": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "LSU vs Ole Miss | Predictions, odds, key matchups and injuries; LSU hit by 'reality check' ahead of Lane Kiffin's highly anticipated return to Ole Miss: Why it matters",
+  "opp_health": "Lane Kiffin thinks Ole Miss is under pressure, not LSU, in his return to Rebel territory; Lane Kiffin Press Conference: LSU vs. Ole Miss | Kiffin Returns to Oxford",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "LSU",
+    "title": "SEC threatens to boot LSU out of the conference this week, court filing says",
+    "source": "CNN",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "LSU",
+    "title": "LSU hit by 'reality check' ahead of Lane Kiffin's highly anticipated return to Ole Miss: Why it matters",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "LSU",
+    "title": "LSU vs Ole Miss | Predictions, odds, key matchups and injuries",
+    "source": "Houma Today",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Ole Miss",
+    "title": "Lane Kiffin thinks Ole Miss is under pressure, not LSU, in his return to Rebel territory",
+    "source": "NOLA.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Ole Miss",
+    "title": "Lane Kiffin Press Conference: LSU vs. Ole Miss | Kiffin Returns to Oxford",
+    "source": "TigerBait.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Ole Miss",
+    "title": "LSU vs Ole Miss | Predictions, odds, key matchups and injuries",
+    "source": "Houma Today",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|Seattle vs Los Angeles A|Seattle": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Mariners vs. Angels Preview: Reid Detmers Seeks to Stop the Bleeding as Halos Return to Anaheim; Angels Pitcher Traded at Deadline Could Retire Immediately After Season",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles A",
+    "title": "Angels Pitcher Traded at Deadline Could Retire Immediately After Season",
+    "source": "Yahoo Sports",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "Mariners vs. Angels Preview: Reid Detmers Seeks to Stop the Bleeding as Halos Return to Anaheim",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Seattle Mariners' Julio Rodriguez Up For Prestigious Award",
+    "source": "roundtable.io",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Seattle Mariners\u2019 Julio Rodr\u00edguez nominated for the Roberto Clemente Award",
+    "source": "KIRO 7 News Seattle",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Seattle Mariners at Los Angeles Angels - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "Seattle Mariners at Los Angeles Angels - MLB Game Summary - Sep 14, 2026",
+    "source": "USA Today",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLB|St. Louis vs San Francisco|St. Louis": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Francisco",
+    "title": "San Francisco Giants Announce Promotion of 2026 First-Rounder to Double-A",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals Minor League Update: Lower Levels",
+    "source": "Viva El Birdos",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "San Francisco Giants at St. Louis Cardinals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "Why I Never Blame St. Louis Cardinals Losses on a Single Player",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco Giants at St. Louis Cardinals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 14, 2026)",
+    "source": "Fubo",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "Scott Bandura \u201923 Makes MLB Debut with San Francisco Giants",
+    "source": "Princeton University Athletics",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "La Liga|Bilbao vs Alaves|Bilbao": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Preview: Levante vs Athletic Bilbao - prediction, team news, lineups; A.Bilbao vs Elche match lineup | LaLiga \u00b7 12 Sep 2026",
+  "opp_health": "Preview: Alaves vs Valencia - prediction, team news, lineups; Alaves vs Valencia prediction: expert analysis, possible lineups, September 15, 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Bilbao",
+    "title": "Inaki Williams retire: Ghana and Athletic Bilbao forward and Athletic Bilbao player announce retirement from Black Stars",
+    "source": "bbc.com",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "A.Bilbao vs Elche match lineup | LaLiga \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Alaves",
+    "title": "Racing vs Alaves match lineup | LaLiga \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Alaves",
+    "title": "Preview: Alaves vs Valencia - prediction, team news, lineups",
+    "source": "sportsmole.co.uk",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Alaves",
+    "title": "Alaves vs Valencia prediction: expert analysis, possible lineups, September 15, 2026",
+    "source": "RatingBet",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "Preview: Levante vs Athletic Bilbao - prediction, team news, lineups",
+    "source": "sportsmole.co.uk",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLS|Minnesota vs Los Angeles G|Minnesota": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Minnesota United vs LA Galaxy: Predictions, Picks, Odds & Lineups; St. Louis City vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Match Preview | St. Louis CITY SC Returns to Energizer Park for Western Conference Matchup Against Minnesota United on Saturday",
+    "source": "St. Louis CITY SC",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "St. Louis City vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota United vs LA Galaxy: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "Bundesliga|Hoffenheim vs Paderborn|Hoffenheim": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "After knee injury against Hoffenheim: VfB Stuttgart announce diagnosis for Angelo Stiller; VfB Stuttgart issue positive Angelo Stiller injury update after Hoffenheim scare",
+  "opp_health": "\"Good to have Schlotti back\" - Fans react as Dortmund announce lineup for Paderborn clash; Borussia Dortmund vs Paderborn Confirmed Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hoffenheim",
+    "title": "Hoffenheim - VfB Stuttgart - score, lineups, stats, timeline and standings in Bundesliga",
+    "source": "Tribuna.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Paderborn",
+    "title": "\"Good to have Schlotti back\" - Fans react as Dortmund announce lineup for Paderborn clash",
+    "source": "LiveScore",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Paderborn",
+    "title": "Borussia Dortmund vs Paderborn Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Paderborn",
+    "title": "Borussia Dortmund vs Paderborn: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Hoffenheim",
+    "title": "VfB Stuttgart issue positive Angelo Stiller injury update after Hoffenheim scare",
+    "source": "Get German Football News",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Hoffenheim",
+    "title": "After knee injury against Hoffenheim: VfB Stuttgart announce diagnosis for Angelo Stiller",
+    "source": "Goal.com",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "Premier League|Brighton vs Arsenal|Arsenal": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Sunderland vs Arsenal! Premier League score updates, news, prediction, lineups and how to watch or stream; Sunderland vs. Arsenal Lineups & Confirmed Team News for Premier League Match",
+  "opp_health": "Shaw, Amad, Baleba: Man Utd Injury News & Return Dates vs Brighton (Carabao Cup); Brighton vs Arsenal: Predictions, Picks, Odds & Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arsenal",
+    "title": "Sunderland vs Arsenal! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Arsenal",
+    "title": "Sunderland vs. Arsenal Lineups & Confirmed Team News for Premier League Match",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Coventry vs Brighton LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Shaw, Amad, Baleba: Man Utd Injury News & Return Dates vs Brighton (Carabao Cup)",
+    "source": "roundtable.io",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Brighton vs Arsenal: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Arsenal",
+    "title": "Arsenal demand meeting with Pro Ref over penalty decision at Sunderland",
+    "source": "The Guardian",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "College Football|North Texas vs Texas St.|Texas St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas St.",
+    "title": "Where to watch #1 Ohio State vs. #4 Texas football tonight on free streams, TV",
+    "source": "PennLive.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Texas St.",
+    "title": "Oct. 3 Texas St vs. SDSU Football Tickets",
+    "source": "San Diego Sports 760",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Texas St.",
+    "title": "Arch Manning rallies No. 4 Texas past No. 1 Ohio State and Oklahoma State stuns No. 6 Oregon",
+    "source": "Dayton Daily News",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Texas",
+    "title": "North Texas rolls past UNLV 44-6 for Neal Brown's first win",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "North Texas",
+    "title": "Re-ranking 138 college football teams after Week 2: Texas vaults to No. 1, then it gets weird",
+    "source": "The New York Times",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "North Texas",
+    "title": "UNLV North Texas Football",
+    "source": "The Herald Journal",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "MLS|Dallas vs Austin|Dallas": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "FC Dallas vs Austin FC: Predictions, Picks, Odds & Lineups; FC Dallas vs Portland Timbers: Predictions, Picks, Odds & Lineups",
+  "opp_health": "FC Dallas vs Austin FC: Predictions, Picks, Odds & Lineups; Vancouver Whitecaps vs Austin FC Prediction, Betting Tips, Lineups & Odds | 13 Sep 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dallas",
+    "title": "FC Dallas vs Portland Timbers: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "FC Dallas vs Portland Timbers, September 2026 \u2013 game info and lineup prediction",
+    "source": "3rddegree.net",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "FC Dallas vs Austin FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "FC Dallas vs Austin FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "Vancouver Whitecaps vs Austin FC Prediction, Betting Tips, Lineups & Odds | 13 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Austin",
+    "title": "Vancouver Whitecaps vs Austin FC Lineups - MLS 2025/26",
+    "source": "BeSoccer Livescore",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "Premier League|Nottingham Forest vs Coventry|Nottingham Forest": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Nottingham Forest vs Coventry City: Predictions, Picks, Odds & Lineups; Aston Villa Injuries Pile Up in 2-1 Defeat to Nottingham Forest",
+  "opp_health": "Nottingham Forest vs Coventry City: Predictions, Picks, Odds & Lineups; Coventry vs Brighton LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nottingham Forest",
+    "title": "Aston Villa suffer fresh injury blow as defender forced off in Nottingham Forest clash",
+    "source": "Yahoo Sports UK",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Nottingham Forest",
+    "title": "Aston Villa Injuries Pile Up in 2-1 Defeat to Nottingham Forest",
+    "source": "VAVEL.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Coventry",
+    "title": "Coventry vs Brighton LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Coventry",
+    "title": "Coventry City vs. Brighton lineups, prediction, how to watch, time",
+    "source": "USA Today",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Nottingham Forest",
+    "title": "Nottingham Forest vs Coventry City: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Coventry",
+    "title": "Nottingham Forest vs Coventry City: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
+ },
+ "Serie A|Juventus vs Atalanta|Juventus": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Sassuolo beat Juventus 3-2 after late drama, Napoli return to winning ways; Sassuolo vs Juventus Lineups, Live Streaming, How & Where to Watch Serie A",
+  "opp_health": "Atalanta vs Cagliari match lineup | Serie A \u00b7 12 Sep 2026; Atalanta vs Cagliari Confirmed Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Cagliari match lineup | Serie A \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Cagliari Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Cagliari: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Sassuolo beat Juventus 3-2 after late drama, Napoli return to winning ways",
+    "source": "Reuters",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Sassuolo vs Juventus Lineups, Live Streaming, How & Where to Watch Serie A",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Sassuolo vs Juventus Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T19:22Z"
  }
 }
