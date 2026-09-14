@@ -277,3 +277,130 @@ def settled_feed(led, results, path=SETTLED, keep=1200):
         json.dump({"generated_utc": now(), "results": out}, f,
                   separators=(",", ":"), sort_keys=True)
     return len(out)
+
+
+# ---------------------------------------------------------------- what it says
+def _blank():
+    return {"open": 0, "settled": 0, "won": 0, "lost": 0, "void": 0, "cashed": 0,
+            "staked": 0.0, "returned": 0.0, "pnl": 0.0, "roi": 0.0,
+            "implied_wins": 0.0, "open_stake": 0.0, "open_value": 0.0}
+
+
+def _add(acc, t):
+    if t["status"] == "open":
+        acc["open"] += 1
+        acc["open_stake"] += t["stake"]
+        acc["open_value"] += (t.get("mark") or {}).get("value") or t["stake"]
+        return
+    acc["settled"] += 1
+    acc[t["status"] if t["status"] in ("won", "lost", "void", "cashed") else "lost"] += 1
+    acc["staked"] += t["stake"]
+    acc["returned"] += t.get("returned") or 0.0
+    acc["implied_wins"] += t["entry"].get("win_prob") or 0.0
+
+
+def _finish(acc):
+    for k in ("staked", "returned", "open_stake", "open_value"):
+        acc[k] = round(acc[k], 2)
+    acc["pnl"] = round(acc["returned"] - acc["staked"], 2)
+    acc["roi"] = round(100.0 * acc["pnl"] / acc["staked"], 1) if acc["staked"] else 0.0
+    acc["implied_wins"] = round(acc["implied_wins"], 2)
+    acc["open_pnl"] = round(acc["open_value"] - acc["open_stake"], 2)
+    return acc
+
+
+def summary(led):
+    """The scoreboard: you against the bot, and each rung against its own odds.
+
+    `implied_wins` is the sum of the entry win probabilities - what these exact
+    tickets should have won on average. Comparing it with `won` is the only
+    honest read on a handful of parlays, because one 40x ticket landing makes
+    any win rate look like genius.
+    """
+    owners, rungs = {}, {}
+    for t in led["tickets"]:
+        _add(owners.setdefault(t["owner"], _blank()), t)
+        if t["owner"] == "bot":
+            _add(rungs.setdefault(t.get("key") or "custom", _blank()), t)
+    closed = [t for t in led["tickets"] if t["status"] != "open"]
+    closed.sort(key=lambda t: t.get("closed_utc") or "")
+    return {
+        "generated_utc": now(),
+        "by_owner": {k: _finish(v) for k, v in owners.items()},
+        "by_rung": {k: _finish(v) for k, v in rungs.items()},
+        "tickets": len(led["tickets"]),
+        "recent": [{"id": t["id"], "owner": t["owner"], "label": t["label"],
+                    "status": t["status"], "n": len(t["legs"]),
+                    "multiple": t["entry"]["multiple"], "stake": t["stake"],
+                    "returned": t.get("returned"), "pnl": t.get("pnl"),
+                    "closed_utc": t.get("closed_utc")}
+                   for t in closed[-12:][::-1]],
+    }
+
+
+def calibration(led):
+    """What the settled legs say about the prices they were bought at.
+
+    For each price band: how often those legs actually won, against what they
+    cost. `drag` is hit rate over mean price - 1.0 means the price was right,
+    below 1.0 means that band is worse than it looks. It is measured on entry
+    prices only, so it cannot be polluted by a later quote.
+    """
+    bands = {name: {"n": 0, "wins": 0, "sum_price": 0.0} for _, _, name in BANDS}
+    rungs = {}
+    legs_seen = 0
+    for t in led["tickets"]:
+        for l in t["legs"]:
+            if l["result"] not in ("win", "loss"):
+                continue
+            b = bands[band_of(l["entry_ask"])]
+            b["n"] += 1
+            b["wins"] += 1 if l["result"] == "win" else 0
+            b["sum_price"] += l["entry_ask"]
+            legs_seen += 1
+        if t["owner"] == "bot" and t["status"] in ("won", "lost"):
+            r = rungs.setdefault(t.get("key") or "custom",
+                                 {"n": 0, "won": 0, "implied": 0.0})
+            r["n"] += 1
+            r["won"] += 1 if t["status"] == "won" else 0
+            r["implied"] += t["entry"].get("win_prob") or 0.0
+    out_bands = {}
+    for name, b in bands.items():
+        if not b["n"]:
+            continue
+        mean = b["sum_price"] / b["n"]
+        hit = b["wins"] / b["n"]
+        out_bands[name] = {"n": b["n"], "wins": b["wins"],
+                           "hit": round(hit, 4), "mean_entry": round(mean, 4),
+                           "drag": round(hit / mean, 4) if mean else 0.0,
+                           "trusted": b["n"] >= MIN_BAND_N}
+    for r in rungs.values():
+        r["implied"] = round(r["implied"] / r["n"], 4) if r["n"] else 0.0
+        r["actual"] = round(r["won"] / r["n"], 4) if r["n"] else 0.0
+    return {"generated_utc": now(), "legs_settled": legs_seen,
+            "min_band_n": MIN_BAND_N, "bands": out_bands, "rungs": rungs}
+
+
+def learned_discount(cal, floor=0.85):
+    """The measured drag per band, for the bands that have earned the right to
+    replace the hand-set curve.
+
+    Capped at 1.0 deliberately: a band that measured *better* than its price is
+    a small sample telling you that you are beating the market, and building on
+    that belief is how a paper record turns into a real loss. Floored so one bad
+    weekend cannot make the builder refuse a whole price band.
+    """
+    out = {}
+    for name, b in (cal.get("bands") or {}).items():
+        if b.get("trusted"):
+            out[name] = round(max(floor, min(1.0, b["drag"])), 4)
+    return out
+
+
+def save_calibration(led, path=CALIBRATION):
+    cal = calibration(led)
+    cal["learned_discount"] = learned_discount(cal)
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(cal, f, indent=1, sort_keys=True)
+    return cal
