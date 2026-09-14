@@ -1,14 +1,16 @@
 name: Probe
-# One-shot: what Kalshi gives us for order flow, price history and market types.
-# Kalshi is unreachable from the dev container, so this asks from a runner.
+# One-shot: what Kalshi exposes (order flow, price history, market types) and
+# where free play-by-play with EPA lives for NFL and college. Neither is fully
+# answerable from the dev container. Delete once answered.
 on: {workflow_dispatch: {}}
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
       - run: python tools/probe_kalshi.py
+      - run: python tools/probe_epa.py

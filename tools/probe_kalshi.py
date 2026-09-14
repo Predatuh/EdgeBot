@@ -5,7 +5,11 @@ Run from a GitHub runner - Kalshi is unreachable from the dev container, and it
 403s anything carrying an Origin header, so this is the only place to ask.
 """
 import json
+import os
+import sys
 import time
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import kalshi
 
