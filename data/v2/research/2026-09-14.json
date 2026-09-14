@@ -7977,5 +7977,450 @@
    }
   ],
   "_ts": "2026-09-14T14:06Z"
+ },
+ "College Football|Louisiana vs UAB|Louisiana": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "USC Trojans Injury Report vs. Louisiana Ragin' Cajuns",
+  "opp_health": "Illinois Football Injury Updates After Week 1 Win Over UAB",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UAB",
+    "title": "Illinois Football Injury Updates After Week 1 Win Over UAB",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "Louisiana",
+    "title": "USC Trojans Injury Report vs. Louisiana Ragin' Cajuns",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "UAB",
+    "title": "UAB rallies past Louisiana Monroe for 26-20 comeback win",
+    "source": "CBS Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Louisiana",
+    "title": "Lincoln Riley Gets Real On USC's Slow Start vs. Louisiana",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Louisiana",
+    "title": "Where is LSU football ranked after hard-fought win v Louisiana Tech in Week 2?",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "4 takeaways from UAB\u2019s victory over Louisiana-Monroe",
+    "source": "al.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:15Z"
+ },
+ "College Football|South Alabama vs Ohio|South Alabama": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "College Football Injury Report: Latest Week 2 updates at Baylor, Ohio State, Ole Miss & more",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ohio",
+    "title": "College Football Injury Report: Latest Week 2 updates at Baylor, Ohio State, Ole Miss & more",
+    "source": "On3",
+    "date": "Sep 11",
+    "watch": true
+   },
+   {
+    "side": "South Alabama",
+    "title": "TV channel, kickoff time for Alabama football vs. South Carolina",
+    "source": "Roll Tide Wire",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "South Alabama",
+    "title": "Alabama vs. South Carolina: Kickoff time, TV channel for Week 4 matchup",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "South Alabama",
+    "title": "Game time, TV channel set for South Carolina vs. Alabama football game",
+    "source": "The State",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Ohio",
+    "title": "Ohio State Stays at No. 1 Over Texas in College Football Rankings Despite Loss",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Ohio",
+    "title": "Arch Manning and Texas made history with late rally to beat Ohio State: How they did it",
+    "source": "spectrumlocalnews.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "College Football|Nevada vs Middle Tennessee|Nevada": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Injury Report: Updating Tennessee football injuries for Georgia Tech game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Middle Tennessee",
+    "title": "Injury Report: Updating Tennessee football injuries for Georgia Tech game",
+    "source": "On3",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Nevada",
+    "title": "Montana State Bobcats at Nevada Wolf Pack football takeaways",
+    "source": "Bozeman Daily Chronicle",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Nevada",
+    "title": "3 questions: No. 1 Bobcats preparing for storyline-rich clash at Nevada",
+    "source": "406 Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Nevada",
+    "title": "Bobcats drill Nevada, continue to affirm place among best in the West in college football",
+    "source": "Skyline Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Middle Tennessee",
+    "title": "First Glance: Tennessee Vols set to host Kennesaw State Owls",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Middle Tennessee",
+    "title": "Tennessee football 3-2-1: Vols welcome Jerry Mack, Kennesaw State back to Tennessee",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "College Football|Wyoming vs Central Michigan|Wyoming": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Wyoming",
+    "title": "Late scores lift Wyoming football past Northern Colorado",
+    "source": "WyomingNews.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Central Michigan",
+    "title": "Central Michigan rallies in second half to beat Colgate 13-10",
+    "source": "CBS Sports",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Central Michigan",
+    "title": "LIVEUpdated: College Football Live : Colgate vs Central Michigan Live updates",
+    "source": "EloraFergusToday.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Central Michigan",
+    "title": "LIVEUpdated: Colgate vs Central Michigan Live Free College Football updates",
+    "source": "BayToday.ca",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Wyoming",
+    "title": "Wyoming 21, Northern Colorado 13",
+    "source": "WyomingNews.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Wyoming",
+    "title": "Tyler Hughes' late TD passes lift Wyoming past Northern Colorado",
+    "source": "CBS Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "Bundesliga|Bremen vs Augsburg|Bremen": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Werder Bremen's Mitchell Weiser celebrates comeback after long-term injury; Werder Bremen's Mitchell Weiser makes emotional return to competitive football after 14 month absence",
+  "opp_health": "Augsburg vs Bayer Leverkusen Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026; Freiburg Defeats Gladbach ++ Rieder's Augsburg Narrowly Misses Third Win",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Bremen",
+    "title": "Bremen - Augsburg : Predicted Lineups",
+    "source": "Bulinews",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Augsburg",
+    "title": "Augsburg vs Bayer Leverkusen Prediction, Betting Tips, Lineups & Odds | 12 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Augsburg",
+    "title": "Freiburg Defeats Gladbach ++ Rieder's Augsburg Narrowly Misses Third Win",
+    "source": "bluewin.ch",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Augsburg",
+    "title": "Bremen - Augsburg : Predicted Lineups",
+    "source": "Bulinews",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Bremen",
+    "title": "Werder Bremen's Mitchell Weiser celebrates comeback after long-term injury",
+    "source": "bundesliga.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Bremen",
+    "title": "Werder Bremen's Mitchell Weiser makes emotional return to competitive football after 14 month absence",
+    "source": "Get German Football News",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "ATP Challenger|Grigoriy Lomakin vs Matthew Dellavedova|Matthew Dellavedova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Matthew Dellavedova",
+    "title": "Matthew Dellavedova vs Taro Daniel \u00b7 Round 1 \u00b7 ATP Challenger Shanghai, China",
+    "source": "Tennis.com",
+    "date": "Sep 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "ATP Challenger|Arthur Weber vs Koki Matsuda|Arthur Weber": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Koki Matsuda",
+    "title": "Philip Sekulic 1 - 1 Koki Matsuda (10/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Koki Matsuda",
+    "title": "Philip Sekulic 1 - 0 Koki Matsuda (09/10) - Game Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "WTA Tennis|Justina Mikulskyte vs Paula Badosa|Paula Badosa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Justina Mikulskyte",
+    "title": "Mikulskyte vs. Paquet | Qualifying SP Open 2026 | WTA Official",
+    "source": "wtatennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "Kasatkina vs. Badosa | Round of 128 US Open 2026 | WTA Official",
+    "source": "wtatennis.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "WTA SAO PAULO DRAW, PRIZE MONEY. Annie Fernandez, Badosa, Sierra, Blinkova are the leaders",
+    "source": "Tennis Tonic",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "Badosa survives Ibragimova challenge from 4-1 down in decider in Iasi",
+    "source": "wtatennis.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
+ },
+ "WTA Tennis|Mary Stoiana vs Claire Liu|Mary Stoiana": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Claire Liu",
+    "title": "L\u00e9olia Jeanjean vs Claire Liu \u00b7 Semifinal \u00b7 WTA 125K Barranquilla, Colombia",
+    "source": "Tennis.com",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "Mary Stoiana vs Claire Liu \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "Ovcharenko / Pigossi vs Stoiana / Valdmannov\u00e1 \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "Stoiana vs. Valentova | Round of 128 Cincinnati Open 2026",
+    "source": "wtatennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Mary Stoiana vs Claire Liu \u00b7 Round 1 \u00b7 WTA S\u00e3o Paulo",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Varvara Lepchenko 0 - 2 Claire Liu (09/09) - Game Report",
+    "source": "365Scores",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-14T18:16Z"
  }
 }
