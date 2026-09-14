@@ -1,0 +1,25 @@
+name: Probe
+# One-shot: can a browser on a phone call Kalshi directly, or does a paper
+# ticket have to be priced from the board the bot publishes? Delete once answered.
+on: {workflow_dispatch: {}}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: CORS headers and a real quote
+        run: |
+          API=https://api.elections.kalshi.com/trade-api/v2
+          ORIGIN=https://predatuh.github.io
+          echo "=== GET with an Origin header, which is what fetch() sends"
+          curl -sS -D /tmp/h1 -o /tmp/body.json -H "Origin: $ORIGIN" "$API/markets?limit=1&status=open"
+          tr -d '\r' < /tmp/h1 | grep -iE '^(HTTP|access-control|vary|content-type)' || echo "(no matching headers)"
+          echo "=== OPTIONS preflight"
+          curl -sS -D /tmp/h2 -o /dev/null -X OPTIONS -H "Origin: $ORIGIN" -H "Access-Control-Request-Method: GET" "$API/markets?limit=1" || true
+          tr -d '\r' < /tmp/h2 | grep -iE '^(HTTP|access-control|allow)' || echo "(no matching headers)"
+          echo "=== one market by ticker, which is how a paper ticket would re-price"
+          T=$(python3 -c 'import json;print(json.load(open("/tmp/body.json"))["markets"][0]["ticker"])')
+          echo "ticker $T"
+          curl -sS -D /tmp/h3 -o /tmp/one.json -H "Origin: $ORIGIN" "$API/markets/$T"
+          tr -d '\r' < /tmp/h3 | grep -iE '^(HTTP|access-control)' || echo "(no matching headers)"
+          python3 -c 'import json;m=json.load(open("/tmp/one.json"))["market"];print({k:m.get(k) for k in ("ticker","yes_bid","yes_ask","last_price","status","volume")})'
