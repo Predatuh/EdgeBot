@@ -21,13 +21,44 @@ ALIASES = {
 OUT_WORDS = ("out", "injured reserve", "-il", " il", "suspended", "doubtful")
 
 
+def _pitcher_name(p0):
+    """Player name from an ESPN probables row.
+
+    Live MLB scoreboard rows use displayName for the ROLE ('Probable Starting
+    Pitcher') and put the person on athlete.displayName. Older fixtures and a
+    few sports put the person on displayName / fullName directly.
+    """
+    if not isinstance(p0, dict):
+        return ""
+    athlete = p0.get("athlete") if isinstance(p0.get("athlete"), dict) else {}
+    roles = {
+        "probable starting pitcher", "starting pitcher", "starter",
+        "probable", "pitcher", "sp",
+    }
+    for cand in (
+        athlete.get("displayName"), athlete.get("fullName"), athlete.get("shortName"),
+        p0.get("fullName"), p0.get("shortName"), p0.get("athleteDisplayName"),
+        p0.get("displayName"),
+    ):
+        s = str(cand or "").strip()
+        if s and s.lower() not in roles:
+            return s
+    return ""
+
+
 def _board(sport, league):
     key = (sport, league)
     if key in _board_cache:
         return _board_cache[key]
     out = []
     try:
-        params = {"dates": dt.date.today().strftime("%Y%m%d"), "limit": 500}
+        today = dt.date.today()
+        start = today - dt.timedelta(days=1)
+        end = today + dt.timedelta(days=7)
+        params = {
+            "dates": start.strftime("%Y%m%d") + "-" + end.strftime("%Y%m%d"),
+            "limit": 500,
+        }
         if league == "college-football":
             params["groups"] = 80            # all FBS games, not just the top 25
         js = S.get(f"{BASE}/{sport}/{league}/scoreboard", params=params, timeout=25).json()
@@ -47,7 +78,7 @@ def _board(sport, league):
                 teams.append({"id": str(t.get("id", "")),
                               "name": t.get("displayName", ""),
                               "home": c.get("homeAway") == "home",
-                              "pitcher": p0.get("displayName") or p0.get("fullName") or ""})
+                              "pitcher": _pitcher_name(p0)})
             ven = comp.get("venue") or {}
             out.append({"event": str(ev.get("id", "")),
                         "teams": teams,

@@ -54,11 +54,35 @@ def _season_year(day=None):
 
 
 def _week(day=None):
-    """Rough FBS week number. CFBD week 0 is week 0 / kickoff games."""
+    """CFBD week number for this date.
+
+    Prefer the calendar endpoint (week 0 / 1 / 2 are not a uniform 7 days from
+    Aug 15). Fall back to counting weeks from late August if the calendar is
+    missing — an off-by-one is recovered in injuries() by trying adjacent weeks.
+    """
     day = day or dt.date.today()
     year = _season_year(day)
-    # last Saturday of August is around week 0/1
-    start = dt.date(year, 8, 15)
+    cal = _get("/calendar", {"year": year})
+    if isinstance(cal, list):
+        for w in cal:
+            st = str(w.get("seasonType") or "regular").lower()
+            if st not in ("regular", "postseason", "both", ""):
+                continue
+            start_s = str(w.get("firstGameStart") or w.get("startDate") or "")[:10]
+            end_s = str(w.get("lastGameStart") or w.get("endDate") or "")[:10]
+            if len(start_s) < 10 or len(end_s) < 10:
+                continue
+            try:
+                start = dt.date.fromisoformat(start_s)
+                end = dt.date.fromisoformat(end_s)
+            except ValueError:
+                continue
+            if start <= day <= end + dt.timedelta(days=2):
+                try:
+                    return int(w.get("week") or 0)
+                except (TypeError, ValueError):
+                    continue
+    start = dt.date(year, 8, 24)
     return max(0, (day - start).days // 7)
 
 
@@ -98,8 +122,21 @@ def injuries(year=None, week=None):
     cache_key = (year, week)
     if cache_key in _cache:
         return _cache[cache_key]
-    rows = _get("/injuries", {"year": year, "week": week})
-    if rows is None:
+
+    def fetch(w):
+        return _get("/injuries", {"year": year, "week": w})
+
+    rows = fetch(week)
+    used = week
+    if not (isinstance(rows, list) and rows):
+        for w in (week - 1, week + 1):
+            if w < 0:
+                continue
+            got = fetch(w)
+            if isinstance(got, list) and got:
+                rows, used = got, w
+                break
+    if not (isinstance(rows, list) and rows):
         # some seasons expose the list without a week filter
         rows = _get("/injuries", {"year": year})
     if not isinstance(rows, list):
@@ -124,7 +161,7 @@ def injuries(year=None, week=None):
         slot["elo"] = round(min(slot["elo"], espn.MAX_INJURY_ELO), 1)
         slot["out"].sort(key=lambda r: -r["elo"])
     _cache[cache_key] = by_team
-    print(f"[cfbd] injuries {year} w{week}: {len(by_team)} teams, "
+    print(f"[cfbd] injuries {year} w{used}: {len(by_team)} teams, "
           f"{sum(len(v['out']) for v in by_team.values())} listed")
     return by_team
 

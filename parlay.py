@@ -649,7 +649,7 @@ def _note(leg, line):
     bits = [x for x in (leg.get("notes") or "").split(" | ") if x]
     if line not in bits:
         bits.append(line)
-    leg["notes"] = " | ".join(bits)[:240]
+    leg["notes"] = " | ".join(bits)[:360]
 
 
 def enrich(legs, cfg):
