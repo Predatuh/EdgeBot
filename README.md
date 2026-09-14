@@ -248,6 +248,63 @@ rather than wrong, and a silent correction would be a guess dressed up as a fix.
 - ESPN and Open-Meteo are free public APIs; if one hiccups the pick still goes out
   without that note.
 
+## Signals beyond the price (`flow.py`, `epa.py`)
+
+Added after 611 graded picks showed the model losing to the market. **Neither
+gates a pick.** Both are recorded on every pick and bucketed in `stats.json`
+(`by_flow`, `by_epa`) so the graded record decides whether they earn a say.
+
+### `flow.py` — what the market did before we got here
+
+- **Price history.** Kalshi's candlesticks, which the backtest already proved
+  out, give a bid/ask back to when the market listed. Where a side opened vs
+  where it is now is the exchange's line movement, and movement is the one thing
+  in betting markets that reliably carries information.
+- **The tape.** `/markets/trades` gives every print with its size and which side
+  crossed the spread. Count the prints and you have "tickets"; sum the contracts
+  and you have "money". 80% of prints on one side with 41% of the contracts is
+  the same disagreement a sportsbook split is pointing at. Taker side only — a
+  resting order that gets hit is not making the argument.
+
+`toward` does not mean *good*: it means the market already agreed and the price
+is worse than it was. `away` means early, or wrong. Which one is what the record
+is for.
+
+### `epa.py` — a rating that doesn't come from who won
+
+Elo only knows results, so a good team losing close games and a bad team winning
+them look identical until the results diverge. EPA per play separates them now.
+
+| League | Source | Key needed |
+|---|---|---|
+| NFL | nflverse play-by-play (nflfastR's own `epa`) | none |
+| NCAAF | collegefootballdata.com PPA | free `CFBD_API_KEY` secret |
+
+```
+python epa.py --league nfl,ncaaf      # writes data/v2/epa_<league>.json
+python test_signals.py                # 50 offline checks on both modules
+```
+
+Three things that matter more than the source:
+
+- **It is a second opinion, not a nudge.** It blends into the model's own
+  probability at `epa_weight` (0.35 for both football codes). Added to Elo as an
+  adjustment instead — which is how I wrote it first — it made a good team a
+  717-Elo favourite, because Elo and EPA know mostly the same things and stacking
+  them counts the same evidence twice.
+- **Last season is carried behind this one.** A 17-play week-one sample said
+  Jacksonville had the best offence in football. The prior fades on its own as
+  real plays accumulate (NFL) or on the calendar through week 8 (college).
+- **Shrunk and capped.** Season-to-date efficiency overstates how different teams
+  are; it is regressed toward the mean and capped at three touchdowns.
+
+Garbage time — plays outside 10–90% win probability — is excluded. Without a CFBD
+key the college half is skipped loudly rather than guessed at.
+
+**Kalshi also lists `KXNFLSPREAD`, `KXNFLTOTAL`, `KXNCAAFTEAMTOTAL`** and quarter
+and half markets for both codes. We only trade the winner market, which is a
+bigger gap than either signal above.
+
 ## Parlays (`parlay.py` + `webapp/`)
 
 A separate tool. It does not use Elo, the edge model or staking — it builds combos out
