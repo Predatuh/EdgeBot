@@ -1,8 +1,30 @@
 {
- "bands": {},
- "generated_utc": "2026-09-14T06:33Z",
+ "bands": {
+  "60-90c": {
+   "drag": 0.813,
+   "hit": 0.5,
+   "mean_entry": 0.615,
+   "n": 4,
+   "trusted": false,
+   "wins": 2
+  }
+ },
+ "generated_utc": "2026-09-14T14:37Z",
  "learned_discount": {},
- "legs_settled": 0,
+ "legs_settled": 4,
  "min_band_n": 60,
- "rungs": {}
+ "rungs": {
+  "longshot": {
+   "actual": 0.0,
+   "implied": 0.026,
+   "n": 1,
+   "won": 0
+  },
+  "lottery": {
+   "actual": 0.0,
+   "implied": 0.0041,
+   "n": 1,
+   "won": 0
+  }
+ }
 }
