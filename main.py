@@ -24,7 +24,7 @@ import sys
 import traceback
 import yaml
 
-import kalshi, espn, elo, edge, weather, state, notify, research, epa, flow
+import kalshi, espn, elo, edge, weather, state, notify, research, epa, flow, names, cfbd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # All-Star style events: not real teams, keep them out of the ratings and the card.
@@ -74,15 +74,16 @@ def ingest_history(key, lg):
         seen.add(ev["event"])
         # order: (away, home) for team sports so home adv is applied consistently
         teams.sort(key=lambda s: s["home"])
-        a, b = teams[0]["name"], teams[1]["name"]
-        draw = win == "Tie"
-        sa = 0.5 if draw else (1.0 if win == a else 0.0)
+        a, b = names.canon(key, teams[0]["name"]), names.canon(key, teams[1]["name"])
+        win_c = "Tie" if win == "Tie" else names.canon(key, win)
+        draw = win_c == "Tie"
+        sa = 0.5 if draw else (1.0 if win_c == a else 0.0)
         # home advantage belongs in the expected score during training too, or ratings
         # absorb each side's home/away schedule imbalance (b is the home side)
         elo.update(ratings, a, b, sa, 1 - sa, k=lg.get("k", 24), use_mov=False, draw=draw,
                    home_adv_b=0.0 if neutral_league(lg) else lg.get("home_adv", 0))
         ratings["_games"] = ratings.get("_games", 0) + 1
-        hist.append({"d": ev["date"], "a": a, "b": b, "w": win})
+        hist.append({"d": ev["date"], "a": a, "b": b, "w": win_c})
         new += 1
     if new:
         hist.sort(key=lambda g: g["d"])
@@ -132,10 +133,12 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
     devigged = edge.devig(probs)
     mk_home, mk_away = devigged[0], devigged[1]
 
+    hn, ha = names.canon(key, home["name"]), names.canon(key, away["name"])
+
     notes, adj = [], 0.0
 
-    # --- form / streak / rest (from Kalshi history) ---
-    fh = state.form(hist, home["name"]); fa = state.form(hist, away["name"])
+    # --- form / streak / rest (from Kalshi history, folded onto canonical names) ---
+    fh = state.form(hist, hn); fa = state.form(hist, ha)
     if fh[5] or fa[5]:
         notes.append(f"form {home['name']} {fh[3] or '-'} / {away['name']} {fa[3] or '-'}")
     if fh[4] is not None and fa[4] is not None and not neutral:
@@ -143,17 +146,17 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
         if abs(diff) >= 2:
             adj += max(-15, min(15, diff * 4))   # rested team gets a nudge
             notes.append(f"rest {home['name']} {fh[4]}d / {away['name']} {fa[4]}d")
-    hw, hl, hn = state.h2h(hist, home["name"], away["name"])
-    if hn:
+    hw, hl, h2n = state.h2h(hist, hn, ha)
+    if h2n:
         notes.append(f"H2H {home['name']} {hw}-{hl}")
 
-    # --- ESPN enrichment: injuries, venue, weather ---
+    # --- ESPN / CFBD enrichment: injuries, venue, weather, pitchers ---
     wx, full_names = None, {}
     if espn_note:
         notes.append(espn_note)
     if g:
         full_names = {s["name"]: t["name"] for s, t in ((home, th), (away, ta)) if t}   # 'Philadelphia' -> 'Philadelphia Eagles'
-        if lg.get("injuries") and g.get("event") and th and ta:
+        if lg.get("injuries") is True and g.get("event") and th and ta:
             inj = espn.game_injuries(lg["espn"][0], lg["espn"][1], g["event"])
             ih, ia = inj.get(str(th["id"])), inj.get(str(ta["id"]))
             scale = lg.get("injury_scale", 1.0)
@@ -164,10 +167,22 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
                     notes.append(line)
         if g.get("venue"):
             notes.append(f"@ {g['venue']}")
+        if (lg.get("espn") or [None])[0] == "baseball":
+            pline = espn.pitcher_note(g, home["name"], away["name"])
+            if pline:
+                notes.append(pline)
         if lg.get("weather") and g.get("indoor") is not True and g.get("city"):
-            wx = weather.forecast(g["city"])
+            wx = weather.forecast(g["city"], when=g.get("kickoff") or ev.get("close"))
             if wx:
                 notes.append(f"wx {weather.describe(wx)}")
+    if lg.get("injuries") == "cfbd":
+        ih, ia = cfbd.for_teams(home["name"], away["name"])
+        scale = lg.get("injury_scale", 1.0)
+        adj -= ((ih or {}).get("elo", 0) - (ia or {}).get("elo", 0)) * scale
+        for side, info in ((home["name"], ih), (away["name"], ia)):
+            line = espn.injury_note(side, info)
+            if line:
+                notes.append(line)
 
     # --- model probability (pure Elo + adjustments) ---
     games = ratings.get("_games", 0)
@@ -176,7 +191,7 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
     conf = min(1.0, min(fh[5], fa[5]) / full) if full else 1.0
     mw = cfg.get("market_weight", 0.5)
     model_w = (1 - mw) * conf
-    elo_h, elo_a = ratings.get(home["name"], elo.BASE_RATING), ratings.get(away["name"], elo.BASE_RATING)
+    elo_h, elo_a = ratings.get(hn, elo.BASE_RATING), ratings.get(ha, elo.BASE_RATING)
     thr = cfg["edge_threshold"]
     max_price = cfg.get("max_price", 0.90)
     min_price = cfg.get("min_price", 0.0)
@@ -188,7 +203,7 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
     # Blended INTO the model's own probability, never added to Elo as a nudge:
     # both know most of the same things, and stacking them counts that twice.
     epa_w = lg.get("epa_weight", cfg.get("epa_weight", 0.0))
-    epa_m = epa.matchup(epa_table, home["name"], away["name"],
+    epa_m = epa.matchup(epa_table, hn, ha,
                         home_points=(0 if neutral else home_adv / 25.0)) if epa_w else None
     if epa_m:
         notes.append(epa.note(epa_m, home["name"], away["name"]))
@@ -196,7 +211,7 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
     def decide(extra_home_adj):
         """Blend model + market for a given extra Elo adjustment on the home side,
         pick the side with the most edge (a lean is simply the model favorite)."""
-        p_home = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj + extra_home_adj)
+        p_home = elo.win_prob(ratings, hn, ha, home_adv, adj + extra_home_adj)
         if epa_m:
             p_home = (1 - epa_w) * p_home + epa_w * epa_m["p_home"]
         if tie:
@@ -286,7 +301,7 @@ def model_game(key, lg, cfg, ev, ratings, hist, epa_table=None, flow_budget=None
                  + (f"; research {r_adj:+.0f} Elo" if r_adj else "")
                  + (f"; epa wt {epa_w*100:.0f}%" if epa_m else ""))
 
-    raw_home_final = elo.win_prob(ratings, home["name"], away["name"], home_adv, adj)
+    raw_home_final = elo.win_prob(ratings, hn, ha, home_adv, adj)
     model_fav = home["name"] if raw_home_final >= 0.5 else away["name"]
     return {
         "pass": False, "tier": tier, "pick": c["side"], "p": c["p"], "mk": c["mk"], "edge": c["edge"],

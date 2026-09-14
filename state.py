@@ -97,11 +97,18 @@ def _ts(day):
 
 # ---- Elo ----
 def load_elo(key):
-    return _load(f"elo_{key}.json", {})
+    import names
+    return names.fold_elo(key, _load(f"elo_{key}.json", {}))
 
 
 def save_elo(key, ratings):
-    _save(f"elo_{key}.json", ratings)
+    import names
+    _save(f"elo_{key}.json", names.fold_elo(key, ratings))
+
+
+def load_history(key):
+    import names
+    return names.fold_history(key, _load(f"hist_{key}.json", []))
 
 
 def top_ratings(ratings, n=10):
@@ -119,12 +126,9 @@ def save_seen(key, seen):
 
 
 # ---- game history: {"d":date,"a":away,"b":home,"w":winner|"Tie"} ----
-def load_history(key):
-    return _load(f"hist_{key}.json", [])
-
-
 def save_history(key, hist):
-    _save(f"hist_{key}.json", hist[-6000:])
+    import names
+    _save(f"hist_{key}.json", names.fold_history(key, hist)[-6000:])
 
 
 def history_since(hist, league, back_days=5):

@@ -26,18 +26,23 @@ import sys
 
 import elo
 import espn
+import names
 import state
 
 GROUPS = {"college-football": 80}        # all FBS, not just the ranked teams
 
 
 def kalshi_vocabulary(key):
-    """Every team name the bot has actually seen on Kalshi for this league."""
-    names = set()
+    """Every team name the bot has actually seen on Kalshi for this league.
+
+    Nickname duplicates ("GB Packers") are folded onto the live city name so
+    ESPN "Green Bay Packers" maps once, not twice.
+    """
+    nameset = set()
     for g in state.load_history(key):
-        names.update((g.get("a", ""), g.get("b", "")))
-    names.update(k for k in state.load_elo(key) if not k.startswith("_"))
-    return {n for n in names if n}
+        nameset.update((g.get("a", ""), g.get("b", "")))
+    nameset.update(k for k in state.load_elo(key) if not k.startswith("_"))
+    return {names.canon(key, n) for n in nameset if n}
 
 
 def _paren(name):
@@ -201,30 +206,39 @@ def separation(ratings):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Rebuild Elo from ESPN historical scores")
-    ap.add_argument("--league", required=True, help="config.yaml league key, e.g. ncaaf")
+    ap.add_argument("--league", required=True,
+                    help="config.yaml league key, or comma-separated (nfl,epl,mls)")
     ap.add_argument("--seasons", type=float, default=3.0, help="years of history to pull")
     ap.add_argument("--from", dest="start", default="", help="start date, overrides --seasons")
     ap.add_argument("--dry-run", action="store_true", help="report, write nothing")
     a = ap.parse_args(argv)
 
+    keys = [k.strip() for k in a.league.split(",") if k.strip()]
+    rc = 0
+    for key in keys:
+        rc = max(rc, run_one(key, a.seasons, a.start, a.dry_run))
+    return rc
+
+
+def run_one(key, seasons, start, dry_run):
     import yaml
     cfg = yaml.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.yaml")))
-    lg = (cfg.get("leagues") or {}).get(a.league)
+    lg = (cfg.get("leagues") or {}).get(key)
     if not lg or not lg.get("espn"):
-        print(f"[backfill] {a.league} has no espn: [sport, league] in config.yaml")
+        print(f"[backfill] {key} has no espn: [sport, league] in config.yaml")
         return 1
     sport, league = lg["espn"]
     end = dt.date.today()
-    start = (dt.date.fromisoformat(a.start) if a.start
-             else end - dt.timedelta(days=int(365 * a.seasons)))
-    print(f"[backfill] {a.league}: {sport}/{league}, {start} .. {end}")
+    start_d = (dt.date.fromisoformat(start) if start
+               else end - dt.timedelta(days=int(365 * seasons)))
+    print(f"[backfill] {key}: {sport}/{league}, {start_d} .. {end}")
 
-    games = fetch(sport, league, start, end)
+    games = fetch(sport, league, start_d, end)
     if not games:
         print("[backfill] no completed games found; nothing to do")
         return 1
     espn_names = {g["away"] for g in games} | {g["home"] for g in games}
-    vocab = kalshi_vocabulary(a.league)
+    vocab = kalshi_vocabulary(key)
     name_map, ambiguous = build_name_map(espn_names, vocab)
     print(f"[backfill] {len(games)} games, {len(espn_names)} ESPN teams, "
           f"{len(vocab)} Kalshi names on file -> {len(name_map)} matched")
@@ -236,8 +250,9 @@ def main(argv=None):
         print(f"[backfill] {len(unmatched)} Kalshi names got no ESPN history "
               f"(they keep their current rating): {unmatched[:8]}")
 
-    old = state.load_elo(a.league)
-    ratings = rebuild(a.league, games, name_map, lg.get("k", 24), lg.get("home_adv", 0))
+    old = state.load_elo(key)
+    ratings = rebuild(key, games, name_map, lg.get("k", 24), lg.get("home_adv", 0))
+    ratings = names.fold_elo(key, ratings)
     # a team we bet on but ESPN never covered keeps whatever it had
     for n in unmatched:
         ratings.setdefault(n, old.get(n, elo.BASE_RATING))
@@ -260,12 +275,12 @@ def main(argv=None):
             print(f"[backfill]    {team:<24} {r:.0f} on {n} games, only {ns} vs 1600+")
 
     # form and H2H read the same history file and were seeing ~2 games per team
-    hist = state.load_history(a.league)
+    hist = state.load_history(key)
     have = {(g["d"], g["a"], g["b"]) for g in hist}
     added = 0
     for g in games:
-        aw = name_map.get(g["away"], g["away"])
-        hm = name_map.get(g["home"], g["home"])
+        aw = names.canon(key, name_map.get(g["away"], g["away"]))
+        hm = names.canon(key, name_map.get(g["home"], g["home"]))
         sig = (g["d"], aw, hm)
         if sig in have:
             continue
@@ -275,12 +290,12 @@ def main(argv=None):
         added += 1
     hist.sort(key=lambda g: g["d"])
 
-    if a.dry_run:
+    if dry_run:
         print(f"[backfill] dry run: would write {len(ratings)} ratings and add {added} history rows")
         return 0
-    state.save_elo(a.league, ratings)
-    state.save_history(a.league, hist)
-    print(f"[backfill] wrote elo_{a.league}.json and added {added} rows to hist_{a.league}.json")
+    state.save_elo(key, ratings)
+    state.save_history(key, hist)
+    print(f"[backfill] wrote elo_{key}.json and added {added} rows to hist_{key}.json")
     return 0
 
 

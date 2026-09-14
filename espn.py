@@ -42,15 +42,19 @@ def _board(sport, league):
             teams = []
             for c in cs:
                 t = c.get("team") or {}
+                probs = c.get("probables") or []
+                p0 = probs[0] if probs and isinstance(probs[0], dict) else {}
                 teams.append({"id": str(t.get("id", "")),
                               "name": t.get("displayName", ""),
-                              "home": c.get("homeAway") == "home"})
+                              "home": c.get("homeAway") == "home",
+                              "pitcher": p0.get("displayName") or p0.get("fullName") or ""})
             ven = comp.get("venue") or {}
             out.append({"event": str(ev.get("id", "")),
                         "teams": teams,
                         "indoor": ven.get("indoor"),
                         "city": (ven.get("address") or {}).get("city"),
-                        "venue": ven.get("fullName")})
+                        "venue": ven.get("fullName"),
+                        "kickoff": ev.get("date") or ""})
     except Exception as e:
         print(f"[espn] board {sport}/{league} failed: {e}")
     _board_cache[key] = out
@@ -210,3 +214,24 @@ def injury_note(side, info, top=2):
     who = ", ".join(f"{r['name']} ({r['pos']})" for r in info["out"][:top] if r["name"])
     more = len(info["out"]) - top
     return (f"{side} -{info['elo']:.0f} Elo: {who}" + (f" +{more} more" if more > 0 else "")) if who else ""
+
+
+def probable_pitchers(game):
+    """{home: name, away: name} from a scoreboard game, omitting blanks."""
+    if not game:
+        return {}
+    out = {}
+    for t in game.get("teams") or []:
+        if t.get("pitcher"):
+            out["home" if t.get("home") else "away"] = t["pitcher"]
+    return out
+
+
+def pitcher_note(game, home_name, away_name):
+    """'SP X vs Y' for the card, or '' when ESPN has not listed them."""
+    p = probable_pitchers(game)
+    if not p:
+        return ""
+    a = p.get("away") or "?"
+    h = p.get("home") or "?"
+    return f"SP {away_name}: {a} / {home_name}: {h}"

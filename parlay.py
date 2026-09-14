@@ -31,6 +31,23 @@ import kalshi
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
+
+def market_url(ticker, event_id=""):
+    """Kalshi event page for one contract. The last hyphen is the side code."""
+    if not ticker:
+        return "https://kalshi.com"
+    series = ticker.split("-")[0].lower()
+    event = (event_id or ticker.rsplit("-", 1)[0]).lower()
+    return f"https://kalshi.com/markets/{series}/{event}"
+
+
+def combo_url(tickers):
+    """Combo builder. `ids` is best-effort; tickers are also copied on the phone."""
+    ids = ",".join(t for t in tickers if t)
+    if not ids:
+        return "https://kalshi.com/combos"
+    return "https://kalshi.com/combos?ids=" + ids
+
 TIERS = [                       # (min de-vigged probability, key, label, emoji)
     (0.97, "lock",   "Lock",        "🔒"),
     (0.92, "strong", "Strong",      "💪"),
@@ -192,6 +209,8 @@ def legs_from_events(evs, league, label):
             out.append({
                 "league": league, "league_label": label,
                 "event_id": ev["event"], "ticker": side["ticker"],
+                "series": ev.get("series") or (side["ticker"].split("-")[0] if side.get("ticker") else ""),
+                "kalshi_url": market_url(side["ticker"], ev["event"]),
                 "game": f"{a['name']} vs {b['name']}",
                 "pick": side["name"], "opp": opp["name"],
                 "draw": has_draw,                 # a tie loses this leg
@@ -505,20 +524,25 @@ def fetch(cfg, days=8, leagues=None):
     return legs
 
 
-def candidates(legs, cap=60):
+def candidates(legs, cap=60, exclude_flagged=False):
     """The legs a ticket would actually use, across every scope and rung.
 
     Research used to run down the board by price, which now researches the wrong
     legs entirely: a 60c game can be in four tickets while a 96c blowout is in none.
     Asking the builder which legs it wants, then researching those, spends the same
     budget on the games you might really bet.
+
+    Two passes are required. The first pass (exclude_flagged=False) is what the
+    builder would pick before news lands. After a flag drops a starter, the second
+    pass (exclude_flagged=True) researches the replacement that actually ends up
+    on the slip.
     """
     want, order = set(), []
     for sc in SCOPES:
         pool = scope_legs(legs, sc["key"])
         if not pool:
             continue
-        for t in ladder(pool, exclude_flagged=False):
+        for t in ladder(pool, exclude_flagged=exclude_flagged):
             for l in t["legs"]:
                 if l["ticker"] not in want:
                     want.add(l["ticker"])
@@ -533,12 +557,22 @@ def candidates(legs, cap=60):
     return order[:cap]
 
 
-def add_research(legs, cfg, cap=60):
+def _research_cap(cfg, cap):
+    if cap is not None:
+        return int(cap)
+    return int((cfg.get("research") or {}).get("max_per_run") or 60)
+
+
+def add_research(legs, cfg, cap=None):
     """Attach what the news says about each candidate leg.
 
     Two separate things come back. A `flag` is an injury we can pin on THIS team and
     is strong enough to act on. Everything else is a `note` - shown, never acted on,
     because a filter that quietly deletes a good leg is worse than one that warns.
+
+    Ticket legs are researched first, then the rest of the pool, up to the config
+    cap. A second pass after flags land covers the replacements that actually sit
+    on the slip.
     """
     try:
         import research
@@ -548,20 +582,11 @@ def add_research(legs, cfg, cap=60):
     if research.available():
         print(f"[parlay] research off: {research.available()}")
         return 0
+    cap = _research_cap(cfg, cap)
     date = dt.date.today().isoformat()
-    done = 0
-    for l in candidates(legs, cap):
-        try:
-            brief = research.lookup(os.path.join(HERE, "data", "v2"), date,
-                                    l["league_label"], l["game"], l["pick"], l["opp"],
-                                    l["ask"], [],
-                                    sport_hint=SPORT_HINT.get(l["league"], "soccer"))
-        except Exception as e:
-            print(f"[parlay] research {l['pick']}: {type(e).__name__}")
-            continue
-        if not brief:
-            continue
-        done += 1
+    done, seen = 0, set()
+
+    def apply_brief(l, brief):
         heads = [{"side": h.get("side", ""), "title": h.get("title", ""),
                   "source": h.get("source", ""), "date": h.get("date", ""),
                   "watch": bool(h.get("watch"))}
@@ -575,10 +600,40 @@ def add_research(legs, cfg, cap=60):
         }
         if brief.get("red_flags"):
             l["flags"] = list(brief["red_flags"])[:2]
-        notes = [f"could be either side: {t}" for t in brief.get("unattributed", [])[:1]]
-        notes += [f"{h['side']}: {h['title']}" for h in heads if h["watch"]][:2]
-        if notes:
-            l["notes"] = " | ".join(notes)[:240]
+        bits = [x for x in (l.get("notes") or "").split(" | ") if x]
+        bits += [f"could be either side: {t}" for t in brief.get("unattributed", [])[:1]]
+        bits += [f"{h['side']}: {h['title']}" for h in heads if h["watch"]][:2]
+        # keep weather/pitcher notes that enrich() already put on
+        uniq = []
+        for b in bits:
+            if b and b not in uniq:
+                uniq.append(b)
+        if uniq:
+            l["notes"] = " | ".join(uniq)[:240]
+
+    def run_pass(flagged):
+        nonlocal done
+        for l in candidates(legs, cap, exclude_flagged=flagged):
+            if l["ticker"] in seen:
+                continue
+            if done >= cap:
+                return
+            seen.add(l["ticker"])
+            try:
+                brief = research.lookup(os.path.join(HERE, "data", "v2"), date,
+                                        l["league_label"], l["game"], l["pick"], l["opp"],
+                                        l["ask"], [],
+                                        sport_hint=SPORT_HINT.get(l["league"], "soccer"))
+            except Exception as e:
+                print(f"[parlay] research {l['pick']}: {type(e).__name__}")
+                continue
+            if not brief:
+                continue
+            done += 1
+            apply_brief(l, brief)
+
+    run_pass(False)
+    run_pass(True)
     return done
 
 
@@ -586,6 +641,91 @@ SPORT_HINT = {"nfl": "football", "ncaaf": "football", "cfl": "football",
               "mlb": "baseball", "atp": "tennis", "wta": "tennis", "challenger": "tennis",
               "cricket_t20i": "cricket", "cricket_odi": "cricket",
               "cricket_test": "cricket", "cpl": "cricket"}
+
+
+def _note(leg, line):
+    if not line:
+        return
+    bits = [x for x in (leg.get("notes") or "").split(" | ") if x]
+    if line not in bits:
+        bits.append(line)
+    leg["notes"] = " | ".join(bits)[:240]
+
+
+def enrich(legs, cfg):
+    """Weather at kickoff, CFBD/ESPN injuries, MLB pitchers — on ticket legs first.
+
+    One ESPN scoreboard call per league (cached) and one CFBD injuries call per
+    week. Failures are silent: a missing extra never blocks a ticket.
+    """
+    cap = _research_cap(cfg, None)
+    want = {l["event_id"] for l in candidates(legs, cap, exclude_flagged=False)}
+    by_event = {}
+    for l in legs:
+        by_event.setdefault(l["event_id"], []).append(l)
+
+    leagues_cfg = cfg.get("leagues") or {}
+    try:
+        import espn as espn_mod
+        import weather as wx_mod
+        import cfbd as cfbd_mod
+    except ImportError:
+        return
+
+    cfbd_table = None
+    for ev, group in by_event.items():
+        if ev not in want:
+            continue
+        sample = group[0]
+        spec = leagues_cfg.get(sample["league"]) or {}
+        game = None
+        if spec.get("espn"):
+            try:
+                game = espn_mod.find_game(spec["espn"][0], spec["espn"][1],
+                                          sample["pick"], sample["opp"])
+            except Exception:
+                game = None
+        if spec.get("injuries") is True and game and game.get("event"):
+            try:
+                inj = espn_mod.game_injuries(spec["espn"][0], spec["espn"][1], game["event"])
+            except Exception:
+                inj = {}
+            id_by_name = {t["name"]: str(t["id"]) for t in game.get("teams") or []}
+            for l in group:
+                tid = None
+                for ename, eid in id_by_name.items():
+                    if espn_mod.name_match(l["pick"], ename):
+                        tid = eid
+                        break
+                line = espn_mod.injury_note(l["pick"], inj.get(tid) if tid else None)
+                _note(l, line)
+        if spec.get("injuries") == "cfbd":
+            if cfbd_table is None:
+                try:
+                    cfbd_table = cfbd_mod.injuries() if cfbd_mod.available() else {}
+                except Exception:
+                    cfbd_table = {}
+            for l in group:
+                ih, _ = cfbd_mod.for_teams(l["pick"], l["opp"])
+                _note(l, espn_mod.injury_note(l["pick"], ih))
+        if (spec.get("espn") or [None])[0] == "baseball" and game:
+            line = espn_mod.pitcher_note(game, sample["pick"] if sample.get("home") else sample["opp"],
+                                         sample["opp"] if sample.get("home") else sample["pick"])
+            # pitcher_note wants home, away names; use ESPN home flag when we have it
+            home = next((t for t in game.get("teams") or [] if t.get("home")), None)
+            away = next((t for t in game.get("teams") or [] if not t.get("home")), None)
+            if home and away:
+                line = espn_mod.pitcher_note(game, home["name"], away["name"])
+            for l in group:
+                _note(l, line)
+        if spec.get("weather") and game and game.get("indoor") is not True and game.get("city"):
+            try:
+                w = wx_mod.forecast(game["city"], when=game.get("kickoff") or sample.get("close"))
+            except Exception:
+                w = None
+            line = f"wx {wx_mod.describe(w)}" if w else ""
+            for l in group:
+                _note(l, line)
 
 
 def snapshot(cfg=None, days=8, scope="football", leagues=None):
@@ -597,6 +737,10 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
     cfg = cfg or load_config()
     kalshi.MAX_SPREAD = cfg.get("max_spread", kalshi.MAX_SPREAD)
     legs = fetch(cfg, days, leagues)
+    try:
+        enrich(legs, cfg)
+    except Exception as e:
+        print(f"[parlay] enrich skipped: {type(e).__name__}: {str(e)[:80]}")
     n = add_research(legs, cfg)
     flagged = sum(1 for l in legs if l["flags"])
     print(f"[parlay] researched {n} legs, {flagged} carry a red flag")
@@ -606,6 +750,9 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
     scopes = live_scopes(legs)
     if not any(sc["key"] == scope for sc in scopes):
         scope = scopes[-1]["key"] if scopes else "all"
+    tickets = ladder(scope_legs(legs, scope))
+    for t in tickets:
+        t["kalshi_url"] = combo_url([l["ticker"] for l in t.get("legs") or []])
     return {
         "generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "days": days,
@@ -614,7 +761,7 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
         "presets": PRESETS,
         "scopes": scopes,
         "scope": scope,
-        "tickets": ladder(scope_legs(legs, scope)),
+        "tickets": tickets,
         "calibration_note": CALIBRATION_NOTE,
         "backtest_note": backtest_note(),
         "stats": load_stats(),
