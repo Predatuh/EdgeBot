@@ -266,6 +266,22 @@ gates a pick.** Both are recorded on every pick and bucketed in `stats.json`
   the same disagreement a sportsbook split is pointing at. Taker side only — a
   resting order that gets hit is not making the argument.
 
+- **The book.** `/markets/{ticker}/orderbook` gives the resting size at every
+  price on both sides - what is still waiting, as opposed to what already
+  happened. Size near the touch is kept separate from size parked ten cents away.
+
+```
+python flow.py --check KXNCAAFGAME --n 2     # read it live off the busiest markets
+```
+
+A real reading:
+
+```
+LSU sat at 58c from 60c over 95h
+tape 76% of 500 trades / 84% of 33790 contracts, biggest 4730
+book 60% of the size near the touch
+```
+
 `toward` does not mean *good*: it means the market already agreed and the price
 is worse than it was. `away` means early, or wrong. Which one is what the record
 is for.
