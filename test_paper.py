@@ -215,6 +215,20 @@ with tempfile.TemporaryDirectory() as d:
         feed = json.load(f)
     check("the settled feed accumulates rather than replacing",
           feed["results"] == {"A": "win", "B": "loss"}, str(feed["results"]))
+    # a ticket built on a phone and never sent here has legs this ledger has
+    # never seen; if the feed only carried its own, that ticket never grades
+    paper.settled_feed(led, {"STRANGER": "win"}, sp)
+    with open(sp) as f:
+        feed = json.load(f)
+    check("...and carries results for legs no ticket here holds",
+          feed["results"].get("STRANGER") == "win")
+    big = {f"OLD{i}": "loss" for i in range(60)}
+    paper.settled_feed(led, big, sp, keep=10)
+    with open(sp) as f:
+        feed = json.load(f)
+    check("pruning keeps it bounded", len(feed["results"]) <= 11, str(len(feed["results"])))
+    check("...and never drops a leg a ticket still refers to",
+          feed["results"].get("A") == "win")
 
 print("\nlogging a ticket of your own")
 board = [leg("A", 0.60), leg("B", 0.70)]

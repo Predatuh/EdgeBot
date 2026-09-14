@@ -267,24 +267,31 @@ def grade(led, results, stamp=None):
     return settled
 
 
-def settled_feed(led, results, path=SETTLED, keep=1200):
+def settled_feed(led, results, path=SETTLED, keep=4000):
     """The results the phone grades its own tickets against.
 
-    The app cannot call Kalshi for a settlement, so the bot publishes the one
-    thing it needs: which tickers won. Only tickers that appear in someone's
-    paper ticket are worth carrying, plus whatever is already published.
+    The app cannot ask Kalshi for a settlement, so the bot publishes the one
+    thing it needs: which tickers won. This carries EVERY settled market the run
+    saw, not only the ones in this ledger - a ticket you built on your phone and
+    never sent here would otherwise contain legs nothing publishes a result for,
+    and it would sit open for ever.
+
+    Pruning keeps anything a ticket still refers to, then the most recently added
+    of the rest (dicts keep insertion order, and new results are appended).
     """
     try:
         with open(path, encoding="utf-8") as f:
-            old = json.load(f)
+            prev = json.load(f)
     except (OSError, ValueError):
-        old = {}
-    out = dict(old.get("results") or {})
+        prev = {}
+    out = dict(prev.get("results") or {})
     out.update(results)
     if len(out) > keep:
         wanted = {l["ticker"] for t in led["tickets"] for l in t["legs"]}
-        trimmed = {k: v for k, v in out.items() if k in wanted}
-        out = trimmed if trimmed else dict(list(out.items())[-keep:])
+        held = {k: v for k, v in out.items() if k in wanted}
+        spare = [(k, v) for k, v in out.items() if k not in wanted]
+        room = max(0, keep - len(held))
+        out = dict(list(held.items()) + spare[-room:])
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump({"generated_utc": now(), "results": out}, f,
@@ -498,27 +505,29 @@ def _cli(argv=None):
     if a.grade:
         since = (dt.datetime.now(dt.timezone.utc)
                  - dt.timedelta(days=a.back_days)).timestamp()
+        # every settled market, not only the ones this ledger knows about: the
+        # phone grades tickets that were never sent here, and it can only do
+        # that from what gets published
         wanted = {l["ticker"] for t in open_tickets(led) for l in t["legs"]
                   if l["result"] is None}
         results = {}
-        if wanted:
-            for key in parlay.all_leagues(cfg):
-                spec = parlay.league_spec(cfg, key)
-                if not spec:
-                    continue
-                try:
-                    evs = kalshi.settled_events(spec["ticker"], since, spec["ticker_order"])
-                except Exception as e:
-                    print(f"[paper] {key} settlements failed: {type(e).__name__}: {str(e)[:70]}")
-                    continue
-                got = results_from_events(evs)
-                hits = {k: v for k, v in got.items() if k in wanted}
-                if hits:
-                    print(f"[paper] {key}: {len(hits)} of our legs settled")
-                results.update(hits)
-        n = grade(led, results)
-        print(f"[paper] graded {n} tickets from {len(results)} settled legs")
-        settled_feed(led, results)
+        for key in parlay.all_leagues(cfg):
+            spec = parlay.league_spec(cfg, key)
+            if not spec:
+                continue
+            try:
+                evs = kalshi.settled_events(spec["ticker"], since, spec["ticker_order"])
+            except Exception as e:
+                print(f"[paper] {key} settlements failed: {type(e).__name__}: {str(e)[:70]}")
+                continue
+            got = results_from_events(evs)
+            mine = len(wanted & set(got))
+            print(f"[paper] {key}: {len(got)} settled markets"
+                  + (f", {mine} of them ours" if mine else ""))
+            results.update(got)
+        n = grade(led, {k: v for k, v in results.items() if k in wanted})
+        print(f"[paper] graded {n} tickets")
+        print(f"[paper] published {settled_feed(led, results)} settled results for the app")
 
     if a.add and legs:
         t, missing = slate_from_tickers(a.add.replace("\n", ",").split(","), legs,
