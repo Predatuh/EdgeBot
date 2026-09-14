@@ -296,6 +296,7 @@ python parlay.py --scope all                       # every sport Kalshi lists
 python parlay.py --html board.html                 # the phone app, one self-contained file
 python parlay.py --json data/v2/parlay.json --discord
 python parlay.py --offline --html board.html       # no network; page falls back to an example board
+python parlay.py --from-json data/v2/parlay.json --html board.html   # re-render a saved board
 python test_parlay.py                              # 90+ offline checks on the math
 ```
 
@@ -303,8 +304,20 @@ python test_parlay.py                              # 90+ offline checks on the m
 carries every scope.
 
 `.github/workflows/parlay.yml` runs it daily, posts the card to Discord, and writes
-`docs/index.html` — open **Settings → Pages → Deploy from branch → `main` → `/docs`** once
-and the page is installable to a phone home screen (manifest and icons ship with it).
+`docs/index.html`, which GitHub Pages serves at **https://predatuh.github.io/EdgeBot/**
+(Settings → Pages → Deploy from branch → `main` → `/docs`). It installs to a phone home
+screen from there; the manifest and icons ship with it.
+
+### On Android, as a real app
+
+**https://github.com/Predatuh/EdgeBot/releases/latest/download/gridiron-ticket.apk**
+
+Open that on the phone and tap it. `android/` is a WebView around the same page, built
+and signed by `.github/workflows/android.yml` and attached to the `app` release. Updates
+install over the top, and the board keeps updating itself without a reinstall — the APK
+only needs rebuilding when the app itself changes. `android/README.md` covers the signing
+key and why the page is served from `https://appassets.androidplatform.net` rather than
+`file://`.
 
 The page carries a board baked in, so it renders instantly and works with no signal, then
 asks `raw.githubusercontent.com` whether a newer one exists and adopts it if so. That is

@@ -43,12 +43,13 @@ jobs:
         with: {python-version: "3.12"}
 
       - name: Check the page still renders
-        run: python test_parlay.py
+        run: |
+          pip install -r requirements.txt
+          python test_parlay.py
 
       - name: Bundle the current page into the app
         run: |
           set -euo pipefail
-          pip install -r requirements.txt
           # Rebuilt from the committed board rather than copied out of docs/: the
           # site is regenerated on its own schedule, so docs/index.html can still
           # be yesterday's template. This renders today's template around the last
