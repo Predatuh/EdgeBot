@@ -10270,5 +10270,756 @@
    }
   ],
   "_ts": "2026-09-15T14:18Z"
+ },
+ "NFL|Houston vs Cincinnati|Cincinnati": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Tampa Bay Buccaneers vs. Cincinnati Bengals Week 1 analysis | NFL Pro",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Russell Wilson: 'If it doesn't go well in Cincinnati this year, Joe Burrow is gone'",
+    "source": "DAZN",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Texans head coach DeMeco Ryans recaps Week 1 vs. Buffalo Bills",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "NFL Pro Analysis | Buffalo Bills vs. Houston Texans Week 1",
+    "source": "Buffalo Bills",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "What did you make of Cincinnati Bengals Week 1 performance? | 'GMFB'",
+    "source": "NFL.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "The Day After the Day After: Houston Texans fall 36-31 to the Buffalo Bills",
+    "source": "Battle Red Blog",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "College Football|SMU vs Louisville|SMU": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Louisville football coach Jeff Brohm provides injury updates ahead of top-25 showdown",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Louisville",
+    "title": "Louisville football coach Jeff Brohm provides injury updates ahead of top-25 showdown",
+    "source": "On3",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "SMU",
+    "title": "No. 16 SMU football draws late time slot against Missouri State on Sept. 26",
+    "source": "Dallas News",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "SMU",
+    "title": "Penn State, SMU lead winners of college football bowl projections after Week 2",
+    "source": "The Florida Times-Union",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "SMU",
+    "title": "What CardinalAuthority Learned from Louisville Football's Pre-SMU Press Conference",
+    "source": "247Sports",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Louisville",
+    "title": "Projecting the depth charts for Louisville's ranked matchup vs. SMU",
+    "source": "whas11.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Louisville",
+    "title": "What CardinalAuthority Learned from Louisville Football's Pre-SMU Press Conference",
+    "source": "247Sports",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "La Liga|Bilbao vs Alaves|Alaves": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Preview: Alaves vs Valencia - prediction, team news, lineups; Alaves vs Valencia prediction: expert analysis, possible lineups, September 15, 2026",
+  "opp_health": "PREVIEW | Levante vs Athletic Bilbao: team news, lineups, predictions (La Liga 16/09); Preview: Levante vs Athletic Bilbao - prediction, team news, lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alaves",
+    "title": "Racing vs Alaves match lineup | LaLiga \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "A.Bilbao vs Elche match lineup | LaLiga \u00b7 12 Sep 2026",
+    "source": "YSscores",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Alaves",
+    "title": "Preview: Alaves vs Valencia - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Alaves",
+    "title": "Alaves vs Valencia prediction: expert analysis, possible lineups, September 15, 2026",
+    "source": "RatingBet",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "PREVIEW | Levante vs Athletic Bilbao: team news, lineups, predictions (La Liga 16/09)",
+    "source": "playmakerstats.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "Preview: Levante vs Athletic Bilbao - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Sep 14",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "ATP Challenger|Ryan Seggerman vs Aidan Mayo|Ryan Seggerman": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ryan Seggerman",
+    "title": "Andrew Fenty vs Ryan Seggerman \u00b7 Qualifying Round 1 \u00b7 ATP Challenger Tiburon, USA",
+    "source": "Tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "MLB|Miami vs Arizona|Miami": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rojas injures shoulder in possible final game in Miami, will receive treatment",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami",
+    "title": "Rojas injures shoulder in possible final game in Miami, will receive treatment",
+    "source": "MLB.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Sandlot Summer makes successful debut at the Miami Marlins MLB Youth Academy",
+    "source": "MLB.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Miami Marlins at Arizona Diamondbacks - Where to Watch, Stream Info, TV Channel, and Live Updates (September 15, 2026)",
+    "source": "Fubo",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Sam Dykstra previews 2026 Arizona Fall League",
+    "source": "MLB.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Rosters announced for 2026 Arizona Fall League",
+    "source": "MLB.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Here are the 2026 Arizona Fall League rosters",
+    "source": "MLB.com",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "ATP Challenger|Arthur Weber vs Rodrigo Pacheco Mendez|Rodrigo Pacheco Mendez": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rodrigo Pacheco Mendez",
+    "title": "Kenta Miyoshi/Rodrigo Pacheco Mendez's draws, scores, stats, age, bio, rankings",
+    "source": "Tennis Tonic",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Rodrigo Pacheco Mendez",
+    "title": "R.Pacheco Mendez beats S.Callejon Hernando - Phan Thiet 4 Challenger 2026 - score",
+    "source": "Tennis Tonic",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "ATP Challenger|Filip Pieczonka vs Tiago Pereira|Tiago Pereira": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tiago Pereira",
+    "title": "Tiago Pereira from the Algarve region hits the top 100 for the first time.",
+    "source": "Sul Informa\u00e7\u00e3o",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Tiago Pereira",
+    "title": "Tiago Pereira vs Rudolf Molleker \u00b7 Qualifying Round 2 \u00b7 ATP Challenger Szczecin, Poland",
+    "source": "Tennis.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Tiago Pereira",
+    "title": "Tiago Pereira reaches the main draw of the Challenger 125 in Poland.",
+    "source": "Sul Informa\u00e7\u00e3o",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Filip Pieczonka",
+    "title": "Filip Pieczonka vs Nikita Mashtakov \u00b7 Qualifying Round 2 \u00b7 ATP Challenger Szczecin, Poland",
+    "source": "Tennis.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Filip Pieczonka",
+    "title": "Carlos S\u00e1nchez Jover vs Filip Pieczonka \u00b7 Qualifying Round 1 \u00b7 ATP Challenger Szczecin, Poland",
+    "source": "Tennis.com",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "College Football|Youngstown St. vs South Dakota St.|South Dakota St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Youngstown St.",
+    "title": "Ta'John Royster (RB) News, Rumors & Videos - Youngstown St.",
+    "source": "Yahoo Sports",
+    "date": "Sep 08",
+    "watch": false
+   },
+   {
+    "side": "Youngstown St.",
+    "title": "Kentucky football\u2019s win over Youngstown State carried a hidden value",
+    "source": "Lexington Herald Leader",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "South Dakota St.",
+    "title": "Kansas Earns Second-Straight Sweep in Win over South Dakota State - University of Kansas",
+    "source": "kuathletics.com",
+    "date": "Sep 11",
+    "watch": false
+   },
+   {
+    "side": "Youngstown St.",
+    "title": "Darvens Tunis (DB) Game Logs - Youngstown St.",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "College Football|South Carolina St. vs Furman|South Carolina St.": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Sam Pendleton was suspended against Furman for offseason arrest",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Furman",
+    "title": "Sam Pendleton was suspended against Furman for offseason arrest",
+    "source": "On3",
+    "date": "Sep 08",
+    "watch": true
+   },
+   {
+    "side": "South Carolina St.",
+    "title": "Wednesday Tilt With South Carolina State Ends In Draw",
+    "source": "judolphins.com",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "South Carolina St.",
+    "title": "South Carolina St. Bulldogs at Furman Paladins Matchup Overview | Week 3",
+    "source": "BettingPros",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Furman",
+    "title": "South Carolina St. Bulldogs at Furman Paladins Matchup Overview | Week 3",
+    "source": "BettingPros",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Furman",
+    "title": "Furman ranked 24th in AFCA FCS Coaches Poll",
+    "source": "FOX Carolina News",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "ATP Challenger|Philip Sekulic vs Kenta Miyoshi (b. 2004)|Kenta Miyoshi (b. 2004)": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philip Sekulic",
+    "title": "Philip Sekulic 1 - 1 Koki Matsuda (10/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   },
+   {
+    "side": "Philip Sekulic",
+    "title": "Philip Sekulic 1 - 0 Koki Matsuda (09/10) - Game Report",
+    "source": "365Scores",
+    "date": "Sep 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "College Football|Old Dominion vs East Carolina|Old Dominion": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Old Dominion",
+    "title": "PFF Grades and Snap Counts From Virginia Tech's 44-21 Week 2 Victory Over Old Dominion",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Old Dominion",
+    "title": "The Good, the Bad and the Ugly From Virginia Tech's 44-21 Win Over Old Dominion",
+    "source": "Sports Illustrated",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Old Dominion",
+    "title": "Virginia Tech football: 5 takeaways from Hokies\u2019 44-21 win over Old Dominion",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "East Carolina",
+    "title": "North Carolina College Football Scores Today: Live Updates & Final Scores for Sept. 12",
+    "source": "NC Football News",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "East Carolina",
+    "title": "North Carolina College Football: Big Wins, Close Calls and a Rivalry Thriller",
+    "source": "Country 103.7",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "East Carolina",
+    "title": "North Carolina College Football This Week: Full List of Games, Times & TV Info for Week 3 (Sept. 18-19)",
+    "source": "NC Football News",
+    "date": "Sep 14",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "MLB|New York M vs Baltimore|New York M": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Devin Williams likely to be fast-tracked back to Mets bullpen after injury; Pete Alonso receives thunderous ovations from Mets fans in return to Citi Field with Orioles",
+  "opp_health": "Baltimore Orioles Announce Kyle Bradish Injury Update Before Mets Series",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Orioles Announce Kyle Bradish Injury Update Before Mets Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Devin Williams likely to be fast-tracked back to Mets bullpen after injury",
+    "source": "New York Post",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Pete Alonso receives thunderous ovations from Mets fans in return to Citi Field with Orioles",
+    "source": "AP News",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Pete Alonso Returns To Citi Field With Mets Still Reeling From Their Mistake",
+    "source": "FOX Sports",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "MLB: Baltimore Orioles at New York Mets",
+    "source": "The Daily News | Texas' Oldest Newspaper",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Orioles at New York Mets - Where to Watch, Stream Info, TV Channel, and Live Updates (September 15, 2026)",
+    "source": "Fubo",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "MLB|Toronto vs Detroit|Toronto": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Toronto Blue Jays Provide Surprisingly Excellent Injury News on Trey Yesavage",
+  "opp_health": "Detroit Tigers Lineup Set Ahead of Blue Jays Opener With Nothing To Lose",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Provide Surprisingly Excellent Injury News on Trey Yesavage",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers Lineup Set Ahead of Blue Jays Opener With Nothing To Lose",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "The Detroit Tigers did Monday against the Toronto Blue Jays what they've done all month: Finding a way to have something positive happen. See link below \u2b07\ufe0f \ud83d\udcf8 John E. Sokolowski, IMAGN IMAGES via Reuters",
+    "source": "facebook.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Heartbreak piles up for Toronto after Soriano's brilliant beginning",
+    "source": "MLB.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers Quickly Demote 26-Year-Old During Blue Jays Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "The Detroit Tigers did Monday against the Toronto Blue Jays what they've done all month: Finding a way to have something positive happen. See link below \u2b07\ufe0f \ud83d\udcf8 John E. Sokolowski, IMAGN IMAGES via Reuters",
+    "source": "facebook.com",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "MLB|Detroit vs Chicago WS|Chicago WS": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "White Sox vs. Guardians Lineup: Biggest Series of the Year, Sean Newcomb Starts? More; Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151",
+  "opp_health": "Detroit Tigers Lineup Set Ahead of Blue Jays Opener With Nothing To Lose",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "White Sox vs. Guardians Lineup: Biggest Series of the Year, Sean Newcomb Starts? More",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Cleveland Guardians, Chicago White Sox starting lineups for Sept. 14, 2026: Game 151",
+    "source": "Cleveland.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers Lineup Set Ahead of Blue Jays Opener With Nothing To Lose",
+    "source": "Sports Illustrated",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Cubs and White Sox are in the hunt for playoff berths: Tracking the magic numbers for Chicago\u2019s baseball teams",
+    "source": "Chicago Tribune",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers Quickly Demote 26-Year-Old During Blue Jays Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "The Detroit Tigers did Monday against the Toronto Blue Jays what they've done all month: Finding a way to have something positive happen. See link below \u2b07\ufe0f \ud83d\udcf8 John E. Sokolowski, IMAGN IMAGES via Reuters",
+    "source": "facebook.com",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
+ },
+ "MLB|Texas vs Boston|Boston": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Boston Red Sox Activate All-Star First Baseman From Injured List; Boston's Willson Contreras activated from injured list as Anthony Seigler goes on IL",
+  "opp_health": "\u2018It\u2019s Going To Potentially Take A Little Bit Of Time\u2019: Joc Pederson\u2019s Hand Injury Leaves Texas Rangers Facing IL Decision; Big 12 withdraws lawsuit against Texas Tech filed during Brendan Sorsby saga - The Athletic",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Boston",
+    "title": "How Does Injury to Eli White Impct Boston Red Sox Lineup?",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 12, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 12",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Boston Red Sox Activate All-Star First Baseman From Injured List",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Boston's Willson Contreras activated from injured list as Anthony Seigler goes on IL",
+    "source": "FOX Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "\u2018It\u2019s Going To Potentially Take A Little Bit Of Time\u2019: Joc Pederson\u2019s Hand Injury Leaves Texas Rangers Facing IL Decision",
+    "source": "dallassportsjournal.com",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Big 12 withdraws lawsuit against Texas Tech filed during Brendan Sorsby saga - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-15T16:11Z"
  }
 }
