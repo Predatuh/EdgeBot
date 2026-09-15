@@ -2,6 +2,7 @@
 build/
 app/build/
 local.properties
-# filled from docs/ at build time - the page is generated, not source
+# generated at build time except the committed offline splash
 app/src/main/assets/*
 !app/src/main/assets/.gitkeep
+!app/src/main/assets/offline.html
