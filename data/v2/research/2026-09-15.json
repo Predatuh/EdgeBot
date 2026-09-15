@@ -11078,7 +11078,7 @@
     "watch": true
    }
   ],
-  "_ts": "2026-09-15T16:27Z"
+  "_ts": "2026-09-15T16:39Z"
  },
  "MLB|New York M vs Baltimore|Baltimore": {
   "mode": "headlines",
@@ -11096,7 +11096,7 @@
    {
     "side": "Baltimore",
     "title": "Baltimore Orioles Announce Kyle Bradish Injury Update Before Mets Series",
-    "source": "sports.yahoo.com",
+    "source": "Yahoo Sports",
     "date": "Sep 14",
     "watch": true
    },
@@ -11116,8 +11116,8 @@
    },
    {
     "side": "New York M",
-    "title": "Alonso hitless in return to Queens but Henderson's homer eliminates Mets as Orioles win 2-1",
-    "source": "AP News",
+    "title": "Pete Alonso Returns To Citi Field With Mets Still Reeling From Their Mistake",
+    "source": "FOX Sports",
     "date": "Sep 15",
     "watch": true
    },
@@ -11136,7 +11136,239 @@
     "watch": false
    }
   ],
-  "_ts": "2026-09-15T16:27Z"
+  "_ts": "2026-09-15T16:39Z"
+ },
+ "NFL|Jacksonville vs Denver|Denver": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Patrick Mahomes returns from knee injury as Kansas City Chiefs storm past Denver Broncos; NFL Week 1 Chiefs vs. Broncos picks, best bets: Why Denver will cover as Patrick Mahomes returns from injury",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Denver",
+    "title": "NFL Week 1 Chiefs vs. Broncos picks, best bets: Why Denver will cover as Patrick Mahomes returns from injury",
+    "source": "CBS Sports",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Patrick Mahomes returns from knee injury as Kansas City Chiefs storm past Denver Broncos",
+    "source": "Sky Sports",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Jacksonville Jaguars head coach Liam Coen talks quarterback Trevor Lawrence's Week 1 success",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Jacksonville Jaguars Winners and Losers From Week 1: Jags Stomp Lowly Browns In All Three Phases",
+    "source": "Yahoo Sports",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Cleveland Browns vs. Jacksonville Jaguars Week 1 Recap | NFL Daily",
+    "source": "NFL.com",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Denver",
+    "title": "Denver Broncos make NFL history & should be concerned",
+    "source": "Yahoo Sports",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:39Z"
+ },
+ "College Football|Lafayette vs Columbia|Lafayette": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Columbia",
+    "title": "Columbia Lions vs Michigan Wolverines Box Score - November 12, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Columbia",
+    "title": "District Of Columbia High School Football Composite Rankings",
+    "source": "On3",
+    "date": "Sep 10",
+    "watch": false
+   },
+   {
+    "side": "Lafayette",
+    "title": "Marist Comes Up Just Short at Lafayette",
+    "source": "Marist University Athletics",
+    "date": "Sep 12",
+    "watch": false
+   },
+   {
+    "side": "Lafayette",
+    "title": "Bucknell Bison vs Lafayette Leopards Box Score - February 13, 2027 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Columbia",
+    "title": "Record-breaking Redda sprints toward finish line of Columbia College career",
+    "source": "Columbia Missourian",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Lafayette",
+    "title": "Colgate vs. Lafayette (Jan 2, 2027) Live Score",
+    "source": "ESPN",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:39Z"
+ },
+ "NFL|Carolina vs Atlanta|Carolina": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Atlanta Falcons Get Major Injury Update on Michael Penix Jr.\u2019s Injury Status for Week 2; Falcons QB Depth Chart: Starter, Backup in Atlanta Shaken by Injuries",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Falcons Get Major Injury Update on Michael Penix Jr.\u2019s Injury Status for Week 2",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Falcons QB Depth Chart: Starter, Backup in Atlanta Shaken by Injuries",
+    "source": "Yahoo Sports",
+    "date": "Sep 13",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers and Bank of America Launch 3rd & Goal",
+    "source": "PR Newswire",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Carolina",
+    "title": "The Carolina Panthers\u2019 defense got exposed. Now Dave Canales is defending Ejiro Evero",
+    "source": "The New York Times",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Carolina",
+    "title": "The Bear\u2019s Den: Bears victory of Carolina Panthers big in many ways",
+    "source": "Yahoo Sports",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "An Atlanta Braves investor wants the team sold. Here\u2019s why he says now is the time",
+    "source": "The New York Times",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:39Z"
+ },
+ "MLB|Philadelphia vs New York M|New York M": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Devin Williams likely to be fast-tracked back to Mets bullpen after injury; Pete Alonso receives thunderous ovations from Mets fans in return to Citi Field with Orioles",
+  "opp_health": "Former Philadelphia Phillies All-Star Suffers Season-Ending Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philadelphia",
+    "title": "Former Philadelphia Phillies All-Star Suffers Season-Ending Injury",
+    "source": "heavy.com",
+    "date": "Sep 14",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Devin Williams likely to be fast-tracked back to Mets bullpen after injury",
+    "source": "New York Post",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Pete Alonso receives thunderous ovations from Mets fans in return to Citi Field with Orioles",
+    "source": "AP News",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Pete Alonso Returns To Citi Field With Mets Still Reeling From Their Mistake",
+    "source": "FOX Sports",
+    "date": "Sep 15",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies at Washington Nationals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 15, 2026)",
+    "source": "Fubo",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Parks and Rec head says she authorized Phillies\u2019 unpermitted turf field for 250th celebrations",
+    "source": "WHYY",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T16:39Z"
  },
  "Caribbean Premier League|Guyana Amazon Warriors vs Antigua And Barbuda Falcons|Antigua And Barbuda Falcons": {
   "mode": "headlines",
@@ -11190,64 +11422,6 @@
     "side": "Guyana Amazon Warriors",
     "title": "Guyana Amazon Warriors Extend Unbeaten CPL Run",
     "source": "iSPORT.in",
-    "date": "Sep 15",
-    "watch": false
-   }
-  ],
-  "_ts": "2026-09-15T16:27Z"
- },
- "NFL|Jacksonville vs Denver|Denver": {
-  "mode": "headlines",
-  "summary": "2 injury/lineup headline(s) in last 7d",
-  "pick_health": "Patrick Mahomes returns from knee injury as Kansas City Chiefs storm past Denver Broncos; NFL Week 1 Chiefs vs. Broncos picks, best bets: Why Denver will cover as Patrick Mahomes returns from injury",
-  "opp_health": "no issues found",
-  "recent_form": "",
-  "situational": "nothing notable",
-  "red_flags": [],
-  "unattributed": [],
-  "lean": 0,
-  "confidence": "low",
-  "sources": [],
-  "headlines": [
-   {
-    "side": "Denver",
-    "title": "NFL Week 1 Chiefs vs. Broncos picks, best bets: Why Denver will cover as Patrick Mahomes returns from injury",
-    "source": "CBS Sports",
-    "date": "Sep 14",
-    "watch": true
-   },
-   {
-    "side": "Denver",
-    "title": "Patrick Mahomes returns from knee injury as Kansas City Chiefs storm past Denver Broncos",
-    "source": "Sky Sports",
-    "date": "Sep 15",
-    "watch": true
-   },
-   {
-    "side": "Jacksonville",
-    "title": "Jacksonville Jaguars head coach Liam Coen talks quarterback Trevor Lawrence's Week 1 success",
-    "source": "NFL.com",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Jacksonville",
-    "title": "Jacksonville Jaguars Winners and Losers From Week 1: Jags Stomp Lowly Browns In All Three Phases",
-    "source": "sports.yahoo.com",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Jacksonville",
-    "title": "Cleveland Browns vs. Jacksonville Jaguars Week 1 Recap | NFL Daily",
-    "source": "NFL.com",
-    "date": "Sep 14",
-    "watch": false
-   },
-   {
-    "side": "Denver",
-    "title": "Denver Broncos make NFL history & should be concerned",
-    "source": "sports.yahoo.com",
     "date": "Sep 15",
     "watch": false
    }
