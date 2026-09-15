@@ -1,0 +1,41 @@
+name: Prices
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Own group so the morning research board is not cancelled, and this job is not
+# stuck behind it. JSON only — no Discord, no HTML, no research scan.
+concurrency:
+  group: edgebot-prices
+  cancel-in-progress: false
+
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - name: Refresh Kalshi prices
+        run: |
+          python parlay.py --days 8 --no-research --json /tmp/parlay-new.json
+          python merge_prices.py data/v2/parlay.json /tmp/parlay-new.json data/v2/parlay.json
+
+      - name: Commit prices
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add data/v2/parlay.json
+          git diff --cached --quiet || git commit -m "prices: $(date -u +%FT%H:%MZ)"
+          BR="${{ github.ref_name }}"
+          git pull --rebase -X theirs origin "$BR"
+          git push -u origin "HEAD:$BR" || (git pull --rebase -X theirs origin "$BR" && git push -u origin "HEAD:$BR")
