@@ -13,7 +13,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.webkit.CookieManager;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
@@ -22,24 +24,28 @@ import android.webkit.WebViewClient;
 
 import androidx.webkit.WebViewAssetLoader;
 
-import app.gridiron.ticket.R;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
- * The whole app. One WebView showing the same page the site serves, bundled in
- * assets so it opens instantly and works with no signal; the page then asks the
- * repo for a newer board on its own.
- *
- * <p>It is served through WebViewAssetLoader rather than a file:// URL, which
- * matters for two reasons: file:// origins get unreliable, per-path localStorage
- * (so pins and settings would come back empty), and a fetch from file:// to
- * raw.githubusercontent.com is a cross-origin request with no usable origin. On
- * https://appassets.androidplatform.net both behave the way they do in a browser.
+ * Thin shell around the live Gridiron Ticket page. The phone loads
+ * https://predatuh.github.io/EdgeBot/ (or whatever data/v2/app.json says),
+ * so a site update is an app update — no APK rebuild. Bundled assets are
+ * only the offline fallback.
  */
 public class MainActivity extends android.app.Activity {
 
-  private static final String BASE = "https://appassets.androidplatform.net";
+  private static final String ASSET_BASE = "https://appassets.androidplatform.net";
+  private static final String LIVE_DEFAULT = "https://predatuh.github.io/EdgeBot/";
+  private static final String APP_JSON =
+      "https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/app.json";
   private static final String CHANNEL = "board";
   private WebView web;
+  private boolean fellBack;
 
   @SuppressLint("SetJavaScriptEnabled")
   @Override protected void onCreate(Bundle state) {
@@ -52,18 +58,22 @@ public class MainActivity extends android.app.Activity {
         .build();
 
     web = new WebView(this);
-    web.setBackgroundColor(getColor(R.color.app_bg));   // no white flash before first paint
+    web.setBackgroundColor(getColor(R.color.app_bg));
     web.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
     WebSettings s = web.getSettings();
     s.setJavaScriptEnabled(true);
-    s.setDomStorageEnabled(true);          // the app remembers pins, filters and theme here
+    s.setDomStorageEnabled(true);
     s.setSupportZoom(false);
     s.setBuiltInZoomControls(false);
     s.setMediaPlaybackRequiresUserGesture(true);
-    s.setAllowFileAccess(false);           // nothing local to read - the page is served over https
+    s.setAllowFileAccess(false);
     s.setAllowContentAccess(false);
     s.setCacheMode(WebSettings.LOAD_DEFAULT);
+
+    CookieManager cookies = CookieManager.getInstance();
+    cookies.setAcceptCookie(true);
+    cookies.setAcceptThirdPartyCookies(web, true);
 
     web.addJavascriptInterface(new Host(), "GTHost");
 
@@ -73,18 +83,71 @@ public class MainActivity extends android.app.Activity {
       }
       @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
         Uri u = r.getUrl();
-        if (u != null && "appassets.androidplatform.net".equals(u.getHost())) return false;
-        // Kalshi, a source link - anything off our own page belongs in the browser
+        if (isAppHost(u)) return false;
         try {
           startActivity(new Intent(Intent.ACTION_VIEW, u));
         } catch (Exception ignored) { }
         return true;
       }
+      @Override public void onReceivedError(WebView v, WebResourceRequest r, WebResourceError e) {
+        if (r == null || !r.isForMainFrame() || fellBack) return;
+        Uri u = r.getUrl();
+        if (u != null && "appassets.androidplatform.net".equals(u.getHost())) return;
+        fellBack = true;
+        v.loadUrl(ASSET_BASE + "/assets/index.html");
+      }
     });
 
     setContentView(web);
     if (state != null) web.restoreState(state);
-    else web.loadUrl(BASE + "/assets/index.html");
+    else boot();
+  }
+
+  private void boot() {
+    new Thread(() -> {
+      String target = LIVE_DEFAULT;
+      HttpURLConnection c = null;
+      try {
+        URL u = new URL(APP_JSON);
+        c = (HttpURLConnection) u.openConnection();
+        c.setConnectTimeout(4000);
+        c.setReadTimeout(4000);
+        c.setRequestProperty("Accept", "application/json");
+        if (c.getResponseCode() == 200) {
+          InputStream in = c.getInputStream();
+          ByteArrayOutputStream buf = new ByteArrayOutputStream();
+          byte[] b = new byte[1024];
+          int n;
+          while ((n = in.read(b)) > 0) buf.write(b, 0, n);
+          in.close();
+          JSONObject o = new JSONObject(buf.toString("UTF-8"));
+          String url = o.optString("url", "").trim();
+          String ver = o.optString("version", "").trim();
+          if (url.startsWith("https://")) {
+            target = url;
+            if (ver.length() > 0) {
+              target += (target.contains("?") ? "&" : "?") + "v=" + Uri.encode(ver);
+            }
+          }
+        }
+      } catch (Exception ignored) {
+      } finally {
+        if (c != null) c.disconnect();
+      }
+      final String go = target;
+      runOnUiThread(() -> web.loadUrl(go));
+    }).start();
+  }
+
+  static boolean isAppHost(Uri u) {
+    if (u == null) return false;
+    String h = u.getHost();
+    if (h == null) return false;
+    h = h.toLowerCase();
+    return h.equals("appassets.androidplatform.net")
+        || h.equals("predatuh.github.io")
+        || h.equals("grok.me")
+        || h.endsWith(".grok.me");
   }
 
   /** Lets the page keep the system bars the same colour as itself when the
@@ -173,7 +236,6 @@ public class MainActivity extends android.app.Activity {
     Window w = getWindow();
     w.setStatusBarColor(colour);
     w.setNavigationBarColor(colour);
-    // dark icons on a light bar, light icons on a dark one
     boolean light = (0.299 * Color.red(colour) + 0.587 * Color.green(colour)
                      + 0.114 * Color.blue(colour)) > 150;
     View decor = w.getDecorView();
@@ -187,8 +249,6 @@ public class MainActivity extends android.app.Activity {
     decor.setSystemUiVisibility(flags);
   }
 
-  /* Back closes a sheet, then returns to the Build tab, and only then leaves the
-     app - the page decides, because the page is the one that knows what is open. */
   @Override public void onBackPressed() {
     web.evaluateJavascript("(function(){try{return !!(window.__gtBack&&window.__gtBack())}"
         + "catch(e){return false}})()", value -> {

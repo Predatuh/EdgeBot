@@ -996,6 +996,7 @@ function scopeInfo(k){ return SCOPES.filter(function(s){return s.key===k;})[0]; 
 
 adopt(DATA);
 PRESETS=presetsFrom(SNAP);
+var APP_VERSION="2026.09.15";
 var START=(scopeInfo(SNAP.scope||"football")||SCOPES[0]||{key:"all"}).key;
 var S={tab:"build", scope:START, preset:"swing", payout:8.0, maxLegs:40,
        liquid:true, trustCheap:false, noflag:true, onegame:true, notify:false,
@@ -1519,7 +1520,7 @@ function render(){
   var sc=scopeInfo(S.scope);
   var age=ageOf(SNAP.generated_utc);
   $("fresh").textContent=(sc?sc.games+" games · "+sc.legs+" legs":"no markets")+
-    (age?" · "+age:"");
+    (age?" · "+age:"")+" · v"+APP_VERSION;
   $("snapshot").textContent=SNAP.generated_utc
     ? "Snapshot "+SNAP.generated_utc.replace("T"," ").replace("Z"," UTC")+" — re-check on Kalshi before you buy"
     : "Prices are a snapshot — re-check on Kalshi before you buy";

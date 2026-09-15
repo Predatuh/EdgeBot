@@ -1,8 +1,9 @@
 # Gridiron Ticket for Android
 
-A WebView around `webapp/parlay.html` — the same page the site serves, bundled
-into the APK. It is a real installed app: its own icon, its own back stack, no
-browser chrome, and it opens instantly because nothing is downloaded first.
+A WebView around the live site. Same page as GitHub Pages, its own icon and
+back stack, no browser chrome. On open it loads the URL in `data/v2/app.json`
+(today: https://predatuh.github.io/EdgeBot/). Bundled assets are only the
+offline fallback.
 
 ## Getting it on the phone
 
@@ -16,13 +17,14 @@ you never have to uninstall.
 
 ## What updates on its own
 
-The **board does**. The page fetches `data/v2/parlay.json` and
-`data/v2/stats.json` from the repo every time the app opens, so the tickets are
-as current as the last workflow run without reinstalling anything.
+The **page and the board both do.** On open the app loads
+https://predatuh.github.io/EdgeBot/ (the URL in `data/v2/app.json`), so a
+change to the site is the next launch — no reinstall. Offline, it falls back
+to the page bundled in the APK.
 
-The **app shell does not**. Rebuild the APK when the page itself changes —
-that is what the `Android APK` workflow does, and it runs automatically on any
-push that touches `android/`, `webapp/` or `parlay.py`.
+Rebuild the APK only when the native shell changes (`android/` Java, icons,
+signing). The `Android APK` workflow still runs on `webapp/` / `parlay.py`
+pushes so the offline fallback stays current.
 
 ## Building it
 
