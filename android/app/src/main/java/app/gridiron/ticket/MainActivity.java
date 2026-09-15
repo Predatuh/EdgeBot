@@ -43,7 +43,7 @@ public class MainActivity extends android.app.Activity {
 
   private static final String ASSET_BASE = "https://appassets.androidplatform.net";
   private static final String OFFLINE = ASSET_BASE + "/assets/offline.html";
-  private static final String LIVE_DEFAULT = "https://predatuh.github.io/EdgeBot/";
+  private static final String LIVE_DEFAULT = "https://gridironticket.grok.me/";
   private static final String APP_JSON =
       "https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/app.json";
   private static final String CHANNEL = "board";

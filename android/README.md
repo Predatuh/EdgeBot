@@ -1,9 +1,9 @@
 # Gridiron Ticket for Android
 
-A WebView around the live app. On open it loads the URL in `data/v2/app.json`,
-so web, iPhone, and Android stay on one version — no APK rebuild for a page
-or board change. Offline it shows a “need a connection” splash, never a second
-copy of the product.
+A WebView around the live app. On open it loads the URL in `data/v2/app.json`
+(https://gridironticket.grok.me/), so web, iPhone, and Android stay on one
+version — no APK rebuild for a page or board change. Offline it shows a
+“need a connection” splash, never a second copy of the product.
 
 ## Getting it on the phone
 
@@ -18,8 +18,8 @@ you never have to uninstall.
 ## What updates on its own
 
 The **page and the board both do.** On open the app reads `data/v2/app.json` and
-loads that URL. Flip the URL there (GitHub Pages today; the published Grok app
-once it has a public link) and every phone follows on the next launch.
+loads https://gridironticket.grok.me/. Flip that URL and every phone follows
+on the next launch.
 
 Rebuild the APK only when the native shell changes (`android/` Java, icons,
 signing).
