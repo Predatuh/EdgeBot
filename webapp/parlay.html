@@ -1013,16 +1013,83 @@ function remember(){ try{ localStorage.setItem("gt.v3", JSON.stringify({
   scope:S.scope,preset:S.preset,payout:S.payout,maxLegs:S.maxLegs,liquid:S.liquid,
   trustCheap:S.trustCheap,noflag:S.noflag,onegame:S.onegame,stake:S.stake,date:S.date,
   notify:!!S.notify})); }catch(e){} }
+function isKalshiEventUrl(url){
+  try{
+    var u=new URL(url);
+    var parts=u.pathname.split("/").filter(Boolean);
+    return u.hostname.replace(/^www\./,"")==="kalshi.com" && parts[0]==="markets" && parts.length>=4;
+  }catch(e){ return false; }
+}
+var SERIES_SLUG={
+  kxnflgame:"professional-football-game",
+  kxncaafgame:"college-football-game",
+  kxmlbgame:"professional-baseball-game",
+  kxnbagame:"professional-basketball-game",
+  kxwnbagame:"wnba-game",
+  kxnhlgame:"nhl-game",
+  kxeplgame:"english-premier-league-game",
+  kxlaligagame:"la-liga-game",
+  kxserieagame:"serie-a-game",
+  kxbundesligagame:"bundesliga-game",
+  kxligue1game:"ligue-1-game",
+  kxmlsgame:"major-league-soccer-game",
+  kxuclgame:"uefa-champions-league-game",
+  kxwtamatch:"wta-tennis-match",
+  kxatpmatch:"atp-tennis-match",
+  kxatpchallengermatch:"challenger-atp",
+  kxcflgame:"cfl-game",
+  kxcplmatch:"caribbean-premier-league-match"
+};
 function kalshiMarket(l){
   if(!l) return "https://kalshi.com";
-  if(l.kalshi_url) return l.kalshi_url;
+  if(l.kalshi_url && isKalshiEventUrl(l.kalshi_url)) return l.kalshi_url;
   var series=(l.series||(l.ticker||"").split("-")[0]||"").toLowerCase();
   var event=(l.event_id||(l.ticker||"").replace(/-[^-]+$/,"")||"").toLowerCase();
-  return "https://kalshi.com/markets/"+series+"/"+event;
+  if(!series||!event) return "https://kalshi.com";
+  var slug=SERIES_SLUG[series]||series.replace(/^kx/,"").replace(/[^a-z0-9]+/g,"-");
+  return "https://kalshi.com/markets/"+series+"/"+slug+"/"+event;
+}
+var COMBO_PATH={
+  nfl:"/combos/football/nfl/moneyline",
+  ncaaf:"/combos/football/college-football",
+  mlb:"/combos/baseball",
+  nba:"/combos/basketball",
+  wnba:"/combos/basketball",
+  nhl:"/combos/hockey",
+  epl:"/combos/soccer",
+  laliga:"/combos/soccer",
+  seriea:"/combos/soccer",
+  bundesliga:"/combos/soccer",
+  ligue1:"/combos/soccer",
+  mls:"/combos/soccer",
+  soccer:"/combos/soccer",
+  atp:"/combos/tennis",
+  wta:"/combos/tennis",
+  tennis:"/combos/tennis",
+  cfl:"/combos/football"
+};
+function comboPath(leagues){
+  var unique=[], seen={};
+  (leagues||[]).forEach(function(raw){
+    var k=(raw||"").toLowerCase();
+    if(!k||seen[k]) return;
+    seen[k]=1; unique.push(k);
+  });
+  if(unique.length===1 && COMBO_PATH[unique[0]]) return COMBO_PATH[unique[0]];
+  var football=unique.length && unique.every(function(l){ return l==="nfl"||l==="ncaaf"||l==="cfl"; });
+  if(football) return "/combos/football";
+  var soccer=unique.length && unique.every(function(l){
+    return l==="epl"||l==="laliga"||l==="seriea"||l==="bundesliga"||l==="ligue1"||l==="mls"||l==="soccer";
+  });
+  if(soccer) return "/combos/soccer";
+  return "/combos";
 }
 function kalshiCombo(legs){
-  var ids=(legs||[]).map(function(l){ return l.ticker; }).filter(Boolean).join(",");
-  return ids ? "https://kalshi.com/combos?ids="+ids : "https://kalshi.com/combos";
+  var tickers=(legs||[]).map(function(l){ return typeof l==="string"?l:l.ticker; }).filter(Boolean);
+  var leagues=(legs||[]).map(function(l){ return typeof l==="string"?"":(l.league||""); }).filter(Boolean);
+  var path=comboPath(leagues);
+  if(!tickers.length) return "https://kalshi.com"+path;
+  return "https://kalshi.com"+path+"?ids="+tickers.join(",");
 }
 function addToFrozen(tk){
   var l=LEGS.filter(function(x){ return x.ticker===tk; })[0]; if(!l) return;
@@ -1580,7 +1647,7 @@ if($("openkalshi")) $("openkalshi").addEventListener("click",function(){
   if(!r.n){ toast("No legs to open"); return; }
   var txt=r.legs.map(function(l){ return l.ticker; }).join("\n");
   try{ if(navigator.clipboard) navigator.clipboard.writeText(txt); }catch(e){}
-  window.location.href=kalshiCombo(r.legs);
+  window.location.href = r.n===1 ? kalshiMarket(r.legs[0]) : kalshiCombo(r.legs);
 });
 function dropFromTicket(tk){
   S.ticket=S.ticket.filter(function(l){ return l.ticker!==tk; });

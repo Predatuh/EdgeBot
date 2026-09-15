@@ -32,21 +32,103 @@ import kalshi
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
+SERIES_SLUG = {
+    "KXNFLGAME": "professional-football-game",
+    "KXNCAAFGAME": "college-football-game",
+    "KXMLBGAME": "professional-baseball-game",
+    "KXNBAGAME": "professional-basketball-game",
+    "KXWNBAGAME": "wnba-game",
+    "KXNHLGAME": "nhl-game",
+    "KXEPLGAME": "english-premier-league-game",
+    "KXLALIGAGAME": "la-liga-game",
+    "KXSERIEAGAME": "serie-a-game",
+    "KXBUNDESLIGAGAME": "bundesliga-game",
+    "KXLIGUE1GAME": "ligue-1-game",
+    "KXMLSGAME": "major-league-soccer-game",
+    "KXUCLGAME": "uefa-champions-league-game",
+    "KXWTAMATCH": "wta-tennis-match",
+    "KXATPMATCH": "atp-tennis-match",
+    "KXATPCHALLENGERMATCH": "challenger-atp",
+    "KXCFLGAME": "cfl-game",
+    "KXCPLMATCH": "caribbean-premier-league-match",
+}
+
+COMBO_PATH = {
+    "nfl": "/combos/football/nfl/moneyline",
+    "ncaaf": "/combos/football/college-football",
+    "mlb": "/combos/baseball",
+    "nba": "/combos/basketball",
+    "wnba": "/combos/basketball",
+    "nhl": "/combos/hockey",
+    "epl": "/combos/soccer",
+    "laliga": "/combos/soccer",
+    "seriea": "/combos/soccer",
+    "bundesliga": "/combos/soccer",
+    "ligue1": "/combos/soccer",
+    "mls": "/combos/soccer",
+    "soccer": "/combos/soccer",
+    "atp": "/combos/tennis",
+    "wta": "/combos/tennis",
+    "tennis": "/combos/tennis",
+    "cfl": "/combos/football",
+}
+
+_SOCCER = {"epl", "laliga", "seriea", "bundesliga", "ligue1", "mls", "soccer"}
+_FOOTBALL = {"nfl", "ncaaf", "cfl"}
+
+
+def _slugify(s):
+    out, dash = [], False
+    for ch in (s or "").lower():
+        if ch.isalnum():
+            out.append(ch)
+            dash = False
+        elif not dash:
+            out.append("-")
+            dash = True
+    return "".join(out).strip("-")
+
+
 def market_url(ticker, event_id=""):
-    """Kalshi event page for one contract. The last hyphen is the side code."""
+    """Kalshi event page: /markets/{series}/{slug}/{event}.
+
+    Two-segment /markets/{series}/{event} dumps to the Kalshi homepage.
+    """
     if not ticker:
         return "https://kalshi.com"
-    series = ticker.split("-")[0].lower()
+    series = ticker.split("-")[0]
     event = (event_id or ticker.rsplit("-", 1)[0]).lower()
-    return f"https://kalshi.com/markets/{series}/{event}"
+    key = series.upper()
+    slug = SERIES_SLUG.get(key) or _slugify(key[2:] if key.startswith("KX") else key)
+    return f"https://kalshi.com/markets/{series.lower()}/{slug}/{event}"
 
 
-def combo_url(tickers):
-    """Combo builder. `ids` is best-effort; tickers are also copied on the phone."""
+def combo_path(leagues=None):
+    unique = []
+    seen = set()
+    for raw in leagues or []:
+        k = (raw or "").lower()
+        if not k or k in seen:
+            continue
+        seen.add(k)
+        unique.append(k)
+    if len(unique) == 1 and unique[0] in COMBO_PATH:
+        return COMBO_PATH[unique[0]]
+    if unique and all(k in _FOOTBALL for k in unique):
+        return "/combos/football"
+    if unique and all(k in _SOCCER for k in unique):
+        return "/combos/soccer"
+    return "/combos"
+
+
+def combo_url(tickers, leagues=None):
+    """Sport-filtered combo builder. `ids` is best-effort; tickers are copied on the phone."""
+    path = combo_path(leagues)
     ids = ",".join(t for t in tickers if t)
     if not ids:
-        return "https://kalshi.com/combos"
-    return "https://kalshi.com/combos?ids=" + ids
+        return "https://kalshi.com" + path
+    return "https://kalshi.com" + path + "?ids=" + ids
+
 
 TIERS = [                       # (min de-vigged probability, key, label, emoji)
     (0.97, "lock",   "Lock",        "🔒"),
@@ -806,7 +888,11 @@ def snapshot(cfg=None, days=8, scope="football", leagues=None):
         scope = scopes[-1]["key"] if scopes else "all"
     tickets = ladder(scope_legs(legs, scope))
     for t in tickets:
-        t["kalshi_url"] = combo_url([l["ticker"] for l in t.get("legs") or []])
+        tlegs = t.get("legs") or []
+        t["kalshi_url"] = combo_url(
+            [l["ticker"] for l in tlegs],
+            [l.get("league") or "" for l in tlegs],
+        )
     return {
         "generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "days": days,
