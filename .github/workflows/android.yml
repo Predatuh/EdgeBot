@@ -4,9 +4,10 @@ name: Android APK
 # the download is one tap from the phone: 
 #   https://github.com/Predatuh/EdgeBot/releases/latest/download/gridiron-ticket.apk
 #
-# The APK is a shell around the same page the site serves. It does NOT need
-# rebuilding when the board changes - the page fetches data/v2/parlay.json from
-# the repo every time it opens. Rebuild it when the app itself changes.
+# The APK is a shell around the live site (data/v2/app.json). It does NOT
+# need rebuilding when the board OR the page changes — it loads
+# predatuh.github.io/EdgeBot on open. Rebuild when the native shell changes.
+# A bundled copy of the page is still packed in as the offline fallback.
 on:
   push:
     branches: [main]

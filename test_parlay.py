@@ -362,6 +362,7 @@ check("page carries both themes, and both are reachable explicitly",
       "prefers-color-scheme" in html
       and '[data-theme="dark"]' in html and '[data-theme="light"]' in html)
 check("page has a title", "<title>" in html)
+check("page stamps the shared app version", "2026.09.15" in html and "APP_VERSION" in html)
 check("date rail offers today–tomorrow and a from–through range",
       "today-tomorrow" in html and 'id="datesheet"' in html)
 check("leg detail reads the same notes the list teased",
