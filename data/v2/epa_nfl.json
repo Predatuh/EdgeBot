@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-09-14T21:03Z",
+ "_generated_utc": "2026-09-15T13:12Z",
  "_league": "nfl",
- "_plays_used": 1349,
+ "_plays_used": 1425,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 2596,
+ "_rows": 2756,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -121,16 +121,16 @@
    "this_season_plays": 37
   },
   "Denver": {
-   "def_epa": -0.0825,
-   "def_plays": 364.7,
-   "def_success": 0.3791,
-   "net_epa": 0.1225,
-   "off_epa": 0.04,
-   "off_plays": 348.59999999999997,
-   "off_success": 0.4297,
-   "pass_epa": 0.0492,
-   "rush_epa": 0.0255,
-   "this_season_plays": 0
+   "def_epa": -0.036,
+   "def_plays": 408.7,
+   "def_success": 0.3848,
+   "net_epa": 0.0568,
+   "off_epa": 0.0208,
+   "off_plays": 380.59999999999997,
+   "off_success": 0.4277,
+   "pass_epa": 0.019,
+   "rush_epa": 0.0236,
+   "this_season_plays": 32
   },
   "Detroit": {
    "def_epa": -0.0295,
@@ -193,16 +193,16 @@
    "this_season_plays": 17
   },
   "Kansas City": {
-   "def_epa": 0.0121,
-   "def_plays": 295.04999999999995,
-   "def_success": 0.4496,
-   "net_epa": 0.0036,
-   "off_epa": 0.0157,
-   "off_plays": 309.04999999999995,
-   "off_success": 0.4507,
-   "pass_epa": -0.0085,
-   "rush_epa": 0.0534,
-   "this_season_plays": 0
+   "def_epa": -0.0075,
+   "def_plays": 327.04999999999995,
+   "def_success": 0.4453,
+   "net_epa": 0.0648,
+   "off_epa": 0.0573,
+   "off_plays": 353.04999999999995,
+   "off_success": 0.4484,
+   "pass_epa": 0.0016,
+   "rush_epa": 0.1375,
+   "this_season_plays": 44
   },
   "Las Vegas": {
    "def_epa": -0.0155,
