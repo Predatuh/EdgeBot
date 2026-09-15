@@ -312,15 +312,29 @@ check("...and the replacement pass no longer requires it",
 print("\nkalshi links")
 url = parlay.market_url("KXNFLGAME-26SEP14GBARI-GB", "KXNFLGAME-26SEP14GBARI")
 check("a ticker opens the event on Kalshi",
-      url == "https://kalshi.com/markets/kxnflgame/kxnflgame-26sep14gbari", url)
+      url == "https://kalshi.com/markets/kxnflgame/professional-football-game/kxnflgame-26sep14gbari", url)
+cfb = parlay.market_url("KXNCAAFGAME-26SEP19UTSATEX-TEX", "KXNCAAFGAME-26SEP19UTSATEX")
+check("college football uses the three-segment slug",
+      cfb == "https://kalshi.com/markets/kxncaafgame/college-football-game/kxncaafgame-26sep19utsatex", cfb)
+check("old two-segment event URLs are not produced",
+      url.count("/") == 6 and "/markets/" in url and "/professional-football-game/" in url, url)
 combo = parlay.combo_url(["KXNFLGAME-26SEP14GBARI-GB", "KXMLBGAME-26SEP14CINLAD-CIN"])
-check("a ticket opens the combo builder with both ids",
-      "kxnflgame" in combo.lower() and "kxmlbgame" in combo.lower() and combo.startswith("https://kalshi.com/combos"),
+check("a mixed ticket opens the combo builder with both ids",
+      "KXNFLGAME" in combo and "KXMLBGAME" in combo and combo.startswith("https://kalshi.com/combos?ids="),
       combo)
+nfl_combo = parlay.combo_url(["KXNFLGAME-26SEP14GBARI-GB"], ["nfl"])
+check("an NFL ticket opens the NFL moneyline combo builder",
+      nfl_combo.startswith("https://kalshi.com/combos/football/nfl/moneyline?ids="), nfl_combo)
+cfb_combo = parlay.combo_url(["A", "B"], ["ncaaf", "ncaaf"])
+check("a college ticket opens the college-football combo builder",
+      cfb_combo.startswith("https://kalshi.com/combos/football/college-football?ids="), cfb_combo)
+fb_combo = parlay.combo_url(["A", "B"], ["nfl", "ncaaf"])
+check("mixed football opens the football combo builder",
+      fb_combo.startswith("https://kalshi.com/combos/football?ids="), fb_combo)
 evs = [fake_event("KXNFLGAME-26SEP14GBARI", "GB", "ARI", 0.90, 0.12, 0.92, 0.14)]
 linked = parlay.legs_from_events(evs, "nfl", "NFL")
-check("every board leg carries a kalshi_url",
-      all(l.get("kalshi_url", "").startswith("https://kalshi.com/markets/") for l in linked),
+check("every board leg carries a three-segment kalshi_url",
+      all("/professional-football-game/" in l.get("kalshi_url", "") for l in linked),
       str([l.get("kalshi_url") for l in linked[:1]]))
 
 # ---------------------------------------------------------------- board + render
