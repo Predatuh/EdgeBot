@@ -11427,5 +11427,63 @@
    }
   ],
   "_ts": "2026-09-15T16:27Z"
+ },
+ "WTA Tennis|Peyton Stearns vs Diane Parry|Diane Parry": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Diane Parry",
+    "title": "Parry vs. Stearns | Round of 16 Guadalajara Open presentado por Santander 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Diane Parry",
+    "title": "Swiatek vs. Parry | Round of 16 Cincinnati Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Peyton Stearns",
+    "title": "Peyton Stearns vs Emiliana Arango \u00b7 Round 1 \u00b7 WTA Guadalajara",
+    "source": "tennis.com",
+    "date": "Sep 13",
+    "watch": false
+   },
+   {
+    "side": "Peyton Stearns",
+    "title": "Stearns ousts 2025 finalist Arango in Guadalajara first round",
+    "source": "WTA Tennis",
+    "date": "Sep 14",
+    "watch": false
+   },
+   {
+    "side": "Diane Parry",
+    "title": "Diane Parry vs Peyton Stearns \u00b7 Round 2 \u00b7 WTA Guadalajara",
+    "source": "tennis.com",
+    "date": "Sep 15",
+    "watch": false
+   },
+   {
+    "side": "Peyton Stearns",
+    "title": "Diane Parry vs Peyton Stearns \u00b7 Round 2 \u00b7 WTA Guadalajara",
+    "source": "tennis.com",
+    "date": "Sep 15",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-15T21:03Z"
  }
 }
