@@ -32,14 +32,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Thin shell around the live Gridiron Ticket page. The phone loads
- * https://predatuh.github.io/EdgeBot/ (or whatever data/v2/app.json says),
- * so a site update is an app update — no APK rebuild. Bundled assets are
- * only the offline fallback.
+ * Thin shell around the live Gridiron Ticket app.
+ *
+ * On open it reads data/v2/app.json and loads that URL, so a site update is
+ * the next launch — web, iPhone, and Android stay on one version. Bundled
+ * assets are only the offline "need a connection" splash, never a second copy
+ * of the product.
  */
 public class MainActivity extends android.app.Activity {
 
   private static final String ASSET_BASE = "https://appassets.androidplatform.net";
+  private static final String OFFLINE = ASSET_BASE + "/assets/offline.html";
   private static final String LIVE_DEFAULT = "https://predatuh.github.io/EdgeBot/";
   private static final String APP_JSON =
       "https://raw.githubusercontent.com/Predatuh/EdgeBot/main/data/v2/app.json";
@@ -83,7 +86,7 @@ public class MainActivity extends android.app.Activity {
       }
       @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
         Uri u = r.getUrl();
-        if (isAppHost(u)) return false;
+        if (!isExternalProduct(u)) return false;
         try {
           startActivity(new Intent(Intent.ACTION_VIEW, u));
         } catch (Exception ignored) { }
@@ -94,7 +97,7 @@ public class MainActivity extends android.app.Activity {
         Uri u = r.getUrl();
         if (u != null && "appassets.androidplatform.net".equals(u.getHost())) return;
         fellBack = true;
-        v.loadUrl(ASSET_BASE + "/assets/index.html");
+        v.loadUrl(OFFLINE);
       }
     });
 
@@ -139,21 +142,25 @@ public class MainActivity extends android.app.Activity {
     }).start();
   }
 
-  static boolean isAppHost(Uri u) {
+  /** Kalshi (and similar) open in the real browser. Auth + the live app stay here. */
+  static boolean isExternalProduct(Uri u) {
     if (u == null) return false;
     String h = u.getHost();
     if (h == null) return false;
     h = h.toLowerCase();
-    return h.equals("appassets.androidplatform.net")
-        || h.equals("predatuh.github.io")
-        || h.equals("grok.me")
-        || h.endsWith(".grok.me");
+    return h.equals("kalshi.com") || h.endsWith(".kalshi.com");
   }
 
   /** Lets the page keep the system bars the same colour as itself when the
    *  in-app light/dark toggle is used, and fire a native ping when a new
    *  board lands. Nothing else is exposed. */
   private class Host {
+    @JavascriptInterface public void retry() {
+      runOnUiThread(() -> {
+        fellBack = false;
+        boot();
+      });
+    }
     @JavascriptInterface public void themeColor(final String css) {
       final Integer c = parseCss(css);
       if (c == null) return;
