@@ -1,5 +1,13 @@
 {
  "bands": {
+  "40-60c": {
+   "drag": 2.2727,
+   "hit": 1.0,
+   "mean_entry": 0.44,
+   "n": 1,
+   "trusted": false,
+   "wins": 1
+  },
   "60-90c": {
    "drag": 0.9615,
    "hit": 0.6,
@@ -9,9 +17,9 @@
    "wins": 3
   }
  },
- "generated_utc": "2026-09-15T14:36Z",
+ "generated_utc": "2026-09-16T06:26Z",
  "learned_discount": {},
- "legs_settled": 5,
+ "legs_settled": 6,
  "min_band_n": 60,
  "rungs": {
   "longshot": {
