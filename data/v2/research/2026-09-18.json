@@ -11223,5 +11223,58 @@
    }
   ],
   "_ts": "2026-09-18T14:07Z"
+ },
+ "WTA Tennis|Mei Yamaguchi vs Ulrikke Eikeri|Mei Yamaguchi": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mei Yamaguchi",
+    "title": "Yamaguchi vs. Eikeri | Qualifying Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 17",
+    "watch": false
+   },
+   {
+    "side": "Ulrikke Eikeri",
+    "title": "Yamaguchi vs. Eikeri | Qualifying Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 17",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-18T21:03Z"
+ },
+ "WTA Tennis|Eunhye Lee (b. 2000) vs Mai Hontama|Mai Hontama": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mai Hontama",
+    "title": "Mai Hontama vs Eunhye Lee - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 18",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-18T21:03Z"
  }
 }
