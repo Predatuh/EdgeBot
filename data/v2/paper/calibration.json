@@ -9,17 +9,17 @@
    "wins": 1
   },
   "60-90c": {
-   "drag": 0.5357,
-   "hit": 0.3333,
-   "mean_entry": 0.6222,
-   "n": 9,
+   "drag": 0.8485,
+   "hit": 0.5385,
+   "mean_entry": 0.6346,
+   "n": 13,
    "trusted": false,
-   "wins": 3
+   "wins": 7
   }
  },
- "generated_utc": "2026-09-17T14:36Z",
+ "generated_utc": "2026-09-18T06:25Z",
  "learned_discount": {},
- "legs_settled": 10,
+ "legs_settled": 14,
  "min_band_n": 60,
  "rungs": {
   "longshot": {
