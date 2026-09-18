@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-09-17T21:03Z",
- "picks_logged": 717,
+ "generated_utc": "2026-09-18T13:11Z",
+ "picks_logged": 753,
  "overall": {
   "EDGE": {
    "w": 3,
    "l": 25,
    "n": 28,
-   "pending": 0,
+   "pending": 1,
    "void": 0,
    "staked_n": 27,
    "expected_w": 6.7,
@@ -21,22 +21,22 @@
    "brier_market": 0.1036
   },
   "LEAN": {
-   "w": 451,
-   "l": 217,
-   "n": 668,
-   "pending": 14,
+   "w": 460,
+   "l": 222,
+   "n": 682,
+   "pending": 35,
    "void": 7,
    "staked_n": 0,
-   "expected_w": 444.8,
+   "expected_w": 453.5,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0077,
-   "avg_clv": -0.0143,
-   "clv_n": 234,
-   "brier_raw": 0.2361,
-   "brier_model": 0.1822,
-   "brier_market": 0.1819
+   "avg_edge": -0.0078,
+   "avg_clv": -0.0118,
+   "clv_n": 247,
+   "brier_raw": 0.2356,
+   "brier_model": 0.1832,
+   "brier_market": 0.183
   }
  },
  "last_7_days": {
@@ -44,7 +44,7 @@
    "w": 0,
    "l": 1,
    "n": 1,
-   "pending": 0,
+   "pending": 1,
    "void": 0,
    "staked_n": 0,
    "expected_w": 0.4,
@@ -60,21 +60,21 @@
   },
   "LEAN": {
    "w": 241,
-   "l": 114,
-   "n": 355,
-   "pending": 14,
+   "l": 113,
+   "n": 354,
+   "pending": 35,
    "void": 6,
    "staked_n": 0,
-   "expected_w": 236.1,
+   "expected_w": 235.8,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0084,
-   "avg_clv": -0.0143,
-   "clv_n": 234,
-   "brier_raw": 0.2377,
-   "brier_model": 0.1831,
-   "brier_market": 0.1822
+   "avg_edge": -0.0087,
+   "avg_clv": -0.0106,
+   "clv_n": 232,
+   "brier_raw": 0.2355,
+   "brier_model": 0.1827,
+   "brier_market": 0.1823
   }
  },
  "by_league": {
@@ -139,7 +139,7 @@
     "w": 10,
     "l": 8,
     "n": 18,
-    "pending": 0,
+    "pending": 1,
     "void": 0,
     "staked_n": 0,
     "expected_w": 10.3,
@@ -175,21 +175,21 @@
    },
    "LEAN": {
     "w": 7,
-    "l": 4,
-    "n": 11,
+    "l": 5,
+    "n": 12,
     "pending": 1,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 6.4,
+    "expected_w": 7.0,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0005,
-    "avg_clv": -0.028,
-    "clv_n": 5,
-    "brier_raw": 0.2383,
-    "brier_model": 0.24,
-    "brier_market": 0.2417
+    "avg_edge": -0.0022,
+    "avg_clv": -0.0192,
+    "clv_n": 6,
+    "brier_raw": 0.2368,
+    "brier_model": 0.2468,
+    "brier_market": 0.2504
    }
   },
   "epl": {
@@ -215,7 +215,7 @@
     "w": 7,
     "l": 13,
     "n": 20,
-    "pending": 0,
+    "pending": 1,
     "void": 0,
     "staked_n": 0,
     "expected_w": 10.8,
@@ -250,22 +250,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 11,
+    "w": 12,
     "l": 11,
-    "n": 22,
+    "n": 23,
     "pending": 1,
     "void": 1,
     "staked_n": 0,
-    "expected_w": 12.4,
+    "expected_w": 12.9,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0094,
-    "avg_clv": 0.015,
-    "clv_n": 2,
-    "brier_raw": 0.2242,
-    "brier_model": 0.2226,
-    "brier_market": 0.2248
+    "avg_edge": -0.009,
+    "avg_clv": 0.125,
+    "clv_n": 3,
+    "brier_raw": 0.2254,
+    "brier_model": 0.2238,
+    "brier_market": 0.2259
    }
   },
   "ligue1": {
@@ -291,7 +291,7 @@
     "w": 6,
     "l": 11,
     "n": 17,
-    "pending": 0,
+    "pending": 1,
     "void": 0,
     "staked_n": 0,
     "expected_w": 9.0,
@@ -326,22 +326,22 @@
     "brier_market": 0.162
    },
    "LEAN": {
-    "w": 97,
-    "l": 74,
-    "n": 171,
-    "pending": 6,
+    "w": 101,
+    "l": 76,
+    "n": 177,
+    "pending": 15,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 98.5,
+    "expected_w": 101.8,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
     "avg_edge": -0.0083,
-    "avg_clv": -0.0019,
-    "clv_n": 74,
-    "brier_raw": 0.2423,
-    "brier_model": 0.2399,
-    "brier_market": 0.2387
+    "avg_clv": -0.0029,
+    "clv_n": 79,
+    "brier_raw": 0.2416,
+    "brier_model": 0.2392,
+    "brier_market": 0.238
    }
   },
   "mls": {
@@ -367,7 +367,7 @@
     "w": 16,
     "l": 23,
     "n": 39,
-    "pending": 0,
+    "pending": 1,
     "void": 1,
     "staked_n": 0,
     "expected_w": 18.5,
@@ -402,22 +402,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 180,
+    "w": 181,
     "l": 27,
-    "n": 207,
-    "pending": 1,
+    "n": 208,
+    "pending": 2,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 171.9,
+    "expected_w": 172.7,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0039,
-    "avg_clv": -0.0153,
-    "clv_n": 74,
-    "brier_raw": 0.2122,
-    "brier_model": 0.0939,
-    "brier_market": 0.0935
+    "avg_edge": -0.0038,
+    "avg_clv": -0.0151,
+    "clv_n": 75,
+    "brier_raw": 0.2113,
+    "brier_model": 0.0936,
+    "brier_market": 0.0933
    }
   },
   "nfl": {
@@ -440,22 +440,22 @@
     "brier_market": null
    },
    "LEAN": {
-    "w": 12,
+    "w": 13,
     "l": 4,
-    "n": 16,
-    "pending": 1,
+    "n": 17,
+    "pending": 0,
     "void": 0,
     "staked_n": 0,
-    "expected_w": 10.2,
+    "expected_w": 10.9,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0036,
-    "avg_clv": -0.0607,
-    "clv_n": 7,
-    "brier_raw": 0.238,
-    "brier_model": 0.2109,
-    "brier_market": 0.2106
+    "avg_edge": -0.0044,
+    "avg_clv": -0.0537,
+    "clv_n": 8,
+    "brier_raw": 0.2312,
+    "brier_model": 0.205,
+    "brier_market": 0.2041
    }
   },
   "seriea": {
@@ -463,7 +463,7 @@
     "w": 0,
     "l": 0,
     "n": 0,
-    "pending": 0,
+    "pending": 1,
     "void": 0,
     "staked_n": 0,
     "expected_w": null,
@@ -554,22 +554,22 @@
     "brier_market": 0.0371
    },
    "LEAN": {
-    "w": 63,
-    "l": 25,
-    "n": 88,
-    "pending": 4,
+    "w": 65,
+    "l": 27,
+    "n": 92,
+    "pending": 12,
     "void": 5,
     "staked_n": 0,
-    "expected_w": 60.6,
+    "expected_w": 63.4,
     "units": 0.0,
     "risked": 0.0,
     "roi": 0.0,
-    "avg_edge": -0.0141,
-    "avg_clv": -0.028,
-    "clv_n": 43,
-    "brier_raw": 0.2504,
-    "brier_model": 0.1792,
-    "brier_market": 0.1777
+    "avg_edge": -0.015,
+    "avg_clv": -0.022,
+    "clv_n": 47,
+    "brier_raw": 0.2509,
+    "brier_model": 0.184,
+    "brier_market": 0.1832
    }
   }
  },
@@ -593,22 +593,22 @@
    "brier_market": null
   },
   "neutral": {
-   "w": 295,
-   "l": 145,
-   "n": 440,
-   "pending": 14,
+   "w": 304,
+   "l": 150,
+   "n": 454,
+   "pending": 35,
    "void": 6,
    "staked_n": 17,
-   "expected_w": 282.2,
+   "expected_w": 290.8,
    "units": -2.87,
    "risked": 3.39,
    "roi": -84.8,
-   "avg_edge": -0.0056,
-   "avg_clv": -0.0154,
-   "clv_n": 173,
-   "brier_raw": 0.24,
-   "brier_model": 0.1772,
-   "brier_market": 0.1751
+   "avg_edge": -0.0059,
+   "avg_clv": -0.012,
+   "clv_n": 186,
+   "brier_raw": 0.2392,
+   "brier_model": 0.1788,
+   "brier_market": 0.1769
   },
   "against_pick": {
    "w": 0,
@@ -632,7 +632,7 @@
    "w": 159,
    "l": 97,
    "n": 256,
-   "pending": 0,
+   "pending": 1,
    "void": 1,
    "staked_n": 10,
    "expected_w": 169.4,
@@ -685,58 +685,58 @@
    "brier_market": 0.1114
   },
   "model_likes_our_side (0.02<d<=0.10)": {
-   "w": 35,
+   "w": 37,
    "l": 33,
-   "n": 68,
+   "n": 70,
    "pending": 0,
    "void": 0,
    "staked_n": 2,
-   "expected_w": 33.8,
+   "expected_w": 35.2,
    "units": 0.12,
    "risked": 0.32,
    "roi": 36.9,
-   "avg_edge": 0.0147,
-   "avg_clv": 0.0085,
-   "clv_n": 30,
-   "brier_raw": 0.2498,
-   "brier_model": 0.2495,
-   "brier_market": 0.2502
+   "avg_edge": 0.0146,
+   "avg_clv": 0.0081,
+   "clv_n": 31,
+   "brier_raw": 0.245,
+   "brier_model": 0.2449,
+   "brier_market": 0.2459
   },
   "agrees (|d|<=0.02)": {
-   "w": 47,
-   "l": 41,
-   "n": 88,
+   "w": 49,
+   "l": 42,
+   "n": 91,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 48.7,
+   "expected_w": 50.2,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
    "avg_edge": -0.0003,
-   "avg_clv": -0.0181,
-   "clv_n": 32,
-   "brier_raw": 0.2363,
-   "brier_model": 0.2362,
-   "brier_market": 0.2362
+   "avg_clv": -0.0076,
+   "clv_n": 35,
+   "brier_raw": 0.237,
+   "brier_model": 0.2367,
+   "brier_market": 0.2365
   },
   "model_dislikes_our_side (d<-0.02)": {
-   "w": 368,
-   "l": 139,
-   "n": 507,
+   "w": 373,
+   "l": 143,
+   "n": 516,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 360.2,
+   "expected_w": 365.9,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0121,
-   "avg_clv": -0.0175,
-   "clv_n": 171,
+   "avg_edge": -0.0123,
+   "avg_clv": -0.0159,
+   "clv_n": 180,
    "brier_raw": 0.2344,
-   "brier_model": 0.1641,
-   "brier_market": 0.1636
+   "brier_model": 0.1656,
+   "brier_market": 0.1653
   }
  },
  "by_flow": {
@@ -833,22 +833,22 @@
    "brier_market": null
   },
   "epa_neutral": {
-   "w": 0,
+   "w": 1,
    "l": 0,
-   "n": 0,
+   "n": 1,
    "pending": 0,
    "void": 0,
    "staked_n": 0,
-   "expected_w": null,
-   "units": 0,
-   "risked": 0,
+   "expected_w": 0.7,
+   "units": 0.0,
+   "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": null,
-   "avg_clv": null,
-   "clv_n": 0,
-   "brier_raw": null,
-   "brier_model": null,
-   "brier_market": null
+   "avg_edge": -0.018,
+   "avg_clv": -0.005,
+   "clv_n": 1,
+   "brier_raw": 0.1225,
+   "brier_model": 0.1109,
+   "brier_market": 0.0992
   },
   "epa_against_our_side": {
    "w": 1,
@@ -872,45 +872,45 @@
  "by_gate": {
   "disagreement": {
    "w": 6,
-   "l": 1,
-   "n": 7,
+   "l": 2,
+   "n": 8,
    "pending": 1,
    "void": 0,
    "staked_n": 0,
-   "expected_w": 4.9,
+   "expected_w": 5.7,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0676,
-   "avg_clv": -0.0179,
-   "clv_n": 7,
-   "brier_raw": 0.2589,
-   "brier_model": 0.1951,
-   "brier_market": 0.1628
+   "avg_edge": -0.0661,
+   "avg_clv": -0.0163,
+   "clv_n": 8,
+   "brier_raw": 0.2634,
+   "brier_model": 0.2353,
+   "brier_market": 0.2175
   },
   "edge": {
-   "w": 230,
-   "l": 111,
-   "n": 341,
-   "pending": 13,
+   "w": 239,
+   "l": 115,
+   "n": 354,
+   "pending": 32,
    "void": 6,
    "staked_n": 0,
-   "expected_w": 226.6,
+   "expected_w": 234.5,
    "units": 0.0,
    "risked": 0.0,
    "roi": 0.0,
-   "avg_edge": -0.0063,
-   "avg_clv": -0.0147,
-   "clv_n": 220,
-   "brier_raw": 0.2376,
-   "brier_model": 0.1824,
-   "brier_market": 0.1823
+   "avg_edge": -0.0065,
+   "avg_clv": -0.012,
+   "clv_n": 232,
+   "brier_raw": 0.2365,
+   "brier_model": 0.1833,
+   "brier_market": 0.1832
   },
   "rating": {
    "w": 5,
    "l": 2,
    "n": 7,
-   "pending": 0,
+   "pending": 2,
    "void": 0,
    "staked_n": 0,
    "expected_w": 4.6,
@@ -928,7 +928,7 @@
    "w": 3,
    "l": 25,
    "n": 28,
-   "pending": 0,
+   "pending": 1,
    "void": 0,
    "staked_n": 27,
    "expected_w": 6.7,
@@ -1129,12 +1129,12 @@
   ],
   "nfl": [
    {
-    "name": "Seattle",
-    "elo": 1701.4
+    "name": "Buffalo",
+    "elo": 1701.9
    },
    {
-    "name": "Buffalo",
-    "elo": 1695.7
+    "name": "Seattle",
+    "elo": 1701.4
    },
    {
     "name": "Baltimore",
@@ -1154,7 +1154,7 @@
    },
    {
     "name": "Detroit",
-    "elo": 1602.0
+    "elo": 1595.8
    },
    {
     "name": "Houston",
@@ -1222,27 +1222,27 @@
    },
    {
     "name": "Boston",
-    "elo": 1548.4
+    "elo": 1553.0
+   },
+   {
+    "name": "San Diego",
+    "elo": 1546.1
    },
    {
     "name": "New York Y",
     "elo": 1544.0
    },
    {
-    "name": "San Diego",
-    "elo": 1542.5
-   },
-   {
     "name": "Los Angeles D",
     "elo": 1532.4
    },
    {
-    "name": "Atlanta",
-    "elo": 1528.0
+    "name": "Philadelphia",
+    "elo": 1528.7
    },
    {
-    "name": "Philadelphia",
-    "elo": 1523.7
+    "name": "Atlanta",
+    "elo": 1528.0
    },
    {
     "name": "Toronto",
@@ -1310,7 +1310,7 @@
    },
    {
     "name": "Villarreal",
-    "elo": 1607.7
+    "elo": 1616.4
    },
    {
     "name": "Real Betis",
@@ -1552,12 +1552,12 @@
   "cricket_test": [],
   "cpl": [
    {
-    "name": "Guyana Amazon Warriors",
-    "elo": 1561.7
+    "name": "Antigua And Barbuda Falcons",
+    "elo": 1556.5
    },
    {
-    "name": "Antigua And Barbuda Falcons",
-    "elo": 1542.8
+    "name": "Guyana Amazon Warriors",
+    "elo": 1547.9
    },
    {
     "name": "Barbados Royals",
