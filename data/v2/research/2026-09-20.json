@@ -3700,5 +3700,137 @@
    }
   ],
   "_ts": "2026-09-20T13:11Z"
+ },
+ "WTA Tennis|Maria Sakkari vs Linda Fruhvirtova|Maria Sakkari": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maria Sakkari",
+    "title": "Maria Sakkari vs Linda Fruhvirtov\u00e1 \u00b7 Round 1 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 20",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-20T21:03Z"
+ },
+ "WTA Tennis|Sofia Kenin vs Alina Charaeva|Sofia Kenin": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sofia Kenin",
+    "title": "Alina Charaeva vs Sofia Kenin - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 19",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Alina Charaeva vs Sofia Kenin - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 19",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Blinkova overturns 5-3 second-set deficit to beat Charaeva in Sao Paulo",
+    "source": "WTA Tennis",
+    "date": "Sep 19",
+    "watch": false
+   },
+   {
+    "side": "Sofia Kenin",
+    "title": "Alina Charaeva vs Sofia Kenin \u00b7 Round 1 \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 20",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Alina Charaeva vs Sofia Kenin \u00b7 Round 1 \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 20",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-20T21:03Z"
+ },
+ "MLB|Toronto @ Texas|Toronto": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Toronto Blue Jays Announce Dylan Cease Injury News Before Rangers Series Finale",
+  "opp_health": "Blue Jays Reveal Lineup as They Look to Avoid Sweep in Texas; Texas Rangers lineup for September 18, 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 17, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 17",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers lineup for September 18, 2026",
+    "source": "Yahoo Sports",
+    "date": "Sep 18",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Announce Dylan Cease Injury News Before Rangers Series Finale",
+    "source": "Yahoo Sports",
+    "date": "Sep 20",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Blue Jays Reveal Lineup as They Look to Avoid Sweep in Texas",
+    "source": "si.com",
+    "date": "Sep 20",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Announce Brutal Dylan Cease News Before Rangers Series Finale",
+    "source": "Yahoo Sports",
+    "date": "Sep 20",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Announce Brandon Valenzuela News During Rangers Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 20",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-20T21:03Z"
  }
 }
