@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-09-21T21:03Z",
+ "_generated_utc": "2026-09-22T13:12Z",
  "_league": "nfl",
- "_plays_used": 2895,
+ "_plays_used": 2960,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 5334,
+ "_rows": 5489,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -229,16 +229,16 @@
    "this_season_plays": 100
   },
   "Los Angeles Rams": {
-   "def_epa": 0.011,
-   "def_plays": 400.29999999999995,
-   "def_success": 0.4499,
-   "net_epa": 0.126,
-   "off_epa": 0.137,
-   "off_plays": 388.09999999999997,
-   "off_success": 0.5064,
-   "pass_epa": 0.2079,
-   "rush_epa": 0.026,
-   "this_season_plays": 36
+   "def_epa": -0.0284,
+   "def_plays": 439.29999999999995,
+   "def_success": 0.4327,
+   "net_epa": 0.1862,
+   "off_epa": 0.1578,
+   "off_plays": 414.09999999999997,
+   "off_success": 0.5036,
+   "pass_epa": 0.2406,
+   "rush_epa": 0.024,
+   "this_season_plays": 62
   },
   "Miami": {
    "def_epa": 0.1216,
@@ -289,16 +289,16 @@
    "this_season_plays": 132
   },
   "New York Giants": {
-   "def_epa": 0.0781,
-   "def_plays": 323.65,
-   "def_success": 0.4636,
-   "net_epa": -0.0197,
-   "off_epa": 0.0584,
-   "off_plays": 345.79999999999995,
-   "off_success": 0.4479,
-   "pass_epa": 0.1031,
-   "rush_epa": 0.01,
-   "this_season_plays": 49
+   "def_epa": 0.1071,
+   "def_plays": 349.65,
+   "def_success": 0.4635,
+   "net_epa": -0.0985,
+   "off_epa": 0.0086,
+   "off_plays": 384.79999999999995,
+   "off_success": 0.4285,
+   "pass_epa": 0.0374,
+   "rush_epa": -0.0228,
+   "this_season_plays": 88
   },
   "New York Jets": {
    "def_epa": 0.0701,
