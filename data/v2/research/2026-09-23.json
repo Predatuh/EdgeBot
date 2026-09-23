@@ -1202,5 +1202,63 @@
    }
   ],
   "_ts": "2026-09-23T13:12Z"
+ },
+ "MLB|Tampa Bay @ New York Y|New York Y": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Aaron Boone Shares Playoff-Altering Injury Update on Yankees' Aaron Judge; Yankees Star Aaron Judge Expected To Miss AL Wild Card Series With Calf Injury",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York Y",
+    "title": "Aaron Boone Shares Playoff-Altering Injury Update on Yankees' Aaron Judge",
+    "source": "sports.yahoo.com",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees Star Aaron Judge Expected To Miss AL Wild Card Series With Calf Injury",
+    "source": "FOX Sports",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees' Aaron Judge likely out for WC series vs. Red Sox",
+    "source": "Reuters",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay Rays at New York Yankees - MLB Game Summary - Sep 23, 2026",
+    "source": "USA Today",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay Rays at New York Yankees - Where to Watch, Stream Info, TV Channel, and Live Updates (September 23, 2026)",
+    "source": "Fubo",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "MLB GAME NIGHT: Tampa Bay Rays WIN AL EAST in New York; AL Central & West Coming Down to the WIRE!",
+    "source": "thv11.com",
+    "date": "Sep 23",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-23T21:03Z"
  }
 }
