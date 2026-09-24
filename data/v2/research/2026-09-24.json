@@ -1320,5 +1320,121 @@
    }
   ],
   "_ts": "2026-09-24T13:12Z"
+ },
+ "WTA Tennis|Xinyu Wang vs Tatiana Prozorova|Xinyu Wang": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Xinyu Wang",
+    "title": "Xinyu Wang vs Joanna Garland - Match WTA - Singapore Tennis Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Xinyu Wang",
+    "title": "Xinyu Wang vs Joanna Garland \u00b7 Round 2 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Xinyu Wang",
+    "title": "Wang vs. Garland | Round of 16 Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Alex Eala Sends Message to Tatiana Prozorova After Singapore Open Upset",
+    "source": "heavy.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Tatiana Prozorova Reveals What Fueled Stunning Alex Eala Upset",
+    "source": "heavy.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Tatiana Prozorova vs Alexandra Eala \u00b7 Round 2 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-24T21:03Z"
+ },
+ "MLB|Milwaukee @ Philadelphia|Philadelphia": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Philadelphia Phillies' Don Mattingly Silence Misses the Bigger Issue; Philadelphia Phillies Manager Gives Encouraging Jesus Luzardo Injury Update Before Brewers Series",
+  "opp_health": "Milwaukee Brewers Handed Positive Injury Update on 9-Year MLB Pitcher Before Playoffs",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies' Don Mattingly Silence Misses the Bigger Issue",
+    "source": "roundtable.io",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies Manager Gives Encouraging Jesus Luzardo Injury Update Before Brewers Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers Handed Positive Injury Update on 9-Year MLB Pitcher Before Playoffs",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Milwaukee Brewers at Philadelphia Phillies - MLB Game Summary - Sep 24, 2026",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers Announce Christian Yelich Decision During Phillies Series",
+    "source": "heavy.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers Jackson Chourio Has Personal News Emerge Amid Phillies Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-24T21:03Z"
  }
 }
