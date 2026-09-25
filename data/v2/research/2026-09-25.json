@@ -1,0 +1,1619 @@
+{
+ "ATP Tennis|Hubert Hurkacz vs Martin Damm Jr|Hubert Hurkacz": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Aleksandr Shevchenko vs Hubert Hurkacz \u00b7 Round 1 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Martin Damm Jr",
+    "title": "Martin Damm vs Shintaro Mochizuki - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Martin Damm vs Hubert Hurkacz \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Martin Damm vs Hubert Hurkacz - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Martin Damm Jr",
+    "title": "Martin Damm vs Hubert Hurkacz - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "ATP Tennis|Valentin Vacherot vs Lloyd Harris|Lloyd Harris": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lloyd Harris",
+    "title": "Lloyd Harris vs Aleksandar Kovacevic - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs TBD \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Valentin Vacherot vs Lloyd Harris \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Valentin Vacherot vs Lloyd Harris - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Lloyd Harris \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Lloyd Harris - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "ATP Tennis|Alejandro Davidovich Fokina vs Juan Manuel Cerundolo|Alejandro Davidovich Fokina": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Juan Manuel Cerundolo vs Yi Zhou: Scores, Results Lineups, H2H & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Juan Manuel Cerundolo vs Yi Zhou: Scores, Results Lineups, H2H & Odds",
+    "source": "365Scores",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Juan Manuel Cerundolo vs Yi Zhou - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "TBD vs Alejandro Davidovich Fokina \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "Juan Manuel Cer\u00fandolo vs Alejandro Davidovich Fokina \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "Juan Manuel Cerundolo vs Alejandro Davidovich Fokina - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Juan Manuel Cerundolo vs Alejandro Davidovich Fokina - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "ATP Tennis|Alexandre Muller vs Federico Cina|Alexandre Muller": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexandre Muller",
+    "title": "Moise Kouame vs Alexandre Muller - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Alexandre Muller",
+    "title": "Federico Cina vs Alexandre Muller - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Federico Cina",
+    "title": "Federico Cina vs Alexandre Muller - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Federico Cina",
+    "title": "Federico Cina 1 - 0 Camilo Carabelli Ugo (24/09) - Match Report",
+    "source": "365Scores",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Alexandre Muller",
+    "title": "Federico Cina vs Alexandre M\u00fcller \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Federico Cina",
+    "title": "Federico Cina vs Alexandre M\u00fcller \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "ATP Tennis|Valentin Royer vs Daniil Medvedev|Daniil Medvedev": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "ATP 250 Hangzhou: Il Tabellone Principale. Daniil Medvedev guida il seeding. Presenza di Mattia Bellucci",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daniil Medvedev",
+    "title": "ATP 250 Hangzhou: Il Tabellone Principale. Daniil Medvedev guida il seeding. Presenza di Mattia Bellucci",
+    "source": "LiveTennis.it - Il portale italiano del tennis",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Valentin Royer",
+    "title": "Valentin Royer vs Adam Walton - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Valentin Royer",
+    "title": "Daniil Medvedev vs Valentin Royer - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Tennis | The Weekly Watch 21 September 2026 | Mirra Andreeva and Daniil Medvedev kick off Asian swing in confidence bid",
+    "source": "Britwatch Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev vs Valentin Royer \u00b7 Round 2 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Valentin Royer",
+    "title": "Daniil Medvedev vs Valentin Royer \u00b7 Round 2 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "WTA Tennis|Maria Sakkari vs Talia Gibson|Talia Gibson": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Talia Gibson",
+    "title": "Maria Sakkari vs Talia Gibson - Match WTA - Singapore Tennis Open 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Talia Gibson",
+    "title": "Gibson edges lucky loser Morvayova in two tiebreaks; into Singapore quarters",
+    "source": "WTA Tennis",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Maria Sakkari",
+    "title": "Maria Sakkari vs Talia Gibson - Match WTA - Singapore Tennis Open 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Talia Gibson",
+    "title": "Talia Gibson vs Vikt\u00f3ria Morvayov\u00e1 \u00b7 Round 2 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Maria Sakkari",
+    "title": "Maria Sakkari vs Nao Hibino \u00b7 Round 2 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Maria Sakkari",
+    "title": "Maria Sakkari vs Nao Hibino - Match WTA - Singapore Tennis Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "WTA Tennis|Taylah Preston vs Alina Korneeva|Alina Korneeva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alina Korneeva",
+    "title": "Taylah Preston vs Alina Korneeva - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Alina Korneeva",
+    "title": "WTA Seoul 2026 - R\u00e9sultats et suivi Live : Alina Korneeva s'offre un nouveau quart",
+    "source": "ski-nordique.net",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Jelena Ostapenko vs Taylah Preston - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Taylah Preston vs Alina Korneeva - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Preston upsets top seed Ostapenko in Seoul; first Top 50 win since January",
+    "source": "WTA Tennis",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Alina Korneeva",
+    "title": "Taylah Preston vs Alina Korneeva \u00b7 Quarterfinal \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Clemson @ California|Clemson": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "How to Watch Clemson Tigers vs. California, TV, Injuries, Betting; Initial Injury Report Revealed for Clemson's Week 4 Matchup vs. California",
+  "opp_health": "Entire California high school football team suspended after mascot's obscene gesture",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "California",
+    "title": "Entire California high school football team suspended after mascot's obscene gesture",
+    "source": "Fox News",
+    "date": "Sep 19",
+    "watch": true
+   },
+   {
+    "side": "Clemson",
+    "title": "Initial Injury Report Revealed for Clemson's Week 4 Matchup vs. California",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Clemson",
+    "title": "Clemson football news: Double-digit players already ruled out for Cal game",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Clemson",
+    "title": "How to Watch Clemson Tigers vs. California, TV, Injuries, Betting",
+    "source": "si.com",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "California",
+    "title": "Watch California Live",
+    "source": "Kayo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "California",
+    "title": "What channel is Clemson vs. California on today? Time, TV info",
+    "source": "Clemson Wire",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Northwestern @ Indiana|Indiana": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Indiana Football vs. Northwestern: How to watch, injuries, odds, and predictions; Indiana vs. Northwestern injury report (Tuesday): A.J. Harris doubtful, three Hoosiers out",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Indiana",
+    "title": "Indiana football fans won't get any more excused absences for missing second half",
+    "source": "Yahoo Sports",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Indiana",
+    "title": "Indiana Football vs. Northwestern: How to watch, injuries, odds, and predictions",
+    "source": "Hoosier State of Mind",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Indiana",
+    "title": "Indiana vs. Northwestern injury report (Tuesday): A.J. Harris doubtful, three Hoosiers out",
+    "source": "247Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Northwestern",
+    "title": "Court Ruling Opens Door For 2 Indiana Linemen To Play vs. Northwestern",
+    "source": "FOX Sports",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Northwestern",
+    "title": "Northwestern College\u2019s Gianna Bennett lives out her \u2018relationship with Christ\u2019 through good works",
+    "source": "Sports Spectrum",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Northwestern",
+    "title": "What does a college GM job entail? Northwestern\u2019s Christian Sarkisian gives a look after moving from the NFL.",
+    "source": "Chicago Tribune",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Navy @ UAB|Navy": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UAB",
+    "title": "UAB vs Louisiana College Football Bettors Recap 2026-09-19",
+    "source": "tonyspicks.com",
+    "date": "Sep 21",
+    "watch": false
+   },
+   {
+    "side": "Navy",
+    "title": "Watch Navy Live",
+    "source": "Kayo Sports",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Navy",
+    "title": "Navy All-American Bowl to honor wide receiver Braylon Clark",
+    "source": "NBC Sports",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Navy",
+    "title": "BYU-Navy weak Labor Day draw",
+    "source": "Sports Media Watch",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "Navy football QB Jackson Gutierrez is ready if his 1st start comes at UAB",
+    "source": "capitalgazette.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "Watch Uab Live",
+    "source": "Kayo Sports",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Harvard @ Brown|Harvard": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Iowa Football: Hank Brown Prepares For First Career Road Game As a Starter; No. 6 Miami loses RB Marty Brown, WR Joshua Moore for rest of season because of injuries",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Brown",
+    "title": "No. 6 Miami loses RB Marty Brown, WR Joshua Moore for rest of season because of injuries",
+    "source": "AP News",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Brown",
+    "title": "Mario Cristobal: Josh Moore, Marty Brown Out for Season; Coach Rejects Idea Miami Took Foot Off the Gas at Wake Forest",
+    "source": "On3",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Brown",
+    "title": "Iowa Football: Hank Brown Prepares For First Career Road Game As a Starter",
+    "source": "Yahoo Sports",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Harvard",
+    "title": "Harvard professor breaks down Trump's upcoming talks with China's Xi amid AI race",
+    "source": "CBS News",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "Harvard Seeks Men's Rugby Head Coach",
+    "source": "Goff Rugby Report",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "Brown Set to Host Harvard at Sold Out Centreville Bank Stadium on ESPN2",
+    "source": "Brown University Athletics",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Howard @ Rutgers|Rutgers": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rutgers football misses big opportunity vs USC | Instant analysis",
+  "opp_health": "Penn State wide receiver Koby Howard is out indefinitely with an undisclosed injury; Penn State wide receiver Koby Howard injury updates just keep getting worse",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rutgers",
+    "title": "Rutgers football misses big opportunity vs USC | Instant analysis",
+    "source": "Yahoo Sports",
+    "date": "Sep 19",
+    "watch": true
+   },
+   {
+    "side": "Howard",
+    "title": "Penn State wide receiver Koby Howard injury updates just keep getting worse",
+    "source": "ClutchPoints",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Howard",
+    "title": "Penn State Football Week 4 Injury Report: When Will Koby Howard Return?",
+    "source": "si.com",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Howard",
+    "title": "Penn State wide receiver Koby Howard is out indefinitely with an undisclosed injury",
+    "source": "Newsday",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Rutgers",
+    "title": "Rutgers Football Week 4 vs. Howard: Series History & More",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Rutgers",
+    "title": "Brian Leonard sees some Ray Rice qualities in Rutgers football running back Antwan Raymond",
+    "source": "247Sports",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "College Football|Army @ Temple|Army": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Temple",
+    "title": "Hellums, Walton Emphasize Strong Finish as Army Prepares for Temple",
+    "source": "On3",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Army",
+    "title": "Temple Hosts Army As 3.0-Point Underdogs On Friday",
+    "source": "Legal Sports Betting",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Temple",
+    "title": "Central Connecticut State Blue Devils vs Temple Owls Box Score - November 02, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Army",
+    "title": "Best college football props for Temple Owls vs. Army Black Knights on Friday 9/25/26",
+    "source": "DraftKings Network",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Army",
+    "title": "Watch Temple Owls vs Army Black Knights NCAAF Week 4 game LIVE: Online stream, TV channels, and kick-off time",
+    "source": "Goal.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Temple",
+    "title": "Best college football props for Temple Owls vs. Army Black Knights on Friday 9/25/26",
+    "source": "DraftKings Network",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Los Angeles A @ Seattle|Seattle": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Starting lineups for Angels at Athletics - September 22, 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles A",
+    "title": "Starting lineups for Angels at Athletics - September 22, 2026",
+    "source": "MLB.com",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Ichiro and the 2001 Seattle Mariners Were MLB\u2019s Weirdest, Winningest Team",
+    "source": "Neil\u2019s Substack",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Los Angeles Angels at Seattle Mariners - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Los Angeles Angels and Seattle Mariners meet in game 2 of series",
+    "source": "FOX Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "Angels vs Mariners: Why Starting Reid Detmers Is a Dangerous Mistake",
+    "source": "si.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "A\u2019s rally with 2 homers in 8th to beat Angels",
+    "source": "Las Vegas Review-Journal",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Los Angeles D @ San Francisco|Los Angeles D": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ohtani singles in first AB off IL as Dodgers near full strength; Ohtani returns to Dodgers lineup and delivers hit in first at-bat",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles D",
+    "title": "Ohtani singles in first AB off IL as Dodgers near full strength",
+    "source": "MLB.com",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Ohtani returns to Dodgers lineup and delivers hit in first at-bat",
+    "source": "NBC Los Angeles",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Shohei Ohtani activated from IL: What to expect from Dodgers superstar",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "Giants news: San Francisco brings Camilo Doval back right before end of season",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco Giants Quietly Announced Willy Adames Update",
+    "source": "heavy.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "Los Angeles Dodgers at San Francisco Giants - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Houston @ A's|Houston": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Houston Astros place center fielder Daulton Varsho on injured list, ending his regular season; Jeremy Pe\u00f1a out of Houston Astros' lineup for series finale vs. Seattle Mariners",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston",
+    "title": "Houston Astros starter Cristian Javier leaves after two innings because of groin injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Jeremy Pe\u00f1a out of Houston Astros' lineup for series finale vs. Seattle Mariners",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Astros place center fielder Daulton Varsho on injured list, ending his regular season",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "A's",
+    "title": "Ivanna Flores Named BIG EAST Golfer of the Week - Xavier University Athletics",
+    "source": "Xavier University Athletics",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Veteran Pro Sports Performance Executive Marty Lauzon Joins Syracuse Athletics",
+    "source": "Syracuse University Athletics",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Women\u2019s Soccer Falls to Towson - William & Mary Athletics",
+    "source": "William & Mary Athletics",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Arizona @ San Diego|San Diego": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arizona",
+    "title": "arizona diamondbacks news 9/24",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Diamondbacks at Colorado Rockies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 24, 2026)",
+    "source": "Fubo",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "San Diego Padres clinch playoff spot for third consecutive season",
+    "source": "cbs8.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Padres clinch playoff berth: Why red-hot San Diego team could win its first World Series ever",
+    "source": "CBS Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Arizona Diamondbacks at San Diego Padres - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Diamondbacks at San Diego Padres - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Cleveland @ Kansas City|Cleveland": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Chicago White Sox at Kansas City Royals - MLB Game Summary - Sep 24, 2026",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Kansas City",
+    "title": "2026 Hall of Game Induction Set to Celebrate Baseball Legends in Kansas City",
+    "source": "World Baseball Network",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Guardians at Kansas City Royals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Guardians score vs. Red Sox. Angel Martinez's HR clinches playoff berth for Cleveland",
+    "source": "Akron Beacon Journal",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "How to buy 2026 Cleveland Guardians MLB playoff tickets",
+    "source": "The Register-Guard",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Kansas City",
+    "title": "Cleveland Guardians at Kansas City Royals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Colorado @ Chicago WS|Chicago WS": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "White Sox Lose Three-Time All-Star To Injury Just Before Postseason",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago WS",
+    "title": "White Sox Lose Three-Time All-Star To Injury Just Before Postseason",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Arizona Diamondbacks at Colorado Rockies - MLB Game Summary - Sep 24, 2026",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "Arizona Diamondbacks at Colorado Rockies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 24, 2026)",
+    "source": "Fubo",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Colorado Rockies at Chicago White Sox - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Chicago WS",
+    "title": "UConn Alum Helps Chicago White Sox Make Historic Turnaround",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado Rockies at Chicago White Sox - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|St. Louis @ Milwaukee|Milwaukee": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals vs Pittsburgh Pirates Game Discussion Thursday",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers clinch MLB\u2019s best record, home-field advantage throughout playoffs",
+    "source": "WFRV Local 5",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "St. Louis Cardinals at Milwaukee Brewers - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Brewers score: Milwaukee wins 100 games for first time in franchise history",
+    "source": "fox6now.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "The St. Louis Cardinals pathway to success in 2026",
+    "source": "Viva El Birdos",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals at Milwaukee Brewers - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Texas @ Minnesota|Texas": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "AL West-leading Texas puts Cal Quantrill on the injured list with right lat tightness",
+  "opp_health": "Former Twin, Minnesota native involved in Jeff Hoffman trade returns to MLB with Blue Jays",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas",
+    "title": "AL West-leading Texas puts Cal Quantrill on the injured list with right lat tightness",
+    "source": "LancasterOnline",
+    "date": "Sep 20",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Former Twin, Minnesota native involved in Jeff Hoffman trade returns to MLB with Blue Jays",
+    "source": "Puckett's Pond",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "New York Mets vs Texas Rangers Box Score - September 24, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers at Minnesota Twins - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Twins Must Resolve This Bullpen Dilemma for 2027",
+    "source": "si.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Why Minnesota Twins fans should root for the Texas Rangers this weekend",
+    "source": "Puckett's Pond",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Chicago C @ Boston|Boston": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Boston Red Sox\u2019s Willson Contreras Drops Heartbreaking Quote on Injury; Return of Ceddanne Rafaela Creates Tough Lineup Decisions for Boston Red Sox",
+  "opp_health": "Marlins 3, Cubs 2: The offense disappears. Oh, and Kevin Gausman might be injured; Alex Bregman injury update shows how he has changed the Chicago Cubs",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago C",
+    "title": "Alex Bregman injury update shows how he has changed the Chicago Cubs",
+    "source": "Yahoo Sports",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Chicago Cubs game today: North Side team misses chance to clinch playoff spot Tuesday after losing Miami Marlins game",
+    "source": "ABC7 Chicago",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Return of Ceddanne Rafaela Creates Tough Lineup Decisions for Boston Red Sox",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Chicago C",
+    "title": "Marlins 3, Cubs 2: The offense disappears. Oh, and Kevin Gausman might be injured",
+    "source": "Bleed Cubbie Blue",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Boston Red Sox\u2019s Willson Contreras Drops Heartbreaking Quote on Injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Boston",
+    "title": "Red Sox game schedule shifted ahead of Boston nor'easter",
+    "source": "The Patriot Ledger",
+    "date": "Sep 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Baltimore @ New York Y|New York Y": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "New York Yankees Issued Major Aaron Judge Warning Amid Injury; New York Yankees\u2019 Cody Bellinger Makes Aaron Judge Statement Amid Injury News",
+  "opp_health": "Jackson Holliday Shares Surgery Update Ahead of Baltimore Orioles Offseason",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York Y",
+    "title": "New York Yankees\u2019 Cody Bellinger Makes Aaron Judge Statement Amid Injury News",
+    "source": "heavy.com",
+    "date": "Sep 19",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "New York Yankees Issued Major Aaron Judge Warning Amid Injury",
+    "source": "heavy.com",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Jackson Holliday Shares Surgery Update Ahead of Baltimore Orioles Offseason",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Orioles @ New York Yankees: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees Could Catch Major Break After Concerning Red Sox Update",
+    "source": "heavy.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Orioles at New York Yankees - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Atlanta @ Miami|Atlanta": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ronald Acu\u00f1a Jr. Returns to Atlanta Braves' Lineup Right On Time; Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves\u2019 Ronald Acu\u00f1a Jr. Leaves Reds Game With Injury: Latest Updates",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Ronald Acu\u00f1a Jr. Returns to Atlanta Braves' Lineup Right On Time",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more",
+    "source": "Battery Power",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Chicago Cubs vs Miami Marlins Box Score - September 24, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Miami Marlins at Chicago Cubs - MLB Game Summary - Sep 23, 2026",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Atlanta Braves at Miami Marlins - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Cincinnati @ Toronto|Toronto": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Bateman the latest injury for Toronto as the Blue Jays near elimination in Baltimore",
+  "opp_health": "Cincinnati Reds Share Surprising Injury News Involving Two Players as Season Winds Down; Cincinnati Reds DFA Veteran Outfielder, Place All-Star on Injured List in Flurry of Roster Moves",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds DFA Veteran Outfielder, Place All-Star on Injured List in Flurry of Roster Moves",
+    "source": "Sports Illustrated",
+    "date": "Sep 20",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Bateman the latest injury for Toronto as the Blue Jays near elimination in Baltimore",
+    "source": "Stamford Advocate",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds Share Surprising Injury News Involving Two Players as Season Winds Down",
+    "source": "Sports Illustrated",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Toronto Blue Jays Need To Sign Jazz Chisholm Jr. This Offseason",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Cincinnati Reds at Toronto Blue Jays - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds at Toronto Blue Jays - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Tampa Bay @ Philadelphia|Tampa Bay": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Yankees announce Wednesday night lineup vs. Tampa Bay Rays",
+  "opp_health": "Philadelphia Phillies\u2019 Luis Arraez Exits Brewers Game With Injury: Latest Updates; Philadelphia Phillies' Don Mattingly Silence Misses the Bigger Issue",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tampa Bay",
+    "title": "Yankees announce Wednesday night lineup vs. Tampa Bay Rays",
+    "source": "northjersey.com",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies' Don Mattingly Silence Misses the Bigger Issue",
+    "source": "roundtable.io",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies\u2019 Luis Arraez Exits Brewers Game With Injury: Latest Updates",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay Rays Final Four Games Don't Matter in the Standings. These 5 Questions Do",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay Rays at Philadelphia Phillies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Tampa Bay Rays at Philadelphia Phillies - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|Pittsburgh @ Detroit|Pittsburgh": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "New Detroit Tigers starter River Ryan pitched in MLB for the first time in over two years on Monday, Sept. 21, throwing three scoreless innings. See link below \u2b07\ufe0f \ud83d\udcf8 Rick Osentoski, IMAGN IMAGES via Reuters",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Detroit",
+    "title": "New Detroit Tigers starter River Ryan pitched in MLB for the first time in over two years on Monday, Sept. 21, throwing three scoreless innings. See link below \u2b07\ufe0f \ud83d\udcf8 Rick Osentoski, IMAGN IMAGES via Reuters",
+    "source": "facebook.com",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates 2026 MLB Regular Season Batting Stats",
+    "source": "ESPN",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates at Detroit Tigers - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "St. Louis Cardinals at Pittsburgh Pirates - MLB Game Summary - Sep 24, 2026",
+    "source": "USA Today",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Pittsburgh Pirates at Detroit Tigers - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Jason Benetti is concluding his third season calling games on TV for the Detroit Tigers; Dan Dickerson has been with the Tigers since 2000. \ud83d\udcf0Story by Marlowe Alter, Detroit Free Press \ud83d\udcf8Photo by Finn Gomez, Detroit Free Press See link below \u2b07\ufe0f",
+    "source": "facebook.com",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ },
+ "MLB|New York M @ Washington|New York M": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "What to expect from DJ Herz\u2019s return to the Washington Nationals",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Washington",
+    "title": "What to expect from DJ Herz\u2019s return to the Washington Nationals",
+    "source": "Federal Baseball",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "What Andy Green wants to see next from core Mets: \u2018Don\u2019t think we\u2019ll be satisfied\u2019",
+    "source": "New York Post",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "New York M",
+    "title": "New York Mets at Washington Nationals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "New York M",
+    "title": "New York Mets Suddenly Cut 5-Year MLB Player",
+    "source": "heavy.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "New York Mets at Washington Nationals - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "Former Washington baseball standout could make MLB debut in playoffs",
+    "source": "Huskies Wire",
+    "date": "Sep 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-25T13:12Z"
+ }
+}

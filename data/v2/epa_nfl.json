@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-09-24T21:03Z",
+ "_generated_utc": "2026-09-25T13:12Z",
  "_league": "nfl",
- "_plays_used": 2960,
+ "_plays_used": 3042,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 5489,
+ "_rows": 5662,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -25,16 +25,16 @@
    "this_season_plays": 102
   },
   "Atlanta": {
-   "def_epa": -0.0302,
-   "def_plays": 394.0,
-   "def_success": 0.4206,
-   "net_epa": -0.0357,
-   "off_epa": -0.066,
-   "off_plays": 387.9,
-   "off_success": 0.434,
-   "pass_epa": -0.066,
-   "rush_epa": -0.0659,
-   "this_season_plays": 89
+   "def_epa": -0.0342,
+   "def_plays": 428.0,
+   "def_success": 0.4199,
+   "net_epa": -0.0054,
+   "off_epa": -0.0396,
+   "off_plays": 435.9,
+   "off_success": 0.455,
+   "pass_epa": -0.0605,
+   "rush_epa": -0.0164,
+   "this_season_plays": 137
   },
   "Baltimore": {
    "def_epa": 0.0244,
@@ -145,16 +145,16 @@
    "this_season_plays": 80
   },
   "Green Bay": {
-   "def_epa": 0.0213,
-   "def_plays": 459.4,
-   "def_success": 0.4256,
-   "net_epa": 0.078,
-   "off_epa": 0.0993,
-   "off_plays": 416.95,
-   "off_success": 0.459,
-   "pass_epa": 0.2539,
-   "rush_epa": -0.1041,
-   "this_season_plays": 103
+   "def_epa": 0.0357,
+   "def_plays": 507.4,
+   "def_success": 0.4444,
+   "net_epa": 0.05,
+   "off_epa": 0.0857,
+   "off_plays": 450.95,
+   "off_success": 0.4555,
+   "pass_epa": 0.2274,
+   "rush_epa": -0.1122,
+   "this_season_plays": 137
   },
   "Houston": {
    "def_epa": -0.0796,
