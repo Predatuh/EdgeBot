@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-09-27T13:10Z",
+ "_generated_utc": "2026-09-27T21:03Z",
  "_league": "nfl",
- "_plays_used": 3042,
+ "_plays_used": 4020,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 5662,
+ "_rows": 7210,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -49,28 +49,28 @@
    "this_season_plays": 75
   },
   "Buffalo": {
-   "def_epa": 0.0151,
-   "def_plays": 386.2,
-   "def_success": 0.4551,
-   "net_epa": 0.1366,
-   "off_epa": 0.1517,
-   "off_plays": 414.75,
-   "off_success": 0.4794,
-   "pass_epa": 0.1738,
-   "rush_epa": 0.1265,
-   "this_season_plays": 84
+   "def_epa": -0.0023,
+   "def_plays": 444.2,
+   "def_success": 0.4564,
+   "net_epa": 0.1305,
+   "off_epa": 0.1282,
+   "off_plays": 472.75,
+   "off_success": 0.4799,
+   "pass_epa": 0.1316,
+   "rush_epa": 0.1244,
+   "this_season_plays": 142
   },
   "Carolina": {
-   "def_epa": 0.0635,
-   "def_plays": 389.09999999999997,
-   "def_success": 0.4604,
-   "net_epa": -0.0537,
-   "off_epa": 0.0098,
-   "off_plays": 373.79999999999995,
-   "off_success": 0.4353,
-   "pass_epa": 0.0257,
-   "rush_epa": -0.012,
-   "this_season_plays": 77
+   "def_epa": 0.0613,
+   "def_plays": 447.09999999999997,
+   "def_success": 0.4499,
+   "net_epa": -0.0741,
+   "off_epa": -0.0128,
+   "off_plays": 447.79999999999995,
+   "off_success": 0.4214,
+   "pass_epa": -0.0011,
+   "rush_epa": -0.0299,
+   "this_season_plays": 151
   },
   "Chicago": {
    "def_epa": 0.0404,
@@ -85,28 +85,28 @@
    "this_season_plays": 123
   },
   "Cincinnati": {
-   "def_epa": 0.0295,
-   "def_plays": 353.95,
-   "def_success": 0.4584,
-   "net_epa": -0.0235,
-   "off_epa": 0.006,
-   "off_plays": 356.79999999999995,
-   "off_success": 0.4465,
-   "pass_epa": -0.0189,
-   "rush_epa": 0.0529,
-   "this_season_plays": 67
+   "def_epa": 0.0529,
+   "def_plays": 409.95,
+   "def_success": 0.4616,
+   "net_epa": -0.0096,
+   "off_epa": 0.0433,
+   "off_plays": 412.79999999999995,
+   "off_success": 0.461,
+   "pass_epa": 0.0378,
+   "rush_epa": 0.0537,
+   "this_season_plays": 123
   },
   "Cleveland": {
-   "def_epa": -0.0535,
-   "def_plays": 358.29999999999995,
-   "def_success": 0.422,
-   "net_epa": -0.127,
-   "off_epa": -0.1805,
-   "off_plays": 347.15,
-   "off_success": 0.3501,
-   "pass_epa": -0.2158,
-   "rush_epa": -0.1335,
-   "this_season_plays": 64
+   "def_epa": -0.066,
+   "def_plays": 432.29999999999995,
+   "def_success": 0.4099,
+   "net_epa": -0.0819,
+   "off_epa": -0.1479,
+   "off_plays": 405.15,
+   "off_success": 0.3543,
+   "pass_epa": -0.175,
+   "rush_epa": -0.1116,
+   "this_season_plays": 122
   },
   "Dallas": {
    "def_epa": 0.2126,
@@ -133,16 +133,16 @@
    "this_season_plays": 81
   },
   "Detroit": {
-   "def_epa": 0.0181,
-   "def_plays": 378.59999999999997,
-   "def_success": 0.4377,
-   "net_epa": 0.0332,
-   "off_epa": 0.0513,
-   "off_plays": 359.29999999999995,
-   "off_success": 0.4613,
-   "pass_epa": 0.1127,
-   "rush_epa": -0.0311,
-   "this_season_plays": 80
+   "def_epa": 0.0152,
+   "def_plays": 434.59999999999997,
+   "def_success": 0.4388,
+   "net_epa": 0.0654,
+   "off_epa": 0.0806,
+   "off_plays": 413.29999999999995,
+   "off_success": 0.4809,
+   "pass_epa": 0.1448,
+   "rush_epa": -0.0073,
+   "this_season_plays": 134
   },
   "Green Bay": {
    "def_epa": 0.0357,
@@ -157,52 +157,52 @@
    "this_season_plays": 137
   },
   "Houston": {
-   "def_epa": -0.0796,
-   "def_plays": 412.54999999999995,
-   "def_success": 0.3707,
-   "net_epa": 0.0245,
-   "off_epa": -0.0551,
-   "off_plays": 479.9,
-   "off_success": 0.4131,
-   "pass_epa": -0.0258,
-   "rush_epa": -0.0966,
-   "this_season_plays": 125
+   "def_epa": -0.0741,
+   "def_plays": 479.54999999999995,
+   "def_success": 0.3752,
+   "net_epa": 0.0154,
+   "off_epa": -0.0587,
+   "off_plays": 530.9,
+   "off_success": 0.413,
+   "pass_epa": -0.0333,
+   "rush_epa": -0.0947,
+   "this_season_plays": 176
   },
   "Indianapolis": {
-   "def_epa": 0.0985,
-   "def_plays": 397.0,
-   "def_success": 0.4815,
-   "net_epa": -0.0605,
-   "off_epa": 0.038,
-   "off_plays": 367.34999999999997,
-   "off_success": 0.4455,
-   "pass_epa": 0.0273,
-   "rush_epa": 0.0517,
-   "this_season_plays": 87
+   "def_epa": 0.0768,
+   "def_plays": 448.0,
+   "def_success": 0.4735,
+   "net_epa": -0.0509,
+   "off_epa": 0.0259,
+   "off_plays": 434.34999999999997,
+   "off_success": 0.4389,
+   "pass_epa": 0.0174,
+   "rush_epa": 0.0368,
+   "this_season_plays": 154
   },
   "Jacksonville": {
-   "def_epa": -0.0458,
-   "def_plays": 342.79999999999995,
-   "def_success": 0.4383,
-   "net_epa": 0.1089,
-   "off_epa": 0.063,
-   "off_plays": 362.15,
-   "off_success": 0.4707,
-   "pass_epa": 0.0604,
-   "rush_epa": 0.0667,
-   "this_season_plays": 72
+   "def_epa": -0.0611,
+   "def_plays": 381.79999999999995,
+   "def_success": 0.4302,
+   "net_epa": 0.1295,
+   "off_epa": 0.0684,
+   "off_plays": 397.15,
+   "off_success": 0.4795,
+   "pass_epa": 0.0609,
+   "rush_epa": 0.0785,
+   "this_season_plays": 107
   },
   "Kansas City": {
-   "def_epa": 0.0187,
-   "def_plays": 390.04999999999995,
-   "def_success": 0.4503,
-   "net_epa": 0.0697,
-   "off_epa": 0.0884,
-   "off_plays": 431.04999999999995,
-   "off_success": 0.467,
-   "pass_epa": 0.0535,
-   "rush_epa": 0.1401,
-   "this_season_plays": 122
+   "def_epa": 0.0068,
+   "def_plays": 451.04999999999995,
+   "def_success": 0.4293,
+   "net_epa": 0.0863,
+   "off_epa": 0.0931,
+   "off_plays": 473.04999999999995,
+   "off_success": 0.4742,
+   "pass_epa": 0.0814,
+   "rush_epa": 0.11,
+   "this_season_plays": 164
   },
   "Las Vegas": {
    "def_epa": -0.0469,
@@ -217,16 +217,16 @@
    "this_season_plays": 95
   },
   "Los Angeles Chargers": {
-   "def_epa": -0.023,
-   "def_plays": 403.09999999999997,
-   "def_success": 0.421,
-   "net_epa": -0.0461,
-   "off_epa": -0.0691,
-   "off_plays": 413.59999999999997,
-   "off_success": 0.4183,
-   "pass_epa": -0.0323,
-   "rush_epa": -0.1167,
-   "this_season_plays": 100
+   "def_epa": -0.0251,
+   "def_plays": 461.09999999999997,
+   "def_success": 0.4288,
+   "net_epa": -0.05,
+   "off_epa": -0.0751,
+   "off_plays": 471.59999999999997,
+   "off_success": 0.4241,
+   "pass_epa": -0.0614,
+   "rush_epa": -0.0924,
+   "this_season_plays": 158
   },
   "Los Angeles Rams": {
    "def_epa": -0.0284,
@@ -241,16 +241,16 @@
    "this_season_plays": 62
   },
   "Miami": {
-   "def_epa": 0.1216,
-   "def_plays": 312.15,
-   "def_success": 0.5097,
-   "net_epa": -0.0882,
-   "off_epa": 0.0334,
-   "off_plays": 293.2,
-   "off_success": 0.4483,
-   "pass_epa": 0.0438,
-   "rush_epa": 0.0215,
-   "this_season_plays": 65
+   "def_epa": 0.124,
+   "def_plays": 354.15,
+   "def_success": 0.5142,
+   "net_epa": -0.1082,
+   "off_epa": 0.0158,
+   "off_plays": 354.2,
+   "off_success": 0.4219,
+   "pass_epa": 0.0413,
+   "rush_epa": -0.0126,
+   "this_season_plays": 126
   },
   "Minnesota": {
    "def_epa": -0.0921,
@@ -265,16 +265,16 @@
    "this_season_plays": 103
   },
   "New England": {
-   "def_epa": -0.0854,
-   "def_plays": 428.45,
-   "def_success": 0.4206,
-   "net_epa": 0.15,
-   "off_epa": 0.0646,
-   "off_plays": 454.9,
-   "off_success": 0.4664,
-   "pass_epa": 0.1079,
-   "rush_epa": 0.0101,
-   "this_season_plays": 107
+   "def_epa": -0.0697,
+   "def_plays": 463.45,
+   "def_success": 0.432,
+   "net_epa": 0.1137,
+   "off_epa": 0.044,
+   "off_plays": 493.9,
+   "off_success": 0.4579,
+   "pass_epa": 0.0691,
+   "rush_epa": 0.013,
+   "this_season_plays": 146
   },
   "New Orleans": {
    "def_epa": -0.0092,
@@ -289,28 +289,28 @@
    "this_season_plays": 132
   },
   "New York Giants": {
-   "def_epa": 0.1071,
-   "def_plays": 349.65,
-   "def_success": 0.4635,
-   "net_epa": -0.0985,
-   "off_epa": 0.0086,
-   "off_plays": 384.79999999999995,
-   "off_success": 0.4285,
-   "pass_epa": 0.0374,
-   "rush_epa": -0.0228,
-   "this_season_plays": 88
+   "def_epa": 0.0582,
+   "def_plays": 396.65,
+   "def_success": 0.4489,
+   "net_epa": -0.0631,
+   "off_epa": -0.0048,
+   "off_plays": 431.79999999999995,
+   "off_success": 0.4236,
+   "pass_epa": 0.0163,
+   "rush_epa": -0.0272,
+   "this_season_plays": 135
   },
   "New York Jets": {
-   "def_epa": 0.0701,
-   "def_plays": 339.59999999999997,
-   "def_success": 0.4332,
-   "net_epa": -0.1723,
-   "off_epa": -0.1023,
-   "off_plays": 342.04999999999995,
-   "off_success": 0.4163,
-   "pass_epa": -0.085,
-   "rush_epa": -0.1201,
-   "this_season_plays": 110
+   "def_epa": 0.0983,
+   "def_plays": 393.59999999999997,
+   "def_success": 0.4576,
+   "net_epa": -0.1868,
+   "off_epa": -0.0885,
+   "off_plays": 398.04999999999995,
+   "off_success": 0.4206,
+   "pass_epa": -0.0526,
+   "rush_epa": -0.1294,
+   "this_season_plays": 166
   },
   "Philadelphia": {
    "def_epa": -0.0747,
@@ -325,16 +325,16 @@
    "this_season_plays": 123
   },
   "Pittsburgh": {
-   "def_epa": -0.0384,
-   "def_plays": 429.84999999999997,
-   "def_success": 0.4299,
-   "net_epa": -0.0343,
-   "off_epa": -0.0727,
-   "off_plays": 410.04999999999995,
-   "off_success": 0.4108,
-   "pass_epa": -0.1166,
-   "rush_epa": -0.0018,
-   "this_season_plays": 101
+   "def_epa": -0.0016,
+   "def_plays": 485.84999999999997,
+   "def_success": 0.4442,
+   "net_epa": -0.0382,
+   "off_epa": -0.0398,
+   "off_plays": 466.04999999999995,
+   "off_success": 0.4194,
+   "pass_epa": -0.0728,
+   "rush_epa": 0.0135,
+   "this_season_plays": 157
   },
   "San Francisco": {
    "def_epa": 0.0688,
@@ -349,16 +349,16 @@
    "this_season_plays": 74
   },
   "Seattle": {
-   "def_epa": -0.1315,
-   "def_plays": 403.0,
-   "def_success": 0.3918,
-   "net_epa": 0.1824,
-   "off_epa": 0.0509,
-   "off_plays": 384.25,
-   "off_success": 0.4524,
-   "pass_epa": 0.1765,
-   "rush_epa": -0.1038,
-   "this_season_plays": 92
+   "def_epa": -0.1236,
+   "def_plays": 463.0,
+   "def_success": 0.3821,
+   "net_epa": 0.1537,
+   "off_epa": 0.03,
+   "off_plays": 443.25,
+   "off_success": 0.4576,
+   "pass_epa": 0.1548,
+   "rush_epa": -0.1359,
+   "this_season_plays": 151
   },
   "Tampa Bay": {
    "def_epa": 0.0507,
@@ -373,28 +373,28 @@
    "this_season_plays": 92
   },
   "Tennessee": {
-   "def_epa": 0.1248,
-   "def_plays": 353.4,
-   "def_success": 0.4659,
-   "net_epa": -0.2551,
-   "off_epa": -0.1303,
-   "off_plays": 310.5,
-   "off_success": 0.3815,
-   "pass_epa": -0.1758,
-   "rush_epa": -0.0714,
-   "this_season_plays": 76
+   "def_epa": 0.0967,
+   "def_plays": 400.4,
+   "def_success": 0.4562,
+   "net_epa": -0.25,
+   "off_epa": -0.1533,
+   "off_plays": 357.5,
+   "off_success": 0.3761,
+   "pass_epa": -0.2113,
+   "rush_epa": -0.0759,
+   "this_season_plays": 123
   },
   "Washington": {
-   "def_epa": 0.1455,
-   "def_plays": 370.09999999999997,
-   "def_success": 0.4753,
-   "net_epa": -0.1317,
-   "off_epa": 0.0138,
-   "off_plays": 367.35,
-   "off_success": 0.4402,
-   "pass_epa": -0.0293,
-   "rush_epa": 0.0597,
-   "this_season_plays": 115
+   "def_epa": 0.111,
+   "def_plays": 429.09999999999997,
+   "def_success": 0.4775,
+   "net_epa": -0.109,
+   "off_epa": 0.002,
+   "off_plays": 427.35,
+   "off_success": 0.4228,
+   "pass_epa": -0.0077,
+   "rush_epa": 0.0124,
+   "this_season_plays": 175
   }
  }
 }
