@@ -1,0 +1,1808 @@
+{
+ "ATP Tennis|Andrey Rublev vs Kyrian Jacquet|Andrey Rublev": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Andrey Rublev",
+    "title": "Hugo Gaston vs Andrey Rublev \u00b7 Quarterfinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Andrey Rublev",
+    "title": "Kyrian Jacquet vs Andrey Rublev \u00b7 Semifinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Andrey Rublev",
+    "title": "Kyrian Jacquet vs Andrey Rublev - Match ATP - AITO Hangzhou Open 2026 Men\u2019s Singles 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "F\u00e1bi\u00e1n Marozs\u00e1n vs Kyrian Jacquet \u00b7 Quarterfinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Kyrian Jacquet vs Andrey Rublev \u00b7 Semifinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Kyrian Jacquet vs Andrey Rublev - Match ATP - AITO Hangzhou Open 2026 Men\u2019s Singles 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:10Z"
+ },
+ "ATP Tennis|Hubert Hurkacz vs Lloyd Harris|Hubert Hurkacz": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Martin Damm vs Hubert Hurkacz \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Lloyd Harris vs Hubert Hurkacz \u00b7 Quarterfinal \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Valentin Vacherot vs Lloyd Harris \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Lloyd Harris vs Hubert Hurkacz \u00b7 Quarterfinal \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Lloyd Harris vs Hubert Hurkacz: Game Spread",
+    "source": "Coinbase",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Lloyd Harris vs Hubert Hurkacz: Game Spread",
+    "source": "Coinbase",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:10Z"
+ },
+ "NFL|Los Angeles R @ Denver|Denver": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Denver Broncos: Jonah Coleman injury update: RB3 placed on IR; Broncos Injury Update: Latest on Denver\u2019s RB Trio & Rams\u2019 Top Weapons",
+  "opp_health": "Puka Nacua injury update is bad news for the Los Angeles Rams; Rams Injury Report, Week 3 at Broncos: Puka Nacua and Kam Kinchens doubtful for Sunday Night Football",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Denver",
+    "title": "Broncos Injury Update: Latest on Denver\u2019s RB Trio & Rams\u2019 Top Weapons",
+    "source": "Sports Illustrated",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Jonah Coleman Pops Up With An Ankle Injury, Opening The Door For A Fantasy Football Sleeper In Denver",
+    "source": "Sports Illustrated",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Puka Nacua injury update is bad news for the Los Angeles Rams",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Rams Injury Report, Week 3 at Broncos: Puka Nacua and Kam Kinchens doubtful for Sunday Night Football",
+    "source": "Rams",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Marvin Mims Jr. questionable; Jonah Coleman ruled out for SNF game vs. Rams",
+    "source": "Mile High Report",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Denver",
+    "title": "Denver Broncos: Jonah Coleman injury update: RB3 placed on IR",
+    "source": "Ventura County Star",
+    "date": "Sep 26",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:10Z"
+ },
+ "NFL|Baltimore @ Dallas|Baltimore": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Clock Ticking on \u2018Disastrous\u2019 Baltimore Ravens Starter; Week 3 injury report for Baltimore",
+  "opp_health": "Week 3 injury report for Dallas; Troy Aikman salutes Dak Prescott as injuries shadow Dallas Cowboys trip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dallas",
+    "title": "Dallas Cowboys' Thursday Injury Report Includes 4 Players Ruled Out for Week 3",
+    "source": "Sports Illustrated",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Dallas Cowboys vs. Baltimore Ravens matchup in Rio de Janeiro gets new layer of intrigue with mixed bag of injury updates",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "Troy Aikman salutes Dak Prescott as injuries shadow Dallas Cowboys trip",
+    "source": "El Paso Times",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Clock Ticking on \u2018Disastrous\u2019 Baltimore Ravens Starter",
+    "source": "heavy.com",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Week 3 injury report for Baltimore",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "Week 3 injury report for Dallas",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Las Vegas @ New Orleans|New Orleans": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Saints-Raiders Injury Report: New Orleans Gets Several Key Upgrades; Cam Jordan getting back in rhythm for New Orleans Saints after extended injury absence",
+  "opp_health": "Saints Friday Injury Report: 2026 Week 3 vs. Las Vegas Raiders",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New Orleans",
+    "title": "Saints-Raiders Injury Report: New Orleans Gets Several Key Upgrades",
+    "source": "Sports Illustrated",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Cam Jordan getting back in rhythm for New Orleans Saints after extended injury absence",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Saints Friday Injury Report: 2026 Week 3 vs. Las Vegas Raiders",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Las Vegas Raiders-New Orleans Saints FEED topic: Can Raiders\u2019 secondary contain Chris Olave?",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Las Vegas Raiders Have the Best Backup QB Situation \u2014 It\u2019s Not a Surprise",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "New Orleans",
+    "title": "Can the Raiders get their run game on track in New Orleans?",
+    "source": "Las Vegas Review-Journal",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Minnesota @ Tampa Bay|Minnesota": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Vikings Thursday Injury Report: Minnesota's dire position improves with questions remaining about two Buccaneers starters; Vikings Injury Report: One position group already looks dire, and it's one Minnesota can't afford to be weak in",
+  "opp_health": "Tampa Bay Buccaneers Get Bad Injury News on $24 Million 1st-Round Pick Rueben Bain Jr.; Kyler Murray Clears Concussion Protocol, Will Start Against Tampa Bay",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tampa Bay",
+    "title": "Kyler Murray Clears Concussion Protocol, Will Start Against Tampa Bay",
+    "source": "Daily Norseman",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Vikings Injury Report: One position group already looks dire, and it's one Minnesota can't afford to be weak in",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Vikings RB Room Gets Clear Notice Amid Aaron Jones Injury",
+    "source": "heavy.com",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay Buccaneers Get Bad Injury News on $24 Million 1st-Round Pick Rueben Bain Jr.",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Vikings Thursday Injury Report: Minnesota's dire position improves with questions remaining about two Buccaneers starters",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Minnesota Vikings at Tampa Bay Buccaneers: Game Time, Channel, Radio, Streaming and More",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Arizona @ San Francisco|San Francisco": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "San Francisco 49ers Linked to 77-Sack Pass Rusher After Nick Bosa Injury",
+  "opp_health": "Arizona Cardinals first injury report of the week has two defensive starters not participating; Arizona Cardinals place CB Will Johnson on injured reserve, sign Star Thomas",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arizona",
+    "title": "Arizona Cardinals first injury report of the week has two defensive starters not participating",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Cardinals place CB Will Johnson on injured reserve, sign Star Thomas",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Cardinals Starter Makes Surprise Appearance on Wednesday Injury Report",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco 49ers Linked to 77-Sack Pass Rusher After Nick Bosa Injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco 49ers Urged to Reunite With $32 Million WR",
+    "source": "heavy.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "NFL gameday: Brock Purdy 'in prime' for San Francisco 49ers, Patrick Mahomes chases Tom Brady record and Dexter Lawrence leads Cincinnati Bengals Super Bowl charge",
+    "source": "Sky Sports",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Cincinnati @ Pittsburgh|Cincinnati": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Week 3 injury report for Cincinnati",
+  "opp_health": "Pittsburgh Steelers facing major RB depth concerns after flurry of injuries; Bengals officially declare starter doubtful for Week 3 game against Steelers while Pittsburgh has many decisions to make",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Steelers facing major RB depth concerns after flurry of injuries",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Bengals officially declare starter doubtful for Week 3 game against Steelers while Pittsburgh has many decisions to make",
+    "source": "A to Z Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Week 3 injury report for Cincinnati",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "NFL gameday: Brock Purdy 'in prime' for San Francisco 49ers, Patrick Mahomes chases Tom Brady record and Dexter Lawrence leads Cincinnati Bengals Super Bowl charge",
+    "source": "Sky Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Kansas State football was bullied by Cincinnati. Here's how it happened",
+    "source": "The Topeka Capital-Journal",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Cincinnati Bengals at Pittsburgh Steelers - Where to Watch, Stream Info, TV Channel, and Live Updates (September 27, 2026)",
+    "source": "Fubo",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Seattle @ Washington|Seattle": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Former Washington football star placed on short-term injured reserve; NFL News: Washington Commanders GM Provides Critical Jayden Daniels Injury Update",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Washington",
+    "title": "'Do they\u2026' NFL fans question Washington Commanders' immediate response to Jayden Daniels injury",
+    "source": "hitc.com",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "NFL News: Washington Commanders GM Provides Critical Jayden Daniels Injury Update",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "Former Washington football star placed on short-term injured reserve",
+    "source": "uwhuskieswire.usatoday.com",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Seattle Weather: Clear and cool for Huskies football",
+    "source": "FOX 13 Seattle",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Soundgarden release NFL season opener performance from Seattle",
+    "source": "hennemusic",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Gophers Take Down #23 Washington 27-24 in Seattle",
+    "source": "University of Minnesota Athletics",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Houston @ Indianapolis|Houston": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Houston Texans vs. Indianapolis Colts: Injury Report; Week 3 injury report for Houston",
+  "opp_health": "Houston Texans vs. Indianapolis Colts: Injury Report; Indianapolis Colts Injury Report: Who\u2019s In And Who\u2019s Out",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts Injury Report: Week 3 Wednesday",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Texans-Colts Week 3 Injury Report: Houston Rules Out 5 Players, 2 Starters",
+    "source": "Sports Illustrated",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts Injury Report: Who\u2019s In And Who\u2019s Out",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Texans vs. Indianapolis Colts: Injury Report",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Week 3 injury report for Houston",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Houston Texans vs. Indianapolis Colts: Injury Report",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|New York J @ Detroit|Detroit": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Can Detroit survive with four safeties out for Week 3?; Two Detroit Lions Ruled Out Against Jets",
+  "opp_health": "Jets Special Teams Unit Targets a Return to Its Standard; New York Jets No. 2 Receiver Adonai Mitchell Has Finger Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Can Detroit survive with four safeties out for Week 3?"
+  ],
+  "unattributed": [
+   "Two Detroit Lions Ruled Out Against Jets"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Detroit",
+    "title": "Detroit Lions 2026 Week 3 Thursday Injury Report: 2 Out, 3 Limited",
+    "source": "Sports Illustrated",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Two Detroit Lions Ruled Out Against Jets",
+    "source": "Sports Illustrated",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "New York J",
+    "title": "New York Jets No. 2 Receiver Adonai Mitchell Has Finger Injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "New York J",
+    "title": "New York Jets at Lions: Thursday injury reports for both teams",
+    "source": "Jets Wire",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Can Detroit survive with four safeties out for Week 3?",
+    "source": "The Detroit Lions Podcast",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "New York J",
+    "title": "Jets Special Teams Unit Targets a Return to Its Standard",
+    "source": "New York Jets",
+    "date": "Sep 27",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Los Angeles C @ Buffalo|Buffalo": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Buffalo Bills injury report vs. Chargers | Week 3; Buffalo Bills' Injury Updates: Ed Oliver Present, Two Starting WRs Absent on Thursday",
+  "opp_health": "Los Angeles Chargers Place Trey Pipkins III on Injured Reserve; Sign DJ Uiagalelei to Active Roster; Final injury designations ahead of Bills-Chargers in Week 3",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Buffalo",
+    "title": "Buffalo Bills' Joe Brady provides Ed Oliver, DJ Moore injury updates",
+    "source": "Bills Wire",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Buffalo",
+    "title": "Buffalo Bills' Injury Updates: Ed Oliver Present, Two Starting WRs Absent on Thursday",
+    "source": "Sports Illustrated",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Buffalo",
+    "title": "Buffalo Bills injury report vs. Chargers | Week 3",
+    "source": "Buffalo Bills",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Final injury designations ahead of Bills-Chargers in Week 3",
+    "source": "Buffalo Rumblings",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Chargers vs. Bills Injury Report: Thompson Out, Shelley & Lance Questionable for Week 3",
+    "source": "Los Angeles Chargers",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Los Angeles Chargers Place Trey Pipkins III on Injured Reserve; Sign DJ Uiagalelei to Active Roster",
+    "source": "Los Angeles Chargers",
+    "date": "Sep 26",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|New England @ Jacksonville|Jacksonville": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Week 3 injury report for Jacksonville",
+  "opp_health": "New England Patriots head coach Mike Vrabel addresses recent injuries to the Patriots",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New England",
+    "title": "New England Patriots head coach Mike Vrabel addresses recent injuries to the Patriots",
+    "source": "NFL.com",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Week 3 injury report for Jacksonville",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Reacts Survey Results: Jacksonville\u2019s pass rush is still a problem",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Prep football: Jacksonville rallies around Freeney, runs past Cherokee County",
+    "source": "The Anniston Star",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "New England",
+    "title": "+![fREE@\uff33\uff54\uff52\uff45\uff41\uff4ds!] Jacksonville Jaguars vs New England Patriots Game Football \ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 \uff2f\uff2e \uff34\uff56 \uff23\uff48\uff41\uff4e\uff4e\uff45\uff4c 28 September, Full Live Coverage of Jacksonville Jaguars vs New England Patriots Game: Watch the Coppa Italia match live with full coverage on ESPN",
+    "source": "czechinvest.gov.cz",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "New England",
+    "title": "How Patriots\u2019 oldest player went from CFL to his first New England start Sunday",
+    "source": "Boston Herald",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Tennessee @ New York G|New York G": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Giants' QB Options Beyond Jameis Winston: What Comes Next After Jaxson Dart's Injury; Giants Reveal QB Plans Following Jaxson Dart Injury Update",
+  "opp_health": "Tennessee football OL Wendell Moe suffers injury vs Texas; Tennessee-Texas football game final injury report",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York G",
+    "title": "Giants' QB Options Beyond Jameis Winston: What Comes Next After Jaxson Dart's Injury",
+    "source": "Sports Illustrated",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Giants Reveal QB Plans Following Jaxson Dart Injury Update",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Dexter Lawrence opens up on how he knew his Giants run was over \u2014 and his return to \u2018dominance\u2019 with Bengals",
+    "source": "New York Post",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Tennessee",
+    "title": "Tennessee football OL Wendell Moe suffers injury vs Texas",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Tennessee",
+    "title": "Tennessee-Texas football game final injury report",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Tennessee",
+    "title": "Tennessee football fans rip Josh Heupel decisions, Faizon Brandon pass protection",
+    "source": "Knoxville News Sentinel",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Carolina @ Cleveland|Cleveland": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Hassan Haskins tries out for Cleveland; Cleveland Browns news: Nick Chubb retires, and the Panthers await!",
+  "opp_health": "Week 3 injury report for Carolina; Carolina Panthers: Pro Bowler Receives Brutal Injury Update for Week 3",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Cleveland Browns news: Nick Chubb retires, and the Panthers await!"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Browns: Nick Chubb officially retires as a franchise legend",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers: Pro Bowler Receives Brutal Injury Update for Week 3",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers injuries pile up for Browns game, including a star linebacker",
+    "source": "Charlotte Observer",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "Hassan Haskins tries out for Cleveland",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Browns news: Nick Chubb retires, and the Panthers await!",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Week 3 injury report for Carolina",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "NFL|Kansas City @ Miami|Kansas City": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Kansas City Chiefs' final injury report for Week 3 road tilt vs. Miami Dolphins features familiar absences and a big return; Kansas City Chiefs' Thursday injury report for Week 3 tilt vs. Miami Dolphins spells good news for Steve Spagnuolo's pass rush",
+  "opp_health": "Miami Dolphins news: Home opener, injury updates, rebuild outlook",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' first injury report for Miami Dolphins gives the team a few new injuries to navigate in Week 3 road game",
+    "source": "Yahoo Sports",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' Thursday injury report for Week 3 tilt vs. Miami Dolphins spells good news for Steve Spagnuolo's pass rush",
+    "source": "A to Z Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' final injury report for Week 3 road tilt vs. Miami Dolphins features familiar absences and a big return",
+    "source": "A to Z Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Miami Dolphins news: Home opener, injury updates, rebuild outlook",
+    "source": "The Phinsider",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Miami Dolphins vs. Kansas City Chiefs: Memorable games from South Florida",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Kansas City Chiefs at Miami Dolphins: Live updates & commentary from NFL Week 3",
+    "source": "Kansas City Star",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Baltimore @ New York Y|New York Y": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Red Sox Just Got Locker Room Material From Yankees' Game 1 Starter; New York Yankees Announce Player Ruled Out For Remainder Of Season",
+  "opp_health": "Orioles news: Why missing postseason again is especially troubling for Baltimore; Jackson Holliday Shares Surgery Update Ahead of Baltimore Orioles Offseason",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "New York Yankees Announce Player Ruled Out For Remainder Of Season"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baltimore",
+    "title": "Orioles news: Why missing postseason again is especially troubling for Baltimore",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Jackson Holliday Shares Surgery Update Ahead of Baltimore Orioles Offseason",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "New York Yankees Announce Player Ruled Out For Remainder Of Season",
+    "source": "heavy.com",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Yankees Catch Another Major Break After Red Sox Injury Blow",
+    "source": "heavy.com",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Red Sox Just Got Locker Room Material From Yankees' Game 1 Starter",
+    "source": "Sports Illustrated",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Trevor Rogers Comments on His Future After Final Baltimore Orioles Start",
+    "source": "roundtable.io",
+    "date": "Sep 26",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Los Angeles D @ San Francisco|Los Angeles D": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Treinen injures shoulder, no longer an option for Dodgers' playoff 'pen; Dodgers\u2019 Blake Treinen likely to miss playoffs after sustaining injury in bullpen",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers Reliever Suffers Sudden Injury, Ruled Out for Rest of Season in Brutal Development",
+    "source": "Sports Illustrated",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Treinen injures shoulder, no longer an option for Dodgers' playoff 'pen",
+    "source": "MLB.com",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers\u2019 Blake Treinen likely to miss playoffs after sustaining injury in bullpen",
+    "source": "Los Angeles Times",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "Los Angeles Dodgers vs San Francisco Giants Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "San Francisco Giants\u2019 \u2018mom of the year\u2019 defends husband after clip sparks online backlash",
+    "source": "NBC News",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "Los Angeles Dodgers at San Francisco Giants - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Houston @ A's|Houston": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Houston Astros shortstop Jeremy Pe\u00f1a back in lineup against Athletics; Houston Astros place center fielder Daulton Varsho on injured list, ending his regular season",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston",
+    "title": "Houston Astros shortstop Jeremy Pe\u00f1a back in lineup against Athletics",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Astros place center fielder Daulton Varsho on injured list, ending his regular season",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "A's",
+    "title": "Inside App State Athletics: 9.26.26",
+    "source": "App State Athletics",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Chanda Rigby Officially Inducted into the Pensacola State Athletics Hall of Fame Class of 2026",
+    "source": "Troy University Athletics",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "A's",
+    "title": "Athletics 6-5 Astros (Sep 25, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Astros' playoff hopes come down to game 162: What they need to happen",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Pittsburgh @ Detroit|Pittsburgh": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Pirates dodging MLB manager hot seat misses Pittsburgh's bigger problem",
+  "opp_health": "Detroit Tigers Reveal Lineup for Justin Verlander\u2019s Final Start",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pittsburgh",
+    "title": "Pirates dodging MLB manager hot seat misses Pittsburgh's bigger problem",
+    "source": "Rum Bunter",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Tigers Reveal Lineup for Justin Verlander\u2019s Final Start",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh Pirates at Detroit Tigers - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "GameThread: Detroit Tigers vs. Pittsburgh Pirates, 1:10 p.m.",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Justin Verlander makes final start: Where he stands in Detroit Tigers history",
+    "source": "Detroit Free Press",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Detroit",
+    "title": "Photos: See Detroit Tigers go for series win on Justin Verlander's big day at Comerica Park in Detroit on Sept. 26, 2026. See link below \u2b07\ufe0f \ud83d\udcf8 David Rodriguez-Munoz, Detroit Free Press",
+    "source": "facebook.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|New York M @ Washington|New York M": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Francisco Lindor vows return to form following banged-up Mets season: \u2018No other option\u2019",
+  "opp_health": "What to expect from DJ Herz\u2019s return to the Washington Nationals",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Washington",
+    "title": "What to expect from DJ Herz\u2019s return to the Washington Nationals",
+    "source": "federalbaseball.com",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "Francisco Lindor vows return to form following banged-up Mets season: \u2018No other option\u2019",
+    "source": "New York Post",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "New York M",
+    "title": "New York Mets vs Washington Nationals Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "New York Mets vs Washington Nationals Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "New York M",
+    "title": "Mauricio belts two homers to lift Mets",
+    "source": "MLB.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "New York Mets vs Washington Nationals Game Discussion - September 27, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Tampa Bay @ Philadelphia|Tampa Bay": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Tampa Bay starter Griffin Jax leaves after taking line drive off lower back; Franchise royalty: Tampa Bay Rays all-time postseason lineup",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tampa Bay",
+    "title": "Franchise royalty: Tampa Bay Rays all-time postseason lineup",
+    "source": "The Big Lead",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay starter Griffin Jax leaves after taking line drive off lower back",
+    "source": "AP News",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Rays Roundtable: Is Tampa Bay Ready to Make a World Series Run?",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies vs Tampa Bay Rays Game Discussion - September 27, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies vs Tampa Bay Rays Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Tampa Bay Rays at Philadelphia Phillies - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Cleveland @ Kansas City|Cleveland": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cleveland",
+    "title": "Baseball and Cleveland: A Personal Love Language",
+    "source": "Covering the Corner",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Guardians Make It Three Straight AL Central Titles",
+    "source": "FOX Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Guardians score, magic number. Cleveland beats Royals again, wins division",
+    "source": "Akron Beacon Journal",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kansas City",
+    "title": "MLB: Cleveland Guardians at Kansas City Royals",
+    "source": "The Daily News | Texas' Oldest Newspaper",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kansas City",
+    "title": "Cleveland Guardians at Kansas City Royals - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kansas City",
+    "title": "Cleveland Guardians vs Kansas City Royals Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Cincinnati @ Toronto|Toronto": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Through injuries and slumps, Toronto Blue Jays couldn\u2019t recapture the magic",
+  "opp_health": "Reds Play Spoiler, Beat Braves and Former Cincinnati Starter Tyler Mahle; Cincinnati Reds RHP Tony Santillan has hip surgery to remove bone spur",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds Share Surprising Injury News Involving Two Players as Season Winds Down",
+    "source": "Sports Illustrated",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Cincinnati Reds RHP Tony Santillan has hip surgery to remove bone spur",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Reds Play Spoiler, Beat Braves and Former Cincinnati Starter Tyler Mahle",
+    "source": "Yahoo Sports",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Through injuries and slumps, Toronto Blue Jays couldn\u2019t recapture the magic",
+    "source": "Northwest Arkansas Democrat-Gazette",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Blue Jays\u2019 George Springer Sends 3-Word Retirement Decision Update After Toronto House Sale",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Toronto",
+    "title": "Cincinnati Reds vs Toronto Blue Jays \u2013 September 26, 2026",
+    "source": "Redleg Nation",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Arizona @ San Diego|San Diego": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arizona",
+    "title": "Arizona Diamondbacks at San Diego Padres",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Chicago Cubs vs San Diego Padres Box Score - October 01, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Chicago Cubs vs San Diego Padres Box Score - September 29, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "How to buy San Diego Padres vs Chicago Cubs 2026 MLB playoff tickets",
+    "source": "Burlington Free Press",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Diamondbacks at San Diego Padres - MLB Game Summary - Sep 27, 2026 | USA TODAY",
+    "source": "Treasure Coast News",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Arizona",
+    "title": "Watch MLB Mini: Arizona Diamondbacks vs San Diego Padres | Disney+",
+    "source": "Disney Plus",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Los Angeles A @ Seattle|Seattle": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "How injuries, slumps and mistakes doomed the Seattle Mariners in 2026",
+  "opp_health": "Angels Shut Down Pitcher After Only 15 Games With Season-Ending Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles A",
+    "title": "Angels Shut Down Pitcher After Only 15 Games With Season-Ending Injury",
+    "source": "Yahoo Sports",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "How injuries, slumps and mistakes doomed the Seattle Mariners in 2026",
+    "source": "FOX 13 Seattle",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Los Angeles Angels and Seattle Mariners meet in game 4 of series",
+    "source": "foxsports.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "Los Angeles Angels at Seattle Mariners - MLB Game Summary - Sep 26, 2026 | USA TODAY",
+    "source": "Montgomery Advertiser",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "The best Angels Silver Slugger winner every decade since award's inception",
+    "source": "Halo Hangout",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Los Angeles A",
+    "title": "Los Angeles Angels and Seattle Mariners meet in game 4 of series",
+    "source": "foxsports.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Atlanta @ Miami|Atlanta": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more; Atlanta Braves News: Atlanta Clinches 2026 NL East Crown, Robert Suarez Returns to Mound, More",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves News: Atlanta Clinches 2026 NL East Crown, Robert Suarez Returns to Mound, More",
+    "source": "Battery Power",
+    "date": "Sep 21",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more",
+    "source": "Battery Power",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Cannarella, Dishmey, Compton, Matheus Recognized with Miami Marlins Minor League Awards",
+    "source": "MLB.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Atlanta Braves vs Miami Marlins Box Score - September 25, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves at Miami Marlins - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Miami",
+    "title": "Atlanta Braves at Miami Marlins - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Colorado @ Chicago WS|Chicago WS": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Colorado",
+    "title": "Arizona Diamondbacks at Colorado Rockies - MLB Game Summary - Sep 24, 2026",
+    "source": "USA Today",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado Rockies at Chicago White Sox - Where to Watch, Stream Info, TV Channel, and Live Updates (September 25, 2026)",
+    "source": "Fubo",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Colorado",
+    "title": "MLB: Colorado Rockies at Chicago White Sox",
+    "source": "The Daily News | Texas' Oldest Newspaper",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Disappointed? Sure. But White Sox are excited for playoffs",
+    "source": "MLB.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Photos: Colorado Rockies 9, Chicago White Sox 6",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Takeaways After White Sox Lose Division on Horrible Davis Martin Outing",
+    "source": "Sports Illustrated",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|St. Louis @ Milwaukee|Milwaukee": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Milwaukee",
+    "title": "St. Louis Cardinals vs Milwaukee Brewers Game Discussion Saturday",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "St. Louis Cardinals vs Milwaukee Brewers Game Discussion Saturday",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Christian Yelich named Milwaukee Brewers' first official team captain",
+    "source": "Milwaukee Journal Sentinel",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers beat the St.Louis Cardinals 3-2",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "Milwaukee Brewers vs St. Louis Cardinals Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "St. Louis",
+    "title": "Milwaukee Brewers beat the St.Louis Cardinals 3-2",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLB|Texas @ Minnesota|Texas": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas",
+    "title": "Texas Rangers at Minnesota Twins - MLB Game Summary - Sep 26, 2026 | USA TODAY",
+    "source": "Coldwater Daily Reporter",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Texas",
+    "title": "Texas Rangers' pivotal matchup vs. Minnesota Twins facing weather delay",
+    "source": "Yahoo Sports",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Texas Rangers at Minnesota Twins - MLB Game Summary - Sep 26, 2026 | USA TODAY",
+    "source": "Detroit Free Press",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Texas",
+    "title": "Minnesota Twins vs Texas Rangers Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Texas Rangers at Minnesota Twins - MLB Game Summary - Sep 26, 2026",
+    "source": "USA Today",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Twins vs Texas Rangers Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ },
+ "MLS|Miami @ Columbus|Miami": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Is Lionel Messi playing today? Confirmed lineups for Inter Miami vs San Diego FC in 2026 MLS season; Columbus Crew vs Inter Miami: Predictions, Picks, Odds & Lineups",
+  "opp_health": "Columbus Crew vs Inter Miami Prediction, Betting Tips, Lineups & Odds | 27 Sep 2026; Columbus Crew vs Inter Miami: Predictions, Picks, Odds & Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami",
+    "title": "Columbus Crew vs Inter Miami Preview \u2013 prediction, team news, lineups | MLS 2026",
+    "source": "Khel Now",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Inter Miami Preview \u2013 prediction, team news, lineups | MLS 2026",
+    "source": "Khel Now",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Is Lionel Messi playing today? Confirmed lineups for Inter Miami vs San Diego FC in 2026 MLS season",
+    "source": "MSN",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Columbus Crew vs Inter Miami: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Inter Miami: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Inter Miami Prediction, Betting Tips, Lineups & Odds | 27 Sep 2026",
+    "source": "Sportsgambler",
+    "date": "Sep 27",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-09-27T13:11Z"
+ }
+}
