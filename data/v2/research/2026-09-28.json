@@ -1,0 +1,3136 @@
+{
+ "ATP Tennis|Kamil Majchrzak vs Arthur Fils|Arthur Fils": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Arthur Fils forced into Tokyo qualifying after missing entry deadline",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils forced into Tokyo qualifying after missing entry deadline",
+    "source": "Tennis Tonic",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Kamil Majchrzak",
+    "title": "Lorenzo Sonego vs Kamil Majchrzak \u00b7 Qualifying Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kamil Majchrzak",
+    "title": "Yunchaokete Bu vs Kamil Majchrzak \u00b7 Round 2 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils vs Kamil Majchrzak - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils becomes first player born in 2004 to enter ATP Top 10",
+    "source": "en.tennistemple.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kamil Majchrzak",
+    "title": "Arthur Fils vs Kamil Majchrzak - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:14Z"
+ },
+ "ATP Tennis|Marco Trungelliti vs Alex Molcan|Marco Trungelliti": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Marco Trungelliti",
+    "title": "Mart\u00edn Landaluce vs Marco Trungelliti \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Marco Trungelliti",
+    "title": "Martin Landaluce vs Marco Trungelliti - Match ATP - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Alex Mol\u010dan vs V\u00edt Kop\u0159iva \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Alex Molcan vs Vit Kopriva - Match ATP - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Marco Trungelliti",
+    "title": "Martin Landaluce vs Marco Trungelliti: Total Games",
+    "source": "Coinbase",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Jaume Munar vs Aleksandar Kovacevic|Jaume Munar": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Aleksandar Kovacevic",
+    "title": "Lloyd Harris vs Aleksandar Kovacevic - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Aleksandar Kovacevic",
+    "title": "Lloyd Harris vs Aleksandar Kova\u010devi\u0107 \u00b7 Round 1 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Jaume Munar",
+    "title": "Jaume Munar vs Marcos Giron \u00b7 Qualifying Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Aleksandar Kovacevic",
+    "title": "Zachary Svajda vs Aleksandar Kova\u010devi\u0107 \u00b7 Qualifying Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Jaume Munar",
+    "title": "Jaume Munar vs Marcos Giron: Set 1 Winner",
+    "source": "Coinbase",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Alexander Zverev vs Cameron Norrie|Alexander Zverev": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "The earliest Alexander Zverev can become world number one after Jannik Sinner\u2019s latest withdrawal; \u201cIt doesn't matter\u201d: Alexander Zverev responds to huge No.1 opportunity after Sinner withdrawal",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexander Zverev",
+    "title": "\u201cIt doesn't matter\u201d: Alexander Zverev responds to huge No.1 opportunity after Sinner withdrawal",
+    "source": "Tennisuptodate.com",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "The earliest Alexander Zverev can become world number one after Jannik Sinner\u2019s latest withdrawal",
+    "source": "Tennis365",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "Alexander Zverev vs Cameron Norrie - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Cameron Norrie",
+    "title": "Alexander Zverev vs Cameron Norrie - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Cameron Norrie",
+    "title": "Alexander Zverev vs Cameron Norrie \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Juncheng Shang vs Sebastian Baez|Juncheng Shang": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sebastian Baez",
+    "title": "Sebastian Baez vs Jenson Brooksby - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Juncheng Shang",
+    "title": "Juncheng Shang vs Adrian Mannarino - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Juncheng Shang",
+    "title": "Juncheng Shang vs Adrian Mannarino \u00b7 Round 1 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Juncheng Shang",
+    "title": "Juncheng Shang vs Sebasti\u00e1n B\u00e1ez \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Yunchaokete Bu vs Juan Manuel Cerundolo|Yunchaokete Bu": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Juan Manuel Cerundolo vs Yi Zhou - Match ATP - Chengdu Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Juan Manuel Cerundolo vs Alejandro Davidovich Fokina - Match ATP - Chengdu Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Yunchaokete Bu",
+    "title": "Yunchaokete Bu vs Kamil Majchrzak - Match ATP - AITO Hangzhou Open 2026 Men\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Yunchaokete Bu",
+    "title": "Yunchaokete Bu vs Kamil Majchrzak \u00b7 Round 2 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Yunchaokete Bu",
+    "title": "Juan Manuel Cer\u00fandolo vs Yunchaokete Bu \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Novak Djokovic vs Nuno Borges|Novak Djokovic": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Djokovic gives fitness update & discusses China's 'NoleFam' ahead of Beijing",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Novak Djokovic",
+    "title": "Djokovic gives fitness update & discusses China's 'NoleFam' ahead of Beijing",
+    "source": "ATP Tour",
+    "date": "Sep 28",
+    "watch": true
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "Nuno Borges vs Camilo Ugo Carabelli \u00b7 Round 1 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "Nuno Borges vs Novak Djokovic - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "Novak Djokovic gives candid update on his body ahead of China Open return",
+    "source": "Tennis365",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "Nuno Borges vs Novak Djokovic - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "Nuno Borges vs Novak Djokovic \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Thiago Agustin Tirante vs Jan-Lennard Struff|Thiago Agustin Tirante": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Thiago Agustin Tirante",
+    "title": "Jan-Lennard Struff vs Thiago Agustin Tirante - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Jan-Lennard Struff vs Thiago Agustin Tirante - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Jan-Lennard Struff vs Thiago Agust\u00edn Tirante \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Jakub Mensik vs Alexander Bublik|Jakub Mensik": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jakub Mensik",
+    "title": "Laver Cup \u2013 Team Europe Triumphs as Cobolli/Mensik and Zverev Seal Victory",
+    "source": "Tennis World Italia",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Jakub Mensik",
+    "title": "Alexander Bublik vs Jakub Mensik - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Jakub Mensik",
+    "title": "Alexander Bublik vs Jakub Men\u0161\u00edk \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "\"I never cared as much in a quarterfinal of a slam\" - Alexander Bublik shares how much competing at the Laver Cup meant",
+    "source": "Tennisuptodate.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Jakub Mensik - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Jakub Men\u0161\u00edk \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Mariano Navone vs Alex de Minaur|Alex de Minaur": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alex de Minaur",
+    "title": "Alex de Minaur vs Mariano Navone - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Alex de Minaur vs Mariano Navone \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "The new ATP top 10 rankings with changes for Alex de Minaur and Taylor Fritz",
+    "source": "Tennishead",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Mariano Navone",
+    "title": "Alex de Minaur vs Mariano Navone - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Mariano Navone",
+    "title": "Alex de Minaur vs Mariano Navone \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Quentin Halys vs Ignacio Buse|Quentin Halys": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Quentin Halys",
+    "title": "Quentin Halys vs Roman Safiullin \u00b7 Round 2 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Quentin Halys",
+    "title": "Ignacio Buse vs Quentin Halys - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Quentin Halys",
+    "title": "Ignacio Buse vs Quentin Halys \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Quentin Halys - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Quentin Halys \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Andrey Rublev vs Tallon Griekspoor|Andrey Rublev": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tallon Griekspoor",
+    "title": "Denis Shapovalov Faces Tallon Griekspoor in ATP Chengdu First Round",
+    "source": "SuaraGarut.ID",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tallon Griekspoor",
+    "title": "Tallon Griekspoor vs Denis Shapovalov \u00b7 Round 1 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Andrey Rublev",
+    "title": "Hugo Gaston vs Andrey Rublev \u00b7 Quarterfinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Andrey Rublev",
+    "title": "Kyrian Jacquet vs Andrey Rublev \u00b7 Semifinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Andrey Rublev",
+    "title": "Tallon Griekspoor vs Andrey Rublev \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Tallon Griekspoor",
+    "title": "Tallon Griekspoor vs Andrey Rublev \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Roman Safiullin vs Flavio Cobolli|Flavio Cobolli": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Roman Safiullin",
+    "title": "Daniil Medvedev vs Roman Safiullin - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Flavio Cobolli",
+    "title": "Roman Safiullin vs Flavio Cobolli - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Flavio Cobolli",
+    "title": "ATP BEIJING DRAW, PRIZE MONEY. Zverev, Auger-Aliassime, Medvedev, Cobolli are the leaders",
+    "source": "Tennis Tonic",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Flavio Cobolli",
+    "title": "Roman Safiullin vs Flavio Cobolli \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Roman Safiullin",
+    "title": "Roman Safiullin vs Flavio Cobolli - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Roman Safiullin",
+    "title": "Roman Safiullin vs Flavio Cobolli \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Learner Tien vs Hubert Hurkacz|Learner Tien": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Learner Tien",
+    "title": "John McEnroe claims Learner Tien has a 'problem' despite calling him the 'most skilled American player'",
+    "source": "Tennishead",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Hubert Hurkacz vs Denis Shapovalov - Match ATP - Chengdu Open 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Learner Tien",
+    "title": "Learner Tien vs Hubert Hurkacz - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Learner Tien",
+    "title": "Learner Tien vs Hubert Hurkacz \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Learner Tien vs Hubert Hurkacz - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Learner Tien vs Hubert Hurkacz \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Karen Khachanov vs Felix Auger-Aliassime|Felix Auger-Aliassime": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Felix Auger-Aliassime",
+    "title": "Karen Khachanov vs Felix Auger-Aliassime - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Felix Auger-Aliassime",
+    "title": "ATP BEIJING DRAW, PRIZE MONEY. Zverev, Auger-Aliassime, Medvedev, Cobolli are the leaders",
+    "source": "Tennis Tonic",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Felix Auger-Aliassime",
+    "title": "ATP China Open draw: Zverev-Djokovic blockbuster on the cards, Auger-Aliassime gets brutal opener",
+    "source": "Tennis365",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Karen Khachanov",
+    "title": "Karen Khachanov vs Felix Auger-Aliassime - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Karen Khachanov",
+    "title": "Karen Khachanov vs F\u00e9lix Auger-Aliassime \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Tomas Machac vs Arthur Gea|Arthur Gea": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Gea",
+    "title": "Soonwoo Kwon Vs Arthur Gea \ud83c\udfbeLIVE SCORE TENNIS ATP LOS CABOS MEXICO OPEN 2026 | R32 Forge Fc (NmV68WfY5c)",
+    "source": "Unisba Media",
+    "date": "Sep 21",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Yannick Hanfmann vs Tomas Machac - Match ATP - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Yannick Hanfmann vs Tomas Machac: Set 2 Winner",
+    "source": "Coinbase",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Stefanos Tsitsipas vs Rinky Hijikata|Stefanos Tsitsipas": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rinky Hijikata",
+    "title": "Rinky Hijikata vs Andrey Rublev - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Rinky Hijikata",
+    "title": "Rinky Hijikata vs Dalibor Svrcina - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Stefanos Tsitsipas",
+    "title": "Stefanos Tsitsipas vs Yoshihito Nishioka \u00b7 Qualifying Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Rinky Hijikata",
+    "title": "Rinky Hijikata vs Camilo Ugo Carabelli \u00b7 Qualifying Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Alex Michelsen vs Carlos Alcaraz|Carlos Alcaraz": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "ATP Japan Open draw: Carlos Alcaraz could face four Americans as Holger Rune returns to ATP Tour action; Carlos Alcaraz injury confession rocked Laver Cup captain",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Carlos Alcaraz and Jannik Sinner told they are \u2018not strong enough\u2019 after 2026 injuries",
+    "source": "Tennis365",
+    "date": "Sep 22",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Carlos Alcaraz injury confession rocked Laver Cup captain",
+    "source": "Tennis365",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "ATP Japan Open draw: Carlos Alcaraz could face four Americans as Holger Rune returns to ATP Tour action",
+    "source": "Tennis365",
+    "date": "Sep 28",
+    "watch": true
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Alcaraz faces opening Michelsen test in Tokyo, Nishikori to play Tiafoe in farewell",
+    "source": "ATP Tour",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Carlos Alcaraz vs Alex Michelsen \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Rei Sakamoto vs Matteo Arnaldi|Rei Sakamoto": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rei Sakamoto",
+    "title": "Matteo Arnaldi vs Rei Sakamoto - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "Matteo Arnaldi vs Rei Sakamoto \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Matteo Arnaldi",
+    "title": "Matteo Arnaldi vs Rei Sakamoto - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Matteo Arnaldi",
+    "title": "Matteo Arnaldi vs Rei Sakamoto \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Sho Shimabukuro vs Denis Shapovalov|Denis Shapovalov": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sho Shimabukuro",
+    "title": "Sho Shimabukuro vs Hugo Gaston - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Sho Shimabukuro",
+    "title": "Sho Shimabukuro vs Hugo Gaston \u00b7 Round 1 \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Adrian Mannarino vs Denis Shapovalov \u00b7 Quarterfinal \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Hubert Hurkacz vs Denis Shapovalov - Match ATP - Chengdu Open 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Denis Shapovalov vs Sho Shimabukuro \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Sho Shimabukuro",
+    "title": "Denis Shapovalov vs Sho Shimabukuro \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Alejandro Tabilo vs Tommy Paul|Tommy Paul": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alejandro Tabilo",
+    "title": "Alejandro Tabilo vs Adrian Mannarino \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Alejandro Tabilo vs Tommy Paul - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Alejandro Tabilo vs Tommy Paul \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Tabilo",
+    "title": "Alejandro Tabilo vs Tommy Paul - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Tabilo",
+    "title": "Alejandro Tabilo vs Tommy Paul \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Lorenzo Musetti vs Arthur Fery|Lorenzo Musetti": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Musetti Takes J-Lo for a Twirl in Milan",
+    "source": "Tennis Now",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "\u201cHe\u2019s been a brilliant part of the team,\u201d Tim Henman hails Arthur Fery at Laver Cup",
+    "source": "Tennis Tonic",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Lorenzo Musetti vs Arthur Fery - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Lorenzo Musetti vs Arthur Fery \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Lorenzo Musetti vs Arthur Fery - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Lorenzo Musetti vs Arthur Fery \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Holger Rune vs Kyrian Jacquet|Holger Rune": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "ATP Japan Open draw: Carlos Alcaraz could face four Americans as Holger Rune returns to ATP Tour action; Rune Returns From 11-Month Absence With Double Davis Cup Victory For Denmark",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Holger Rune",
+    "title": "Rune Returns From 11-Month Absence With Double Davis Cup Victory For Denmark",
+    "source": "Sports Illustrated",
+    "date": "Sep 23",
+    "watch": true
+   },
+   {
+    "side": "Holger Rune",
+    "title": "ATP Japan Open draw: Carlos Alcaraz could face four Americans as Holger Rune returns to ATP Tour action",
+    "source": "Tennis365",
+    "date": "Sep 28",
+    "watch": true
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "F\u00e1bi\u00e1n Marozs\u00e1n vs Kyrian Jacquet \u00b7 Quarterfinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Holger Rune",
+    "title": "Holger Rune vs Kyrian Jacquet - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Holger Rune vs Kyrian Jacquet - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Holger Rune vs Kyrian Jacquet \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Casper Ruud vs Luciano Darderi|Casper Ruud": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Casper Ruud recalls how he felt when Roger Federer retired at the 2022 Laver Cup",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Casper Ruud",
+    "title": "Casper Ruud recalls how he felt when Roger Federer retired at the 2022 Laver Cup",
+    "source": "The Tennis Gazette",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Luciano Darderi Net Worth in 2026: Prize Money, Coach, Career Earnings",
+    "source": "surprisesports",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "Luciano Darderi vs Casper Ruud - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "Luciano Darderi vs Casper Ruud \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Luciano Darderi vs Casper Ruud - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Luciano Darderi vs Casper Ruud \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Brandon Nakashima vs Ugo Humbert|Brandon Nakashima": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Brandon Nakashima",
+    "title": "Nakashima beats Mensik to even up Laver Cup at 1-1 after opening session. Alcaraz to play doubles",
+    "source": "FOX Sports",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Brandon Nakashima",
+    "title": "Brandon Nakashima vs Ugo Humbert \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Ugo Humbert",
+    "title": "Brandon Nakashima vs Ugo Humbert \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Jiri Lehecka vs Zizou Bergs|Jiri Lehecka": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jiri Lehecka",
+    "title": "Jiri Lehecka vs Zizou Bergs - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Jiri Lehecka vs Zizou Bergs - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Ji\u0159\u00ed Lehe\u010dka vs Zizou Bergs \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Alejandro Davidovich Fokina vs Matteo Berrettini|Alejandro Davidovich Fokina": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alexandre Muller vs Alejandro Davidovich Fokina: Scores, Results Lineups, H2H & Odds",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "Alexandre Muller vs Alejandro Davidovich Fokina: Scores, Results Lineups, H2H & Odds",
+    "source": "365Scores",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Matteo Berrettini",
+    "title": "ATP 500 Pechino e Tokyo: La situazione aggiornata Md e Qualificazioni. Matteo Berrettini entra a Tokyo",
+    "source": "LiveTennis.it - Il portale italiano del tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "ATP: Rublev hits 400 wins, Davidovich Fokina back in a final",
+    "source": "en.tennistemple.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alejandro Davidovich Fokina",
+    "title": "Alejandro Davidovich Fokina vs Matteo Berrettini \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Matteo Berrettini",
+    "title": "Matteo Arnaldi vs Rei Sakamoto - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Matteo Berrettini",
+    "title": "Alejandro Davidovich Fokina vs Matteo Berrettini \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Valentin Vacherot vs Alexander Blockx|Alexander Blockx": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexander Blockx",
+    "title": "Alexander Blockx Incredible Ball-striking In Estoril Open Practice #professionaltennis #atp #sports Suzuki (MKOFFrursu)",
+    "source": "Unisba Media",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Lloyd Harris \u00b7 Round 2 \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Tennis: Valentin Vacherot starts his Asian tour under pressure at the Chengdu 250",
+    "source": "nice-premium.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Alexander Blockx",
+    "title": "Valentin Vacherot vs Alexander Blockx \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Alexander Blockx \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Frances Tiafoe vs Kei Nishikori|Frances Tiafoe": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Frances Tiafoe",
+    "title": "ATP TOKYO DRAW, PRIZE MONEY. Alcaraz, Tiafoe, Fritz, Jodar are the top seeds",
+    "source": "Tennis Tonic",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Frances Tiafoe",
+    "title": "\"Carlos Alcaraz getting harder draws than Zverev in Slams\": Fans react to ATP Tokyo 2026 draw ft. Frances Tiafoe, Taylor Fritz",
+    "source": "Sportskeeda",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Frances Tiafoe",
+    "title": "Kei Nishikori vs Frances Tiafoe - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kei Nishikori",
+    "title": "Kei Nishikori vs Frances Tiafoe - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kei Nishikori",
+    "title": "Tokyo ATP 500 Draw Revealed: Alcaraz, Rune and Nishikori Headline",
+    "source": "en.tennistemple.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kei Nishikori",
+    "title": "Kei Nishikori vs Frances Tiafoe \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Roman Safiullin vs Daniil Medvedev|Daniil Medvedev": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev vs Roman Safiullin - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev vs Roman Safiullin \u00b7 Semifinal \u00b7 ATP Hangzhou",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Roman Safiullin",
+    "title": "Daniil Medvedev vs Roman Safiullin - Match ATP - Hangzhou Open 2026 Men\u2019s Singles 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev Advances to Hangzhou Semifinals After Three Set Win",
+    "source": "SuaraGarut.ID",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Roman Safiullin",
+    "title": "Roman Safiullin vs Flavio Cobolli - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Roman Safiullin",
+    "title": "Roman Safiullin vs Flavio Cobolli \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "ATP Tennis|Denis Shapovalov vs Hubert Hurkacz|Hubert Hurkacz": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Hubert Hurkacz vs Denis Shapovalov - Match ATP - Chengdu Open 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Adrian Mannarino vs Denis Shapovalov \u00b7 Quarterfinal \u00b7 ATP Chengdu",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Hubert Hurkacz vs Denis Shapovalov - Match ATP - Chengdu Open 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Learner Tien vs Hubert Hurkacz - Match ATP - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Hubert Hurkacz",
+    "title": "Learner Tien vs Hubert Hurkacz \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Denis Shapovalov vs Sho Shimabukuro \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Robin Montgomery vs Anna-Lena Friedsam|Robin Montgomery": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Robin Montgomery",
+    "title": "South Korean wild card Park upsets Montgomery in Seoul for first WTA win",
+    "source": "WTA Tennis",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Anna-Lena Friedsam",
+    "title": "Anna-Lena Friedsam/Aliaksandra Sasnovich - Erin Routliffe/Aldila Sutjiadi",
+    "source": "TNT Sports",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Anna-Lena Friedsam",
+    "title": "Friedsam / Sasnovich vs Routliffe / Sutjiadi \u00b7 Round 1 \u00b7 WTA Singapore",
+    "source": "Tennis.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Robin Montgomery",
+    "title": "Robin Montgomery vs Aran Teixido Garcia - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Anna-Lena Friedsam",
+    "title": "Anastasia Kulikova vs Anna-Lena Friedsam - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Robin Montgomery",
+    "title": "Montgomery vs. Teixido Garcia | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Aliaksandra Sasnovich vs Varvara Lepchenko|Aliaksandra Sasnovich": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Aliaksandra Sasnovich vs Junhan Zhang \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Andreeva vs. Sasnovich | Round of 16 Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Aliaksandra Sasnovich vs Junhan Zhang - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Ulrikke Eikeri vs Varvara Lepchenko - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Ulrikke Eikeri vs Varvara Lepchenko \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Varvara Lepchenko",
+    "title": "Eikeri vs. Lepchenko | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Ksenia Zaytseva vs Storm Hunter|Storm Hunter": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Storm Hunter",
+    "title": "Ruien Zhang vs Storm Hunter - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Storm Hunter",
+    "title": "Ruien Zhang vs Storm Hunter \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Ksenia Zaytseva",
+    "title": "Tamara Zidan\u0161ek vs Ksenia Zaytseva \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Storm Hunter",
+    "title": "Zhang vs. Hunter | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Ksenia Zaytseva",
+    "title": "Zidansek vs. Zaytseva | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Ksenia Zaytseva",
+    "title": "Tamara Zidansek vs Ksenia Zaytseva - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Han Shi vs Elvina Kalieva|Elvina Kalieva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Elvina Kalieva",
+    "title": "Elvina Kalieva vs Ellen Perez \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Tereza Mihalikova vs Han Shi - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Elvina Kalieva",
+    "title": "Elvina Kalieva vs Han Shi - Match WTA - China Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Elvina Kalieva",
+    "title": "Elvina Kalieva vs Ellen Perez - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Elvina Kalieva vs Han Shi - Match WTA - China Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Mihalikova vs. Shi | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Andrea Lazaro Garcia vs Linda Fruhvirtova|Linda Fruhvirtova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "Ye vs. Fruhvirtova | Qualifying China Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Andrea Lazaro Garcia",
+    "title": "Lazaro Garcia vs. Tian | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "Ye Shiyu vs Linda Fruhvirtova - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Andrea Lazaro Garcia",
+    "title": "Andrea Lazaro Garcia vs Tian Jialin - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "Andrea Lazaro Garcia vs Linda Fruhvirtova - Match WTA - China Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Andrea Lazaro Garcia",
+    "title": "Andrea Lazaro Garcia vs Linda Fruhvirtova - Match WTA - China Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Valeria Savinykh vs Katarzyna Kawa|Katarzyna Kawa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Katarzyna Kawa",
+    "title": "Kawa vs. Matsuda | Qualifying China Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Katarzyna Kawa",
+    "title": "Katarzyna Kawa vs Rinko Matsuda - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Katarzyna Kawa",
+    "title": "Katarzyna Kawa vs Rinko Matsuda \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Valeria Savinykh",
+    "title": "Valeria Savinykh vs Irene Burillo Escorihuela \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Valeria Savinykh",
+    "title": "Valeria Savinykh - Irene Burillo Escorihuela 2-0",
+    "source": "Flashscore.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Valeria Savinykh",
+    "title": "Valeria Savinykh vs Irene Burillo - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Xiaodi You vs Marina Bassols Ribera|Marina Bassols Ribera": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Xiaodi You",
+    "title": "Dang vs. You | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Bassols Ribera vs Nicholls",
+    "source": "Coinbase",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Marina Bassols Ribera vs Olivia Nicholls \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Xiaodi You",
+    "title": "Yiming Dang vs Xiaodi You - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Bassols Ribera vs. Nicholls | Qualifying China Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Yuliia Starodubtseva vs Alina Charaeva|Yuliia Starodubtseva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alina Charaeva",
+    "title": "Bondar vs. Charaeva | Round of 16 Korea Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Yuliia Starodubtseva",
+    "title": "Yuliia Starodubtseva vs Alina Charaeva \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Yuliia Starodubtseva",
+    "title": "Yuliia Starodubtseva vs Alina Charaeva \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Yuliia Starodubtseva vs Alina Charaeva \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Yuliia Starodubtseva vs Alina Charaeva \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Aoi Ito vs Kimberly Birrell|Kimberly Birrell": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Maya Joint vs Kimberly Birrell: Scores, Results Lineups, H2H & Odds",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kimberly Birrell",
+    "title": "Maya Joint vs Kimberly Birrell: Scores, Results Lineups, H2H & Odds",
+    "source": "365Scores",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Aoi Ito",
+    "title": "Hibino vs. Ito | Qualifying Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Kimberly Birrell",
+    "title": "Rankings Watch: Fernandez back in Top 30; Gibson, Birrell break Top 50",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kimberly Birrell",
+    "title": "Aoi Ito vs Kimberly Birrell \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Aoi Ito",
+    "title": "Aoi Ito vs Kimberly Birrell \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Aoi Ito",
+    "title": "Aoi Ito vs Kimberly Birrell \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Anastasia Zakharova vs Yushan Shao|Anastasia Zakharova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Former Seoul champ Ostapenko powers past Zakharova; first win since July",
+    "source": "WTA Tennis",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Yushan Shao vs Anastasia Zakharova \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Yushan Shao vs Anastasia Zakharova \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Yushan Shao",
+    "title": "Yushan Shao vs Anastasia Zakharova \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Yushan Shao",
+    "title": "Yushan Shao vs Anastasia Zakharova \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Ashlyn Krueger vs Sofia Kenin|Ashlyn Krueger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sofia Kenin",
+    "title": "Charaeva outlasts Kenin for 2:47 comeback victory in Seoul first round",
+    "source": "WTA Tennis",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Sofia Kenin",
+    "title": "Alina Charaeva Faces Sofia Kenin in Korea Open Opening Round",
+    "source": "SuaraGarut.ID",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Sofia Kenin",
+    "title": "Alina Charaeva vs Sofia Kenin \u00b7 Round 1 \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 22",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Katerina Siniakova vs Magda Linette|Katerina Siniakova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Katerina Siniakova",
+    "title": "Magda Linette vs Katerina Siniakova - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Magda Linette vs Katerina Siniakova - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Magda Linette vs Kate\u0159ina Siniakov\u00e1 \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Magda Linette vs Kate\u0159ina Siniakov\u00e1 \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Lanlana Tararudee vs Camila Osorio|Lanlana Tararudee": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Lanlana Tararudee vs Maya Joint - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Tararudee vs. Park | Round of 16 Korea Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Lanlana Tararudee vs Camila Osorio \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Camila Osorio",
+    "title": "Lanlana Tararudee vs Camila Osorio \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Xinran Sun vs Eva Lys|Eva Lys": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Eva Lys",
+    "title": "\u201cSo Disappointed\u201d- Elena-Gabriela Ruse Defends Eva Lys After Loss With Blunt Message to Critics",
+    "source": "aol.ca",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Eva Lys",
+    "title": "Ruse cruises past Lys to reach Seoul second round",
+    "source": "WTA Tennis",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Eva Lys",
+    "title": "Eva Lys vs Xinran Sun \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Xinran Sun",
+    "title": "Eva Lys vs Xinran Sun \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Daria Kasatkina vs Paula Badosa|Paula Badosa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daria Kasatkina",
+    "title": "Sasnovich ends Kasatkina challenge, sets up Andreeva meeting",
+    "source": "WTA Tennis",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Paula Badosa",
+    "title": "Podoroska clips Badosa in Sao Paulo; first Argentinian to make a WTA final since 2013",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Lin Zhu vs Alycia Parks|Alycia Parks": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alycia Parks",
+    "title": "Parks vs. Fernandez | Round of 16 Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Lin Zhu \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Lin Zhu \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Lin Zhu",
+    "title": "Alycia Parks vs Lin Zhu \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Lin Zhu",
+    "title": "Alycia Parks vs Lin Zhu \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Panna Udvardy vs Xinyu Gao|Panna Udvardy": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Panna Udvardy",
+    "title": "Xinyu Gao vs Panna Udvardy \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Xinyu Gao",
+    "title": "Xinyu Gao vs Panna Udvardy \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Lilli Tagger vs Elena-Gabriela Ruse|Lilli Tagger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Anna Bondar vs Elena-Gabriela Ruse - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Elena-Gabriela Ruse vs Lilli Tagger - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Elena-Gabriela Ruse vs Lilli Tagger \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Elena-Gabriela Ruse vs Lilli Tagger - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Elena-Gabriela Ruse vs Lilli Tagger \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Alina Korneeva vs Viktorija Golubic|Alina Korneeva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alina Korneeva",
+    "title": "Taylah Preston vs Alina Korneeva - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Alina Korneeva",
+    "title": "Korneeva advances to Korea Open semifinal, faces Joint",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Alina Korneeva",
+    "title": "Viktorija Golubic vs Alina Korneeva \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Viktorija Golubic",
+    "title": "Viktorija Golubic vs Alina Korneeva \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Janice Tjen vs Anhelina Kalinina|Janice Tjen": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Anhelina Kalinina",
+    "title": "Svitolina and Kalinina star as Ukraine thrash Italy to reach maiden BJK Cup final",
+    "source": "Flashscore.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Janice Tjen",
+    "title": "Janice Tjen vs Anhelina Kalinina \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Janice Tjen",
+    "title": "Janice Tjen vs Anhelina Kalinina \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Anhelina Kalinina",
+    "title": "Janice Tjen vs Anhelina Kalinina \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Anhelina Kalinina",
+    "title": "Janice Tjen vs Anhelina Kalinina \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Taylah Preston vs Tamara Korpatsch|Taylah Preston": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Taylah Preston",
+    "title": "Preston vs. Korneeva | Quarterfinals Korea Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 25",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Taylah Preston vs Alina Korneeva - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Taylah Preston vs Tamara Korpatsch \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Tamara Korpatsch",
+    "title": "Taylah Preston vs Tamara Korpatsch \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Mayar Sherif Ahmed Abdelaziz vs Polina Kudermetova|Polina Kudermetova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Polina Kudermetova",
+    "title": "Rakhimova edges Polina Kudermetova in all-Uzbek first round in Seoul",
+    "source": "WTA Tennis",
+    "date": "Sep 21",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Mayar Sherif vs Polina Kudermetova \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Yue Yuan vs Oleksandra Oliynykova|Yue Yuan": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Yue Yuan",
+    "title": "De\u021biuc / Khromacheva vs Liang / Yuan \u00b7 Quarterfinal \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Chwalinska races past Oliynykova to reach Singapore quarterfinals",
+    "source": "WTA Tennis",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Yue Yuan",
+    "title": "Chan / Wu vs Liang / Yuan \u00b7 Semifinal \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Oliynykova vs. Chwalinska | Round of 16 Singapore Tennis Open presented by BNP Paribas 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Yue Yuan",
+    "title": "Oleksandra Oliynykova vs Yue Yuan \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Oleksandra Oliynykova vs Yue Yuan \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Darja Vidmanova vs Maria Timofeeva|Maria Timofeeva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Darja Vidmanova",
+    "title": "Vidmanova vs. Iyengar | Qualifying US Open 2025",
+    "source": "WTA Tennis",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Maria Timofeeva",
+    "title": "Maria Timofeeva vs Reese Brantmeier \u00b7 Final \u00b7 WTA 125K Porto, Portugal",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Maria Timofeeva",
+    "title": "Maria Timofeeva wins WTA 125 tournament in Porto",
+    "source": "uzdaily.uz",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Maria Timofeeva",
+    "title": "Darja Vi\u010fmanov\u00e1 vs Maria Timofeeva \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Sinja Kraus vs Maya Joint|Maya Joint": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Maya Joint vs Kimberly Birrell: Scores, Results Lineups, H2H & Odds",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maya Joint",
+    "title": "Maya Joint vs Kimberly Birrell: Scores, Results Lineups, H2H & Odds",
+    "source": "365Scores",
+    "date": "Sep 26",
+    "watch": true
+   },
+   {
+    "side": "Maya Joint",
+    "title": "Maya Joint vs Sinja Kraus - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "Maya Joint vs Sinja Kraus \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Maya Joint vs Sinja Kraus - Match WTA - China Open 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Maya Joint vs Sinja Kraus \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Maya Joint vs Sinja Kraus \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Dayana Yastremska vs Caty McNally|Caty McNally": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Caty McNally",
+    "title": "Alex Eala Beats Caty McNally, Reaches Canadian Open Round of 16",
+    "source": "Out of Town Blog",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Caty McNally",
+    "title": "Caty McNally vs Dayana Yastremska \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Dayana Yastremska",
+    "title": "Caty McNally vs Dayana Yastremska \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Renata Zarazua vs Anna Bondar|Anna Bondar": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Renata Zarazua",
+    "title": "Anna Bondar vs Renata Zarazua - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Anna Bondar",
+    "title": "Anna Bondar vs Elena-Gabriela Ruse - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Anna Bondar",
+    "title": "Bondar beats Ruse to reach first WTA hard court semifinal",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Anna Bondar",
+    "title": "Bondar vs. Charaeva | Round of 16 Korea Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Renata Zarazua",
+    "title": "Anna Bond\u00e1r vs Renata Zaraz\u00faa \u00b7 Round 1 \u00b7 WTA Beijing, China",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Renata Zarazua",
+    "title": "Anna Bond\u00e1r vs Renata Zaraz\u00faa \u00b7 Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Vivian Wolff vs Elsa Jacquemot|Elsa Jacquemot": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Vivian Wolff",
+    "title": "Oleksandra Oliinykova Defeats Vivian Wolff in Singapore WTA 500 Opener",
+    "source": "\u041c\u0435\u0436\u0430. \u041d\u043e\u0432\u0438\u043d\u0438 \u0423\u043a\u0440\u0430\u0457\u043d\u0438.",
+    "date": "Sep 22",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Jacquemot vs. Li | Qualifying China Open 2026",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Vivian Wolff",
+    "title": "Zhao vs. Wolff | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Elsa Jacquemot vs Zongyu Li - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Elsa Jacquemot vs Zongyu Li \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Vivian Wolff",
+    "title": "Carol Zhao vs Vivian Wolff - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Yexin Ma vs Harriet Dart|Harriet Dart": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Harriet Dart vs Tiphanie Lemaitre: Scores, Results Lineups, H2H & Odds",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Harriet Dart",
+    "title": "Harriet Dart vs Tiphanie Lemaitre: Scores, Results Lineups, H2H & Odds",
+    "source": "365Scores",
+    "date": "Sep 28",
+    "watch": true
+   },
+   {
+    "side": "Yexin Ma",
+    "title": "Yexin Ma vs Kimberly Birrell \u00b7 Round 2 \u00b7 WTA Seoul",
+    "source": "Tennis.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Yexin Ma",
+    "title": "YeXin Ma vs Kimberly Birrell - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 24",
+    "watch": false
+   },
+   {
+    "side": "Harriet Dart",
+    "title": "Harriet Dart vs Tiphanie Lema\u00eetre \u00b7 Qualifying Round 1 \u00b7 ATP/WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Harriet Dart",
+    "title": "Harriet Dart vs Tiphanie Lemaitre - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Yexin Ma",
+    "title": "Yufei Ren vs YeXin Ma - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "WTA Tennis|Jiayi Wang vs Zhuoxuan Bai|Zhuoxuan Bai": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Zhuoxuan Bai",
+    "title": "Hodzic vs. Bai | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Jiayi Wang",
+    "title": "Gleason vs. Wang | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 26",
+    "watch": false
+   },
+   {
+    "side": "Zhuoxuan Bai",
+    "title": "Mina Hodzic vs Zhuoxuan Bai - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   },
+   {
+    "side": "Jiayi Wang",
+    "title": "Quinn Gleason vs Jiayi Wang - Match WTA - China Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Sep 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ },
+ "NFL|Philadelphia @ Chicago|Philadelphia": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Jalen Hurts Reacts To Zach Ertz\u2019s Return to Philadelphia Eagles",
+  "opp_health": "Chicago Bears quarterback Caleb Williams' injury considered to have 3-4 week timeline, sources say; Chicago Bears Injury Update on Caleb Williams and Tyson Bagent",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Philadelphia",
+    "title": "Jalen Hurts Reacts To Zach Ertz\u2019s Return to Philadelphia Eagles",
+    "source": "heavy.com",
+    "date": "Sep 25",
+    "watch": true
+   },
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears quarterback Caleb Williams' injury considered to have 3-4 week timeline, sources say",
+    "source": "ABC7 Chicago",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears Injury Update on Caleb Williams and Tyson Bagent",
+    "source": "Yahoo Sports",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears QB Tyson Bagent clears concussion protocol, available Monday",
+    "source": "The New York Times",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Eagles take undefeated record to Chicago to play the Bears without QB Caleb Williams for Monday Night Football",
+    "source": "6abc Philadelphia",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Eagles at Chicago Bears - Where to Watch, Stream Info, TV Channel, and Live Updates (September 28, 2026)",
+    "source": "Fubo",
+    "date": "Sep 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-28T13:15Z"
+ }
+}
