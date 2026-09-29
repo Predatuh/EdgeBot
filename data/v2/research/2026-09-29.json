@@ -1083,5 +1083,63 @@
    }
   ],
   "_ts": "2026-09-29T13:16Z"
+ },
+ "WTA Tennis|Kamilla Rakhimova vs Marina Bassols Ribera|Kamilla Rakhimova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Katie Volynets - Match WTA - Korea Open 2026 Women\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Sep 23",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Marina Bassols Ribera vs Xiaodi You - Match WTA - China Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Bassols Ribera vs. You | Qualifying China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Marina Bassols Ribera vs Kamilla Rakhimova \u00b7 Round 1 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 29",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Rakhimova edges Polina Kudermetova in all-Uzbek first round in Seoul",
+    "source": "WTA Tennis",
+    "date": "Sep 29",
+    "watch": false
+   },
+   {
+    "side": "Marina Bassols Ribera",
+    "title": "Marina Bassols Ribera vs Kamilla Rakhimova \u00b7 Round 1 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Sep 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-29T21:04Z"
  }
 }
