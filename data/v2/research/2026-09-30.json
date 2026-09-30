@@ -369,5 +369,121 @@
    }
   ],
   "_ts": "2026-09-30T13:16Z"
+ },
+ "ATP Tennis|Arthur Fery vs Jaime Faria|Jaime Faria": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Japan Open withdrawals: Lorenzo Musetti setback hands Arthur Fery late Japan Open opponent change",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fery",
+    "title": "Japan Open withdrawals: Lorenzo Musetti setback hands Arthur Fery late Japan Open opponent change",
+    "source": "Tennis365",
+    "date": "Sep 30",
+    "watch": true
+   },
+   {
+    "side": "Jaime Faria",
+    "title": "Adolfo Daniel Vallejo vs Jaime Faria \u00b7 Qualifying Round 2 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 28",
+    "watch": false
+   },
+   {
+    "side": "Jaime Faria",
+    "title": "Jaime Faria vs Arthur Fery \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Jaime Faria",
+    "title": "Tennis | ATP Tokyo 2026 | Fery targets strong end to breakthrough season, lucky loser Faria awaits",
+    "source": "Britwatch Sports",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Jaime Faria vs Arthur Fery \u00b7 Round 1 \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Tennis | ATP Tokyo 2026 | Fery targets strong end to breakthrough season, lucky loser Faria awaits",
+    "source": "Britwatch Sports",
+    "date": "Sep 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-30T21:03Z"
+ },
+ "MLB|Philadelphia @ Atlanta|Philadelphia": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves News: Ronald Acuna injury update, Robert Suarez returns, more",
+    "source": "Battery Power",
+    "date": "Sep 24",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies Announce Sudden Alec Bohm Change During Braves Series",
+    "source": "Yahoo Sports",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Fielding alignment for Philadelphia, September 30 vs Braves",
+    "source": "MLB.com",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Philadelphia Phillies vs. Atlanta Braves: Listen Live to the MLB Wild Card Series",
+    "source": "SiriusXM",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves Make Matt Olson Move During Wild Card Series vs. Phillies",
+    "source": "Yahoo Sports",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves Announce Austin Riley Move During Wild Card Series vs. Phillies",
+    "source": "Yahoo Sports",
+    "date": "Sep 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-09-30T21:03Z"
  }
 }
