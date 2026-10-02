@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-10-01T21:03Z",
+ "_generated_utc": "2026-10-02T13:13Z",
  "_league": "nfl",
- "_plays_used": 4700,
+ "_plays_used": 4809,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 8311,
+ "_rows": 8497,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -97,16 +97,16 @@
    "this_season_plays": 123
   },
   "Cleveland": {
-   "def_epa": -0.066,
-   "def_plays": 432.29999999999995,
-   "def_success": 0.4099,
-   "net_epa": -0.0819,
-   "off_epa": -0.1479,
-   "off_plays": 405.15,
-   "off_success": 0.3543,
-   "pass_epa": -0.175,
-   "rush_epa": -0.1116,
-   "this_season_plays": 122
+   "def_epa": -0.0587,
+   "def_plays": 495.29999999999995,
+   "def_success": 0.4143,
+   "net_epa": -0.0459,
+   "off_epa": -0.1046,
+   "off_plays": 451.15,
+   "off_success": 0.3714,
+   "pass_epa": -0.1145,
+   "rush_epa": -0.0908,
+   "this_season_plays": 168
   },
   "Dallas": {
    "def_epa": 0.2021,
@@ -325,16 +325,16 @@
    "this_season_plays": 157
   },
   "Pittsburgh": {
-   "def_epa": -0.0016,
-   "def_plays": 485.84999999999997,
-   "def_success": 0.4442,
-   "net_epa": -0.0382,
-   "off_epa": -0.0398,
-   "off_plays": 466.04999999999995,
-   "off_success": 0.4194,
-   "pass_epa": -0.0728,
-   "rush_epa": 0.0135,
-   "this_season_plays": 157
+   "def_epa": 0.0225,
+   "def_plays": 531.8499999999999,
+   "def_success": 0.4509,
+   "net_epa": -0.0586,
+   "off_epa": -0.0361,
+   "off_plays": 529.05,
+   "off_success": 0.4224,
+   "pass_epa": -0.0717,
+   "rush_epa": 0.0235,
+   "this_season_plays": 220
   },
   "San Francisco": {
    "def_epa": 0.0682,
