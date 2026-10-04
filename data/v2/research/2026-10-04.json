@@ -1287,5 +1287,63 @@
    }
   ],
   "_ts": "2026-10-04T14:51Z"
+ },
+ "MLB|San Diego @ Milwaukee|San Diego": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Diego",
+    "title": "San Diego Padres 1 - Milwaukee Brewers 0: Top 2nd",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "San Diego has heartbreaking loss in NLDS series opener",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "NLDS Game 2 Discussion: Milwaukee Brewers (1-0) vs San Diego Padres (0-1)",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Eric Thames' ceremonial first pitch in Milwaukee",
+    "source": "MLB.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers Announce Christian Yelich Move Amid Padres Series",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Brewers use a new formula in Game 1, giving Milwaukee another reason for hope",
+    "source": "The New York Times",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T21:21Z"
  }
 }
