@@ -1,0 +1,1291 @@
+{
+ "ATP Tennis|Jaume Munar vs Carlos Alcaraz|Carlos Alcaraz": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alcaraz advances to Tokyo SF after Shapovalov retires; Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Alcaraz advances to Tokyo SF after Shapovalov retires",
+   "Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis",
+    "source": "Tennis365",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Alcaraz advances to Tokyo SF after Shapovalov retires",
+    "source": "ATP Tour",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Carlos Alcaraz vs Denis Shapovalov \u00b7 Quarterfinal \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Jaume Munar",
+    "title": "Carlos Alcaraz vs Jaume Munar \u00b7 Semifinal \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Jaume Munar",
+    "title": "Carlos Alcaraz vs Jaume Munar - Match ATP - Kinoshita Group Japan Open Tennis Championships 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Jaume Munar",
+    "title": "Jaume Munar vs Kyrian Jacquet \u00b7 Quarterfinal \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "WTA Tennis|Kamilla Rakhimova vs Iva Jovic|Iva Jovic": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Iva Jovic",
+    "title": "Iva Jovic vs Harriet Dart - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Iva Jovic",
+    "title": "Jovic survives Dart in 2:45 Beijing marathon to make third round",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Big sensation in Beijing: Kamilla Rakhimova defeats the world number 26!",
+    "source": "Zamin.uz",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Leylah Fernandez - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Iva Jovic",
+    "title": "Iva Jovic vs Kamilla Rakhimova \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Iva Jovic vs Kamilla Rakhimova \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "WTA Tennis|Xinran Sun vs Coco Gauff|Coco Gauff": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c); Coco Gauff returns to Beijing with room to breathe and work to do",
+  "opp_health": "Beijing: Eva Lys Retires in Tears Against 16-Year-Old Xinran Sun; Xinran Sun in Beijing: WTA debut, Eva Lys retires",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Xinran Sun",
+    "title": "Beijing: Eva Lys Retires in Tears Against 16-Year-Old Xinran Sun",
+    "source": "en.tennistemple.com",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Xinran Sun",
+    "title": "Xinran Sun in Beijing: WTA debut, Eva Lys retires",
+    "source": "srpske.rs",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Coco Gauff",
+    "title": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c)",
+    "source": "Unisba Media",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Coco Gauff",
+    "title": "Coco Gauff returns to Beijing with room to breathe and work to do",
+    "source": "WTA Tennis",
+    "date": "Sep 28",
+    "watch": true
+   },
+   {
+    "side": "Coco Gauff",
+    "title": "Gauff, Sun set for Beijing battle in junior's first-ever top 5 matchup",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Xinran Sun",
+    "title": "Gauff, Sun set for Beijing battle in junior's first-ever top 5 matchup",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "WTA Tennis|Belinda Bencic vs Ann Li|Belinda Bencic": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c)",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Belinda Bencic",
+    "title": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c)",
+    "source": "Unisba Media",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Ann Li",
+    "title": "Ann Li Vs Kimberly Birrell \ud83c\udfbeLIVE SCORE TENNIS WTA NOTTINGHAM OPEN GERMANY 2026 | R32 Motherwell Vs Celtic (dIxUC16ZdA)",
+    "source": "Unisba Media",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Belinda Bencic",
+    "title": "Belinda Bencic vs Ann Li \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Belinda Bencic",
+    "title": "Belinda Bencic vs Anastasia Zakharova - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Ann Li",
+    "title": "Belinda Bencic vs Ann Li \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Ann Li",
+    "title": "Ashlyn Krueger vs Ann Li - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "WTA Tennis|Qinwen Zheng vs Marie Bouzkova|Qinwen Zheng": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Qinwen Zheng admits making mistakes after undergoing surgery last year, \u2018this is a good lesson for me\u2019",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Qinwen Zheng",
+    "title": "Qinwen Zheng admits making mistakes after undergoing surgery last year, \u2018this is a good lesson for me\u2019",
+    "source": "The Tennis Gazette",
+    "date": "Sep 29",
+    "watch": true
+   },
+   {
+    "side": "Qinwen Zheng",
+    "title": "Qinwen Zheng vs Anna Kalinskaya - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Marie Bouzkova",
+    "title": "Marie Bouzkova vs Kimberly Birrell - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Marie Bouzkova",
+    "title": "Bouzkova edges Birrell in tight two-setter to reach Beijing third round",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Qinwen Zheng",
+    "title": "Marie Bouzkov\u00e1 vs Qinwen Zheng \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Marie Bouzkova",
+    "title": "Bouzkova vs. Birrell | Round of 64 China Open 2026 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Sep 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "WTA Tennis|Sonay Kartal vs Alina Charaeva|Sonay Kartal": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Kartal eases past Lazaro Garcia in Beijing for first win of injury comeback; Sonay Kartal ends six-month injury absence from WTA Tour with win in China",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sonay Kartal",
+    "title": "Kartal eases past Lazaro Garcia in Beijing for first win of injury comeback",
+    "source": "WTA Tennis",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Sonay Kartal",
+    "title": "Sonay Kartal ends six-month injury absence from WTA Tour with win in China",
+    "source": "Yahoo Sports",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Sonay Kartal",
+    "title": "Sonay Kartal secures victory in return to WTA Tour at China Open after injury layoff",
+    "source": "SSBCrack",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Alina Charaeva makes tennis history after shock win over Elena Rybakina at the China Open",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Tennis, WTA \u2013 China Open 2026: Charaeva eliminates Rybakina",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Elena Rybakina vs Alina Charaeva - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Detroit @ Carolina|Detroit": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Detroit Lions Rule Out OL Against Carolina Panthers, CB Questionable; Detroit Lions Brian Branch Injury Update: What Game Could He Return?",
+  "opp_health": "Is Jalen Coker Playing Tonight? Latest Injury Update on Carolina Panthers WR For Week 4; Panthers former first-round pick suffers injury setback that further complicates his future in Carolina",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Detroit",
+    "title": "Detroit Lions Rule Out OL Against Carolina Panthers, CB Questionable",
+    "source": "Sports Illustrated",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "Detroit Lions Brian Branch Injury Update: What Game Could He Return?",
+    "source": "Sports Illustrated",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Detroit",
+    "title": "9 Detroit Lions trade targets after missing out on Joey Porter Jr.",
+    "source": "prideofdetroit.com",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Panthers former first-round pick suffers injury setback that further complicates his future in Carolina",
+    "source": "atozsports.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Survivor pool: Carolina Panthers\u2019 injury totals continue to climb",
+    "source": "The North State Journal",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Is Jalen Coker Playing Tonight? Latest Injury Update on Carolina Panthers WR For Week 4",
+    "source": "Sports Illustrated",
+    "date": "Oct 04",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Denver @ San Francisco|San Francisco": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "San Francisco 49ers owner Jed York suspended, fined $500,000 for violating NFL personal conduct policy",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "San Francisco 49ers owner Jed York suspended, fined $500,000 for violating NFL personal conduct policy"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Francisco",
+    "title": "San Francisco 49ers owner Jed York suspended, fined $500,000 for violating NFL personal conduct policy",
+    "source": "CBS News",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "San Francisco",
+    "title": "The Former 49er Who Could Cause Problems for San Francisco in Week 4",
+    "source": "Sports Illustrated",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "San Francisco",
+    "title": "Denver Broncos at San Francisco 49ers - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Denver",
+    "title": "Denver Broncos schedule: Dates, times and TV info for every game",
+    "source": "Broncos Wire",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Denver",
+    "title": "Broncos-49ers scouting report: Another difficult NFC West test for Denver",
+    "source": "The Denver Post",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Denver",
+    "title": "Denver Broncos at San Francisco 49ers - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Los Angeles C @ Seattle|Seattle": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Week 4 injury report for Seattle; RB Jadarian Price ruled out by Seattle Seahawks for Week 4",
+  "opp_health": "Is Ladd McConkey playing today? Injury update, Week 4 fantasy advice for Chargers WR; Predicting Chargers' Starters vs Seahawks for NFL Week 4: Weapons Running Low",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "RB Jadarian Price ruled out by Seattle Seahawks for Week 4"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Seattle",
+    "title": "Zach Charbonnet returns to practice for Seattle Seahawks",
+    "source": "FOX 13 Seattle",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "RB Jadarian Price ruled out by Seattle Seahawks for Week 4",
+    "source": "ESPN",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Week 4 Injury Report: Seahawks vs. Chargers",
+    "source": "Seattle Seahawks",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Week 4 injury report for Seattle",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Is Ladd McConkey playing today? Injury update, Week 4 fantasy advice for Chargers WR",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles C",
+    "title": "Predicting Chargers' Starters vs Seahawks for NFL Week 4: Weapons Running Low",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Kansas City @ Las Vegas|Kansas City": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Kansas City Chiefs' final injury report confirms veteran defender will make his 2026 debut in Week 4 vs. Las Vegas Raiders; Kansas City Chiefs' Thursday injury report shows one slight improvement ahead of Week 4 tilt vs. Las Vegas Raiders",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' Thursday injury report shows one slight improvement ahead of Week 4 tilt vs. Las Vegas Raiders",
+    "source": "Yahoo Sports",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' final injury report confirms veteran defender will make his 2026 debut in Week 4 vs. Las Vegas Raiders",
+    "source": "Yahoo Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Kansas City",
+    "title": "Kansas City Chiefs' first injury report for Las Vegas Raiders sets the table for AFC West showdown between 3-0 teams for Week 4",
+    "source": "Yahoo Sports",
+    "date": "Sep 30",
+    "watch": true
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Behind Enemy Lines: Top intel on Las Vegas before Chiefs vs. Raiders",
+    "source": "Chiefs Wire",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Here\u2019s who 79 NFL experts predict will win KC Chiefs at Las Vegas Raiders game",
+    "source": "Kansas City Star",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Las Vegas",
+    "title": "Las Vegas was built for Chiefs spectacle. Now Raiders are, too",
+    "source": "New York Post",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Miami @ Minnesota|Minnesota": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Minnesota Vikings rule out Justin Jefferson against Miami Dolphins due to ankle injury; Minnesota Football: Starting center Ashton Beers out for the season",
+  "opp_health": "'We've missed him'\u2014Miami Dolphins head coach Jeff Hafley is cautiously optimistic about getting a key starter back soon; Miami football injury struggles open new opportunities",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Minnesota Football: Starting center Ashton Beers out for the season"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Football: Starting center Ashton Beers out for the season",
+    "source": "The Daily Gopher",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota Vikings rule out Justin Jefferson against Miami Dolphins due to ankle injury",
+    "source": "CBS News",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Miami football injury struggles open new opportunities",
+    "source": "themiamihurricane.com",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "Minnesota Vikings rule out Justin Jefferson against Miami Dolphins due to ankle injury",
+    "source": "CBS News",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Miami",
+    "title": "'We've missed him'\u2014Miami Dolphins head coach Jeff Hafley is cautiously optimistic about getting a key starter back soon",
+    "source": "atozsports.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Miami Dolphins at Minnesota Vikings - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Jacksonville @ Cincinnati|Jacksonville": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Week 4 injury report for Cincinnati; Charlie Jones chose Giants over chance to return to Cincinnati Bengals",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Charlie Jones chose Giants over chance to return to Cincinnati Bengals",
+    "source": "Yahoo Sports",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Week 4 injury report for Cincinnati",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Cincinnati Bengals vs. Jacksonville Jaguars: 5 things to know",
+    "source": "Dayton Daily News",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Everything Jacksonville Jaguars Have to Fear About Cincinnati Bengals in Week 4",
+    "source": "Sports Illustrated",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Jacksonville Jaguars at Cincinnati Bengals - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "Everything Jacksonville Jaguars Have to Fear About Cincinnati Bengals in Week 4",
+    "source": "Sports Illustrated",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Tennessee @ Baltimore|Baltimore": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Baltimore loses two centers to injury; Week 4 injury report for Baltimore",
+  "opp_health": "Baltimore Ravens Announce Lamar Jackson Injury Update Before Tennessee Titans Game; Titans-Ravens final injury report delivers several breaks Tennessee desperately needed for its upset bid",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tennessee",
+    "title": "Titans-Ravens final injury report delivers several breaks Tennessee desperately needed for its upset bid",
+    "source": "atozsports.com",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Tennessee",
+    "title": "Tennessee Titans' Tyjae Spears, Kevin Winston Jr. questionable for Week 4",
+    "source": "Titans Wire",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Week 4 injury report for Baltimore",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Ravens Announce Lamar Jackson Injury Update Before Tennessee Titans Game",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Tennessee",
+    "title": "Baltimore Ravens Announce Lamar Jackson Injury Update Before Tennessee Titans Game",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore loses two centers to injury",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Green Bay @ Tampa Bay|Green Bay": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Green Bay Packers place Warren Brinson on injured reserve; Best Green Bay Packers player to wear No. 84 was forced to retire in his prime",
+  "opp_health": "Buccaneers hit with surprising injury to key player that can certainly help the Packers beat Tampa Bay in Week 4; Baker Mayfield leaves game after writhing in pain on turf in Tampa Bay when thumb on throwing hand injured",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Best Green Bay Packers player to wear No. 84 was forced to retire in his prime"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tampa Bay",
+    "title": "Buccaneers hit with surprising injury to key player that can certainly help the Packers beat Tampa Bay in Week 4",
+    "source": "atozsports.com",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Green Bay Packers place Warren Brinson on injured reserve",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Best Green Bay Packers player to wear No. 84 was forced to retire in his prime",
+    "source": "Lombardi Ave",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Baker Mayfield leaves game after writhing in pain on turf in Tampa Bay when thumb on throwing hand injured",
+    "source": "Fox News",
+    "date": "Sep 27",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Best Green Bay Packers player to wear No. 85 scored first TD in Super Bowl history",
+    "source": "Lombardi Ave",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Will Edgerrin Cooper play against the Tampa Bay Buccaneers in Week 4?",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Los Angeles R @ Philadelphia|Los Angeles R": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Sunday Morning Rams Notebook: New Details Emerge on Myles Garrett, Aaron Donald Injuries; Sean McVay can\u2019t provide exact timeline for Myles Garrett\u2019s return to Rams, remains optimistic about his pr...",
+  "opp_health": "DeVonta Smith, Zack Baun among Philadelphia Eagles players ruled out vs. Los Angeles Rams",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles R",
+    "title": "Former BYU star Puka Nacua expected in Rams Week 4 lineup",
+    "source": "KSL Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Sean McVay can\u2019t provide exact timeline for Myles Garrett\u2019s return to Rams, remains optimistic about his pr...",
+    "source": "bolavip.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "DeVonta Smith, Zack Baun among Philadelphia Eagles players ruled out vs. Los Angeles Rams",
+    "source": "CBS News",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles R",
+    "title": "Sunday Morning Rams Notebook: New Details Emerge on Myles Garrett, Aaron Donald Injuries",
+    "source": "Sports Illustrated",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Philadelphia",
+    "title": "How Zack Baun's absence will affect Philadelphia Eagles defense vs. Rams",
+    "source": "CBS News",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Philadelphia",
+    "title": "Los Angeles Rams at Philadelphia Eagles - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Dallas @ Houston|Houston": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Cowboys-Texans injury reports: Will Dallas get a look at Houston WR Nico Collins in Week 4?; Texans-Cowboys Week 4 Injury Report: Houston Lists 2 Out, 4 Questionable",
+  "opp_health": "Cowboys Killer? Dallas Makes 2 Roster Moves, Catches Major Injury Break vs. Texans; Cowboys Injury Report: Dallas Gets Key Defensive Boost Ahead of Texans Game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston",
+    "title": "Cowboys-Texans injury reports: Will Dallas get a look at Houston WR Nico Collins in Week 4?",
+    "source": "Dallas News",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Texans-Cowboys Week 4 Injury Report: Houston Lists 2 Out, 4 Questionable",
+    "source": "Sports Illustrated",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "Texans wideout Nico Collins to return from hamstring injury vs. Dallas Cowboys in Week 4",
+    "source": "ABC13 Houston",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "Cowboys Killer? Dallas Makes 2 Roster Moves, Catches Major Injury Break vs. Texans",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Dallas",
+    "title": "Cowboys Injury Report: Dallas Gets Key Defensive Boost Ahead of Texans Game",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Dallas Cowboys at Houston Texans - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|New York J @ Chicago|Chicago": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Chicago Bears place Braxton Jones on Injured Reserve",
+  "opp_health": "New York Jets at Bears: Final injury reports for both teams; New York Jets Officially Rule Out Four Starters Against Chicago Bears",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York J",
+    "title": "New York Jets Officially Rule Out Four Starters Against Chicago Bears",
+    "source": "Yahoo Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "New York J",
+    "title": "New York Jets get brutal injury news for Week 4",
+    "source": "Jets X-Factor",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "New York J",
+    "title": "New York Jets at Bears: Final injury reports for both teams",
+    "source": "Jets Wire",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears place Braxton Jones on Injured Reserve",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears vs. New York Jets: Everything you need to know about the Week 4 game before kickoff",
+    "source": "Chicago Tribune",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Chicago",
+    "title": "New York Jets vs Chicago Bears Pre-Game Ball",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|New England @ Buffalo|Buffalo": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Roster Analysis: Seven Questionable Patriots Make the Trip to Buffalo, Two Elevated from the Practice Squad for Week 4 vs. Bills; Buffalo Bills vs. Patriots: Final injury reports for both teams",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Buffalo",
+    "title": "Buffalo Bills Injury Report vs. Patriots Week 4",
+    "source": "Buffalo Bills",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Buffalo",
+    "title": "Roster Analysis: Seven Questionable Patriots Make the Trip to Buffalo, Two Elevated from the Practice Squad for Week 4 vs. Bills",
+    "source": "New England Patriots",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Buffalo",
+    "title": "Buffalo Bills vs. Patriots: Final injury reports for both teams",
+    "source": "Bills Wire",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "New England",
+    "title": "All eyes are on New England's top stars ahead of this weekend's pivotal AFC clash.",
+    "source": "facebook.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "New England",
+    "title": "What to Watch For: New England Patriots Offense vs. Buffalo Bills Defense | Week 4 2026",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "New England",
+    "title": "New England Patriots at Buffalo Bills - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Arizona @ New York G|New York G": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "New York Giants vs. Cardinals: Live coverage, highlights, injury updates; Despite Season-Ending Injuries to Dart and Burns, Giants Show Signs of Progress Under Harbaugh",
+  "opp_health": "Week 4 injury report for Arizona; Arizona Cardinals injury report: Pass rusher Josh Sweat injures groin",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Despite Season-Ending Injuries to Dart and Burns, Giants Show Signs of Progress Under Harbaugh"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arizona",
+    "title": "Arizona Cardinals injury report: Pass rusher Josh Sweat injures groin",
+    "source": "Yahoo Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona Cardinals injury report: 3 players limited",
+    "source": "Yahoo Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Week 4 injury report for Arizona",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "New York Giants vs. Cardinals: Live coverage, highlights, injury updates",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Despite Season-Ending Injuries to Dart and Burns, Giants Show Signs of Progress Under Harbaugh",
+    "source": "Sports Illustrated",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Talented Giants Draft Pick Called Out for \u2018Falling Short\u2019 of Expectations",
+    "source": "heavy.com",
+    "date": "Oct 04",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "NFL|Indianapolis @ Washington|Indianapolis": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Washington Commanders vs Indianapolis Colts Inactives: Terry McLaurin out for London game",
+  "opp_health": "Chris Lawson gaining confidence as starter for Washington football; Washington football WR's return in question after quad surgery",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Washington",
+    "title": "Washington football WR's return in question after quad surgery",
+    "source": "Huskies Wire",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "Chris Lawson gaining confidence as starter for Washington football",
+    "source": "Yahoo Sports",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Washington Commanders vs Indianapolis Colts Inactives: Terry McLaurin out for London game",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts tight end Tyler Warren's first reception goes for 12 yards",
+    "source": "NFL.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts vs Washington Commanders photos in NFL Week 4 action",
+    "source": "IndyStar",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "Jerry Tillery turns Washington over on downs inside of Commanders' territory",
+    "source": "NFL.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "MLB|Atlanta @ Los Angeles D|Los Angeles D": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Dodgers' starting lineup for NLDS Game 1; Dodgers Name Yoshinobu Yamamoto as Game 3 Starter",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers' starting lineup for NLDS Game 1",
+    "source": "MLB.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers Name Yoshinobu Yamamoto as Game 3 Starter",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Commentary: Dodgers face risky dilemma if Shohei Ohtani's injuries worsen in NLDS",
+    "source": "Los Angeles Times",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves at Los Angeles Dodgers - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "Official Atlanta Braves Website",
+    "source": "MLB.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta Braves Suddenly Leave 10-Year MLB Player Off Playoff Roster",
+    "source": "heavy.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ },
+ "MLB|San Diego @ Milwaukee|Milwaukee": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Padres-Brewers NLDS bold predictions and preview: San Diego\u2019s explosive lineup meets the Miz",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Diego",
+    "title": "Padres-Brewers NLDS bold predictions and preview: San Diego\u2019s explosive lineup meets the Miz",
+    "source": "The New York Times",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Milwaukee",
+    "title": "MLB playoffs 2026: Is this the Milwaukee Brewers' year?",
+    "source": "ESPN",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "San Diego Padres at Milwaukee Brewers - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Brewers use a new formula in Game 1, giving Milwaukee another reason for hope",
+    "source": "The New York Times",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "San Diego Padres at Milwaukee Brewers - Where to Watch, Stream Info, TV Channel, and Live Updates (October 04, 2026)",
+    "source": "Fubo",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "San Diego",
+    "title": "Milwaukee Brewers\u2019 roof aids team to playoff victory over San Diego Padres",
+    "source": "The Milwaukee Courier",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-04T14:51Z"
+ }
+}
