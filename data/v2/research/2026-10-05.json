@@ -771,5 +771,237 @@
    }
   ],
   "_ts": "2026-10-05T13:19Z"
+ },
+ "ATP Tennis|Alexandre Muller vs Mattia Bellucci|Mattia Bellucci": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Elias Ymer - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Alexandre Muller",
+    "title": "Rio Noguchi vs Alexandre Muller - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Alexandre M\u00fcller \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Elias Ymer \u00b7 Qualifying Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Alexandre Muller",
+    "title": "Mattia Bellucci vs Alexandre M\u00fcller \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Alexandre Muller",
+    "title": "Mattia Bellucci vs Alexandre M\u00fcller \u00b7 Round 1 \u00b7 ATP Challenger Jingshan, China",
+    "source": "Tennis.com",
+    "date": "Sep 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T21:04Z"
+ },
+ "ATP Tennis|Coleman Wong vs Lloyd Harris|Lloyd Harris": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Why Coleman Wong feels Rafael Nadal is never out of the loop after Asian Games gold",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Coleman Wong",
+    "title": "Why Coleman Wong feels Rafael Nadal is never out of the loop after Asian Games gold",
+    "source": "Tennis Tonic",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Alex Bolt vs Lloyd Harris - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Coleman Wong",
+    "title": "Chak Lam Coleman Wong vs Cruz Hewitt - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Coleman Wong vs Lloyd Harris \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Lloyd Harris",
+    "title": "Alex Bolt vs Lloyd Harris \u00b7 Qualifying Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Coleman Wong",
+    "title": "Coleman Wong vs Lloyd Harris \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T21:04Z"
+ },
+ "ATP Tennis|Aleksandar Vukic vs Pavel Kotov|Pavel Kotov": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pavel Kotov",
+    "title": "Martin Damm v Pavel Kotov (05/10/2026)",
+    "source": "Flashscore.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Aleksandar Vukic",
+    "title": "Jie Cui vs Aleksandar Vukic - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Pavel Kotov",
+    "title": "Pavel Kotov vs Aleksandar Vukic \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Pavel Kotov",
+    "title": "Martin Damm vs Pavel Kotov \u00b7 Qualifying Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Aleksandar Vukic",
+    "title": "Pavel Kotov vs Aleksandar Vukic \u00b7 Qualifying Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Aleksandar Vukic",
+    "title": "Aleksandar Vukic vs Evan Zhu \u00b7 Qualifying Round 2 \u00b7 ATP Challenger Jingshan, China",
+    "source": "Tennis.com",
+    "date": "Sep 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T21:04Z"
+ },
+ "NFL|Atlanta @ New Orleans|Atlanta": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Morning Break: Next man up as Saints deal with injuries at linebacker position for matchup vs. Atlanta Falcons; Saints Saturday Injury Report: 2026 Week 4 vs. Atlanta Falcons",
+  "opp_health": "Falcons' starting lineups for MNF matchup vs. New Orleans Saints; New Orleans Saints News: Injuries hurt both defenses in Monday Night Football matchup",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atlanta",
+    "title": "Saints Saturday Injury Report: 2026 Week 4 vs. Atlanta Falcons",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Morning Break: Next man up as Saints deal with injuries at linebacker position for matchup vs. Atlanta Falcons",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Falcons' starting lineups for MNF matchup vs. New Orleans Saints",
+    "source": "Falcons Wire",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "New Orleans Saints News: Injuries hurt both defenses in Monday Night Football matchup",
+    "source": "Canal Street Chronicles",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "New Orleans Saints celebrate 20th anniversary of historic return to the Superdome on Monday Night Football",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Sep 30",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Best Atlanta Falcons prop bets for Week 4 Monday Night Football",
+    "source": "Yahoo Sports",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T21:04Z"
  }
 }
