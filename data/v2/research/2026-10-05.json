@@ -1,0 +1,775 @@
+{
+ "ATP Tennis|Dalibor Svrcina vs Yoshihito Nishioka|Dalibor Svrcina": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dalibor Svrcina",
+    "title": "Billy Harris vs Dalibor Svrcina - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Yoshihito Nishioka",
+    "title": "Aleksandr Shevchenko vs Yoshihito Nishioka - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "ATP Tennis|Rei Sakamoto vs Kyrian Jacquet|Kyrian Jacquet": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Jaume Munar 2 - 0 Kyrian Jacquet (04/10) - Match Report",
+    "source": "365Scores",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Jaume Munar vs Kyrian Jacquet \u00b7 Quarterfinal \u00b7 ATP Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Kyrian Jacquet vs Tianhui Zhang - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "SeongChan Hong vs Rei Sakamoto - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "Matteo Arnaldi vs Rei Sakamoto - Highlight | ATP 500: Kinoshita Group Japan Open Tennis Championships 2026",
+    "source": "Vidio",
+    "date": "Sep 30",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "ATP Tokyo \u2013 Arnaldi rallies past Sakamoto to advance; Fils wins as a top-10 player, while Paul suffers a heavy defeat",
+    "source": "Tennis World Italia",
+    "date": "Sep 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "ATP Tennis|Daniil Medvedev vs Novak Djokovic|Novak Djokovic": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis; Novak Djokovic and Carlos Alcaraz have message for Kei Nishikori as he retires from tennis",
+  "opp_health": "ATP Rankings: Medvedev set to return to a position he hasn't held since January 2025",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis",
+   "Novak Djokovic and Carlos Alcaraz have message for Kei Nishikori as he retires from tennis"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Novak Djokovic",
+    "title": "Novak Djokovic and Carlos Alcaraz send messages to Kei Nishikori as he retires from tennis",
+    "source": "Tennis365",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "Novak Djokovic and Carlos Alcaraz have message for Kei Nishikori as he retires from tennis",
+    "source": "Tennishead",
+    "date": "Oct 01",
+    "watch": true
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "ATP Rankings: Medvedev set to return to a position he hasn't held since January 2025",
+    "source": "en.tennistemple.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "ATP Beijing \u2013 Djokovic Defeats Borges, but Fitness Concerns Persist; Aliassime Eliminated",
+    "source": "Tennis World Italia",
+    "date": "Sep 30",
+    "watch": true
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Novak Djokovic vs Daniil Medvedev \u00b7 Semifinal \u00b7 ATP Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Novak Djokovic vs Daniil Medvedev - Match ATP - China Open 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "ATP Tennis|Elias Ymer vs Mattia Bellucci|Mattia Bellucci": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mattia Bellucci",
+    "title": "Bernard Tomic vs Mattia Bellucci \u00b7 Quarterfinal \u00b7 ATP Challenger Jingshan, China",
+    "source": "Tennis.com",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Yanki Erel vs Mattia Bellucci \u00b7 Semifinal \u00b7 ATP Challenger Jingshan, China",
+    "source": "Tennis.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Elias Ymer - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Mattia Bellucci vs Elias Ymer - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Elias Ymer",
+    "title": "Elias Ymer vs T\u00e9rence Atmane \u00b7 Round 1 \u00b7 ATP Challenger Jingshan, China",
+    "source": "Tennis.com",
+    "date": "Sep 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "ATP Tennis|Coleman Wong vs Cruz Hewitt|Coleman Wong": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Why Coleman Wong feels Rafael Nadal is never out of the loop after Asian Games gold",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Coleman Wong",
+    "title": "Why Coleman Wong feels Rafael Nadal is never out of the loop after Asian Games gold",
+    "source": "Tennis Tonic",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Coleman Wong",
+    "title": "Coleman Wong Makes History with Asian Games Gold, Edges Closer to 2028 Olympics",
+    "source": "en.tennistemple.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Coleman Wong",
+    "title": "Chak Lam Coleman Wong vs Cruz Hewitt - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Cruz Hewitt",
+    "title": "Chak Lam Coleman Wong vs Cruz Hewitt - Match ATP - Rolex Shanghai Masters 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Cruz Hewitt",
+    "title": "Aussie Watch: Cruz Hewitt embarks on Shanghai Masters debut",
+    "source": "Tennis Australia",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Qinwen Zheng vs Alina Charaeva|Qinwen Zheng": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Qinwen Zheng admits making mistakes after undergoing surgery last year, \u2018this is a good lesson for me\u2019",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Qinwen Zheng",
+    "title": "Qinwen Zheng admits making mistakes after undergoing surgery last year, \u2018this is a good lesson for me\u2019",
+    "source": "The Tennis Gazette",
+    "date": "Sep 29",
+    "watch": true
+   },
+   {
+    "side": "Qinwen Zheng",
+    "title": "Zheng prevails over Bouzkova in third straight three-setter in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Qinwen Zheng",
+    "title": "Marie Bouzkov\u00e1 vs Qinwen Zheng \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Alina Charaeva vs Sonay Kartal \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Alina Charaeva vs TBD \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Alina Charaeva",
+    "title": "Charaeva backs up Rybakina upset by defeating Kartal in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Iga Swiatek vs Iva Jovic|Iga Swiatek": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Iga Swiatek",
+    "title": "\u201cI Was Angry\u201d- Iga Swiatek Voices Frustration After Surviving Donna Vekic Scare at China Open",
+    "source": "EssentiallySports",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iga Swiatek",
+    "title": "Swiatek rallies from 6-4, 5-2 down to beat Vekic and reach Beijing last 16",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iga Swiatek",
+    "title": "From a set and a break down, Swiatek rallies to beat Vekic in Beijing third round",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iva Jovic",
+    "title": "Iva Jovic vs Kamilla Rakhimova \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iva Jovic",
+    "title": "Jovic saves two set points, denies Rakhimova to make Beijing fourth round",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iva Jovic",
+    "title": "Iva Jovic Favored to Defeat Kamilla Rakhimova at WTA China Open with 77% Win Probability",
+    "source": "SSBCrack",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Sinja Kraus vs Nikola Bartunkova|Nikola Bartunkova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nikola Bartunkova",
+    "title": "'It wasn't good' - Aryna Sabalenka reacts after shock Nikola Bartunkova loss at the China Open",
+    "source": "Tennis365",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Sinja Kraus vs Nikola Bartunkova - Match WTA - China Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Sinja Kraus vs Dayana Yastremska - Match WTA - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Nikola Bartunkova",
+    "title": "Who is Nikola Bartunkova? The 20-year-old who just destroyed Aryna Sabalenka's Beijing campaign",
+    "source": "Tennisuptodate.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Nikola Bartunkova",
+    "title": "By the numbers: Bartunkova stuns Sabalenka to reach Beijing last 16",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Sinja Kraus vs Nikola Bart\u016f\u0148kov\u00e1 \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Naomi Osaka vs Karolina Muchova|Karolina Muchova": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c)",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Naomi Osaka",
+    "title": "Rybakina Beats Osaka To Reach Toronto Semifinal | Coco Gauff Advances After Bencic Withdrawal Wales Election 2026 (V6drdbkt7c)",
+    "source": "Unisba Media",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Karolina Muchova",
+    "title": "Karolina Muchova vs Liudmila Samsonova: Set 1 Winner",
+    "source": "Coinbase",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Karolina Muchova",
+    "title": "Karolina Muchova vs Liudmila Samsonova - Match WTA - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Karolina Muchova",
+    "title": "Muchova rallies past Samsonova in late-night Beijing thriller",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Naomi Osaka",
+    "title": "Karol\u00edna Muchov\u00e1 vs Naomi Osaka \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Naomi Osaka",
+    "title": "Naomi Osaka | Grand Slams | Activity & More",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Daria Snigur vs Mirra Andreeva|Mirra Andreeva": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Around Beijing: Alexandrova returns to China Open last 16 as Andreeva returns to chess",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mirra Andreeva",
+    "title": "Around Beijing: Alexandrova returns to China Open last 16 as Andreeva returns to chess",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Daria Snigur",
+    "title": "Daria Snigur vs Mirra Andreeva - Match WTA - China Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Daria Snigur",
+    "title": "Daria Snigur vs Taylah Preston - Match WTA - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Mirra Andreeva",
+    "title": "Daria Snigur vs Mirra Andreeva \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Mirra Andreeva",
+    "title": "Noskova, Andreeva stay in control, dodge Beijing upsets",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Daria Snigur",
+    "title": "Daria Snigur vs Mirra Andreeva \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "WTA Tennis|Linda Noskova vs Ekaterina Alexandrova|Linda Noskova": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Noskova speeds past Golubic in 55 minutes, returns to Beijing fourth round",
+  "opp_health": "Around Beijing: Alexandrova returns to China Open last 16 as Andreeva returns to chess",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Linda Noskova",
+    "title": "Noskova speeds past Golubic in 55 minutes, returns to Beijing fourth round",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Ekaterina Alexandrova",
+    "title": "Around Beijing: Alexandrova returns to China Open last 16 as Andreeva returns to chess",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Linda Noskova",
+    "title": "Linda Noskov\u00e1 vs Ekaterina Alexandrova \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Linda Noskova",
+    "title": "Noskova, Andreeva stay in control, dodge Beijing upsets",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Ekaterina Alexandrova",
+    "title": "Linda Noskov\u00e1 vs Ekaterina Alexandrova \u00b7 Round 4 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Ekaterina Alexandrova",
+    "title": "Alexandrova / Stoll\u00e1r vs Buc\u0219a / Melichar-Martinez \u00b7 Round 1 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "NFL|Atlanta @ New Orleans|New Orleans": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Saints, New Orleans to observe 20th anniversary of 'rebirth' return to Superdome game Monday night; Revisiting New Orleans Saints Iconic 2006 Return to the Superdome",
+  "opp_health": "Morning Break: Next man up as Saints deal with injuries at linebacker position for matchup vs. Atlanta Falcons; Saints Saturday Injury Report: 2026 Week 4 vs. Atlanta Falcons",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New Orleans",
+    "title": "Saints, New Orleans to observe 20th anniversary of 'rebirth' return to Superdome game Monday night",
+    "source": "Audacy",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Revisiting New Orleans Saints Iconic 2006 Return to the Superdome",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Saints Saturday Injury Report: 2026 Week 4 vs. Atlanta Falcons",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Morning Break: Next man up as Saints deal with injuries at linebacker position for matchup vs. Atlanta Falcons",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "New Orleans Saints celebrate 20th anniversary of historic return to the Superdome on Monday Night Football",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Sep 30",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "MONDAY MIRACLE: Atlanta Falcons & Michael Penix Jr. DELIVER Fantasy Upside in Saints Showdown",
+    "source": "centraloregondaily.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "MLB|New York Y @ Tampa Bay|Tampa Bay": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Injured New York Yankees Star Making $40 Million This Year; Yankees' starting lineup for ALDS Game 1",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "New York Y",
+    "title": "Yankees' starting lineup for ALDS Game 1",
+    "source": "MLB.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Ex-New York Yankees Player May Retire With $127.5 Million In Career Earnings",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "New York Y",
+    "title": "Injured New York Yankees Star Making $40 Million This Year",
+    "source": "heavy.com",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "\u201cRays Need To Humble Cam Schlittler\u201d \u2013 MLB World Reacts After Yankees Ace\u2019s Dismissive Views On Tampa Bay Ballpark & Fans During ALDS",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "MLB playoffs 2026: The Tampa Bay Rays can beat you with a bunt",
+    "source": "ESPN",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Tampa Bay",
+    "title": "Tampa Bay's secret weapon? No outfield is harder to get a hit against",
+    "source": "MLB.com",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ },
+ "MLB|Chicago WS @ Cleveland|Cleveland": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Playoff Baseball Returns to Cleveland as Guardians Host White Sox; Cleveland Guardians Finalize ALDS Roster, Game 1 Starting Lineup",
+  "opp_health": "White Sox to Use Two Regular Season Starters in Game 2 Against Guardians; Starters set their egos aside as White Sox employ 'all hands on deck' approach to postseason pitching",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cleveland",
+    "title": "Playoff Baseball Returns to Cleveland as Guardians Host White Sox",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Guardians Finalize ALDS Roster, Game 1 Starting Lineup",
+    "source": "Yahoo Sports",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox lineup introduced prior to ALDS Game 1",
+    "source": "MLB.com",
+    "date": "Oct 03",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "Starters set their egos aside as White Sox employ 'all hands on deck' approach to postseason pitching",
+    "source": "chicago.suntimes.com",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox to Use Two Regular Season Starters in Game 2 Against Guardians",
+    "source": "si.com",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "White Sox Lead ALDS 1-0 After 3-0 Shutout of Cleveland Guardians",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-05T13:19Z"
+ }
+}
