@@ -754,5 +754,121 @@
    }
   ],
   "_ts": "2026-10-07T13:17Z"
+ },
+ "ATP Tennis|Ben Shelton vs Daniel Altmaier|Ben Shelton": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Holger Rune vs Daniel Altmaier ATP Shanghai Tips, Prediction & Live Stream - Rune remains vulnerable after injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daniel Altmaier",
+    "title": "Holger Rune vs Daniel Altmaier ATP Shanghai Tips, Prediction & Live Stream - Rune remains vulnerable after injury",
+    "source": "bets.com.au",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton's Net Worth Proves His Raw Power As A Rising Tennis Star",
+    "source": "AfroTech",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton vs Daniel Altmaier - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton vs Daniel Altmaier \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Daniel Altmaier",
+    "title": "Holger Rune vs Daniel Altmaier \u00b7 Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Daniel Altmaier",
+    "title": "Holger Rune vs Daniel Altmaier - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-07T21:03Z"
+ },
+ "MLB|Cleveland @ Chicago WS|Cleveland": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Cleveland Guardians, Chicago White Sox starting lineups for Oct. 5, 2026: ALDS Game 2",
+  "opp_health": "White Sox set Game 3 lineup as they look to clinch vs. Guardians; White Sox Name ALDS Game 3 Starter \u2013 Is Another Bullpen Game the Right Call?",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cleveland",
+    "title": "Cleveland Guardians, Chicago White Sox starting lineups for Oct. 5, 2026: ALDS Game 2",
+    "source": "Cleveland.com",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox set lineup for ALDS Game 2 matchup against Guardians and right-hander Gavin Williams",
+    "source": "Chicago Sun-Times",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox Name ALDS Game 3 Starter \u2013 Is Another Bullpen Game the Right Call?",
+    "source": "Sports Illustrated",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Chicago WS",
+    "title": "White Sox set Game 3 lineup as they look to clinch vs. Guardians",
+    "source": "NBC 5 Chicago",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Cleveland",
+    "title": "Guardians-White Sox, Game 3's best photos. Chicago leads Cleveland 2-0",
+    "source": "Akron Beacon Journal",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Cleveland",
+    "title": "Cleveland turns to rookie Espino in must-win Game 3",
+    "source": "Cleveland.com",
+    "date": "Oct 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-07T21:04Z"
  }
 }
