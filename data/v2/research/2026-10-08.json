@@ -800,5 +800,107 @@
    }
   ],
   "_ts": "2026-10-08T13:17Z"
+ },
+ "ATP Tennis|Dalibor Svrcina vs Tomas Martin Etcheverry|Tomas Martin Etcheverry": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "Bye vs Tomas Martin Etcheverry - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Dalibor Svrcina",
+    "title": "Yoshihito Nishioka vs Dalibor Svrcina - Match ATP - Rolex Shanghai Masters 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "Carlos Alcaraz - Tomas Martin Etcheverry 2-1",
+    "source": "Flashscore.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Dalibor Svrcina",
+    "title": "Tennis | ATP Shanghai 2026 | Norrie takes on lucky loser Svrcina for second round berth",
+    "source": "Britwatch Sports",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Dalibor Svrcina",
+    "title": "Cameron Norrie vs Dalibor Svrcina - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-08T21:03Z"
+ },
+ "ATP Tennis|Ignacio Buse vs Zizou Bergs|Zizou Bergs": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Bye - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Vit Kopriva vs Zizou Bergs - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "V\u00edt Kop\u0159iva vs Zizou Bergs \u00b7 Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Ignacio Buse vs Zizou Bergs \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Zizou Bergs \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-08T21:03Z"
  }
 }
