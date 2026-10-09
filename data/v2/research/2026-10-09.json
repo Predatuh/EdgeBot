@@ -1592,5 +1592,151 @@
    }
   ],
   "_ts": "2026-10-09T13:16Z"
+ },
+ "ATP Tennis|Brandon Nakashima vs Alexander Bublik|Brandon Nakashima": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Brandon Nakashima",
+    "title": "Alexander Bublik vs Brandon Nakashima - Match ATP - Rolex Shanghai Masters 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Brandon Nakashima",
+    "title": "Matteo Berrettini vs Brandon Nakashima \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Brandon Nakashima",
+    "title": "Alexander Bublik vs Brandon Nakashima \u00b7 Round 3 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Tomas Machac - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Brandon Nakashima - Match ATP - Rolex Shanghai Masters 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Tom\u00e1\u0161 Mach\u00e1\u010d \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T21:03Z"
+ },
+ "WTA Tennis|Magda Linette vs Sinja Kraus|Magda Linette": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Magda Linette",
+    "title": "EALA Vs LINETTE \u2022 WTA Miami 2026 \u2022 LIVE Tennis Watchalong Stuart Fails To Save The Universe (3mq7yHl7Ra)",
+    "source": "Unisba Media",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Siniakova wins sixth edition of rivalry vs. Linette in Beijing opener",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Bartunkova tops Kraus in Beijing three-setter to make first WTA 1000 QF",
+    "source": "WTA Tennis",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Bartunkova beats Kraus in Beijing R16",
+    "source": "Sofascore",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Sinja Kraus v Nikola Bartunkova (06/10/2026)",
+    "source": "Flashscore.com",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T21:03Z"
+ },
+ "WTA Tennis|Lanlana Tararudee vs Claire Liu|Lanlana Tararudee": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Claire Liu",
+    "title": "Elsa Jacquemot vs Claire Liu \u00b7 Round 1 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Rebecca Sramkova vs Claire Liu - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Rebecca \u0160ramkov\u00e1 vs Claire Liu \u00b7 Round 2 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T21:03Z"
  }
 }
