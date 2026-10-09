@@ -9,12 +9,12 @@
    "wins": 1
   },
   "60-90c": {
-   "drag": 1.0455,
-   "hit": 0.7522,
-   "mean_entry": 0.7195,
-   "n": 448,
+   "drag": 1.0409,
+   "hit": 0.7494,
+   "mean_entry": 0.72,
+   "n": 451,
    "trusted": true,
-   "wins": 337
+   "wins": 338
   },
   "90c+": {
    "drag": 1.032,
@@ -33,12 +33,12 @@
    "wins": 0
   }
  },
- "generated_utc": "2026-10-08T14:41Z",
+ "generated_utc": "2026-10-09T06:27Z",
  "learned_discount": {
   "60-90c": 1.0,
   "90c+": 1.0
  },
- "legs_settled": 718,
+ "legs_settled": 721,
  "min_band_n": 60,
  "rungs": {
   "banker": {
@@ -60,15 +60,15 @@
    "won": 0
   },
   "solid": {
-   "actual": 0.7,
-   "implied": 0.4963,
-   "n": 20,
+   "actual": 0.6667,
+   "implied": 0.495,
+   "n": 21,
    "won": 14
   },
   "swing": {
-   "actual": 0.2174,
-   "implied": 0.1254,
-   "n": 23,
+   "actual": 0.2083,
+   "implied": 0.1253,
+   "n": 24,
    "won": 5
   }
  }
