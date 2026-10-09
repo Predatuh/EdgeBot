@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-10-08T21:03Z",
+ "_generated_utc": "2026-10-09T13:15Z",
  "_league": "nfl",
- "_plays_used": 6337,
+ "_plays_used": 6419,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 11155,
+ "_rows": 11327,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -109,16 +109,16 @@
    "this_season_plays": 168
   },
   "Dallas": {
-   "def_epa": 0.2058,
-   "def_plays": 484.29999999999995,
-   "def_success": 0.5059,
-   "net_epa": -0.0748,
-   "off_epa": 0.131,
-   "off_plays": 516.8499999999999,
-   "off_success": 0.4723,
-   "pass_epa": 0.2195,
-   "rush_epa": -0.0023,
-   "this_season_plays": 219
+   "def_epa": 0.219,
+   "def_plays": 527.3,
+   "def_success": 0.5082,
+   "net_epa": -0.1094,
+   "off_epa": 0.1096,
+   "off_plays": 555.8499999999999,
+   "off_success": 0.4679,
+   "pass_epa": 0.181,
+   "rush_epa": -0.0018,
+   "this_season_plays": 258
   },
   "Denver": {
    "def_epa": -0.0143,
@@ -361,16 +361,16 @@
    "this_season_plays": 179
   },
   "Tampa Bay": {
-   "def_epa": 0.0102,
-   "def_plays": 452.9,
-   "def_success": 0.4296,
-   "net_epa": -0.0855,
-   "off_epa": -0.0753,
-   "off_plays": 518.2,
-   "off_success": 0.4098,
-   "pass_epa": -0.1499,
-   "rush_epa": 0.0212,
-   "this_season_plays": 213
+   "def_epa": -0.0044,
+   "def_plays": 491.9,
+   "def_success": 0.428,
+   "net_epa": -0.037,
+   "off_epa": -0.0414,
+   "off_plays": 561.2,
+   "off_success": 0.4194,
+   "pass_epa": -0.1166,
+   "rush_epa": 0.0537,
+   "this_season_plays": 256
   },
   "Tennessee": {
    "def_epa": 0.1255,

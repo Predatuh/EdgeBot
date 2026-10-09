@@ -1,0 +1,1596 @@
+{
+ "ATP Tennis|Rei Sakamoto vs Alex de Minaur|Alex de Minaur": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "What Alex de Minaur said after his first mid-match withdrawal in 9 years; Alex de Minaur Retires Injured in China Open Final",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Alex de Minaur Retires Injured in China Open Final"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alex de Minaur",
+    "title": "Djokovic closes in on Federer record after De Minaur retires in Beijing",
+    "source": "TNT Sports",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "What Alex de Minaur said after his first mid-match withdrawal in 9 years",
+    "source": "Tennis Tonic",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Alex de Minaur Retires Injured in China Open Final",
+    "source": "The Sporting Base",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "Alex de Minaur vs Rei Sakamoto - Match ATP - Rolex Shanghai Masters 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "Rei Sakamoto vs Andrey Rublev \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Rei Sakamoto",
+    "title": "Alex de Minaur vs Rei Sakamoto \u00b7 Round 3 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "ATP Tennis|Pavel Kotov vs Arthur Fils|Arthur Fils": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils vs Bye - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils vs Pavel Kotov - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Pavel Kotov",
+    "title": "Pavel Kotov vs Tallon Griekspoor - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Pavel Kotov",
+    "title": "Arthur Fils vs Pavel Kotov - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils vs Pavel Kotov \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Pavel Kotov",
+    "title": "Arthur Fils vs Pavel Kotov \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "ATP Tennis|Stefanos Tsitsipas vs Luciano Darderi|Luciano Darderi": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Luciano Darderi",
+    "title": "Luciano Darderi vs Stefanos Tsitsipas - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Luciano Darderi vs Stefanos Tsitsipas \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Darderi / Etcheverry vs Cash / Glasspool \u00b7 Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Stefanos Tsitsipas",
+    "title": "Luciano Darderi vs Stefanos Tsitsipas \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Stefanos Tsitsipas",
+    "title": "Stefanos Tsitsipas targets top-30 finish to secure Grand Slam seedings",
+    "source": "Tennis Tonic",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Stefanos Tsitsipas",
+    "title": "\u201cI consider myself with the big guys\u201d: Stefanos Tsitsipas insists his ranking does not tell the full story",
+    "source": "Tennisuptodate.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "ATP Tennis|Yi Zhou vs Lorenzo Musetti|Yi Zhou": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "What Lorenzo Musetti revealed about his fitness and ranking targets ahead of Shanghai after his recent finger injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lorenzo Musetti",
+    "title": "What Lorenzo Musetti revealed about his fitness and ranking targets ahead of Shanghai after his recent finger injury",
+    "source": "Tennis Tonic",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Yi Zhou",
+    "title": "Mattia Bellucci vs Yi Zhou \u00b7 Round 1 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Yi Zhou",
+    "title": "Yi Zhou vs Lorenzo Musetti - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Yi Zhou",
+    "title": "Yi Zhou vs Lorenzo Musetti \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Musetti Holds 77 Percent Win Probability Against Zhou at Shanghai Masters",
+    "source": "SuaraGarut.ID",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Yi Zhou vs Lorenzo Musetti \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "ATP Tennis|Alex Molcan vs Alex de Minaur|Alex de Minaur": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "What Alex de Minaur said after his first mid-match withdrawal in 9 years; Alex de Minaur Retires Injured in China Open Final",
+  "opp_health": "Alex de Minaur vs Alex Molcan ATP Shanghai Tips, Prediction & Live Stream - De Minaur under injury cloud; Alex de Minaur confirms the reason why he retired from Beijing final vs Novak Djokovic and offers fitness update",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Alex de Minaur Retires Injured in China Open Final"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alex de Minaur",
+    "title": "Djokovic closes in on Federer record after De Minaur retires in Beijing",
+    "source": "TNT Sports",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Alex de Minaur confirms the reason why he retired from Beijing final vs Novak Djokovic and offers fitness update",
+    "source": "Tennishead",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "\"I don't feel great\" - Alex de Minaur offers brief injury update after first ATP retirement in over nine years",
+    "source": "Tennisuptodate.com",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "What Alex de Minaur said after his first mid-match withdrawal in 9 years",
+    "source": "Tennis Tonic",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Alex de Minaur Retires Injured in China Open Final",
+    "source": "The Sporting Base",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Alex de Minaur vs Alex Molcan ATP Shanghai Tips, Prediction & Live Stream - De Minaur under injury cloud",
+    "source": "bets.com.au",
+    "date": "Oct 08",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "ATP Tennis|Tomas Machac vs Alexander Bublik|Alexander Bublik": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tomas Machac",
+    "title": "Zhizhen Zhang vs Tomas Machac - Match ATP - Rolex Shanghai Masters 1970 - First round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Alexander Bublik vs Tomas Machac - Match ATP - Rolex Shanghai Masters 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "What happened to Alexander Bublik in a Shanghai taxi",
+    "source": "Tennis Tonic",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik vs Tom\u00e1\u0161 Mach\u00e1\u010d \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Alexander Bublik",
+    "title": "Alexander Bublik - Tomas Machac",
+    "source": "Flashscore UK",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Alexander Bublik - Tomas Machac",
+    "source": "Flashscore UK",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Peyton Stearns vs Han Shi|Peyton Stearns": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Peyton Stearns",
+    "title": "Viktorija Golubic vs Peyton Stearns - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Han Shi vs Chengyiyi Yuan - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Peyton Stearns",
+    "title": "Golubic sets up second-round clash with Stearns at China Open",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Han Shi vs Yidi Yang - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Han Shi vs Renata Zarazua - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Kamilla Rakhimova vs Sofia Kenin|Kamilla Rakhimova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Hot shot: Kamilla Rakhimova finds the angle at full stretch in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Jovic saves two set points, denies Rakhimova to make Beijing fourth round",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova loses to Iva Jovic in Beijing",
+    "source": "UzDaily.uz",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Sofia Kenin",
+    "title": "Florida\u2019s Kenin Beats Gibbs in All-American Berkeley USTA Pro Circuit Final",
+    "source": "USTA Florida",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Sara Sorribes Tormo vs Talia Gibson|Talia Gibson": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Talia Gibson",
+    "title": "Fernandez rides nine-game run past first-time finalist Gibson for Singapore crown",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Daria Kasatkina vs Viktorija Golubic|Viktorija Golubic": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Noskova speeds past Golubic in 55 minutes, returns to Beijing fourth round",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Viktorija Golubic",
+    "title": "Noskova speeds past Golubic in 55 minutes, returns to Beijing fourth round",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Daria Kasatkina",
+    "title": "Two points from defeat, Badosa escapes Kasatkina in Beijing opener",
+    "source": "WTA Tennis",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Viktorija Golubic",
+    "title": "Linda Noskova vs Viktorija Golubic - Match WTA - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Viktorija Golubic",
+    "title": "Golubic sets up second-round clash with Stearns at China Open",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Daria Kasatkina",
+    "title": "Kasatkina vs. Siniakova | Round of 32 Internazionali BNL d'Italia 2020",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Moyuka Uchijima vs Magdalena Frech|Magdalena Frech": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Magdalena Frech",
+    "title": "Nikola Bartunkova vs Magdalena Frech - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Magdalena Frech",
+    "title": "Magdalena Frech Vs Eva Lys \ud83c\udfbeLIVE SCORE TENNIS WTA BERLIN OPEN GERMANY 2026 | R32 Only Murders In The Building (NS39NVszwz)",
+    "source": "Unisba Media",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Magdalena Frech",
+    "title": "Frech outlasts Jacquemot in 2:43 Beijing first-round nightcap",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Moyuka Uchijima",
+    "title": "Moyuka Uchijima vs Zhuoxuan Bai - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Moyuka Uchijima",
+    "title": "Moyuka Uchijima vs Zhuoxuan Bai \u00b7 Round 1 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:15Z"
+ },
+ "WTA Tennis|Alycia Parks vs Aoi Ito|Alycia Parks": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alycia Parks",
+    "title": "\u201cAlycia Parks SHOCKS WTA & Praises Alex Eala's Influence LIKE NEVER BEFORE\u201d \u2705 Meadow Walker (lgRisou0O1)",
+    "source": "Unisba Media",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Anastasia Zakharova vs Zeynep Sonmez|Zeynep Sonmez": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Belinda Bencic vs Anastasia Zakharova - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Zeynep Sonmez",
+    "title": "Inglis upsets Sonmez in Beijing for first tour-level win since January",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Diyas vs. Zakharova | Round of 32 Astana Open 2021",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Emma Raducanu Dominates Anastasia Zakharova In Straight Sets To Kickstart Campaign At Indian Wells Rand (KfmKnEThER)",
+    "source": "Unisba Media",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Magda Linette vs Sinja Kraus|Sinja Kraus": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Magda Linette",
+    "title": "EALA Vs LINETTE \u2022 WTA Miami 2026 \u2022 LIVE Tennis Watchalong Stuart Fails To Save The Universe (3mq7yHl7Ra)",
+    "source": "Unisba Media",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Siniakova wins sixth edition of rivalry vs. Linette in Beijing opener",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Bartunkova tops Kraus in Beijing three-setter to make first WTA 1000 QF",
+    "source": "WTA Tennis",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Bartunkova beats Kraus in Beijing R16",
+    "source": "Sofascore",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Sinja Kraus",
+    "title": "Sinja Kraus v Nikola Bartunkova (06/10/2026)",
+    "source": "Flashscore.com",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Elena-Gabriela Ruse vs Yulia Putintseva|Elena-Gabriela Ruse": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Linda Noskova vs Elena-Gabriela Ruse - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 02",
+    "watch": false
+   },
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Noskova avenges Bad Homburg loss to Ruse with win in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Yulia Putintseva",
+    "title": "Barty vs. Putintseva | Round of 16 Mutua Madrid Open 2019",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Elena-Gabriela Ruse",
+    "title": "Ruse beats Tagger, sets up Noskova clash at China Open",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Yulia Putintseva",
+    "title": "PUT - SHA | Yulia Putintseva v Yushan Shao LIVE 06/10/2026 | Tennis - Flashscore | Summary",
+    "source": "Flashscore.co.za",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Taylah Preston vs Ashlyn Krueger|Ashlyn Krueger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Ashlyn Krueger vs Ann Li \u00b7 Round 2 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Li improves to 2-0 against Krueger with Beijing win",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Ashlyn Krueger vs Ann Li - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Daria Snigur vs Taylah Preston - Match WTA - China Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Daria Snigur vs Taylah Preston \u00b7 Round 3 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Taylah Preston",
+    "title": "Snigur routs Preston in 47 minutes in Beijing; into first WTA 1000 Round of 16",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Lanlana Tararudee vs Claire Liu|Claire Liu": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Claire Liu",
+    "title": "Elsa Jacquemot vs Claire Liu \u00b7 Round 1 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Rebecca Sramkova vs Claire Liu - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Claire Liu",
+    "title": "Rebecca \u0160ramkov\u00e1 vs Claire Liu \u00b7 Round 2 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Yue Yuan vs Caty McNally|Caty McNally": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Caty McNally",
+    "title": "Caty McNally EXPLAINS How Alex Eala WINS On ONE LEG Ottawa Tulip Festival (8IS8hBtt7q)",
+    "source": "Unisba Media",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Caty McNally",
+    "title": "Yastremska improves to 3-0 against McNally with China Open win",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Caty McNally",
+    "title": "EALA Vs MCNALLY \u2022 WTA Toronto 2026 \u2022 LIVE Tennis Watchalong Football Scores (Zn8jw84MMS)",
+    "source": "Unisba Media",
+    "date": "Oct 07",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Anna Bondar vs Lois Boisson|Lois Boisson": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lois Boisson",
+    "title": "Lois Boisson eyes first hard-court title as Roland Garros semifinalist reaches another final",
+    "source": "Tennisuptodate.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Lois Boisson",
+    "title": "Leolia Jeanjean vs Lois Boisson - Match WTA - Adana Open 1970 - Final",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Anna Bondar",
+    "title": "Hartono vs. Bondar | Round of 32 Montevideo Open 2021 | WTA Official",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Anna Bondar",
+    "title": "Zarazua saves three set points, reverses Seoul loss to Bondar in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Lois Boisson",
+    "title": "After Her Adana Final, Lo\u00efs Boisson Lands Wuhan Wild Card and Draws a Familiar Foe",
+    "source": "TennisTemple",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Mananchaya Sawangkaew vs Maya Joint|Maya Joint": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mananchaya Sawangkaew",
+    "title": "Mananchaya Sawangkaew vs Linda Fruhvirtova - Match WTA - Suzhou Open 2026 Women\u2019s Singles 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Mananchaya Sawangkaew",
+    "title": "Mananchaya Sawangkaew vs Linda Fruhvirtov\u00e1 \u00b7 Round 1 \u00b7 WTA 125K Suzhou, China",
+    "source": "Tennis.com",
+    "date": "Oct 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Lin Zhu vs Camila Osorio|Camila Osorio": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Camila Osorio",
+    "title": "Coco Gauff vs Camila Osorio - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Camila Osorio",
+    "title": "Coco Gauff Defeats Camila Osorio in China Open Second Round",
+    "source": "SuaraGarut.ID",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Camila Osorio",
+    "title": "Former champ Gauff quells Osorio in three sets to make Beijing third round",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Lin Zhu",
+    "title": "Donna Vekic vs Lin Zhu - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Lin Zhu",
+    "title": "Donna Veki\u0107 vs Lin Zhu \u00b7 Round 2 \u00b7 WTA Beijing",
+    "source": "Tennis.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Lin Zhu",
+    "title": "Vekic extends perfect record against Zhu to reach Beijing third round",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "WTA Tennis|Katie Volynets vs Polina Kudermetova|Katie Volynets": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Katie Volynets",
+    "title": "Katie Volynets vs Elise Mertens - Match WTA - China Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Katie Volynets",
+    "title": "Hot shots: Katie Volynets' 25-shot lung-buster plus bonus pass in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Katie Volynets",
+    "title": "From 6-0, 3-0 up, Mertens takes scenic route to subdue Volynets in Beijing",
+    "source": "WTA Tennis",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Andreeva eases past Polina Kudermetova to make Beijing last 16",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Polina Kudermetova overcomes lucky loser Ma in three-set Beijing opener",
+    "source": "WTA Tennis",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Polina Kudermetova loses to Mirra Andreeva in Beijing",
+    "source": "UzDaily.uz",
+    "date": "Oct 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Iowa St. @ BYU|BYU": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "LJ Martin's injury poses stiff challenge to No. 8 BYU's offense as Cougars host Iowa State; BYU RB LJ Martin out a month or more after suffering injury in win over TCU",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "BYU",
+    "title": "LJ Martin's injury poses stiff challenge to No. 8 BYU's offense as Cougars host Iowa State",
+    "source": "Newsday",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "BYU",
+    "title": "BYU RB LJ Martin out a month or more after suffering injury in win over TCU",
+    "source": "Yahoo Sports",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "BYU",
+    "title": "BYU RB LJ Martin injury: Reigning Big 12 Player of the Year to miss a month, including showdown vs. Notre Dame",
+    "source": "CBS Sports",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Iowa St.",
+    "title": "AP Player of the Week: Iowa State RB Aiden Flora ran for 212 yards and 3 TDs and passed for 2 scores",
+    "source": "LancasterOnline",
+    "date": "Oct 05",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "BIG 12 NOTEBOOK | Iowa State looks to shake up wacky Big 12",
+    "source": "The Cumberland Times-News",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "Iowa State Cyclones @ BYU Cougars: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Washington St. @ Utah St.|Utah St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Utah St.",
+    "title": "GALLERY: #22 Boise State 37, Utah State 18",
+    "source": "Cache Valley Daily",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Utah St.",
+    "title": "Madsen, No. 22 Boise State beat Utah State 37-18 in the teams' inaugural Pac-12 game",
+    "source": "LancasterOnline",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Utah St.",
+    "title": "Utah St Boise St Football",
+    "source": "dailyrecordnews.com",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Washington St.",
+    "title": "Fast facts as No. 20 Iowa heads west to face Washington",
+    "source": "The Gazette",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Washington St.",
+    "title": "CJ Toney (RB) News, Rumors & Videos - Washington St.",
+    "source": "Yahoo Sports",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Washington St.",
+    "title": "Iowa Hawkeyes @ Washington Huskies: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Iowa @ Washington|Washington": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "No. 20 Iowa visits Washington with QB Hank Brown questionable; Iowa vs Washington | Odds, injuries, predictions, storylines",
+  "opp_health": "Iowa football injury update: Hank Brown reportedly game-time decision; Iowa Football's QB Injury Update Takes Center Stage Ahead of Washington",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Washington",
+    "title": "Iowa vs Washington | Odds, injuries, predictions, storylines",
+    "source": "Hawk Central",
+    "date": "Oct 05",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "No. 20 Iowa visits Washington with QB Hank Brown questionable",
+    "source": "CBS Sports",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Iowa",
+    "title": "Tyler Brown expected to miss \u2018a while.\u2019 The latest on Iowa football injuries",
+    "source": "The Quad-City Times",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Iowa",
+    "title": "Iowa football injury update: Hank Brown reportedly game-time decision",
+    "source": "Yahoo Sports",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Iowa",
+    "title": "Iowa Football's QB Injury Update Takes Center Stage Ahead of Washington",
+    "source": "Yahoo Sports",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "Hawkeye Football: Updated Game Line, Weather Forecast for Iowa vs. Washington",
+    "source": "Yahoo Sports",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Wyoming @ San Jose St.|San Jose St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "San Jose St.",
+    "title": "Warriors Rally Falls Short in Loss to San Jose State",
+    "source": "Hawaii athletics",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "San Jose St.",
+    "title": "John Norwood, San Jose State Spartans, LB - News, Stats, Bio",
+    "source": "CBS Sports",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "San Jose St.",
+    "title": "Runye Norton (CB) Game Logs - San Jose St.",
+    "source": "Yahoo Sports",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Wyoming",
+    "title": "Taylor: Jay Sawvel, Wyoming football at a crossroads going into Week 6",
+    "source": "WyomingNews.com",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Wyoming",
+    "title": "A look at Wyoming wrestling's annual preseason workout in the Happy Jack Recreation Area, Cowboys football at a crossroads going into Week 6",
+    "source": "WyomingNews.com",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Wyoming",
+    "title": "Wyoming vs. San Jose State Oct. 9: TV, Stream",
+    "source": "San Diego Sports 760",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Florida St. @ Louisville|Louisville": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "FSU Football at Louisville Cardinals: Positive Injury News On Defense; FSU Football at Louisville Cardinals: 18 Players Already Ruled Out",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "FSU Football at Louisville Cardinals: 18 Players Already Ruled Out"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Louisville",
+    "title": "College Football Injury Report: Latest Week 5 updates at Florida, Louisville, Ohio State & more",
+    "source": "On3",
+    "date": "Oct 02",
+    "watch": true
+   },
+   {
+    "side": "Louisville",
+    "title": "FSU Football at Louisville Cardinals: 18 Players Already Ruled Out",
+    "source": "Yahoo Sports",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Louisville",
+    "title": "FSU Football at Louisville Cardinals: Positive Injury News On Defense",
+    "source": "Sports Illustrated",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Florida St.",
+    "title": "Florida St Football",
+    "source": "The Herald Journal",
+    "date": "Oct 06",
+    "watch": false
+   },
+   {
+    "side": "Florida St.",
+    "title": "Florida St Alabama Football",
+    "source": "Columbia Missourian",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Florida St.",
+    "title": "College football Week 6 upset watch: UCLA, Florida State, Nebraska push favorites",
+    "source": "The Big Lead",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "College Football|Columbia @ Marist|Columbia": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Columbia",
+    "title": "See photos from the Mizzou Tigers\u2019 homecoming upset of Florida Gators in Columbia",
+    "source": "Kansas City Star",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Columbia",
+    "title": "Southern Columbia Tight End Jace Malakoski Commits to Stonehill College",
+    "source": "PA Football News",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Columbia",
+    "title": "Columbia Eye-Catchers: Big names deliver, new prospects emerge in dominant win",
+    "source": "On3",
+    "date": "Oct 04",
+    "watch": false
+   },
+   {
+    "side": "Marist",
+    "title": "Columbia vs. Marist 10/9/26 - Stream the Game Live - Watch ESPN",
+    "source": "ESPN",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Marist",
+    "title": "Col\u00e1iste Mhuire finish strongly to overcome Marist",
+    "source": "Westmeath Examiner",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Marist",
+    "title": "Football looks to get back in the win column against Marist",
+    "source": "Columbia Daily Spectator",
+    "date": "Oct 08",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "La Liga|Espanyol @ Malaga|Espanyol": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "M\u00e1laga vs Espanyol Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026; Malaga vs Espanyol: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Preview: Malaga vs Espanyol - prediction, team news, lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Malaga",
+    "title": "Preview: Malaga vs Espanyol - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 07",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "M\u00e1laga vs Espanyol prediction: expert analysis, possible lineups, October 9, 2026",
+    "source": "RatingBet",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "M\u00e1laga vs Espanyol Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Malaga vs Espanyol: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Malaga",
+    "title": "Malaga vs Espanyol - La Liga - October 9, 2026 - Match Guide, Data Analysis, Standings - Football",
+    "source": "Sports Mole",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Malaga",
+    "title": "How to get Malaga vs Real Sociedad tickets: LaLiga prices, fixture information, last-minute sales & more",
+    "source": "Goal.com",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "Ligue 1|Lyon @ Lens|Lens": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Lens vs Lyon \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 09-10; Lens vs Lyon Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+  "opp_health": "Lens vs Lyon \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 09-10; Lens vs Lyon Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lens",
+    "title": "Lens vs Lyon \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 09-10",
+    "source": "Odds Scanner",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Lens vs Lyon Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Lens vs Lyon Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "Lens vs Lyon \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 09-10",
+    "source": "Odds Scanner",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "Lens vs Lyon Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "Lens vs Lyon Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Oct 09",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ },
+ "Bundesliga|Bremen @ Dortmund|Dortmund": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "F\u00fcllkrug Returns to Signal Iduna Park: Dortmund vs Bremen Predicted Lineups; Match Preview: Borussia Dortmund Return to Action Against Werder Bremen",
+  "opp_health": "Borussia Dortmund vs Werder Bremen Predictions, Bet Builder Tips, Lineups, Odds; Borussia Dortmund vs Werder Bremen Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Dortmund",
+    "title": "Match Preview: Borussia Dortmund Return to Action Against Werder Bremen",
+    "source": "Fear The Wall",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Dortmund",
+    "title": "Borussia Dortmund vs. Werder Bremen prediction, lineups, odds and bet builder tips for Bundesliga clash",
+    "source": "Sporting News",
+    "date": "Oct 08",
+    "watch": true
+   },
+   {
+    "side": "Dortmund",
+    "title": "F\u00fcllkrug Returns to Signal Iduna Park: Dortmund vs Bremen Predicted Lineups",
+    "source": "thefalse9.com",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Bremen",
+    "title": "Borussia Dortmund vs Werder Bremen Predictions, Bet Builder Tips, Lineups, Odds",
+    "source": "WhoScored.com",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Bremen",
+    "title": "Borussia Dortmund vs Werder Bremen Prediction, Betting Tips, Lineups & Odds | 09 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Bremen",
+    "title": "F\u00fcllkrug Returns to Signal Iduna Park: Dortmund vs Bremen Predicted Lineups",
+    "source": "thefalse9.com",
+    "date": "Oct 09",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-09T13:16Z"
+ }
+}
