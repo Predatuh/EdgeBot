@@ -8158,5 +8158,151 @@
    }
   ],
   "_ts": "2026-10-10T20:05Z"
+ },
+ "College Football|Tennessee-Martin @ Tennessee St.|Tennessee St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tennessee-Martin",
+    "title": "Austin Peay Governors vs Tennessee-Martin Skyhawks Box Score - September 26, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Tennessee-Martin",
+    "title": "Lindenwood Lions vs Tennessee-Martin Skyhawks Box Score - November 14, 2026 - The Athletic",
+    "source": "The New York Times",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-10T20:24Z"
+ },
+ "College Football|Western Carolina @ Mercer|Western Carolina": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mercer",
+    "title": "Mercer rolls up 658 yards offense on way to 54-3 victory over winless VMI",
+    "source": "ABC News - Breaking News, Latest News and Videos",
+    "date": "Oct 03",
+    "watch": false
+   },
+   {
+    "side": "Mercer",
+    "title": "3 things to know about Mercer vs. Western Carolina football game day: Oct. 10, 2026",
+    "source": "Mercer University",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Western Carolina vs. North Carolina",
+    "source": "ESPN",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "North Carolina College Football Scores Today: Live Updates & Final Scores For Oct. 10",
+    "source": "NC Football News",
+    "date": "Oct 10",
+    "watch": false
+   },
+   {
+    "side": "Western Carolina",
+    "title": "Western Carolina vs. Mercer",
+    "source": "ESPN",
+    "date": "Oct 10",
+    "watch": false
+   },
+   {
+    "side": "Mercer",
+    "title": "Western Carolina vs. Mercer",
+    "source": "ESPN",
+    "date": "Oct 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-10T20:24Z"
+ },
+ "Ligue 1|Paris FC @ Lorient|Lorient": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Lorient vs Paris FC Prediction, Betting Tips, Lineups & Odds | 10 Oct 2026; Lorient vs Paris FC match lineup | Ligue 1 \u00b7 10 Oct 2026",
+  "opp_health": "Lorient vs Paris FC Prediction, Betting Tips, Lineups & Odds | 10 Oct 2026; Lorient vs Paris FC match lineup | Ligue 1 \u00b7 10 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lorient",
+    "title": "Lorient vs Paris FC Prediction, Betting Tips, Lineups & Odds | 10 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Lorient",
+    "title": "Lorient vs Paris FC match lineup | Ligue 1 \u00b7 10 Oct 2026",
+    "source": "YSscores",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Lorient",
+    "title": "Lorient vs Paris FC Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Paris FC",
+    "title": "Lorient vs Paris FC Prediction, Betting Tips, Lineups & Odds | 10 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Paris FC",
+    "title": "Lorient vs Paris FC match lineup | Ligue 1 \u00b7 10 Oct 2026",
+    "source": "YSscores",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Paris FC",
+    "title": "Lorient vs Paris FC Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 10",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-10T20:24Z"
  }
 }
