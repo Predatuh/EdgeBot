@@ -88,3 +88,4 @@ research:
   near_edge: 0.02           # research EDGE picks plus leans within 2% of edge_threshold
   elo_per_point: 8          # research lean (-3..+3) -> Elo on the pick, at most ±24 Elo (~±3%)
   demote_on_red_flag: true  # an EDGE with a red flag is posted as an unstaked LEAN
+  auto_bet_strong_ncaaf: false   # set true for the paper log
