@@ -1,8 +1,8 @@
-"""Post the daily card to a Discord webhook (set DISCORD_WEBHOOK_URL secret).
+"""Post the daily card to Discord webhooks.
 
-Chunks are paced and rate-limit aware: the old version fired every chunk back to
-back and ignored the response, so a long card was silently dropped by Discord's
-429s - the failure looked like "the bot posted nothing"."""
+Supports multiple webhooks (one per channel). Falls back to DISCORD_WEBHOOK_URL
+if a specific one is not set. Chunks are paced and rate-limit aware.
+"""
 import os
 import time
 
@@ -13,6 +13,8 @@ GAP = 0.6               # seconds between chunks
 
 
 def _send(url, content, tries=4):
+    if not url:
+        return False
     for i in range(tries):
         try:
             r = requests.post(url, json={"content": content}, timeout=20)
@@ -37,21 +39,31 @@ def _send(url, content, tries=4):
     return False
 
 
-def post(text):
-    url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+def post(text, webhook_key=None):
+    """Post text to Discord.
+
+    webhook_key: optional short name (e.g. "ncaaf", "strong", "records").
+    Looks up DISCORD_WEBHOOK_<KEY> first, then falls back to DISCORD_WEBHOOK_URL.
+    """
+    url = None
+    if webhook_key:
+        url = os.environ.get(f"DISCORD_WEBHOOK_{webhook_key.upper()}", "").strip()
     if not url:
-        print("No DISCORD_WEBHOOK_URL set; printing instead:\n")
+        url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+    if not url:
+        print(f"No webhook for {webhook_key or 'default'}; printing instead:\\n")
         print(text)
         return
+
     chunks, chunk = [], ""
-    for line in text.split("\n"):
-        while len(line) > MAX_CHARS:            # a single over-long line would never fit
+    for line in text.split("\\n"):
+        while len(line) > MAX_CHARS:
             chunks.append(line[:MAX_CHARS])
             line = line[MAX_CHARS:]
         if len(chunk) + len(line) + 1 > MAX_CHARS:
             chunks.append(chunk)
             chunk = ""
-        chunk += line + "\n"
+        chunk += line + "\\n"
     if chunk.strip():
         chunks.append(chunk)
     sent = 0
@@ -59,4 +71,4 @@ def post(text):
         if i:
             time.sleep(GAP)
         sent += bool(_send(url, c))
-    print(f"[notify] posted {sent}/{len(chunks)} chunk(s)")
+    print(f"[notify] posted {sent}/{len(chunks)} chunk(s) to {webhook_key or 'default'}")
