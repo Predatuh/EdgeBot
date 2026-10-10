@@ -4,7 +4,16 @@ on:
   schedule:
     - cron: "0 13 * * *"
     - cron: "0 21 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to run"
+        required: false
+        default: "full"
+        type: choice
+        options:
+          - full
+          - records-only
 
 permissions:
   contents: write
@@ -24,6 +33,7 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Refresh EPA
+        if: ${{ github.event.inputs.mode != 'records-only' }}
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         continue-on-error: true
@@ -47,7 +57,13 @@ jobs:
           DISCORD_WEBHOOK_RECORDS: ${{ secrets.DISCORD_WEBHOOK_RECORDS }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
-        run: python main.py
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "records-only" ]; then
+            python main.py --grade-only --days=1
+          else
+            python main.py
+          fi
+
       - name: Commit updated ratings + pick log
         run: |
           git config user.name "edgebot"
