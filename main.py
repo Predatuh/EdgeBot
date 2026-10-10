@@ -664,14 +664,26 @@ def main():
         except Exception as e:
             print(f"Strong post failed: {e}")
 
-    # Yesterday's records
+    # Yesterday's records, grouped by league
     try:
         yesterday = (dt.date.today() - dt.timedelta(days=1)).isoformat()
         y_rows = [r for r in state.read_log() if r.get("date") == yesterday and r.get("result") in ("W", "L")]
         if y_rows:
-            w = sum(1 for r in y_rows if r["result"] == "W")
-            l = len(y_rows) - w
-            notify.post(f"**Yesterday's results ({yesterday})**\n{w}-{l} ({len(y_rows)} graded)", webhook_key="RECORDS")
+            by_league = {}
+            for r in y_rows:
+                by_league.setdefault(r.get("league", "other"), []).append(r)
+            lines = [f"**Yesterday's results ({yesterday})**"]
+            total_w = total_l = 0
+            for lg, rows in sorted(by_league.items()):
+                w = sum(1 for r in rows if r["result"] == "W")
+                l = len(rows) - w
+                total_w += w
+                total_l += l
+                lines.append(f"**{lg.upper()}**: {w}-{l}")
+                for r in rows:
+                    lines.append(f"  {'✅' if r['result']=='W' else '❌'} {r.get('pick','')} ({r.get('tier','')})")
+            lines.append(f"\n**Total**: {total_w}-{total_l} ({len(y_rows)} graded)")
+            notify.post("\n".join(lines), webhook_key="RECORDS")
     except Exception as e:
         print(f"Records post failed: {e}")
 
