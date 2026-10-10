@@ -353,7 +353,7 @@ def run_league(key, lg, cfg, body, grade_only=False):
     print(f"[{key}] open events today: {len(evs)}; graded {gw}W/{gl}L")
     compact = (cfg.get("card") or {}).get("compact_leans", True)
     max_lean_lines = (cfg.get("card") or {}).get("max_lean_lines", 3)
-    lines, leans = [], []
+    lines, leans, strong = [], [], []
     for ev in evs:
         r = model_game(key, lg, cfg, ev, ratings, hist, epa_table, flow_budget)
         if not r:
@@ -410,29 +410,61 @@ def run_league(key, lg, cfg, body, grade_only=False):
             lines.append(line)
         else:
             # compact: leans are the market's favourites, so they get one line each,
-            # no notes and no headlines (a 155-pick day was ~25 Discord messages)
-            # For NCAAF, only keep strong leans
-            if key == "ncaaf":
-                elo_edge = r.get("elo_pick", 1500) - r.get("elo_opp", 1500)
-                conf = r.get("conf", 0)
-                epa_ok = r.get("epa_points") is None or r.get("epa_points", 0) >= -2.0
-                if elo_edge >= 50 and conf >= 0.25 and epa_ok:
-                    leans.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
-            else:
-                leans.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
+            # no notes and no headlines
+            leans.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
+            # Also track strong leans separately for every league
+            elo_edge = r.get("elo_pick", 1500) - r.get("elo_opp", 1500)
+            conf = r.get("conf", 0)
+            epa_ok = r.get("epa_points") is None or (r.get("epa_points") or 0) >= -2.0
+            if elo_edge >= 50 and conf >= 0.25 and epa_ok:
+                strong.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
+                # Log as STRONG tier for separate tracking
+                state.append_pick({
+                    "date": today, "time_utc": now.strftime("%H:%M"), "league": key,
+                    "event_id": ev["event"] + "_strong", "matchup": r["matchup"],
+                    "pick": r["pick"]["name"], "side": r["where"], "tier": "STRONG",
+                    "model_raw": round(r["raw"], 3), "model_prob": round(r["p"], 3),
+                    "market_prob": round(r["mk"], 3), "edge": round(r["edge"], 3),
+                    "price": r["price"], "units": 0.0,
+                    "elo_pick": round(r["elo_pick"], 1), "elo_opp": round(r["elo_opp"], 1),
+                    "conf": round(r["conf"], 2), "notes": "strong lean filter",
+                    "research": "", "research_lean": "", "research_adj": "",
+                    "research_flag": "", "staked": 0, "gate": "strong",
+                    "model_fav": r["model_fav"],
+                    "epa_points": r.get("epa_points") if r.get("epa_points") is not None else "",
+                    "epa_p": r.get("epa_p") if r.get("epa_p") is not None else "",
+                    "flow_move": r.get("flow_move") if r.get("flow_move") is not None else "",
+                    "flow_dir": r.get("flow_dir") or "",
+                    "flow_ticket_share": r.get("flow_ticket_share") if r.get("flow_ticket_share") is not None else "",
+                    "flow_money_share": r.get("flow_money_share") if r.get("flow_money_share") is not None else "",
+                    "flow_book_share": r.get("flow_book_share") if r.get("flow_book_share") is not None else "",
+                    "result": "", "graded_utc": "", "close_prob": "", "close_utc": "", "clv": "", "profit": "",
+                })
             continue
     if leans:
-        if key == "ncaaf":
-            # Full clean list of STRONG College Football leans (Elo edge >=50, conf>=0.25, EPA not against)
-            clean = "\n".join(leans)
-            lines.append(f"📌 **Strong College Football leans ({len(leans)}):**\n```\n{clean}\n```")
-        else:
-            per = 6
-            rows = [" · ".join(leans[i:i + per]) for i in range(0, len(leans), per)][:max_lean_lines]
-            shown = min(len(leans), per * max_lean_lines)
-            lines.append(f"📌 market favourites ({len(leans)}): " + "\n   " + "\n   ".join(rows)
-                         + (f"\n   …and {len(leans) - shown} more (full list in data/v2/picks_log.csv)"
-                            if len(leans) > shown else ""))
+        per = 6
+        rows = [" · ".join(leans[i:i + per]) for i in range(0, len(leans), per)][:max_lean_lines]
+        shown = min(len(leans), per * max_lean_lines)
+        lines.append(f"📌 market favourites ({len(leans)}): " + "\n   " + "\n   ".join(rows)
+                     + (f"\n   …and {len(leans) - shown} more (full list in data/v2/picks_log.csv)"
+                        if len(leans) > shown else ""))
+    if strong:
+        clean = "\n".join(strong)
+        label = lg.get("label", key)
+        lines.append(f"📌 **Strong {label} leans ({len(strong)}):**\n```\n{clean}\n```")
+        # Paper log for potential auto-bet (real Kalshi orders need private API keys)
+        if key == "ncaaf" and cfg.get("auto_bet_strong_ncaaf", False):
+            import csv
+            bet_path = os.path.join(state.DATA, "strong_ncaaf_bets.csv")
+            os.makedirs(state.DATA, exist_ok=True)
+            new_file = not os.path.exists(bet_path)
+            with open(bet_path, "a", newline="") as f:
+                w = csv.writer(f)
+                if new_file:
+                    w.writerow(["date", "pick", "price", "matchup"])
+                for s in strong:
+                    w.writerow([today, s, "", ""])
+            lines.append("_📝 Strong NCAAF leans logged for auto-bet (paper mode — set Kalshi API keys to enable real orders)._")
     if lines:
         body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated)")
         body.extend(lines)
@@ -581,4 +613,5 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
 
