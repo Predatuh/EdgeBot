@@ -8304,5 +8304,63 @@
    }
   ],
   "_ts": "2026-10-10T20:24Z"
+ },
+ "College Football|Drake @ Valparaiso|Valparaiso": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "ABC7 Chicago meteorologist Larry Mowry returns to Valparaiso University, where he says he learned weather, life skills",
+  "opp_health": "Fantasy Football Week 4 Booms and Busts: Comeback kids Nico Collins, Drake Maye return to form; Should Drake Maye Be Benched? Can Cowboys Bounce Back From Defensive Struggles? \ud83c\udfc8 FOX NFL Sunday",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Drake",
+    "title": "Fantasy Football Week 4 Booms and Busts: Comeback kids Nico Collins, Drake Maye return to form",
+    "source": "Yahoo Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Drake",
+    "title": "Should Drake Maye Be Benched? Can Cowboys Bounce Back From Defensive Struggles? \ud83c\udfc8 FOX NFL Sunday",
+    "source": "FOX Sports",
+    "date": "Oct 04",
+    "watch": true
+   },
+   {
+    "side": "Valparaiso",
+    "title": "ABC7 Chicago meteorologist Larry Mowry returns to Valparaiso University, where he says he learned weather, life skills",
+    "source": "ABC7 Chicago",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Valparaiso",
+    "title": "Will Struyk (P) Game Logs - Valparaiso",
+    "source": "Yahoo Sports",
+    "date": "Oct 09",
+    "watch": false
+   },
+   {
+    "side": "Valparaiso",
+    "title": "2 in custody after deadly shooting in Valparaiso, Indiana",
+    "source": "CBS News",
+    "date": "Oct 10",
+    "watch": false
+   },
+   {
+    "side": "Drake",
+    "title": "Drake Maye Throws Touchdown Pass to Romeo Doubs Stream of National Football League",
+    "source": "CBS Sports",
+    "date": "Oct 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-10T20:49Z"
  }
 }
