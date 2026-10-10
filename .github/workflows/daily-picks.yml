@@ -14,6 +14,7 @@ on:
         options:
           - full
           - records-only
+          - test-webhooks
 
 permissions:
   contents: write
@@ -33,7 +34,7 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Refresh EPA
-        if: ${{ github.event.inputs.mode != 'records-only' }}
+        if: ${{ github.event.inputs.mode != 'records-only' && github.event.inputs.mode != 'test-webhooks' }}
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         continue-on-error: true
@@ -58,13 +59,21 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         run: |
-          if [ "${{ github.event.inputs.mode }}" = "records-only" ]; then
+          MODE="${{ github.event.inputs.mode }}"
+          if [ "$MODE" = "records-only" ]; then
             python main.py --grade-only --days=1
+          elif [ "$MODE" = "test-webhooks" ]; then
+            python -c "
+import notify
+for key in ['NCAAF','NFL','MLB','EPL','LALIGA','SERIEA','BUNDESLIGA','UCL','MLS','TENNIS','OTHER','STRONG','RECORDS']:
+    notify.post(f'Test message for {key}', webhook_key=key)
+"
           else
             python main.py
           fi
 
       - name: Commit updated ratings + pick log
+        if: ${{ github.event.inputs.mode != 'test-webhooks' }}
         run: |
           git config user.name "edgebot"
           git config user.email "edgebot@users.noreply.github.com"
