@@ -9,8 +9,6 @@ on:
 permissions:
   contents: write
 
-# Never let two runs write data/ at the same time (that's what caused the
-# rebase conflicts earlier); a second trigger just waits its turn.
 concurrency:
   group: edgebot-daily-picks
   cancel-in-progress: false
@@ -25,31 +23,37 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      # Team efficiency from play-by-play, refreshed before the picks that use it.
-      # NFL needs nothing; college needs the free CFBD key and is skipped without it.
       - name: Refresh EPA
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
-        continue-on-error: true          # a missing feed must not stop the card
+        continue-on-error: true
         run: python epa.py --league nfl,ncaaf
 
       - name: Run EdgeBot
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: enables web research on picks
-          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}             # college injuries + EPA
+          DISCORD_WEBHOOK_NCAAF: ${{ secrets.DISCORD_WEBHOOK_NCAAF }}
+          DISCORD_WEBHOOK_NFL: ${{ secrets.DISCORD_WEBHOOK_NFL }}
+          DISCORD_WEBHOOK_MLB: ${{ secrets.DISCORD_WEBHOOK_MLB }}
+          DISCORD_WEBHOOK_EPL: ${{ secrets.DISCORD_WEBHOOK_EPL }}
+          DISCORD_WEBHOOK_LALIGA: ${{ secrets.DISCORD_WEBHOOK_LALIGA }}
+          DISCORD_WEBHOOK_SERIEA: ${{ secrets.DISCORD_WEBHOOK_SERIEA }}
+          DISCORD_WEBHOOK_BUNDESLIGA: ${{ secrets.DISCORD_WEBHOOK_BUNDESLIGA }}
+          DISCORD_WEBHOOK_UCL: ${{ secrets.DISCORD_WEBHOOK_UCL }}
+          DISCORD_WEBHOOK_MLS: ${{ secrets.DISCORD_WEBHOOK_MLS }}
+          DISCORD_WEBHOOK_TENNIS: ${{ secrets.DISCORD_WEBHOOK_TENNIS }}
+          DISCORD_WEBHOOK_OTHER: ${{ secrets.DISCORD_WEBHOOK_OTHER }}
+          DISCORD_WEBHOOK_STRONG: ${{ secrets.DISCORD_WEBHOOK_STRONG }}
+          DISCORD_WEBHOOK_RECORDS: ${{ secrets.DISCORD_WEBHOOK_RECORDS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         run: python main.py
       - name: Commit updated ratings + pick log
         run: |
           git config user.name "edgebot"
           git config user.email "edgebot@users.noreply.github.com"
-          # union the append-only logs with the remote before committing: the
-          # -X theirs below is right for regenerated state but would drop rows
-          # another run appended while this one was running
           python merge_state.py
           git add data/
           git diff --cached --quiet || git commit -m "state: $(date -u +%F)"
-          # data/ files are regenerated every run, so on a conflict this run's copy wins
-          # (during a rebase "theirs" is the commit being replayed, i.e. ours).
           git pull --rebase -X theirs origin main
           git push || (git pull --rebase -X theirs origin main && git push)
