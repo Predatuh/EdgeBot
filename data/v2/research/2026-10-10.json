@@ -7474,5 +7474,121 @@
    }
   ],
   "_ts": "2026-10-10T13:12Z"
+ },
+ "ATP Tennis|Zizou Bergs vs Carlos Alcaraz|Carlos Alcaraz": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Carlos Alcaraz sounds alarm over demanding ATP schedule following Jannik Sinner injury; \"Wrong direction\" - Carlos Alcaraz calls out dangerous ATP schedule causing injuries to players after Jannik Sinner debacle",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carlos Alcaraz",
+    "title": "\u201cWhat a journey since I got injured\u201d: Alcaraz defends Tokyo title against Lehecka for first trophy since injury",
+    "source": "Tennis Majors",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Carlos Alcaraz sounds alarm over demanding ATP schedule following Jannik Sinner injury",
+    "source": "Tennis Tonic",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "\"Wrong direction\" - Carlos Alcaraz calls out dangerous ATP schedule causing injuries to players after Jannik Sinner debacle",
+    "source": "Sportskeeda",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Zizou Bergs vs Carlos Alcaraz \u00b7 Round 3 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 10",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Zizou Bergs vs Carlos Alcaraz - Match ATP - Rolex Shanghai Masters 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 10",
+    "watch": false
+   },
+   {
+    "side": "Zizou Bergs",
+    "title": "Ignacio Buse vs Zizou Bergs \u00b7 Round 2 \u00b7 ATP Shanghai",
+    "source": "Tennis.com",
+    "date": "Oct 10",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-10T15:06Z"
+ },
+ "College Football|Maryland @ Ohio St.|Ohio St.": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Ohio State could be down multiple starters for Maryland clash; Ohio State football downgrades 3 starters for Maryland game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maryland",
+    "title": "Ohio State football hit with unexpected injury news, freshmen duo could be starting against Maryland",
+    "source": "A to Z Sports",
+    "date": "Oct 09",
+    "watch": true
+   },
+   {
+    "side": "Maryland",
+    "title": "Ohio State could be down multiple starters for Maryland clash",
+    "source": "Yahoo Sports",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Maryland",
+    "title": "Ohio State football downgrades 3 starters for Maryland game",
+    "source": "Yahoo Sports",
+    "date": "Oct 10",
+    "watch": true
+   },
+   {
+    "side": "Ohio St.",
+    "title": "Ohio St Football",
+    "source": "Idaho State Journal",
+    "date": "Oct 07",
+    "watch": false
+   },
+   {
+    "side": "Ohio St.",
+    "title": "Ryan Day ramps up urgency as No. 5 Ohio State faces Maryland before brutal stretch",
+    "source": "WTOP News",
+    "date": "Oct 08",
+    "watch": false
+   },
+   {
+    "side": "Ohio St.",
+    "title": "Maryland vs Ohio St.: 2nd Half Total",
+    "source": "Coinbase",
+    "date": "Oct 09",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-10T15:06Z"
  }
 }
