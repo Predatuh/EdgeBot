@@ -423,7 +423,9 @@ def run_league(key, lg, cfg, body, grade_only=False):
         notable = bool((r["brief"] or {}).get("red_flags")) or r["gate"] in ("disagreement", "rating")
         if r["tier"] == "EDGE" or notable or not compact:
             if r["notes"]:
-                line += "\n   ↳ " + "; ".join(r["notes"])
+                # short reasoning summary instead of raw dump
+                summary = "; ".join(r["notes"][:3])
+                line += f"\n   ↳ Why: {summary}"
             for rl in research.card_lines(r["brief"]):
                 line += "\n   ↳ " + rl
             lines.append(line)
@@ -485,7 +487,7 @@ def run_league(key, lg, cfg, body, grade_only=False):
                     w.writerow([today, s, "", ""])
             lines.append("_📝 Strong NCAAF leans logged for auto-bet (paper mode — set Kalshi API keys to enable real orders)._")
     if lines:
-        body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated)")
+        body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated) <!--{key}-->")
         body.extend(lines)
     return gw, gl, state.top_ratings(ratings)
 
@@ -622,24 +624,21 @@ def main():
         elif research.run_note():
             body.append(f"_🔎 {research.run_note()}_")
         body.append("_\ud83d\udd25 = real edge vs Kalshi price, staked. \ud83d\udccc = model favorite, no edge, tracked only._")
-    # Post each league section to its own webhook
+    # Post each league section to its own webhook (key embedded in header)
     current_key = None
     current_lines = []
     all_strong = []
+    import re
     for line in body:
-        if line.startswith("\n__**") and "**__" in line:
+        if "<!--" in line and "-->" in line:
             if current_key and current_lines:
                 try:
                     notify.post("\n".join(current_lines), webhook_key=webhook_for(current_key))
                 except Exception as e:
                     print(f"Post failed for {current_key}: {e}")
-            header = line.upper()
-            current_key = "other"
-            for k, v in WEBHOOK_MAP.items():
-                if k.upper() in header or v in header:
-                    current_key = k
-                    break
-            current_lines = [line]
+            m = re.search(r"<!--(\w+)-->", line)
+            current_key = m.group(1) if m else "other"
+            current_lines = [line.replace(m.group(0), "").strip() if m else line]
         else:
             current_lines.append(line)
             if "Strong " in line and "leans" in line:
