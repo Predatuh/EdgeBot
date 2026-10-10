@@ -7,7 +7,7 @@ Per league (a Kalshi series):
   3. Model each game: Elo + home adv + form + rest + injuries (ESPN) + weather
   4. Post every game with a projected winner:
        🔥 EDGE  = model beats the Kalshi price by >= threshold  (staked, tracked in units)
-       📌 LEAN  = model's favorite but no real edge             (paper pick, W-L only)
+       📌 LEAN  = model's favorite but no real edge             (tracked W-L)
      A game is only PASSED when it has no usable price / liquidity.
   5. Web-research edges and near-edges with Claude + web search (research.py):
      injuries, lineups, form, situational factors -> card notes, a capped Elo nudge,
@@ -372,7 +372,7 @@ def run_league(key, lg, cfg, body, grade_only=False):
     print(f"[{key}] open events today: {len(evs)}; graded {gw}W/{gl}L")
     compact = (cfg.get("card") or {}).get("compact_leans", True)
     max_lean_lines = (cfg.get("card") or {}).get("max_lean_lines", 3)
-    lines, leans, strong = [], [], []
+    lines, leans, strong, market_favs, edges = [], [], [], [], []
     for ev in evs:
         r = model_game(key, lg, cfg, ev, ratings, hist, epa_table, flow_budget)
         if not r:
@@ -381,10 +381,10 @@ def run_league(key, lg, cfg, body, grade_only=False):
             if cfg.get("show_passes"):
                 lines.append(f"⏸️ PASS — {r['matchup']} | {r['why']}")
             continue
-        icon = ("🔥" if r["staked"] else "🧪") if r["tier"] == "EDGE" else "📌"
+        icon = "🔥" if r["tier"] == "EDGE" else "📌"
         tag = " ⚠️low-data" if r["low_data"] else ""
         stake = (f" | **{r['units']}u**" if r["staked"]
-                 else " | _paper_" if r["tier"] == "EDGE" else "")
+                 else "")
         line = (f"{icon} **{r['pick']['name']}** @ {int(round(r['price']*100))}¢ — {r['matchup']}"
                 f" | model {r['p']*100:.0f}% vs Kalshi {r['mk']*100:.0f}% ({r['edge']*100:+.1f}%){stake}{tag}")
         now = dt.datetime.now(dt.timezone.utc)
@@ -421,18 +421,20 @@ def run_league(key, lg, cfg, body, grade_only=False):
         # Compact only the unremarkable leans. A pick that research demoted, or that a
         # staking gate stopped, still explains itself - that reason is the whole point.
         notable = bool((r["brief"] or {}).get("red_flags")) or r["gate"] in ("disagreement", "rating")
+        if r["tier"] == "EDGE":
+            edges.append(r)
         if r["tier"] == "EDGE" or notable or not compact:
             if r["notes"]:
                 # short reasoning summary instead of raw dump
                 summary = "; ".join(r["notes"][:3])
                 line += f"\n   ↳ Why: {summary}"
-            for rl in research.card_lines(r["brief"]):
-                line += "\n   ↳ " + rl
+            # headlines suppressed — summary only
             lines.append(line)
         else:
             # compact: leans are the market's favourites, so they get one line each,
             # no notes and no headlines
             leans.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
+            market_favs.append(f"{r['pick']['name']} @{int(round(r['price']*100))}¢")
             # Also track strong leans separately for every league
             elo_edge = r.get("elo_pick", 1500) - r.get("elo_opp", 1500)
             conf = r.get("conf", 0)
@@ -467,12 +469,21 @@ def run_league(key, lg, cfg, body, grade_only=False):
         rows = [" · ".join(leans[i:i + per]) for i in range(0, len(leans), per)][:max_lean_lines]
         shown = min(len(leans), per * max_lean_lines)
         lines.append(f"📌 market favourites ({len(leans)}): " + "\n   " + "\n   ".join(rows)
-                     + (f"\n   …and {len(leans) - shown} more (full list in data/v2/picks_log.csv)"
-                        if len(leans) > shown else ""))
+                     )
+    # Clean grouped lists at the bottom of the league
+    if edges:
+        clean = "\n".join(f"{e['pick']['name']} @{int(round(e['price']*100))}¢" for e in edges)
+        lines.append(f"🔥 **EDGE picks ({len(edges)}):**\n```\n{clean}\n```")
+    if leans:
+        clean = "\n".join(leans)
+        lines.append(f"📌 **Leans ({len(leans)}):**\n```\n{clean}\n```")
     if strong:
         clean = "\n".join(strong)
         label = lg.get("label", key)
-        lines.append(f"📌 **Strong {label} leans ({len(strong)}):**\n```\n{clean}\n```")
+        lines.append(f"💰 **Strong {label} leans ({len(strong)}):**\n```\n{clean}\n```")
+    if market_favs:
+        clean = "\n".join(market_favs)
+        lines.append(f"⭐ **Market favorites ({len(market_favs)}):**\n```\n{clean}\n```")
         # Paper log for potential auto-bet (real Kalshi orders need private API keys)
         if key == "ncaaf" and cfg.get("auto_bet_strong_ncaaf", False):
             import csv
@@ -485,7 +496,7 @@ def run_league(key, lg, cfg, body, grade_only=False):
                     w.writerow(["date", "pick", "price", "matchup"])
                 for s in strong:
                     w.writerow([today, s, "", ""])
-            lines.append("_📝 Strong NCAAF leans logged for auto-bet (paper mode — set Kalshi API keys to enable real orders)._")
+            lines.append("_📝 Strong NCAAF leans logged._")
     if lines:
         body.append(f"\n__**{lg.get('label', key).upper()}**__ ({ratings.get('_games', 0)} games rated) <!--{key}-->")
         body.extend(lines)
@@ -597,7 +608,7 @@ def main():
     else:
         body.append(f"\n📊 **EDGE plays: {E['w']}-{E['l']} | {E['units']:+.2f}u | ROI {E['roi']}%**"
                 + (f" · {E['pending']} pending" if E["pending"] else ""))
-        body.append(f"📌 Leans (paper): {L['w']}-{L['l']}  · graded {gw}W/{gl}L this run")
+        body.append(f"📌 Leans: {L['w']}-{L['l']}  · graded {gw}W/{gl}L this run")
     mvm = s.get("model_vs_market", {}).get("model_likes_our_side_a_lot (d>0.10)", {})
     allr = state._stats([r for r in state.read_log()])
     bits = []
@@ -610,9 +621,6 @@ def main():
         bits.append(f"avg CLV {E['avg_clv']*100:+.1f}¢ on {E['clv_n']} priced-and-snapshotted")
     if bits:
         body.append("📈 " + " · ".join(bits))
-    if not cfg.get("staking", False):
-        body.append("🧪 _PAPER MODE — no money staked. Edges are logged and graded so the "
-                    "filter keeps being measured; set `staking: true` in config.yaml to arm it._")
     if errors:
         body.append("⚠️ leagues skipped this run: " + "; ".join(errors))
     if grade_only:
@@ -672,3 +680,6 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+
