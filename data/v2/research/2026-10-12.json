@@ -578,5 +578,63 @@
    }
   ],
   "_ts": "2026-10-12T15:53Z"
+ },
+ "MLB|Los Angeles D @ Milwaukee|Los Angeles D": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Dodgers Announce Starting Lineup for NLCS Game 1 vs Brewers; Move Shohei Ohtani down in the Dodgers\u2019 lineup? Dave Roberts is \u2018open\u2019 to it",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Los Angeles D",
+    "title": "Move Shohei Ohtani down in the Dodgers\u2019 lineup? Dave Roberts is \u2018open\u2019 to it",
+    "source": "Los Angeles Times",
+    "date": "Oct 06",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Dodgers Announce Starting Lineup for NLCS Game 1 vs Brewers",
+    "source": "Yahoo Sports",
+    "date": "Oct 11",
+    "watch": true
+   },
+   {
+    "side": "Los Angeles D",
+    "title": "Edman talks Dodgers approach in NLCS Game 2",
+    "source": "MLB.com",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "MLB Playoffs 2026: Where to Watch Los Angeles Dodgers vs. Milwaukee Brewers Series Live Online",
+    "source": "The Hollywood Reporter",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Milwaukee Brewers Superstar Suddenly Emerges as Top MLB Trade Candidate",
+    "source": "Yahoo Sports",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Milwaukee",
+    "title": "Los Angeles Dodgers vs. Milwaukee Brewers: Listen Live to the NL Championship Series",
+    "source": "SiriusXM",
+    "date": "Oct 12",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-12T21:10Z"
  }
 }
