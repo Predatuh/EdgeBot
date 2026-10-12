@@ -2,8 +2,12 @@ name: Daily Picks
 
 on:
   schedule:
+    # Primary times (UTC)
     - cron: "0 13 * * *"
     - cron: "0 21 * * *"
+    # Backup runs a few minutes later in case GitHub drops the on-the-hour trigger
+    - cron: "7 13 * * *"
+    - cron: "7 21 * * *"
   workflow_dispatch:
     inputs:
       mode:
