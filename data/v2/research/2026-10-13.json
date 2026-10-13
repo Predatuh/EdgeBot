@@ -1503,5 +1503,63 @@
    }
   ],
   "_ts": "2026-10-13T13:16Z"
+ },
+ "WTA Tennis|Lanlana Tararudee vs Ashlyn Krueger|Ashlyn Krueger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Ashlyn Krueger vs Shuai Zhang \u00b7 Round 1 \u00b7 WTA Wuhan",
+    "source": "Tennis.com",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Lucky loser Tararudee ousts Parry in Wuhan for second Top 50 win",
+    "source": "WTA Tennis",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Diane Parry vs Lanlana Tararudee \u00b7 Round 1 \u00b7 WTA Wuhan",
+    "source": "Tennis.com",
+    "date": "Oct 12",
+    "watch": false
+   },
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Ashlyn Krueger vs Shuai Zhang - Match WTA - Dongfeng Voyah Wuhan Open 1970 - Second round",
+    "source": "tennismajors.com",
+    "date": "Oct 13",
+    "watch": false
+   },
+   {
+    "side": "Ashlyn Krueger",
+    "title": "Ashlyn Krueger vs Lanlana Tararudee \u00b7 Round 2 \u00b7 WTA Wuhan",
+    "source": "Tennis.com",
+    "date": "Oct 13",
+    "watch": false
+   },
+   {
+    "side": "Lanlana Tararudee",
+    "title": "Ashlyn Krueger vs Lanlana Tararudee \u00b7 Round 2 \u00b7 WTA Wuhan",
+    "source": "Tennis.com",
+    "date": "Oct 13",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-13T21:10Z"
  }
 }
