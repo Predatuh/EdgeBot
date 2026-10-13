@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-10-12T21:20Z",
+ "_generated_utc": "2026-10-13T13:16Z",
  "_league": "nfl",
- "_plays_used": 7707,
+ "_plays_used": 7844,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 13643,
+ "_rows": 13842,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -49,16 +49,16 @@
    "this_season_plays": 225
   },
   "Buffalo": {
-   "def_epa": 0.0258,
-   "def_plays": 512.2,
-   "def_success": 0.4661,
-   "net_epa": 0.0994,
-   "off_epa": 0.1252,
-   "off_plays": 527.75,
-   "off_success": 0.4715,
-   "pass_epa": 0.125,
-   "rush_epa": 0.1255,
-   "this_season_plays": 197
+   "def_epa": 0.0532,
+   "def_plays": 591.2,
+   "def_success": 0.4681,
+   "net_epa": 0.0885,
+   "off_epa": 0.1417,
+   "off_plays": 585.75,
+   "off_success": 0.4795,
+   "pass_epa": 0.1438,
+   "rush_epa": 0.1394,
+   "this_season_plays": 255
   },
   "Carolina": {
    "def_epa": 0.0739,
@@ -229,16 +229,16 @@
    "this_season_plays": 247
   },
   "Los Angeles Rams": {
-   "def_epa": -0.0466,
-   "def_plays": 546.3,
-   "def_success": 0.4175,
-   "net_epa": 0.1638,
-   "off_epa": 0.1173,
-   "off_plays": 559.0999999999999,
-   "off_success": 0.4893,
-   "pass_epa": 0.1576,
-   "rush_epa": 0.0467,
-   "this_season_plays": 207
+   "def_epa": -0.0141,
+   "def_plays": 604.3,
+   "def_success": 0.4304,
+   "net_epa": 0.1454,
+   "off_epa": 0.1313,
+   "off_plays": 638.0999999999999,
+   "off_success": 0.4882,
+   "pass_epa": 0.1811,
+   "rush_epa": 0.0408,
+   "this_season_plays": 286
   },
   "Miami": {
    "def_epa": 0.0983,
