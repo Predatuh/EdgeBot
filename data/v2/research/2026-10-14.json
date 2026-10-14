@@ -1800,5 +1800,63 @@
    }
   ],
   "_ts": "2026-10-14T13:07Z"
+ },
+ "MLS|Minnesota @ Colorado|Colorado": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Colorado Rapids vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 14 Oct 2026; Portland Timbers vs Colorado Rapids: Predictions, Picks, Odds & Lineups",
+  "opp_health": "Colorado Rapids vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 14 Oct 2026; Colorado Rapids vs Minnesota United: Predictions, Picks, Odds & Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Colorado",
+    "title": "Colorado Rapids vs Minnesota United: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Oct 12",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Colorado Rapids vs Minnesota United: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Oct 12",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota United vs St. Louis City SC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Oct 12",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado Rapids vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 14 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 13",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Portland Timbers vs Colorado Rapids: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Oct 13",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Colorado Rapids vs Minnesota United Prediction, Betting Tips, Lineups & Odds | 14 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 13",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-14T13:21Z"
  }
 }
