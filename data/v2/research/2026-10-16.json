@@ -3148,5 +3148,151 @@
    }
   ],
   "_ts": "2026-10-16T13:08Z"
+ },
+ "WTA Tennis|Alina Korneeva vs Jiali Dong|Alina Korneeva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alina Korneeva",
+    "title": "Jiali Dong vs Alina Korneeva - Match WTA - AUX Ningbo Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 16",
+    "watch": false
+   },
+   {
+    "side": "Jiali Dong",
+    "title": "Jiali Dong vs Alina Korneeva - Match WTA - AUX Ningbo Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 16",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-16T13:23Z"
+ },
+ "Serie A|Sassuolo @ Frosinone|Frosinone": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Frosinone vs Sassuolo Prediction: Where to Watch, Kick-off Time and Lineups Today 16/10; Frosinone vs Sassuolo Prediction, Betting Tips, Lineups & Odds | 16 Oct 2026",
+  "opp_health": "Frosinone vs Sassuolo Prediction: Where to Watch, Kick-off Time and Lineups Today 16/10; Report: Sassuolo considering Acerbi opportunity after Leysen injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sassuolo",
+    "title": "PREVIEW | Frosinone vs Sassuolo: team news, lineups, predictions (Serie A 16/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 14",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Sassuolo prediction: teams form analysis, possible lineups on October 16, 2026",
+    "source": "RatingBet",
+    "date": "Oct 15",
+    "watch": true
+   },
+   {
+    "side": "Sassuolo",
+    "title": "Report: Sassuolo considering Acerbi opportunity after Leysen injury",
+    "source": "Yahoo Sports",
+    "date": "Oct 15",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Sassuolo Prediction: Where to Watch, Kick-off Time and Lineups Today 16/10",
+    "source": "Odds Scanner",
+    "date": "Oct 16",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Sassuolo Prediction, Betting Tips, Lineups & Odds | 16 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 16",
+    "watch": true
+   },
+   {
+    "side": "Sassuolo",
+    "title": "Frosinone vs Sassuolo Prediction: Where to Watch, Kick-off Time and Lineups Today 16/10",
+    "source": "Odds Scanner",
+    "date": "Oct 16",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-16T13:23Z"
+ },
+ "Bundesliga|FC K\u00f6ln @ Frankfurt|Frankfurt": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Eintracht Frankfurt vs Cologne: Lineups, Prediction, Odds & Bet Builder Tip; PREVIEW | Eintracht Frankfurt vs FC K\u00f6ln: team news, lineups, predictions (Bundesliga 16/10)",
+  "opp_health": "PREVIEW | Eintracht Frankfurt vs FC K\u00f6ln: team news, lineups, predictions (Bundesliga 16/10); Frankfurt - FC K\u00f6ln : Predicted Lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Frankfurt",
+    "title": "Frankfurt - FC K\u00f6ln : Predicted Lineups",
+    "source": "Bulinews",
+    "date": "Oct 11",
+    "watch": true
+   },
+   {
+    "side": "FC K\u00f6ln",
+    "title": "Frankfurt - FC K\u00f6ln : Predicted Lineups",
+    "source": "Bulinews",
+    "date": "Oct 11",
+    "watch": true
+   },
+   {
+    "side": "FC K\u00f6ln",
+    "title": "FC K\u00f6ln vs M\u00f6nchengladbach match lineup | Bundesliga \u00b7 11 Oct 2026",
+    "source": "YSscores",
+    "date": "Oct 11",
+    "watch": true
+   },
+   {
+    "side": "Frankfurt",
+    "title": "PREVIEW | Eintracht Frankfurt vs FC K\u00f6ln: team news, lineups, predictions (Bundesliga 16/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 14",
+    "watch": true
+   },
+   {
+    "side": "FC K\u00f6ln",
+    "title": "PREVIEW | Eintracht Frankfurt vs FC K\u00f6ln: team news, lineups, predictions (Bundesliga 16/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 14",
+    "watch": true
+   },
+   {
+    "side": "Frankfurt",
+    "title": "Eintracht Frankfurt vs Cologne: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 16",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-16T13:23Z"
  }
 }
