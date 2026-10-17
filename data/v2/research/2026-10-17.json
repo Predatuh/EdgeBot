@@ -6861,5 +6861,35 @@
    }
   ],
   "_ts": "2026-10-17T21:09Z"
+ },
+ "College Football|Idaho St. @ Weber St.|Weber St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Weber St.",
+    "title": "Dyson Richards (TE) Game Logs - Weber St.",
+    "source": "Yahoo Sports",
+    "date": "Oct 11",
+    "watch": false
+   },
+   {
+    "side": "Idaho St.",
+    "title": "Anthony Grigsby Jr. scores 3 TDs and Cal Poly upsets Idaho State 25-24",
+    "source": "Daily Jefferson County Union",
+    "date": "Oct 11",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-17T21:17Z"
  }
 }
