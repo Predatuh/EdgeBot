@@ -3881,5 +3881,35 @@
    }
   ],
   "_ts": "2026-10-18T21:09Z"
+ },
+ "WTA Tennis|Moyuka Uchijima vs Ena Shibahara|Moyuka Uchijima": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Moyuka Uchijima",
+    "title": "Moyuka Uchijima vs Ena Shibahara \u00b7 Round 1 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 18",
+    "watch": false
+   },
+   {
+    "side": "Ena Shibahara",
+    "title": "Moyuka Uchijima vs Ena Shibahara \u00b7 Round 1 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 18",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-18T21:17Z"
  }
 }
