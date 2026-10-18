@@ -3772,5 +3772,114 @@
    }
   ],
   "_ts": "2026-10-18T13:18Z"
+ },
+ "ATP Tennis|Marin Cilic vs Nikoloz Basilashvili|Nikoloz Basilashvili": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Marin Cilic",
+    "title": "Walton, Adam - Cilic, Marin, Center Court",
+    "source": "ATP Tour",
+    "date": "Oct 13",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "LIVE RANKINGS. Basilashvili loses positions right before taking on Cilic in Almaty",
+    "source": "Tennis Tonic",
+    "date": "Oct 18",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "LIVE RANKINGS. Cilic down just before fighting against Basilashvili in Almaty",
+    "source": "Tennis Tonic",
+    "date": "Oct 18",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "Marin \u010cili\u0107 vs Nikoloz Basilashvili \u00b7 Round 1 \u00b7 ATP Almaty",
+    "source": "Tennis.com",
+    "date": "Oct 18",
+    "watch": false
+   },
+   {
+    "side": "Marin Cilic",
+    "title": "LIVE RANKINGS. Cilic down just before fighting against Basilashvili in Almaty",
+    "source": "Tennis Tonic",
+    "date": "Oct 18",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-18T21:09Z"
+ },
+ "WTA Tennis|Zeynep Sonmez vs Maya Joint|Maya Joint": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Zeynep Sonmez",
+    "title": "Putintseva edges Sonmez in 2:51 Wuhan first-round thriller",
+    "source": "WTA Tennis",
+    "date": "Oct 13",
+    "watch": false
+   },
+   {
+    "side": "Zeynep Sonmez",
+    "title": "Zeynep Sonmez Vs Belinda Bencic \ud83c\udfbeLIVE TENNIS WTA MIAMI USA OPEN 2026 | Round Of 64 Sidney Crosby Iihf World Championship (PaKmdMXbQk)",
+    "source": "Unisba Media",
+    "date": "Oct 16",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "Maya Joint vs Kyoka Okamura - Match WTA - Kinoshita Group Japan Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 17",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "Maya Joint vs Kayla Day - Match WTA - Kinoshita Group Japan Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Oct 17",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "LIVE RANKINGS. Joint improves her position right before facing Day in Osaka",
+    "source": "Tennis Tonic",
+    "date": "Oct 17",
+    "watch": false
+   },
+   {
+    "side": "Zeynep Sonmez",
+    "title": "Zeynep Sonmez",
+    "source": "WTA Tennis",
+    "date": "Oct 17",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-18T21:09Z"
  }
 }
