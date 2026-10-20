@@ -1549,5 +1549,63 @@
    }
   ],
   "_ts": "2026-10-20T13:09Z"
+ },
+ "WTA Tennis|Tereza Valentova vs Lilli Tagger|Tereza Valentova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lilli Tagger",
+    "title": "WTA roundup: Lilli Tagger ousts Liudmila Samsonova in Osaka opener",
+    "source": "Miami Herald",
+    "date": "Oct 19",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "Tereza Valentova vs Shuai Zhang \u00b7 Round 1 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "Tereza Valentova vs Lilli Tagger \u00b7 Round 2 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "2025 finalist Valentova overcomes Zhang in three-set Osaka opener",
+    "source": "WTA Tennis",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Tereza Valentova vs Lilli Tagger \u00b7 Round 2 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Lilli Tagger beats Samsonova 6-3, 6-3 at the Osaka WTA 250",
+    "source": "KarloBag.eu",
+    "date": "Oct 20",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-20T13:24Z"
  }
 }
