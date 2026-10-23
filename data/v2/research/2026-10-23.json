@@ -4086,5 +4086,158 @@
    }
   ],
   "_ts": "2026-10-23T13:22Z"
+ },
+ "WTA Tennis|Yulia Putintseva vs Hayu Kinoshita|Yulia Putintseva": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Yulia Putintseva",
+    "title": "Yulia Putintseva vs Diana Shnaider \u00b7 Round 1 \u00b7 WTA Ningbo",
+    "source": "Tennis.com",
+    "date": "Oct 21",
+    "watch": false
+   },
+   {
+    "side": "Yulia Putintseva",
+    "title": "Five set points saved! Shnaider bests Putintseva in second straight week",
+    "source": "WTA Tennis",
+    "date": "Oct 21",
+    "watch": false
+   },
+   {
+    "side": "Yulia Putintseva",
+    "title": "Rybakina Continues to Dominate WTA Rankings as Putintseva Climbs to 66th Place",
+    "source": "SSBCrack",
+    "date": "Oct 23",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-23T21:11Z"
+ },
+ "WTA Tennis|Oleksandra Oliynykova vs Mai Hontama|Oleksandra Oliynykova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mai Hontama",
+    "title": "Golubic eases past home hope Hontama into Osaka second round",
+    "source": "WTA Tennis",
+    "date": "Oct 19",
+    "watch": false
+   },
+   {
+    "side": "Mai Hontama",
+    "title": "Viktorija Golubic vs Mai Hontama \u00b7 Round 1 \u00b7 WTA Osaka",
+    "source": "Tennis.com",
+    "date": "Oct 19",
+    "watch": false
+   },
+   {
+    "side": "Mai Hontama",
+    "title": "Viktorija Golubic vs Mai Hontama - Match WTA - Kinoshita Group Japan Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 19",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Oleksandra Oliynykova vs Mary Stoiana - Match WTA - Kinoshita Group Japan Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Stoiana upsets Oliynykova in Osaka opener for first career Top 75 win",
+    "source": "WTA Tennis",
+    "date": "Oct 20",
+    "watch": false
+   },
+   {
+    "side": "Oleksandra Oliynykova",
+    "title": "Oleksandra Oliynykova loses in the first round of the WTA 250 tournament in Osaka",
+    "source": "Mezha.net",
+    "date": "Oct 20",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-23T21:11Z"
+ },
+ "College Football|Baylor @ Kansas|Kansas": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "College Football Injury Report: Latest Week 8 updates at Mississippi State, Kansas State, Texas & more; Kansas State Wildcats Have Surprise Addition To Injury Report Vs. Arizona State",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kansas",
+    "title": "Kansas State Wildcats Have Surprise Addition To Injury Report Vs. Arizona State",
+    "source": "Yahoo Sports",
+    "date": "Oct 22",
+    "watch": true
+   },
+   {
+    "side": "Kansas",
+    "title": "College Football Injury Report: Latest Week 8 updates at Mississippi State, Kansas State, Texas & more",
+    "source": "On3",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Kansas",
+    "title": "Kansas State Football: Depth Chart Review \u2013 Defense \u2013 Kansas",
+    "source": "Yahoo Sports",
+    "date": "Oct 22",
+    "watch": false
+   },
+   {
+    "side": "Baylor",
+    "title": "Is Kansas the Last Chance for Dave Aranda and Baylor?",
+    "source": "Heartland College Sports",
+    "date": "Oct 22",
+    "watch": false
+   },
+   {
+    "side": "Baylor",
+    "title": "3 Storylines I'm Watching Most in Baylor's Week 8 Matchup Against Kansas",
+    "source": "Sports Illustrated",
+    "date": "Oct 22",
+    "watch": false
+   },
+   {
+    "side": "Baylor",
+    "title": "Four Big 12 Games to Watch on Saturday Before and After Baylor Takes on Kansas",
+    "source": "Sports Illustrated",
+    "date": "Oct 23",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-23T21:11Z"
  }
 }
