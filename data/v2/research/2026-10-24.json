@@ -17672,5 +17672,121 @@
    }
   ],
   "_ts": "2026-10-24T21:10Z"
+ },
+ "College Football|UT Rio Grande Valley @ Central Arkansas|UT Rio Grande Valley": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UT Rio Grande Valley",
+    "title": "UT Rio Grande Valley vs. Central Arkansas",
+    "source": "ESPN",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Central Arkansas",
+    "title": "UT Rio Grande Valley vs. Central Arkansas",
+    "source": "ESPN",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "UT Rio Grande Valley",
+    "title": "(LIVESTREAMs!)UT Rio Grande Valley vs Central Arkansas Live free College Football Week 2 25 October 2026",
+    "source": "FC\u6771\u4eac\u30aa\u30d5\u30a3\u30b7\u30e3\u30eb\u30db\u30fc\u30e0\u30da\u30fc\u30b8",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "UT Rio Grande Valley",
+    "title": "+@+#LIVE !! FREE UT Rio Grande Valley vs Central Arkansas Football LIVE Kick off time TV",
+    "source": "FC\u6771\u4eac\u30aa\u30d5\u30a3\u30b7\u30e3\u30eb\u30db\u30fc\u30e0\u30da\u30fc\u30b8",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Central Arkansas",
+    "title": "[WATC]SKY!] UT Rio Grande Valley vs Central Arkansas Match watch Live free HS College Football Week 8 2026",
+    "source": "FC\u6771\u4eac\u30aa\u30d5\u30a3\u30b7\u30e3\u30eb\u30db\u30fc\u30e0\u30da\u30fc\u30b8",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Central Arkansas",
+    "title": "%~~*[[[SPORT TV>]* Central Arkansas vs UT Rio Grande Valley \ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 \ud835\udc12\ud835\udc2d\ud835\udc11\ud835\udc1e\ud835\udc00\ud835\udc26 \uff26\uff52\uff45\uff45 On 25 October 2026",
+    "source": "FC\u6771\u4eac\u30aa\u30d5\u30a3\u30b7\u30e3\u30eb\u30db\u30fc\u30e0\u30da\u30fc\u30b8",
+    "date": "Oct 24",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-24T21:19Z"
+ },
+ "MLS|Toronto @ Columbus|Columbus": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Columbus Crew vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 24 Oct 2026; Columbus Crew vs Toronto FC: Predictions, Picks, Odds & Starting Lineups",
+  "opp_health": "Columbus Crew vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 24 Oct 2026; Columbus Crew vs Toronto FC Lineups, Prediction, Betting Picks & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 24 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Toronto FC: Predictions, Picks, Odds & Starting Lineups",
+    "source": "Squawka",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Columbus",
+    "title": "Columbus Crew vs Toronto FC: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Columbus Crew vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 24 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Columbus Crew vs Toronto FC Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Columbus Crew vs Toronto FC: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 24",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-24T21:19Z"
  }
 }
