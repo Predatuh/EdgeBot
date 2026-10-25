@@ -3270,5 +3270,1457 @@
    }
   ],
   "_ts": "2026-10-25T13:06Z"
+ },
+ "NFL|Indianapolis @ Minnesota|Minnesota": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Vikings Final Injury Report vs. Colts: Minnesota is set to have a major advantage on Sunday afternoon",
+  "opp_health": "Indianapolis Colts injury report vs. Minnesota Vikings in NFL Week 7",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts injury report vs. Minnesota Vikings in NFL Week 7",
+    "source": "IndyStar",
+    "date": "Oct 21",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Vikings Final Injury Report vs. Colts: Minnesota is set to have a major advantage on Sunday afternoon",
+    "source": "A to Z Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Indianapolis Colts at Minnesota Vikings: ALL THE COVERAGE~!",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "DeeJay Dallas back with Minnesota",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts at Minnesota Vikings: ALL THE COVERAGE~!",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Indianapolis",
+    "title": "Indianapolis Colts Trade Pitch Sees $44 Million Star Land With New York Giants",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "NFL|New York G @ Houston|Houston": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Injuries Mount for Houston\u2019s Backfield as David Montgomery Misses Fourth Practice",
+  "opp_health": "New York Giants' Chauncey Golston out for season with neck injury; Giants-Texans final injury report: Tremaine Edmunds out, Micah McFadden in",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Houston",
+    "title": "Injuries Mount for Houston\u2019s Backfield as David Montgomery Misses Fourth Practice",
+    "source": "Yahoo Sports",
+    "date": "Oct 21",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Giants-Texans final injury report: Tremaine Edmunds out, Micah McFadden in",
+    "source": "Big Blue View",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "Cam Skattebo set to return to Giants RB mix after being 'taught a lesson'",
+    "source": "ESPN",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "New York G",
+    "title": "New York Giants' Chauncey Golston out for season with neck injury",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Houston",
+    "title": "Houston Texans to Face Shorthanded New York Giants on Sunday",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Houston",
+    "title": "Here's What Should Scare the Houston Texans About the New York Giants in Week 7",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "NFL|Pittsburgh @ New Orleans|Pittsburgh": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Saints Friday Injury Report: 2026 Week 7 vs. Pittsburgh Steelers; New Orleans Saints Injury Report Updated for Pittsburgh Steelers",
+  "opp_health": "Saints-Steelers List Inactives: New Orleans Injury List Shortens Drastically; Steelers vs. Saints, Week 7: New Orleans lists two players as questionable for Paris",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Pittsburgh",
+    "title": "One of Aaron Rodgers' favorite wide receivers returns to Pittsburgh",
+    "source": "Milwaukee Journal Sentinel",
+    "date": "Oct 20",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Saints Friday Injury Report: 2026 Week 7 vs. Pittsburgh Steelers",
+    "source": "New Orleans Saints | NewOrleansSaints.com",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "New Orleans Saints Injury Report Updated for Pittsburgh Steelers",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Saints-Steelers List Inactives: New Orleans Injury List Shortens Drastically",
+    "source": "Sports Illustrated",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Steelers vs. Saints, Week 7: New Orleans lists two players as questionable for Paris",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "New Orleans",
+    "title": "Steelers vs New Orleans Saints Gameday: Injury Updates, Depth Charts, TV Info, Betting Lines, More",
+    "source": "Steelers Now",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Premier League|Newcastle @ Crystal Palace|Crystal Palace": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Crystal Palace vs Newcastle LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream; Crystal Palace vs. Chelsea, Women\u2019s Super League: Confirmed lineups; how to watch",
+  "opp_health": "Crystal Palace vs Newcastle LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream; 'Fantastic' - Striker ready to be unleashed in Crystal Palace v Newcastle United after two-month injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Crystal Palace",
+    "title": "Crystal Palace vs Newcastle LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Crystal Palace",
+    "title": "Crystal Palace vs. Chelsea, Women\u2019s Super League: Confirmed lineups; how to watch",
+    "source": "We Ain't Got No History",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Crystal Palace",
+    "title": "Newcastle United XI vs Crystal Palace \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Newcastle",
+    "title": "Crystal Palace vs Newcastle LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Newcastle",
+    "title": "'Fantastic' - Striker ready to be unleashed in Crystal Palace v Newcastle United after two-month injury",
+    "source": "Shields Gazette",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Newcastle",
+    "title": "Crystal Palace vs Newcastle: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Premier League|Brentford @ Hull City|Brentford": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Hull City vs Brentford LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream; Brentford XI vs Hull City \u2013 Predicted lineup and team news",
+  "opp_health": "Hull City vs Brentford LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream; Hull City vs Brentford \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Brentford",
+    "title": "Hull City vs Brentford LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Brentford",
+    "title": "Brentford XI vs Hull City \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Brentford",
+    "title": "Brentford vs Nottingham Forest: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Hull City",
+    "title": "Hull City vs Brentford LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Hull City",
+    "title": "Hull City vs Brentford \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Hull City",
+    "title": "Hull City vs Brentford \u2013 Predicted lineup and team news",
+    "source": "The Football Faithful",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Premier League|Brighton @ Liverpool|Liverpool": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Liverpool vs. Brighton Lineups, Live Streaming, TV Channels, How & Where to Watch Premier League for Free; Liverpool vs Chelsea TV Channel: ITV1 and Sky Sports at 8pm, Palmer Banned",
+  "opp_health": "Liverpool vs. Brighton Lineups, Live Streaming, TV Channels, How & Where to Watch Premier League for Free; Liverpool vs Brighton \u2013 Predicted lineup and team news",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Liverpool",
+    "title": "Liverpool vs. Brighton Lineups, Live Streaming, TV Channels, How & Where to Watch Premier League for Free",
+    "source": "Athlon Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Liverpool",
+    "title": "Liverpool vs Chelsea TV Channel: ITV1 and Sky Sports at 8pm, Palmer Banned",
+    "source": "The False 9",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Liverpool",
+    "title": "Liverpool vs Brighton LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream",
+    "source": "Sky Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Liverpool vs. Brighton Lineups, Live Streaming, TV Channels, How & Where to Watch Premier League for Free",
+    "source": "Athlon Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Liverpool vs Brighton \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Brighton",
+    "title": "Liverpool vs. Brighton: Preview, Predictions and Lineups",
+    "source": "Sports Illustrated",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Premier League|Bournemouth @ Manchester United|Manchester United": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Manchester United vs Bournemouth Lineups: Carrick Faces Fresh Injury Blow Ahead of Old Trafford Clash; Manchester United vs. Bournemouth Lineups, Live Streaming, How & Where to Watch Premier League Match on TV",
+  "opp_health": "\ud83d\udea8 Man Utd and Bournemouth confirm lineups for PL clash; Manchester United vs Bournemouth Lineups: Carrick Faces Fresh Injury Blow Ahead of Old Trafford Clash",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Manchester United",
+    "title": "Manchester United vs Bournemouth Lineups: Carrick Faces Fresh Injury Blow Ahead of Old Trafford Clash",
+    "source": "Heavy.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Manchester United",
+    "title": "Manchester United vs. Bournemouth Lineups, Live Streaming, How & Where to Watch Premier League Match on TV",
+    "source": "Athlon Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Manchester United",
+    "title": "Manchester United predicted lineup vs. Bournemouth: Will Bruno Fernandes start?",
+    "source": "USA Today",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "\ud83d\udea8 Man Utd and Bournemouth confirm lineups for PL clash",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "Manchester United vs Bournemouth Lineups: Carrick Faces Fresh Injury Blow Ahead of Old Trafford Clash",
+    "source": "Heavy.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Bournemouth",
+    "title": "Manchester United vs. Bournemouth Lineups, Live Streaming, How & Where to Watch Premier League Match on TV",
+    "source": "Athlon Sports",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Premier League|Leeds United @ Sunderland|Leeds United": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Leeds United XI vs Sunderland \u2013 Predicted lineup and team news; Sunderland vs Leeds \u2013 Predicted lineup and team news",
+  "opp_health": "Leeds United XI vs Sunderland \u2013 Predicted lineup and team news; Sunderland vs Leeds \u2013 Predicted lineup and team news",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Leeds United",
+    "title": "Daniel Farke provides Leeds United injury update on Calvert-Lewin, Stach and Okafor ahead of Sunderland clash",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Sunderland",
+    "title": "Sunderland Predicted Starting XI For Leeds United Clash After Injury News",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Leeds United",
+    "title": "Leeds United XI vs Sunderland \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Leeds United",
+    "title": "Sunderland vs Leeds \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Sunderland",
+    "title": "Leeds United XI vs Sunderland \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Sunderland",
+    "title": "Sunderland vs Leeds \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "La Liga|Getafe @ Bilbao|Bilbao": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ath Bilbao vs Getafe: Lineups and Live Text Commentary; Athletic Bilbao vs Getafe prediction: team news, lineups, expert analysis",
+  "opp_health": "Jadon Sancho offered shock deal by La Liga side Getafe; Riccardo Calafiori adds to Arsenal injury woes - Paper Talk; PREVIEW | Athletic Bilbao vs Getafe CF: team news, lineups, predictions (La Liga 25/10)",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Getafe",
+    "title": "PREVIEW | Getafe CF vs FC Lugano: team news, lineups, predictions (Europa Conference League 22/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 20",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "Athletic Bilbao vs Getafe prediction: team news, lineups, expert analysis",
+    "source": "RatingBet",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "Preview: Athletic Bilbao vs Getafe - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Getafe",
+    "title": "PREVIEW | Athletic Bilbao vs Getafe CF: team news, lineups, predictions (La Liga 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Getafe",
+    "title": "Jadon Sancho offered shock deal by La Liga side Getafe; Riccardo Calafiori adds to Arsenal injury woes - Paper Talk",
+    "source": "Sky Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Bilbao",
+    "title": "Ath Bilbao vs Getafe: Lineups and Live Text Commentary",
+    "source": "Zamin.uz",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "La Liga|Real Betis @ Celta Vigo|Real Betis": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Celta Vigo vs Real Betis Lineups, Prediction, Betting Picks & Odds; Celta Vigo vs Real Betis: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Celta Vigo vs Real Betis Lineups, Prediction, Betting Picks & Odds; Celta Vigo vs Real Betis: Lineups, Prediction, Betting Tips & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Real Betis",
+    "title": "PREVIEW | Celta de Vigo vs Real Betis: team news, lineups, predictions (La Liga 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Real Betis",
+    "title": "Celta Vigo vs Real Betis Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Real Betis",
+    "title": "Celta Vigo vs Real Betis: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Celta Vigo",
+    "title": "Celta Vigo vs Real Betis Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Celta Vigo",
+    "title": "Celta Vigo vs Real Betis: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Celta Vigo",
+    "title": "Celta Vigo vs Real Betis Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "La Liga|Levante @ Real Sociedad|Real Sociedad": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Real Sociedad vs Levante: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Real Sociedad vs Levante: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Real Sociedad",
+    "title": "Real Sociedad vs Levante prediction: teams form analysis, possible lineups on October 25, 2026",
+    "source": "RatingBet",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Levante",
+    "title": "Osasuna - Levante. Preview, likely lineups and fantasy tips. Matchday 2 of LaLiga.",
+    "source": "Comuniate",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Real Sociedad",
+    "title": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Real Sociedad",
+    "title": "Real Sociedad vs Levante: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Levante",
+    "title": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Levante",
+    "title": "Real Sociedad vs Levante: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "La Liga|Real Madrid @ Barcelona|Barcelona": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Real Madrid predicted lineup vs. Barcelona: Projected XI, team news; Barcelona predicted lineup vs. Real Madrid: Projected XI, team news",
+  "opp_health": "Barcelona predicted lineup vs. Real Madrid: Projected XI, team news; Real Madrid Injuries: Every Player Unavailable vs. Barcelona",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Barcelona",
+    "title": "Real Madrid predicted lineup vs. Barcelona: Projected XI, team news",
+    "source": "USA Today",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Barcelona",
+    "title": "Barcelona predicted lineup vs. Real Madrid: Projected XI, team news",
+    "source": "USA Today",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Barcelona",
+    "title": "Why isn\u2019t Vinicius Jr. playing vs Barcelona? Real Madrid star out for El Clasico",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Real Madrid",
+    "title": "Barcelona predicted lineup vs. Real Madrid: Projected XI, team news",
+    "source": "USA Today",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Real Madrid",
+    "title": "Real Madrid Injuries: Every Player Unavailable vs. Barcelona",
+    "source": "Sports Illustrated",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Real Madrid",
+    "title": "Real Madrid rocked by Thibaut Courtois INJURY BLOW just hours before El Clasico showdown with Barcelona",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Lille @ Monaco|Monaco": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Monaco vs Lille Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10; PREVIEW | Monaco vs Lille: team news, lineups, predictions (Ligue 1 25/10)",
+  "opp_health": "Monaco vs Lille Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10; Monaco vs Lille Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Monaco",
+    "title": "PREVIEW | Monaco vs Lille: team news, lineups, predictions (Ligue 1 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Monaco",
+    "title": "Preview: Monaco vs Lille - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Lille",
+    "title": "PREVIEW | Monaco vs Lille: team news, lineups, predictions (Ligue 1 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Monaco",
+    "title": "Monaco vs Lille Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lille",
+    "title": "Monaco vs Lille Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lille",
+    "title": "Monaco vs Lille Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Lorient @ Angers|Lorient": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Angers vs Lorient Lineups, Prediction, Betting Picks & Odds; Angers vs Lorient Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+  "opp_health": "Angers vs Lorient Lineups, Prediction, Betting Picks & Odds; Angers vs Lorient: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Angers",
+    "title": "PREVIEW | Angers vs FC Lorient: team news, lineups, predictions (Ligue 1 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Lorient",
+    "title": "Angers vs Lorient Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lorient",
+    "title": "Angers vs Lorient Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lorient",
+    "title": "Angers vs Lorient: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Angers",
+    "title": "Angers vs Lorient Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Angers",
+    "title": "Angers vs Lorient: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Le Mans @ Auxerre|Auxerre": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Auxerre vs Le Mans Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Preview: Auxerre vs Le Mans - prediction, team news, lineups",
+  "opp_health": "Auxerre vs Le Mans Lineups, Prediction, Betting Picks & Odds; Auxerre vs Le Mans Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Auxerre",
+    "title": "Preview: Auxerre vs Le Mans - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Auxerre",
+    "title": "PREVIEW | Auxerre vs Le Mans: team news, lineups, predictions (Ligue 1 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Le Mans",
+    "title": "Preview: Auxerre vs Le Mans - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Auxerre",
+    "title": "Auxerre vs Le Mans Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Le Mans",
+    "title": "Auxerre vs Le Mans Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Le Mans",
+    "title": "Auxerre vs Le Mans Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Le Havre @ Marseille|Marseille": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Marseille vs Le Havre Lineups, Prediction, Betting Picks & Odds; Marseille vs Le Havre Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+  "opp_health": "Marseille vs Le Havre Lineups, Prediction, Betting Picks & Odds; Marseille vs Le Havre Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Marseille",
+    "title": "Marseille vs Le Havre Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Marseille",
+    "title": "Marseille vs Le Havre Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Marseille",
+    "title": "Marseille vs Le Havre: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "Marseille vs Le Havre Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "Marseille vs Le Havre Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "Marseille vs Le Havre: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Strasbourg Alsace @ Stade Rennais|Stade Rennais": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Jeremy Jacquet Injury Update Provided by Stade Rennais Manager; Paris FC vs Rennais match lineup | Ligue 1 \u00b7 18 Oct 2026",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Stade Rennais",
+    "title": "Paris FC vs Rennais match lineup | Ligue 1 \u00b7 18 Oct 2026",
+    "source": "YSscores",
+    "date": "Oct 18",
+    "watch": true
+   },
+   {
+    "side": "Stade Rennais",
+    "title": "Jeremy Jacquet Injury Update Provided by Stade Rennais Manager",
+    "source": "LFC Live",
+    "date": "Oct 22",
+    "watch": true
+   },
+   {
+    "side": "Strasbourg Alsace",
+    "title": "PSG vs RC Strasbourg Alsace | October 17, 2026 | Ligue 1 Matchup",
+    "source": "theScore",
+    "date": "Oct 21",
+    "watch": false
+   },
+   {
+    "side": "Strasbourg Alsace",
+    "title": "How to get Strasbourg vs Auxerre tickets: Ligue 1 prices, fixture information, last-minute sales & more",
+    "source": "Goal.com",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Stade Rennais",
+    "title": "Stade Rennais - RC Strasbourg, Result, Match Info",
+    "source": "Forza Football",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Strasbourg Alsace",
+    "title": "Stade Rennais vs RC Strasbourg Alsace - Where to Watch, Stream Info, TV Channel, and Live Updates (October 25, 2026)",
+    "source": "Fubo",
+    "date": "Oct 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Ligue 1|Lyon @ PSG|PSG": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "PSG vs Lyon predictions: Les Parisiens to return to the Ligue 1 summit; PSG vs. Lyon Lineups: Confirmed Team News & Starting XI",
+  "opp_health": "PSG vs Lyon predictions: Les Parisiens to return to the Ligue 1 summit; PSG vs. Lyon Lineups: Confirmed Team News & Starting XI",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "PSG",
+    "title": "PSG vs Lyon predictions: Les Parisiens to return to the Ligue 1 summit",
+    "source": "Goal.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "PSG",
+    "title": "PSG vs. Lyon Lineups: Confirmed Team News & Starting XI",
+    "source": "roundtable.io",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "PSG",
+    "title": "PSG vs Lyon Predictions & Bet Builder Tips as Les Parisiens return to Ligue 1 summit",
+    "source": "Goal.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "PSG vs Lyon predictions: Les Parisiens to return to the Ligue 1 summit",
+    "source": "Goal.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "PSG vs. Lyon Lineups: Confirmed Team News & Starting XI",
+    "source": "roundtable.io",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lyon",
+    "title": "PSG vs Lyon Predictions & Bet Builder Tips as Les Parisiens return to Ligue 1 summit",
+    "source": "Goal.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Serie A|Fiorentina @ Inter|Inter": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Inter vs Fiorentina Confirmed Lineups; Inter vs Fiorentina: Confirmed Lineups & Match Prediction",
+  "opp_health": "Inter vs Fiorentina Confirmed Lineups; Inter vs Fiorentina: Confirmed Lineups & Match Prediction",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Inter",
+    "title": "Inter vs Fiorentina Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Inter",
+    "title": "Inter vs Fiorentina: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Inter",
+    "title": "Inter Milan vs Fiorentina: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Inter vs Fiorentina Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Inter vs Fiorentina: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Inter Milan vs Fiorentina Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Serie A|Frosinone @ Atalanta|Atalanta": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Atalanta vs Frosinone: Lineups, Prediction, Betting Tips & Odds; Atalanta vs Frosinone: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Atalanta vs Frosinone Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Atalanta vs Frosinone Lineups, Prediction, Betting Picks & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atalanta",
+    "title": "PREVIEW | Atalanta vs Frosinone: team news, lineups, predictions (Serie A 25/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Frosinone: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Frosinone: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Atalanta vs Frosinone Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Atalanta vs Frosinone Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Atalanta vs Frosinone: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Serie A|Venezia @ Genoa|Genoa": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Genoa vs Venezia Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Genoa vs Venezia: Lineups, Prediction, Betting Tips & Odds",
+  "opp_health": "Genoa vs Venezia Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Genoa vs Venezia: Lineups, Prediction, Betting Tips & Odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Genoa",
+    "title": "Genoa vs Venezia Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Genoa",
+    "title": "Genoa vs Venezia: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Genoa",
+    "title": "Genoa vs Venezia \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Venezia",
+    "title": "Genoa vs Venezia Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Venezia",
+    "title": "Genoa vs Venezia: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Venezia",
+    "title": "Genoa vs Venezia \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Serie A|Juventus @ Lecce|Juventus": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Lecce vs Juventus: Lineups, Prediction, Odds & Bet Builder Tip; Juventus squad for Lecce trip sees nine out amid injury crisis",
+  "opp_health": "Lecce vs Juventus Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Lecce vs Juventus Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Juventus",
+    "title": "Juventus squad for Lecce trip sees nine out amid injury crisis",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Serie A Preview: Lecce vs Juventus \u2013 Team News, Lineups & Prediction",
+    "source": "The Cult of Calcio",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Lecce vs Juventus: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Lecce vs Juventus Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Lecce vs Juventus Prediction: Where to Watch, Kick-off Time and Lineups Today 25/10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Juventus XI vs Lecce \u2013 Predicted lineup and team news",
+    "source": "The Football Faithful",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:18Z"
+ },
+ "Serie A|Milan @ Udinese|Milan": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Udinese vs AC Milan: Lineups, Prediction, Odds & Bet Builder Tip; Inter Milan vs Fiorentina: Lineups, Prediction, Betting Tips & Odds",
+  "opp_health": "Udinese vs AC Milan Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026; Udinese vs AC Milan: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Milan",
+    "title": "Udinese vs AC Milan: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Milan",
+    "title": "Inter Milan vs Fiorentina: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Milan",
+    "title": "Inter Milan vs Fiorentina \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "Udinese vs AC Milan Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "Udinese vs AC Milan: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Udinese",
+    "title": "AC Milan XI vs Udinese \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:19Z"
+ },
+ "Bundesliga|Leverkusen @ Hoffenheim|Leverkusen": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "TSG Hoffenheim vs Bayer Leverkusen: Lineups, Prediction, Odds & Bet Builder Tip; Preview: Hoffenheim vs Bayer Leverkusen - prediction, team news, lineups",
+  "opp_health": "TSG Hoffenheim vs Bayer Leverkusen: Lineups, Prediction, Odds & Bet Builder Tip; Preview: Hoffenheim vs Bayer Leverkusen - prediction, team news, lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Leverkusen",
+    "title": "Preview: Hoffenheim vs Bayer Leverkusen - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Leverkusen",
+    "title": "Leverkusen Predicted Lineup at Hoffenheim: Schick Starts",
+    "source": "The False 9",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Hoffenheim",
+    "title": "Preview: Hoffenheim vs Bayer Leverkusen - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Hoffenheim",
+    "title": "Leverkusen Predicted Lineup at Hoffenheim: Schick Starts",
+    "source": "The False 9",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Leverkusen",
+    "title": "TSG Hoffenheim vs Bayer Leverkusen: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Hoffenheim",
+    "title": "TSG Hoffenheim vs Bayer Leverkusen: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:19Z"
+ },
+ "Bundesliga|Bayern Munich @ Freiburg|Bayern Munich": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "SC Freiburg vs Bayern Munich Lineups, Prediction, Betting Picks & Odds; Bayern Munich\u2019s Manuel Neuer officially ruled out for SC Freiburg tilt",
+  "opp_health": "SC Freiburg vs Bayern Munich \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10; SC Freiburg vs Bayern M\u00fcnchen Lineups - Bundesliga 2026/27",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Bayern Munich\u2019s Manuel Neuer officially ruled out for SC Freiburg tilt"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Bayern Munich",
+    "title": "Bayern Munich\u2019s Joshua Kimmich ruled out for Sunday",
+    "source": "Bavarian Football Works",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Bayern Munich",
+    "title": "SC Freiburg vs Bayern Munich Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Bayern Munich",
+    "title": "Bayern Munich\u2019s Manuel Neuer officially ruled out for SC Freiburg tilt",
+    "source": "Bavarian Football Works",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Freiburg",
+    "title": "SC Freiburg vs Bayern Munich \u2013 Prediction, Where to Watch, Kick-off Time and Lineups 25-10",
+    "source": "Odds Scanner",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Freiburg",
+    "title": "SC Freiburg vs Bayern M\u00fcnchen Lineups - Bundesliga 2026/27",
+    "source": "BeSoccer Livescore",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Freiburg",
+    "title": "SC Freiburg vs Bayern Munich: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 25",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-25T13:19Z"
  }
 }
