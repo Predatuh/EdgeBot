@@ -9,12 +9,12 @@
    "wins": 1
   },
   "60-90c": {
-   "drag": 0.9939,
-   "hit": 0.7158,
-   "mean_entry": 0.7202,
-   "n": 774,
+   "drag": 0.994,
+   "hit": 0.715,
+   "mean_entry": 0.7193,
+   "n": 793,
    "trusted": true,
-   "wins": 554
+   "wins": 567
   },
   "90c+": {
    "drag": 1.027,
@@ -33,12 +33,12 @@
    "wins": 0
   }
  },
- "generated_utc": "2026-10-25T14:35Z",
+ "generated_utc": "2026-10-26T06:33Z",
  "learned_discount": {
-  "60-90c": 0.9939,
+  "60-90c": 0.994,
   "90c+": 1.0
  },
- "legs_settled": 1196,
+ "legs_settled": 1215,
  "min_band_n": 60,
  "rungs": {
   "banker": {
@@ -48,27 +48,27 @@
    "won": 33
   },
   "longshot": {
-   "actual": 0.0233,
+   "actual": 0.0227,
    "implied": 0.0244,
-   "n": 43,
+   "n": 44,
    "won": 1
   },
   "lottery": {
    "actual": 0.0,
    "implied": 0.0038,
-   "n": 43,
+   "n": 44,
    "won": 0
   },
   "solid": {
-   "actual": 0.5526,
-   "implied": 0.4914,
-   "n": 38,
-   "won": 21
+   "actual": 0.5366,
+   "implied": 0.4908,
+   "n": 41,
+   "won": 22
   },
   "swing": {
-   "actual": 0.1667,
-   "implied": 0.1238,
-   "n": 42,
+   "actual": 0.1628,
+   "implied": 0.1236,
+   "n": 43,
    "won": 7
   }
  }
