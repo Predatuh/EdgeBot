@@ -703,5 +703,63 @@
    }
   ],
   "_ts": "2026-10-26T14:41Z"
+ },
+ "ATP Tennis|Tomas Machac vs Alex de Minaur|Tomas Machac": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tomas Machac",
+    "title": "LIVE RANKINGS. Machac improves his standing before Marozsan battle in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Tomas Machac vs Alex de Minaur - Match ATP - Erste Bank Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Fabian Marozsan vs Tomas Machac - Match ATP - Erste Bank Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Tom\u00e1\u0161 Mach\u00e1\u010d vs Alex de Minaur \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Tomas Machac vs Alex de Minaur - Match ATP - Erste Bank Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "How Katie Boulter and Alex de Minaur turned tennis rivals into life partners",
+    "source": "Tuko News",
+    "date": "Oct 26",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-26T14:46Z"
  }
 }
