@@ -1076,5 +1076,63 @@
    }
   ],
   "_ts": "2026-10-27T13:11Z"
+ },
+ "Serie A|Como @ Torino|Torino": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Torino vs Como Prediction, Betting Tips, Lineups & Odds | 27 Oct 2026; Torino vs Como: Lineups and Live Text Commentary",
+  "opp_health": "Torino vs Como Prediction, Betting Tips, Lineups & Odds | 27 Oct 2026; Torino vs Como: Lineups and Live Text Commentary",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Torino",
+    "title": "Torino vs Como Prediction, Betting Tips, Lineups & Odds | 27 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Torino",
+    "title": "Torino vs Como: Lineups and Live Text Commentary",
+    "source": "Zamin.uz",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Torino",
+    "title": "Torino vs Como Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Como",
+    "title": "Torino vs Como Prediction, Betting Tips, Lineups & Odds | 27 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Como",
+    "title": "Torino vs Como: Lineups and Live Text Commentary",
+    "source": "Zamin.uz",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Como",
+    "title": "Torino vs Como Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 27",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-27T21:14Z"
  }
 }
