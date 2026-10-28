@@ -1789,5 +1789,121 @@
    }
   ],
   "_ts": "2026-10-28T13:06Z"
+ },
+ "College Football|Kennesaw St. @ Middle Tennessee|Kennesaw St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kennesaw St.",
+    "title": "Liberty Flames 34 - Kennesaw State Owls 6: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Kennesaw St.",
+    "title": "Jaylon Coleman scores 2 TDs in Liberty's 34-6 win over Kennesaw State | Wire | mdjonline.com",
+    "source": "Marietta Daily Journal",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Middle Tennessee",
+    "title": "Fabulous football forecasts for this weekend for Middle Tennessee",
+    "source": "WSMV",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Kennesaw St.",
+    "title": "Kennesaw St Playoff Chances: What Kennesaw St Needs \u2014 Week 9",
+    "source": "A to Z Sports",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Middle Tennessee",
+    "title": "Kennesaw State vs Middle Tennessee: Fourth Quarter Total Points",
+    "source": "Robinhood",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Middle Tennessee",
+    "title": "Kennesaw State Owls vs. Middle Tennessee Blue Raiders: Oct 28, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-28T21:08Z"
+ },
+ "Serie A|Juventus @ Genoa|Genoa": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "[ROJA//LIVE] Genoa vs Juventus, partita di Serie A Guarda il calcio in diretta online gratis oggi; Genoa vs. Juventus Starting Lineups, Live Streaming, How to Watch Serie A on TV",
+  "opp_health": "[ROJA//LIVE] Genoa vs Juventus, partita di Serie A Guarda il calcio in diretta online gratis oggi; Genoa vs. Juventus Starting Lineups, Live Streaming, How to Watch Serie A on TV",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Genoa",
+    "title": "[ROJA//LIVE] Genoa vs Juventus, partita di Serie A Guarda il calcio in diretta online gratis oggi",
+    "source": "Vantage Data Centers",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Genoa",
+    "title": "Genoa vs. Juventus Starting Lineups, Live Streaming, How to Watch Serie A on TV",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Genoa",
+    "title": "Genoa vs Juventus: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "[ROJA//LIVE] Genoa vs Juventus, partita di Serie A Guarda il calcio in diretta online gratis oggi",
+    "source": "Vantage Data Centers",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Genoa vs. Juventus Starting Lineups, Live Streaming, How to Watch Serie A on TV",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Juventus",
+    "title": "Genoa vs Juventus Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Oct 28",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-28T21:08Z"
  }
 }
