@@ -1143,5 +1143,63 @@
    }
   ],
   "_ts": "2026-10-29T13:06Z"
+ },
+ "Serie A|Atalanta @ Fiorentina|Fiorentina": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Fiorentina vs Atalanta Confirmed Lineups; Fiorentina vs Atalanta: Confirmed Lineups & Match Prediction",
+  "opp_health": "Fiorentina vs Atalanta Confirmed Lineups; Fiorentina vs Atalanta: Confirmed Lineups & Match Prediction",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta: Lineups and how to watch",
+    "source": "Viola Nation",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta: Lineups and how to watch",
+    "source": "Viola Nation",
+    "date": "Oct 29",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-29T21:15Z"
  }
 }
