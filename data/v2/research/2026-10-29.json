@@ -1,0 +1,1147 @@
+{
+ "ATP Tennis|Denis Shapovalov vs Taylor Fritz|Denis Shapovalov": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Denis Shapovalov",
+    "title": "Taylor Fritz vs Denis Shapovalov \u00b7 Round 2 \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "Taylor Fritz vs Denis Shapovalov \u00b7 Round 2 \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "A Lost Final, a Rental Car, and a Birthday Win for Taylor Fritz",
+    "source": "www.tenniswatcher.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "Remy Bertola vs Denis Shapovalov - Match ATP - Swiss Indoors Basel 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Denis Shapovalov",
+    "title": "LIVE RANKINGS. Fritz moves up before challenging Shapovalov in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "LIVE RANKINGS. Fritz moves up before challenging Shapovalov in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:05Z"
+ },
+ "ATP Tennis|Nikoloz Basilashvili vs Carlos Alcaraz|Carlos Alcaraz": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Carlos Alcaraz shares heartfelt condolences after fatal train collision in Spain",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Nikoloz Basilashvili vs Carlos Alcaraz \u00b7 Round 2 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "LIVE RANKINGS. Basilashvili makes progress before taking on Alcaraz in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "\u201cCarlos Alcaraz Is My Ballon d\u2019Or of Tennis\u201d: Patrick Mouratoglou Snubs Year-End No. 1 Alexander Zverev",
+    "source": "www.tenniswatcher.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "Basilashvili, with a game \u2018full of wins\u2019, eyes Alcaraz upset in Vienna",
+    "source": "ATP Tour",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Nikoloz Basilashvili",
+    "title": "Jurij Rodionov vs Nikoloz Basilashvili \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Jan-Lennard Struff vs Novak Djokovic|Novak Djokovic": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Novak Djokovic returns to Basel after 15 years against Ugo Humbert; ATP Tour event in chaos after Novak Djokovic return decision and former No. 3 to retire",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "ATP Tour event in chaos after Novak Djokovic return decision and former No. 3 to retire"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Novak Djokovic",
+    "title": "ATP Tour event in chaos after Novak Djokovic return decision and former No. 3 to retire",
+    "source": "Daily Express",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "Novak Djokovic returns to Basel after 15 years against Ugo Humbert",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "LIVE RANKINGS. Struff moves higher ahead of Djokovic showdown in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "LIVE RANKINGS. Djokovic\u2019s Basel run lifts his ranking before Struff clash",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Novak Djokovic",
+    "title": "Novak Djokovic vs Ugo Humbert - Match ATP - Swiss Indoors Basel 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Yannick Hanfmann vs Jan-Lennard Struff - Match ATP - Swiss Indoors Basel 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Lorenzo Musetti vs Arthur Fery|Lorenzo Musetti": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Highlights: Fery advances in Vienna after Fearnley retires",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fery",
+    "title": "Highlights: Fery advances in Vienna after Fearnley retires",
+    "source": "ATP Tour",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Lorenzo Musetti vs Frances Tiafoe \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Lorenzo Musetti Wins Lyon ATP Title, Beats Taylor Fritz for First Crown Since 2022",
+    "source": "Pragativadi",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Arthur Fery vs Lorenzo Musetti - Match ATP - Erste Bank Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "ATP. Fery, Norrie, Samuel and Broady are the top Brit to compete on Thursday 29th of October",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Arthur Fery vs Lorenzo Musetti - Match ATP - Erste Bank Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Alexander Zverev vs Tallon Griekspoor|Alexander Zverev": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Patrick Mouratoglou names his 'Ballon d'Or' for tennis in 2026 as Alexander Zverev misses out; Alexander Zverev outlines the goals he still wants to achieve before he retires",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Alexander Zverev outlines the goals he still wants to achieve before he retires"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexander Zverev",
+    "title": "Alexander Zverev outlines the goals he still wants to achieve before he retires",
+    "source": "Tennis365",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "Patrick Mouratoglou names his 'Ballon d'Or' for tennis in 2026 as Alexander Zverev misses out",
+    "source": "Tennishead",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Tallon Griekspoor",
+    "title": "LIVE RANKINGS. Griekspoor\u2019s rankings just before taking on Zverev in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "Alexander Zverev\u2019s View: \u201cATP 500 Events Are More Interesting Than Masters 1000 Tournaments\u201d",
+    "source": "Tennis World Italia",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Tallon Griekspoor",
+    "title": "Tallon Griekspoor vs Brandon Nakashima - Match ATP - Erste Bank Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Tallon Griekspoor",
+    "title": "Tallon Griekspoor vs Brandon Nakashima \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Cameron Norrie vs Daniil Medvedev|Daniil Medvedev": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "\u201cNo Wild Cards\u201d \u2013 Daniil Medvedev Rejects Special Treatment for Novak Djokovic if Serb Misses Out on ATP Finals 2026",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daniil Medvedev",
+    "title": "\u201cNo Wild Cards\u201d \u2013 Daniil Medvedev Rejects Special Treatment for Novak Djokovic if Serb Misses Out on ATP Finals 2026",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Cameron Norrie",
+    "title": "LIVE RANKINGS. Norrie down just before fighting against Medvedev in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Cameron Norrie",
+    "title": "Tennis | ATP Vienna 2026 | Norrie eases past Cerundolo to set Medvedev showdown",
+    "source": "Britwatch Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Cameron Norrie",
+    "title": "Cameron Norrie vs Daniil Medvedev \u00b7 Round 2 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev Pinpoints 'Biggest Problem' in Tennis and Backs Players for Their Fight: \"We Have Little Power\"",
+    "source": "FirstSportz",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniel M\u00e9rida vs Daniil Medvedev \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Tommy Paul vs Luciano Darderi|Tommy Paul": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tommy Paul",
+    "title": "Tommy Paul vs Taylor Fritz \u00b7 Semifinal \u00b7 ATP Lyon",
+    "source": "Tennis.com",
+    "date": "Oct 23",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Tommy Paul vs Andrey Rublev \u00b7 Round 1 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Tommy Paul vs Luciano Darderi \u00b7 Round 2 \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "LIVE RANKINGS. Darderi targets another climb against Paul in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "LIVE RANKINGS. Paul\u2019s rankings just before facing Darderi in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Luciano Darderi",
+    "title": "Tommy Paul vs Luciano Darderi - Match ATP - Erste Bank Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Valentin Vacherot vs Rafael Jodar|Rafael Jodar": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rafael Jodar",
+    "title": "LIVE RANKINGS. Vacherot falls ahead of facing Jodar in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Rafael Jodar",
+    "title": "LIVE RANKINGS. Jodar climbs ahead of Vacherot clash in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "LIVE RANKINGS. Vacherot falls ahead of facing Jodar in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "LIVE RANKINGS. Jodar climbs ahead of Vacherot clash in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Rafael Jodar",
+    "title": "Valentin Vacherot vs Rafael Jodar - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Rafael Jodar - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Alex Michelsen vs Arthur Fils|Arthur Fils": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Basel: Davidovich Fokina Withdraws, Arthur Fils Gets a New Opponent",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Basel: Davidovich Fokina Withdraws, Arthur Fils Gets a New Opponent"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fils",
+    "title": "Basel: Davidovich Fokina Withdraws, Arthur Fils Gets a New Opponent",
+    "source": "TennisTemple",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "LIVE RANKINGS. Michelsen\u2019s rankings ahead of competing against Fils in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Alex Michelsen vs Arthur Fils - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Alex Michelsen vs Arthur Fils \u00b7 Round 2 \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Alex Michelsen vs Arthur Fils - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alex Michelsen",
+    "title": "Alex Michelsen vs Arthur Fils \u00b7 Round 2 \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "ATP Tennis|Ben Shelton vs Jerome Kym|Ben Shelton": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ben Shelton addresses injury absences of Carlos Alcaraz and Jannik Sinner",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton addresses injury absences of Carlos Alcaraz and Jannik Sinner",
+    "source": "Tennis Tonic",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "Jerome Kym vs Arthur Rinderknech - Match ATP - Swiss Indoors Basel 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "LIVE RANKINGS. Kym boosts his position before Shelton test in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "LIVE RANKINGS. Kym boosts his position before Shelton test in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton vs Jerome Kym - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "Ben Shelton vs Jerome Kym - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "WTA Tennis|Mia Pohankova vs Alycia Parks|Mia Pohankova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mia Pohankova",
+    "title": "Naomi Osaka vs Mia Pohankova - Match WTA - Toray Pan Pacific Open Tennis 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Mia Pohankova",
+    "title": "Mia Pohankova stuns Osaka in biggest win of career in Tokyo",
+    "source": "The Hans India",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Mia Pohankova",
+    "title": "LIVE RANKINGS. Pohankova moves up before challenging Parks in Tokyo",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Kimberly Birrell - Match WTA - Toray Pan Pacific Open Tennis 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Alycia Parks vs Kimberly Birrell \u00b7 Round 2 \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alycia Parks",
+    "title": "Parks beats Birrell in Tokyo to reach fourth quarterfinal of season",
+    "source": "WTA Tennis",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "WTA Tennis|Kamilla Rakhimova vs Maya Joint|Maya Joint": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Maya Joint - Match WTA - Toray Pan Pacific Open Tennis 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Ekaterina Alexandrova \u00b7 Round 2 \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "LIVE RANKINGS. Joint makes progress before taking on Rakhimova in Tokyo",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "LIVE RANKINGS. Rakhimova rises as Joint awaits in Tokyo",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Maya Joint",
+    "title": "Kamilla Rakhimova vs Maya Joint \u00b7 Quarterfinal \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Maya Joint \u00b7 Quarterfinal \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "WTA Tennis|Diana Shnaider vs Alexandra Eala|Diana Shnaider": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alex Eala bows out of Ningbo Open after loss vs Diana Shnaider Alex Eala bows out of the Ningbo Open after conceding to sixth seed Diana Shnaider, 5-6, 4-6. Full story: https://www.rappler.com/people/athletes/alex-eala-diana-shnaider-tennis-ningbo-open-",
+  "opp_health": "Alexandra Eala secures return to career-high ranking, but it could get even better; Eala passes Stojsavljevic test in Tokyo; Chwalinska, Bencic withdraw",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Diana Shnaider",
+    "title": "Alex Eala bows out of Ningbo Open after loss vs Diana Shnaider Alex Eala bows out of the Ningbo Open after conceding to sixth seed Diana Shnaider, 5-6, 4-6. Full story: https://www.rappler.com/people/athletes/alex-eala-diana-shnaider-tennis-ningbo-open-",
+    "source": "Facebook",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Alexandra Eala",
+    "title": "Eala passes Stojsavljevic test in Tokyo; Chwalinska, Bencic withdraw",
+    "source": "WTA Tennis",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Alexandra Eala",
+    "title": "Alex Eala and Desirae Krawczyk withdraw from playing doubles in Tokyo with reason given",
+    "source": "Tennishead",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Alexandra Eala",
+    "title": "Alexandra Eala secures return to career-high ranking, but it could get even better",
+    "source": "Tennis World USA",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Diana Shnaider",
+    "title": "Alexandra Eala vs Diana Shnaider \u00b7 Quarterfinal \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Diana Shnaider",
+    "title": "Filipina tennis star Alex Eala practice on court ahead of her quarterfinal match against Diana Shnaider in the Pan Pacific Open. She also met with fans and signed autographs outside the court. | via Dyan Castillejo, ABS-CBN News",
+    "source": "Facebook",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "WTA Tennis|Lilli Tagger vs Magda Linette|Lilli Tagger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lilli Tagger",
+    "title": "Lilli Tagger vs Magda Linette \u00b7 Round 2 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "LIVE RANKINGS. Tagger falls down ahead of facing Linette in Guangzhou",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Lilli Tagger vs Magda Linette \u00b7 Round 2 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "LIVE RANKINGS. Linette rises as Tagger awaits in Guangzhou",
+    "source": "Tennis Tonic",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Lilli Tagger vs Magda Linette - Match WTA - Guangzhou Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Lilli Tagger vs Magda Linette - Match WTA - Guangzhou Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "NFL|Carolina @ Green Bay|Green Bay": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Packers Injury Report: Green Bay rules out 3 starters; Green Bay Packers receive concerning injury update at center ahead of Thursday Night Football",
+  "opp_health": "Carolina Panthers loss made worse by Taylor Moton\u2019s injury. \u2018It breaks my heart\u2019; Carolina Panthers Have Tough Injury Update After Loss",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Green Bay",
+    "title": "Fines coming after Green Bay Packers put NFL officiating on blast for questionable calls in loss to Lions",
+    "source": "Fox News",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers loss made worse by Taylor Moton\u2019s injury. \u2018It breaks my heart\u2019",
+    "source": "Charlotte Observer",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers Have Tough Injury Update After Loss",
+    "source": "Yahoo Sports",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Green Bay Packers receive concerning injury update at center ahead of Thursday Night Football",
+    "source": "Yahoo Sports",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Green Bay",
+    "title": "Packers Injury Report: Green Bay rules out 3 starters",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Carolina",
+    "title": "Carolina Panthers at Green Bay Packers best prop bets for Thursday Night Football",
+    "source": "Sportsbook Wire",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "College Football|South Carolina St. @ Morgan St.|South Carolina St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "South Carolina St.",
+    "title": "Norfolk State Spartans vs. South Carolina State Bulldogs: Oct 24, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Morgan St.",
+    "title": "Howard 26-20 Morgan State (25 Oct, 2026) Game Recap",
+    "source": "ESPN Singapore",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "South Carolina St.",
+    "title": "North Carolina A&T Football",
+    "source": "FloFootball",
+    "date": "Oct 27",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "College Football|Troy @ James Madison|James Madison": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "James Madison",
+    "title": "Undefeated no more: Mountaineers upend James Madison in OT thriller",
+    "source": "Watauga Democrat",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Troy",
+    "title": "Troy Aikman Fights Back Tears in \u2018Monday Night Football\u2019 Broadcast Booth During Somber Moment",
+    "source": "Us Weekly",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Troy",
+    "title": "JMU football to face Troy without running back George Pettaway",
+    "source": "Daily News-Record",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Troy",
+    "title": "JMU football looks to reestablish identity against physical Troy team",
+    "source": "Daily News-Record",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "James Madison",
+    "title": "Group of 6 Power Rankings: Does James Madison Still Have a Playoff Path After Appalachian State Upset?",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "James Madison",
+    "title": "College football G6 rankings: James Madison, North Dakota State losses reshuffle top five",
+    "source": "FanSided",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "College Football|Florida Atlantic @ North Texas|North Texas": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Another North Texas football team forfeits a game due to low numbers, injuries",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "North Texas",
+    "title": "Another North Texas football team forfeits a game due to low numbers, injuries",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "North Texas Gameday: Mean Green set for spotlight game against Florida Atlantic",
+    "source": "The Moore County News-Press",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "North Texas",
+    "title": "North Texas Lost Everyone and Kept Winning. Now, Can the Mean Green Pack Their Stadium?",
+    "source": "Athlon Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "North Texas",
+    "title": "Florida Atlantic vs. North Texas Oct. 29: TV, Stream",
+    "source": "WBZT",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "Florida Atlantic Owls vs. North Texas Mean Green: Oct 29, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "Florida Atlantic vs. North Texas Oct. 29: TV, Stream",
+    "source": "WBZT",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "Serie A|Lecce @ Frosinone|Frosinone": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Frosinone vs Lecce Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026; Frosinone vs Lecce Prediction: Where to Watch, Kick-off Time and Lineups Today 29/10",
+  "opp_health": "Frosinone vs Lecce Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026; Frosinone vs Lecce Prediction: Where to Watch, Kick-off Time and Lineups Today 29/10",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Lecce Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Lecce Prediction: Where to Watch, Kick-off Time and Lineups Today 29/10",
+    "source": "Odds Scanner",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Frosinone",
+    "title": "Frosinone vs Lecce Lineups - Serie A 2026/27",
+    "source": "BeSoccer Livescore",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Frosinone vs Lecce Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Frosinone vs Lecce Prediction: Where to Watch, Kick-off Time and Lineups Today 29/10",
+    "source": "Odds Scanner",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Lecce",
+    "title": "Frosinone vs Lecce: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 29",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ },
+ "Serie A|Atalanta @ Fiorentina|Atalanta": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Fiorentina vs Atalanta Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026; Fiorentina vs Atalanta: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Fiorentina vs Atalanta Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026; Fiorentina vs Atalanta: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta prediction: team news, lineups, expert analysis",
+    "source": "RatingBet",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta prediction: team news, lineups, expert analysis",
+    "source": "RatingBet",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Fiorentina vs Atalanta: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Fiorentina vs Atalanta: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 29",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-29T13:06Z"
+ }
+}
