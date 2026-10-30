@@ -1,0 +1,3285 @@
+{
+ "ATP Tennis|Jiri Lehecka vs Jerome Kym|Jiri Lehecka": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jiri Lehecka",
+    "title": "Daniel Altmaier vs Jiri Lehecka - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jiri Lehecka",
+    "title": "LIVE RANKINGS. Kym moves higher ahead of Lehecka showdown in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jiri Lehecka",
+    "title": "LIVE RANKINGS. Lehecka makes progress before taking on Kym in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "LIVE RANKINGS. Kym moves higher ahead of Lehecka showdown in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "LIVE RANKINGS. Lehecka makes progress before taking on Kym in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jerome Kym",
+    "title": "Jerome Kym vs Jiri Lehecka - Match ATP - Swiss Indoors Basel 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Jan-Lennard Struff vs Nuno Borges|Jan-Lennard Struff": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nuno Borges",
+    "title": "Jan-Lennard Struff vs Nuno Borges \u00b7 Quarterfinal \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "Jan-Lennard Struff vs Nuno Borges - Match ATP - Swiss Indoors Basel 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Novak Djokovic's ATP Finals blow with Jan-Lennard Struff defeat",
+    "source": "BBC",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Struff beats Djokovic in Basel second round",
+    "source": "T\u00fcrkiye Today",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Novak Djokovic Stumbles In Basel As Jan-Lennard Struff Stages Comeback",
+    "source": "NDTV Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "LIVE RANKINGS. Borges moves higher ahead of Struff showdown in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Alex de Minaur vs Matteo Berrettini|Alex de Minaur": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Flavio Cobolli reveals reason behind tears as Novak Djokovic and Alex De Minaur monitor injury situation",
+  "opp_health": "Highlights: Berrettini advances to Vienna 2026 QFs after Cobolli retires; ATP Vienna \u2013 Flavio Cobolli withdraws in tears during match against Matteo Berrettini",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Matteo Berrettini",
+    "title": "Highlights: Berrettini advances to Vienna 2026 QFs after Cobolli retires",
+    "source": "ATP Tour",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Matteo Berrettini",
+    "title": "ATP Vienna \u2013 Flavio Cobolli withdraws in tears during match against Matteo Berrettini",
+    "source": "Tennis World Italia",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Matteo Berrettini",
+    "title": "Flavio Cobolli Retires in Tears in Vienna: Berrettini Confirms Injury",
+    "source": "TennisTemple",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "Flavio Cobolli reveals reason behind tears as Novak Djokovic and Alex De Minaur monitor injury situation",
+    "source": "Tennis365",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "De Minaur's Turin case improves, Zverev to world No.1",
+    "source": "https://aapnews.aap.com.au/",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Alex de Minaur",
+    "title": "LIVE RANKINGS. Berrettini targets another climb against De Minaur in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Alexander Zverev vs Arthur Fery|Alexander Zverev": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Patrick Mouratoglou names his 'Ballon d'Or' for tennis in 2026 as Alexander Zverev misses out; Alexander Zverev outlines the goals he still wants to achieve before he retires",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Alexander Zverev outlines the goals he still wants to achieve before he retires"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexander Zverev",
+    "title": "Alexander Zverev outlines the goals he still wants to achieve before he retires",
+    "source": "Tennis365",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "Patrick Mouratoglou names his 'Ballon d'Or' for tennis in 2026 as Alexander Zverev misses out",
+    "source": "Tennishead",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "Alexander Zverev vs Arthur Fery \u00b7 Quarterfinal \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Alexander Zverev",
+    "title": "A new king in world tennis: Alexander Zverev reaches No. 1 in the ATP rankings for the first time",
+    "source": "Zamin.uz",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "LIVE RANKINGS. Fery builds momentum ahead of Zverev meeting in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fery",
+    "title": "LIVE RANKINGS. Zverev climbs ahead of Fery clash in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Taylor Fritz vs Arthur Fils|Arthur Fils": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fils",
+    "title": "Fils keeps his cool in Basel to boost Turin hopes, but Jodar falters",
+    "source": "ATP Tour",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Taylor Fritz vs Arthur Fils \u00b7 Quarterfinal \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "Taylor Fritz vs Arthur Fils \u00b7 Quarterfinal \u00b7 ATP Basel",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "Taylor Fritz vs Arthur Fils - Match ATP - Swiss Indoors Basel 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Alex Michelsen vs Arthur Fils - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "LIVE RANKINGS. Fritz moves higher ahead of Fils showdown in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Tommy Paul vs Carlos Alcaraz|Carlos Alcaraz": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ben Shelton addresses injury absences of Carlos Alcaraz and Jannik Sinner",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Ben Shelton addresses injury absences of Carlos Alcaraz and Jannik Sinner",
+    "source": "Tennis Tonic",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Medvedev saves match point to edge past Norrie in Vienna, Alcaraz also through",
+    "source": "Flashscore.co.za",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Carlos Alcaraz",
+    "title": "Alcaraz repels Basilashvili\u2019s 4 set points in Vienna, books QF spot",
+    "source": "ATP Tour",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "LIVE RANKINGS. Paul\u2019s rankings before playing against Alcaraz in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Tommy Paul vs Carlos Alcaraz \u00b7 Quarterfinal \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Tommy Paul vs Luciano Darderi - Match ATP - Erste Bank Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Daniil Medvedev vs Adrian Mannarino|Daniil Medvedev": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "\u201cNo Wild Cards\u201d \u2013 Daniil Medvedev Rejects Special Treatment for Novak Djokovic if Serb Misses Out on ATP Finals 2026",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Daniil Medvedev",
+    "title": "\u201cNo Wild Cards\u201d \u2013 Daniil Medvedev Rejects Special Treatment for Novak Djokovic if Serb Misses Out on ATP Finals 2026",
+    "source": "Yahoo Sports",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "LIVE RANKINGS. Medvedev\u2019s rankings right before playing against Mannarino in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Adrian Mannarino",
+    "title": "LIVE RANKINGS. Mannarino moves up before challenging Medvedev in Vienna",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Adrian Mannarino",
+    "title": "Adrian Mannarino vs Daniil Medvedev \u00b7 Quarterfinal \u00b7 ATP Vienna",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Adrian Mannarino",
+    "title": "Adrian Mannarino vs Daniil Medvedev - Match ATP - Erste Bank Open 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Daniil Medvedev",
+    "title": "Daniil Medvedev Punches Court in Frustration Then Mocks ATP Fine Policy at Vienna Open",
+    "source": "EssentiallySports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "ATP Tennis|Valentin Vacherot vs Holger Rune|Holger Rune": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Holger Rune's new ATP ranking as he takes massive jump after winning his first match since injury return; Holger Rune is back: Dane ends 373-day wait for victory after Achilles injury",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Holger Rune",
+    "title": "Holger Rune is back: Dane ends 373-day wait for victory after Achilles injury",
+    "source": "Tennisuptodate.com",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Holger Rune",
+    "title": "Rune wins first match on ATP Tour against big serving Frenchman after lengthy injury spell",
+    "source": "Flashscore.co.za",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Holger Rune",
+    "title": "Holger Rune's new ATP ranking as he takes massive jump after winning his first match since injury return",
+    "source": "Tennishead",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "LIVE RANKINGS. Rune down prior to competing against Vacherot in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "LIVE RANKINGS. Vacherot falls down before taking on Rune in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Valentin Vacherot",
+    "title": "Valentin Vacherot vs Rafael Jodar - Match ATP - Swiss Indoors Basel 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Cheuk Ying Shek vs Aliaksandra Sasnovich|Aliaksandra Sasnovich": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cheuk Ying Shek",
+    "title": "Harriet Dart vs Cheuk Ying Shek - Match WTA - Guangzhou Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Aliaksandra Sasnovich vs Diana Shnaider - Match WTA - Toray Pan Pacific Open Tennis 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Aliaksandra Sasnovich vs Diana Shnaider - Highlight | WTA 500: Toray Pan Pacific Open Tennis 2026",
+    "source": "Vidio",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Aliaksandra Sasnovich",
+    "title": "Aliaksandra Sasnovich vs Diana Shnaider \u00b7 Round 2 \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Carol Young Suh Lee vs Ching Laam Lai|Carol Young Suh Lee": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Carol Young Suh Lee",
+    "title": "Paula Badosa vs Carol Young Suh Lee \u00b7 Round 1 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Carol Young Suh Lee",
+    "title": "Paula Badosa vs Carol Young Suh Lee - Match WTA - Guangzhou Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Carol Young Suh Lee",
+    "title": "Ching Laam Lai vs Carol Young Suh Lee - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "www.tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Ching Laam Lai",
+    "title": "Ching Laam Lai vs Carol Young Suh Lee - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "www.tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Hong Yi Cody Wong vs Himeno Sakatsume|Himeno Sakatsume": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hong Yi Cody Wong",
+    "title": "Hong Yi Cody Wong vs Emerson Jones - Match WTA - Guangzhou Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Himeno Sakatsume",
+    "title": "Sakatsume gets her steps in with quartet of quality scrambles in Tokyo",
+    "source": "WTA Tennis",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Himeno Sakatsume",
+    "title": "Leylah Fernandez vs Himeno Sakatsume - Highlight | WTA 500: Toray Pan Pacific Open Tennis 2026",
+    "source": "Vidio",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Himeno Sakatsume",
+    "title": "Leylah Fernandez vs Himeno Sakatsume \u00b7 Round 1 \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Hong Yi Cody Wong",
+    "title": "Prudential Hong Kong Tennis Open",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Hong Yi Cody Wong",
+    "title": "Emerson Jones vs Heather Watson - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Elena Pridankina vs Ekaterine Gorgodze|Elena Pridankina": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Elena Pridankina",
+    "title": "LIVE RANKINGS. Pridankina\u2019s rankings before playing against Young Suh Lee in Guangzhou",
+    "source": "Tennis Tonic",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Ekaterine Gorgodze",
+    "title": "Gorgodze / Zimmermann vs Tjen / Williams \u00b7 Round 1 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Ekaterine Gorgodze",
+    "title": "Fernandez, Kostyuk beat Gorgodze, Putintseva in 54 minutes to make Ningbo quarters",
+    "source": "WTA Tennis",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Elena Pridankina",
+    "title": "Kudermetova / Timofeeva vs Fossa Huergo / Pridankina \u00b7 Round 1 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Elena Pridankina",
+    "title": "Elena Pridankina vs Ekaterine Gorgodze - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "www.tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Ekaterine Gorgodze",
+    "title": "Elena Pridankina vs Ekaterine Gorgodze - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "www.tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Tatiana Prozorova vs Hayu Kinoshita|Tatiana Prozorova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Y.Putintseva beats H.Kinoshita - Toray Pan Pacific Open - Tokyo 2026 - score",
+    "source": "Tennis Tonic",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Hayu Kinoshita vs Yulia Putintseva - Match WTA - Toray Pan Pacific Open Tennis 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Dart battles past Prozorova in all-qualifier first round in Guangzhou",
+    "source": "WTA Tennis",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Tennis | WTA Guangzhou 2026 | Harriet Dart faces Tatiana Prozorova in a battle of the qualifiers",
+    "source": "Britwatch Sports",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Tatiana Prozorova",
+    "title": "Tatiana Prozorova vs Hayu Kinoshita - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Hayu Kinoshita",
+    "title": "Tatiana Prozorova vs Hayu Kinoshita - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Mika Stojsavljevic vs Alevtina Ibragimova|Alevtina Ibragimova": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Eala passes Stojsavljevic test in Tokyo; Chwalinska, Bencic withdraw",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mika Stojsavljevic",
+    "title": "Eala passes Stojsavljevic test in Tokyo; Chwalinska, Bencic withdraw",
+    "source": "WTA Tennis",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Alevtina Ibragimova",
+    "title": "Han Shi vs Alevtina Ibragimova \u00b7 Round 1 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Alevtina Ibragimova",
+    "title": "Han Shi vs Alevtina Ibragimova - Match WTA - Guangzhou Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Mika Stojsavljevic",
+    "title": "Alex Eala began her Toray Pan Pacific Open with guns blazing after dismantling British challenger Mika Stojsavljevic, 6-1, 6-2, on Oct. 26, 2026, at Ariake Tennis Forest Park in Japan. Link to the full story in comment section.",
+    "source": "Facebook",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Alevtina Ibragimova",
+    "title": "Mika Stojsavljevic vs Alevtina Ibragimova - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Mika Stojsavljevic",
+    "title": "Mika Stojsavljevic vs Alevtina Ibragimova - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Heather Watson vs Emerson Jones|Emerson Jones": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Emerson Jones",
+    "title": "Dayana Yastremska vs Emerson Jones - Match WTA - Guangzhou Open 1970 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Heather Watson",
+    "title": "Heather Watson vs Alycia Parks \u00b7 Qualifying Round 2 \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Emerson Jones",
+    "title": "Ann Li Vs Emerson Jones \ud83c\udfbe Japan Women\u2019s Open | Fan-Made Gameplay Simulation Knee (AzDN2vsEdI)",
+    "source": "Unisba Media",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Heather Watson",
+    "title": "Fleetwood hero, 30, dated Heather Watson with tennis star a regular at his games",
+    "source": "The Sun",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Emerson Jones",
+    "title": "Emerson Jones vs Heather Watson - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Heather Watson",
+    "title": "Emerson Jones vs Heather Watson - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Ying Zhang vs Alexandra Shubladze|Alexandra Shubladze": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexandra Shubladze",
+    "title": "Polina Iatcenko vs Alexandra Shubladze - Match WTA - Guangzhou Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Alexandra Shubladze",
+    "title": "Ying Zhang vs Alexandra Shubladze - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Ying Zhang",
+    "title": "Ying Zhang vs Alexandra Shubladze - Match WTA - Prudential Hong Kong Tennis Open 1970 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Kamilla Rakhimova vs Leylah Fernandez|Kamilla Rakhimova": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Elena Rybakina releases statement as she withdraws from her Tokyo Open match vs Leylah Fernandez, 'I'm very sorry'; Rybakina withdraws from Tokyo, Fernandez advances to semifinals",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Leylah Fernandez",
+    "title": "Elena Rybakina releases statement as she withdraws from her Tokyo Open match vs Leylah Fernandez, 'I'm very sorry'",
+    "source": "Tennishead",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Leylah Fernandez",
+    "title": "Rybakina withdraws from Tokyo, Fernandez advances to semifinals",
+    "source": "WTA Tennis",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Kamilla Rakhimova vs Maya Joint - Match WTA - Toray Pan Pacific Open Tennis 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Leylah Fernandez vs Kamilla Rakhimova - Match WTA - Toray Pan Pacific Open Tennis 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Kamilla Rakhimova",
+    "title": "Leylah Fernandez vs Kamilla Rakhimova \u00b7 Semifinal \u00b7 WTA Tokyo",
+    "source": "Tennis.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Leylah Fernandez",
+    "title": "Leylah Fernandez vs Kamilla Rakhimova - Match WTA - Toray Pan Pacific Open Tennis 1970 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "WTA Tennis|Lilli Tagger vs Han Shi|Lilli Tagger": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lilli Tagger",
+    "title": "Tagger speeds past Linette in 67 minutes to make Guangzhou quarters",
+    "source": "WTA Tennis",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "LIVE RANKINGS. Shi moves higher ahead of Tagger showdown in Guangzhou",
+    "source": "Tennis Tonic",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Lilli Tagger vs Han Shi \u00b7 Quarterfinal \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Lilli Tagger vs Magda Linette - Match WTA - Guangzhou Open 1970 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Lilli Tagger",
+    "title": "Lilli Tagger vs Han Shi - Match WTA - Guangzhou Open 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Han Shi",
+    "title": "Lilli Tagger vs Han Shi - Match WTA - Guangzhou Open 1970 - Quarter-final",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Kent St. @ Sacramento St.|Sacramento St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sacramento St.",
+    "title": "Sacramento St Playoff Chances: What Sacramento St Needs \u2014 Week 8",
+    "source": "A to Z Sports",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Kent St.",
+    "title": "Akron Zips 20 - Kent State Golden Flashes 35: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Sacramento St.",
+    "title": "Ohio Sacramento St Football",
+    "source": "Idaho State Journal",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Sacramento St.",
+    "title": "Kent State Golden Flashes @ Sacramento State Hornets: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Kent St.",
+    "title": "Kent State Golden Flashes @ Sacramento State Hornets: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Harvard @ Dartmouth|Harvard": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Harvard",
+    "title": "Ivy Football Week 7 Kicks Off with Harvard-Dartmouth ESPNU Showdown",
+    "source": "IvyLeagueSports.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "Harvard Crimson vs. Dartmouth Big Green: Oct 30, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Harvard",
+    "title": "Harvard Dems Knock on More Than 6,000 Doors Ahead of Midterms",
+    "source": "The Harvard Crimson",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Dartmouth",
+    "title": "Ivy Football Week 7 Kicks Off with Harvard-Dartmouth ESPNU Showdown",
+    "source": "IvyLeagueSports.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Dartmouth",
+    "title": "Dartmouth provost resigns following accusations he used artificial intelligence for writing",
+    "source": "Clinton Herald",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Dartmouth",
+    "title": "Education Dartmouth AI",
+    "source": "Goshen News",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Louisiana Tech @ South Alabama|Louisiana Tech": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Louisiana Tech",
+    "title": "Around the Schedule: How Louisiana Tech's Future Opponents Fared in Week 8",
+    "source": "On3",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "From Jensen Beach to Louisiana Tech: Andrew Burnette gets one more shot at college football",
+    "source": "WFLX",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Louisiana Tech",
+    "title": "BPCC, Louisiana Tech University Establish Education Pathway Partnership",
+    "source": "Bossier Press-Tribune",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "South Alabama",
+    "title": "Stat Attack - South Alabama",
+    "source": "On3",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "South Alabama",
+    "title": "South Alabama announces kickoff time for football game vs Louisiana Ragin\u2019 Cajuns",
+    "source": "Yahoo Sports",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "South Alabama",
+    "title": "2026 South Alabama Jaguars Passing Yards / Game Stats & Leaders - NCAA College Football Yardage Stats",
+    "source": "FOX Sports",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Marshall @ Old Dominion|Old Dominion": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Marshall declared questionable for Saturday\u2019s game against TCU; Why Chris Marshall injury was blessing in disguise for Arkansas football",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Marshall",
+    "title": "Why Chris Marshall injury was blessing in disguise for Arkansas football",
+    "source": "Yahoo Sports",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Marshall",
+    "title": "Marshall declared questionable for Saturday\u2019s game against TCU",
+    "source": "KU Sports",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Old Dominion",
+    "title": "Marshall football: Herd may look to each of its three quarterbacks at Old Dominion",
+    "source": "Charleston Gazette-Mail",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Old Dominion",
+    "title": "Marshall football: Herd riding momentum to Old Dominion",
+    "source": "herald-dispatch.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Old Dominion",
+    "title": "Game Note Gems: Herd has winning history over Old Dominion",
+    "source": "herald-dispatch.com",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Marshall",
+    "title": "How Marshall Faulk and Southern football view being tied for last in the SWAC West standings",
+    "source": "The Advocate",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Southern Miss @ Louisiana-Monroe|Southern Miss": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Southern Miss Injury Report: 3 Golden Eagles Upgraded to Probable vs. ULM; Kamario Taylor out for the season, Mississippi State says",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Kamario Taylor out for the season, Mississippi State says"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Southern Miss",
+    "title": "Kamario Taylor out for the season, Mississippi State says",
+    "source": "WLBT",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Southern Miss Injury Report: 3 Golden Eagles Upgraded to Probable vs. ULM",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Louisiana-Monroe",
+    "title": "UL Monroe 21-14 Troy (Oct 24, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "'Bring Your Own Juice': Blake Anderson Warns Southern Miss Against Letdown at ULM",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Appalachian St. @ Georgia Southern|Appalachian St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Appalachian St.",
+    "title": "James Madison Appalachian St Football",
+    "source": "Chronicle-Tribune",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Georgia Southern",
+    "title": "Malachi Singleton Player Prop Bets Saturday vs Georgia Southern Eagles 10/31/2026",
+    "source": "Doc's Sports",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Georgia Southern",
+    "title": "App State vs Georgia Southern: Deeper Than Hate Rivalry 2026",
+    "source": "RallyFuel",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Georgia Southern",
+    "title": "Appalachian State Mountaineers vs. Georgia Southern Eagles: Oct 31, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Nevada @ UCLA|UCLA": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Injured UCLA QB Nico Iamaleava\u2019s agent makes status clear for next season; Nico Iamaleava plans to return to UCLA football after crushing ACL injury ended 2026 season",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UCLA",
+    "title": "Injured UCLA QB Nico Iamaleava\u2019s agent makes status clear for next season",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "UCLA",
+    "title": "Nico Iamaleava plans to return to UCLA football after crushing ACL injury ended 2026 season",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "UCLA",
+    "title": "Injured UCLA quarterback addresses status in heartfelt social media post",
+    "source": "New York Post",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Nevada",
+    "title": "October 1950: Nevada punter sets unbreakable NCAA football record",
+    "source": "Reno Gazette Journal",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Nevada",
+    "title": "Watch Nevada vs UCLA Live: Streaming, TV Channel & Start Time - Oct 31, 2026 | CFB Week 9",
+    "source": "FOX One",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Nevada",
+    "title": "Unbeaten No. 7 UCLA hosts Nevada with an 8-0 start in sight",
+    "source": "Newsday",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Purdue @ Penn St.|Penn St.": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Tickets Prices Bottom Out for Saturday's Matchup in Beaver Stadium vs. Purdue",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Purdue",
+    "title": "Tickets Prices Bottom Out for Saturday's Matchup in Beaver Stadium vs. Purdue",
+    "source": "roundtable.io",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Penn St.",
+    "title": "Penn State linebacker Rojas anchoring Nittany Lion defense through losing streak",
+    "source": "hngnews.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Penn St.",
+    "title": "Penn St Football",
+    "source": "The Herald Journal",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Penn St.",
+    "title": "USC Penn St Football",
+    "source": "Idaho State Journal",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Purdue",
+    "title": "Purdue vs. Penn State - Live Score - October 31, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Purdue",
+    "title": "Previewing The Enemy: Purdue Boilermakers",
+    "source": "Onward State",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:05Z"
+ },
+ "College Football|Northwestern @ Oregon|Oregon": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Oregon's Injury Report Sees One Addition Ahead of Northwestern; Oregon Ducks Finally Get Positive News On Injury Report Ahead of Northwestern",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Oregon",
+    "title": "Dan Lanning Delivers Unfortunate Oregon Injury Updates Ahead of Northwestern",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Oregon",
+    "title": "Oregon Ducks Finally Get Positive News On Injury Report Ahead of Northwestern",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Oregon",
+    "title": "Oregon's Injury Report Sees One Addition Ahead of Northwestern",
+    "source": "Sports Illustrated",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Northwestern",
+    "title": "Chip Kelly's old-school gamble, Northwestern's new-school vision have Wildcats dreaming of the College Football Playoff",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Northwestern",
+    "title": "Northwestern's Chip Kelly went into the history books to build an offense",
+    "source": "ESPN",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Northwestern",
+    "title": "Aidan Chiles, Chip Kelly and the Wing-T Have Northwestern Winning",
+    "source": "Athlon Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Washington @ Nebraska|Nebraska": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Washington Huskies Edge Rusher Out For Game Against Nebraska; Washington QB Demond Williams Jr. questionable for Nebraska showdown",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Washington Huskies Edge Rusher Out For Game Against Nebraska"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nebraska",
+    "title": "Washington Huskies Edge Rusher Out For Game Against Nebraska",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Nebraska",
+    "title": "Washington QB Demond Williams Jr. questionable for Nebraska showdown",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Washington",
+    "title": "NC State legends Bill Cowher, Dewayne Washington to assist with football head coach search",
+    "source": "247Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "College Football Playoff Expansion HELPS Washington Huskies, Can Jedd Fisch CONTEND At UW?",
+    "source": "newswest9.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Washington",
+    "title": "Hunter Green has become a weapon for Washington football",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Nebraska",
+    "title": "Nebraska wrestling finishes third in NWCA preseason poll",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Michigan @ Rutgers|Michigan": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Michigan at Rutgers injury report: Thursday availability report released; Rutgers Football Injury Report: Latest ahead of the Michigan game",
+  "opp_health": "Rutgers Football Injury Report: Latest ahead of the Michigan game; Rutgers Football Injury Report: Latest ahead of the Northwestern game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rutgers",
+    "title": "Rutgers Football Injury Report: Latest ahead of the Northwestern game",
+    "source": "On3",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Michigan",
+    "title": "Urban Meyer Criticizes Jason Beck's 'Head Scratching' Decisions as Michigan's OC",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Michigan",
+    "title": "Rutgers Football Injury Report: Latest ahead of the Michigan game",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Rutgers",
+    "title": "Rutgers Football Injury Report: Latest ahead of the Michigan game",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Michigan",
+    "title": "Michigan at Rutgers injury report: Thursday availability report released",
+    "source": "On3",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Rutgers",
+    "title": "Watch Michigan vs Rutgers Live: Streaming, TV Channel & Start Time - Oct 31, 2026 | CFB Week 9",
+    "source": "FOX One",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Wisconsin @ Iowa|Iowa": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Iowa still considered favorite vs. Wisconsin despite major injury; Iowa star RB ruled out for season ahead of Badgers showdown",
+  "opp_health": "Iowa still considered favorite vs. Wisconsin despite major injury; Iowa vs Wisconsin | Odds, injuries, predictions, storylines",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "Iowa star RB ruled out for season ahead of Badgers showdown"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Iowa",
+    "title": "Iowa vs Wisconsin | Odds, injuries, predictions, storylines",
+    "source": "Hawk Central",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Wisconsin",
+    "title": "Iowa vs Wisconsin | Odds, injuries, predictions, storylines",
+    "source": "Hawk Central",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Iowa",
+    "title": "Iowa star RB ruled out for season ahead of Badgers showdown",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Iowa",
+    "title": "Iowa still considered favorite vs. Wisconsin despite major injury",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Wisconsin",
+    "title": "Iowa still considered favorite vs. Wisconsin despite major injury",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Wisconsin",
+    "title": "The rushing game could be pivotal in Iowa-Wisconsin game",
+    "source": "The Gazette",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Minnesota @ Indiana|Indiana": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Indiana football vs. Minnesota injury report: Josh Hoover probable, two Hoosiers ruled out",
+  "opp_health": "Minnesota is poised to move up the Big 10 standings after an injury-ravaged first season with Medved; Cignetti Expects QB Josh Hoover To 'Be Better' Against Minnesota Despite Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Indiana football vs. Minnesota injury report: Josh Hoover probable, two Hoosiers ruled out"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Minnesota",
+    "title": "Cignetti Expects QB Josh Hoover To 'Be Better' Against Minnesota Despite Injury",
+    "source": "FOX Sports",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Minnesota",
+    "title": "Minnesota is poised to move up the Big 10 standings after an injury-ravaged first season with Medved",
+    "source": "The Washington Post",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Indiana",
+    "title": "Indiana football vs. Minnesota injury report: Josh Hoover probable, two Hoosiers ruled out",
+    "source": "247Sports",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Indiana",
+    "title": "Gophers face daunting test vs. Indiana, college football\u2019s ultimate turnaround story",
+    "source": "Star Tribune",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Indiana",
+    "title": "Why this defender is to Indiana football this season what Fernando Mendoza was in 2025",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Minnesota",
+    "title": "Why is 'College GameDay' randomly at Minnesota vs. Indiana in Week 9?",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Illinois @ Maryland|Illinois": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Illinois football vs. Maryland: How to watch, odds, injuries, weather, announcers, & more",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Maryland",
+    "title": "Illinois football vs. Maryland: How to watch, odds, injuries, weather, announcers, & more",
+    "source": "Yahoo Sports",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Illinois",
+    "title": "Hawai\u2018i Snaps Skid with 56-21 Blowout Over Northern Illinois",
+    "source": "Hawaii athletics",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Illinois",
+    "title": "\u3010LIVESTREAMS\u3011#TODAY!! Hawai'i vs. Northern Illinois College Football Coverage",
+    "source": "\u5c0f\u8c46\u5cf6\u753a",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Illinois",
+    "title": "4 Keys to Victory for Illinois Football at Maryland",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Maryland",
+    "title": "Who fits Maryland\u2019s coaching search? 11 names tied to Jim Smith\u2019s vision.",
+    "source": "Capital Gazette",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Maryland",
+    "title": "University of Maryland offers free tuition to keep students at football game",
+    "source": "CNS Maryland",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Virginia @ Wake Forest|Wake Forest": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Virginia RB Jekail Middlebrook ruled out for game at Wake Forest",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Virginia RB Jekail Middlebrook ruled out for game at Wake Forest"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Wake Forest",
+    "title": "Virginia RB Jekail Middlebrook ruled out for game at Wake Forest",
+    "source": "The Daily Progress",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Virginia",
+    "title": "Commonwealth Kickoff: Virginia's college football weekend ahead",
+    "source": "13newsnow.com",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Wake Forest",
+    "title": "Wake Forest Demon Deacons Week 9 College Football Playoff rooting guide: Wake Forest needs to win out and they need some help",
+    "source": "A to Z Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Wake Forest",
+    "title": "Keys to victory: Virginia football at No. 14 Wake Forest",
+    "source": "The Daily Progress",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Virginia",
+    "title": "Virginia Tech Struck Gold With James Franklin. Now, Can The Hokies Reach The CFP?",
+    "source": "Sportsnaut",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Virginia",
+    "title": "COLLEGE FOOTBALL: No. 1 Miami's trip to North Carolina headlines ACC slate and Virginia visits No. 14 Wake Forest",
+    "source": "News and Tribune",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Miami (FL) @ North Carolina|Miami (FL)": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Miami (FL)",
+    "title": "Miami Ousted From No. 1 Spot as New College Football Contender Surges in Rankings",
+    "source": "Sports Illustrated",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Miami (FL)",
+    "title": "No. 1 Miami touting both Mensah and Toney as Heisman Trophy hopefuls this season",
+    "source": "FOX Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Miami (FL)",
+    "title": "College football Week 9 players to watch: Will Miami's Javian Mallory continue to find the end zone against North Carolina?",
+    "source": "Yahoo",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "North Carolina",
+    "title": "Miami vs. North Carolina (Oct 31, 2026) Pregame",
+    "source": "ESPN",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "North Carolina",
+    "title": "N0.1 Miami looks to stay unbeaten at North Carolina",
+    "source": "Sports Talk Florida",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "North Carolina",
+    "title": "North Carolina High School Football Scores: Week 11 Scoreboard & Updates (Oct. 30)",
+    "source": "NC Football News",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Stanford @ Louisville|Louisville": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Louisville basketball center Gabe Dynes sidelined after shoulder surgery; No. 11 Louisville reloads again under Pat Kelsey, with all 5 starters likely transfers",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Louisville",
+    "title": "No. 11 Louisville reloads again under Pat Kelsey, with all 5 starters likely transfers",
+    "source": "The Washington Post",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Louisville",
+    "title": "Louisville basketball center Gabe Dynes sidelined after shoulder surgery",
+    "source": "On3",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Louisville",
+    "title": "Louisville football: Bowl projections",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Stanford",
+    "title": "Recruiting roundup: USC\u2019s woes, Oregon\u2019s tumult, UCLA\u2019s new QB and a big chance for Stanford",
+    "source": "The Mercury News",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Stanford",
+    "title": "Stanford Reportedly in the Mix to Land Four-Star Quarterback",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Stanford",
+    "title": "High-powered Louisville eyes third straight win against Stanford",
+    "source": "CBS Sports",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Georgia Tech @ Pittsburgh|Pittsburgh": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Boston College at Georgia Tech: Game Central Rundown, Injury Updates, Depth Chart; How Transfers Out of the Georgia Tech Tech Football Program Have Fared in 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Georgia Tech",
+    "title": "How Transfers Out of the Georgia Tech Tech Football Program Have Fared in 2026",
+    "source": "Sports Illustrated",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Georgia Tech",
+    "title": "Boston College at Georgia Tech: Game Central Rundown, Injury Updates, Depth Chart",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Three Reasons Georgia Tech Will Defeat Pittsburgh, Three Reasons They Won't",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Three Major Questions That Georgia Tech Faces When They Play Pittsburgh On Saturday",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Pittsburgh",
+    "title": "Pittsburgh aims to halt three-game skid against Georgia Tech",
+    "source": "CBS Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Georgia Tech",
+    "title": "Everything to know ahead of Georgia Tech football at Pitt",
+    "source": "The Atlanta Journal-Constitution",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Boston College @ Duke|Duke": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Who is on Duke football vs Boston College injury report? Latest updates; Duke football vs. Boston College: how to watch, odds, injuries, more for Week 9 clash",
+  "opp_health": "Who is on Duke football vs Boston College injury report? Latest updates; Boston College at Georgia Tech: Game Central Rundown, Injury Updates, Depth Chart",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Duke",
+    "title": "Duke QB Walker Eget leaves game vs. Virginia with hand injury, returns to start 3rd quarter",
+    "source": "On3",
+    "date": "Oct 23",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "Boston College at Georgia Tech: Game Central Rundown, Injury Updates, Depth Chart",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Duke",
+    "title": "Duke football vs. Boston College: how to watch, odds, injuries, more for Week 9 clash",
+    "source": "Ball Durham",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Duke",
+    "title": "Who is on Duke football vs Boston College injury report? Latest updates",
+    "source": "Myrtle Beach Sun News",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "Who is on Duke football vs Boston College injury report? Latest updates",
+    "source": "AOL.com",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Boston College",
+    "title": "College football: TV schedule, game times and previews",
+    "source": "NCAA.com",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|SMU @ Syracuse|SMU": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "SMU",
+    "title": "Former SMU football coach June Jones dies at 73",
+    "source": "WFAA",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Syracuse",
+    "title": "Can UNC Bounce Back From Heartbreak Loss to Syracuse? Stream of NCAA Football",
+    "source": "CBS Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Syracuse",
+    "title": "Last season's lessons loom large as SMU prepares for road test at Syracuse",
+    "source": "Dallas News",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Syracuse",
+    "title": "Halloween havoc: SMU takes on Syracuse",
+    "source": "The Daily Campus",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "SMU",
+    "title": "Syracuse Football To Host SMU on Halloween: Need to Know",
+    "source": "roundtable.io",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "SMU",
+    "title": "SMU law student follows his dream to play college football",
+    "source": "WFAA",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|California @ NC St.|NC St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "NC St.",
+    "title": "NC St. vs Stanford: Total Points",
+    "source": "Coinbase",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "California",
+    "title": "Wake Forest California Football",
+    "source": "GazetteXtra",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "California",
+    "title": "Former Trojans back Bryan Jackson, Wisconsin upset No. 16 Southern California 24-7",
+    "source": "Bozeman Daily Chronicle",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "California",
+    "title": "California Playoff Chances: What California Needs \u2014 Week 9",
+    "source": "A to Z Sports",
+    "date": "Oct 26",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Kansas St. @ Colorado|Kansas St.": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Julian Lewis Headlines Colorado's Lengthy Injured Ahead of Kansas State Matchup; Colorado football: How injuries could impact Buffs vs. Kansas State",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Colorado",
+    "title": "Julian Lewis Headlines Colorado's Lengthy Injured Ahead of Kansas State Matchup",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado football: How injuries could impact Buffs vs. Kansas State",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Colorado",
+    "title": "Colorado's Defensive Plan Sees New Twist Amid Kansas State Injury News",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Kansas St.",
+    "title": "Kansas State Wildcats 17 - Arizona State Sun Devils 28: Final score, results, recap, box score, stats",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Kansas St.",
+    "title": "You can watch Arizona State vs Kansas State college football live for free today - Here\u2019s how",
+    "source": "OregonLive.com",
+    "date": "Oct 24",
+    "watch": false
+   },
+   {
+    "side": "Kansas St.",
+    "title": "Arizona State 28-17 Kansas State (Oct 24, 2026) Game Recap",
+    "source": "ESPN",
+    "date": "Oct 25",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Oklahoma St. @ Iowa St.|Iowa St.": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Iowa St.",
+    "title": "Noah Fifita throws for 308 yards and 2 TDs, No. 25 Arizona dominates Iowa State 39-3",
+    "source": "LancasterOnline",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "Iowa St Arizona Football",
+    "source": "TelegraphHerald.com",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Oklahoma St.",
+    "title": "Five Oklahoma State players to know on Saturday against Iowa State",
+    "source": "The Gazette",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Oklahoma St.",
+    "title": "Iowa St Game 8 Storylines vs. Oklahoma St: Dueling QB dynamics, a personal opportunity for Rogers, Bobbit",
+    "source": "247Sports",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Oklahoma St.",
+    "title": "Iowa State seeks to pierce the tall tales that surround Oklahoma State QB Drew Mestemaker",
+    "source": "The Gazette",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Iowa St.",
+    "title": "Oklahoma State Cowboys @ Iowa State Cyclones: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Utah @ Cincinnati|Utah": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Utah football availability report: Hunter Andrews questionable, Kelvin Obot remains injured; Pat McAfee Says He May Never Return to Utah After College GameDay Controversy",
+  "opp_health": "Star RB 1 of 5 Cincinnati players ruled out for Texas Tech bout",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Cincinnati",
+    "title": "Star RB 1 of 5 Cincinnati players ruled out for Texas Tech bout",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Utah",
+    "title": "Pat McAfee Says He May Never Return to Utah After College GameDay Controversy",
+    "source": "Yahoo Sports",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Utah",
+    "title": "Utah football availability report: Hunter Andrews questionable, Kelvin Obot remains injured",
+    "source": "KSL Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Utah",
+    "title": "Utah Football Emerges as the Clear Winner in the Whittingham Divorce",
+    "source": "roundtable.io",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "JC French IV News, Rumors, Updates - Cincinnati Bearcats",
+    "source": "FOX Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Cincinnati",
+    "title": "'Awesome afternoon' | Unranked Cincinnati Bearcats stun No. 8 Texas Tech",
+    "source": "WCPO 9 Cincinnati",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Kansas @ TCU|TCU": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "Marshall declared questionable for Saturday\u2019s game against TCU; TCU vs. West Virginia: How To Watch, Injuries And Key Matchups",
+  "opp_health": "Colorado football: How injuries could impact Buffs vs. Kansas State; Colorado's Defensive Plan Sees New Twist Amid Kansas State Injury News",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "TCU",
+    "title": "TCU vs. West Virginia: How To Watch, Injuries And Key Matchups",
+    "source": "Yahoo Sports",
+    "date": "Oct 24",
+    "watch": true
+   },
+   {
+    "side": "Kansas",
+    "title": "Kansas State Grades: Injuries stack up in Tempe",
+    "source": "On3",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Kansas",
+    "title": "Colorado football: How injuries could impact Buffs vs. Kansas State",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Kansas",
+    "title": "Colorado's Defensive Plan Sees New Twist Amid Kansas State Injury News",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "TCU",
+    "title": "Marshall declared questionable for Saturday\u2019s game against TCU",
+    "source": "Lawrence Journal-World",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "TCU",
+    "title": "Kansas vs. TCU - Live Score - October 31, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Arizona @ Texas Tech|Texas Tech": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Texas Tech Basketball Projected Rotation: Starters, Reserves, What\u2019s Unsettled.; Starters, key matchups and a prediction for Arizona vs. Texas Tech",
+  "opp_health": "Starters, key matchups and a prediction for Arizona vs. Texas Tech; Arizona football: CB Jay\u2019Vion Cole to miss Texas Tech game, 2 injured receivers could return",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Texas Tech",
+    "title": "Starters, key matchups and a prediction for Arizona vs. Texas Tech",
+    "source": "Arizona Daily Star",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Texas Tech",
+    "title": "Arizona football: CB Jay\u2019Vion Cole to miss Texas Tech game, 2 injured receivers could return",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Starters, key matchups and a prediction for Arizona vs. Texas Tech",
+    "source": "Arizona Daily Star",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Arizona football: CB Jay\u2019Vion Cole to miss Texas Tech game, 2 injured receivers could return",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Arizona",
+    "title": "Key starters listed on Texas Tech football availability report for Arizona game",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Texas Tech",
+    "title": "Texas Tech Basketball Projected Rotation: Starters, Reserves, What\u2019s Unsettled.",
+    "source": "Sports Illustrated",
+    "date": "Oct 30",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Arizona St. @ BYU|BYU": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "LJ Martin gets optimistic injury update for BYU\u2019s Week 10 clash vs. Utah; LJ Martin Injury Update: BYU star RB Projected to Return Against Utah",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "BYU",
+    "title": "LJ Martin gets optimistic injury update for BYU\u2019s Week 10 clash vs. Utah",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "BYU",
+    "title": "LJ Martin Injury Update: BYU star RB Projected to Return Against Utah",
+    "source": "roundtable.io",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "BYU",
+    "title": "Big 12 Called Out For Trying To Enforce Unwritten Penalty Against BYU\u2019s Opponents",
+    "source": "BroBible",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Arizona St.",
+    "title": "Arizona St Playoff Chances: What Arizona St Needs \u2014 Week 9",
+    "source": "A to Z Sports",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Arizona St.",
+    "title": "No. 22 Arizona riding high behind diminutive QB Noah Fifita ahead of road test vs. No. 13 Texas Tech",
+    "source": "Bozeman Daily Chronicle",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Arizona St.",
+    "title": "Arizona State Sun Devils @ BYU Cougars: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Mississippi St. @ Texas|Texas": {
+  "mode": "headlines",
+  "summary": "2 injury/lineup headline(s) in last 7d",
+  "pick_health": "Mike Elko's Questionable Offseason Decisions Are Coming Back to Haunt Texas A&M",
+  "opp_health": "Mississippi State QB Kamario Taylor out for the season with a foot injury that requires surgery",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mississippi St.",
+    "title": "Mississippi State QB Kamario Taylor out for the season with a foot injury that requires surgery",
+    "source": "Madison Courier",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Texas",
+    "title": "Mike Elko's Questionable Offseason Decisions Are Coming Back to Haunt Texas A&M",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Mississippi St.",
+    "title": "Texas Football Gets BIG News Ahead of Mississippi St, NFL, SEC Football, MLB | Bucky & BK - 10/28/26",
+    "source": "BVM Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Texas",
+    "title": "Arch Manning and Texas Top a College Football Ranking That Isn't Based on Wins",
+    "source": "Complex",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Mississippi St.",
+    "title": "Oklahoma Mississippi St Football",
+    "source": "Northeast Mississippi Daily Journal",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Texas",
+    "title": "Where will Lincoln Riley be in 2027? If not USC, how about these Texas schools?",
+    "source": "The New York Times",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|South Carolina @ Oklahoma|Oklahoma": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Handful of Oklahoma Starters Still Questionable for South Carolina Game; South Carolina DB, RB ruled out for Oklahoma game",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "South Carolina",
+    "title": "South Carolina DB, RB ruled out for Oklahoma game",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "South Carolina",
+    "title": "South Carolina vs. Oklahoma: Kickoff time, TV channel, injury report, odds",
+    "source": "The State",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "South Carolina",
+    "title": "Handful of Oklahoma Starters Still Questionable for South Carolina Game",
+    "source": "Sports Illustrated",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Oklahoma",
+    "title": "Oklahoma Threads: The Sooners Matchup With South Carolina is a Do-Over",
+    "source": "Sports Illustrated",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Oklahoma",
+    "title": "Oklahoma State College Football Playoff Rooting Guide: Cowboys need a lot of help to make the CFP, but anything's possible in the Big 12",
+    "source": "A to Z Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Oklahoma",
+    "title": "How Oklahoma State football secondary is working way up 'from the bottom'",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Auburn @ Ole Miss|Ole Miss": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Ole Miss star running back ruled out against Auburn; Ole Miss RB Kewan Lacy Ruled Out vs. Auburn After Dislocating His Left Shoulder",
+  "opp_health": "Auburn football pass-catcher added to first injury report for Ole Miss game; How Kewan Lacy's injury affects Auburn's defensive game plan for Ole Miss",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Ole Miss star running back ruled out against Auburn",
+   "Ole Miss RB Kewan Lacy Ruled Out vs. Auburn After Dislocating His Left Shoulder"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ole Miss",
+    "title": "Ole Miss RB Kewan Lacy Ruled Out vs. Auburn After Dislocating His Left Shoulder",
+    "source": "FOX Sports",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Ole Miss",
+    "title": "Ole Miss head coach Pete Golding announces injury update on running back Kewan Lacy",
+    "source": "Yahoo Sports",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Ole Miss RB Kewan Lacy Ruled Out vs. Auburn After Dislocating His Left Shoulder",
+    "source": "FOX Sports",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Ole Miss",
+    "title": "Ole Miss star running back ruled out against Auburn",
+    "source": "AL.com",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "How Kewan Lacy's injury affects Auburn's defensive game plan for Ole Miss",
+    "source": "Auburn Wire",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Auburn",
+    "title": "Auburn football pass-catcher added to first injury report for Ole Miss game",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Missouri @ Arkansas|Missouri": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "Penn State swings and misses on four star Missouri QB commit; Ahmad Hardy status on official Missouri football injury report Oct. 28",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Missouri",
+    "title": "Ahmad Hardy Returns To Practice For Missouri Nearly 6 Months After Gunshot Wound",
+    "source": "FOX Sports",
+    "date": "Oct 27",
+    "watch": true
+   },
+   {
+    "side": "Missouri",
+    "title": "Penn State swings and misses on four star Missouri QB commit",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Missouri",
+    "title": "Ahmad Hardy status on official Missouri football injury report Oct. 28",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Arkansas",
+    "title": "Missouri RB Ahmad Hardy Set To Make Season Debut Against Arkansas",
+    "source": "FOX Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Arkansas",
+    "title": "Mizzou football ready to face Arkansas in Battle Line Rivalry",
+    "source": "KPVI",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Arkansas",
+    "title": "Top Things To Know: UNA Football vs. Central Arkansas",
+    "source": "University of North Alabama Athletics",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|UAB @ South Florida|South Florida": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "South Florida",
+    "title": "Florida vs. Georgia on the attack: Comparing the two rivals\u2019 offenses",
+    "source": "The Independent Florida Alligator",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "South Florida",
+    "title": "Tuesday, October 27th South Florida High School Sports Radio Show",
+    "source": "Larry Blustein",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "South Florida",
+    "title": "UAB vs. South Florida - Live Score - October 31, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "UAB vs. South Florida - Live Score - October 31, 2026",
+    "source": "FOX Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "Bulls flip UAB OL commit Mack on game week with UAB",
+    "source": "On3",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "UAB",
+    "title": "Auburn, Jags, UAB start early on Saturday",
+    "source": "Lagniappe Daily",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Temple @ East Carolina|East Carolina": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "East Carolina",
+    "title": "Film room: What Memphis did to overcome first half struggles to beat East Carolina",
+    "source": "On3",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "East Carolina",
+    "title": "Breaking down film from Memphis football's comeback win over East Carolina",
+    "source": "The Commercial Appeal",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Temple",
+    "title": "Temple University police investigating alleged off-campus sexual assault",
+    "source": "CBS News",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Temple",
+    "title": "Alleged sexual assault involving 2 Temple University students at off-campus residence under investigation",
+    "source": "CBS News",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "East Carolina",
+    "title": "East Carolina Pirates Unveil New White Alternate Helmets Featuring \"Marching PeeDee\"",
+    "source": "SportsLogos.Net News",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Temple",
+    "title": "Nov. 19 Rice vs. Temple Football Tickets",
+    "source": "SportsTalk 790",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Army @ Memphis|Memphis": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Army",
+    "title": "Army's Tulsa Win Doesn't Mask Need to Improve, Monken Says",
+    "source": "On3",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Army",
+    "title": "Army football gets cold, hard truth from coach Jeff Monken despite Tulsa win",
+    "source": "The Poughkeepsie Journal",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Memphis",
+    "title": "Memphis to Host Army in Homecoming Matchup on Halloween Night",
+    "source": "University of Memphis Athletics",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Memphis",
+    "title": "Memphis football tickets vs Army, see best prices for available seats",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Memphis",
+    "title": "Cale Hellums Prop Bets Today vs Memphis Tigers 10/31/2026",
+    "source": "Doc's Sports",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Army",
+    "title": "College Football\u2019s Top 5 Offensive Lines: Army Lands Ahead of Houston and Iowa",
+    "source": "Pro Football Network",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Baylor @ UCF|UCF": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+  "opp_health": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown; 5 Questionable Decisions That Defined Dave Aranda's Baylor Tenure",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baylor",
+    "title": "6 potential Baylor head coach candidates: Could Lincoln Riley return to his home state?",
+    "source": "Dallas News",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "5 Questionable Decisions That Defined Dave Aranda's Baylor Tenure",
+    "source": "Sports Illustrated",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "UCF",
+    "title": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "UCF",
+    "title": "Baylor vs. UCF Oct. 30: TV, Stream",
+    "source": "95.7 WDAE",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "UCF",
+    "title": "Key Matchups In Baylor's Friday Night Matchup Against UCF Knights",
+    "source": "Sports Illustrated",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Tulane @ Charlotte|Tulane": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tulane",
+    "title": "UTSA remains undefeated in AAC, beats Tulane, 42-19",
+    "source": "FOX 8 Local First",
+    "date": "Oct 25",
+    "watch": false
+   },
+   {
+    "side": "Tulane",
+    "title": "Conner Harrell Best Prop Bets Today vs Tulane Green Wave 10/30/2026",
+    "source": "Doc's Sports",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Tulane",
+    "title": "Tulane transfer Jordan Norman wants to get back to College Football Playoff with Tennessee in 2026",
+    "source": "247Sports",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "Keys to Success: Tulane vs. Charlotte",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "Charlotte football bye-week review: Pain, but progress",
+    "source": "Niner Times",
+    "date": "Oct 29",
+    "watch": false
+   },
+   {
+    "side": "Charlotte",
+    "title": "Photos: North Carolina defeats Charlotte 49ers - College basketball",
+    "source": "Raleigh News & Observer",
+    "date": "Oct 29",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "La Liga|Espanyol @ Villarreal|Villarreal": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Villarreal vs Espanyol Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; PREVIEW | Villarreal CF vs Espanyol: team news, lineups, predictions (La Liga 30/10)",
+  "opp_health": "Villarreal vs Espanyol Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; PREVIEW | Villarreal CF vs Espanyol: team news, lineups, predictions (La Liga 30/10)",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Villarreal",
+    "title": "PREVIEW | Villarreal CF vs Espanyol: team news, lineups, predictions (La Liga 30/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Villarreal",
+    "title": "Preview: Villarreal vs Espanyol - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "PREVIEW | Villarreal CF vs Espanyol: team news, lineups, predictions (La Liga 30/10)",
+    "source": "Yahoo Sports",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Preview: Villarreal vs Espanyol - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Villarreal",
+    "title": "Villarreal vs Espanyol Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Espanyol",
+    "title": "Villarreal vs Espanyol Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "Ligue 1|PSG @ Le Havre|PSG": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Le Havre vs PSG Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; Le Havre vs PSG: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Le Havre vs PSG Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; Le Havre vs PSG: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "PSG",
+    "title": "Le Havre vs PSG Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "PSG",
+    "title": "Le Havre vs PSG: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "PSG",
+    "title": "PSG XI vs Le Havre \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "Le Havre vs PSG Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "Le Havre vs PSG: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Le Havre",
+    "title": "PSG XI vs Le Havre \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Oct 30",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "Ligue 1|Lens @ Lille|Lille": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Lille vs Lens Prediction: Where to Watch, Kick-off Time and Lineups Today 30/10; Lille vs Lens Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+  "opp_health": "Lille vs Lens Prediction: Where to Watch, Kick-off Time and Lineups Today 30/10; Lille vs Lens Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lille",
+    "title": "Lille vs Lens prediction: expert analysis, possible lineups, October 30, 2026",
+    "source": "RatingBet",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Lille vs Lens prediction: expert analysis, possible lineups, October 30, 2026",
+    "source": "RatingBet",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Lille",
+    "title": "Lille vs Lens Prediction: Where to Watch, Kick-off Time and Lineups Today 30/10",
+    "source": "Odds Scanner",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Lille",
+    "title": "Lille vs Lens Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Lille vs Lens Prediction: Where to Watch, Kick-off Time and Lineups Today 30/10",
+    "source": "Odds Scanner",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Lens",
+    "title": "Lille vs Lens Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ },
+ "Bundesliga|Mainz @ Elversberg|Mainz": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Elversberg vs Mainz Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; Elversberg vs Mainz: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Elversberg vs Mainz Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026; Elversberg vs Mainz: Lineups, Prediction, Odds & Bet Builder Tip",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mainz",
+    "title": "Elversberg vs Mainz prediction: teams form analysis, possible lineups on 30 October 2026",
+    "source": "RatingBet",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Elversberg",
+    "title": "Elversberg vs Mainz prediction: teams form analysis, possible lineups on 30 October 2026",
+    "source": "RatingBet",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "Mainz",
+    "title": "Elversberg vs Mainz Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Mainz",
+    "title": "Elversberg vs Mainz: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Elversberg",
+    "title": "Elversberg vs Mainz Prediction, Betting Tips, Lineups & Odds | 30 Oct 2026",
+    "source": "Sportsgambler",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Elversberg",
+    "title": "Elversberg vs Mainz: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Oct 30",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-10-30T13:06Z"
+ }
+}
