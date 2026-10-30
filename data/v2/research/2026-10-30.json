@@ -3281,5 +3281,65 @@
    }
   ],
   "_ts": "2026-10-30T13:06Z"
+ },
+ "College Football|Baylor @ UCF|Baylor": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown; 5 Questionable Decisions That Defined Dave Aranda's Baylor Tenure",
+  "opp_health": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baylor",
+    "title": "6 potential Baylor head coach candidates: Could Lincoln Riley return to his home state?",
+    "source": "Dallas News",
+    "date": "Oct 25",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "5 Questionable Decisions That Defined Dave Aranda's Baylor Tenure",
+    "source": "Sports Illustrated",
+    "date": "Oct 26",
+    "watch": true
+   },
+   {
+    "side": "Baylor",
+    "title": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "UCF",
+    "title": "UCF Defensive Back Ruled Out vs. Baylor: Injury Report Breakdown",
+    "source": "Sports Illustrated",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "UCF",
+    "title": "BetMGM bonus code CBSSPORTS: Get $1,500 bonus bets for UCF-Baylor college football, 76ers-Knicks, NBA Friday",
+    "source": "CBS Sports",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "UCF",
+    "title": "Use BetMGM bonus code CBSSPORTS to land $1,500 bonus bets for 76ers-Knicks, NBA, Baylor-UCF, college football",
+    "source": "CBS Sports",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-10-30T21:06Z"
  }
 }
