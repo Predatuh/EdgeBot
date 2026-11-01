@@ -12226,5 +12226,114 @@
    }
   ],
   "_ts": "2026-11-01T14:05Z"
+ },
+ "ATP Tennis|Jan-Lennard Struff vs Arthur Gea|Arthur Gea": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Gea",
+    "title": "Jan-Lennard Struff vs Arthur Gea - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Jan-Lennard Struff vs Arthur Gea - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Arthur Gea",
+    "title": "Arthur Gea Vs Nishesh Basavareddy \ud83c\udfbeLIVE SCORE TENNIS ATP GRAND SLAM US OPEN 2026 | Qualifying Focus (JJDPpOC73g)",
+    "source": "Unisba Media",
+    "date": "Oct 28",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Tennis, ATP \u2013 Swiss Indoors Basel 2026: Lehecka eliminates Struff",
+    "source": "Tennis Majors",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "LIVE RANKINGS. Struff makes progress before taking on Lehecka in Basel",
+    "source": "Tennis Tonic",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-01T21:06Z"
+ },
+ "MLS|Toronto @ Atlanta|Toronto": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Atlanta United vs Toronto FC Lineups, Prediction, Betting Picks & Odds; Atlanta United vs Toronto FC: Lineups, Prediction, Betting Tips & Odds",
+  "opp_health": "Atlanta United vs Toronto FC Lineups, Prediction, Betting Picks & Odds; Atlanta United vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 01 Nov 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Toronto",
+    "title": "Atlanta United vs Toronto FC Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Atlanta United vs Toronto FC: Lineups, Prediction, Betting Tips & Odds",
+    "source": "WhoScored.com",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Toronto",
+    "title": "Philadelphia Union vs Toronto FC: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta United vs Toronto FC Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "Atlanta United vs Toronto FC Prediction, Betting Tips, Lineups & Odds | 01 Nov 2026",
+    "source": "Sportsgambler",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Atlanta",
+    "title": "New York Red Bulls vs Atlanta United: Predictions, Picks, Odds & Lineups",
+    "source": "Squawka",
+    "date": "Nov 01",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-11-01T21:07Z"
  }
 }
