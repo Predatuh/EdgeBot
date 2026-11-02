@@ -1,0 +1,1468 @@
+{
+ "ATP Tennis|Daniel Merida vs Sebastian Baez|Daniel Merida": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sebastian Baez",
+    "title": "Sebastian Baez vs Tomas Machac - Match ATP - Rolex Paris Masters 2026 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Daniel Merida",
+    "title": "Daniel M\u00e9rida vs Sebasti\u00e1n B\u00e1ez \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Daniel Merida",
+    "title": "Daniel M\u00e9rida vs Alexander Blockx \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Daniel Merida",
+    "title": "Daniel Merida vs Alexander Blockx - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Sebastian Baez",
+    "title": "LIVE RANKINGS. Machac targets another climb against Baez in Paris",
+    "source": "Tennis Tonic",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Sebastian Baez",
+    "title": "LIVE RANKINGS. Baez falls prior to competing against Machac in Paris",
+    "source": "Tennis Tonic",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "ATP Tennis|Alex Molcan vs Titouan Droguet|Alex Molcan": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alex Molcan",
+    "title": "Alex Mol\u010dan vs Titouan Droguet \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Nuno Borges vs Alex Mol\u010dan \u00b7 Qualifying Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Titouan Droguet",
+    "title": "LIVE RANKINGS. Molcan climbs with more at stake against Droguet in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Alex Molcan",
+    "title": "Alex Molcan vs Titouan Droguet - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Titouan Droguet",
+    "title": "Alex Molcan vs Titouan Droguet: Game Spread",
+    "source": "Coinbase",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Titouan Droguet",
+    "title": "Alex Molcan vs Titouan Droguet - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "ATP Tennis|Tomas Machac vs Kyrian Jacquet|Tomas Machac": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Tomas Machac",
+    "title": "Kyrian Jacquet vs Tomas Machac - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "Tennis Majors",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "LIVE RANKINGS. Jacquet down right before squaring off with Machac in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "Kyrian Jacquet vs Tomas Machac - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "Tennis Majors",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "LIVE RANKINGS. Jacquet down right before squaring off with Machac in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Kyrian Jacquet",
+    "title": "LIVE RANKINGS. Machac climbs ahead of Jacquet clash in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Tomas Machac",
+    "title": "Kyrian Jacquet vs Tomas Machac: Exact Match Score",
+    "source": "Coinbase",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "ATP Tennis|Lorenzo Sonego vs Mattia Bellucci|Mattia Bellucci": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Lorenzo Sonego \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Thiago Agust\u00edn Tirante vs Mattia Bellucci \u00b7 Qualifying Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Sonego",
+    "title": "Mattia Bellucci vs Lorenzo Sonego \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Sonego",
+    "title": "Adolfo Daniel Vallejo vs Lorenzo Sonego \u00b7 Qualifying Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mattia Bellucci",
+    "title": "Mattia Bellucci vs Lorenzo Sonego - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Sonego",
+    "title": "Mattia Bellucci vs Lorenzo Sonego - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "ATP Tennis|Casper Ruud vs Juan Manuel Cerundolo|Casper Ruud": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Casper Ruud",
+    "title": "LIVE RANKINGS. Ruud moves higher ahead of Cerundolo showdown in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "Casper Ruud vs Juan Manuel Cer\u00fandolo \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "LIVE RANKINGS. Cerundolo\u2019s rankings just before competing against Ruud in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "LIVE RANKINGS. Ruud moves higher ahead of Cerundolo showdown in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "Casper Ruud vs Juan Manuel Cerundolo - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Juan Manuel Cerundolo",
+    "title": "Casper Ruud vs Juan Manuel Cerundolo - Match ATP - Rolex Paris Masters 2026 - Second round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Linda Fruhvirtova vs Weronika Falkowska|Linda Fruhvirtova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "LIVE RANKINGS. Falkowska climbs ahead of Fruhvirtova clash in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "LIVE RANKINGS. Fruhvirtova falls just before competing against Falkowska in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Weronika Falkowska",
+    "title": "LIVE RANKINGS. Falkowska climbs ahead of Fruhvirtova clash in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Weronika Falkowska",
+    "title": "Linda Fruhvirtov\u00e1 vs Weronika Falkowska \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Linda Fruhvirtova",
+    "title": "Linda Fruhvirtova vs Weronika Falkowska - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Weronika Falkowska",
+    "title": "Linda Fruhvirtova vs Weronika Falkowska - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Mei Yamaguchi vs Zhibek Kulambayeva|Mei Yamaguchi": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mei Yamaguchi",
+    "title": "LIVE RANKINGS. Yamaguchi falls before taking on Kulambayeva in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mei Yamaguchi",
+    "title": "Mei Yamaguchi vs Zhibek Kulambayeva - Match WTA - Chennai Open 2026 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Zhibek Kulambayeva",
+    "title": "LIVE RANKINGS. Kulambayeva loses positions just before playing against Yamaguchi in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Zhibek Kulambayeva",
+    "title": "LIVE RANKINGS. Yamaguchi falls before taking on Kulambayeva in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mei Yamaguchi",
+    "title": "Mei Yamaguchi vs Zhibek Kulambayeva - Match WTA - Chennai Open 2026 - Third round",
+    "source": "www.tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Zhibek Kulambayeva",
+    "title": "Mei Yamaguchi vs Zhibek Kulambayeva - Match WTA - Chennai Open 2026 - Third round",
+    "source": "www.tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Viktoria Morvayova vs Polina Kudermetova|Polina Kudermetova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Polina Kudermetova",
+    "title": "Triumph of Uzbek tennis: Timofeyeva and Kudermetova win WTA title",
+    "source": "Zamin.uz",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Viktoria Morvayova",
+    "title": "Viktoria Morvayova vs Weronika Falkowska - Match WTA - Chennai Open 2026 - qualifying-final",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Viktoria Morvayova",
+    "title": "Viktoria Morvayova vs Shrivalli Bhamidipaty - Match WTA - Chennai Open 2026 - qualifying-1st-round",
+    "source": "tennismajors.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Cho / Cho vs Kudermetova / Timofeeva \u00b7 Final \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Polina Kudermetova",
+    "title": "Harriet Dart vs Polina Kudermetova - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Viktoria Morvayova",
+    "title": "LIVE RANKINGS. Falkowska rises as Morvayova awaits in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Jeline Vandromme vs Kyoka Okamura|Jeline Vandromme": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jeline Vandromme",
+    "title": "LIVE RANKINGS. Okamura down before fighting against Vandromme in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Jeline Vandromme",
+    "title": "LIVE RANKINGS. Vandromme falls down before playing against Okamura in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Kyoka Okamura",
+    "title": "LIVE RANKINGS. Okamura down before fighting against Vandromme in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Kyoka Okamura",
+    "title": "LIVE RANKINGS. Vandromme falls down before playing against Okamura in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Jeline Vandromme",
+    "title": "Jeline Vandromme vs Kyoka Okamura - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Kyoka Okamura",
+    "title": "Jeline Vandromme vs Kyoka Okamura - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Magda Linette vs Aliona Falei|Magda Linette": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Magda Linette",
+    "title": "LIVE RANKINGS. Linette advances with Falei next in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Aliona Falei vs Magda Linette \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Aliona Falei",
+    "title": "LIVE RANKINGS. Falei falls before facing Linette in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Aliona Falei",
+    "title": "Aliona Falei vs Magda Linette \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Magda Linette",
+    "title": "Aliona Falei vs Magda Linette - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Aliona Falei",
+    "title": "Aliona Falei vs Magda Linette - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Lucrezia Stefanini vs Elsa Jacquemot|Lucrezia Stefanini": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "WTA COURMAYEUR DRAW, PRIZE MONEY. Blinkova, Charaeva, Selekhmeteva, Stefanini are the leaders",
+    "source": "Tennis Tonic",
+    "date": "Oct 26",
+    "watch": false
+   },
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "Lucrezia Stefanini vs Isabella Maria Serban - Match WTA - Valle D\u2019Aosta Ladies Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "Lucrezia Stefanini vs Ayla Aksu \u00b7 Round 2 \u00b7 WTA 125K Courmayeur, Italy",
+    "source": "Tennis.com",
+    "date": "Oct 30",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Tennis, WTA \u2013 Valle D\u2019Aosta Ladies Open 2026: Charaeva eliminates Jacquemot",
+    "source": "Tennis Majors",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Elsa Jacquemot vs Lilli Tagger - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Elsa Jacquemot",
+    "title": "Elsa Jacquemot vs Alina Charaeva - Match WTA - Valle D\u2019Aosta Ladies Open 2026 - Semi-final",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Janice Tjen vs Katherine Hui|Janice Tjen": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Janice Tjen",
+    "title": "Janice Tjen vs Katherine Hui \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Janice Tjen",
+    "title": "How Eala, Tjen and other SEAblings are preparing for US Open",
+    "source": "SPOTV NOW",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Katherine Hui",
+    "title": "Janice Tjen vs Katherine Hui \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Katherine Hui",
+    "title": "Katherine Hui vs Bianca Andreescu - Match WTA - Queretaro Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Janice Tjen",
+    "title": "WTA CHENNAI DRAW, PRIZE MONEY. Tjen, Tagger, Linette, Udvardy are the top seeds",
+    "source": "Tennis Tonic",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Katherine Hui",
+    "title": "Janice Tjen vs Katherine Hui - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Jil Teichmann vs Joanna Garland|Jil Teichmann": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jil Teichmann",
+    "title": "Jil Teichmann vs Joanna Garland \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Joanna Garland",
+    "title": "Jil Teichmann vs Joanna Garland \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Jil Teichmann",
+    "title": "Jil Teichmann vs Joanna Garland - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Jil Teichmann",
+    "title": "Quevedo tops Teichmann in Guangzhou; into second SF in past three events",
+    "source": "WTA Tennis",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Joanna Garland",
+    "title": "Jil Teichmann vs Joanna Garland - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Oksana Selekhmeteva vs Teodora Kostovic|Teodora Kostovic": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Teodora Kostovic",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovi\u0107 \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Oksana Selekhmeteva",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovi\u0107 \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Teodora Kostovic",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovic: Set 1 Winner",
+    "source": "Coinbase",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Oksana Selekhmeteva",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovic: Set 1 Winner",
+    "source": "Coinbase",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Teodora Kostovic",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovic - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Oksana Selekhmeteva",
+    "title": "Oksana Selekhmeteva vs Teodora Kostovic - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Panna Udvardy vs Robin Montgomery|Robin Montgomery": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Robin Montgomery",
+    "title": "Panna Udvardy vs Robin Montgomery \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Robin Montgomery",
+    "title": "Burrage / Montgomery vs Kostovi\u0107 / Vandromme \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Robin Montgomery",
+    "title": "Panna Udvardy vs Robin Montgomery - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Panna Udvardy vs Robin Montgomery \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Haverlag / Udvardy vs Ayukawa / Webley-Smith \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Panna Udvardy",
+    "title": "Panna Udvardy vs Robin Montgomery - Match WTA - Chennai Open 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 01",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Maaya Rajeshwaran Revathi vs Katarzyna Kawa|Katarzyna Kawa": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Katarzyna Kawa",
+    "title": "Maaya Rajeshwaran Revathi vs Katarzyna Kawa \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Maaya Rajeshwaran Revathi",
+    "title": "Maaya Rajeshwaran Revathi vs Katarzyna Kawa \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Maaya Rajeshwaran Revathi",
+    "title": "Chennai Open 2026: Vaishnavi Adkar, Maaya Rajeshwaran and Sahaja Yamalapalli Eye Breakthrough Wins in WTA 250 Main Draw",
+    "source": "IndiaSportsHub",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Maaya Rajeshwaran Revathi",
+    "title": "Vaishnavi Adkar, Sahaja Yamalapalli and Maaya Rajeshwaran Revathi Eye Breakthrough At Final Chennai Open",
+    "source": "NDTV Sports",
+    "date": "Nov 01",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Mananchaya Sawangkaew vs Mai Hontama|Mananchaya Sawangkaew": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Mananchaya Sawangkaew",
+    "title": "Mananchaya Sawangkaew vs Mai Hontama \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mananchaya Sawangkaew",
+    "title": "LIVE RANKINGS. Hontama advances with Sawangkaew next in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mananchaya Sawangkaew",
+    "title": "LIVE RANKINGS. Sawangkaew eyes further gains against Hontama in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mai Hontama",
+    "title": "Mananchaya Sawangkaew vs Mai Hontama \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mai Hontama",
+    "title": "LIVE RANKINGS. Hontama advances with Sawangkaew next in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Mai Hontama",
+    "title": "LIVE RANKINGS. Sawangkaew eyes further gains against Hontama in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Moyuka Uchijima vs Rebecca Sramkova|Rebecca Sramkova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rebecca Sramkova",
+    "title": "LIVE RANKINGS. Sramkova loses positions right before squaring off with Uchijima in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Rebecca Sramkova",
+    "title": "LIVE RANKINGS. Uchijima down before taking on Sramkova in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Moyuka Uchijima",
+    "title": "Moyuka Uchijima vs Rebecca \u0160ramkov\u00e1 \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Moyuka Uchijima",
+    "title": "LIVE RANKINGS. Sramkova loses positions right before squaring off with Uchijima in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Moyuka Uchijima",
+    "title": "LIVE RANKINGS. Uchijima down before taking on Sramkova in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Rebecca Sramkova",
+    "title": "Moyuka Uchijima vs Rebecca Sramkova - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Anastasia Zakharova vs Polina Iatcenko|Anastasia Zakharova": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Anastasia Zakharova vs Polina Iatcenko \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Polina Iatcenko",
+    "title": "Anastasia Zakharova vs Polina Iatcenko \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Anastasia Zakharova vs Magda Linette \u00b7 Round 1 \u00b7 WTA Guangzhou",
+    "source": "Tennis.com",
+    "date": "Oct 27",
+    "watch": false
+   },
+   {
+    "side": "Anastasia Zakharova",
+    "title": "Linette saves two set points, advances past Zakharova in Guangzhou",
+    "source": "WTA Tennis",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Jodie Burrage vs Vaishnavi Adkar|Jodie Burrage": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Jodie Burrage",
+    "title": "Burrage / Montgomery vs Kostovi\u0107 / Vandromme \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Vaishnavi Adkar",
+    "title": "Chennai Open 2026: Vaishnavi Adkar, Maaya Rajeshwaran and Sahaja Yamalapalli Eye Breakthrough Wins in WTA 250 Main Draw",
+    "source": "IndiaSportsHub",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Jodie Burrage",
+    "title": "Jodie Burrage vs Vaishnavi Adkar - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Vaishnavi Adkar",
+    "title": "Jodie Burrage vs Vaishnavi Adkar - Match WTA - Chennai Open 1970 - Third round",
+    "source": "tennismajors.com",
+    "date": "Oct 31",
+    "watch": false
+   },
+   {
+    "side": "Vaishnavi Adkar",
+    "title": "Indian Tennis Hopes At Chennai Open: Adkar, Yamalapalli, Revathi Draw Tough Opponents",
+    "source": "Rediff",
+    "date": "Oct 31",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "WTA Tennis|Sahaja Yamalapalli vs Simona Waltert|Simona Waltert": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Simona Waltert",
+    "title": "Sahaja Yamalapalli vs Simona Waltert \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Simona Waltert",
+    "title": "LIVE RANKINGS. Waltert falls before taking on Yamalapalli in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Sahaja Yamalapalli",
+    "title": "Sahaja Yamalapalli vs Simona Waltert \u00b7 Round 1 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Sahaja Yamalapalli",
+    "title": "LIVE RANKINGS. Yamalapalli falls down prior to squaring off with Waltert in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Simona Waltert",
+    "title": "Sahaja Yamalapalli vs Simona Waltert - Match WTA - Chennai Open 2026 - Third round",
+    "source": "www.tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Sahaja Yamalapalli",
+    "title": "Sahaja Yamalapalli vs Simona Waltert - Match WTA - Chennai Open 2026 - Third round",
+    "source": "www.tennismajors.com",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "NFL|Chicago @ Seattle|Seattle": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Chicago Bears' injury report has updates on Kyle Monangai, Colston Loveland",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Chicago",
+    "title": "Chicago Bears' injury report has updates on Kyle Monangai, Colston Loveland",
+    "source": "NBC 5 Chicago",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Seattle",
+    "title": "Bears game, today: Seattle Seahawks hosting Chicago for NFL Week 8 for Monday Night Football",
+    "source": "ABC7 Chicago",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "SHUTDOWN: Chicago Bears Fantasy Stars FACE Seattle Seahawks Defensive WALL on MNF \u2013 Must-Watch",
+    "source": "Central Oregon Daily",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Seattle",
+    "title": "The Bear\u2019s Den: Bears are in Seattle to face the Seahawks on MNF",
+    "source": "Yahoo Sports",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Chicago",
+    "title": "Bears game, today: Seattle Seahawks hosting Chicago for NFL Week 8 for Monday Night Football",
+    "source": "ABC7 Chicago",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Chicago",
+    "title": "Bears Rumored to Be Top QB Trade Target for Ravens, But Would Chicago Make the Deal?",
+    "source": "Sports Illustrated",
+    "date": "Nov 02",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "Premier League|Everton @ Newcastle|Newcastle": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Newcastle United vs Everton \u2013 Predicted lineup and team news; Newcastle vs. Everton prediction, lineups, odds and bet builder tips for Premier League match",
+  "opp_health": "Newcastle vs. Everton prediction, lineups, odds and bet builder tips for Premier League match; Newcastle v Everton: Prediction, team news, lineups and odds",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Newcastle",
+    "title": "Newcastle v Everton: Prediction, team news, lineups and odds",
+    "source": "Football365",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Everton",
+    "title": "Newcastle v Everton: Prediction, team news, lineups and odds",
+    "source": "Football365",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Newcastle",
+    "title": "Newcastle United vs Everton \u2013 Predicted lineup and team news",
+    "source": "Yahoo Sports",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Newcastle",
+    "title": "Newcastle vs. Everton prediction, lineups, odds and bet builder tips for Premier League match",
+    "source": "Sporting News",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Everton",
+    "title": "Newcastle vs. Everton prediction, lineups, odds and bet builder tips for Premier League match",
+    "source": "Sporting News",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Everton",
+    "title": "Newcastle United predicted lineup vs Everton: Magpies out of revenge in Premier League clash",
+    "source": "LiveScore",
+    "date": "Oct 31",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "La Liga|Osasuna @ Deportivo De La Coruna|Deportivo De La Coruna": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Deportivo La Coru\u00f1a vs Osasuna Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026; Deportivo vs Osasuna prediction: teams form analysis, possible lineups on November 2, 2026",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Osasuna",
+    "title": "Deportivo vs Osasuna prediction: teams form analysis, possible lineups on November 2, 2026",
+    "source": "RatingBet",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Osasuna",
+    "title": "Deportivo La Coru\u00f1a vs Osasuna Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026",
+    "source": "Sportsgambler",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Osasuna",
+    "title": "Preview: Deportivo La Coruna vs Osasuna - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 31",
+    "watch": true
+   },
+   {
+    "side": "Deportivo De La Coruna",
+    "title": "Deportivo De La Coruna vs Osasuna: Second Half Total",
+    "source": "Coinbase",
+    "date": "Nov 01",
+    "watch": false
+   },
+   {
+    "side": "Deportivo De La Coruna",
+    "title": "Deportivo de La Coruna vs CA Osasuna",
+    "source": "Nine.com.au",
+    "date": "Nov 02",
+    "watch": false
+   },
+   {
+    "side": "Deportivo De La Coruna",
+    "title": "Deportivo de La Coru\u00f1a U19",
+    "source": "Transfermarkt",
+    "date": "Oct 28",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "Serie A|Fiorentina @ Sassuolo|Sassuolo": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Sassuolo vs Fiorentina Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026; Sassuolo vs Fiorentina: Lineups, Prediction, Odds & Bet Builder Tip",
+  "opp_health": "Sassuolo vs Fiorentina: Lineups, Prediction, Odds & Bet Builder Tip; Preview: Sassuolo vs. Fiorentina - prediction, team news, lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sassuolo",
+    "title": "Sassuolo vs Fiorentina prediction: team news, lineups, expert analysis",
+    "source": "RatingBet",
+    "date": "Nov 01",
+    "watch": true
+   },
+   {
+    "side": "Sassuolo",
+    "title": "Sassuolo vs Fiorentina Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026",
+    "source": "Sportsgambler",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Sassuolo",
+    "title": "Sassuolo vs Fiorentina: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Sassuolo vs Fiorentina: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "Preview: Sassuolo vs. Fiorentina - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Oct 31",
+    "watch": true
+   },
+   {
+    "side": "Fiorentina",
+    "title": "PREVIEW | Sassuolo vs Fiorentina: team news, lineups, predictions (Serie A 02/11)",
+    "source": "Yahoo Sports",
+    "date": "Oct 31",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ },
+ "Serie A|Parma Calcio @ Atalanta|Atalanta": {
+  "mode": "headlines",
+  "summary": "6 injury/lineup headline(s) in last 7d",
+  "pick_health": "Atalanta vs Parma: Lineups, Prediction, Odds & Bet Builder Tip; Atalanta vs Parma Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026",
+  "opp_health": "Atalanta vs Parma Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026; Parma Calcio 1913 vs Udinese: Confirmed Lineups & Match Prediction",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Parma: Lineups, Prediction, Odds & Bet Builder Tip",
+    "source": "WhoScored.com",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Parma Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026",
+    "source": "Sportsgambler",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Atalanta",
+    "title": "Atalanta vs Parma Tonight: Score Prediction, Lineups, Head-to-Head, and Italian League Live Broadcast Schedule",
+    "source": "Aktualita.co",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Parma Calcio",
+    "title": "Atalanta vs Parma Prediction, Betting Tips, Lineups & Odds | 02 Nov 2026",
+    "source": "Sportsgambler",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Parma Calcio",
+    "title": "Parma Calcio 1913 vs Udinese: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Oct 28",
+    "watch": true
+   },
+   {
+    "side": "Parma Calcio",
+    "title": "Parma Calcio 1913 vs Udinese Confirmed Lineups",
+    "source": "WhoScored.com",
+    "date": "Oct 28",
+    "watch": true
+   }
+  ],
+  "_ts": "2026-11-02T13:06Z"
+ }
+}
