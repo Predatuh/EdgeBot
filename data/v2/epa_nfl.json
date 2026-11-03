@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-11-02T21:13Z",
+ "_generated_utc": "2026-11-03T13:05Z",
  "_league": "nfl",
- "_plays_used": 11837,
+ "_plays_used": 11938,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 21018,
+ "_rows": 21191,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -73,16 +73,16 @@
    "this_season_plays": 323
   },
   "Chicago": {
-   "def_epa": 0.0028,
-   "def_plays": 588.8499999999999,
-   "def_success": 0.4401,
-   "net_epa": 0.0949,
-   "off_epa": 0.0977,
-   "off_plays": 731.4,
-   "off_success": 0.475,
-   "pass_epa": 0.1536,
-   "rush_epa": 0.0315,
-   "this_season_plays": 366
+   "def_epa": 0.0003,
+   "def_plays": 629.8499999999999,
+   "def_success": 0.4305,
+   "net_epa": 0.1051,
+   "off_epa": 0.1054,
+   "off_plays": 791.4,
+   "off_success": 0.4782,
+   "pass_epa": 0.1595,
+   "rush_epa": 0.0412,
+   "this_season_plays": 426
   },
   "Cincinnati": {
    "def_epa": 0.0584,
@@ -349,16 +349,16 @@
    "this_season_plays": 315
   },
   "Seattle": {
-   "def_epa": -0.1479,
-   "def_plays": 630.0,
-   "def_success": 0.3744,
-   "net_epa": 0.1174,
-   "off_epa": -0.0304,
-   "off_plays": 649.25,
-   "off_success": 0.431,
-   "pass_epa": 0.0601,
-   "rush_epa": -0.1513,
-   "this_season_plays": 357
+   "def_epa": -0.1177,
+   "def_plays": 690.0,
+   "def_success": 0.3868,
+   "net_epa": 0.0869,
+   "off_epa": -0.0307,
+   "off_plays": 690.25,
+   "off_success": 0.4228,
+   "pass_epa": 0.0596,
+   "rush_epa": -0.1524,
+   "this_season_plays": 398
   },
   "Tampa Bay": {
    "def_epa": -0.0689,
