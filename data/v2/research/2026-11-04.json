@@ -1340,5 +1340,63 @@
    }
   ],
   "_ts": "2026-11-04T13:05Z"
+ },
+ "ATP Tennis|Luca Van Assche vs Learner Tien|Learner Tien": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Learner Tien",
+    "title": "Learner Tien sends message to Jannik Sinner after losing \u00a31.2m Six Kings Slam payday",
+    "source": "Tennis365",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "Learner Tien",
+    "title": "Luca Van Assche vs Learner Tien \u00b7 Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "Learner Tien",
+    "title": "Luca Van Assche vs Learner Tien - Match ATP - Rolex Paris Masters 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "Luca Van Assche",
+    "title": "LIVE RANKINGS. Van Assche moves higher ahead of Tien showdown in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Luca Van Assche",
+    "title": "LIVE RANKINGS. Tien falls down ahead of fighting against Van Assche in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Luca Van Assche",
+    "title": "Cash / Nakashima vs Vacherot / Van Assche \u00b7 Round 1 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-04T13:14Z"
  }
 }
