@@ -11371,5 +11371,63 @@
    }
   ],
   "_ts": "2026-11-04T14:07Z"
+ },
+ "Champions League|Club Brugge @ Eindhoven|Club Brugge": {
+  "mode": "headlines",
+  "summary": "5 injury/lineup headline(s) in last 7d",
+  "pick_health": "PSV Eindhoven vs Club Brugge: Confirmed Lineups & Game Prediction; PSV vs Club Brugge: Lineups, Prediction, Betting Tips & Odds",
+  "opp_health": "PSV Eindhoven vs Club Brugge: Confirmed Lineups & Match Prediction; Preview: PSV Eindhoven vs. Club Brugge - prediction, team news, lineups",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Eindhoven",
+    "title": "Preview: PSV Eindhoven vs. Club Brugge - prediction, team news, lineups",
+    "source": "Sports Mole",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Club Brugge",
+    "title": "PSV Eindhoven vs Club Brugge: Confirmed Lineups & Game Prediction",
+    "source": "Oddschecker",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Club Brugge",
+    "title": "PSV vs Club Brugge: Lineups, Prediction, Betting Tips & Odds",
+    "source": "Oddschecker",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Club Brugge",
+    "title": "PSV vs Club Brugge Lineups, Prediction, Betting Picks & Odds",
+    "source": "Oddschecker",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Eindhoven",
+    "title": "PSV Eindhoven vs Club Brugge: Confirmed Lineups & Match Prediction",
+    "source": "Oddschecker",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Eindhoven",
+    "title": "(LIVESTREAMs!)Club Brugge vs PSV Eindhoven Live free UEFA Champions League Game November 04, 2026",
+    "source": "tagesanzeiger.ch",
+    "date": "Nov 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-04T21:07Z"
  }
 }
