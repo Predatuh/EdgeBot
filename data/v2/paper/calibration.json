@@ -17,12 +17,12 @@
    "wins": 600
   },
   "90c+": {
-   "drag": 1.0046,
-   "hit": 0.9575,
+   "drag": 1.0056,
+   "hit": 0.9584,
    "mean_entry": 0.9531,
-   "n": 471,
+   "n": 481,
    "trusted": true,
-   "wins": 451
+   "wins": 461
   },
   "under 40c": {
    "drag": 0.0,
@@ -33,12 +33,12 @@
    "wins": 0
   }
  },
- "generated_utc": "2026-11-04T14:33Z",
+ "generated_utc": "2026-11-05T06:17Z",
  "learned_discount": {
   "60-90c": 0.9788,
   "90c+": 1.0
  },
- "legs_settled": 1328,
+ "legs_settled": 1338,
  "min_band_n": 60,
  "rungs": {
   "banker": {
