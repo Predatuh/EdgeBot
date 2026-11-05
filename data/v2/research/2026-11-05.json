@@ -749,5 +749,63 @@
    }
   ],
   "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Ben Shelton vs Arthur Rinderknech|Ben Shelton": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "\u201cI managed to turn it around\u201d: Rinderknech survives as Cerundolo retires in Paris",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Rinderknech",
+    "title": "\u201cI managed to turn it around\u201d: Rinderknech survives as Cerundolo retires in Paris",
+    "source": "Tennis Majors",
+    "date": "Nov 03",
+    "watch": true
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "LIVE RANKINGS. Shelton\u2019s rankings just before taking on Rinderknech in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton studies Novak Djokovic style to boost return game ahead of Juan Carlos Ferrero link-up",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Arthur Rinderknech",
+    "title": "LIVE RANKINGS. Rinderknech advances with Shelton next in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Arthur Rinderknech",
+    "title": "LIVE RANKINGS. Shelton\u2019s rankings just before taking on Rinderknech in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton studies Novak Djokovic to sharpen return game on quicker surfaces",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:15Z"
  }
 }
