@@ -1,0 +1,753 @@
+{
+ "ATP Tennis|Taylor Fritz vs Arthur Fils|Arthur Fils": {
+  "mode": "headlines",
+  "summary": "4 injury/lineup headline(s) in last 7d",
+  "pick_health": "Arthur Fils qualifies for Turin: France returns to the ATP Finals after a decade; \u201cAll is Fine\u201d: Arthur Fils Cleared to Play in Paris Despite Injury Scare",
+  "opp_health": "Fritz advances to Basel SFs after his Live Race rival Fils retires",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils Eyes ATP Finals Breakthrough as He Confirms Paris Masters Return After Injury Scare",
+    "source": "EssentiallySports",
+    "date": "Nov 02",
+    "watch": true
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "\u201cAll is Fine\u201d: Arthur Fils Cleared to Play in Paris Despite Injury Scare",
+    "source": "Sports Illustrated",
+    "date": "Nov 03",
+    "watch": true
+   },
+   {
+    "side": "Arthur Fils",
+    "title": "Arthur Fils qualifies for Turin: France returns to the ATP Finals after a decade",
+    "source": "TennisTemple",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "Fritz advances to Basel SFs after his Live Race rival Fils retires",
+    "source": "ATP Tour",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "\u201cThe courts need to be faster if we\u2019re playing with these balls,\u201d Taylor Fritz says at Paris Masters",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Taylor Fritz",
+    "title": "LIVE RANKINGS. Fritz builds momentum ahead of Fils meeting in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Jan-Lennard Struff vs Casper Ruud|Casper Ruud": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Casper Ruud",
+    "title": "Jan-Lennard Struff vs Casper Ruud \u00b7 Round 3 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "Jan-Lennard Struff vs Casper Ruud \u00b7 Round 3 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "LIVE RANKINGS. Struff makes progress before taking on Ruud in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Casper Ruud",
+    "title": "LIVE RANKINGS. Ruud\u2019s Paris run lifts his ranking before Struff clash",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "LIVE RANKINGS. Struff makes progress before taking on Ruud in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Jan-Lennard Struff",
+    "title": "LIVE RANKINGS. Ruud\u2019s Paris run lifts his ranking before Struff clash",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Ignacio Buse vs Nuno Borges|Nuno Borges": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Davidovich Fokina and Tsitsipas withdraw from the Paris Masters, Kouame now faces lucky loser Borges",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [
+   "Davidovich Fokina and Tsitsipas withdraw from the Paris Masters, Kouame now faces lucky loser Borges"
+  ],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Nuno Borges",
+    "title": "Davidovich Fokina and Tsitsipas withdraw from the Paris Masters, Kouame now faces lucky loser Borges",
+    "source": "Tennis Majors",
+    "date": "Nov 03",
+    "watch": true
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "LIVE RANKINGS. Borges makes progress before taking on Buse in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Nuno Borges",
+    "title": "Nuno Borges vs Ignacio Buse \u00b7 Round 3 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "PARIS RESULTS. Carlos Alcaraz, Arthur Fils, Lorenzo Musetti, Ignacio Buse win on Wednesday",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Daniil Medvedev \u00b7 Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Ignacio Buse",
+    "title": "Ignacio Buse vs Daniil Medvedev - Match ATP - Rolex Paris Masters 2026 - Third round",
+    "source": "tennismajors.com",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Rinky Hijikata vs Tomas Martin Etcheverry|Tomas Martin Etcheverry": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Djokovic misses out on ATP Finals after shock Hijikata defeat in Paris",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Rinky Hijikata",
+    "title": "Djokovic misses out on ATP Finals after shock Hijikata defeat in Paris",
+    "source": "TNT Sports",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "LIVE RANKINGS. Hijikata boosts his position before Etcheverry test in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "LIVE RANKINGS. Etcheverry gains ground before facing Hijikata in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Tomas Martin Etcheverry",
+    "title": "Rinky Hijikata vs Tomas Martin Etcheverry - Match ATP - Rolex Paris Masters 2026 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Rinky Hijikata",
+    "title": "The 21-year Novak Djokovic streak that came to an end with his defeat to Rinky Hijikata in Paris",
+    "source": "Tennis365",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Rinky Hijikata",
+    "title": "\u2018Playing out of his mind\u2019: Novak Djokovic hails Rinky Hijikata after Australian\u2019s stunning win in Paris",
+    "source": "The Guardian",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Luca Van Assche vs Lorenzo Musetti|Luca Van Assche": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Luca Van Assche",
+    "title": "LIVE RANKINGS. Van Assche improves his standing before Musetti battle in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Luca Van Assche",
+    "title": "LIVE RANKINGS. Musetti falls right before squaring off with Van Assche in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Luca Van Assche",
+    "title": "Lorenzo Musetti vs Luca Van Assche \u00b7 Round 3 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Musetti back to his best? How family & patience have fuelled his resurgence",
+    "source": "ATP Tour",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "\u201cIt\u2019s a huge win for me,\u201d Lorenzo Musetti reflects on knocking out Alexander Zverev in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Lorenzo Musetti",
+    "title": "Alexander Zverev vs Lorenzo Musetti \u00b7 Round 2 \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "ATP Tennis|Ben Shelton vs Arthur Rinderknech|Arthur Rinderknech": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "\u201cI managed to turn it around\u201d: Rinderknech survives as Cerundolo retires in Paris",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [
+   "\u201cI managed to turn it around\u201d: Rinderknech survives as Cerundolo retires in Paris"
+  ],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Arthur Rinderknech",
+    "title": "\u201cI managed to turn it around\u201d: Rinderknech survives as Cerundolo retires in Paris",
+    "source": "Tennis Majors",
+    "date": "Nov 03",
+    "watch": true
+   },
+   {
+    "side": "Arthur Rinderknech",
+    "title": "LIVE RANKINGS. Rinderknech advances with Shelton next in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Arthur Rinderknech",
+    "title": "LIVE RANKINGS. Shelton\u2019s rankings just before taking on Rinderknech in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "LIVE RANKINGS. Shelton\u2019s rankings just before taking on Rinderknech in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton studies Novak Djokovic style to boost return game ahead of Juan Carlos Ferrero link-up",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton studies Novak Djokovic to sharpen return game on quicker surfaces",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "WTA Tennis|Simona Waltert vs Lucrezia Stefanini|Lucrezia Stefanini": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "Simona Waltert vs Lucrezia Stefanini \u00b7 Round 2 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "LIVE RANKINGS. Waltert\u2019s rankings just before taking on Stefanini in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Lucrezia Stefanini",
+    "title": "LIVE RANKINGS. Stefanini builds momentum ahead of Waltert meeting in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Simona Waltert",
+    "title": "Simona Waltert vs Lucrezia Stefanini \u00b7 Round 2 \u00b7 WTA Chennai",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Simona Waltert",
+    "title": "LIVE RANKINGS. Waltert\u2019s rankings just before taking on Stefanini in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Simona Waltert",
+    "title": "LIVE RANKINGS. Stefanini builds momentum ahead of Waltert meeting in Chennai",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "WTA Tennis|Mary Stoiana vs Sorana Cirstea|Sorana Cirstea": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Sorana Cirstea",
+    "title": "WTA roundup: Sorana Cirstea survives marathon in Hong Kong",
+    "source": "Miami Herald",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "Sorana Cirstea",
+    "title": "Sorana Cirstea vs Mary Stoiana - Match WTA - Prudential Hong Kong Tennis Open 2026 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Sorana Cirstea",
+    "title": "LIVE RANKINGS. Cirstea\u2019s rankings before competing against Stoiana in Hong Kong",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "Sorana C\u00eerstea vs Mary Stoiana \u00b7 Round 2 \u00b7 WTA Hong Kong",
+    "source": "Tennis.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "Sorana Cirstea vs Mary Stoiana - Match WTA - Prudential Hong Kong Tennis Open 2026 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Mary Stoiana",
+    "title": "LIVE RANKINGS. Stoiana moves up before challenging Cirstea in Hong Kong",
+    "source": "Tennis Tonic",
+    "date": "Nov 04",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "WTA Tennis|Tereza Valentova vs Alexandra Eala|Alexandra Eala": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "Alex Eala ends Pan Pacific Open campaign MANILA \u2013 Filipino Alexandra \"Alex\" Eala bowed out of the WTA 500 Pan Pacific Open after losing in the quarterfinals to third-seeded Russian Diana Shnaider, 6-2, 6-7(5), 4-6, at Ariake Coliseum in Tokyo, Japan on",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Alexandra Eala",
+    "title": "Alex Eala ends Pan Pacific Open campaign MANILA \u2013 Filipino Alexandra \"Alex\" Eala bowed out of the WTA 500 Pan Pacific Open after losing in the quarterfinals to third-seeded Russian Diana Shnaider, 6-2, 6-7(5), 4-6, at Ariake Coliseum in Tokyo, Japan on",
+    "source": "Facebook",
+    "date": "Oct 30",
+    "watch": true
+   },
+   {
+    "side": "Alexandra Eala",
+    "title": "Tennis: Eala eyes breakthrough against familiar foe Valentova in Hong Kong",
+    "source": "ABS-CBN",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Alexandra Eala",
+    "title": "Tereza Valentova vs Alexandra Eala - Match WTA - Prudential Hong Kong Tennis Open 2026 - Round of 16",
+    "source": "tennismajors.com",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "Filipina tennis star Alex Eala struck first against Czechia\u2019s Tereza Valentova, taking the opening set, 6-4, in their Round of 16 clash at the Hong Kong Open.",
+    "source": "Facebook",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "LIVE UPDATES: Alex Eala vs Tereza Valentova in the Hong Kong Open Round of 16",
+    "source": "GMA Network",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tereza Valentova",
+    "title": "LIVE: Alex Eala vs Tereza Valentova \u2013 Hong Kong Open Round of 16",
+    "source": "Inquirer.net",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "NFL|Jacksonville @ Baltimore|Jacksonville": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Lamar Jackson\u2019s latest injury raises obvious questions about his future in Baltimore; Life Preserver in Baltimore: Ravens Finalize Trade for Jacoby Brissett Following Jackson\u2019s Devastating Injury",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Baltimore",
+    "title": "Lamar Jackson\u2019s latest injury raises obvious questions about his future in Baltimore",
+    "source": "NBC Sports",
+    "date": "Nov 05",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Life Preserver in Baltimore: Ravens Finalize Trade for Jacoby Brissett Following Jackson\u2019s Devastating Injury",
+    "source": "NGSC Sports",
+    "date": "Nov 05",
+    "watch": true
+   },
+   {
+    "side": "Baltimore",
+    "title": "Baltimore Ravens make trade for quarterback after Lamar Jackson injury",
+    "source": "USA Today",
+    "date": "Nov 05",
+    "watch": true
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Jacksonville Jaguars @ Baltimore Ravens: Live game updates, stats, play-by-play",
+    "source": "Yahoo Sports",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Three Keys: How Jacksonville Can Capitalize on Primetime",
+    "source": "WRUF 98.1 FM",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Jacksonville",
+    "title": "Baltimore Ravens vs. Jacksonville Jaguars Fantasy Football Matchup Breakdown For Week 9",
+    "source": "FantasyLife",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "College Football|South Carolina St. @ Howard|South Carolina St.": {
+  "mode": "headlines",
+  "summary": "3 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Talking CFB: Purdue Pauses Major Notre Dame Series, Howard Suffers Major Injury Blow, HBCU Program Makes Historic FCS Return & More; Matt Campbell keeps making Koby Howard\u2019s injury sound worse with each update",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Howard",
+    "title": "Matt Campbell\u2019s injury update provides more positivity for Chase Sowell than Koby Howard",
+    "source": "Victory Bell Rings",
+    "date": "Nov 03",
+    "watch": true
+   },
+   {
+    "side": "Howard",
+    "title": "Talking CFB: Purdue Pauses Major Notre Dame Series, Howard Suffers Major Injury Blow, HBCU Program Makes Historic FCS Return & More",
+    "source": "EssentiallySports",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "Howard",
+    "title": "Matt Campbell keeps making Koby Howard\u2019s injury sound worse with each update",
+    "source": "Victory Bell Rings",
+    "date": "Nov 04",
+    "watch": true
+   },
+   {
+    "side": "South Carolina St.",
+    "title": "South Carolina St vs. Howard - Live Score - November 05, 2026",
+    "source": "FOX Sports",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "South Carolina St.",
+    "title": "Morgan State Falls to South Carolina State in MEAC Showdown at Hughes Stadium",
+    "source": "Morgan State University Athletics",
+    "date": "Oct 30",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "College Football|UTSA @ Florida Atlantic|UTSA": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "UTSA",
+    "title": "UTSA Playoff Chances: What UTSA Needs \u2014 Week 10",
+    "source": "A to Z Sports",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "UTSA",
+    "title": "Editor-to-Editor: FAU hosts UTSA in pivotal conference matchup",
+    "source": "FAU University Press",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "Florida Atlantic\u2019s Messer Named a Burlsworth Trophy Nominee",
+    "source": "Florida Atlantic University Athletics",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "Florida Atlantic Owls Player Stats 2026",
+    "source": "ESPN",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "UTSA",
+    "title": "UTSA vs. Florida Atlantic Nov. 5: TV, Stream",
+    "source": "WBZT",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Florida Atlantic",
+    "title": "UTSA vs. Florida Atlantic Nov. 5: TV, Stream",
+    "source": "WBZT",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ },
+ "College Football|James Madison @ Southern Miss|James Madison": {
+  "mode": "headlines",
+  "summary": "1 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "Southern Miss Injury Report: 3 Golden Eagles Upgraded to Probable vs. ULM",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Southern Miss",
+    "title": "Southern Miss Injury Report: 3 Golden Eagles Upgraded to Probable vs. ULM",
+    "source": "Yahoo Sports",
+    "date": "Oct 29",
+    "watch": true
+   },
+   {
+    "side": "James Madison",
+    "title": "What Southern Miss Must Do to Win Prime-Time Thursday Matchup with James Madison",
+    "source": "Sports Illustrated",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "James Madison",
+    "title": "James Madison Dukes Schedule - 2026-27 NCAAF Games - The Athletic",
+    "source": "The New York Times",
+    "date": "Nov 03",
+    "watch": false
+   },
+   {
+    "side": "James Madison",
+    "title": "James Madison Dukes 2026 College Football Players Stats",
+    "source": "ESPN",
+    "date": "Nov 04",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "Southern Miss Golden Eagles tight end Preston Kilgore (81) reacts after a touchdown during the college football game between the Southern Miss Golden Eagles and the Arkansas State Red Wolves at Carlisle-Faulkner Field at Renasant Stadium in Hattiesbur",
+    "source": "The Lufkin Daily News",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Southern Miss",
+    "title": "No. 18 Iowa State Cyclones to square off against the Southern Miss Golden Eagles Friday",
+    "source": "FOX Sports",
+    "date": "Nov 05",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-05T13:05Z"
+ }
+}
