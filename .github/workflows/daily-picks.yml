@@ -1,11 +1,15 @@
 name: Daily Picks
 
 on:
-  schedule:
-    - cron: "0 13 * * *"
-    - cron: "0 21 * * *"
-    - cron: "7 13 * * *"
-    - cron: "7 21 * * *"
+  # PAUSED 2026-11-06 at the owner's request: nothing here runs on a timer or on
+  # a push any more. Every workflow is still runnable by hand: Actions -> pick the
+  # workflow -> Run workflow. To bring a trigger back, delete the '# ' from the
+  # start of each line below it - the indentation underneath is preserved.
+  # schedule:
+  #   - cron: "0 13 * * *"
+  #   - cron: "0 21 * * *"
+  #   - cron: "7 13 * * *"
+  #   - cron: "7 21 * * *"
   workflow_dispatch:
 
 permissions:

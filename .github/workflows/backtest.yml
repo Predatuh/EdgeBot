@@ -1,9 +1,13 @@
 name: Parlay Backtest
 
 on:
-  push:
-    branches: ["claude/**"]
-    paths: ["backtest.py", "test_backtest.py", "kalshi.py", ".github/workflows/backtest.yml"]
+  # PAUSED 2026-11-06 at the owner's request: nothing here runs on a timer or on
+  # a push any more. Every workflow is still runnable by hand: Actions -> pick the
+  # workflow -> Run workflow. To bring a trigger back, delete the '# ' from the
+  # start of each line below it - the indentation underneath is preserved.
+  # push:
+  #   branches: ["claude/**"]
+  #   paths: ["backtest.py", "test_backtest.py", "kalshi.py", ".github/workflows/backtest.yml"]
   workflow_dispatch:
     inputs:
       at:

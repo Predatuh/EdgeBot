@@ -1,19 +1,23 @@
 name: Parlays
 
 on:
+  # PAUSED 2026-11-06 at the owner's request: nothing here runs on a timer or on
+  # a push any more. Every workflow is still runnable by hand: Actions -> pick the
+  # workflow -> Run workflow. To bring a trigger back, delete the '# ' from the
+  # start of each line below it - the indentation underneath is preserved.
   # The paths filter is what stops this looping: the run commits docs/ and data/,
   # never these. Pushing a template change rebuilds the page immediately rather
   # than leaving the site a day behind the code.
-  push:
-    branches: ["main", "claude/**"]
-    paths:
-      - "parlay.py"
-      - "test_parlay.py"
-      - "webapp/**"
-      - ".github/workflows/parlay.yml"
-  schedule:
-    - cron: "0 14 * * *"      # mid-morning ET, before the early kickoffs
-    - cron: "0 23 * * 4,5,6"  # Thu/Fri/Sat night, once the week's board is fully listed
+  # push:
+  #   branches: ["main", "claude/**"]
+  #   paths:
+  #     - "parlay.py"
+  #     - "test_parlay.py"
+  #     - "webapp/**"
+  #     - ".github/workflows/parlay.yml"
+  # schedule:
+  #   - cron: "0 14 * * *"      # mid-morning ET, before the early kickoffs
+  #   - cron: "0 23 * * 4,5,6"  # Thu/Fri/Sat night, once the week's board is fully listed
   workflow_dispatch:
     inputs:
       days:

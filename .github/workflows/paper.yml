@@ -10,9 +10,13 @@ name: Paper Parlays
 # so no browser, on any phone, can quote a price. That is why your tickets are
 # logged here rather than priced on the handset.
 on:
-  schedule:
-    - cron: "30 14 * * *"     # buys, after the board build and while the day's games are listed
-    - cron: "0 6 * * *"       # grades and marks only - 2am ET is a board of overnight leftovers
+  # PAUSED 2026-11-06 at the owner's request: nothing here runs on a timer or on
+  # a push any more. Every workflow is still runnable by hand: Actions -> pick the
+  # workflow -> Run workflow. To bring a trigger back, delete the '# ' from the
+  # start of each line below it - the indentation underneath is preserved.
+  # schedule:
+  #   - cron: "30 14 * * *"     # buys, after the board build and while the day's games are listed
+  #   - cron: "0 6 * * *"       # grades and marks only - 2am ET is a board of overnight leftovers
   workflow_dispatch:
     inputs:
       tickers:

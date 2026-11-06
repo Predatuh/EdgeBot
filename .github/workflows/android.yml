@@ -7,11 +7,15 @@ name: Android APK
 # site update is the next launch — no rebuild. Only rebuild when the native
 # shell (android/) changes.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "android/**"
-      - ".github/workflows/android.yml"
+  # PAUSED 2026-11-06 at the owner's request: nothing here runs on a timer or on
+  # a push any more. Every workflow is still runnable by hand: Actions -> pick the
+  # workflow -> Run workflow. To bring a trigger back, delete the '# ' from the
+  # start of each line below it - the indentation underneath is preserved.
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - "android/**"
+  #     - ".github/workflows/android.yml"
   workflow_dispatch:
     inputs:
       release:
