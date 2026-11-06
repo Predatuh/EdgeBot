@@ -27,18 +27,18 @@
   "under 40c": {
    "drag": 0.0,
    "hit": 0.0,
-   "mean_entry": 0.1525,
-   "n": 4,
+   "mean_entry": 0.15,
+   "n": 5,
    "trusted": false,
    "wins": 0
   }
  },
- "generated_utc": "2026-11-05T14:33Z",
+ "generated_utc": "2026-11-06T06:17Z",
  "learned_discount": {
   "60-90c": 0.9788,
   "90c+": 1.0
  },
- "legs_settled": 1338,
+ "legs_settled": 1339,
  "min_band_n": 60,
  "rungs": {
   "banker": {
@@ -56,7 +56,7 @@
   "lottery": {
    "actual": 0.0,
    "implied": 0.0038,
-   "n": 51,
+   "n": 52,
    "won": 0
   },
   "solid": {
