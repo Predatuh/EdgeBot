@@ -1046,5 +1046,63 @@
    }
   ],
   "_ts": "2026-11-06T13:05Z"
+ },
+ "ATP Tennis|Ben Shelton vs Tommy Paul|Ben Shelton": {
+  "mode": "headlines",
+  "summary": "0 injury/lineup headline(s) in last 7d",
+  "pick_health": "no issues found",
+  "opp_health": "no issues found",
+  "recent_form": "",
+  "situational": "nothing notable",
+  "red_flags": [],
+  "unattributed": [],
+  "lean": 0,
+  "confidence": "low",
+  "sources": [],
+  "headlines": [
+   {
+    "side": "Ben Shelton",
+    "title": "LIVE RANKINGS. Shelton\u2019s rankings right before taking on Paul in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "LIVE RANKINGS. Paul gains ground before facing Shelton in Paris",
+    "source": "Tennis Tonic",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "Ben Shelton vs Tommy Paul \u00b7 Quarterfinal \u00b7 ATP Paris",
+    "source": "Tennis.com",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Tommy Paul",
+    "title": "\u201cOtherwise, I\u2019ll go back to fishing\u201d: Tommy Paul plays down ATP Finals race",
+    "source": "TennisTemple",
+    "date": "Nov 05",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Ben Shelton leads ATP Tour with 14 comeback wins after losing opening set in 2026",
+    "source": "Tennis Tonic",
+    "date": "Nov 06",
+    "watch": false
+   },
+   {
+    "side": "Ben Shelton",
+    "title": "Why Ben Shelton is the Comeback King of 2026",
+    "source": "ATP Tour",
+    "date": "Nov 06",
+    "watch": false
+   }
+  ],
+  "_ts": "2026-11-06T13:14Z"
  }
 }
