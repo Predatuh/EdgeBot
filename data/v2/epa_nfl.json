@@ -1,13 +1,13 @@
 {
- "_generated_utc": "2026-11-05T21:12Z",
+ "_generated_utc": "2026-11-06T13:04Z",
  "_league": "nfl",
- "_plays_used": 11938,
+ "_plays_used": 11999,
  "_prior": {
   "season": 2025,
   "teams": 32,
   "weight": 0.35
  },
- "_rows": 21191,
+ "_rows": 21347,
  "_season": 2026,
  "_source": "nflverse play-by-play",
  "_unmapped": [],
@@ -37,16 +37,16 @@
    "this_season_plays": 349
   },
   "Baltimore": {
-   "def_epa": 0.0121,
-   "def_plays": 687.0999999999999,
-   "def_success": 0.4399,
-   "net_epa": 0.0565,
-   "off_epa": 0.0687,
-   "off_plays": 635.8,
-   "off_success": 0.4568,
-   "pass_epa": 0.1095,
-   "rush_epa": 0.0244,
-   "this_season_plays": 367
+   "def_epa": 0.0247,
+   "def_plays": 714.0999999999999,
+   "def_success": 0.4415,
+   "net_epa": 0.0254,
+   "off_epa": 0.0502,
+   "off_plays": 669.8,
+   "off_success": 0.453,
+   "pass_epa": 0.0735,
+   "rush_epa": 0.0253,
+   "this_season_plays": 401
   },
   "Buffalo": {
    "def_epa": 0.0301,
@@ -181,16 +181,16 @@
    "this_season_plays": 420
   },
   "Jacksonville": {
-   "def_epa": -0.0584,
-   "def_plays": 584.8,
-   "def_success": 0.4211,
-   "net_epa": 0.157,
-   "off_epa": 0.0986,
-   "off_plays": 606.15,
-   "off_success": 0.4693,
-   "pass_epa": 0.1524,
-   "rush_epa": 0.0269,
-   "this_season_plays": 316
+   "def_epa": -0.0714,
+   "def_plays": 618.8,
+   "def_success": 0.419,
+   "net_epa": 0.1806,
+   "off_epa": 0.1091,
+   "off_plays": 633.15,
+   "off_success": 0.4698,
+   "pass_epa": 0.1764,
+   "rush_epa": 0.0191,
+   "this_season_plays": 343
   },
   "Kansas City": {
    "def_epa": 0.0108,
